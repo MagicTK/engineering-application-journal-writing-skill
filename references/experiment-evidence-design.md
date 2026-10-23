@@ -18,6 +18,8 @@ Claim types; evidence roles; split integrity; comparison fairness; ablation; rob
 | applicability to a production setting | representative evidence from that setting, with acquisition and selection scope stated | a simulator result or curated subset presented as all field conditions |
 | deployment | evaluated operational integration, timing, interfaces, and actual mode of use | historical data or streaming replay called deployed |
 
+For a focused review or a single requested verification item, prioritize the unresolved premise that can change the claim. Do not replace it with a generic audit of facts already supplied as established. With possibly inaccurate assay targets, for example, trace test-reference samples to calibration periods and independent quality-control or re-assay evidence where available. A clean split and reproducible MAE do not resolve reference validity. Preserve the observed comparison against the recorded assays, but keep accuracy against the true physical target unverified until a trustworthy reference supports it. Propose this as an author check, not permission to relabel test data or run new experiments.
+
 ## 2. Evidence Role Matrix
 
 ### Benchmark Case Study

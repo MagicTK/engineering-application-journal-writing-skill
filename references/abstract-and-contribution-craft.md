@@ -47,6 +47,7 @@ Choose the connection from the actual dependency:
 | Prior-guided computation | Where given knowledge enters a learned operation | Saying knowledge and features are concatenated when knowledge only biases scores |
 | Adaptation across phases | What changes, using which newly available information | Calling a learning phase a production stage |
 | Update control | Which event changes learning, and when the required feedback is available | Implying that an update trigger controls sensor acquisition or is itself a fault alarm |
+| Alternating refinement | Which two objects update each other during fitting, and what is retained for prediction | Describing a reciprocal training cycle as two independent modules or a one-way inference pipeline |
 
 Make the final method sentence advance from operation to task meaning. It may explain that a representation combines local measurements with system-level context, or that a predictor uses information from unlabeled observations. It should not re-list all modules or promote combination itself to proven generalization. A verified short sentence is preferable to a long sentence containing two vague `which` clauses.
 
@@ -69,6 +70,8 @@ Source-faithful alternative: "A shared encoder learns from labeled and unlabeled
 The second example needs no fabricated sequence of `reconstruction, then fusion, then prediction`. Neither example supplies novelty or empirical benefit by itself. Attach the manuscript's actual distinguishing design and supported evaluation, leaving routine components in the background. P03 also illustrates that a concise abstract can connect mechanisms and output without approaching a fixed word count.
 
 **Another relationship, illustrated by P36:** task-specific gates combine shared expert outputs for the respective quality targets, while gradient balancing changes how those tasks train the shared parameters. The writing should connect the two roles through their common multitask objective, not claim that the balancing module receives the fused features during prediction. This illustrates a shared training relationship, rather than the sequential feature-fusion story used in the first example.
+
+**An alternating relationship, illustrated by P40:** a label representation guides feature selection, and the selected features change the neighborhoods used in the next label update. Describe both directions once, then name the returned feature subset. A synthetic writing pattern is: "During fitting, label weights guide feature selection, while the selected features refine the sample neighborhoods used to update those weights. The resulting subset supplies the inputs to the diagnostic predictor." Use this only when those interfaces are verified. Label weights are not automatically measured fault severity, and feature selection is not automatically sensor removal. Reciprocal design can motivate one linked contribution; it does not itself establish convergence, novelty or improved performance.
 
 ## 4. Contributions Are Advances, Not An Execution Log
 

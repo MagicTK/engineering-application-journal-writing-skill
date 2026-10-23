@@ -57,6 +57,21 @@ P04 有 process state 的实际用例；P16 有 operational state；P10 研究 o
 
 不能将 specific 全部改成 wise：前者偏内容特有性，后者偏组织或计算方式。当前语料不能为表中每个完整搭配提供直接用例；这些是语义判断，最终仍要服从方法和作者已确认的术语。
 
+`feature selection` 保留已定义描述量的子集，`feature extraction` 构造描述量，`sensor selection` 才涉及需要哪些物理测量。P40 返回所选特征的索引；保留的若干频谱或统计特征仍可能需要全部原始传感器及预处理。先说明减少的是哪种对象，再判断能否主张减少传感器、采集成本或推理时间。
+
+## 标签对象
+
+| 术语或对象 | 需要确定的含义 |
+|---|---|
+| missing annotation | 未知目标不等于已确认阴性；说明整条样本还是某些标签缺失 |
+| candidate-label set | 多个可能目标；说明可能同时有几个为真、是否保证包含真实目标 |
+| multilabel target | 同一样本可真实对应多个标签；多个正项本身不是标注歧义 |
+| partial label space | 某分类器负责的局部标签集合，如 P39；不能从词面推断标注不完整 |
+| label enhancement / soft training target | 人为构造的数值表示，应交代来源及学习作用；不自动是纠正后的观测、概率或实测严重程度 |
+| noisy label / noisy measurement | 标注/目标有误与输入观测被扰动不同；确认受影响对象及评价所用参考 |
+
+P39-P40 是相邻机械领域的用例，不代表流程工业监督形式统一。P40 的邻域生成标签值属于学习对象；要解释为物理严重程度，还需与损伤、强度或明确严重程度目标建立独立依据。定义合理的论文专用术语不必全局改名，也不能仅凭题目判断全领域用法。
+
 ## 结构与操作
 
 - intra-stage 是工序内，inter-stage 是工序间，cross-stage 是跨工序。`inter-stage relationships` 与 `cross-stage fusion` 可以在一个摘要中并存，不必强制统一所有前缀，更不能颠倒 intra/inter。

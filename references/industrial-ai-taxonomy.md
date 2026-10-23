@@ -17,7 +17,7 @@ Five independent axes; boundary rules; routing procedure; manuscript archetype s
 | Code | Challenge | Questions that must be answered |
 |---|---|---|
 | C1 | Incomplete or asynchronous observation | Are values missing, irregularly timed, delayed, censored, or sampled at different fixed rates? What mechanism creates the observation pattern? |
-| C2 | Scarce supervision | How many labels exist per class, stage, or condition? Are unseen classes, coarse labels, or unlabeled records involved? |
+| C2 | Limited or imperfect supervision | What is limited: label count, granularity, reliability or knowledge of the true label? Distinguish missing annotations, candidate labels, incorrect labels and simultaneous fault labels. |
 | C3 | Distribution evolution | Are operating modes discrete, continuously drifting, nonstationary, cross-site, or open-set? What information is available during adaptation? |
 | C4 | Heterogeneous information | Are there multiple sources, modalities, temporal scales, or semantic levels? How are they synchronized and what physical evidence does each carry? |
 | C5 | Interacting subsystem and process coupling | Do interactions, propagation paths, material/information flows, or long-range dependencies make local modeling insufficient? Which relationships are known and which must be learned? |
@@ -93,7 +93,7 @@ Record operating status in the internal evidence ledger as `retrospective/offlin
 ## 2. Boundary Rules
 
 - **Missing vs. irregular vs. multi-rate**: missing means a required value is absent; irregular means observation intervals vary; multi-rate means variables or groups follow different sampling rates, often regularly within each group. They may coexist.
-- **Few-shot vs. zero-shot vs. weak/self-supervision**: distinguish limited labeled examples, no labeled examples for test classes, coarse labels, and supervision generated from the data itself.
+- **Supervision quantity vs. meaning**: few-shot and zero-shot concern specified labeled support; weak supervision may involve coarse, ambiguous or inaccurate annotations; self-supervision constructs a learning target from data. A multi-hot target for simultaneous faults is not an ambiguous candidate set. Define the particular arrangement rather than routing by a title alone; see the [supervision playbook](topic-playbooks.md#2-scarce-labels-few-shot-zero-shot-weak-or-self-supervised-learning).
 - **Nonstationary vs. multimode**: continuous drift and discrete operating regimes are different phenomena even when both occur.
 - **Multisource vs. multimodal vs. cross-modal**: different acquisition sources are not automatically different modalities; cross-modal claims require explicit alignment or interaction.
 - **Graph vs. causality**: a graph can encode correlation, topology, similarity, or message passing. Causal language requires causal assumptions and corresponding validation.

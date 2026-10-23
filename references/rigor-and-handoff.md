@@ -38,6 +38,8 @@ Create an internal table:
 
 Downgrade or remove claims marked partial or missing unless the author supplies evidence.
 
+In a bounded review, choose the verification that resolves the central remaining uncertainty rather than repeating the entire audit sequence. For uncertain target/reference validity, follow the [claim-specific evidence guidance](experiment-evidence-design.md#1-evidence-begins-with-claim-type); rechecking an already established split does not answer that different question.
+
 ## 3. Experiment Provenance
 
 For each main table, ablation, figure, and textual result, identify:
@@ -128,12 +130,12 @@ Check:
 
 - each variant removes or changes one interpretable design element;
 - names such as `w/o ...` match the actual implementation;
-- the complete-model row matches the main result under the same setting;
+- a reused complete-model result matches the main table under the same metric and aggregation definition; independent reruns instead identify their run population and may differ;
 - metrics are defined consistently;
 - the text reports the correct absolute or percentage-point change;
 - conclusions do not assign a unique causal effect when components interact strongly.
 
-Remove redundant variants that do not answer a design question.
+Recommend omitting redundant variants only when experiment planning or substantive revision is in scope. A review or language pass does not authorize deletion of approved experiments, result rows or figures.
 
 ## 9. Robustness And Generalization Claims
 

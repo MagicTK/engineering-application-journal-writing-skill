@@ -4,7 +4,7 @@
 
 This reference supports writing for industrial, control, automation, process,
 manufacturing, and equipment-oriented journals. The current release provides a
-[38-paper published evidence index](published-evidence.md) and
+[40-paper published evidence index](published-evidence.md) and
 [context-sensitive decisions](terminology-decisions.md). Earlier private corpus
 frequency counts are omitted because this public package cannot reproduce them.
 Author drafts are not terminology authorities; computer-science channel-strategy

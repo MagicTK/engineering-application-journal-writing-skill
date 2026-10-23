@@ -1,5 +1,13 @@
 # Changes
 
+## 4.1.2 (2026-10-24)
+
+- Distinguished supervision quantity, granularity and reliability; clarified candidate labels, simultaneous fault labels and partial classifier label spaces using two additional published sources.
+- Added an alternating-refinement relationship to the existing bilingual abstract/contribution guidance, with the fitting cycle separated from the returned prediction input.
+- Distinguished learned continuous label representations from measured severity or corrected ground truth, and selected descriptors from physical sensor reduction.
+- Prioritized the unresolved premise that limits a claim in bounded reviews; reconciled shared review rules for independent reruns and protection of approved ablation artifacts.
+- Kept 14 skill pairs and existing reference organization. Five new cases were answered in one fresh context; after a verification-priority repair, one was retested and one regression case added in that same context. All six final outcomes passed within that scope; initial responses and the defect remain visible.
+
 ## 4.1.1 (2026-10-24)
 
 - Reconciled within-population generalization guidance with the evidence-design rules; removed residual two-challenge pressure from the abstract outline.

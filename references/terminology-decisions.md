@@ -59,6 +59,21 @@ Do not replace `state` with `condition` merely for fluency: a continuously chang
 
 Do not globally replace `variable-specific` with `variable-wise`: the former describes what is distinctive; the latter often describes organization or computation. The reviewed corpus does not establish every exact collocation above. These distinctions are semantic guidance; retain only phrases supported by the actual mechanism and the author's accepted terminology.
 
+`Feature selection` retains a subset of defined descriptors; `feature extraction` constructs descriptors, and `sensor selection` changes which physical measurements are required. P40 returns selected feature indices. Several retained spectral or statistical features may still require every original sensor and its preprocessing. State the reduced object before claiming fewer sensors, cheaper acquisition or faster inference.
+
+## Label Objects
+
+| Term or object | Meaning to establish |
+|---|---|
+| missing annotation | An unknown target, not a confirmed negative; define whether absence applies to an entire sample or selected labels |
+| candidate-label set | Alternative possible targets; state how many may be true and whether the true target is guaranteed to be included |
+| multilabel target | Multiple labels may genuinely apply to the same sample; this is not ambiguity merely because more than one entry is positive |
+| partial label space | A restricted set handled by a classifier, as in P39; do not infer incomplete annotations from the phrase |
+| label enhancement / soft training target | A constructed numerical representation whose source and learning role must be defined; not automatically a corrected observation, probability or severity measurement |
+| noisy label / noisy measurement | Error in the annotation/target versus corruption of the input observation; identify which is affected and which reference supports evaluation |
+
+P39-P40 are adjacent machinery examples for these distinctions, not evidence that all process-industry supervision has the same form. P40's neighborhood-derived label values illustrate a learned object; a physical severity interpretation requires an independently justified relation to damage, intensity or another stated severity target. Do not rename sound paper-specific terminology globally, or infer field-wide usage from a title.
+
 ## Structure And Operations
 
 | Distinction | Decision |
