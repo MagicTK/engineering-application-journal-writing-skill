@@ -4,7 +4,9 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.0.0: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.1.0: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+
+Checked on 2026-10-24: 21 synthetic cases in one fresh responding context, followed by a targeted five-case retest after a prose-quality refinement; 36 deterministic tests and 28 entrypoint checks. This is scoped package and behavior evidence, not certification of every topic or manuscript. See the [evaluation record](evals/reviews/v41-independent-evaluation.md).
 
 ## What It Does
 
@@ -66,7 +68,7 @@ Preserve the shared directory structure. Clients supporting nested skills may ex
 
 ### Verify, Update And Remove
 
-On your next Codex turn, ask it to read the installed root `SKILL.md`, confirm version `4.0.0`, and run `scripts/validate_suite.py`; the expected result is 14 bilingual pairs. If a companion does not appear in the selector, ask the orchestrator to read its file inside the suite. Do not install a duplicate just to expose the name. Restart the client if it has not refreshed its skill list.
+On your next Codex turn, ask it to read the installed root `SKILL.md`, confirm that its version matches the source you downloaded, and run `scripts/validate_suite.py`; this suite has 14 bilingual pairs. A development candidate's version can differ from the currently published GitHub version. Record the downloaded revision rather than treating that difference as an installation failure. If a companion does not appear in the selector, ask the orchestrator to read its file inside the suite. Do not install a duplicate just to expose the name. Restart the client if it has not refreshed its skill list.
 
 Before updating, record the installed version and preserve local changes. Validate a new download before explicitly replacing the old suite. The installer stops at an existing destination; it never deletes or overwrites it. To uninstall, remove only the identified installation directory or symlink, not a manuscript project. Ask Codex to identify the path first when uncertain.
 
@@ -115,7 +117,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.0.0 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.1.0 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|
@@ -137,7 +139,7 @@ A paper need not have two datasets, a fixed number of contributions, a 200-word 
 
 - [Abstract/contribution craft](references/abstract-and-contribution-craft.md) and [body-sync template](assets/templates/abstract-body-sync.md).
 - [Section writing](references/section-writing-guide.md), [argument and prose craft](references/argument-and-prose-craft.md), [contribution narratives](references/contribution-narratives.md).
-- [Terminology decisions](references/terminology-decisions.md), [terminology bank](references/engineering-application-terminology-bank.md), [26-paper evidence index](references/published-evidence.md).
+- [Terminology decisions](references/terminology-decisions.md), [terminology bank](references/engineering-application-terminology-bank.md), [38-paper evidence index](references/published-evidence.md).
 - [Experiment execution](references/experiment-execution.md), [run manifest](assets/templates/experiment-run-manifest.md), [evidence design](references/experiment-evidence-design.md).
 - [Figure production](references/figure-and-latex-production.md), [journal migration](references/journal-migration-and-completeness.md), [author handoff](assets/templates/author-handoff.md).
 
@@ -147,7 +149,7 @@ Read-only terminology candidates from a local source:
 python3 scripts/audit_terminology.py manuscript.tex --min-count 3
 ```
 
-The tool skips percent comments, literal `iftrue`/`iffalse` branches and comment environments. It does **not** expand arbitrary TeX macros, inspect included files, prove a phrase wrong or edit the manuscript. Verify active text against the compiled PDF.
+The tool skips percent comments, inactive literal `iftrue`/`iffalse` branches, comment environments, common citation/reference keys, URL targets and literal `thebibliography` blocks. It preserves source line numbers and linked display prose. It does **not** expand arbitrary TeX macros, inspect included files, prove a phrase wrong or edit the manuscript. Verify active text against the compiled PDF; custom or nested syntax still needs manual review.
 
 ## Evidence, Privacy And Attribution
 

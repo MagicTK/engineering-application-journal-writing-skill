@@ -27,7 +27,7 @@
 
 训练和测试数量通常写 `training samples`、`test samples`。只有真实存在训练与模型选择的数据池时才写并解释 `development set`，不能用改名暗示做过验证集实验。将 records 改成 samples 前先确认二者是否同一单位。
 
-P05、P06 的 attributes 用于零样本故障语义，P20 用于图节点属性。这些合法用法不妨碍物理测量优先用 variables。动词 attribute 与此不是一回事。
+P05、P06 和 P29 的 attributes 用于零样本故障语义，P20 用于图节点属性；P29 明确区分结构化故障描述、传感器测量及其文本化表示。这些合法用法不妨碍物理测量优先用 variables。动词 attribute 与此不是一回事。
 
 ## 状态、工况与模式
 
@@ -41,6 +41,8 @@ P05、P06 的 attributes 用于零样本故障语义，P20 用于图节点属性
 | prototype | 真正存在的代表向量、样例或中心 | 模型是否有原型机制？ |
 
 P04 有 process state 的实际用例；P16 有 operational state；P10 研究 operating conditions。这不是常见程度排名。不能只为流畅把 state 换成 condition：连续变化的局部特征并不自动构成离散工况。`local operational state` 需要与真实的局部自适应机制相符，也不等于已识别物理状态。没有原型机制，不引入 `prototype state`。
+
+学习得到的模糊状态（P07）、离散运行模式与状态空间中的物理状态各有定义，不能因为都有 state 就互换。process disturbance 是扰动过程行为的输入或事件，也不等于获取测量时的背景工况。
 
 ## 变量及其特征
 
@@ -63,21 +65,43 @@ P04 有 process state 的实际用例；P16 有 operational state；P10 研究 o
 - aggregation 对集合汇总；fusion 结合信息来源；interaction 建模相互作用。需对照操作选择，不靠“高级词”替换。
 - relationship 范围较宽；dependency 不自动表示因果；correlation 需要相应统计量或合理定义。
 - topology、prior、constraint 分别核查工程来源和数学作用；加性注意力偏置不是硬约束，也不自动是因果图。
-- spatial / spatiotemporal 需定义物理、拓扑或图关系以及时间轴，张量列顺序不构成时空结构。
+- causal convolution 表示特定输出不读取未来输入；预测依赖表示信息对预测有用。二者本身均不识别物理干预效应或根因，不能只因出现 causal 就混同。
+- spatial / spatiotemporal 应定义所指轴或关系：物理位置、工艺拓扑、图邻域或明确建模的变量间结构；时空表述还需说明时间轴。模型网格相邻不自动等于物理接近或工艺耦合。
 - gate 调节贡献，attention 计算关系或加权聚合，fusion module 结合路径。核查形状与操作，不混淆分支和融合模块。
 - unified / global / plant-wide 需说明表示范围，融合两条路径不证明普适泛化或完整全厂覆盖。
+
+stage 先区分生产单元、一个批次中的时间阶段与学习阶段；local/global 先确认局部性的定义域，时间感受野不等于全厂区域；propagation 区分图上特征更新与真实扰动的传播。这些选择会改变科学含义，不只是风格问题。
+
+mask、sparse、constraint 需核查作用位置：注意力边为零、logit 置零、类别被排除、专家不执行是不同结果。有限 logit 置零后仍可获得正的 softmax 概率；普通稠密 softmax 也不证明稀疏执行。同理，块对角图限制的是该次图运算，不一定限制后续特征混合，更不证明物理单元独立。摘要中的作用应落在完整计算实际支持的层面。
 
 ## 分方向加载
 
 - **多速率：** 区分采样率、间隔、异步与缺失，重复静态值不产生时间信号。参考 P08、P23-P26。
 - **有限监督：** few-shot 说明有标签样本数；zero-shot 说明未见类别与可用语义；semi-supervised 区分有无标签数据；weak supervision 可能是包级或粗标签；self-supervision 解释目标生成。参考 P05-P06、P17-P22。
-- **模糊：** 隶属度不自动等于校准概率；规则、隶属函数与聚合要有定义。证据不确定性也不是同一对象。参考 P07。
+- **模糊：** 隶属度不自动等于校准概率；定义实际的隶属函数与聚合，模糊聚类层不一定具有语言规则。证据不确定性也不是同一对象。参考 P07、P27-P29、P33。
 - **知识引导：** 区分专家规则、拓扑、物理定律与学习相似性，来源与进入模型的方式比形容词重要。参考 P04、P12-P14。
 - **质量相关诊断：** 解释质量目标与过程行为的关系；不在摘要和实验总览中反复罗列缺陷。参考 P09、P16。
+
+| 分方向术语 | 必须保留的含义 | 修改前核查 |
+|---|---|---|
+| conditional drift / concept drift | 某个明确分布的变化，不是统一的漂移定义 | `P(X)`、`P(Y)`、`P(X|Y)`、`P(Y|X)` 哪个改变、哪个保持？P30 使用特定的类条件分布定义。 |
+| event-triggered learning / sampling / alarm | 分别是学习更新、采集事件或诊断输出 | 什么触发什么，所需测量或标签当时是否可用？P27 讨论学习更新。 |
+| generation condition / operating condition | 生成条件可为故障类别或健康指标，运行工况则描述运行条件 | 先看条件变量，不把所有 conditional generation 都改写为工况条件生成。参考 P32。 |
+| diffusion step / acquisition time | 模型加噪去噪迭代与实际测量时间 | 不默认扩散步代表物理时间演化，也不默认去除实际传感器噪声。参考 P32、P35。 |
+| reservoir state / process state | 循环模型内部状态与有定义的过程状态 | P28 的 reservoir 是计算对象，不是物理储罐。 |
+| slow feature / quality-related feature | 时间变化速度与目标相关性是两个性质 | 什么目标函数或方程建立了与质量的关联？参考 P34。 |
+| efficiency / real time | 某种资源比较与满足决策时限 | 区分训练、生成、预测成本及计时范围；参数少不证明时延低。 |
+| task balancing / load balancing | 任务训练影响与工作负载/专家使用的分配 | P36 平衡任务梯度，不因此证明稀疏路由或设备负载平衡。 |
+| cross-modal alignment / synchronization | 学习的表征兼容性与采集时刻的配对 | P38 区分同步采集、token 构造与跨模态注意力；特征维度相等不证明时间已配对。 |
+| local outside-class / unknown fault | 子分类器标签集之外与整个系统未知 | P37 的成对子分类器 OOD 类本身不构成系统级新故障检测。 |
 
 ## 评价与边界
 
 real-world 表示来源，不表示在线运行。不要习惯性加 offline；若回顾性与前瞻性评价区别影响结论，则应保留。类别不平衡通常在数据和指标分析中展开；只有它确实是研究问题或贡献时，才需要出现在摘要或贡献中。
+
+offline assay 可以准确表示实验室检测或迟到的质量标签，不等于给所有工业数据加 offline 前缀。online 可以指顺序计算，也可以指现场在线评价，必须说清；deployment 需要运行接入，影子评价不能证明闭环收益。
+
+任务名称也需看定义。detection 可能指报警，diagnosis 可能识别类别、位置或原因；文献用法有差异（P02），先看目标与评价再改名。quality prediction 可能输出连续量，也可能预测质量类别（P09），不能为了表面统一把类别标签改成连续质量变量。
 
 普通实验章节可以用 experimental settings；若确实定义了可复现的评价程序，evaluation protocol 也不是错误。作者不喜欢某词，不应上升为整个领域禁令。
 

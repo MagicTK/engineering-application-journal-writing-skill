@@ -30,11 +30,11 @@ Create an internal table:
 | Claim | Location | Required evidence | Available evidence | Status |
 |---|---|---|---|---|
 | improved diagnosis | Abstract/Results | main comparison | Table X | supported/partial/missing |
-| component effectiveness | Contributions/Results | ablation | Table Y | supported/partial/missing |
+| component effectiveness | Contributions/Results | valid isolating comparison or analysis | Table Y | supported/partial/missing |
 | robustness | Abstract/Discussion | relevant perturbations | Fig. Z | supported/partial/missing |
-| practical applicability | Abstract/Conclusion | real-world case | case study | supported/partial/missing |
+| production applicability | Abstract/Conclusion | evidence from the claimed production setting with its selection scope | case study | supported/partial/missing |
 | interpretability | Method/Results | inspectable and validated patterns | visualization/expert check | supported/partial/missing |
-| deployment | Abstract/Conclusion | online or operational evaluation | none or system test | supported/unsupported |
+| deployment | Abstract/Conclusion | actual operational integration and evaluated mode of use | none or system test | supported/unsupported |
 
 Downgrade or remove claims marked partial or missing unless the author supplies evidence.
 
@@ -52,6 +52,8 @@ For each main table, ablation, figure, and textual result, identify:
 
 The full model in the main table, ablation table, confusion matrix, sensitivity plot, and textual summary must refer to the same version whenever the manuscript presents them as the same experiment.
 
+Separate reused results from independent reruns. The former must agree under the same metric/aggregation definition; the latter can vary under the same configuration and must identify their run population. Do not silently replace either to obtain identical values. Check the comparison scope behind prose: a best aggregate score does not establish best performance in every class, and mean differences alone do not establish consistency across runs.
+
 If versions are mixed, do not repair individual cells from memory. Re-export the affected artifact from one verified result source.
 
 ## 4. Classification Metric Checks
@@ -64,7 +66,7 @@ For each class:
 
 `F1 = 2 * Precision * Recall / (Precision + Recall)`
 
-Check that displayed F1 agrees with displayed precision and recall within rounding tolerance.
+For metrics from the same prediction set, check that F1 agrees with precision and recall within rounding tolerance, including the declared zero-denominator convention. For summaries over runs, compute each metric in each run before averaging: mean F1 generally differs from the harmonic mean of mean precision and mean recall. Do not overwrite a reported mean using that invalid reconstruction. Raw predictions or run-level metrics are needed to resolve an uncertain mismatch.
 
 Aggregate checks:
 
@@ -75,6 +77,8 @@ Aggregate checks:
 - A table column labeled `WA` must define what is weighted and how.
 - Class supports should sum to the stated test-set size.
 - A confusion matrix should produce the same class-wise and aggregate metrics as the table when derived from the same predictions.
+
+For an averaged or pooled confusion matrix, identify the aggregation rule. Metrics recomputed from that matrix need not equal the mean of run-level metrics. Verify the run set, supports and normalization before calling a discrepancy an error. A single representative run should be labeled as such rather than called the mean.
 
 When inconsistencies appear, first suspect transcription, row/column shift, stale results, or metric-label confusion before requesting a complete rerun.
 
@@ -146,6 +150,8 @@ For `robustness`, identify the tested disturbance:
 - cross-site or cross-unit transfer.
 
 Do not use one test as evidence for all forms of robustness. Hyperparameter sensitivity is not equivalent to noise robustness, and offline noise injection is not equivalent to production reliability.
+
+Distinguish within-population generalization from transfer to another condition, site or time regime. Independent held-out samples can assess the former; they do not by themselves establish the latter. The validity of the split depends on the physical independence unit, including overlapping windows and repeated products, not merely the word random or chronological.
 
 ## 10. Formula And Notation Audit
 

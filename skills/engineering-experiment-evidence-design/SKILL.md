@@ -5,7 +5,7 @@ description: Design, audit, and organize experimental evidence for engineering-a
 
 # Engineering Experiment And Evidence Design
 
-Suite version: `4.0.0`
+Suite version: `4.1.0`
 
 ## Mission
 
@@ -26,7 +26,7 @@ Classify each intended claim:
 - `comparative`: method improves a measured outcome;
 - `component`: a module contributes to the outcome;
 - `robustness`: performance remains acceptable under disturbances;
-- `generalization`: behavior transfers across conditions, sites, products, or domains;
+- `generalization`: prediction on new samples from a stated population, or transfer across defined conditions, sites, products or domains;
 - `interpretability`: outputs correspond to meaningful process or fault information;
 - `efficiency`: resources, latency, or model size are reduced;
 - `practical`: method is useful under tested industrial conditions;
@@ -45,11 +45,11 @@ Use `planned`, `available`, `verified`, `inconsistent`, or `missing` for status.
 
 ### Benchmark
 
-Use for controlled comparison, reproducibility, broad ablation, sensitivity, robustness, and class-wise diagnosis.
+Use the benchmark's documented settings for relevant comparisons and mechanism analysis. Verify label provenance, controlled factors, and repeatability rather than assuming them from its name; choose ablation, sensitivity, robustness, or class-wise analysis only when it answers the claim.
 
 ### Real-World Industrial Case
 
-Use for process realism, data provenance, operating variation, actual class distributions, noise, actual labels, and engineering interpretation.
+Describe measured process conditions, data and label provenance, the variation actually present, and the engineering interpretation. Production-source measurements may still contain artificial fault injections or restricted operating coverage; distinguish these facts rather than calling all conditions and faults real.
 
 Dataset properties should appear at the level where they affect evidence. For class imbalance, report counts with the data, handling with the settings, metric consequences with the metric definitions, and affected-class behavior with the results. Keep it out of high-level summaries unless imbalance is the research problem or a claimed contribution.
 
@@ -97,14 +97,14 @@ Separate the industrial challenge from the method family with [the taxonomy](../
 
 ## 6. Design Ablations Around Contributions
 
-Each core design claim should have an isolating ablation. Prefer:
+Give each core design claim a discriminating test. When a component can be meaningfully intervened on, an ablation can compare:
 
 - full model;
 - one component removed or replaced at a time;
 - structurally meaningful alternative;
 - same training and evaluation setting.
 
-Avoid arbitrary combinations that cannot be interpreted. Verify that the full-model row matches the main comparison under the same split and settings.
+Avoid arbitrary combinations that cannot be interpreted. A coupled component may need a valid replacement or joint-interaction test rather than deletion; an analytical claim may require analysis as well as experiments. If a full-model result is reused, it must match the main comparison. Independently repeated runs under the same settings may differ; identify their run populations rather than forcing numerical equality.
 
 ## 7. Use Sensitivity Selectively
 
@@ -129,7 +129,7 @@ Match disturbances to plausible conditions:
 - unseen fault, machine, site, or production period;
 - visual interference, environmental disturbance, or communication delay.
 
-Specify severity and test conditions. Robustness requires a range or multiple conditions, not one perturbed point. Generalization requires a meaningful separation beyond a random split.
+Specify severity and test conditions. A single perturbed point supports a narrow robustness observation, not robustness across a range. For generalization, a leakage-safe independent random split can assess new samples from the same population; cross-condition/site/time transfer requires the corresponding separation. Check acquisition dependence before treating random samples as independent.
 
 ## 9. Treat Interpretation As Evidence, Not Decoration
 
@@ -152,7 +152,7 @@ Choose metrics based on task and class distribution:
 
 - class-wise precision, recall, and F1 for diagnostic categories;
 - macro-F1 for equal class importance;
-- weighted average for support-weighted operational prevalence;
+- support-weighted averages for the evaluated sample distribution, which need not equal operational prevalence;
 - AUROC/AUPRC for detection when appropriate;
 - localization metrics for spatial or variable localization;
 - prediction errors for quality/soft-sensor tasks.
@@ -202,7 +202,7 @@ For each subsection:
 
 Do not describe every cell. Focus on results that change the paper's argument.
 
-Use `experimental settings`, `data preparation`, or direct factual description for ordinary settings. Avoid report-like `experimental protocol` or `reporting protocol` unless a formally defined protocol is genuinely the research object.
+Use `experimental settings`, `data preparation`, or direct factual description for ordinary settings. `Evaluation protocol` is legitimate for a defined split, access, repetition, or scoring procedure, including an established benchmark procedure; it need not itself be the research contribution. Do not rename a valid procedure merely to avoid the word.
 
 Preserve author-approved table font size, width, grouping, and float order. If a table does not fit, revise its scientific content or column design before shrinking text. Use [figure and LaTeX guidance](../../references/figure-and-latex-production.md) for evidence-bearing artifacts.
 

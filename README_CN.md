@@ -4,7 +4,9 @@
 
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
-**4.0.0 版：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+**4.1.0 版：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+
+2026-10-24 已完成：一个全新响应上下文中的 21 个合成案例，修正一处表达质量问题后对相关 5 例定向复测，以及 36 项程序测试、28 个入口检查。这是有范围的包装与行为证据，不代表所有研究方向或论文均已验证。详见[评估记录](evals/reviews/v41-independent-evaluation.md)。
 
 ## 核心能力
 
@@ -66,7 +68,7 @@ python3 scripts/install_suite.py --copy
 
 ### 确认安装成功
 
-在安装后的下一轮对话中，让 Codex 读取本地根 `SKILL.md`，确认版本为 `4.0.0`，再运行 `scripts/validate_suite.py`；预期报告 14 对中英文入口。若技能选择器没有显示中文入口，可直接要求读取套件内 `skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md`，不必重复安装。客户端未刷新时再重启客户端。
+在安装后的下一轮对话中，让 Codex 读取本地根 `SKILL.md`，确认版本与实际下载的来源一致，再运行 `scripts/validate_suite.py`；本套件包含 14 对中英文入口。开发候选与 GitHub 当前发布版本可能不同，应记录实际下载的版本或提交，不把差异误判为安装失败。若技能选择器没有显示中文入口，可直接要求读取套件内 `skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md`，不必重复安装。客户端未刷新时再重启客户端。
 
 更新前记录旧版本并备份自己的改动；下载新版后先验证，再明确替换旧套件。安装器遇到已有目录会停止，不自动删除或覆盖。卸载时只移除对应安装目录或符号链接，不删除论文项目；不确定位置时先让 Codex 列出路径。
 
@@ -115,7 +117,7 @@ python3 scripts/install_suite.py --copy
 
 ## 文件怎样组织
 
-4.0.0 包含 **28 个 Skill 入口 Markdown、26 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
+4.1.0 包含 **28 个 Skill 入口 Markdown、26 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
 
 | 目录 | 内容 |
 |---|---|
@@ -137,7 +139,7 @@ python3 scripts/install_suite.py --copy
 
 - [摘要贡献写法](references/abstract-and-contribution-craft_CN.md)、[正文同步模板](assets/templates/abstract-body-sync.md)。
 - [章节指南](references/section-writing-guide.md)、[论证与行文](references/argument-and-prose-craft.md)、[贡献论证路径](references/contribution-narratives.md)。
-- [术语决策](references/terminology-decisions_CN.md)、[通用术语库](references/engineering-application-terminology-bank_CN.md)、[26 篇文献证据](references/published-evidence.md)。
+- [术语决策](references/terminology-decisions_CN.md)、[通用术语库](references/engineering-application-terminology-bank_CN.md)、[38 篇文献证据](references/published-evidence.md)。
 - [实验执行](references/experiment-execution_CN.md)、[运行清单](assets/templates/experiment-run-manifest.md)、[实验证据](references/experiment-evidence-design.md)。
 - [图表规范](references/figure-and-latex-production.md)、[转刊完整性](references/journal-migration-and-completeness_CN.md)、[作者交接](assets/templates/author-handoff.md)。
 
@@ -147,7 +149,7 @@ python3 scripts/install_suite.py --copy
 python3 scripts/audit_terminology.py manuscript.tex --min-count 3
 ```
 
-工具排除百分号注释、字面 `iftrue`/`iffalse` 分支及 comment 环境，输出待审候选和高频搭配。不展开任意 TeX 宏、不读取包含文件、不自动判错、不改原文。最终对照活动正文和 PDF。
+工具排除百分号注释、字面 `iftrue`/`iffalse` 的非活动分支、comment 环境、常见引用键/交叉引用键、网址目标及字面 `thebibliography` 环境；保留源行号和超链接显示正文，输出待审候选和高频搭配。不展开任意 TeX 宏、不读取包含文件、不自动判错、不改原文。自定义或嵌套语法仍需人工核查，最终对照活动正文和 PDF。
 
 ## 证据、隐私与来源
 

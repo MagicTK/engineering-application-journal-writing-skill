@@ -23,7 +23,7 @@ Describe each concept at the correct level.
 | Model operation | algorithmic mechanism | encoding, grouping, fusion, attention, filtering, alignment, adaptation |
 | Evidence | observation and evaluation | case study, comparison, ablation, robustness test, visualization, engineering interpretation |
 
-Move from upper levels to lower levels when introducing a method. Do not begin an industrial problem statement with tokens, embeddings, patches, or channels.
+When first introducing a method's engineering setting, establish the relevant physical object and task before relying on its computational representation. This is an explanatory dependency, not a mandatory order for every paragraph; an established method subsection can start directly with its defined model object.
 
 ## 2. Engineering Objects And Conditional Model Correspondence
 
@@ -53,7 +53,7 @@ Use cautiously:
 - channel strategy;
 - token interaction;
 - global embedding space;
-- spatial dependency when no physical, topological or graph relation is defined.
+- spatial dependency when the represented axis or relationship is undefined, or model adjacency is mistaken for physical proximity.
 
 `Dependency` describes a modeled or statistical dependence; it does not itself imply causality. Do not substitute `correlation` unless the corresponding statistical meaning is justified. Use `relationship`, `interaction`, `coupling`, `association`, or `feature fusion` only when they describe the actual object or operation. Avoid vague `information exchange` when a specific operation can be named. See [context-sensitive decisions](terminology-decisions.md) for state/condition, sample/record, variable/attribute and feature distinctions.
 
@@ -109,13 +109,13 @@ Match wording to validation strength.
 
 | Evidence | Defensible wording |
 |---|---|
-| Public benchmark only | effectiveness on the benchmark; controlled comparison |
+| Public benchmark only | effectiveness on the benchmark; controlled comparison only for documented controlled factors |
 | Retrospective or held-out real-world case | practical relevance; engineering applicability; effectiveness on the evaluated production data |
 | Cross-site or cross-line evaluation | transferability across the evaluated sites or lines |
 | Online shadow test | online feasibility under the tested setting |
 | Closed-loop or deployed system | deployment or operational benefit, limited to the demonstrated system |
 
-Do not move upward in this table without evidence.
+These are different evidence dimensions, not a ranking of paper quality or a mandatory progression toward deployment. A cross-site study does not automatically establish live operation; a deployment at one site does not establish transfer to others. Use only the dimensions actually evaluated.
 
 Name the dimension of generalization: across evaluated time periods, operating conditions, equipment, production lines, or sites. A random held-out split within one case does not establish transfer across sites. Name the disturbance for robustness claims, and connect practical value to the evaluated engineering quantity. A lower estimation error, fewer false alarms, and lower annotation cost are different benefits and require their own evidence.
 

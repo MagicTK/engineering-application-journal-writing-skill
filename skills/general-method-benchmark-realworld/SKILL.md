@@ -5,16 +5,16 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 # General Method With Benchmark And Real-World Validation
 
-Suite version: `4.0.0`
+Suite version: `4.1.0`
 
 ## Mission
 
 Build a method-centered engineering paper whose general technical contribution is supported by two different forms of evidence:
 
-- a benchmark case study for controlled, reproducible comparison; and
-- a real-world industrial case study for engineering relevance under actual process variability.
+- a benchmark case study for comparison under a documented evaluation setting; and
+- a real-world industrial case study for relevance to the measured production setting.
 
-Do not write the paper as “one model tested on two datasets.”
+Explain what each case tests beyond listing two datasets. Neither the word `benchmark` nor the origin of production data establishes experimental control, reproducibility, or coverage of operating variation.
 
 <!-- invariant: no-fabrication -->
 <!-- invariant: claim-evidence-alignment -->
@@ -40,7 +40,7 @@ Write a one-paragraph problem abstraction containing:
 
 1. the engineering task;
 2. the recurring data or process property;
-3. why existing approaches mishandle that property;
+3. what capability remains to be established or improved under that property;
 4. the method-level principle needed to resolve it;
 5. the industrial scope in which the principle is expected to hold.
 
@@ -52,8 +52,8 @@ Create an evidence table before writing:
 
 | Evidence role | Benchmark case | Real-world case |
 |---|---|---|
-| Primary purpose | controlled comparison | engineering applicability |
-| Strength | reproducibility, known faults/labels, extensive analysis | process realism, noise, imbalance, operating variation |
+| Possible purpose | comparison under a shared evaluation setting | relevance to the documented production setting |
+| Strength to verify | accessible data/settings, label provenance, repeatability, controlled factors where available | measured process context and the variation actually present |
 | Typical experiments | main comparison, ablation, sensitivity, robustness, visualization | process description, main comparison, selected ablation, engineering interpretation |
 | Defensible conclusion | methodological effectiveness | practical relevance under tested conditions |
 | Not established | deployment | universal generalization or online operation |
@@ -66,7 +66,7 @@ Before results are written, pass all intended claims through the [`engineering-e
 
 Use this logical chain:
 
-`recurring industrial challenge -> limitation of current modeling -> general method principle -> controlled benchmark evidence -> real-world engineering evidence -> scope and boundary`
+`recurring industrial challenge -> remaining modeling requirement -> general method principle -> benchmark evidence -> real-world engineering evidence -> scope and boundary`
 
 Each contribution must map to evidence that tests its actual claim. Use [contribution narratives](../../references/contribution-narratives.md) to distinguish new formulations, mechanisms, adaptations and focused comparisons; let [argument and prose craft](../../references/argument-and-prose-craft.md) guide the paragraph progression.
 
@@ -81,22 +81,22 @@ Recommended functions:
 5. Name the benchmark and real-world case studies.
 6. State the verified outcome and its supported engineering relevance, including a trade-off or unresolved outcome where that is what the evidence establishes.
 
-Keep the final evidence sentence concise. Name the benchmark and real-world case and state what they support. Do not list incidental dataset properties such as class imbalance, noise, or missingness in this high-level sentence unless one of them is the paper's central problem. Do not describe the real-world case as merely another dataset or claim deployment without online or operational evidence.
+Keep the final evidence sentence concise. Name the benchmark and real-world case and state what they support. Do not list incidental dataset properties such as class imbalance, noise, or missingness in this high-level sentence unless one of them is the paper's central problem. Calling the collected measurements a dataset is legitimate; explain the production context instead of treating its name as evidence of applicability. Do not claim deployment without operational evidence.
 
 ## 6. Introduction
 
-Recommended paragraph order:
+Possible paragraph functions, not a required eight-paragraph outline:
 
 1. Engineering task and importance across the relevant process class.
 2. Data or process property that creates the recurring challenge.
 3. Established industrial and data-driven methods.
 4. Limitation of global, local, stage-wise, rate-wise, condition-wise, or other relevant modeling assumptions.
 5. Motivation figure or conceptual distinction when useful.
-6. Additional representation requirement central to the method.
+6. A distinct additional representation requirement, only if needed for the argument.
 7. Proposed method as a structured response.
 8. The actual independent contributions, with supporting operations kept within the contribution they enable; do not pad a fixed count.
 
-The real-world case should appear in the motivation or contributions as evidence of engineering relevance, not as an afterthought.
+Connect the real-world case to the study's evidence plan; performing the case alone need not be a contribution. Merge overlapping functions and preserve the cited reasoning when integrating Related Work into the Introduction. Do not invent a separate challenge for every module.
 
 ## 7. Related Work
 
@@ -113,7 +113,7 @@ Build a progression from established capabilities to the study's remaining requi
 
 The method section must demonstrate generality without becoming detached from engineering meaning.
 
-For each component:
+For each substantive component, identify the following where they apply; ordinary supporting operations need a defined role, not a repeated motivation paragraph:
 
 1. name the recurring engineering/data issue;
 2. define the representation and operation;
@@ -134,8 +134,8 @@ When the method uses production stages, process topology, sampling schedules, or
 
 Open with a clear division of labor:
 
-- the benchmark provides a controlled and reproducible evaluation;
-- the industrial case examines applicability to real process data and operating conditions.
+- the benchmark establishes comparison under its documented data, labels, splits, and settings;
+- the industrial case examines applicability to its measured process conditions and task.
 
 Then introduce:
 
@@ -157,7 +157,7 @@ Include:
 - robustness only for plausible disturbances;
 - visualization only when it answers a scientific question.
 
-Use the benchmark for extensive model analysis because it offers controlled labels and reproducible conditions.
+Use the case with suitable labels, repeatability, and controlled factors for the corresponding mechanism analysis. Do not infer those properties from the benchmark label alone.
 
 ## 11. Real-World Industrial Case Study
 
@@ -187,7 +187,7 @@ Use a layered, credible set:
 - strongest relevant industrial/task-specific method;
 - proposed method.
 
-Keep method names and model variants consistent across both cases. If a method cannot be reproduced on the real-world case, explain the limitation rather than silently omitting it.
+Keep method names and model variants consistent when they denote the same comparator. Select comparators relevant to each case and explain substantive differences in the sets or implementations; identical sets are not compulsory when tasks or available inputs differ.
 
 ## 13. Results Synthesis
 
@@ -208,7 +208,9 @@ Discussion should distinguish:
 - method principle that transfers across cases;
 - process knowledge or configuration that must be adapted;
 - evidence for engineering applicability;
-- missing online, cross-site, or long-term validation.
+- untested conditions that materially limit the claims being made.
+
+Online, cross-site, and long-term tests are needed for the corresponding claims, not as a compulsory closing list for every study.
 
 Conclusion should summarize the general principle, the two evidence roles, and the demonstrated scope. Avoid repeating every table value.
 
@@ -216,11 +218,11 @@ Conclusion should summarize the general principle, the two evidence roles, and t
 
 Before handoff, verify:
 
-- benchmark and real-world cases have explicitly different purposes;
+- each case has a justified purpose, with shared and complementary evidence identified;
 - the method claim is general but not universal;
 - the real-world process is described as an engineering case, not only a dataset;
 - comparison settings are fair across cases;
-- full-model values are consistent across main, ablation, and visualization artifacts;
+- reported values and visualizations identify their run and aggregation scope; shared results agree and legitimate differences are explained;
 - practical applicability is not inflated into deployment;
 - the Abstract and Conclusion reflect both evidence types accurately.
 

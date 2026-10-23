@@ -67,6 +67,12 @@ def main() -> int:
     print(f"Source: {ROOT}")
     print(f"Target: {target}")
     print(f"Mode:   {mode}")
+    source_check = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_suite.py")], check=False
+    )
+    if source_check.returncode:
+        print("Source validation failed; no installation was created.", file=sys.stderr)
+        return source_check.returncode
     if args.dry_run:
         return 0
 

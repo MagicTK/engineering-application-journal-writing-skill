@@ -5,7 +5,7 @@ description: 工程应用顶刊严谨性审稿 Skill 中文执行版。用于投
 
 # 工程应用顶刊严谨性审稿
 
-套件版本：`4.0.0`
+套件版本：`4.1.0`
 
 ## 一、任务目标
 
@@ -61,7 +61,7 @@ description: 工程应用顶刊严谨性审稿 Skill 中文执行版。用于投
 
 `观察 -> gap -> 需求 -> 设计 -> 主张 -> 证据 -> 结论`
 
-标记：未解决的 motivation、无问题来源的模块、无实验的贡献、无关实验、结论新增主张，以及把 benchmark 与真实案例写成可互换数据集。
+标记：未解决的 motivation、未说明如何服务需求的模块、缺少对应证据的贡献（可能需要理论分析、实验或运行验证）、无关实验、结论新增主张，以及把 benchmark 与真实案例写成可互换数据集。
 
 ## 七、方法与数学
 
@@ -77,7 +77,7 @@ description: 工程应用顶刊严谨性审稿 Skill 中文执行版。用于投
 - 公式是否提供必要形式化；
 - 领域知识来源与进入模型的位置。
 
-文字更清楚时，不要求增加公式。
+文字更清楚时，不要求增加公式。对核心数学主张先做最小例子核验：有限 logit 置零不使 softmax 后的类别概率为零；行归一化与列归一化的分母不同；块对角算子不证明物理独立。核对形状、求和轴、后续运算及可用实现；缺少代码意味着核验受限，不授权擅自修正方法。已发表参考文献可以提示核查位置，但不能取代数学判断。
 
 ## 八、实验与证据
 
@@ -105,15 +105,16 @@ description: 工程应用顶刊严谨性审稿 Skill 中文执行版。用于投
 | 主张 | 最低证据 |
 |---|---|
 | improvement | 公平对比 |
-| component contribution | 隔离消融 |
-| robustness | 多种合理扰动/强度 |
-| generalization | 有意义的未见工况/站点/域 |
+| component contribution | 合理的隔离对比、干预或分析 |
+| robustness | 覆盖所声称扰动/工况范围的评价 |
+| generalization | 对所声称总体或迁移设置的独立留出证据 |
 | interpretability | 工艺、标签、扰动或专家验证 |
 | efficiency | 参数/FLOPs/时间/内存 |
-| practical relevance | 真实生产来源案例 |
-| deployment | 在线/部署流程评价 |
+| engineering relevance | 与任务和工程条件对应的证据，不自动等于现场验证 |
+| production applicability | 来自所声称产线场景的证据，明确采集和筛选范围 |
+| deployment | 实际运行接入评价，并明确建议/影子/闭环范围 |
 
-不能补证据时降低表述强度。
+不能补证据时降低表述强度。判断 best、all classes、consistently 前先核对比较对象、指标及汇总层级；总体领先不等于逐类均最优。参见[一致性台账](../../references/experiment-evidence-design.md#9-consistency-ledger)。
 
 ## 十一、术语与排版
 

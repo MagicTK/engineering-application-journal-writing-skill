@@ -27,7 +27,7 @@ No search hit means **not found in this searched corpus**, not ungrammatical or 
 
 For process-model training counts, prefer `training samples` and `test samples`. Use `development set` only if it really denotes a training/selection pool, and explain its partition. Do not rename a training set to imply an unperformed validation step. Do not replace `records` before determining whether rows and samples differ.
 
-P05-P06 use semantic attributes for zero-shot fault categories; P20 uses graph-node attributes. These uses are compatible with preferring `process variables` for physical measurements. The word `attribute` as a verb in an explanation is unrelated to that decision.
+P05-P06 and P29 use semantic attributes for zero-shot fault categories; P20 uses graph-node attributes. P29 explicitly separates structured fault descriptors from sensor measurements and their textualized representations. These uses are compatible with preferring `process variables` for physical measurements. The word `attribute` as a verb in an explanation is unrelated to that decision.
 
 ## State, Condition And Mode
 
@@ -41,6 +41,8 @@ P05-P06 use semantic attributes for zero-shot fault categories; P20 uses graph-n
 | prototype | a learned/defined representative vector, exemplar or center | Is an actual prototype mechanism present? |
 
 `Process state` is not an invalid phrase: P04 uses it in plant-level monitoring. P16 uses operational-state language in quality-related diagnosis; P10 studies operating conditions across domains. These are contextual examples, not a ranking of commonness.
+
+A learned fuzzy state (P07), a discrete operating mode and a physical state-space variable have different definitions. Preserve those definitions even when `state` occurs in all three. A process disturbance is an input or event that perturbs behavior, not a synonym for the condition under which measurements were obtained.
 
 Do not replace `state` with `condition` merely for fluency: a continuously changing local representation is not automatically a discrete operating regime. `Local operational state` is usable if the model actually adapts to local measured behavior; it should not silently assert that the model identifies physical states. Never introduce `prototype state` when the method has no defined prototype.
 
@@ -67,21 +69,43 @@ Do not globally replace `variable-specific` with `variable-wise`: the former des
 | aggregation / fusion / interaction | aggregation summarizes a set; fusion combines information sources; interaction models influence. They overlap in some designs but are not automatic synonyms. |
 | relationship / dependency / correlation | relationship is broad; dependency is statistical or modeled dependence, not automatically causation; correlation needs a defined statistic or justified usage. |
 | topology / prior / constraint | identify the engineering source and mathematical role. An additive attention bias is not necessarily a hard constraint or a causal graph. |
-| spatial / spatiotemporal | define the physical, topological or graph relation and the temporal axis. Tensor column order alone establishes neither. |
+| causal convolution / predictive dependence / physical causation | A causal convolution excludes future inputs from a specified output; predictive dependence concerns information useful for prediction. Neither alone identifies a physical intervention effect or root cause. |
+| spatial / spatiotemporal | Define the represented axis or relation: physical layout, process topology, graph neighborhood, or explicitly defined inter-variable structure. For spatiotemporal, identify the time axis too. Model-grid adjacency does not establish physical proximity or process coupling. |
 | gate / attention / fusion module | a gate regulates a contribution; attention computes weighted relations/aggregation; a fusion module combines paths. Verify shapes and operations instead of interchanging names. |
 | unified / global / plant-wide representation | name the scope actually represented. Combining two paths does not itself prove universal generalization or complete plant coverage. |
+
+For `stage`, first distinguish a production unit, a temporal phase in a batch, and a learning phase. For `local/global`, identify the domain over which locality is defined. A temporal receptive field is not a plant region. For `propagation`, distinguish graph-feature updates from a physical disturbance spreading through the process. These decisions change scientific meaning, not merely style.
+
+For `mask`, `sparse` and `constraint`, inspect where the operation acts. A zero-valued attention edge, zeroed logit, excluded class and unexecuted expert are different outcomes. Finite zeroed logits still receive positive softmax probability; ordinary dense softmax also does not establish sparse execution. Likewise, a block-diagonal graph restricts that graph operation, not necessarily later feature mixing or physical dependence between units. Keep the abstract's benefit at the level the full computation supports.
 
 ## Topic-Specific Terms
 
 - **Multi-rate:** sampling rate, sampling interval, asynchronous observation and missingness are different properties. Repeated/static values do not create a temporal signal. See P08 and P23-P26.
 - **Limited supervision:** few-shot counts labeled examples; zero-shot requires a clear unseen-class definition and available semantics; semi-supervision uses labeled and unlabeled data; weak supervision may use bags or coarse labels; self-supervision specifies how targets arise. These settings are not interchangeable. See P05-P06 and P17-P22.
-- **Fuzzy models:** membership degree is not automatically a calibrated probability; define rules, memberships and aggregation. An evidential uncertainty score is a different object unless the method establishes a connection. See P07.
+- **Fuzzy models:** membership degree is not automatically a calibrated probability; define the actual membership and aggregation. A fuzzy clustering layer does not necessarily contain linguistic rules. An evidential uncertainty score is a different object unless the method establishes a connection. See P07 and P27-P29, P33.
 - **Knowledge-guided models:** distinguish expert rules, process topology, physical laws and learned similarities. A prior's provenance and role matter more than the adjective. See P04, P12-P14.
 - **Quality-related diagnosis:** explain the measured quality target and its relation to process behavior. Avoid repeating a particular defect name throughout the abstract and experiment overview. See P09 and P16.
+
+| Direction-specific choice | Meaning to retain | Check before editing |
+|---|---|---|
+| conditional drift / concept drift | A change in a specified distribution, not one universal shift definition | Which of `P(X)`, `P(Y)`, `P(X|Y)` or `P(Y|X)` changes, and which is assumed stable? P30 uses a particular class-conditional definition. |
+| event-triggered learning / sampling / alarm | Respectively a learning update, acquisition event or diagnostic output | What triggers what, and is the required measurement or label available then? P27 concerns learning updates. |
+| generation condition / operating condition | The former may be a fault label or health indicator; the latter describes operating circumstances | Do not replace generic conditioning with operating-condition language without checking its variable. See P32. |
+| diffusion step / acquisition time | Model noising/denoising iteration versus measurement time | Do not describe diffusion steps as physical temporal evolution or sensor-noise removal by default. See P32, P35. |
+| reservoir state / process state | A recurrent model's internal state versus a defined process state | The reservoir in P28 is a computational object, not a physical tank. |
+| slow feature / quality-related feature | Temporal variation and target relevance are separate properties | Which objective or equation relates the feature to quality? See P34. |
+| efficiency / real time | A specified resource comparison versus meeting a decision-time requirement | Identify training, generation or prediction cost and the timing boundary; parameter count does not establish latency. |
+| task balancing / load balancing | Training influence across prediction tasks versus distribution of work or expert usage | P36 balances task gradients; this does not imply sparse routing or device-load balancing. |
+| cross-modal alignment / synchronization | Learned representation compatibility versus paired acquisition timing | P38 separates acquisition synchronization, token construction and cross-modal attention; equal feature dimensions do not prove temporal pairing. |
+| local outside-class / unknown fault | Outside one sub-classifier's label set versus unknown to the whole system | P37's pairwise OOD class does not by itself establish system-level novel-fault detection. |
 
 ## Reporting And Scope
 
 `Real-world data` describes provenance, not online operation. Do not routinely prefix it with `offline`; retain the distinction if retrospective versus prospective evaluation matters. Class imbalance belongs in dataset/metric analysis when relevant. Mention it in an abstract or contribution only when it is part of the research problem or supported advance, not merely a property of one case.
+
+`Offline assay` may accurately identify a laboratory measurement procedure or delayed quality label; it is not the same as calling every industrial dataset offline. `Online` may identify sequential computation or actual live evaluation; define which. Deployment requires operational integration, and shadow-mode evaluation does not demonstrate closed-loop benefit.
+
+Task names also require definitions. Detection may denote an alarm, while diagnosis may identify a fault class, location or cause; published usage varies (P02). Inspect the target and evaluation before correcting a name. Quality prediction may target a continuous measurement or a quality category (P09); class labels must not be rewritten as continuous quality variables for apparent consistency.
 
 `Experimental settings` is a useful ordinary heading. `Evaluation protocol` is also legitimate when a reproducible evaluation procedure is genuinely being defined. An author's preference against it is not a field-wide ban.
 

@@ -34,6 +34,8 @@ REQUIRED_TEMPLATES = {
 REQUIRED_EVALS = {
     "trigger-routing.json",
     "behavior-cases.json",
+    "v4-behavior-cases.json",
+    "v41-behavior-cases.json",
     "forward-test-report.json",
 }
 REQUIRED_REPOSITORY_FILES = {

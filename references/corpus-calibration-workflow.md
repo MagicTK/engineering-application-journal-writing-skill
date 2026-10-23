@@ -19,11 +19,7 @@ Select papers along four axes:
 3. engineering task and industrial object;
 4. methodological or data condition.
 
-Recommended minimum:
-
-- 3 closely matched papers for a narrow language revision;
-- 6-12 papers for section restructuring;
-- a broader systematic search for novelty or absence claims.
+Size the search to the decision. A self-contained grammar correction usually needs no corpus. For a disputed engineering collocation, compare a few closely matched passages and expand if their meanings disagree. Section restructuring often benefits from 6-12 varied, matched examples; that is a planning range, not a passing threshold. Novelty or absence claims require a broader documented search. Honor a user's explicit request for a larger sample, but do not equate the number inspected with correctness.
 
 Use recent papers for current terminology and presentation. Use seminal papers for process, dataset, and method facts.
 
@@ -39,6 +35,8 @@ Do not copy:
 - unique taxonomies presented as the current work's original structure.
 
 Record patterns as paraphrased observations.
+
+Read beyond search hits. Exclude bibliography titles, citation mentions and unrelated noun/verb uses from terminology evidence. A term may be valid in a semantic-attribute model but unsuitable for a physical measurement. A title may describe `detection` while the actual target is classification, or `irregular sampling` while the method constructs a sampling transformation. Record the operational definition before generalizing.
 
 ## 3. Extract At Four Levels
 
@@ -92,9 +90,14 @@ Preferred terminology:
 Claim-strength distribution:
 Presentation conventions:
 Observed variation/exceptions:
+Checked passage and PDF-page locator:
+Reading depth: metadata | exact phrase in context | abstract | contribution passage | method/evidence section
+Transfer boundary:
 ```
 
 Do not turn one paper's choice into a field rule. Record distributions and exceptions.
+
+For abstract or contribution analysis, record sentence functions rather than sentence molds: the engineering property, remaining capability, proposed principle, intermediate object, next operation, final task and evaluation finding. Include sequential, parallel and training-objective relationships when present. A method section must confirm any interface the abstract leaves ambiguous; do not infer it from the abstract alone. Public notes should contain original analysis and bibliographic pointers, not extracted full-text passages or private manuscript examples.
 
 ## 5. Priority Order
 
@@ -136,7 +139,7 @@ Apply as a soft guide. Co-authored text may not represent one author's voice; us
 
 ## 8. Quality Checks
 
-- At least three sources support any claimed convention.
+- A claimed convention has multiple relevant sources and recorded counterexamples or variation; a small corpus does not establish field-wide prevalence.
 - The selected corpus matches task and archetype.
 - No source sentence has been transplanted.
 - Terminology is consistent with the manuscript's physical meaning.

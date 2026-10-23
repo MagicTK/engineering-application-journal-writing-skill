@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "v41-training-prediction",
+      "language": "en",
+      "skill": "engineering-abstract-contributions",
+      "prompt": "Revise only the two method sentences in this synthetic soft-sensor abstract. Confirmed design: an encoder E feeds a quality predictor P and reconstruction decoder D during training; labeled measurements train P and unlabeled measurements train D. At inference only E and P run. Existing text: 'A reconstruction module first repairs the process measurements. Its outputs are then fused with a quality prediction module to predict concentration.' There is no imputation operation, no fusion head and no deployment test. Explain the local corrections and leave other abstract sentences alone.",
+      "required_behaviors": [
+        "describe joint training or shared representation rather than a reconstruction-to-prediction inference chain",
+        "distinguish the predictor from the training-only decoder",
+        "provide a local replacement and concise rationale"
+      ],
+      "forbidden_behaviors": [
+        "retain or invent measurement repair or feature fusion",
+        "claim operational deployment or numerical gains"
+      ]
+    },
+    {
+      "id": "v41-membership-propagation",
+      "language": "zh",
+      "skill": "engineering-terminology-polishing-zh",
+      "prompt": "仅讨论术语。模型把每个变量的分组得分做 softmax，再按权重汇总特征；没有概率校准，也没有研究物理故障传播。学生想写 calibrated probabilities reveal fault propagation。另一句说明共享同一组编码器权重，但每个变量分别编码。请判断这些说法，并保留合理的独立编码表述，不要全部换成一个词。",
+      "required_behaviors": [
+        "separate normalized assignment weights from calibrated probabilities",
+        "separate feature aggregation from physical fault propagation",
+        "allow shared weights and separate variable encoding to coexist"
+      ],
+      "forbidden_behaviors": [
+        "claim normalization establishes probability calibration",
+        "require different encoder parameters for every variable"
+      ]
+    },
+    {
+      "id": "v41-supervision-branches",
+      "language": "zh",
+      "skill": "industrial-ai-paper-router-zh",
+      "prompt": "我们有两篇不同的研究，暂不写全文。A 用少量化验浓度标签和大量无标签过程测量训练软测量回归器；B 只有整段正常/异常标签，却要输出每个时刻的异常分数。请分别建议摘要应说明的核心关系和最少的验证重点。学生打算两篇都写 few-shot classification，并统一报 seen/unseen harmonic accuracy。不要引入分工序模型。",
+      "required_behaviors": [
+        "identify semisupervised regression and weak/coarse-label point detection as distinct settings",
+        "select regression and prediction-granularity evidence separately",
+        "avoid a universal metric or stage-grouping template"
+      ],
+      "forbidden_behaviors": [
+        "recommend seen/unseen harmonic accuracy for concentration regression",
+        "treat segment classification accuracy as sufficient point-detection validation"
+      ]
+    },
+    {
+      "id": "v41-zero-shot-access",
+      "language": "en",
+      "skill": "engineering-experiment-evidence-design",
+      "prompt": "Synthetic zero-shot study: training classes A/B have labels; test classes C/D have expert-written semantic descriptions but no training labels. The method adjusts semantic vectors using the unlabeled C/D test measurements. No C/D labels are used before scoring, and only C/D are classified at test time. What should the experiment description disclose and which reporting choices fit? A student wants to call it inductive zero-shot learning and thinks harmonic seen/unseen accuracy is always compulsory. Do not invent data counts or request a full new experiment suite.",
+      "required_behaviors": [
+        "describe test-time or transductive access and its fairness boundary",
+        "recognize unseen-only evaluation rather than imposing generalized seen/unseen metrics",
+        "distinguish permitted unlabeled access from forbidden target-label selection"
+      ],
+      "forbidden_behaviors": [
+        "certify inductive evaluation despite test-measurement adaptation",
+        "declare all unlabeled test adaptation invalid regardless of setting"
+      ]
+    },
+    {
+      "id": "v41-contribution-finding",
+      "language": "en",
+      "skill": "engineering-abstract-contributions",
+      "prompt": "Discuss contribution organization, not final manuscript prose. A conventional encoder is used unchanged; a new delay-aware aggregation rule is the technical advance. A documented controlled comparison also establishes an engineering trade-off between assay delay and the value of acquiring an extra measurement, under the evaluated conditions. The actual trade-off values are not supplied here. Proposed items are encoder, aggregation, and two experiments. Is a two-item organization defensible? What belongs in each, and what evidence must be inspected before drafting precise claims?",
+      "required_behaviors": [
+        "avoid claiming the standard encoder as new",
+        "allow the established engineering finding to be a contribution rather than banning experiments categorically",
+        "identify missing evidence needed for precise result wording without inventing it"
+      ],
+      "forbidden_behaviors": [
+        "force three items or invent another module",
+        "write a numerical trade-off not supplied by the prompt"
+      ]
+    },
+    {
+      "id": "v41-generalization-deployment",
+      "language": "zh",
+      "skill": "engineering-journal-rigor-review-zh",
+      "prompt": "仅判断结论范围：研究把独立生产批次随机划成训练和测试，两组来自同一生产总体，无重叠或选择泄漏；测试误差用于评价同总体新批次预测。作者没有跨站点数据。另一个演示按时间顺序回放历史测量，模型逐点预测，但没接入产线。能否说第一项完全不涉及泛化，因为不是跨厂？第二项能否叫 deployed system？请简洁区分，不要求作者为了措辞重做全部实验。",
+      "required_behaviors": [
+        "recognize within-population predictive generalization under the stated independent split",
+        "reserve cross-site transfer for corresponding evidence",
+        "distinguish streaming replay from actual operational deployment"
+      ],
+      "forbidden_behaviors": [
+        "reject all random-split generalization by definition",
+        "certify deployment from sequential replay"
+      ]
+    },
+    {
+      "id": "v41-sampling-provenance",
+      "language": "en",
+      "skill": "industrial-ai-paper-router",
+      "prompt": "The sensors originally sample regularly. During training, software deletes and warps selected timestamps to create a pretext task, and a classifier predicts the transformation type alongside the supervised fault label. There are no naturally asynchronous streams and no physical production-stage groups. A draft says the work solves asynchronous industrial acquisition through cross-stage fusion. Give the smallest scientifically faithful framing and the main evidence distinction; no new method design.",
+      "required_behaviors": [
+        "identify a synthetic sampling augmentation and self-supervised training objective",
+        "keep original acquisition separate from the constructed learning task",
+        "remove unsupported stage-fusion framing without designing new machinery"
+      ],
+      "forbidden_behaviors": [
+        "treat artificial sampling transformations as proof of natural acquisition irregularity",
+        "invent process stages or sampling rates"
+      ]
+    },
+    {
+      "id": "v41-fuzzy-update-scope",
+      "language": "zh",
+      "skill": "industrial-ai-paper-router-zh",
+      "prompt": "两篇虚构研究，只检查写法。A 在每个固定时间间隔采集水质数据，化验目标两天后到达，模型据预测误差决定是否更新；学生称其实现 event-triggered sampling，并在化验到达前用当期真值计算触发条件。B 用 fuzzy c-means 隶属度强化隐特征，没有专家语言规则；学生称全部输出都可用可读规则解释。请指出最少的必要澄清，不重设计两种方法，不要求一律做概率校准。",
+      "required_behaviors": [
+        "distinguish acquisition schedule from update triggering",
+        "identify unavailable target feedback without inventing a remedy or results",
+        "separate fuzzy clustering from readable expert rules and calibrated probabilities"
+      ],
+      "forbidden_behaviors": [
+        "certify a future-label trigger as a valid online evaluation",
+        "invent a rule base or require probability calibration for every membership"
+      ]
+    },
+    {
+      "id": "v41-generation-boundaries",
+      "language": "en",
+      "skill": "engineering-abstract-contributions",
+      "prompt": "Comment only on the method and evaluation framing of a synthetic paper. Its task is conditional industrial trajectory generation; a health indicator controls generation. A denoising model runs for 50 diffusion steps. Utility is evaluated by training a predictor on synthetic trajectories and evaluating it on untouched real test units; the generator was fitted on independent real training units. A draft calls this removal of sensor noise during 50 seconds of plant operation and claims privacy preservation because no original rows are released. Must this paper instead be framed as fault diagnosis? Explain the minimal corrections without rewriting the entire abstract or inventing results. No production scarcity or class-imbalance claim has been verified; do not add an invented motivation.",
+      "required_behaviors": [
+        "allow generation as the primary task and preserve the declared utility evaluation",
+        "distinguish diffusion iterations from acquisition time and generation conditions from operating conditions",
+        "reject automatic privacy and sensor-noise-restoration claims"
+      ],
+      "forbidden_behaviors": [
+        "force a diagnosis task or an online generator in the prediction path",
+        "claim synthetic output guarantees privacy",
+        "invent production scarcity or class imbalance as a compulsory generative-model motivation"
+      ]
+    },
+    {
+      "id": "v41-efficiency-provenance",
+      "language": "en",
+      "skill": "engineering-experiment-evidence-design",
+      "prompt": "A synthetic industrial paper reports fewer trainable parameters and fewer model updates, but no latency, energy or device measurements. Measurements come from a real plant; one test subset has recorded faults and another contains software-injected sensor bias. The author asks whether the existing results prove real-time deployment on all real plant faults. Give scoped claims and only the evidence needed if those stronger claims are retained. Do not say that the verified parameter-count comparison is worthless without new hardware experiments. The production-derived test subset was deliberately class-balanced, unlike the original recordings; distinguish task relevance from evidence of natural fault prevalence.",
+      "required_behaviors": [
+        "retain the valid scoped parameter/update claims",
+        "separate training savings from inference latency and deployment",
+        "separate measurement provenance from injected versus recorded fault provenance",
+        "retain engineering relevance while distinguishing curated class proportions from natural production prevalence"
+      ],
+      "forbidden_behaviors": [
+        "certify deadline compliance or deployment without evidence",
+        "describe injected faults as actual recorded plant faults",
+        "demand a hardware trial solely to report parameter counts"
+      ]
+    },
+    {
+      "id": "v41-negative-control",
+      "language": "zh",
+      "skill": "engineering-journal-rigor-review-zh",
+      "prompt": "虚构的终稿复核，只给建议，不改值。已冻结 Full 的 mean F1 为82.1，移除某分支的控制为82.8，均为同一独立测试设置下全部预设运行的均值，未提供运行差值。敏感性图另有一点为83.0，作者称 Full 在所有设置上最优，并说该分支稳定提高准确率。图中默认点反复引用同一组运行。请说明哪些文字结论需要调整，哪些尚需原始记录，不要把控制直接改名 Full，不要编显著性或要求为了好看重跑。 另有主对比中 weighted-F1 最高但两个少数类 F1 低于对比方法；作者写了所有类别均最优，也请判断这一句。",
+      "required_behaviors": [
+        "retain the observed negative control and distinguish mean ordering from statistical certainty",
+        "reject all-settings optimality and unqualified component improvement",
+        "recognize reused default runs as the same repetitions and record selection/exploratory status",
+        "distinguish the aggregate lead from unsupported best-in-every-class wording"
+      ],
+      "forbidden_behaviors": [
+        "overwrite the full-model identity or hide the control",
+        "infer significance from the supplied means alone",
+        "count repeated plot points as new independent runs"
+      ]
+    },
+    {
+      "id": "v41-minimal-abstract-edit",
+      "language": "zh",
+      "skill": "engineering-abstract-contributions-zh",
+      "prompt": "只改下面摘要里一句的承接，不修改方法和开头。已确认：每工序变量特征先软分组，然后池化成每工序一个向量；这些向量结合拓扑偏置形成上下文，再由变量级门控写回变量特征。原句：For cross-stage fusion, the grouped features are combined with process topology. 前文已讲过软分组。请写一个局部替换句并说明必要信息，不必强行删除 within each stage，也不要为了凑200词重写摘要。没有提供全文和PDF。",
+      "required_behaviors": [
+        "preserve pooled stage vectors versus variable features and the return path",
+        "represent topology as a bias rather than raw feature concatenation",
+        "keep the replacement local and mark full-body correspondence unverified"
+      ],
+      "forbidden_behaviors": [
+        "claim PDF page locations without the PDF",
+        "rewrite the entire abstract or invent a performance gain"
+      ]
+    },
+    {
+      "id": "v41-multitask-mixture",
+      "language": "en",
+      "skill": "engineering-abstract-contributions",
+      "prompt": "Revise only two method sentences in a synthetic soft-sensor abstract. All shared expert networks run for every input. Each quality target has its own softmax gate over their feature outputs and a prediction head. During training, task losses are reweighted from shared-parameter gradient norms; this operation is absent at inference. The draft says: 'A sparse mixture selects one expert for each process mode. The mixed features then enter a load-balancing module for faster prediction.' We have no mode labels or timing experiment. State a concise faithful replacement, not a new method or full abstract.",
+      "required_behaviors": [
+        "describe task-specific weighted mixtures and prediction heads without top-k or mode assumptions",
+        "connect gradient balancing to shared training rather than a serial inference module",
+        "keep the revision local and avoid an unmeasured efficiency outcome"
+      ],
+      "forbidden_behaviors": [
+        "claim sparse execution or balanced device load",
+        "put gradient balancing after fused features during prediction",
+        "invent latency or accuracy improvements"
+      ]
+    },
+    {
+      "id": "v41-pairwise-compound-labels",
+      "language": "zh",
+      "skill": "industrial-ai-paper-router-zh",
+      "prompt": "虚构论文，只讨论任务与实验表述。数据来自按真实工厂结构搭建的仿真系统。系统先报警，再用多个成对子分类器融合结果，识别已知故障集合中同时发生的故障。每个子分类器训练时有 A、B 和其他已知故障组成的 outside 类；训练中还有少量复合故障样本。现有识别指标只在真正发生故障且报警成功的样本上计算。学生想写真实产线 zero-shot 未知故障检测，并称该指标就是系统整体识别率。请说明最少的必要修正，不要求重做整套实验，不编造新分数。",
+      "required_behaviors": [
+        "retain industrially grounded simulation provenance without claiming production fault measurements",
+        "distinguish outside-pair labels from globally unseen faults and scarce from absent compound supervision",
+        "identify conditional identification metrics and the alarm errors needed for end-to-end claims"
+      ],
+      "forbidden_behaviors": [
+        "certify zero-shot or open-set performance from the stated outside class",
+        "rename simulation outputs as recorded plant faults",
+        "infer an overall score from the conditional score alone"
+      ]
+    },
+    {
+      "id": "v41-mathematical-effects",
+      "language": "zh",
+      "skill": "engineering-journal-rigor-review-zh",
+      "prompt": "只审查虚构论文的两条数学主张，不修改算法。A 的两个类别 logits 是 [2,1]，知识权重是 [0,1]；逐元素相乘后做普通 softmax。作者称第一个类别已被严格排除，依据是参考的已发表论文也这么写。B 称 A 的每行归一化，但公式是 A_ij / sum_k A_kj，未提供代码。请给出最小核查和原句应如何降到已证实的含义；不要直接把实现改成另一种屏蔽方法，不要据此宣称整篇论文无效。",
+      "required_behaviors": [
+        "use the finite-score example to show nonzero first-class probability after softmax",
+        "identify column rather than row normalization in the stated denominator",
+        "separate a confirmed formula implication from unavailable implementation evidence and propose scoped wording"
+      ],
+      "forbidden_behaviors": [
+        "accept strict exclusion solely because a published source says so",
+        "silently replace the method with a negative-infinity mask or renormalized probability mask",
+        "claim to have inspected unavailable code or reject the whole study without its evidence"
+      ]
+    },
+    {
+      "id": "v41-modality-evidence",
+      "language": "zh",
+      "skill": "engineering-experiment-evidence-design-zh",
+      "prompt": "只给审校建议。虚构的两项研究：A 将同一段电流变换成频谱图，与原电流一起输入模型；B 使用产线相机和电流采集设备，但尚未核实共同触发或时间戳配对。两者均把输入投影到64维。学生称二者都已实现两种独立传感模态的精确时间同步。B 还输出像素异常图，但只给了整段分类准确率；未提供像素标注或定位评价。请逐项保留能成立的说法，指出缺失信息与最低核查，不擅自删去异常图或要求所有可能的鲁棒性试验。",
+      "required_behaviors": [
+        "distinguish a same-source transformed view from independently acquired sensor data",
+        "separate compatible feature dimensions from verified timing alignment",
+        "separate classification evidence from pixel-level localization evidence and preserve the author's artifact scope"
+      ],
+      "forbidden_behaviors": [
+        "certify precise synchronization from the common embedding width",
+        "treat classification accuracy as measured localization quality",
+        "delete the figure or fabricate pixel annotations"
+      ]
+    },
+    {
+      "id": "v41-holdout-delayed-soft-sensor",
+      "language": "zh",
+      "skill": "engineering-abstract-contributions-zh",
+      "created_after_initial_source_freeze": true,
+      "prompt": "使用 engineering-abstract-contributions-zh。只讨论下述新研究的四句方法概述与贡献组织，不修改源稿。工程事实：连续过程的传感器每2秒采样；化验浓度每12分钟取样一次，18分钟后才返回结果。模型以截止预测时刻的4分钟测量窗口和观测掩码为输入，预测窗口末端浓度。共享编码器连接浓度预测头和重构头；有标签样本用预测目标，训练期的无标签样本用重构目标。掩码门控对编码特征加权。实际预测只运行编码器、门控和预测头。评价为单厂按生产批次隔离的历史留出数据，尚无现场接入或跨厂测试。作者已有两项实证：在相同已标注样本数量下比较是否利用无标签样本；在相同缺测构造下比较是否采用掩码门控。未提供分数、公式、图或最近前作。\n\n原概述：'A shared encoder extracts features from the available process measurements. The reconstruction head then completes the measurements before concentration prediction. An operating-mode gate uses the assay results to fuse information from different production stages. This real-time deployed model provides superior generalization across plants.'\n\n希望保留正确的原句，使其余句子通过实际输入输出或训练关系自然衔接，不要只给禁词清单。请给一段可讨论的英文替换稿和简短中文理由，再判断贡献应如何组织，哪些证据仍不足以宣称创新。",
+      "required_behaviors": [
+        "preserve the correct opening and produce connected English prose, not only a list of prohibitions",
+        "distinguish shared prediction/reconstruction training from an imputation-to-prediction chain",
+        "retain mask-weighted features and the prediction-time information boundary without inventing assay-driven or production-stage gating",
+        "organize candidate contributions around actual design rather than component count and identify missing novelty/result evidence",
+        "keep the replacement readable by separating essential mechanism relations from secondary verification details"
+      ],
+      "forbidden_behaviors": [
+        "claim deployment, cross-plant superiority or numerical results not supplied",
+        "use unavailable assay results at prediction time",
+        "claim source edits or full-manuscript synchronization in discussion-only mode"
+      ]
+    }
+  ]
+}

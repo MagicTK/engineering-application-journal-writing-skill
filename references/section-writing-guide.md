@@ -102,7 +102,9 @@ Suggested paragraph sequence:
 8. Contributions.
 9. Paper organization, if it helps navigate an unfamiliar structure.
 
-Do not make the motivation figure an isolated paragraph beginning only with `Fig. 1 illustrates ...`. First state the scientific distinction, then use the figure to support it.
+Connect the motivation figure to the paragraph's scientific distinction, rather than inserting an isolated caption-like description. Starting with `Fig. 1 illustrates ...` is not itself an error if the sentence develops the argument. Preserve a settled author preference for another construction without turning it into a universal ban.
+
+Before adding another challenge paragraph, check whether it introduces a different information requirement or merely restates the previous gap. Structural organization and temporal representation can be complementary dimensions; they are not opposing methods merely because one paragraph follows the other. Choose a contrast marker only for an actual contrast. For guidance on preserving the logic of Related Work during integration, see [paragraph connections](argument-and-prose-craft.md#5-give-each-paragraph-one-main-job).
 
 ### Background-Driven Introduction
 
@@ -122,7 +124,7 @@ The specific application should remain visible throughout. Do not replace it wit
 
 Group the actual contributions into the smallest clear set. A formulation, mechanism, engineering adaptation, and empirical finding are possible contribution types; none is mandatory. Do not pad the list to a preset count or treat every module as an independent advance.
 
-Each item should identify the object, the substantive advance, and the evidence that can test it. An evaluation becomes a contribution when it establishes a new engineering finding or capability; `extensive experiments` alone describes work performed. Match each claim to the relevant method, analysis, figure, or result. Avoid bold mini-headings unless required by the venue.
+Each item should identify the object, the substantive advance, and the evidence that can test it. An evaluation becomes a contribution when it establishes a new engineering finding or capability; `extensive experiments` alone describes work performed. Match each claim to the relevant method, analysis, figure, or result. Preserve the author's contribution-list formatting unless revision is requested or a verified venue rule requires a change; bold lead-ins are a style choice, not a measure of scientific quality.
 
 ## 4. Related Work
 
@@ -163,7 +165,9 @@ Define:
 
 Use notation that remains stable through the paper. If a process variable becomes an input channel, state the correspondence explicitly here or at the method input.
 
-Do not include a mathematical definition that never appears later.
+Keep definitions that establish the task, assumptions or later derivation. Remove unused notation that serves none of these functions; a useful problem definition need not be repeated literally later.
+
+The opening should turn the preceding engineering requirement into the quantities and information actually available. The ending should identify the resulting estimation, classification or optimization task that Methodology addresses. Those links can take a clause each; do not add a second miniature Introduction. Keep the task definition separate from the proposed solution: an assumed production-unit partition may belong here, whereas a newly designed grouping module usually belongs in Methodology. P17 connects process and assay availability to the regression task; P30 defines a changing distribution before deriving a response. Neither supplies a mandatory section length or heading.
 
 ## 6. Overall Architecture
 
@@ -171,14 +175,16 @@ An `Overview` or `Framework Overview` subsection is optional. It is useful when 
 
 Describe the forward logic rather than mechanically listing components.
 
-Recommended order:
+For a sequential prediction path, the following questions often provide a useful order:
 
 1. how the input is organized according to the engineering object;
 2. how local or temporal information is represented;
 3. how relationships or constraints are modeled;
 4. how information is fused or transferred;
 5. how the output is produced;
-6. what auxiliary path, loss, or safeguard is used and why.
+6. where an auxiliary path or safeguard actually acts.
+
+Explain parallel branches where they diverge and meet. Describe training objectives, pretraining and test-time adaptation with their own information access and timing, rather than placing every component into that sequential prediction path. An auxiliary decoder or alignment loss can influence learned parameters without running during inference. If the training and prediction architectures differ, name the difference once in the overview and keep the figure consistent.
 
 Refer to the framework figure after the organizing principle is stated. Do not write `the architecture consists of five components` unless enumeration is genuinely the clearest explanation.
 
@@ -186,16 +192,18 @@ Refer to the framework figure after the organizing principle is stated. Do not w
 
 For each mechanism:
 
-1. State the unresolved engineering or data issue.
+1. State the mechanism's role in the already established requirement, without inventing another gap for each module.
 2. Define the input representation.
 3. Present the operation and formula.
 4. Define symbols and dimensions.
 5. Explain the information retained, removed, exchanged, or constrained.
-6. Connect the output to the next mechanism.
+6. Connect the output to its actual recipient or, for a training objective, identify what it optimizes.
 
 For central design decisions, explain which engineering requirement selects the operation and why a relevant alternative would change the trade-off. This explanation should follow from the design or evidence; do not invent alternatives considered by the authors. Distinguish an intended effect from a validated effect, and carry the corresponding claim into the evaluation.
 
-Use transitions that explain why the next operation is necessary. A major equation followed by one generic sentence is usually insufficient.
+Use transitions that explain why the next operation is needed and what it receives. Define an equation's scientific role, not only its symbols. A short explanation can be sufficient when the operation is standard and its purpose is clear; the required detail follows complexity and novelty, not a sentence quota.
+
+Validate that the formula actually entails the stated effect. Define whether a mask acts on inputs, scores, probabilities or admissible outputs, and whether normalization or a later mixing operation changes that effect. If a source equation, algorithm and implementation disagree, record the unresolved choice rather than improving fluency around an uncertain mechanism. This is an author-side check; the paper need only state the verified operation and its relevant consequence.
 
 At the same time, do not repeat the same motivation before and after every equation. The appropriate density defines symbols and dimensions, explains the operation's effect, and connects it to the next step without turning the method into an implementation report.
 
@@ -203,14 +211,16 @@ At the same time, do not repeat the same motivation before and after every equat
 
 Open the Experiments section with a short paragraph stating what evidence is presented and how the case studies or evaluation blocks are organized. A concise `Experimental Settings` subsection may combine shared data preparation, comparison methods, implementation details, and metrics when this reduces repetition.
 
-### General Method Paper
+### Method Paper With Benchmark And Production Evidence
 
 Recommended opening:
 
-1. State the benchmark case study and what controlled property it evaluates.
+1. State the benchmark case study and which method question it evaluates; name controlled factors only when documented.
 2. State the real-world case study and what engineering condition it evaluates.
 3. Introduce comparison-method categories.
 4. State common implementation settings.
+
+Use this organization when both evidence types are present. A single-case or multi-benchmark study should describe its actual evidence roles without inventing a production case.
 
 Keep data split and process details in each case-study subsection.
 
@@ -305,6 +315,8 @@ Write:
 
 Sensitivity analysis should cover only hyperparameters that influence the method's central behavior. Explain the practical range rather than praising one optimal point.
 
+If a control outperforms the full model, retain it and distinguish what the comparison establishes from the intended mechanism. It may narrow the component's claimed benefit, expose a trade-off or motivate further study; it is not permission to relabel the control as the original full model. Likewise, a sensitivity point above the chosen setting does not make the reported experiment invalid, but the chosen setting should not be described as best across that sweep. Record how it was selected and whether the sweep is exploratory. Reusing the same default runs in several plots does not create additional independent repetitions.
+
 ## 14. Robustness, Visualization, And Interpretability
 
 Robustness tests should have a plausible engineering disturbance model: noise, missing values, drift, sensor fault, load change, label scarcity, or another relevant perturbation.
@@ -320,6 +332,8 @@ Visualizations should answer a question:
 - trend plot -> temporal response or prediction quality.
 
 Use `supports`, `is consistent with`, or `provides auxiliary evidence`. Do not call visualization causal proof without causal validation.
+
+For feature projections, identify samples, model/run, preprocessing and projection settings. Matching colors and subplot scales do not verify that different methods used the same sample set. If an inherited comparison plot lacks its original embeddings or sample identifiers, record that provenance limit rather than inventing a common projection procedure. A visually separated projection is not proof of out-of-sample diagnosis or of learned physical causality.
 
 A confusion matrix is optional. Retain it only when specific class confusions carry engineering meaning and cannot be communicated more effectively through class-wise results, localization, robustness, or mechanism-focused analysis.
 
@@ -339,7 +353,7 @@ Keep limitations concrete. Do not use a generic paragraph that could be attached
 
 Explain what the findings imply for the engineering decision and why the remaining condition matters. State necessary scope directly. Remove apology-like discussion of what the paper does not claim when it adds no information. Preserve a boundary in the Abstract or result sentence when that sentence would otherwise mislead; the detailed account can remain here or in Methods.
 
-Discussion may be a short subsection at the end of Experiments when page limits are strict. It should usually contain more than a single generic paragraph but remain shorter than the evidence sections it synthesizes.
+Discussion may be a short subsection at the end of Experiments. Its length follows the findings and their implications, not a minimum paragraph count. One specific paragraph can be more useful than several generic ones.
 
 ## 16. Conclusion
 

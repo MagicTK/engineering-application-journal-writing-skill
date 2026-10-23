@@ -5,7 +5,7 @@ description: Research and position an engineering-application journal paper usin
 
 # Engineering Literature Positioning
 
-Suite version: `4.0.0`
+Suite version: `4.1.0`
 
 ## Mission
 
@@ -133,7 +133,7 @@ Introduce engineering meaning before computational representation. Use model voc
 
 ## 8. Calibrate Style From A Corpus
 
-Use at least three closely matched recent papers when available. Extract:
+Select closely matched passages in proportion to the question. A grammar-only correction need not start a literature search; a disputed technical expression needs relevant usage and mechanism context, not a minimum paper count. A section-level restructuring benefits from a broader matched set. Extract only what serves the requested revision:
 
 - abstract functions and sentence length range;
 - opening and closing function of Introduction paragraphs;
@@ -151,7 +151,7 @@ Group by the argument needed to establish the gap. For each subsection:
 1. define the family and its engineering role;
 2. summarize representative progress;
 3. compare assumptions or evidence;
-4. identify the limitation relevant to the present task;
+4. identify a supported remaining requirement, or carry the established capability into the next theme;
 5. transition to the next family or final positioning.
 
 Do not end every paragraph with the same `However, ...` construction. The final subsection should converge on the unresolved problem without repeating the full Introduction.
@@ -167,10 +167,10 @@ Add citations only when they support a factual, methodological, comparative, or 
 
 ## 11. Expected Output
 
-Produce a **Problem-Positioning Brief** containing:
+For a full positioning task, produce a **Problem-Positioning Brief** containing the relevant items below. For a narrow terminology or citation check, return the local finding and its verified evidence instead of forcing a full brief.
 
 - search scope and corpus layers;
-- 8-20 core verified sources, depending on task size;
+- a core verified source set proportionate to the question, without padding to a quota;
 - thematic literature matrix;
 - field terminology map;
 - one precise unresolved gap;
@@ -188,4 +188,4 @@ Before handoff, verify:
 - recent sources calibrate current terminology;
 - seminal sources support foundational facts;
 - wording is not copied from the corpus;
-- the literature position can be tested by the proposed experiments.
+- the literature position can be examined by appropriate analysis or experiments.

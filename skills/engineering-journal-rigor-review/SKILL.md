@@ -5,7 +5,7 @@ description: Perform a submission-level rigor review of an engineering-applicati
 
 # Engineering Journal Rigor Review
 
-Suite version: `4.0.0`
+Suite version: `4.1.0`
 
 ## Mission
 
@@ -96,8 +96,8 @@ Build this map:
 Flag:
 
 - motivated problems not addressed by the method;
-- modules without a stated challenge;
-- contributions without experiments;
+- modules without a role in the stated requirement;
+- contributions without the evidence they need, whether analysis, experiments or operational validation;
 - experiments unrelated to claims;
 - conclusions that introduce new claims;
 - benchmark and real-world cases presented as interchangeable.
@@ -116,7 +116,7 @@ Check:
 - whether equations add necessary formal meaning;
 - whether domain knowledge is defined and introduced at the correct operation.
 
-Do not demand more formulas when prose is clearer.
+Do not demand more formulas when prose is clearer. For a central mathematical claim, test a minimal example before accepting the wording: zeroing a finite logit does not exclude its class after softmax; row and column normalization have different denominators; a block-diagonal operator does not prove physical independence. Check shapes, reduction axes and subsequent operations against the implementation when available. Treat an unavailable implementation as a verification limit, not permission to silently repair the method. A published reference can motivate this check but cannot override the mathematics.
 
 ## 8. Evidence And Experiment Audit
 
@@ -157,15 +157,16 @@ Evidence needed:
 | Claim | Minimum evidence |
 |---|---|
 | improvement | fair comparison |
-| component contribution | isolating ablation |
-| robustness | multiple plausible disturbances/severities |
-| generalization | meaningful unseen condition/site/domain separation |
+| component contribution | valid isolating comparison, intervention or analysis |
+| robustness | evaluation spanning the claimed disturbance/condition range |
+| generalization | independent held-out evidence for the claimed population or transfer setting |
 | interpretability | validation against process, label, perturbation, or expert evidence |
 | efficiency | parameters/FLOPs/time/memory as claimed |
-| practical relevance | real production-source case under described conditions |
-| deployment | evaluated online/deployed workflow |
+| engineering relevance | task-grounded evidence under meaningful engineering conditions; not automatically field validation |
+| production applicability | evidence from the claimed production setting, with acquisition and selection scope |
+| deployment | evaluated actual operational integration, with advisory/shadow/closed-loop scope stated |
 
-Downgrade wording when evidence cannot be expanded.
+Downgrade wording when evidence cannot be expanded. Check comparator, metric and aggregation level before accepting `best`, `all classes` or `consistently`; an aggregate lead is not class-wise dominance. See the [consistency ledger](../../references/experiment-evidence-design.md#9-consistency-ledger).
 
 ## 11. Terminology And Presentation Audit
 

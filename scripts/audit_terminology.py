@@ -17,14 +17,24 @@ RULES = {
     "variable-feature": (r"\bvariable[- ](?:specific|wise)\s+(?:features?|behavio[u]?rs?)\b", "Distinguish distinctiveness from per-variable organization or independent encoding."),
     "stage-scope": (r"\b(?:intra|inter|cross)[- ]stage\b|\bstage[- ](?:level|structured)\b", "Check within/between/across scope and feature granularity against the actual operation."),
     "exchange": (r"\binformation\s+exchange\b", "Name the actual interaction, aggregation, fusion or communication; exchange is not universally wrong."),
-    "offline": (r"\boffline\b", "Retain when evaluation timing matters; real-world data do not need this routine prefix."),
-    "deployment": (r"\bdeploy(?:ment|ed)?\b|\breal[- ]time\b", "Verify operational or timing evidence; provenance alone does not establish deployment."),
-    "causality": (r"\bcausal(?:ity)?\b|\broot[- ]cause\b", "Require matching task definition and causal/localization evidence, not just class labels."),
+    "offline": (r"\boffline\b", "Distinguish measurement procedures such as an offline assay from evaluation timing; real-world data do not need this routine prefix."),
+    "deployment": (r"\bdeploy(?:ment|ed)?\b|\breal[- ]time\b", "Verify actual operational integration or the stated timing evidence; streaming computation and data provenance alone do not establish deployment."),
+    "membership-probability": (r"\b(?:soft\s+(?:grouping|assignments?|clustering)|membership\s+(?:degrees?|values?)|calibrated\s+probabilit(?:y|ies))\b", "Distinguish graded weights, fuzzy memberships and probabilities; normalization alone does not establish calibration."),
+    "physical-propagation": (r"\b(?:fault|feature|disturbance)\s+propagation\b|\bmessage\s+passing\b", "Distinguish physical disturbance spread from graph-feature updates; inspect the process evidence and actual operation."),
+    "causality": (r"\bcausal(?:ity)?\b|\broot[- ]cause\b", "Distinguish past-only causal computation, predictive relations and physical causality; match diagnosis/localization claims to their actual evidence."),
     "development-set": (r"\bdevelopment\s+(?:set|data|samples?)\b", "Confirm the real training/selection partition; do not invent a validation set."),
 }
 STOP = set("a an and are as at be been being but by can could do does for from has have in into is it its may of on or our that the their these they this those through to was were which will with within without we such each than then also".split())
 TOKEN = re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
 CONTROL = re.compile(r"\\(iffalse|iftrue|else|fi)\b")
+NONPROSE_ENVIRONMENT = re.compile(
+    r"\\begin\s*\{thebibliography\}.*?\\end\s*\{thebibliography\}", re.S
+)
+NONPROSE_ARGUMENT = re.compile(
+    r"\\(?:cite\w*|[Cc]ref|[Cc]pageref|autoref|pageref|eqref|ref|label|"
+    r"parencite|textcite|autocite|footcite|nocite|url|path|href|bibliography|bibliographystyle)"
+    r"\*?(?:\s*\[[^\[\]]*\]){0,2}\s*\{[^{}]*\}"
+)
 
 
 def strip_comment(line: str) -> str:
@@ -83,8 +93,21 @@ def visible_lines(source: str, tex: bool = True) -> list[tuple[int, str]]:
     return rows
 
 
+def prose_lines(rows: list[tuple[int, str]]) -> list[tuple[int, str]]:
+    """Mask known TeX reference metadata without changing source line numbers."""
+    def blank(match: re.Match[str]) -> str:
+        return re.sub(r"[^\n]", " ", match.group())
+
+    text = "\n".join(line for _, line in rows)
+    text = NONPROSE_ENVIRONMENT.sub(blank, text)
+    text = NONPROSE_ARGUMENT.sub(blank, text)
+    return [(number, line) for (number, _), line in zip(rows, text.split("\n"))]
+
+
 def audit(source: str, *, tex: bool = True, min_count: int = 3, top: int = 60) -> dict:
     rows = visible_lines(source, tex)
+    if tex:
+        rows = prose_lines(rows)
     joined = "\n".join(line for _, line in rows)
     candidates = []
     for rule, (pattern, question) in RULES.items():
@@ -97,7 +120,6 @@ def audit(source: str, *, tex: bool = True, min_count: int = 3, top: int = 60) -
             candidates.append({"rule": rule, "count": len(occurrences), "question": question, "occurrences": occurrences})
     counts: Counter[str] = Counter()
     for _, line in rows:
-        line = re.sub(r"\\(?:cite\w*|ref|label|eqref)\*?(?:\[[^]]*\])?\{[^}]*\}", " ", line)
         line = re.sub(r"\\[A-Za-z]+\*?", " ", line)
         for segment in re.split(r"[.!?;:{}]", line):
             tokens = [token.lower() for token in TOKEN.findall(segment)]
@@ -109,7 +131,7 @@ def audit(source: str, *, tex: bool = True, min_count: int = 3, top: int = 60) -
     abstract = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", joined, re.S) if tex else None
     return {
         "mode": "review_candidates_only",
-        "limitations": ["Not a TeX compiler: custom macros, input files and arbitrary conditional branches require active-PDF verification.", "Candidate context is line-based; formulas, references and noun/verb ambiguity need manual screening.", "Frequency is not evidence that wording is right or wrong; no automatic replacements are proposed."],
+        "limitations": ["Not a TeX compiler: custom macros, input files and arbitrary conditional branches require active-PDF verification.", "Known citation/reference keys, URL targets and literal thebibliography blocks are excluded in TeX mode; custom or nested forms need manual screening.", "Candidate context is line-based; formulas, quoted titles and noun/verb ambiguity need manual screening.", "Frequency is not evidence that wording is right or wrong; no automatic replacements are proposed."],
         "abstract_whitespace_word_count": len(abstract.group(1).split()) if abstract else None,
         "candidates": candidates,
         "recurring_terms": [{"term": term, "count": count} for term, count in counts.most_common() if count >= min_count][:top],

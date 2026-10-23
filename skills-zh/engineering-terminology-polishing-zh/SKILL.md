@@ -5,7 +5,7 @@ description: 工程应用论文术语与语言润色 Skill 中文执行版。在
 
 # 工程应用术语与语言润色
 
-套件版本：`4.0.0`
+套件版本：`4.1.0`
 
 ## 一、任务目标
 
@@ -39,7 +39,7 @@ description: 工程应用论文术语与语言润色 Skill 中文执行版。在
 
 state/condition、variable/attribute、sample/record 和变量特征的争议按[场景决策](../../references/terminology-decisions_CN.md)处理。根目录的只读 `scripts/audit_terminology.py` 可列候选与高频搭配，但不判断语法、不展开任意 TeX 宏，也不能替代活动 PDF 核查。语料未出现不等于禁用，作者偏好不升级为通用规则。
 
-定稿前必须执行高频工程术语审计：提取全文出现至少三次的实义词和 2--4 词固定搭配，审查所有承担工程含义的项目，并核对其在外部已发表论文中的覆盖数和典型语境。不能只检查作者主动指出的词。标准数学算子、激活函数、普通张量操作、方法名和数据集标签若不存在一致性问题可排除。修改应根据语义功能重构整句，不能对同一词执行全文机械替换。
+全文术语审计时提取重复实义词与 2--4 词搭配，重点检查承担工程含义的项目。三次可作可调整的起点，不遗漏仅出现一次但影响科学含义的词。争议用法核对相近已发表语境，覆盖数只统计实际检索的文献；全文审计不局限于作者举例。单句修改则保持授权范围，只指出必要的全文一致性关联。标准数学算子、激活函数、普通张量操作、方法名和数据集标签若无一致性问题可排除。按语义重构，不机械全篇替换。
 
 ## 四、工程对象优先
 
@@ -72,7 +72,7 @@ state/condition、variable/attribute、sample/record 和变量特征的争议按
 
 ## 六、校准证据用词
 
-- `benchmark case study`：受控/公开评价；
+- `benchmark case study`：在明确的参考任务或数据集上评价；公开可得性和实验控制需分别核实；
 - `real-world industrial case study`：生产来源证据；
 - `actual production conditions`：已测试的运行环境；
 - `practical relevance/engineering applicability`：真实工业案例可在其已评价范围内支持；
@@ -102,7 +102,7 @@ state/condition、variable/attribute、sample/record 和变量特征的争议按
 
 核对六项：工程背景与挑战、现有局限、提出方法、核心设计、评价案例和证据结论。
 
-第一句连接背景与困难但不能过载。删除 `In the network implementation` 等实现式过渡。最后一句简洁说明 benchmark/real-world 证据，不写成排行榜。
+第一句连接背景与困难但不能过载。删除不提供科学关系的实现式过渡。最后一句简洁说明实际评价及其支持的结论；benchmark/real-world 双案例只在确有这两类证据时使用，不写成排行榜，也不补造案例。
 
 ## 十、引言与 Related Work
 

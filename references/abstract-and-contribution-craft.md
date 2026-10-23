@@ -16,6 +16,10 @@ Do not require all papers to have grouping, stages, gates or multiple branches. 
 
 For multistage fusion only, inspect whether a pooled stage vector is the final output or an intermediate context returned to variable-level features. Independently encoded features can share encoder weights; `independent` does not necessarily mean separately parameterized. A residual branch may preserve features while a different fusion module combines them. An attention prior added to scores is not automatically a causal model or a hard topology constraint.
 
+Mark each operation as prediction-time computation, training objective, pretraining, or test-time adaptation. These are different relationships, not successive boxes in one forward pass. An alignment loss can shape an encoder during training without receiving its output during deployment; a reconstruction decoder can be absent at inference. When this distinction is central, the abstract needs one clear training-to-prediction connection rather than a fictional sequence. Published examples P10, P17 and P21 illustrate different training interactions; P25 even uses different branch components for training and prediction.
+
+For each retained mechanism, recover three things: **the object changed, the operation, and the reason the changed object is useful to the next task**. The abstract should retain the distinguishing operation and its purpose, not every tensor name. The method section can carry exact dimensions. Never compress variable features, pooled group features and a stage summary into one interchangeable `feature` if the next operation consumes only one of them.
+
 ## 2. Give Each Sentence A Job And A Connection
 
 Use whichever functions the study needs:
@@ -29,7 +33,22 @@ Use whichever functions the study needs:
 
 Read consecutive sentences as a pair. Ask what the reader now knows, what the next sentence adds, and whether the link is causal, sequential, parallel, conditional or evidential. A conjunction cannot repair a missing relationship. Conversely, repeated object names can be useful for technical continuity; avoid synonym changes that obscure identity.
 
+Keep the mechanism check more detailed than the replacement prose. Select the relationships needed to understand the advance; do not transfer every verified sampling detail, component inventory and exclusion into the same method sentence. A condition already established clearly need not be repeated in a trailing `with ... and ...` clause. Move secondary implementation facts to the explanation or the appropriate section, while retaining any information-access condition needed to prevent a misleading claim. Give a sentence one main explanatory job with its necessary dependencies; a clear relative clause is welcome. Do not impose a word cap or split a coherent operation merely to produce short sentences.
+
 Use scope phrases such as `within each unit` and `across units` when they mark genuinely different operations. They are not redundant merely because both occur at sentence starts. Avoid restating the same scope twice in one short sequence. `Intra-` means within; `inter-` means between. `Cross-stage fusion` and `inter-stage relationships` can coexist if they denote an operation and a relation consistently.
+
+Choose the connection from the actual dependency:
+
+| Relationship | What the reader needs | Misleading shortcut |
+|---|---|---|
+| Sequential transformation | Which output becomes the next input and what new operation it enables | `These features` when several incompatible outputs precede it |
+| Parallel complement | What each path retains or estimates and where the outputs meet | `Then` implying one path is computed from the other |
+| Training constraint | Which representation or parameter is shaped, by which supervision | Describing a loss as another inference-time fusion module |
+| Prior-guided computation | Where given knowledge enters a learned operation | Saying knowledge and features are concatenated when knowledge only biases scores |
+| Adaptation across phases | What changes, using which newly available information | Calling a learning phase a production stage |
+| Update control | Which event changes learning, and when the required feedback is available | Implying that an update trigger controls sensor acquisition or is itself a fault alarm |
+
+Make the final method sentence advance from operation to task meaning. It may explain that a representation combines local measurements with system-level context, or that a predictor uses information from unlabeled observations. It should not re-list all modules or promote combination itself to proven generalization. A verified short sentence is preferable to a long sentence containing two vague `which` clauses.
 
 ## 3. Illustrative Repair, Not Manuscript Text
 
@@ -37,11 +56,19 @@ Use scope phrases such as `within each unit` and `across units` when they mark g
 
 Weak description: "An encoder is designed. A relation module is introduced. A fusion module improves generalization."
 
-Source-faithful alternative: "A shared encoder first extracts features from individual sensor signals. A relation module uses these features to model dependencies between sensors. The updated and independently encoded features are combined for fault classification."
+Source-faithful alternative: "A shared encoder first extracts features from individual sensor signals. A relation module uses these features to model dependencies between sensors. The classifier combines the updated features with the original encoder outputs, retaining both relational context and individual-sensor information."
 
 The repair establishes the interfaces and removes an untested outcome. It does not prove that the mechanism is novel. In a real abstract, add its actual differentiating principle and supported purpose; do not use this generic example verbatim.
 
 For a sequential mechanism, one sentence with a well-attached relative clause may be clearer than two sentences repeating the same subject. Split only when independent claims or stacked modifiers impair reading. `First`, `then`, and `finally` are available, not required.
+
+**Different synthetic specification:** a soft sensor shares an encoder between a quality predictor and a reconstruction decoder. Unlabeled measurements train the reconstruction path; only the encoder and predictor are used at inference.
+
+Source-faithful alternative: "A shared encoder learns from labeled and unlabeled process measurements through prediction and reconstruction objectives. The quality predictor uses this representation to estimate the target from available process measurements."
+
+The second example needs no fabricated sequence of `reconstruction, then fusion, then prediction`. Neither example supplies novelty or empirical benefit by itself. Attach the manuscript's actual distinguishing design and supported evaluation, leaving routine components in the background. P03 also illustrates that a concise abstract can connect mechanisms and output without approaching a fixed word count.
+
+**Another relationship, illustrated by P36:** task-specific gates combine shared expert outputs for the respective quality targets, while gradient balancing changes how those tasks train the shared parameters. The writing should connect the two roles through their common multitask objective, not claim that the balancing module receives the fused features during prediction. This illustrates a shared training relationship, rather than the sequential feature-fusion story used in the first example.
 
 ## 4. Contributions Are Advances, Not An Execution Log
 
@@ -51,11 +78,21 @@ Common organizations include an overall principle plus linked mechanisms, a prob
 
 Two checks catch padding: Does item 3 merely repeat item 1 at greater length? Would deleting a module name leave the claimed advance unchanged? Case studies normally belong in the evaluation summary unless the cases establish an original dataset, operational capability or scientific finding. Do not universally delete an experiment contribution from other papers.
 
+An overall-framework item is useful when it states an organizing principle or new capability not repeated by the component items. A component item should then expose the specific operation that realizes part of that principle. When two operations are inseparable, connect them through their input/output or shared objective in one item. Do not claim an off-the-shelf encoder as an independent advance merely to balance the list.
+
+Check novelty and sentence linkage separately: a logically smooth item can still contain no new contribution. P10 and P17 use two contribution items; P06 organizes three linked advances; P08 includes problem analysis. These observed structures support flexibility, not an item-count prescription. Use [contribution routes](contribution-narratives.md) for deciding what warrants a claim.
+
+P38 separates model operations from a new cross-modal benchmark resource. A resource item should identify what data, annotations or evaluation capability it adds, with verified scope and access status. It is not equivalent to an item saying that the authors ran experiments; neither dataset size nor a promised release alone proves novelty or public availability.
+
 ## 5. Close On Evidence At The Correct Level
 
 Parallel case phrasing can name two processes, or two datasets, but should not confuse a physical process with a data object. A simulator-derived benchmark and production data supply different evidence. `Real-world` describes provenance, not online deployment. Use `offline` only when the evaluation distinction matters.
 
-`Effectiveness`, `engineering applicability`, and `generalization` are different claims. The first needs relevant task evidence; the second needs a credible real engineering case and appropriate scope; the third needs a defined changed condition/site/time regime and corresponding evaluation. `Verified` and `demonstrated` are both available for empirical evidence; neither creates proof or certifies deployment. Avoid empty superiority endings when a bounded finding is clearer.
+Check the claimed output before choosing the ending: generation fidelity, quality-prediction error and diagnostic accuracy are not interchangeable. A generation study may close on generation and measured downstream usefulness (P32), while an augmentation study closes on the actual diagnostic evaluation (P35). Where production measurements are combined with injected faults, avoid calling all tested faults real plant events. Include this distinction in the abstract only as needed to keep its case/evidence claim accurate; place the full construction in Methods.
+
+`Effectiveness`, `engineering applicability`, and `generalization` are different claims. The first needs relevant task evidence. For the second, identify the engineering setting and what the evaluation establishes: an engineering-grounded simulation can support relevance or feasibility under its modeled conditions, whereas applicability to an actual production setting needs representative evidence from that setting. Neither alone proves deployment. For generalization, specify the target population: a valid independent held-out split can assess prediction on new samples from that population, but transfer across conditions, sites or time regimes needs corresponding held-out evidence. `Verified` and `demonstrated` are both available for empirical evidence; neither creates proof or certifies deployment. Avoid empty superiority endings when a bounded finding is clearer.
+
+One closing sentence can name the cases and supported outcome. Use two when the second adds an actual finding, trade-off or evaluated condition, not a second statement that experiments were performed. Preserve parallel objects: `case studies on process A and process B` is coherent without turning one process into a dataset for grammatical symmetry. A two-case pattern is not mandatory for other studies.
 
 Do not introduce class imbalance, every fault label or hardware detail in the abstract merely because it occurs in the dataset. Include such a fact when central to the problem or necessary to interpret the result; otherwise develop it in data analysis, metrics or implementation details. Quantitative results may be useful when supported and permitted by the author and venue.
 

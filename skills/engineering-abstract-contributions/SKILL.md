@@ -5,7 +5,7 @@ description: Revise an industrial or engineering paper's abstract and contributi
 
 # Engineering Abstract And Contributions
 
-Suite version: `4.0.0`
+Suite version: `4.1.0`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->
@@ -18,6 +18,10 @@ Suite version: `4.0.0`
 Read the active abstract, contribution list, method overview, relevant equations, method diagrams, case definitions and conclusion. Comments are revision history, not published prose. Check whether source and PDF describe the same version. If only an abstract is supplied, offer a language review and explicitly leave technical correspondence unverified.
 
 Build a small internal mechanism map: input object and scale; operation; output object and scale; recipient; conditional/independent paths; supporting evidence. A module's name does not establish what it does. Distinguish a feature from a measured variable, an attention weight from a gate, and a branch from the module that combines branches.
+
+If equations, diagram labels and prose disagree, locate the conflict and check available implementation or author clarification before choosing the abstract's account. Do not merge incompatible descriptions into a fluent but unsupported pathway.
+
+Mark training-only objectives, pretraining, prediction-time computation and test-time adaptation separately. Explain how training shapes the final predictor without inventing a forward connection between components that only share an objective. Preserve the level of each intermediate object when compressing the account.
 
 Read [mechanism-linked abstracts](../../references/abstract-and-contribution-craft.md). Consult only the applicable entries in the [terminology decisions](../../references/terminology-decisions.md).
 
@@ -40,7 +44,7 @@ Map only necessary body synchronization: Introduction method paragraph and contr
 ## Acceptance Check
 
 - Every object, module role and result claim resolves to actual source evidence.
-- Sequential and parallel connections match the equations and diagram.
+- Sequential, parallel and training-to-prediction connections match the equations and diagram.
 - Local/global, state/condition and variable/feature referents are explicit when consequential.
 - Contributions do not duplicate each other or upgrade untested generalization, causality or deployment.
 - Necessary qualifications remain; defensive filler and cosmetic word bans do not.

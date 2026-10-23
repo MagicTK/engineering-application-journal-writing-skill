@@ -5,7 +5,7 @@ description: Convert an industrial problem, partial method idea, dataset, or eng
 
 # Engineering Paper Idea And Architecture
 
-Suite version: `4.0.0`
+Suite version: `4.1.0`
 
 ## Mission
 
@@ -82,7 +82,7 @@ Assess novelty across:
 - **evidence**: a difficult industrial case or diagnostic capability is evaluated credibly;
 - **system contribution**: interfaces, workflow, timing, or automation behavior are demonstrated.
 
-State the primary novelty and at most two supporting forms. Do not inflate all five.
+State the primary novelty and only the supporting forms the evidence justifies. Do not inflate all five or impose a fixed contribution count.
 
 Assign a provisional contribution track: mechanism-oriented (A), substantive engineering adaptation (B), or focused incremental improvement (C). These are planning categories, not journal quartiles or acceptance predictions. Shared tasks, data and baseline code are permitted with attribution; independent work needs a substantive delta and corresponding evidence. See [contribution boundaries](../../references/research-planning-and-contribution.md) and the [cross-paper delta record](../../assets/templates/cross-paper-delta.md).
 
@@ -97,7 +97,7 @@ Select [the dominant contribution route](../../references/contribution-narrative
 | Engineering/data challenge | Remaining capability limit or assumption boundary | Design response | Required evidence | Boundary |
 |---|---|---|---|---|
 
-Map each main component to its role and give each major claim matching evidence. Isolate the claimed contribution experimentally; standard supporting components need attribution and a justified role, not a fabricated independent novelty claim. Remove components only when they add no justified function.
+Map each main component to its role and give each major claim matching evidence. Test the claimed increment with suitable comparisons, analysis, or intervention; deleting a coupled component is not always a valid isolated ablation. Standard supporting components need attribution and a justified role, not a fabricated independent novelty claim. Flag an apparently unjustified component for author discussion rather than deleting it during prose revision.
 
 ## 6. Derive A One-Sentence Thesis
 
@@ -135,7 +135,7 @@ Common figure roles:
 6. results answering specific questions;
 7. engineering interpretation or case examples.
 
-Each figure should have one scientific job. Avoid figures that repeat the same pipeline at different visual scales.
+Each figure should have a scientific job. An overview and a module detail may be complementary when the detail supplies needed operations or information flow; remove redundant content only with the author's agreement. A writing review does not authorize redrawing an approved framework.
 
 ## 9. Build The Section Architecture
 
@@ -151,7 +151,7 @@ Each figure should have one scientific job. Avoid figures that repeat the same p
 
 `Introduction -> Background/requirements -> System architecture -> Implementation -> Evaluation -> Discussion -> Conclusion`
 
-Adapt to journal conventions. Do not add sections solely for symmetry.
+These are possible logical structures, not compulsory headings. Integrate Related Work into the Introduction or combine Motivation and Problem Formulation when that preserves the cited argument and suits the paper. Adapt to verified journal requirements; do not add sections solely for symmetry.
 
 ## 10. Write Contributions As Contracts
 
@@ -168,8 +168,8 @@ The contribution list is a contract: the method and experiments must fulfill eve
 
 Run five adversarial questions:
 
-1. Could the industrial background be removed without changing the method? If yes, the engineering derivation may be superficial.
-2. Could one module be removed from the story without changing any claim? If yes, it may be ornamental.
+1. Is the industrial setting necessary to understand the task, information constraints, or evaluation? A broadly reusable method may remain unchanged across settings; that alone does not make an engineering application superficial.
+2. Does each module have a justified function? A standard preprocessing or prediction component can be essential without constituting an independent contribution.
 3. Does the strongest claim depend on an experiment that is missing or weak?
 4. Are site-specific assumptions hidden inside a general claim?
 5. Does the real-world case affect the scientific conclusion, or is it only decoration?
@@ -192,8 +192,8 @@ Produce:
 
 The architecture is ready only when:
 
-- the problem exists before the model;
-- the design follows from the problem;
+- the problem is supported independently of the chosen model;
+- the design addresses the stated problem, without inventing a historical engineering derivation;
 - evidence is planned for each claim;
 - the industrial case has a defined role;
 - novelty is specific and bounded;

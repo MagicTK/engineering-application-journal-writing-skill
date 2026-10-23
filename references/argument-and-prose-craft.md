@@ -71,7 +71,13 @@ Write a one-line author note describing the paragraph's purpose. Then check whet
 
 A useful progression is point -> supporting facts or reasoning -> implication. A paragraph need not end with a summary when the reasoning already reaches its destination. Transitions should carry substantive links: the changed condition, the remaining requirement, or the consequence of the previous operation. Repeated “Furthermore” or “To address this issue” cannot establish those links.
 
+When successive paragraphs motivate different parts of a method, identify what changes between them. One may concern **which relationships are represented**, another **which temporal information is available**, and another **what supervision constrains learning**. These are useful distinctions only when supported by the paper. The next paragraph should introduce its own consequence, not repeat `complex dependencies remain challenging` with different module names. Conversely, one underlying problem can motivate several cooperating operations; do not invent a separate research gap for each component.
+
+Checked examples show several valid structures: P04 moves from structural information to a frequency-representation question; P08 develops one information-granularity issue using an illustrative sampling example; P17 distinguishes scarce quality labels from degraded measurements; P34 relates quality relevance to incomplete multirate observation. These are observations about argument organization, not endorsements of every broad limitation claim in those papers. Use [the source locations](published-evidence.md) and retain only distinctions established for the current study.
+
 For Related Work, arrange the progression around changing capabilities and assumptions. For example, a discussion may move from learning with complete measurements, to using partial observations, to jointly handling observation loss and scarce labels. Use that sequence only when the cited literature and the paper's task support it. Explain what each family enables and which condition motivates the next family. The sequence need not be chronological, and each subsection need not end by criticizing prior work.
+
+If Related Work is integrated into the Introduction, first map each retained paragraph to its role: establish prior capability, compare assumptions, support a remaining requirement, or supply essential context. Place its evidence near the claim it supports, combine overlapping summaries, and write the connecting sentence around the shared object. Preserve useful opening/closing logic without preserving every original sentence. Do not remove the entire evidence chain because its section heading disappears, or move citations so far that they appear to support a different claim.
 
 For Results, distinguish the roles of text and figures. The text states and interprets the supported finding; a caption identifies the setup, plotted quantities, and enough context to read the figure. Keep them consistent without requiring the same conclusion to appear three times.
 
@@ -147,6 +153,14 @@ The second sentence develops the object introduced by the first and names the op
 **Author-only drafting scaffold:** “Under [verified condition], [method] achieves [measured metric] compared with [verified comparator result]. [Additional analysis] supports [specific interpretation].”
 
 This scaffold is not manuscript-ready. Obtain the real values and supporting analysis, or restrict the draft to verified observations. Do not fill the gaps with plausible numbers or substitute another unsupported adjective.
+
+### F. Two Requirements Without Repeating One Gap
+
+**Synthetic, confirmed setting:** the process has a known unit map, and measured response patterns vary over time within those units. The method uses the map for fixed unit membership and learns input-dependent weights inside each unit. No claim about all existing methods is supplied.
+
+**Local transition:** "The unit map specifies where the measurements originate. The observed response patterns vary within these units. An input-dependent weighting mechanism represents these variations while retaining the unit membership."
+
+The connection is between a fixed structural assignment and a changing modeled contribution, not between `good knowledge` and `bad data`. This example explains a design reason, not a demonstrated accuracy gain or proof that learned weights measure diagnostic relevance. It need not be used in a method without those two confirmed properties. For a time-frequency paper, replace this reasoning with its actual temporal or spectral requirement rather than importing a grouping narrative.
 
 ## 8. Delivery And Final Pass
 

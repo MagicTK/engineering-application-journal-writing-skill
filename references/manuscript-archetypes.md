@@ -10,14 +10,14 @@ General method with benchmark and real-world application; background-driven indu
 
 ## 1. Archetype A: General Method With Benchmark And Real-World Application
 
-Use when the transferable modeling principle is the main contribution and both controlled and production evidence are available.
+Use when the transferable modeling principle is the main contribution and benchmark and production evidence are both available. Experimental control remains a property to verify, not a condition implied by the benchmark label.
 
 ### Evidence division
 
-- **Benchmark**: reproducible comparison, class-/condition-wise behavior, ablation, sensitivity, controlled robustness, and interpretable mechanism evidence.
-- **Real-world application**: process provenance, actual measurement characteristics, information timing, realistic class/condition distribution, engineering meaning, and external relevance.
+- **Benchmark**: comparison, class-/condition-wise behavior, ablation, sensitivity, or mechanism analysis, with control and reproducibility documented where claimed.
+- **Real-world application**: process provenance, measured characteristics, information timing, selected class/condition coverage and engineering meaning. Check whether selection or balancing changes natural prevalence.
 
-The two cases are sequential evidence, not two interchangeable datasets. The benchmark establishes controlled method behavior; the production case examines whether that behavior remains useful under an actual process.
+The two cases should have identifiable evidence roles rather than being treated as interchangeable tests. A benchmark may support controlled method analysis when its construction permits that interpretation; the production case may examine behavior under an actual process. A public dataset is not automatically a controlled experiment, and a production dataset does not automatically include every relevant field condition.
 
 ### Typical section logic
 
@@ -37,7 +37,7 @@ Related Work may be a separate section or may be integrated into the Introductio
 
 ### Common failure modes
 
-- calling the real process a second dataset;
+- reducing the industrial case to an unexplained second dataset, or confusing a physical process with the data collected from it;
 - using the production case to repeat every benchmark analysis;
 - claiming deployment from retrospective records;
 - importing benchmark results produced under a different data construction;
@@ -138,8 +138,8 @@ For either archetype, contributions are contracts:
 | Contribution | Must name | Must be supported by |
 |---|---|---|
 | Problem contribution | industrial condition and unresolved requirement | process/data evidence and literature positioning |
-| Method contribution | mechanism and the challenge it addresses | formulation plus ablation/mechanism test |
-| Engineering contribution | practical role or demonstrated process relevance | real-process evidence at the claimed level |
-| Evaluation contribution | distinct evidence coverage | fair comparisons, splits, statistics, and artifact traceability |
+| Method contribution | mechanism and the challenge it addresses | formulation and the analysis, comparison or mechanism test appropriate to that claim |
+| Engineering contribution | practical role or demonstrated process relevance | task-grounded evidence at the claimed level; a relevant simulation can establish mechanism relevance, not actual site deployment |
+| Empirical/resource contribution | a new finding, resource or validated capability, not only more experiments | evidence specific to that contribution, with fair comparisons, splits, statistics and artifact traceability where applicable |
 
-Avoid making every module a separate contribution. The final contribution may summarize the evidence program.
+Avoid making every module a separate contribution. An evaluation summary may follow the contribution list without being counted as another advance. Use [contribution routes](contribution-narratives.md) to decide whether a finding or resource itself warrants a contribution item.

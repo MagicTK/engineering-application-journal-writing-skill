@@ -27,6 +27,38 @@ class TerminologyAuditTests(unittest.TestCase):
         output = MODULE.audit("\\begin{comment}\nrecords\n\\end{comment}\nprocess variables")
         self.assertFalse(output["candidates"])
 
+    def test_bibliography_is_not_body_and_line_numbers_survive(self):
+        source = "\n".join([
+            "Process variables are measured.",
+            r"\begin{thebibliography}{99}",
+            r"\bibitem{old} Operating conditions and attributes.",
+            r"\end{thebibliography}",
+            "The local operational state guides prediction.",
+        ])
+        output = MODULE.audit(source, min_count=1, top=1000)
+        self.assertEqual([c["rule"] for c in output["candidates"]], ["state-condition"])
+        self.assertEqual(output["candidates"][0]["occurrences"][0]["line"], 5)
+        self.assertFalse(any("attributes" in item["term"] for item in output["recurring_terms"]))
+        self.assertIn("attributes", source)
+
+    def test_reference_metadata_is_masked_but_link_prose_is_retained(self):
+        source = "\n".join([
+            r"\citep[see][p. 2]{records} \label{attributes} \url{https://example.org/offline}",
+            r"\href{https://example.org/records}{operating conditions} remain relevant.",
+        ])
+        output = MODULE.audit(source)
+        self.assertEqual([c["rule"] for c in output["candidates"]], ["state-condition"])
+        self.assertEqual(output["candidates"][0]["occurrences"][0]["line"], 2)
+        plain = MODULE.audit(r"\cite{attributes}", tex=False)
+        self.assertEqual(plain["candidates"][0]["rule"], "attribute")
+
+    def test_causal_convolution_is_a_context_question(self):
+        output = MODULE.audit("A causal convolution uses past measurements.", tex=False)
+        candidate = output["candidates"][0]
+        self.assertEqual(candidate["rule"], "causality")
+        self.assertIn("past-only", candidate["question"])
+        self.assertNotIn("replacement", candidate)
+
     def test_candidates_are_not_bans(self):
         output = MODULE.audit("Semantic attributes and sensor records are legitimate.", tex=False)
         self.assertEqual(output["mode"], "review_candidates_only")
@@ -46,6 +78,20 @@ class TerminologyAuditTests(unittest.TestCase):
     def test_repeated_phrases(self):
         output = MODULE.audit("Process variables. Process variables. Process variables.", tex=False)
         self.assertIn({"term": "process variables", "count": 3}, output["recurring_terms"])
+
+    def test_membership_and_propagation_are_questions_not_replacements(self):
+        output = MODULE.audit("Soft assignments guide message passing, not observed fault propagation.", tex=False)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(by_rule["membership-probability"]["count"], 1)
+        self.assertEqual(by_rule["physical-propagation"]["count"], 2)
+        self.assertTrue(all("replacement" not in item for item in by_rule.values()))
+
+    def test_offline_assay_remains_a_context_question(self):
+        output = MODULE.audit("Offline assay measurements supply delayed quality labels.", tex=False)
+        candidate = output["candidates"][0]
+        self.assertEqual(candidate["rule"], "offline")
+        self.assertIn("measurement procedures", candidate["question"])
+        self.assertNotIn("replacement", candidate)
 
 
 if __name__ == "__main__":

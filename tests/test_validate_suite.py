@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 
@@ -16,6 +18,13 @@ SPEC = importlib.util.spec_from_file_location(
 assert SPEC and SPEC.loader
 VALIDATOR = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(VALIDATOR)
+
+INSTALL_SPEC = importlib.util.spec_from_file_location(
+    "install_suite", ROOT / "scripts" / "install_suite.py"
+)
+assert INSTALL_SPEC and INSTALL_SPEC.loader
+INSTALLER = importlib.util.module_from_spec(INSTALL_SPEC)
+INSTALL_SPEC.loader.exec_module(INSTALLER)
 
 
 class SuiteValidatorTests(unittest.TestCase):
@@ -29,6 +38,18 @@ class SuiteValidatorTests(unittest.TestCase):
 
     def test_current_suite_passes(self) -> None:
         self.assertEqual([], VALIDATOR.validate(ROOT))
+
+    def test_evidence_identifiers_resolve_to_unique_sources(self) -> None:
+        index = (ROOT / "references/published-evidence.md").read_text()
+        source_table = index.split("## Sources /", 1)[1].split("Some source titles", 1)[0]
+        identifiers = re.findall(r"^\| (P\d{2}) \|", source_table, re.M)
+        self.assertTrue(identifiers)
+        self.assertEqual(len(identifiers), len(set(identifiers)))
+        known = set(identifiers)
+        for folder in ("references", "skills", "skills-zh"):
+            for path in (ROOT / folder).rglob("*.md"):
+                used = set(re.findall(r"\bP\d{2}\b", path.read_text()))
+                self.assertFalse(used - known, f"{path.relative_to(ROOT)}: {used - known}")
 
     def test_symlink_rejected_before_reading_manifest(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
@@ -50,7 +71,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.0.0", suite["version"])
+        self.assertEqual("4.1.0", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -68,6 +89,8 @@ class SuiteValidatorTests(unittest.TestCase):
         for filename in (
             "trigger-routing.json",
             "behavior-cases.json",
+            "v4-behavior-cases.json",
+            "v41-behavior-cases.json",
             "forward-test-report.json",
         ):
             payload = json.loads((ROOT / "evals" / filename).read_text(encoding="utf-8"))
@@ -190,6 +213,31 @@ class SuiteValidatorTests(unittest.TestCase):
             )
             self.assertEqual(0, linked.returncode, linked.stderr)
             self.assertTrue(link_target.is_symlink())
+
+    def test_installer_rejects_invalid_source_before_creating_target(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            target = Path(temp) / "new-parent" / "suite"
+            for copy in (False, True):
+                args = mock.Mock(target=target, copy=copy, dry_run=False)
+                with mock.patch.object(INSTALLER, "parse_args", return_value=args), \
+                     mock.patch.object(INSTALLER.subprocess, "run", return_value=mock.Mock(returncode=1)) as run:
+                    self.assertEqual(1, INSTALLER.main())
+                self.assertEqual(1, run.call_count)
+                self.assertFalse(target.parent.exists())
+
+    def test_installer_preserves_existing_target(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            target = Path(temp) / "existing"
+            target.mkdir()
+            marker = target / "author-note.txt"
+            marker.write_text("local changes", encoding="utf-8")
+            for copy in (False, True):
+                args = mock.Mock(target=target, copy=copy, dry_run=False)
+                with mock.patch.object(INSTALLER, "parse_args", return_value=args), \
+                     mock.patch.object(INSTALLER.subprocess, "run") as run:
+                    self.assertEqual(2, INSTALLER.main())
+                run.assert_not_called()
+                self.assertEqual("local changes", marker.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

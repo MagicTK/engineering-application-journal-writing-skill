@@ -5,7 +5,7 @@ description: Polish English or Chinese engineering-application journal prose whi
 
 # Engineering Terminology And Polishing
 
-Suite version: `4.0.0`
+Suite version: `4.1.0`
 
 ## Mission
 
@@ -60,14 +60,16 @@ Use the shared [engineering-application terminology bank](../../references/engin
 
 For disputed state/condition, variable/attribute, sample/record and feature wording, read [context-sensitive terminology decisions](../../references/terminology-decisions.md). The read-only `scripts/audit_terminology.py` at the suite root can list candidates and recurring collocations; it does not judge grammar, expand arbitrary TeX macros or replace active-PDF verification. Do not treat corpus absence as a ban or the author's local preference as a universal rule.
 
-Before finalizing the map, run a high-frequency engineering-language audit.
-Extract content words and two-to-four-word collocations occurring at least three
-times, then review all items that carry engineering meaning. Check external
-paper coverage and typical source context; do not limit the audit to terms the
-author explicitly identified. Exclude routine mathematical operators,
-activation functions, tensor operations, method names, and dataset labels unless
-they are inconsistent. Rewrite by semantic function rather than applying one
-global synonym replacement.
+For a full-manuscript terminology audit, extract recurring content words and
+two-to-four-word collocations, then review those carrying engineering meaning.
+Three occurrences is a configurable starting point, not a reason to ignore a
+consequential term used once. Inspect relevant published contexts for disputed
+usage; record coverage only for sources actually searched. Do not limit a full
+audit to the author's examples. For a sentence-level request, stay within the
+authorized scope and flag only necessary consistency dependencies. Exclude
+routine mathematical operators, activation functions, tensor operations, method
+names and dataset labels unless inconsistent. Rewrite by semantic function,
+not a global synonym replacement.
 
 ## 3. Keep Engineering Objects Primary
 
@@ -102,7 +104,7 @@ Prefer `fusion guided by domain knowledge` or `domain-knowledge-guided fusion` a
 
 ## 5. Calibrate Engineering Evidence Terms
 
-- `benchmark case study`: controlled or public evaluation.
+- `benchmark case study`: evaluation on a defined reference task or dataset; public access and experimental control require separate verification.
 - `real-world industrial case study`: production-source evidence.
 - `actual production conditions`: tested operating context.
 - `practical relevance` or `engineering applicability`: may be supported by a real-world industrial case within its evaluated scope.
@@ -152,7 +154,7 @@ Check six functions:
 5. evaluation cases;
 6. evidence-based conclusion.
 
-The first sentence should connect context and difficulty without becoming overloaded. Remove implementation fillers such as `In the network implementation`. Keep the final experiment sentence concise and do not turn it into a leaderboard summary.
+The first sentence should connect context and difficulty without becoming overloaded. Remove implementation transitions that add no scientific relationship. Close on the actual evaluation and its supported conclusion; use a benchmark/production pair only when both exist. Keep this concise without inventing another case or turning it into a leaderboard summary.
 
 ## 9. Introduction And Related Work Polish
 

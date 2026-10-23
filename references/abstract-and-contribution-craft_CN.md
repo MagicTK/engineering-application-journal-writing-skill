@@ -10,13 +10,30 @@
 
 仅在多工序融合研究中，核查池化后的工序向量是最终输出，还是会回到变量特征的中间上下文。独立编码不等于各自参数独立；保留特征的残差分支不一定就是融合模块。先验加到注意力得分上，不自动等于因果发现或硬掩码。
 
+给操作标注作用阶段：预测时计算、训练目标、预训练，还是测试时适应。它们不一定是前向路径中依次串联的模块。对齐损失可以在训练中约束编码器，重构解码器可以在预测时移除。若这一点是核心，应说明“训练机制如何支持最终预测”，不能虚构顺序流水线。P10、P17、P21 展示不同的训练关联；P25 的训练分支与预测时采用的组件也有区别。
+
+对保留的机制提取三项：**改变了哪个对象、进行了什么操作、改变后为何有助于下一步任务**。摘要保留有区别性的操作及用途，维度细节放在方法。变量特征、池化后的组特征和工序摘要不能都模糊成可随意互换的 feature，尤其当下一模块只接收其中一种时。
+
 ## 2. 逐句检查职责与承接
 
 按研究实际选用背景及关键属性、未解决能力、方法及目的、主要机制、最终表征/决策、验证认识等功能，不规定句数。对相邻两句问：读者已知什么，新增加什么，关系是顺序、并行、条件、因果还是证据？不能靠加 then 或 these features 补救缺失的逻辑。
 
+内部机制核查应比替换稿更详细。正文选取理解推进所必需的关系，不把全部采样细节、组件清单和排除说明塞进同一个方法句。已交代清楚的条件，不必在句尾再用 with ... and ... 重述。次要实现事实可留在修改理由或相应章节，但避免误导所必需的信息访问条件不能省掉。一句承担一个主要解释任务及其必要依赖，指代清楚的从句可以保留；不设单句词数上限，也不为追求短句拆散完整操作。
+
 within each unit 与 across units 表示不同尺度时，句首结构相似不是语法错误；同一作用域不必反复交代。intra- 是内部，inter- 是之间。cross-stage fusion 与 inter-stage relationships 可以分别表达操作与关系，不必为形式统一机械替换。
 
 一个指代清楚的从句，可能比连续两句重复主语更顺。根据独立信息和修饰层数决定是否拆句；First、then、finally 均为可选连接，不是模板必需品。
+
+| 真实关系 | 应交代什么 | 常见误写 |
+|---|---|---|
+| 顺序变换 | 哪个输出成为下一步输入，新操作解决什么 | 前文有多个不同输出，却只写 these features |
+| 并行互补 | 各路径保留/估计什么、在哪里汇合 | 用 then 暗示后一支由前一支产生 |
+| 训练约束 | 何种监督作用于哪些参数或表征 | 把损失写成预测阶段的融合模块 |
+| 更新控制 | 哪个事件触发学习变化，所需反馈何时可用 | 把更新触发写成采样控制或故障报警 |
+| 知识引导计算 | 已知信息在哪个运算中起作用 | 实际只加得分偏置，却写知识与特征拼接 |
+| 跨学习阶段适应 | 何时得到新信息、据此改变什么 | 将学习阶段与生产工序混为一谈 |
+
+最后一句方法描述应从“做了什么”推进到“对任务形成什么”，例如兼顾局部测量与系统信息，或利用无标签数据形成质量预测所需表征。不要再列一遍模块，也不能把融合本身拔高为已经验证的泛化提升。清楚的短句优于含两个指代不明 which 的长句。
 
 ## 3. 合成例子
 
@@ -24,9 +41,17 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 原表达：An encoder is designed. A relation module is introduced. A fusion module improves generalization.
 
-可用的逻辑修复：A shared encoder first extracts features from individual sensor signals. A relation module uses these features to model dependencies between sensors. The updated and independently encoded features are combined for fault classification.
+可用的逻辑修复：A shared encoder first extracts features from individual sensor signals. A relation module uses these features to model dependencies between sensors. The classifier combines the updated features with the original encoder outputs, retaining both relational context and individual-sensor information.
 
 修复建立输入输出关系、去掉未验证的泛化提升，但没有因此证明创新。真实论文仍需写出自身有依据的区别性机制，不直接复制此例。
+
+另一组合成事实：软测量模型的质量预测器和重构解码器共享编码器；无标签测量参与重构训练，推理时仅用编码器和预测器。
+
+可用表达：A shared encoder learns from labeled and unlabeled process measurements through prediction and reconstruction objectives. The quality predictor uses this representation to estimate the target from available process measurements.
+
+无需虚构“先重构、再融合、再预测”的路径。两个例子均未自行提供创新或实验收益，必须加入原研究真实的区别性设计和证据。P03 的较短摘要也说明，机制与输出的关联不依赖固定字数。
+
+**P36 展示另一种关联：** 各任务的门控将共享专家输出组合成对应质量目标所需的特征，梯度平衡则调节这些任务怎样训练共享参数。两种作用通过共同的多任务目标关联，不应写成融合特征在预测时又进入梯度平衡模块。这是训练关系，不必套用第一个例子的串行特征融合写法。
 
 ## 4. 贡献写推进，不写工作日志
 
@@ -36,11 +61,21 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 检查后项是否重复总框架，是否只是多列模块。普通两组案例通常属于验证；原创数据资源、部署能力或新的工程发现有依据时可以成为贡献，不能一概删除实验贡献。
 
+总体框架项应有不被后续重复的组织原理或新能力；组件项再说明实现该原理的具体操作。两个操作共同完成一个推进时，可通过输入输出或共同目标合写。常规编码器不能仅因贡献列表需要平衡就单列为创新。
+
+“句子接得顺”与“确实有创新”分别检查。P10、P17 各列两条，P06 组织三项关联推进，P08 包含问题分析，说明结构可灵活选择，并不提供数量模板。具体用[贡献路线](contribution-narratives.md)判断可主张的推进。
+
+P38 将模型操作与新的跨模态 benchmark 资源分开。资源贡献应说明新增了什么数据、标注或评价能力，并核实范围和获取状态；它不同于“开展了实验”，数据规模与计划发布也不能单独证明创新或已经公开可用。
+
 ## 5. 实验收束
 
 两个过程可以并列，两个数据集也可以并列，但不能混淆物理对象与数据集合。仿真基准与生产数据提供不同证据；real-world 不等于在线部署。offline 只有当区分评价方式确有意义时才需出现。
 
-effectiveness 需要任务证据，engineering applicability 需要可信且范围恰当的工程案例，generalization 则需明确变化的工况、站点或时间范围及对应评价。verified 和 demonstrated 都可以用于经验性验证，均不能替代证明或部署验证。
+先核对研究输出再决定结句：生成保真度、质量预测误差与故障分类准确率不是同一结果。生成研究可以收束到生成质量及实测下游用途（P32），增强诊断的研究则收束到实际诊断评价（P35）。若生产测量中叠加人工故障，不能把全部测试故障都写成产线真实事件。摘要只保留避免误导所需的区别，详细构造在方法与实验中展开。
+
+effectiveness 需要任务证据。engineering applicability 应说明适用对象及已验证范围：有工程依据的仿真可以支持所建模条件下的相关性或可行性，实际产线适用性则需要来自该场景且具有代表性的证据，两者都不自动证明已经部署。generalization 先明确目标总体：独立且无泄漏的留出样本可评价同一总体的新样本预测，跨工况、站点或时间范围迁移则需对应的留出证据。verified 和 demonstrated 都可以用于经验性验证，均不能替代证明或部署验证。
+
+结尾一句可以同时交代案例及支持的结论；只有第二句增加实际发现、权衡或评价条件时，才有必要拆成两句。两个物理过程可以直接并列为 case studies on process A and process B，不必为了形式把其中一个改成 dataset。其他研究也不必套两组案例。
 
 类别不平衡、所有故障类别和硬件细节不必机械放进摘要；若它们正是研究问题或影响结论解释，则可以保留，否则在数据分析、指标及实现设置展开。实验数字是否出现由证据、作者和期刊要求决定，不设通用禁令。
 
