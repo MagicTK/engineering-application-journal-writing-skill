@@ -20,6 +20,8 @@ Mark each operation as prediction-time computation, training objective, pretrain
 
 For each retained mechanism, recover three things: **the object changed, the operation, and the reason the changed object is useful to the next task**. The abstract should retain the distinguishing operation and its purpose, not every tensor name. The method section can carry exact dimensions. Never compress variable features, pooled group features and a stage summary into one interchangeable `feature` if the next operation consumes only one of them.
 
+Keep a changing intermediate object distinct from a changed model. A gate or grouping assignment recomputed from the current input can be adaptive with fixed trained parameters; it need not involve online parameter learning. Likewise, retain the actual output target across sections: product-defect classification, quality estimation and root-cause identification are not interchangeable endpoints. The [terminology decisions](terminology-decisions.md) distinguish these cases without prescribing additional modules or tests.
+
 ## 2. Give Each Sentence A Job And A Connection
 
 Use whichever functions the study needs:

@@ -46,6 +46,8 @@ A learned fuzzy state (P07), a discrete operating mode and a physical state-spac
 
 Do not replace `state` with `condition` merely for fluency: a continuously changing local representation is not automatically a discrete operating regime. `Local operational state` is usable if the model actually adapts to local measured behavior; it should not silently assert that the model identifies physical states. Never introduce `prototype state` when the method has no defined prototype.
 
+For `dynamic` or `adaptive`, identify **what changes**. Input-conditioned attention, group assignments or gates can change on every prediction while trained parameters remain fixed. A recurrent state or rolling reference statistic can also update without fitting model parameters. Online learning or test-time parameter adaptation is a different claim, requiring an actual update rule and its permitted information. P24's elapsed-interval weighting and P04's rolling anomaly-score statistics illustrate different changing objects; neither name alone establishes continual learning. Describe the verified operation directly, such as `input-dependent grouping`, without banning an accurately defined adaptive mechanism.
+
 ## Variables And Their Features
 
 | Wording | Meaning and caution |
@@ -99,7 +101,7 @@ For `mask`, `sparse` and `constraint`, inspect where the operation acts. A zero-
 - **Limited supervision:** few-shot counts labeled examples; zero-shot requires a clear unseen-class definition and available semantics; semi-supervision uses labeled and unlabeled data; weak supervision may use bags or coarse labels; self-supervision specifies how targets arise. These settings are not interchangeable. See P05-P06 and P17-P22.
 - **Fuzzy models:** membership degree is not automatically a calibrated probability; define the actual membership and aggregation. A fuzzy clustering layer does not necessarily contain linguistic rules. An evidential uncertainty score is a different object unless the method establishes a connection. See P07 and P27-P29, P33.
 - **Knowledge-guided models:** distinguish expert rules, process topology, physical laws and learned similarities. A prior's provenance and role matter more than the adjective. See P04, P12-P14.
-- **Quality-related diagnosis:** explain the measured quality target and its relation to process behavior. Avoid repeating a particular defect name throughout the abstract and experiment overview. See P09 and P16.
+- **Quality-related diagnosis:** identify the actual target: a product inspection category, a quantitative quality measurement, or a decision about whether a process fault affects quality. These support different claims. Classification of defect labels does not identify the responsible unit or fault cause. Do not require a quality-related/unrelated decomposition when the method has none; do not omit one when it defines the method's decision. See P01, P09 and P16, and [the task distinctions](topic-playbooks.md#10-interpretability-localization-root-cause-and-trust). Avoid repeating incidental defect names throughout the abstract and experiment overview.
 
 | Direction-specific choice | Meaning to retain | Check before editing |
 |---|---|---|

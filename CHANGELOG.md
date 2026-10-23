@@ -1,5 +1,13 @@
 # Changes
 
+## 4.1.4 (2026-10-24)
+
+- Clarified input-dependent assignments/gates, changing state or score statistics, and actual parameter adaptation in the existing terminology and direction guides. Preserved valid online-learning descriptions rather than imposing a fixed-model assumption.
+- Distinguished product inspection classes, continuous quality targets, quality-relevance monitoring decisions and root-cause outputs. Different case labels can share a model design without sharing class semantics or establishing transfer.
+- Connected those distinctions to abstract/body synchronization; reconciled a residual generalization clause with independent held-out evidence for the actual target population.
+- Rechecked targeted passages in five existing sources, including displayed monitoring logic and interval-weighting figures. Kept 40 sources, 14 Skill pairs and 26 references; no new direction module was added.
+- One fresh respondent passed three baseline cross-section requests, then reread the revised source for those three and two positive-control cases. All five revised-source outcomes pass within that scope. This is preservation/coverage evidence, not a measured improvement over the already-passing baseline or full-suite certification.
+
 ## 4.1.3 (2026-10-24)
 
 - Added a conditional continuous-monitoring check for window/point/event outputs, point adjustment, actual alarm timing and claim-matched follow-up calculations, grounded in additional reading of P07 and P22.

@@ -62,7 +62,7 @@ For a new formulation, explain why existing task definitions miss a relevant con
 
 A paper need not beat every published model. It must test the comparison that supports its stated advance using relevant, reasonably competitive alternatives and fair settings. Explain why each baseline is included and identify inaccessible implementations. A selected reference method can be an informative target without licensing a field-wide best-performance claim.
 
-Generalization, practicality, effectiveness, and efficiency are distinct outcomes. A plausible mechanism motivates a generalization test; it does not establish a gain before held-out conditions or other appropriate evidence are evaluated. An improvement in one metric can justify a focused claim, while costs, failure cases and task relevance determine its engineering significance.
+Generalization, practicality, effectiveness, and efficiency are distinct outcomes. A plausible mechanism motivates a generalization test; it does not establish a gain without independent held-out evidence for the stated target population. New samples from the same population and transfer to changed conditions or sites are different claims, each needing the corresponding separation and information boundary. An improvement in one metric can justify a focused claim, while costs, failure cases and task relevance determine its engineering significance.
 
 ## Turn Analysis Into Manuscript Prose
 

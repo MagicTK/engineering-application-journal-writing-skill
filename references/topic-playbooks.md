@@ -82,6 +82,8 @@ Writing priorities:
 
 For static domain adaptation, describe source/target data access and the representation or objective being aligned. A training alignment objective is not necessarily part of the deployed prediction path (P10). For continual updates, additionally describe update triggers, retained information, adaptation delay and forgetting. A static cross-condition comparison does not establish continual learning. Reserve unknown-class rejection for an actual open-set task; an unseen operating condition need not contain an unseen fault class.
 
+Check whether adaptation actually concerns learned parameters. Input-dependent routing can respond to a new window with frozen parameters; a recurrent state or rolling score reference may change without retraining. These mechanisms can be described as adaptive at their defined level, but they do not alone constitute continual learning. P24 conditions temporal weighting on observed intervals, whereas P04 defines a rolling statistical score after reconstruction. Keep the changing object consistent from contribution to Methods and evaluation; do not add an online-learning experiment to a paper that claims only input-conditioned weighting.
+
 Select chronological, mode-held-out, cross-period or cross-site evaluation according to the claimed shift. When drift and class proportions both change, distinguish their effects rather than attributing all change to a generic domain gap.
 
 Name the distribution that changes, not just `concept drift`. P30 defines a change in `P(X|Y)` while keeping class priors fixed; other work may use drift terminology for `P(Y|X)`, `P(X)` or `P(Y)`. Preserve the manuscript's equations and assumptions rather than transferring a name alone. Do not equate every observed prediction error with a detected drift event.
@@ -237,6 +239,16 @@ Evidence priorities:
 - useful negative and boundary cases.
 
 For root-cause metrics and distribution shifts introduced by explanation perturbations, use [the interpretation evidence guidance](experiment-evidence-design.md#7-interpretation-design).
+
+For quality-related work, distinguish the task from the industrial reason it matters. P01's production case classifies product-shape abnormalities; P09 predicts quality categories using regression-derived representations; P16 defines quality-related detection statistics and a further root-cause analysis. These are different routes, not a hierarchy that every paper must implement:
+
+| Defined target or output | Coherent account | Additional claim needing its own support |
+|---|---|---|
+| Product grade or defect category | Classify inspection outcomes from associated process measurements | Which process unit or intervention caused the defect |
+| Continuous quality quantity | Estimate the measured target, with its units and availability | A diagnosed fault class or a corrective control action |
+| Quality-related versus unrelated process fault | Explain the rule, target relation or statistic making that distinction | Root-cause identification beyond the relation test |
+
+One method can be evaluated with different case-specific class meanings. Name those meanings in the case descriptions and use a shared task description only at the level they genuinely share. Separately trained classifiers on process-fault and product-quality labels do not establish transferred class semantics. A production topology used in feature learning can support a quality classifier without providing cause labels. Preserve a technically defined `quality-related diagnosis` term, but do not manufacture quality regression, subspace decomposition or causal identification to make a generic phrase sound more sophisticated.
 
 ## 11. Mixture Of Experts And Adaptive Routing
 
