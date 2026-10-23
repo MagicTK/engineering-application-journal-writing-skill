@@ -5,7 +5,7 @@ description: Plan or operate reproducible industrial-AI experiments with explici
 
 # Engineering Experiment Automation
 
-Suite version: `4.1.7`
+Suite version: `4.1.8`
 
 <!-- invariant: execution-authorization -->
 <!-- invariant: no-fabrication -->

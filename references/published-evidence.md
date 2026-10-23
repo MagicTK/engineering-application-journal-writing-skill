@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This revision uses a selected 40-paper corpus, not a systematic review. It extends the earlier 26-paper corpus with fourteen targeted sources on fuzzy modeling, adaptation, efficiency, generation, soft sensing, compound faults, label semantics and multimodal evidence. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 40 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This revision uses a selected 43-paper corpus, not a systematic review. It extends the earlier 40-paper corpus with three targeted definition checks on expert mixtures and attention. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 43 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本版在原有 26 篇基础上，针对模糊、适应、效率、生成、软测量、复合故障、标签语义及多模态证据补读 14 篇，合计 40 篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为 PDF 文件页序。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本版在原有 40 篇基础上，针对混合专家与注意力定义补读三篇，合计 43 篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为 PDF 文件页序。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -52,6 +52,9 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P38 | [Cross-Modal Learning for Anomaly Detection in Complex Industrial Process: Methodology and Benchmark](https://doi.org/10.1109/TCSVT.2024.3491865) | Process video and current: acquisition synchronization, token compatibility and cross-modal interaction are distinct; a new annotated resource can be a substantive contribution. |
 | P39 | [A Partial-Label U-Net Learning Method for Compound-Fault Diagnosis With Fault-Sample Class Imbalance](https://doi.org/10.1109/TII.2023.3281660) | Adjacent machinery setting: simultaneous fault indicators, partial pairwise label spaces and limited compound-fault support are different objects. The title alone does not establish ambiguous candidate-label supervision. |
 | P40 | [Robust Multilabel Feature Selection With Label Enhancement for Fault Diagnosis](https://doi.org/10.1109/TSMC.2025.3598796) | Adjacent machinery setting: label representations and selected features interact during alternating fitting. Selected descriptor indices are not sensor-removal instructions; constructed continuous labels need evidence before physical interpretation. |
+| P41 | [Contextual Mixture of Experts: Integrating Knowledge into Predictive Modeling](https://doi.org/10.1109/TII.2022.3224973) | Process soft sensing with linear experts and input-dependent gates. Coefficient sparsity, mixture probabilities and possibility-based prior knowledge have different roles. |
+| P42 | [Dual Cross-Attention Transformer Networks for Temporal Predictive Modeling of Industrial Process](https://doi.org/10.1109/TIM.2024.3385820) | The title names an architecture whose defined components apply self-attention along time and variable axes. Read those definitions before treating the title as a generic cross-attention example. |
+| P43 | [CAT-EDNet: Cross-Attention Transformer-Based Encoder-Decoder Network for Salient Defect Detection of Strip Steel Surface](https://doi.org/10.1109/TIM.2022.3165270) | Adjacent surface-inspection setting: queries from one encoder scale attend to concatenated multiscale keys/values from one image. Cross-attention does not require separately acquired modalities. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -105,6 +108,16 @@ The following are original functional analyses of passages read during revision,
 | P40, abstract, introduction and contributions pp.1-2; equations pp.3-4; visual check of Fig.1 and Algorithm 1 on p.4 | Feature selection and neighborhood-derived label updates alternate; the algorithm returns selected feature indices. | Explain reciprocal updates and their returned object, rather than inventing a serial prediction chain. Continuous training targets do not by themselves establish measured severity, and descriptor reduction does not establish physical sensor or runtime savings. This inspection does not validate convergence or the paper's experiments. |
 
 These analyses inform [abstract craft](abstract-and-contribution-craft.md), [contribution routes](contribution-narratives.md), [terminology decisions](terminology-decisions.md), and [conditional topic guidance](topic-playbooks.md). They do not supply manuscript-ready claims, new experimental evidence, or a license to copy source prose.
+
+## Additional Name-Definition Checks / 名称与定义核对
+
+| Source and PDF position | Verified operation and scope | Transfer boundary |
+|---|---|---|
+| P41 pp.1-3; p.2 rendered equations and description | The MoE prediction mixes expert predictions using input-dependent gates; the proposed model uses linear experts, regularized coefficients and possibility-based contextual information. | Paired with P36 for the base mixture principle, not its exact model. Coefficient sparsity does not establish skipped expert execution; the contextual model's full name is attributed to that paper. |
+| P42 pp.1,3-4; p.4 rendered Figs.4-5 and Eqs.(11)-(12) | The time branch projects Q/K/V from one representation; the variable branch is described and diagrammed as self-attention along the other axis. | A title containing cross-attention is not by itself evidence for cross-representation query/key/value weighting. This check does not invalidate the author's architecture name or endorse every source equation. |
+| P43 pp.1,4-5; p.5 rendered Figs.6-7 and Eqs.(1)-(2) | Per-scale queries use keys/values from concatenated encoder scales; the described attention aggregates channel-based rather than patch-based similarities. | Paired with P38 for cross-attention, while preserving different representations and axes. It is not evidence that all multiscale fusion is attention or that all attention is multimodal. |
+
+这些定义核对补充的是名称适用范围，不以论文数量替代语义核查；不复制源文句子，也不为源文全部推导或实验背书。
 
 ## Results And Closing Sections / 结果与结尾段落
 

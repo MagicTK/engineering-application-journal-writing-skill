@@ -28,7 +28,7 @@ The ledger remains partial. The 40-paper index and a literal terminology scan do
 - [Frozen-baseline responses](../responses/v417-baseline.md)
 - [Initial revised responses, including the ambiguity](../responses/v417-initial-revised.md)
 - [Final targeted responses](../responses/v417-final-retest.md)
-- [Executed requests and final instruction fingerprints](../forward-test-report.json)
+- [Executed requests and final instruction fingerprints](../history/v4.1.7/forward-test-report.json)
 - [Definition and translation ledger](../../references/engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
 
 Public responses are preserved as returned. No local-path substitution was needed. Exact dispatches, initial/final fingerprints and runtime response records remain in the private maintenance record; public requests contain only fictional facts.

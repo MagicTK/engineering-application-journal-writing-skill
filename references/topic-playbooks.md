@@ -117,6 +117,10 @@ Evidence priorities:
 
 Distinguish acquisition alignment, representation compatibility and learned interaction. P38 synchronizes video/current acquisition, maps their different input shapes into compatible token dimensions, and learns directional cross-modal interactions. Equal embedding widths alone do not establish temporal pairing or one-to-one correspondence. State which modality queries which information when this affects the output, without assuming the paper's arrow convention is universal. Separate class-level decisions from pixel-level localization and match each to its annotation and evaluation; reconstructing a prediction map is not necessarily reconstructing the original measurements. Two derived views of the same signal should not be presented as independently acquired modalities.
 
+Classify attention from its inputs, not `cross` in a title. P42 applies self-attention along time and variable axes; P43 instead derives queries from one encoder scale and keys/values from concatenated scales of the same image. Cross-attention can therefore operate within one modality. Identify the query representation, the key/value representation and the aggregation axis when defining it; do not force that detail into every abstract. A published architecture's name remains an attributed identity even when its components need a more precise description.
+
+中文写作也要区分“跨时间/跨变量的自注意力”和“交叉注意力”。依据查询、键、值的来源判断，不因出现 cross 就换成另一种机制，也不要求交叉注意力必须跨模态。
+
 ## 5. Plant-Wide, Multistage, Multiblock, Or Production-Process Modeling
 
 Writing priorities:
@@ -278,6 +282,10 @@ Evidence priorities:
 - expert specialization interpretation.
 
 Start from what is mixed: features, predictions or parameters, and for which task. P36 uses task-specific gates to mix expert features for several quality targets; its balancing mechanism adjusts task gradients during training. This is not evidence of top-k sparse execution, load balancing across devices, or uniformly distributed expert use. Dense weighted mixtures and sparse routing have different computation boundaries. When reduced negative transfer is claimed, compare task-wise outcomes with relevant single-task and shared-model alternatives; an improved aggregate can conceal harm to one quality target. Keep gradient weighting, expert routing and class-frequency reweighting separate, and define any combined score across targets with different units.
+
+An expert need not be a neural subnetwork: P41 combines linear expert predictions with input-dependent gates. Name the actual expert model and mixed object. Sparsity in fitted coefficients is different from activating only a subset of experts at inference; report the latter only when the execution actually skips experts. Learned mixture weights do not by themselves identify discrete physical operating modes. In knowledge-guided mixtures, keep possibility-based prior information, mixture probabilities and fitted responsibilities distinct rather than calling every weight a probability.
+
+“混合专家”是基础类别，专家可以是线性模型；是否为神经网络、是否稀疏执行、是否对应物理工况，都要分别核实。“系数稀疏”“专家路由”和“任务梯度平衡”不能互换。
 
 ## 12. Compound, Concurrent, Hierarchical, Or Open-Set Fault States
 

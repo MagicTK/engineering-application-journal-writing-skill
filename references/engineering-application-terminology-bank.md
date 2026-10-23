@@ -4,7 +4,7 @@
 
 This reference supports writing for industrial, control, automation, process,
 manufacturing, and equipment-oriented journals. The current release provides a
-[40-paper published evidence index](published-evidence.md) and
+[43-paper published evidence index](published-evidence.md) and
 [context-sensitive decisions](terminology-decisions.md). Earlier private corpus
 frequency counts are omitted because this public package cannot reproduce them.
 Author drafts are not terminology authorities; computer-science channel-strategy
@@ -308,9 +308,11 @@ original semantic summaries, not extracted source passages.
 | fuzzy clustering; fuzzy c-means (FCM) | P28 p.3, Eqs.(4)-(7) and Algorithm 1, uses membership-weighted distances and alternating center/membership updates; P33 pp.3-4, Section III-C and Eqs.(5)-(6), defines FCM before its clustering architecture. | Same base clustering algorithm, different roles: reservoir-feature reinforcement versus incomplete-series clustering. The sources are machinery and general time-series studies. Their full network names, reinforcement steps and imputation mechanisms are not interchangeable. |
 | diffusion model | P32 p.3, Section III-A, defines artificial forward noising and learned reverse generation for sequences; P35 p.3, Section III-A and Eq.(14), applies conditional diffusion to compressed features and decodes generated signals. | Common generative operation, different generated objects and conditioning. This does not establish sensor-noise restoration, identical inference cost or a universal industrial diffusion-module name. |
 | graph convolution; graph convolutional network (GCN) | P07 p.7, Eqs.(18)-(19), combines normalized adjacency, feature projections and a gated nonlinearity; P14 p.4, Eqs.(33)-(34), uses adjacency-weighted feature projection and ReLU. | Common graph-feature computation, not identical graphs: variable-time nodes versus process-variable nodes. A GCN operation does not establish a physical or causal meaning for learned edges. |
+| cross-attention | P38 p.6, Eq.(7), uses queries from one modality and keys/values from the other; P43 pp.4-5, Eqs.(1)-(2) and Figs.6-7, uses queries from one encoder scale and keys/values from concatenated scales. | Same query-to-key/value weighting principle, different representations and attention axes. Distinct modalities are not required; key/value features may include the queried scale. P42 p.4 defines cross-time and cross-variable **self-attention** despite its dual-cross-attention title. That title is not a second definition of the P38/P43 operation. Preserve attributed names, but inspect inputs before classifying a new module. |
+| mixture of experts (MoE) | P36 pp.2-3, Eq.(2) and Eqs.(5)-(6), defines gated combinations of expert outputs and task-specific expert features; P41 pp.2-3, Eqs.(1)-(3), defines weighted expert predictions with input-dependent gates. | Shared mixture principle, not identical experts or outputs. P41 uses linear expert models, so `neural network` is not part of the base definition. Coefficient sparsity from regularization does not establish sparse expert execution, and a gate need not select one discrete operating mode. |
 
 Chinese wording is independently supported for selected entries below. These
-translation sources do **not** enlarge the 40-paper industrial corpus or certify
+translation sources do **not** enlarge the 43-paper industrial corpus or certify
 the performance/style claims made by their authors.
 
 | Chinese check | Primary online locator and checked content | Status and transfer boundary |
@@ -322,14 +324,17 @@ the performance/style claims made by their authors.
 | fuzzy clustering / 模糊聚类; fuzzy c-means / 模糊c均值 | [Acta Automatica Sinica, c200392](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c200392?viewType=HTML), bilingual title and abstract | The abstract explicitly discusses traditional FCM and a source-specific robust weighted variant in wastewater monitoring. Supports the base wording, not adoption of that variant's full name as a general family. |
 | diffusion model / 扩散模型 | [Journal of Software, 007511, journal issue page 413](https://ebook.xml-journal.net/rjxb/2026/04/files/basic-html/page413.html), bilingual title, abstract and Chinese keywords | Confirms generative-model terminology in an image-generation review. Does not add process-industry application evidence or justify a sensor-restoration claim. |
 | graph convolutional network / 图卷积神经网络 | [Acta Automatica Sinica, c190720](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190720?viewType=HTML), bilingual Fig.8 caption | Verifies the network-name translation. The accessible caption does not independently verify every graph-convolution variant or a physical meaning for its edges; the English operation evidence is recorded above. |
+| cross-attention / 交叉注意力 | [Acta Automatica Sinica, c250203](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250203?viewType=HTML), bilingual Table 1 heading and its exogenous-variable fusion entries | Verifies this base translation in a time-series review. The table groups several architectures; it does not make their query/key/value definitions identical. English operation evidence comes from P38/P43, not from counting the table's cited titles. |
+| mixture of experts / 混合专家 | [Acta Automatica Sinica, c250366](https://www.aas.net.cn/article/doi/10.16383/j.aas.c250366), bilingual title, abstract and keywords | Verifies the base translation. Its language-processing model uses specialized sparse mechanisms; these are not requirements for every industrial MoE or evidence that linear experts are neural subnetworks. |
 
 Other Chinese counterparts and other method-family names have not all received
 this completed paired record. Keep them as source-attributed or definition-based
 working terminology until checked for the requested recommendation. In
-particular, a single checked soft-clustering example (P33), cross-attention
-example (P38), or mixture-of-experts example (P36) is not a two-paper admission
-record for that complete category. This is a limit of this ledger, not a claim
-that these methods occur only once in the field.
+particular, a checked soft-clustering example (P33) does not admit every soft
+assignment mechanism, and paired base MoE or cross-attention records do not admit
+all source-specific variants. Knowledge-distillation and other candidate
+definitions still require their own completed records. This is a limit of this
+ledger, not a claim that these methods occur only once in the field.
 
 `Cross-stage feature fusion`, `process-topology-guided integration` and similar
 compositional phrases above describe an operation only when the manuscript

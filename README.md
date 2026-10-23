@@ -4,7 +4,7 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.1.7: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.1.8: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
 This version adds scoped definition and translation evidence for selected method names. See the [evaluation record](evals/README.md) for the tested cases and remaining audit limits; the terminology bank is not a completed whitelist.
 
@@ -119,7 +119,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.1.7 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.1.8 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|
@@ -143,7 +143,7 @@ A paper need not have two datasets, a fixed number of contributions, a 200-word 
 
 - [Abstract/contribution craft](references/abstract-and-contribution-craft.md) and [body-sync template](assets/templates/abstract-body-sync.md).
 - [Section writing](references/section-writing-guide.md), [argument and prose craft](references/argument-and-prose-craft.md), [contribution narratives](references/contribution-narratives.md).
-- [Terminology decisions](references/terminology-decisions.md), [terminology bank](references/engineering-application-terminology-bank.md), [40-paper evidence index](references/published-evidence.md).
+- [Terminology decisions](references/terminology-decisions.md), [terminology bank](references/engineering-application-terminology-bank.md), [43-paper evidence index](references/published-evidence.md).
 - [Experiment execution](references/experiment-execution.md), [run manifest](assets/templates/experiment-run-manifest.md), [evidence design](references/experiment-evidence-design.md).
 - [Figure production](references/figure-and-latex-production.md), [journal migration](references/journal-migration-and-completeness.md), [author handoff](assets/templates/author-handoff.md).
 

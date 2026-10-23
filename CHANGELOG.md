@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.8 (2026-10-24)
+
+- Add paired definition evidence for cross-attention and mixture of experts to the existing bilingual ledger, with separate online Chinese-name checks. The selected source index now contains 43 papers, not a claim of corpus-wide admission.
+- Distinguish attention axes from query/key/value provenance and retain legitimate same-modality cross-attention. A source-specific architecture title is not automatically a generic operation.
+- Distinguish linear from neural experts, weighted mixtures from sparse execution, and coefficient sparsity from routing. Preserve genuine input-dependent sparse execution without inventing timing or memory evidence.
+- Retain all earlier evaluation records. One fresh respondent passed three frozen-baseline cases, then four candidate cases including a post-freeze top-2 control. After completing the Chinese mirror and correcting its source-index count, all four final-source retests pass in that same context. This is bounded preservation and coverage evidence, not a statistical improvement or full-suite certification.
+
 ## 4.1.7 (2026-10-24)
 
 - Extend the existing paired terminology ledger using six original papers' definitions and displayed equations for fuzzy clustering/FCM, diffusion models and graph convolution/GCN; keep source-specific variants and application domains separate.
