@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This revision uses a selected 46-paper corpus, not a systematic review. It extends the earlier 43-paper corpus with targeted domain-adaptation and knowledge-distillation definition checks. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 46 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This revision uses a selected 47-paper corpus, not a systematic review. It adds a targeted class-prototype definition check to the earlier 46-paper corpus. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 47 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本版在原有 43 篇基础上，针对域适应与知识蒸馏定义补读三篇，合计 46 篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为 PDF 文件页序。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本版在原有 46 篇基础上，针对类原型定义补读一篇，合计 47 篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为 PDF 文件页序。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -58,6 +58,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P44 | [A Multisource Domain Adaptation Network for Process Fault Diagnosis Under Different Working Conditions](https://doi.org/10.1109/TIE.2022.3194654) | Process diagnosis: source-target distribution losses and classifier-output combination have distinct roles; the target class space is a source-space subset. Its training notation includes target labels, so the supervision setting must not be inferred from the title. |
 | P45 | [A Lightweight and Adaptive Knowledge Distillation Framework for Remaining Useful Life Prediction](https://doi.org/10.1109/TII.2022.3224969) | Adjacent equipment prognostics: hidden-feature/regression-target distillation, confidence-based exits and reparameterization address different parts of training and prediction. |
 | P46 | [Cross-sensor collaborative distillation with dynamic competitiveness balancing for fault diagnosis under imbalanced missing data](https://doi.org/10.1016/j.neucom.2026.133238) | Adjacent motor diagnosis: multisensor guidance trains single-sensor representations; sensor missingness is not class imbalance. The unnormalized-score prose conflicts with its softened-distribution formula and is not adopted as a verified operation. |
+| P47 | [Learning to Match Prototype for Few-Shot Classification of Attacks and Faults in Smart Grids](https://doi.org/10.1109/TCYB.2025.3632113) | Adjacent power-system classification: support-feature means provide class representatives, and a learned comparison yields query scores. Prototype construction, matching and episodic training have distinct roles; class overlap and label access require explicit definitions. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -156,6 +157,14 @@ These checks concern reporting definitions and scientific scope, not experimenta
 | P46 pp.1,3,5-6, with p.5 visually checked | Multisensor guidance enters single-sensor learning through softened-output and semantic-similarity objectives. Eq.(6), its symbol definitions and Fig.2 use softmax and temperature, contrary to the neighboring unnormalized-score explanation. | Preserve the basic teacher-guided learning role and its sensor-availability purpose, but do not certify the disputed scoring operation without implementation/author clarification. Its full balancing-mechanism name remains source-specific; publication is not a reason to copy every term or equation claim. |
 
 上述为机制和写法的定点核查，不是对来源实验或实现的复现。分类概率、隐层特征、回归目标和原型相似度不能只为句式整齐而互换；源域、目标域、教师、学生也不是两组可随意混用的概念。
+
+## Class Representatives And Few-Shot Writing / 类代表与小样本写作
+
+P47 pp.1,3-4 were read for the abstract, class/prototype definition and training-to-prediction connection; p.3 was also visually checked. Eq.(4) computes a class prototype from labeled support embeddings. Eqs.(5)-(7) distinguish a fixed-distance baseline from the proposed learned comparison. Training queries supply supervised losses, while the stated prediction task treats query labels as unavailable. The formulation permits partially overlapping or disjoint base/support classes; this check does not establish every experimental split or reproduce the results.
+
+Together with P46 pp.5-6, Eqs.(7)-(10), this supports a shared feature-space class-representative sense, not identical downstream use: P46 uses prototype similarities in knowledge transfer, whereas P47 uses query-to-prototype matching for classification. Preserve this input/output distinction in abstracts and contributions. Neither an encoder-derived mean nor its name automatically establishes an independently optimized parameter, physical operating state or a novel component. The two adjacent engineering settings do not make prototype learning mandatory for process diagnosis.
+
+本次只核查类代表的构造、消费该对象的操作，以及训练/预测标签关系；不把均值、参考样本和独立训练向量混为一物，也不把来源论文的完整模块名推广为通用机制。中文译名另见术语库的在线双语来源。
 
 ## Reusable Lessons / 可迁移结论
 

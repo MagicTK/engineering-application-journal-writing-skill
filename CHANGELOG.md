@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.10 (2026-10-24)
+
+- Add a scoped class-prototype definition record from two published engineering contexts, with separate online Chinese terminology checks. The selected index contains 47 papers; the added smart-grid study is adjacent evidence, not proof of process-industry prevalence.
+- Clarify computed class representatives versus free parameters or physical states, and connect support features to query scoring in few-shot writing. Keep training-query supervision separate from held-out query labels and class overlap separate from sample splits.
+- Record a verified Chinese soft-assignment translation without declaring its full engineering-definition admission complete. Preserve author-defined component names and alternative prototype constructions rather than imposing one mean vector per class.
+- Retain the existing skill/reference structure. Validation scope and actual fictional-case responses are recorded separately in the evaluation report; no paper or experiment results are modified.
+
 ## 4.1.9 (2026-10-24)
 
 - Extend the existing bilingual definition ledger with domain adaptation and knowledge distillation, using distinct source definitions and separate online Chinese-name checks. The selected index now contains 46 papers; this is not a whole-bank terminology certification.
