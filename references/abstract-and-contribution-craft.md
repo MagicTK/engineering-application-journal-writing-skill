@@ -97,6 +97,8 @@ Check the claimed output before choosing the ending: generation fidelity, qualit
 
 One closing sentence can name the cases and supported outcome. Use two when the second adds an actual finding, trade-off or evaluated condition, not a second statement that experiments were performed. Preserve parallel objects: `case studies on process A and process B` is coherent without turning one process into a dataset for grammatical symmetry. A two-case pattern is not mandatory for other studies.
 
+When correcting an overclaimed ending, write the supported finding at its actual evaluation level. Do not carry the deleted claim back into the abstract as a trailing statement that it was not established. For example, a contrast between adjusted and raw detection scores is itself an informative result; the reason for deleting an unsupported warning claim belongs in the author note. Retain a limitation in the abstract when it changes how the retained claim must be interpreted, such as the scoring rule or permitted target-data access. This is a placement decision, not a ban on negative findings or necessary qualifications.
+
 Do not introduce class imbalance, every fault label or hardware detail in the abstract merely because it occurs in the dataset. Include such a fact when central to the problem or necessary to interpret the result; otherwise develop it in data analysis, metrics or implementation details. Quantitative results may be useful when supported and permitted by the author and venue.
 
 ## 6. Synchronize Meaning, Not Identical Wording

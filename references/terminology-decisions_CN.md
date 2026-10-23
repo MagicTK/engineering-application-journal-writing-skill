@@ -118,6 +118,8 @@ offline assay 可以准确表示实验室检测或迟到的质量标签，不等
 
 任务名称也需看定义。detection 可能指报警，diagnosis 可能识别类别、位置或原因；文献用法有差异（P02），先看目标与评价再改名。quality prediction 可能输出连续量，也可能预测质量类别（P09），不能为了表面统一把类别标签改成连续质量变量。
 
+连续监测中，window-level、pointwise、point-adjusted、event-level 对应不同评价对象或计分规则。阳性窗口不定位窗口内的异常时刻；命中一次后填满真实异常区间只改变评分，不改变实际报警时间，P07 与 P22 的选择不同。inference time 描述明确范围内的计算耗时；detection delay 需要对齐真实报警、参考起点以及所需信息的可用时刻。early warning 还需要定义提前预警目标，计算快不能代替这些时序证据。按需阅读[连续监测评价](experiment-evidence-design.md#continuous-monitoring-what-is-scored-and-when)。
+
 普通实验章节可以用 experimental settings；若确实定义了可复现的评价程序，evaluation protocol 也不是错误。作者不喜欢某词，不应上升为整个领域禁令。
 
 真正不可接受的是虚构结果和引用、编造输入语义、无依据的因果/部署/泛化结论及隐瞒选择泄漏。没有哪个普通单词本身足以证明这些问题。

@@ -1,5 +1,13 @@
 # Changes
 
+## 4.1.3 (2026-10-24)
+
+- Added a conditional continuous-monitoring check for window/point/event outputs, point adjustment, actual alarm timing and claim-matched follow-up calculations, grounded in additional reading of P07 and P22.
+- Kept model identities and fixed dimensions in Methods when they define the operation; category labels and symbolic interfaces must reflect actual scope. Rechecked P29 rather than making a universal naming rule.
+- Consolidated duplicated figure-style and reconstruction instructions into existing references, with shorter bilingual entrypoints and author-controlled fonts, palette and output formats.
+- Clarified positive abstract endings: retain the supported finding and its necessary scope; explain removal of an unsupported claim in author notes instead of appending a redundant negative disclaimer.
+- Retained 14 skill pairs, 26 references and the 40-source corpus. One fresh respondent answered four baseline cases, then six cases against revised instructions; two were retested after a prose-placement repair. Six final outcomes pass within that scope, not six independent contexts or full-suite validation. Baseline responses and the initial prose defect remain visible.
+
 ## 4.1.2 (2026-10-24)
 
 - Distinguished supervision quantity, granularity and reliability; clarified candidate labels, simultaneous fault labels and partial classifier label spaces using two additional published sources.

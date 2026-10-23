@@ -28,6 +28,8 @@ Keep runs immutable. New processing or model logic gets a new version. Associate
 - Standard deviation, standard error and confidence intervals are not interchangeable. Specify repetition units and interval construction; do not demand a fixed number of seeds for every claim.
 - Statistical significance is not established by bold type, a higher mean, overlapping/non-overlapping standard-deviation bars, or the word `significant`.
 
+For continuous monitoring, preserve the raw scores, emitted alarm times, threshold source and label intervals before applying a scoring adjustment. Record the window-to-output mapping and distinguish pointwise, point-adjusted, window-level and event-level results. Derive alarm delay from the actual timeline, not the adjusted labels or the model's forward-pass runtime; use [the monitoring metric guidance](experiment-evidence-design.md#continuous-monitoring-what-is-scored-and-when) when this distinction affects the claim.
+
 ## Graph And Figure Provenance
 
 Use actual results for the actual revision. When curves summarize repeated runs, show uncertainty if it helps answer the sensitivity question and available data support it; not every plot needs bars. For independently fitted t-SNE/UMAP projections, preserve labels and comparable plotting conventions but do not interpret coordinate alignment across panels. A fixed random seed alone does not make separately fitted latent spaces directly aligned.

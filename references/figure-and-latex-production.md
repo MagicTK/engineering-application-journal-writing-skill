@@ -72,6 +72,10 @@ Use the local module's deep color family (or black) for even the smallest generi
 
 When typography is wrong, repair only the affected region and verify the formula/label against the scientific contract; do not merely recolor simulated handwritten glyphs and claim font compliance. Record font paths/faces and applicable licenses separately from the image. In future editable reconstruction, use a simple native fill per object rather than layered effects that mimic raster shading. Preserve accumulated author constraints, scientific topology and information density across every revision. Inspect actual blank fills, cell centers, letters, formulas and final-size legibility before declaring a pass; never infer compliance from a generation prompt.
 
+For this selected style, inspect complete perimeters and connectors as well as flat interiors: regular corners, uniform stroke widths and dash spacing, preserved endpoints, ports and scientific mini-plots. Recoloring an irregular border does not repair its geometry. Composite local labels and arrows against the actual background without introducing white rims or halos. Keep operator glyphs, variable italics, scripts and baseline alignment correct. The author may choose Gill Sans, Futura or another available face, but selecting a flat style alone does not select a font, prohibit bold text or override an approved diagram.
+
+Before generating this style, remove contradictory decorative instructions from inherited prompts and verify the actual output. Reference geometry does not authorize copying a reference's textures or fonts. Preserve the current approved version before making alternatives, and prefer a local repair over regenerating an entire figure merely to fix one label.
+
 ### Source-preserving local revision
 
 When the author approves an existing diagram's structure and asks for color or typography repair, protect its coordinate system, aspect ratio, compact spacing, connector endpoints and routing, arrowhead proportions, annotations, operator symbols, and internal schematic geometry. Do not globally reconstruct the figure merely to standardize colors or increase editability. Cluster point clouds, sampling markers and guides, mini-plots, and frozen/trainable icons carry information; preserve their arrangement. With author authorization for raster editing, reuse source crops and apply local masks or recoloring when object reconstruction would degrade them. Raster reuse must be disclosed, not labeled native editability.
@@ -94,6 +98,10 @@ Revise the authoritative manuscript and assign motivation, overview and module-d
 - Keep aesthetic acceptance separate from scientific checks and reference/publication rights; do not promote private visual priors into publishable assets without authority.
 - Preserve received human-edited PPTX as the current master. Mark stale scene/manifest/object maps and reconcile them intentionally before source-based editing; never regenerate old input over human corrections.
 - Export the approved current master and record its mapping to the paper. A review preview before approval remains a draft derivative.
+
+### Method identity and interface scope
+
+Use the correct model category, but retain a particular model identity, frozen/trainable status or fixed numerical interface when it defines the proposed operation. For example, modifying a specific encoder's internal update is not an arbitrary-backbone method merely because its diagram says `foundation model`. Use symbolic dimensions and category labels when the derivation and interface genuinely have that scope; put incidental checkpoint choices and run settings in Experiments. P29's Methods and framework caption retain concrete model identities, as documented in [the source notes](published-evidence.md). Neither naming a model nor replacing its name establishes cross-model performance. Keep the diagram, equations and claimed compatibility consistent.
 
 ## 4. Tables
 
@@ -153,18 +161,3 @@ Keep editable support sources and build/history artifacts outside the authoritat
 upload set. An Overleaf-ready package is not a remote upload or publication claim.
 The pipeline reference contains the source inventory, resumption rules and a bounded
 reviewed-workflow lesson; case-specific typography and layout are not defaults.
-
-
-### Optional Flat-Style Refinements
-
-Only apply these refinements to an author-selected flat geometric profile. Named fonts are examples subject to availability, licensing and author choice, not general engineering-journal requirements.
-
-A flat-color spot check is insufficient. Verify every salient object perimeter and connector as well as its interior. Cards have exact straight edges, regular square or rounded corners, one fixed border color and uniform width; dashed frames have regular dash lengths and gaps. Remove wobbly or faded source strokes rather than recoloring them. Keep the original geometry, endpoints and protected scientific mini-plots while repairing a registered border band. Reopen an intentional connector port only where the scientific path requires it. Circles, squares, triangles and axes need clean consistent outlines, with original centers, sampling distances and counts preserved.
-
-Use one fixed fill, one fixed border ink and one fixed text ink per semantic run. Remove residual wash immediately behind letters and around frames, not just in empty card corners. No pencil, sketch, handwritten ink, watercolor, powder, chalk, shadows, glow, textured strokes, soft-focus border or variable opacity. Alpha-composite new labels/arrows from transparent layers against the exact underlying fill; never paste a white rectangular rim over a colored panel. Boundary antialiasing alone may vary coverage. Local data-flow arrows use their module's deep ink; neutral cross-module arrows may use black only when a colored semantic association would mislead.
-
-For an author-requested formal alternative, prefer actual Gill Sans MT Regular without bold titles, subtitles or card labels when this clear-style profile is selected; use size, spacing and coordinated ink for hierarchy; Futura is an optional alternative when requested. Verify the loaded font face and keep math in a genuine mathematical face with italic variables and upright operators. Generated lettering is not evidence of the named font. Preserve the repaired current version, then make the formal white/pale alternative; do not use an obsolete Comic-style default. A plain white large panel with very pale small operation cards is a valid complete design. Reference images transfer topology or layout only within their declared role; reject inherited hand-drawn texture.
-
-Method diagrams use the correct model category (time-series foundation model, large language model, or multimodal foundation model when actually used). Concrete pretrained model/checkpoint names and numerical instance dimensions belong to experimental settings. Define the compatible interface and symbolic dimensions in the method; changing the displayed name cannot establish arbitrary backbone compatibility or cross-model performance.
-
-Before generation, remove positive style keywords that request sketch/comic/hand-drawn/brush/chalk/wash/gradient/shadow effects from the effective prompt or inherited template. State: formal engineering-journal diagram; exact straight or rounded geometric frames; uniform stroke width; one fixed fill/border/ink; white major panels; module-colored arrows; no decorative effects. Lock scientific mini-plot geometry and endpoints. Inspect the actual output object by object, including phase headings and arrow ports; repair a specific failure before calling a version ready. Do not regenerate the whole image repeatedly for exact labels that deterministic typography can fix.

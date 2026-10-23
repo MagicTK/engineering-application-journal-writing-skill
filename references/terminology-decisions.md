@@ -122,6 +122,8 @@ For `mask`, `sparse` and `constraint`, inspect where the operation acts. A zero-
 
 Task names also require definitions. Detection may denote an alarm, while diagnosis may identify a fault class, location or cause; published usage varies (P02). Inspect the target and evaluation before correcting a name. Quality prediction may target a continuous measurement or a quality category (P09); class labels must not be rewritten as continuous quality variables for apparent consistency.
 
+In continuous monitoring, `window-level`, `pointwise`, `point-adjusted` and `event-level` describe distinct evaluation objects or scoring rules. A positive window does not locate the anomalous point inside it. Filling a labeled interval after one hit changes the reported score, not the emitted alarm times; P07 and P22 use different choices. `Inference time` measures a defined computation, while `detection delay` relates an actual alarm to a reference onset and required information availability. `Early warning` additionally needs a defined advance-warning target; fast computation alone supplies none of these temporal claims. See [monitoring evaluation](experiment-evidence-design.md#continuous-monitoring-what-is-scored-and-when).
+
 `Experimental settings` is a useful ordinary heading. `Evaluation protocol` is also legitimate when a reproducible evaluation procedure is genuinely being defined. An author's preference against it is not a field-wide ban.
 
 The non-negotiable restrictions concern false meaning: fabricated results/citations, invented input semantics, unsupported causal/deployment/generalization claims, and concealed selection leakage. No ordinary word alone establishes any of these failures.

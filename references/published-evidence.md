@@ -119,6 +119,18 @@ Additional targeted reading on 2026-10-24 examined these passages in the same co
 
 同一语料中，结尾有的只收束方法与证据，有的另列后续条件，不能统一成固定段数。借鉴的是结果模式、方法角色和后续问题之间的关系，不照搬数值、因果解释、方法名称或未来收益。
 
+## Evaluation Choices And Method Identity / 评价选择与方法身份
+
+Additional targeted reading on 2026-10-24 checked existing sources rather than adding papers to the corpus:
+
+| Source and PDF position | Observed choice | Transfer boundary |
+|---|---|---|
+| P07 pp.8-9 | A time-indexed anomaly score is followed by thresholding; reported evaluation applies point adjustment that credits a complete labeled anomaly interval after any hit. | Keep raw alarms distinct from adjusted scoring. The evaluated server/distributed-system datasets are adjacent time-series evidence, not production-process field validation. A high adjusted F1 does not establish onset localization or prompt warning. |
+| P22 pp.6-7 | Segment-supervised training produces separately defined point scores; evaluation explicitly omits point adjustment and selects thresholds on a validation subset. | State the output and scoring rule actually used. Its mixture of physical water-system testbeds, server measurements and heating-loop simulation should not be relabeled uniformly as production field data. Neither this threshold arrangement nor P07's adjustment becomes a universal requirement. |
+| P29 p.3, Methods and framework caption | Concrete pretrained-model identities are retained in the textualization and embedding description. | A named component may clarify the implemented method. Keep an identity or fixed dimension in Methods when needed to define the operation; use a category and symbolic interface when the method genuinely has that scope. This observation does not verify arbitrary backbone compatibility. |
+
+These checks concern reporting definitions and scientific scope, not experimental reproduction or a recommendation to copy the sources' numerical findings. 对象、计分规则及模型身份的保留取决于科学含义；不能只因某种写法已发表就统一套用。
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.
