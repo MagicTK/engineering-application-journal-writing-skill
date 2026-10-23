@@ -1,0 +1,106 @@
+[
+  {
+    "id": "new-problem-valid",
+    "loaded_skills": [
+      "engineering-paper-idea-architecture"
+    ],
+    "response": "The primary contribution is an explicit formulation of diagnosis when fault-label validity and meaning depend on the production route. The three supplied studies establish fixed-meaning task definitions; the verified annotation guide identifies a concrete condition those definitions do not represent. The contribution therefore lies in specifying the diagnostic target, valid labels, interpretation rules, and decision costs for each route, with every definition traceable to that guide.\n\nA suitable contribution statement is: “We formulate route-dependent fault diagnosis by making label validity, label meaning, and decision costs explicit functions of the production route. The formulation connects measured fault annotations to the decisions they support and provides a basis for evaluating route-dependent diagnostic errors.”\n\nA standard classifier can serve as the first reference implementation; algorithmic novelty is not required to establish the formulation. Its specification must state when route information is available and how route transitions are labeled. Subsequent evaluation should compare route-aware and fixed-meaning formulations under matched information access and report diagnostic errors and guide-defined decision costs. No comparative outcome or field-wide priority claim is established by the supplied material."
+  },
+  {
+    "id": "familiar-problem-fair-gap",
+    "loaded_skills": [
+      "engineering-literature-positioning-zh"
+    ],
+    "response": "标签稀缺条件下的故障诊断已取得进展，研究[A]和[B]分别在各自场景中验证了利用有限标注开展诊断的效果。这些成果为少标签诊断提供了基础，其已发表实验覆盖的固定工况也界定了现有证据的适用范围。对于标签稀缺与工况留出同时存在的设置，模型还需在有限故障监督下学习能够用于未见工况的判别信息；上述研究的实验尚未回答这一联合条件下的诊断表现。基于这一要求，本文考察工况不变表征能否减少诊断对训练工况特征的依赖，并通过工况留出的评价检验其在少标签条件下的作用。研究重点由固定工况中的少标签学习延伸至有限监督下的跨工况诊断，相关效果有待实验检验。"
+  },
+  {
+    "id": "coupled-labels-not-automatic",
+    "loaded_skills": [
+      "engineering-paper-idea-architecture",
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "Position the current study as fault diagnosis with scarce labels and five mutually exclusive classes: normal operation and four single-fault states. These annotations support multi-class classification. They do not provide targets or test cases for simultaneous faults, so neither multi-label diagnosis nor compound-fault generalization is currently an evidence-supported claim. Combining the keywords does not establish a new research problem.\n\nA defensible present question is: “How does the proposed adaptation affect single-fault diagnosis under a fixed, limited annotation budget?” Specify that budget, compare relevant methods with equal label access, and evaluate on independent runs using macro-F1 and class-wise results. Any contribution should follow the actual adaptation and measured findings.\n\nRetain compound-fault diagnosis as a separate candidate requiring measured concurrent-fault examples, valid multi-hot annotations, and a split that holds out combinations while retaining their constituent faults in training. That would permit a specific combination-generalization test. Synthetic mixtures, if later introduced, would provide synthetic evidence and could not establish performance on real compound faults. The present study can proceed without claiming that unsupported capability."
+  },
+  {
+    "id": "coupled-constraint-substance",
+    "loaded_skills": [
+      "engineering-paper-idea-architecture-zh",
+      "engineering-experiment-evidence-design-zh"
+    ],
+    "response": "这里可以形成更具体的研究要求：在每种单故障仅有少量标注时，识别由已知故障组成、但训练中未出现的并发组合。真实multi-hot标签使输出有测量依据，独立测试运行中的留出组合则要求模型把有限的单故障监督用于新的标签组合。这不同于仅在已见类别或组合上减少标注数量，也不同于识别全新的故障类别。少标签可能限制故障特征的学习，组合留出进一步要求这些特征在并发状态下仍可用于判别；这种相互影响需要实验确认，不能由标签共现直接推出物理故障交互。\n\n最小区分实验可采用两个预先固定的可用标签预算，分别评价已见组合和留出组合，并比较独立逐标签分类器、候选组合学习方法及移除其核心组合机制的版本。统一数据划分、输入和选模规则，报告各组逐故障F1、宏平均F1及完整标签集合预测正确率，保留运行间差异。预算只能从现有标注中构造；若缺少独立的已见组合测试运行，应明确补齐这一对照。测试标签仅用于冻结方案后的评价。\n\n这能检验联合条件是否产生额外困难、所提机制是否回应它。最近邻文献尚未核查，因此目前可称为明确的研究设置，尚不能称为首次提出的新问题。"
+  },
+  {
+    "id": "focused-comparison-honest",
+    "loaded_skills": [
+      "engineering-experiment-evidence-design",
+      "engineering-terminology-polishing"
+    ],
+    "response": "Under the same held-out-condition split and label budget, the adaptation achieved a mean macro-F1 of 0.884 across three runs, compared with 0.861 for baseline A and 0.892 for baseline B. The adaptation exceeded A by 2.3 percentage points and fell below B by 0.8 percentage points, while using 30% less peak memory than B. This accuracy–memory trade-off may be useful when memory availability constrains model selection and the observed reduction in mean macro-F1 is acceptable for the diagnostic task. Baseline B retained the highest mean macro-F1 among these methods. Run-level variability is unavailable, so these descriptive differences do not establish statistical significance or consistent performance differences across seeds."
+  },
+  {
+    "id": "nondefensive-precise",
+    "loaded_skills": [
+      "engineering-terminology-polishing-zh"
+    ],
+    "response": "The method was evaluated offline using historical production records from a single plant and a fixed set of process variables. Its performance during online operation has not been evaluated."
+  },
+  {
+    "id": "logical-related-work",
+    "loaded_skills": [
+      "engineering-literature-positioning",
+      "engineering-terminology-polishing"
+    ],
+    "response": "Diagnosis with a fixed variable set is established by [A], providing a reference setting in which the available measurements remain consistent. Work in [B] extends sensor-set flexibility by supporting varying sensor sets, with reported experiments using fully labeled source conditions. Label availability forms a separate evaluation dimension: [C] studies learning with limited labels while retaining fixed sensors. Together, these studies establish capabilities under different measurement and supervision conditions. Their reported evaluations leave the joint setting of limited labels and varying sensor availability unresolved within this evidence set. The planned study examines this joint requirement by asking how diagnostic decisions can be learned from limited annotations when the available sensor set varies. Its contribution will depend on the proposed response, comparison with the closest relevant work, and the resulting evidence."
+  },
+  {
+    "id": "necessary-contrast-preserved",
+    "loaded_skills": [
+      "engineering-terminology-polishing"
+    ],
+    "response": "Scheduled non-observation occurs when a valid sensor is not sampled at a given instant; structural absence occurs when the production route does not include that sensor or stage."
+  },
+  {
+    "id": "author-reported-run-state",
+    "loaded_skills": [
+      "engineering-experiment-evidence-design-zh"
+    ],
+    "response": "先将“全部跑完”登记为学生报告的运行状态，证据状态记为reported-unverified；截图记为已接收但不可追溯。保留截图和正文原导出版本，不覆盖、不据此认定实验未做，也不将截图数值用于新图表。\n\n请学生恢复一个最小结果包：逐次run_id与实际完成状态、数据版本与划分文件、代码及配置版本、种子、预处理和选模依据、运行日志、原始预测与标签、指标计算脚本，以及截图和正文各自对应的导出文件。无法恢复的字段明确记为unknown，不能事后补造运行记录。\n\n接收后按run_id逐项核对来源、划分与信息访问，在本轮范围内从预测结果重算指标；建立“正文位置—导出版本—运行—源文件”对应表。先判断差异来自旧导出、抄录、聚合方式还是不同实验设置，不能将不同设置的数值拼成一张主表。\n\n写作负责人只接收已完成相应核验的证据，并分别标注算术已复算、来源待查或存在冲突。无法追溯的结果继续隔离，由学生补回缺失来源；本轮不启动训练，也不预设必须重跑。数值确定后再同步正文、表格、图、摘要和结论。"
+  },
+  {
+    "id": "experiment-handoff-known-facts",
+    "loaded_skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "Preparation-only handoff: E01 tests whether the gate changes macro-F1 by comparing Full with NoGate. The student owns six planned runs: each method with seeds 7, 11, and 19. No run is authorized by this handoff.\n\nUse dataset D2, split_v2.json, labels {0,1,2}, and normalization fitted on training data only. Keep the split, preprocessing, permitted inputs, and model-selection rule identical between methods; NoGate should differ only by the specified gate removal. Compute macro-F1 over the three declared labels and document zero-division handling.\n\nNeeded inputs: the data root and runtime/resource budget; the code/configuration and environment that implement both methods; and the existing validation-based selection rule. Recover the independent split unit from split_v2.json, requesting it only if absent. Exact commands remain untested until those inputs are available.\n\nReturn an E01 package containing one record per method/seed with run_id, outcome, data/split/code/configuration identifiers and actual hashes, command, environment, logs, timing/resource use, and deviations. Include sample/run identifiers, predictions and targets, per-run metrics, metric code, normalization provenance, and a manifest linking every output. Retain failed or unfavorable runs. Supply an aggregate table with mean and standard deviation across completed runs and explicit exclusions.\n\nThe writing agent can then verify identities and splits, recompute metrics, and generate plots from accepted evidence; completion depends on traceable outputs, not a favorable Full–NoGate difference."
+  },
+  {
+    "id": "review-reply-actual-change",
+    "loaded_skills": [
+      "engineering-review-response"
+    ],
+    "response": "R1.2: “Please report whether normalization used test data.”\n\nResponse: Normalization used training data only; test data were not used to estimate normalization parameters. We have made this explicit in Section 4.1, lines 212–214: “Normalization parameters were estimated from training data only.” This clarification describes the implementation already used for the reported experiments. No new experiment was run."
+  },
+  {
+    "id": "review-reply-disagreement",
+    "loaded_skills": [
+      "engineering-review-response-zh"
+    ],
+    "response": "Response: We respectfully disagree with describing the model as deployed online. The study evaluates historical data from a real factory, and no online deployment has taken place. Claiming deployment would therefore exceed the available evidence. We propose making the evaluation scope explicit with the wording below.\n\nProposed manuscript sentence: “The model was evaluated using historical data from a real factory; online deployment has not been carried out.”\n\nAuthor note: This is a proposed clarification, not a verified source-file revision. Add the page and line reference after inserting the sentence and checking the revised manuscript."
+  },
+  {
+    "id": "workflow-scope-and-resume",
+    "loaded_skills": [
+      "engineering-application-journal-writing-skill",
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "Record the smoke test as complete for schema validation within its approved five-minute scope, with the actual logs and code/configuration version. Evaluation evidence remains missing because the test produced no valid metrics. The frozen method remains the approved method; the schema result does not validate its predictive performance.\n\nThe next dependency is the student's full-run evidence package. Preserve that ownership and record the runs' actual status rather than assuming they have started or finished. Prepare or complete the handoff with the existing data/split settings, configurations, selection rule, required outputs, and stop conditions. The writing agent can continue the problem statement, frozen-method explanation, verified experimental settings, and evidence ledger. The figure agent can produce conceptual diagrams from the method specification and prepare plotting scripts and table layouts. Empirical curves, populated results tables, and performance claims must await valid results.\n\nWhen outputs arrive, mark them received, check run and split identities, preprocessing, metric calculation, and version consistency, then accept the evidence covered by those checks. Resume empirical plotting and result writing from that accepted package. Existing approval remains valid for its stated scope; completing the smoke test does not extend the writing agent's execution budget into full GPU runs."
+  },
+  {
+    "id": "engineering-route-from-method-seed",
+    "loaded_skills": [
+      "industrial-ai-paper-router",
+      "engineering-paper-idea-architecture"
+    ],
+    "response": "Keep the sparse estimator as a research candidate. A method insight is a valid starting point; the engineering argument still needs an operational requirement and evidence that the proposed operation addresses it.\n\nThe present scope is furnace soft sensing: recorded temperatures are candidate inputs, chemistry measurements provide target labels, and sparse estimation is the proposed strategy. The target chemistry quantity, prediction timing, sample unit, engineering bottleneck, and demonstrated benefit remain unspecified. Sparsity alone does not establish a need for fewer sensors, lower memory, interpretability, or online operation.\n\nDevelop the argument in three steps:\n\n1. Document the quantity and decision the furnace operator needs, its required timing and accuracy, and how temperature records align with chemistry measurements. Establish which inputs are available at prediction time.\n2. Examine current estimators and representative errors or assumption limits under that requirement. Treat any proposed benefit of sparsity as a hypothesis until those records support it.\n3. Test the sparse estimator against its corresponding nonsparse form and relevant current estimators using matched inputs, independent furnace runs or suitable time separation, training-only preprocessing, and shared selection rules. Measure prediction error and any resource or decision outcome actually tied to the requirement.\n\nChoose the manuscript archetype after this evidence is assembled. If no practical improvement is demonstrated, narrow the contribution to the supported methodological or comparative finding."
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "ideation-user-priority",
+    "skills": [
+      "engineering-research-ideation"
+    ],
+    "response": "I would move the three annotation-dependent ideas out of the active portfolio and rank feasible, established problems as follows:\n\n1. Reliable process-window classification across the recorded operating conditions. Compare a pooled supervised baseline with a small condition-aware adaptation, using the supplied labels and condition IDs.\n2. Classification under unseen operating conditions. Reserve conditions for testing, provided the actual class-by-condition coverage supports a fair comparison.\n3. Classification with limited labeled windows. Vary the source-label budget while keeping an independent query set fixed; first establish the appropriate run or event separation.\n\nThese are proposed studies, with no claimed gains yet. Rank them by engineering usefulness, coverage, and their substantive difference from prior work. Acquisition-age and delay-report ideas remain deferred because their required annotations are unavailable; they should not retain priority through renamed proxies or assumed metadata."
+  },
+  {
+    "id": "ideation-same-problem-continuation",
+    "skills": [
+      "engineering-research-ideation"
+    ],
+    "response": "Yes. The same multi-stage diagnosis task can support an independent follow-up study, and attributed data and baseline code can be reused subject to their reuse terms. A new task formulation is not required merely because two papers already address the task.\n\nThe proposed paper still needs a substantive difference. Prepare a comparison against both prior papers covering operating assumptions, information access, inherited modules, the exact modification, the resulting capability, and evidence that isolates that difference. For example, an adaptation addressing a documented operating constraint could be meaningful if matched comparisons establish its independent benefit; this is a possible direction, not an established contribution here.\n\nCite the earlier studies and identify reused components directly. If the only differences are terminology, seeds, or presentation, merge the work into the existing scientific account instead of presenting another standalone contribution."
+  },
+  {
+    "id": "ideation-renaming-not-contribution",
+    "skills": [
+      "engineering-research-ideation",
+      "engineering-journal-rigor-review"
+    ],
+    "response": "Changing the wording or renaming attention does not establish an independent contribution when the model and experiment remain unchanged. I would not rewrite this as a new method paper. The substantive comparison is currently: inherited model unchanged; attention operation unchanged; evidence unchanged; new capability unestablished.\n\nA transparent description would be: “This work uses the attention mechanism and experimental setting of the earlier study; no new methodological contribution is claimed.” That wording could support an attributed summary or documentation, depending on its purpose.\n\nFor a separate research paper, first identify a real extension: a documented constraint addressed by a meaningful adaptation, a new capability, or an independent question supported by suitable evidence. Describe and test that difference before revising the contribution statement. If no such difference exists, drop the standalone submission claim rather than disguise the overlap."
+  },
+  {
+    "id": "ideation-tokenization-time-support",
+    "skills": [
+      "engineering-research-ideation",
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "Equal embedding dimensions establish a common input interface. They do not establish that sampling-rate differences, observation age, or missing values have been handled. A defensible current sentence is: “The tokenizer maps sensor streams into a shared embedding dimension.”\n\nTo support the broader claims, specify each token’s time support, timestamp convention, observation mask, and treatment of unsampled versus missing values. Staleness additionally needs an observable age or timing signal and a defined use of that signal. Check whether aggregation discards relevant timing information and, if a pretrained encoder is used, whether the token distribution and semantics are compatible.\n\nThe proposed evaluation should isolate these mechanisms with the same encoder, comparable capacity, and equal label budgets, then vary sampling patterns, observation delays, and missingness separately. Until those representations and tests are established, omit claims that token width solves these observation problems."
+  },
+  {
+    "id": "ideation-zero-shot-scope",
+    "skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "The supported setting is generalization to unseen operating conditions with zero target-condition observations before testing. Every tested fault class is already labeled in the source conditions, so this does not establish zero-shot recognition of unseen fault classes.\n\nUse the following description: “The model is trained on source operating conditions and evaluated on disjoint target conditions without access to labeled or unlabeled target-condition samples during training, preprocessing, or model selection. The evaluated fault classes are represented in the source data.”\n\nFit normalization and all learned preprocessing on source training data. Select hyperparameters using source-only validation, then freeze the model and evaluate the held-out conditions. Document the condition partition, actual class coverage, independence unit, and any auxiliary metadata available at inference. Report condition-wise and class-wise performance alongside an aggregate metric. Avoid target-informed tuning or adaptation under this stated evaluation setting."
+  },
+  {
+    "id": "ideation-few-shot-isolation",
+    "skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "The current construction does not establish an independent one-shot evaluation. Support and query windows may share measurements or the same fault event, and the supervised training history must also be counted. Describe the current exercise as retrospective support-based adaptation on a former test partition, with temporal independence unresolved.\n\nFor an independent evaluation, define the shot unit and separate development, support, and query data by the appropriate run, event, or campaign before creating windows. Adjacent windows can remain dependent even when they do not overlap. Freeze architecture and hyperparameters using separate validation data; permit only the declared support-based update and prohibit query-label selection. Declare whether unlabeled queries are accessible.\n\nUse fresh independent queries if the old test set influenced development. Report repeated support draws and uncertainty where feasible. State “one labeled support example per class after supervised pretraining,” rather than implying the model learned from one example per class in total."
+  },
+  {
+    "id": "ideation-dataset-count-version",
+    "skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "The manuscript and results table currently describe different experimental populations: version A has 14,550 raw training points, while the copied table was produced on version B with 8,000. Neither count is a documented sliding-window count. The A description cannot presently support the B results.\n\nRecord A and B separately, preserving the registry as their source. Trace the table to its run and configuration to determine whether the wrong table was exported or the manuscript retained an obsolete setting. If compatible A results already exist, restore that table; if B is the intended study, update the dataset and settings consistently after checking all associated results. A matched rerun is needed only if the retained version lacks compatible evidence.\n\nBefore finalizing counts, document window length, stride, per-run boundary handling, split membership, and independent-run totals. Do not infer window totals by treating raw points as windows or blending the two versions."
+  },
+  {
+    "id": "ideation-class-set-version",
+    "skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "The old aggregate comparison numbers are not directly reusable for the new task as currently described. The prior paper evaluates normal operation plus faults 1–9. The new manuscript evaluates faults 1–10, with normal-class inclusion unresolved. Equal class counts, if normal is excluded, would still not make these label sets equivalent.\n\nFirst state the new label set explicitly and trace its split, data version, preprocessing, and metric definitions. Then identify existing baseline outputs produced under that exact setting. If none exist, a matched baseline evaluation is required before making a quantitative superiority claim. Do not relabel the old aggregate or assume fault 10 behaves like an earlier class.\n\nThe prior numbers may remain as an attributed historical result with their original task clearly identified. Any common-class comparison must use compatible predictions and settings; removing a reported class-wise row alone does not recreate the changed training and classification task."
+  },
+  {
+    "id": "ideation-structural-absence",
+    "skills": [
+      "engineering-research-ideation",
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "Cooling measurements for that route are structurally inapplicable because the route never undergoes cooling. They are not missing observations of an event that actually occurred, and there is no real cooling ground truth for that route against which recovery can be scored. A diffusion output would represent an assumed or counterfactual quantity, not recovered sensor measurements.\n\nRepresent the absent stage with an explicit route or stage-applicability mask. For downstream prediction or diagnosis, evaluate whether a model that respects this structure improves the actual task using the route’s observed variables and valid labels.\n\nIf restoration is the intended question, use routes that genuinely include cooling, deliberately hide measured cooling values under a stated missingness construction, and evaluate against those retained measurements. Keep that experiment separate from structural absence. A counterfactual cooling study would require additional process assumptions and validation beyond the supplied fixture."
+  },
+  {
+    "id": "ideation-condition-coverage",
+    "skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "Table 12 establishes 20 configurations overall; it does not establish a measured sample for every fault in every configuration. The current manifest therefore cannot support a fully crossed empirical evaluation without additional data.\n\nConstruct a fault-by-configuration availability matrix from the manifest, recording file identities, labels, and independent-run counts for each observed cell. Mark unavailable cells as unavailable, never as zero performance. A complete comparison can use the largest scientifically relevant rectangle of observed fault-condition pairs, provided its selection and reduced scope are stated. Alternatively, evaluate all observed cells with explicit coverage and aggregation weights, keeping methods on the same cells.\n\nReserve configurations for transfer testing only where the required classes are represented under the declared task. List the absent pairs as acquisition requirements for a future fully crossed study. Do not fill them with copied or synthetic results and describe the result as measured coverage."
+  },
+  {
+    "id": "ideation-reading-provenance",
+    "skills": [
+      "engineering-literature-positioning"
+    ],
+    "response": "The reading record supports this statement: “Text was extracted from 767 PDFs and searched using keywords. Selected method and experiment sections from three specified papers were inspected. Full-text close reading of the remaining corpus and comprehensive novelty-conflict assessment have not been completed.”\n\nExtraction and keyword retrieval should remain distinct from abstract reading, selected-page inspection, and full-text close reading. Record each inspected source’s verified identity, section or page range, the claims checked, and unresolved sections. For the other PDFs, retain the actual extraction and search status without promoting it to close reading.\n\nThe next useful novelty check is targeted: compare the proposed mechanism, assumptions, information access, and evidence against the nearest retrieved studies, including the three inspected papers. This can identify specific overlap risks, but the current record does not support saying that every paper was read closely or that all conflicts were ruled out."
+  },
+  {
+    "id": "ideation-unrun-results",
+    "skills": [
+      "engineering-figure-latex-production"
+    ],
+    "response": "Publication-ready empirical curves require actual experiment outputs. Since no experiments have run, the current figure specification is:\n\n• Accuracy figure: horizontal axis = the prespecified evaluation condition or training epoch, depending on the scientific question; vertical axis = defined accuracy; traces = compared methods; source data = pending.\n• Ablation figure: categories = the full model and meaningful component removals or replacements; vertical axis = the same declared metric; uncertainty = the selected repeated-run summary; source data = pending.\n\nAn internal working copy may show empty panels labeled “Results pending—no experimental data,” with no plotted values or invented error bars. Before rendering the final figures, provide metric definitions, split and run identifiers, verified outputs, and the uncertainty calculation. Captions and result statements must then be written from those outputs. Replacing invented values later would not make them valid evidence now."
+  },
+  {
+    "id": "ideation-modest-contribution",
+    "skills": [
+      "engineering-research-ideation"
+    ],
+    "response": "Keep it as a candidate. A useful, independent engineering adaptation can justify a focused study even when it does not introduce a new mechanism. Provisionally classify it as Track C, a focused incremental improvement; Track B would fit if the adaptation itself is substantial in addressing the documented constraint. These are contribution categories, not journal tiers.\n\nThe central contribution can be stated as: “A targeted adaptation addresses the specified operating constraint and yields reproducible robustness improvements under the tested conditions.” Replace the unspecified constraint with the verified one, and report the actual effect size and cost from the available evidence.\n\nRetain comparisons with the closest prior implementation, an isolating adaptation ablation, and uncertainty across relevant conditions or runs. Position the paper according to its supported scope and verified venue requirements. Consider merging or stopping only if the independent benefit disappears, duplicates an existing claim, or proves practically negligible."
+  },
+  {
+    "id": "ideation-multilabel-ground-truth",
+    "skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "The supplied measurements support five-class single-label diagnosis: normal operation and four mutually exclusive fault classes. Adding single-fault curves together does not create measured compound faults or establish legitimate multi-label ground truth. Physical interactions, operating trajectories, and shared baselines need not combine additively.\n\nKeep the empirical task as single-label classification and evaluate it using class-wise recall or F1 and a clearly defined aggregate metric. If synthetic superposition is explored, describe it as a separate synthetic compound-signal experiment. Specify alignment, baseline subtraction, composition rules, assigned synthetic labels, and assumptions; prevent source runs from crossing development and test partitions. Its conclusions apply to that construction.\n\nA real multi-label diagnosis claim requires evidence of simultaneous faults with defensible multi-hot annotations, or a validated simulator with a clearly bounded simulation claim. The present fixture does not establish that evidence, so the manuscript should not recast its measured dataset as multi-label."
+  },
+  {
+    "id": "ideation-manuscript-identity",
+    "skills": [
+      "engineering-literature-positioning"
+    ],
+    "response": "The supplied record does not establish that the IVSM paper is your diffusion manuscript submitted to venue B. Its listed venue is A and its author list differs; no matching DOI or title connects the records. An acronym or similar topic is insufficient to identify the paper.\n\nRecord it as “IVSM candidate record; identity relative to the venue-B diffusion manuscript unresolved,” retaining its actual venue and authors. Do not attribute its methods, submission history, or results to your manuscript. A reliable match would need the authoritative manuscript title and author list, a DOI or submission record where applicable, and an explanation of any version-related differences.\n\nAny overlap analysis depending on the two papers being identical must remain unresolved. Independent comparison with IVSM as a separate literature candidate can continue using its verified bibliographic facts. No matching identity should be inferred from the available fixture."
+  },
+  {
+    "id": "ideation-time-window-incipient",
+    "skills": [
+      "engineering-experiment-evidence-design"
+    ],
+    "response": "Indices 161–170 inclusive contain 10 samples. The verified sampling interval is 3 minutes, so the elapsed time between the first and last timestamps is (170 − 161) × 3 = 27 minutes. If each sample represents a consecutive 3-minute interval, the represented interval coverage is 30 minutes; that convention must be stated. Neither interpretation supports 50 minutes.\n\nUse: “We analyze the ten samples at indices 161–170 after fault onset, sampled at 3-minute intervals, spanning 27 minutes between the first and last timestamps.” The offset of that segment from the onset still depends on the indexing and onset convention.\n\nAlso replace “incipient-fault segment” with “early post-fault segment” unless fault severity or development evidence establishes incipience. Early timing alone does not demonstrate a weak or developing fault. Update any linked duration statements and figure captions using this dataset version’s cadence."
+  }
+]

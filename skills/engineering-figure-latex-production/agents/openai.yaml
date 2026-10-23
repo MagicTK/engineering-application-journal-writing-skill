@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Figure And LaTeX"
+  short_description: "Produce and verify figures, layout, and Overleaf delivery"
+  default_prompt: "Use $engineering-figure-latex-production to create or audit the figures, LaTeX layout, compiled PDF, and upload package."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "suite_version": "3.2.1",
+  "run_dates": [
+    "2026-09-15"
+  ],
+  "recorded_at": "2026-09-15T01:50:13.947921+08:00",
+  "independent_fresh_contexts": true,
+  "context_granularity": "One fresh responding agent context for the five-case batch; not a fresh context per case. The responding agent received only prompts, named skills and relevant source references, without expected answers or development history.",
+  "evaluation_method": "Complete forward-use responses were retained, then the updating agent manually assessed every required and forbidden behavior against the authored semantic rubric. Structural checks are separate evidence.",
+  "model_disclosure": "Responding agent identified itself as Codex based on GPT-6; exact runtime variant unavailable. Same session model family; no cross-model replication.",
+  "scope": "Five new source-adaptation and evidence-boundary cases only. The prior 44 behavior and 23 routing scenarios were not rerun for 3.2.1.",
+  "limitations": "Documentation behavior on supplied fictional research briefs, not measured efficacy, real research execution, installation, client discovery, full-suite regression or a controlled before/after comparison. Cases share one fresh responding context. No research experiments, installer or installer test executed.",
+  "historical_report": "history/v3.2.0/forward-test-report.json",
+  "historical_report_preservation": "Previous latest report preserved byte-for-byte with original 3.2.0 version and 44 behavior/23 routing outcomes; its existing response and review traces remain available in evals/.",
+  "stage": "targeted_forward_use_accepted",
+  "summary": {
+    "behavior_pass": 5,
+    "behavior_fail": 0,
+    "routing_tested": 0,
+    "historical_behavior_not_rerun": 44,
+    "historical_routing_not_rerun": 23
+  },
+  "scoring_agent": "evaluation-session:s007_skill_gap",
+  "delivered_skill_source_sha256": {
+    "SKILL.md": "33c66f985a8116875878f3687cbc313c64e1c756cdf040f0a388e30ccc4ae16f",
+    "assets/templates/author-handoff.md": "0aa8d02af6f049b7a686e44cfd0c9c9ae28e2f51935c6da0da67d1fb08c0b1af",
+    "assets/templates/claim-evidence-matrix.md": "b34d0c7c6e481da0014877f001625f75bc61b7188bb58ad1b4c1aeca4ecfa23d",
+    "assets/templates/cross-paper-delta.md": "23fbe3deb5bbe31f95b196ee812a735f1fd4f4079fc223be2cb7978dafbbd088",
+    "assets/templates/data-version-record.md": "c6e109b84985b30c0fab617e4fcff4b12339ff38de5e17f1e393dcd4cb5ff520",
+    "assets/templates/figure-revision-state.md": "828c95e9ba7c3ffbfd5c32cfc5c9c9eba2d29ed2bb0b2c1cdc9ccb24c9de1cb7",
+    "assets/templates/figure-table-contract.md": "e5c6acfa9bffda5ba32215e0e1314e9b0c8c73ab9843ae4564fc226928be72c0",
+    "assets/templates/manuscript-passport.md": "49487efd08f18d6fa56a1c7af4b9d2c1963ca0aed2e7ad0109422f698080ab39",
+    "assets/templates/problem-design-evidence-blueprint.md": "0ceb86883199f11dee43356e86e87955c7af695bb2a912b41a2a8ca1e7cb4be0",
+    "assets/templates/research-card.md": "7b106baa777fbac1565b53d3f27bac97a60826f9518997e849fa6ed647d93d25",
+    "assets/templates/research-work-state.md": "42f992b00c52e72f9ef469ca0bd1c4056493df8cf610a2d81e607e243bd7bd69",
+    "assets/templates/reviewer-response-ledger.md": "e2d7c4133e1c64bcfddbaa8b8e65ad58ec3a3a617e02a2fbdba08652bc4670a4",
+    "references/argument-and-prose-craft.md": "d818917aadaff7ada6a8d7862bb65cdf7ce46812b62222fbb3e1a5427cec1a7e",
+    "references/astra-editable-figure-pipeline.md": "f767669a7dffd569963cb7a6620ba67a4ba4091d2da78ffc533e5dffec702c24",
+    "references/contribution-narratives.md": "feeed5743bd4d20c3494ea8736ee5400405dd05543c85b6989ada7dfcf5baf93",
+    "references/corpus-calibration-workflow.md": "bfccf0e8c3a1f47c90956cb6a6164ba5761b0205d6a8ca449684a4ac73afb09c",
+    "references/design-sources.md": "280443cfccdd553712666fca59ea92f512e34ff2152c1c20684db801ab315ad1",
+    "references/engineering-application-terminology-bank.md": "875a012cf5c081b12924a5f973016d3fc6301b4775d65d798aebb34047244d91",
+    "references/engineering-application-terminology-bank_CN.md": "3ad898b5dc499b632e8f4ba63b529c608fe3f350fc193a9adb9de1b29e6b3961",
+    "references/experiment-evidence-design.md": "d2a0c90e660863279c20fc3bafb3c57d275d61ffd159caa3fddfbc7ef1dbf234",
+    "references/figure-and-latex-production.md": "1c8f36489de898f766eb022891cb453e942dc7c10405488c75708540fc352253",
+    "references/industrial-ai-taxonomy.md": "689decb76f92eee69b2cdf33a12ccb296abc3bbacf9432aba02398a5c8fcd817",
+    "references/journal-migration-and-completeness.md": "081c9b4b739c080690a33be75588985ebdb29e54e79ee2bc1b8f68a05520e50e",
+    "references/journal-migration-and-completeness_CN.md": "1d9f982217048a3ea85dcd0409253edcdad93581e12dde7130da67f7c7937e5c",
+    "references/manuscript-archetypes.md": "ece2cb01fd9a2e8af79562790a589ff1c61de49075d20d6a422ec5c6435acbae",
+    "references/research-collaboration-workflow.md": "7e661a268f7cbae808ebf63361e968599e412cab8f9dd87476389cff53e5437d",
+    "references/research-planning-and-contribution.md": "1a5d67359fcd27a2d49c6046dd8655d2afeff53f78d27554f3ebe662c24d543c",
+    "references/rigor-and-handoff.md": "5ea94d39b4246747c3344c2c2063afdc6da9503a154d6f039b2162ca7e56f35a",
+    "references/section-writing-guide.md": "73f084237e53dc7d74a4be13a624b24667ab120a47568b069274806a0d586838",
+    "references/terminology-and-style.md": "4d5b451ed925f06fa3794d56261fa022410063f4bae32d4ef0bab4f9f6d3fcef",
+    "references/topic-playbooks.md": "a87109081539954f95a45057db3c98fc563ea2a8b82fd68e079735ec9bdd8c45",
+    "skills/background-driven-industrial-application/SKILL.md": "37791176dba55ec83ffd2985fb78c91ad614e93ae02dbb176cb28404ef5b53c9",
+    "skills/engineering-experiment-evidence-design/SKILL.md": "ec19eba6507afaf5207413b7776c8ae4bfcd1aaf0e8d202ef19c4eedb2f554f1",
+    "skills/engineering-figure-latex-production/SKILL.md": "fc49441e8c9ce09a1ee134d8c73f4c91472918c3840f2136a2e4ea0aba06693a",
+    "skills/engineering-journal-rigor-review/SKILL.md": "138d06d5c55450008378545c2c6f1823ce47418a6de61ec15bf862e9b12fb827",
+    "skills/engineering-literature-positioning/SKILL.md": "c9a4bed311298e51e4bbfdd6037173d9041f4dae61a3c605caf9e2c7fd981fab",
+    "skills/engineering-paper-idea-architecture/SKILL.md": "41508f01e88e6e33fc601a7bea0d2c84885e94c8523c6ed4f023d04aff657235",
+    "skills/engineering-research-ideation/SKILL.md": "173145d5dc574e9100e36cdf4d726c75dffa88eadcce6a00b3751457ba14c164",
+    "skills/engineering-review-response/SKILL.md": "3c62e91ffed48ab6fe6b0a1d2d19055855e22b37d3f7eddae617d47ab813326c",
+    "skills/engineering-terminology-polishing/SKILL.md": "497de80533f1aa459fea31d471ac44651893d96d86c99556efa5ada96ab3f9fe",
+    "skills/general-method-benchmark-realworld/SKILL.md": "a50cae5be95c3c8490bac1437b3fc7c876414de73b8944355f7042cbaba47434",
+    "skills/industrial-ai-paper-router/SKILL.md": "e999f07ff367f086c90bcaf98d387254fa6664996b2da49f4465409491d7afd6",
+    "skills-zh/background-driven-industrial-application-zh/SKILL.md": "b2c4b7139b15ffb38cc92b0a0f089ca462cd9074901b08c775e974688bc41f35",
+    "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md": "9be3089a908bf855c3340b77e4ed31864168a86c99067a48f4c8ce94b96d51e8",
+    "skills-zh/engineering-experiment-evidence-design-zh/SKILL.md": "893fd1d96ebb331e3686b0575a36fdfac491e2395bf2aefe0e576090d6b21d9b",
+    "skills-zh/engineering-figure-latex-production-zh/SKILL.md": "f30c4bf9e3f1551df53000110fda41e80b66f27870d8013001d806fbc45e9b7c",
+    "skills-zh/engineering-journal-rigor-review-zh/SKILL.md": "085194baec255c03982e20e14eb3d969ff76eda581b8a0a7901bd3de512027b7",
+    "skills-zh/engineering-literature-positioning-zh/SKILL.md": "cf63602ca44bb11ada600101204877077a62cd54e0fb250eb1796575c128ed8e",
+    "skills-zh/engineering-paper-idea-architecture-zh/SKILL.md": "f7d2b29bb3f673941b2ffed894acb8a2d6635bd138dd7c17f38a56b00a84999d",
+    "skills-zh/engineering-research-ideation-zh/SKILL.md": "0df4bac9a8f9157825f008af2c536a00d8c4d47e3ece77e4e26f76170a81966c",
+    "skills-zh/engineering-review-response-zh/SKILL.md": "8d4126429196b96ab9787ce9f1a3f76a6a0b434a5ad3ea000f737dc9308ef0f5",
+    "skills-zh/engineering-terminology-polishing-zh/SKILL.md": "5f7509ca77d392fe1e6afc187be266417f86f347c3bd7c4cb1130a50ea10bb78",
+    "skills-zh/general-method-benchmark-realworld-zh/SKILL.md": "810c65a07a50480af988208d9bd5fd5d372c060ad9919ba5c094000249365048",
+    "skills-zh/industrial-ai-paper-router-zh/SKILL.md": "bbd39fbdb80e441df8b90ad75357be7bad369612259d6994e9a261facf96083b"
+  },
+  "cases": [
+    {
+      "id": "s007-source-adaptation",
+      "language": "en",
+      "skill": "engineering-research-ideation",
+      "prompt": "Use engineering-research-ideation to review this candidate and prepare a compact handoff. Our industrial sequence model retains the attention operation from Source Alpha unchanged, renames it the Process Relation Encoder, adds an elapsed-time input and a loss term, and shares data with a team paper. Source Alpha is known only through an AI-generated abstract summary; method pages and implementation have not been inspected. No results exist. I want an accountable record of what we know and the next useful comparison. Do not browse or run experiments.",
+      "required_behaviors": [
+        "separate retained operations, functional renaming and actual changes",
+        "keep operation-level attribution tentative until method evidence is inspected",
+        "request or record a direct-transfer comparison and closest team overlap",
+        "preserve actual reading scope without promoting an AI summary"
+      ],
+      "forbidden_behaviors": [
+        "treat a renamed operation as algorithmic novelty",
+        "invent method verification or experimental results"
+      ],
+      "tested_skills": [
+        "engineering-research-ideation"
+      ],
+      "evaluator": "evaluation-session:s007_skill_gap:s007_forward",
+      "outcome": "pass",
+      "evidence": "Preserved author-reported reuse and uninspected primary source status; separated renaming, retained operations and real additions; proposed direct transfer and matched variants; kept team overlap unresolved without inventing evidence.",
+      "required_checks": [
+        {
+          "behavior": "separate retained operations, functional renaming and actual changes",
+          "status": "pass"
+        },
+        {
+          "behavior": "keep operation-level attribution tentative until method evidence is inspected",
+          "status": "pass"
+        },
+        {
+          "behavior": "request or record a direct-transfer comparison and closest team overlap",
+          "status": "pass"
+        },
+        {
+          "behavior": "preserve actual reading scope without promoting an AI summary",
+          "status": "pass"
+        }
+      ],
+      "forbidden_checks": [
+        {
+          "behavior": "treat a renamed operation as algorithmic novelty",
+          "status": "not_observed"
+        },
+        {
+          "behavior": "invent method verification or experimental results",
+          "status": "not_observed"
+        }
+      ],
+      "review_trace": "responses/s007-targeted-behavior.json",
+      "trace_case_id": "s007-source-adaptation"
+    },
+    {
+      "id": "s007-coupling-controls",
+      "language": "zh",
+      "skill": "engineering-experiment-evidence-design-zh",
+      "prompt": "请用工程实验与证据设计Skill审阅一个约束耦合方案。A是观测缺失，B是工况变化，数据允许四种条件；模型含A处理模块和B处理模块，现有计划只有两个模块各自移除一次，准备称为2×2条件实验和因果交互证明。两模块的原方法及简单顺序连接均可实现，目前尚无实验结果。请给最小、可反驳的实验调整，不运行实验。",
+      "required_behaviors": [
+        "distinguish condition factors from module-removal factors",
+        "include feasible four-condition comparison and naive serial composition under fair budgets",
+        "treat interaction contrast as diagnostic with compatible scales and uncertainty",
+        "allow negative evidence to narrow or reject the coupling claim"
+      ],
+      "forbidden_behaviors": [
+        "assert a causal mechanism from the interaction contrast",
+        "promise the unified design will beat its controls"
+      ],
+      "tested_skills": [
+        "engineering-experiment-evidence-design-zh"
+      ],
+      "evaluator": "evaluation-session:s007_skill_gap:s007_forward",
+      "outcome": "pass",
+      "evidence": "Separated data-condition 2x2 from module removal; proposed source and serial controls with matched information/budgets; used a same-method scale-dependent diagnostic contrast and independent-unit uncertainty; explicitly allowed rejection of the coupling claim.",
+      "required_checks": [
+        {
+          "behavior": "distinguish condition factors from module-removal factors",
+          "status": "pass"
+        },
+        {
+          "behavior": "include feasible four-condition comparison and naive serial composition under fair budgets",
+          "status": "pass"
+        },
+        {
+          "behavior": "treat interaction contrast as diagnostic with compatible scales and uncertainty",
+          "status": "pass"
+        },
+        {
+          "behavior": "allow negative evidence to narrow or reject the coupling claim",
+          "status": "pass"
+        }
+      ],
+      "forbidden_checks": [
+        {
+          "behavior": "assert a causal mechanism from the interaction contrast",
+          "status": "not_observed"
+        },
+        {
+          "behavior": "promise the unified design will beat its controls",
+          "status": "not_observed"
+        }
+      ],
+      "review_trace": "responses/s007-targeted-behavior.json",
+      "trace_case_id": "s007-coupling-controls"
+    },
+    {
+      "id": "s007-derived-views",
+      "language": "zh",
+      "skill": "engineering-experiment-evidence-design-zh",
+      "prompt": "请审阅数值时序转图分类方案：输入传感时序不规则采样且缺失。我们逐张图自动缩放，删除空白时刻，用类别决定线条颜色，保留含类别的文件名；再用视觉骨干与原数值支路融合。准备说新增独立模态恢复了缺失信息并证明预训练有效。尚无结果，请给最小方法与对照修改，不写代码或调用模型。",
+      "required_behaviors": [
+        "identify same-source derived views and lack of newly observed information",
+        "preserve timestamps variable identity masks and training-calibrated scale",
+        "remove label-color and filename leakage",
+        "choose numerical visual fusion and simple image-model controls appropriate to the claims"
+      ],
+      "forbidden_behaviors": [
+        "claim rendering recovers unavailable data or resolves aliasing",
+        "describe transformed views as independent sensing modalities"
+      ],
+      "tested_skills": [
+        "engineering-experiment-evidence-design-zh"
+      ],
+      "evaluator": "evaluation-session:s007_skill_gap:s007_forward",
+      "outcome": "pass",
+      "evidence": "Identified same-source derived views, removed color/filename leakage, retained real time/masks and training-calibrated scale, and selected numerical/visual/fusion/simple-model plus matched-initialization controls without asserting recovered observations.",
+      "required_checks": [
+        {
+          "behavior": "identify same-source derived views and lack of newly observed information",
+          "status": "pass"
+        },
+        {
+          "behavior": "preserve timestamps variable identity masks and training-calibrated scale",
+          "status": "pass"
+        },
+        {
+          "behavior": "remove label-color and filename leakage",
+          "status": "pass"
+        },
+        {
+          "behavior": "choose numerical visual fusion and simple image-model controls appropriate to the claims",
+          "status": "pass"
+        }
+      ],
+      "forbidden_checks": [
+        {
+          "behavior": "claim rendering recovers unavailable data or resolves aliasing",
+          "status": "not_observed"
+        },
+        {
+          "behavior": "describe transformed views as independent sensing modalities",
+          "status": "not_observed"
+        }
+      ],
+      "review_trace": "responses/s007-targeted-behavior.json",
+      "trace_case_id": "s007-derived-views"
+    },
+    {
+      "id": "s007-moe-attribution",
+      "language": "en",
+      "skill": "engineering-experiment-evidence-design",
+      "prompt": "Review these efficiency and explanation claims using engineering-experiment-evidence-design. A top-1 MoE activates 8M of 160M parameters. Every expert remains loaded; reported timing covers the selected expert only, excluding routing, image conversion, host-device transfers and a required external foundation-model call. Measurements use a desktop GPU. A variable attribution map matches fault-category labels, and masking high-ranked variables sharply lowers confidence; we propose edge deployment and 95% root-cause accuracy. No causal-source or variable-location ground truth is available. Provide a bounded evidence and wording correction, without benchmarking.",
+      "required_behaviors": [
+        "separate total active resident and peak-runtime quantities",
+        "define end-to-end timing including external dependencies and relevant dense alternatives",
+        "keep desktop measurement distinct from deployment evidence",
+        "require matching ground truth for root-cause accuracy and consider masking-induced distribution shift"
+      ],
+      "forbidden_behaviors": [
+        "infer efficiency from active parameter count alone",
+        "accept unsupported root-cause accuracy or deployed-edge claim"
+      ],
+      "tested_skills": [
+        "engineering-experiment-evidence-design"
+      ],
+      "evaluator": "evaluation-session:s007_skill_gap:s007_forward",
+      "outcome": "pass",
+      "evidence": "Separated total/active/resident/peak quantities; included transfers, rendering, routing and external-call timing; kept desktop evidence below deployment claims; rejected unsupported root-cause accuracy and addressed masking-induced distribution shift.",
+      "required_checks": [
+        {
+          "behavior": "separate total active resident and peak-runtime quantities",
+          "status": "pass"
+        },
+        {
+          "behavior": "define end-to-end timing including external dependencies and relevant dense alternatives",
+          "status": "pass"
+        },
+        {
+          "behavior": "keep desktop measurement distinct from deployment evidence",
+          "status": "pass"
+        },
+        {
+          "behavior": "require matching ground truth for root-cause accuracy and consider masking-induced distribution shift",
+          "status": "pass"
+        }
+      ],
+      "forbidden_checks": [
+        {
+          "behavior": "infer efficiency from active parameter count alone",
+          "status": "not_observed"
+        },
+        {
+          "behavior": "accept unsupported root-cause accuracy or deployed-edge claim",
+          "status": "not_observed"
+        }
+      ],
+      "review_trace": "responses/s007-targeted-behavior.json",
+      "trace_case_id": "s007-moe-attribution"
+    },
+    {
+      "id": "s007-noise-repetitions",
+      "language": "zh",
+      "skill": "engineering-experiment-evidence-design-zh",
+      "prompt": "请修改实验计划：不查原数据说明，把benchmark当无噪声；用测试集标准差标定Gaussian噪声，有一种扰动会把正常状态变成传感器故障但仍保留正常标签。为节约经费，我们打算把固定数据上的确定性模型调用10次算10次独立重复，把一条运行切成20个重叠窗口作统计独立样本，并只报告神经模型最好seed。目标是聚焦的小改进论文，目前无正式结果。给最低必要的可信方案，不要求固定次数或立即训练。",
+      "required_behaviors": [
+        "verify original noise and describe injected stress separately",
+        "calibrate from training data and respect label-changing perturbations",
+        "distinguish seeds independent data units and deterministic repeated calls",
+        "plan actual repetitions from uncertainty randomness units and budget without a universal count",
+        "avoid best-seed superiority claims"
+      ],
+      "forbidden_behaviors": [
+        "relax reliability because contribution is modest",
+        "count overlapping windows or deterministic repeated calls as independent evidence",
+        "impose the source-project recommended repetition count"
+      ],
+      "tested_skills": [
+        "engineering-experiment-evidence-design-zh"
+      ],
+      "evaluator": "evaluation-session:s007_skill_gap:s007_forward",
+      "outcome": "pass",
+      "evidence": "Required original-noise verification and training-based perturbation scales, handled label-changing faults, rejected deterministic and overlapping-window pseudo-replication, separated seed/data variation and avoided a universal run count or best-seed conclusion.",
+      "required_checks": [
+        {
+          "behavior": "verify original noise and describe injected stress separately",
+          "status": "pass"
+        },
+        {
+          "behavior": "calibrate from training data and respect label-changing perturbations",
+          "status": "pass"
+        },
+        {
+          "behavior": "distinguish seeds independent data units and deterministic repeated calls",
+          "status": "pass"
+        },
+        {
+          "behavior": "plan actual repetitions from uncertainty randomness units and budget without a universal count",
+          "status": "pass"
+        },
+        {
+          "behavior": "avoid best-seed superiority claims",
+          "status": "pass"
+        }
+      ],
+      "forbidden_checks": [
+        {
+          "behavior": "relax reliability because contribution is modest",
+          "status": "not_observed"
+        },
+        {
+          "behavior": "count overlapping windows or deterministic repeated calls as independent evidence",
+          "status": "not_observed"
+        },
+        {
+          "behavior": "impose the source-project recommended repetition count",
+          "status": "not_observed"
+        }
+      ],
+      "review_trace": "responses/s007-targeted-behavior.json",
+      "trace_case_id": "s007-noise-repetitions"
+    }
+  ],
+  "structural_validation": {
+    "tests_run": 11,
+    "passed": 11,
+    "failures": 0,
+    "errors": 0,
+    "excluded": [
+      "test_installer_copy_and_symlink_modes"
+    ],
+    "test_names": [
+      "test_behavior_schema_rejects_nontext_rubrics",
+      "test_bilingual_invariants_match",
+      "test_bilingual_triggers_are_language_disjoint",
+      "test_current_suite_passes",
+      "test_eval_case_ids_are_unique",
+      "test_evidence_profile_is_non_ordinal",
+      "test_generic_core_keeps_method_axis_separate",
+      "test_genericity_regression_case_is_present",
+      "test_manifest_version_and_pairs",
+      "test_project_scenarios_preserve_complete_unique_mapping",
+      "test_trigger_eval_skills_exist"
+    ],
+    "quick_validate_passed": 24,
+    "bilingual_pairs": 12,
+    "suite_structure": "pass"
+  }
+}

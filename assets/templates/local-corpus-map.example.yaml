@@ -1,0 +1,19 @@
+# Copy this file outside the public repository and replace the example paths.
+# Never commit confidential manuscripts or copyrighted paper files.
+
+corpora:
+  engineering_journal_cases:
+    path: "/absolute/path/to/engineering-journal-cases"
+    roles: ["style-calibration", "section-patterns", "evidence-patterns"]
+  challenge_observation_quality:
+    path: "/absolute/path/to/observation-quality-papers"
+    axes: ["C1"]
+    roles: ["problem-definition", "comparison-design"]
+  method_structured_modeling:
+    path: "/absolute/path/to/structured-modeling-papers"
+    axes: ["M3"]
+    roles: ["method-positioning", "ablation-design"]
+  application_process:
+    path: "/absolute/path/to/application-specific-papers"
+    archetype: "background-driven"
+    roles: ["process-terminology", "engineering-evidence"]

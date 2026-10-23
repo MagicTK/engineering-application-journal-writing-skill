@@ -1,0 +1,6 @@
+interface:
+  display_name: "真实工业背景驱动论文"
+  short_description: "从具体生产过程推导论文问题、方法和证据"
+  default_prompt: "使用 $background-driven-industrial-application-zh 从这个工业过程推导论文主线和实验依据。"
+policy:
+  allow_implicit_invocation: true

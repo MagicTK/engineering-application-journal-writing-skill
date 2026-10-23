@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Experiment Automation"
+  short_description: "Run authorized experiments with reproducible evidence"
+  default_prompt: "Use $engineering-experiment-automation to plan authorized runs and trace their results to figures and claims."
+policy:
+  allow_implicit_invocation: true

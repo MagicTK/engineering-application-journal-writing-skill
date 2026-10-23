@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Manuscript Polish"
+  short_description: "Polish engineering prose without changing the science"
+  default_prompt: "Use $engineering-terminology-polishing to revise this text while preserving technical meaning, evidence, and layout."
+policy:
+  allow_implicit_invocation: true

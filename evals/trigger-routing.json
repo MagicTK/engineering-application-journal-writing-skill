@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "route-end-to-end-en",
+      "language": "en",
+      "prompt": "Revise this industrial fault-diagnosis manuscript from scientific positioning through experiments, LaTeX verification, and author handoff.",
+      "expected_skill": "engineering-application-journal-writing-skill"
+    },
+    {
+      "id": "route-taxonomy-zh",
+      "language": "zh-CN",
+      "prompt": "这个课题同时写了非平稳、多模式、图网络和迁移学习，请先区分工程问题与方法并选择论文主线。",
+      "expected_skill": "industrial-ai-paper-router-zh"
+    },
+    {
+      "id": "route-method-problem-boundary-en",
+      "language": "en",
+      "prompt": "My draft mixes channel dependency, graph learning, missing observations, and fault localization. Separate the industrial challenge, method, task, object scale, and evidence before selecting a paper archetype.",
+      "expected_skill": "industrial-ai-paper-router"
+    },
+    {
+      "id": "route-literature-en",
+      "language": "en",
+      "prompt": "Map the industrial-process literature, verify the cited papers, and construct a defensible gap for the Introduction.",
+      "expected_skill": "engineering-literature-positioning"
+    },
+    {
+      "id": "route-architecture-zh",
+      "language": "zh-CN",
+      "prompt": "我只有一个生产过程问题和几个模块想法，请先形成问题-设计-证据蓝图和贡献点。",
+      "expected_skill": "engineering-paper-idea-architecture-zh"
+    },
+    {
+      "id": "route-general-dual-evidence-en",
+      "language": "en",
+      "prompt": "Structure a method paper in which a controlled benchmark supports detailed mechanism tests and an actual production process supports engineering relevance.",
+      "expected_skill": "general-method-benchmark-realworld"
+    },
+    {
+      "id": "route-background-driven-zh",
+      "language": "zh-CN",
+      "prompt": "从电熔过程、三相电流与视频采集链出发，推导异常工况识别论文的方法和实验。",
+      "expected_skill": "background-driven-industrial-application-zh"
+    },
+    {
+      "id": "route-experiment-en",
+      "language": "en",
+      "prompt": "Audit split leakage, comparison fairness, ablations, sensitivity, class-wise metrics, and which claims these results support.",
+      "expected_skill": "engineering-experiment-evidence-design"
+    },
+    {
+      "id": "route-figure-latex-zh",
+      "language": "zh-CN",
+      "prompt": "不要改正文内容，保持表格字号，修复浮动体位置，逐页检查 PDF 并整理 Overleaf 上传包。",
+      "expected_skill": "engineering-figure-latex-production-zh"
+    },
+    {
+      "id": "route-polish-en",
+      "language": "en",
+      "prompt": "Polish the Abstract and Introduction while preserving formulas, results, citations, table sizes, and author voice.",
+      "expected_skill": "engineering-terminology-polishing"
+    },
+    {
+      "id": "route-review-zh",
+      "language": "zh-CN",
+      "prompt": "请按工程应用顶刊标准审稿，问题优先并按严重程度列出，不要直接重写。",
+      "expected_skill": "engineering-journal-rigor-review-zh"
+    },
+    {
+      "id": "negative-pure-code",
+      "language": "en",
+      "prompt": "Fix the authentication bug in this React application.",
+      "expected_skill": null
+    },
+    {
+      "id": "negative-generic-grammar",
+      "language": "zh-CN",
+      "prompt": "帮我检查这封私人邮件的语法。",
+      "expected_skill": null
+    },
+    {
+      "id": "route-ideation-portfolio-en",
+      "language": "en",
+      "prompt": "Build and prioritize a portfolio of several AI-for-engineering research candidates from our verified corpus and available data. Calibrate contribution tracks and overlap across papers before choosing one.",
+      "expected_skill": "engineering-research-ideation"
+    },
+    {
+      "id": "route-ideation-portfolio-zh",
+      "language": "zh-CN",
+      "prompt": "请根据已核查的文献和可用数据批量整理研究候选，校准创新层级、验证成本与跨论文重复风险，先排研究组合的优先级。",
+      "expected_skill": "engineering-research-ideation-zh"
+    },
+    {
+      "id": "route-selected-idea-architecture-en",
+      "language": "en",
+      "prompt": "We have selected one fault-diagnosis idea and its data scope. Develop only this paper into a problem-design-evidence blueprint and contribution statement. Do not generate a portfolio.",
+      "expected_skill": "engineering-paper-idea-architecture"
+    },
+    {
+      "id": "route-selected-idea-architecture-zh",
+      "language": "zh-CN",
+      "prompt": "我们已经选定一个故障诊断课题，数据范围也确定了。只把这一篇写成问题—设计—证据蓝图和贡献陈述，不再批量选题。",
+      "expected_skill": "engineering-paper-idea-architecture-zh"
+    },
+    {
+      "id": "route-polish-no-ideation-en",
+      "language": "en",
+      "prompt": "Only fix grammar and terminology in this engineering-paper paragraph. Preserve its scientific scope, citations, and claims; do not search the corpus or generate ideas.",
+      "expected_skill": "engineering-terminology-polishing"
+    },
+    {
+      "id": "route-polish-no-ideation-zh",
+      "language": "zh-CN",
+      "prompt": "只润色这篇英文工程论文摘要的语法和术语，保留科学内容、引文和结论；不扩展选题，也不读取整套文献库。",
+      "expected_skill": "engineering-terminology-polishing-zh"
+    },
+    {
+      "id": "route-review-response-en",
+      "language": "en",
+      "prompt": "Prepare a point-by-point response to the editor and reviewers using the revised manuscript and verified additional results.",
+      "expected_skill": "engineering-review-response"
+    },
+    {
+      "id": "route-review-response-zh",
+      "language": "zh-CN",
+      "prompt": "请根据审稿意见、修改后的英文稿和真实补充实验，逐条写回复信并核对修改位置。",
+      "expected_skill": "engineering-review-response-zh"
+    },
+    {
+      "id": "route-new-formulation-architecture-en",
+      "language": "en",
+      "prompt": "We selected one engineering study whose contribution is a new task formulation using a standard classifier. Build the manuscript argument and evidence architecture.",
+      "expected_skill": "engineering-paper-idea-architecture"
+    },
+    {
+      "id": "route-nondefensive-polish-zh",
+      "language": "zh-CN",
+      "prompt": "只改这段英文工程论文的语言，去除空泛防御措辞，保留引文、条件和实测结果，不改变研究方案。",
+      "expected_skill": "engineering-terminology-polishing-zh"
+    }
+  ]
+}

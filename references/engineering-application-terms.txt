@@ -1,0 +1,57 @@
+# Engineering objects and tasks
+industrial process
+production process
+plant-wide process
+process monitoring
+fault diagnosis
+process variables
+process measurements
+production stage
+process unit
+operating condition
+process disturbance
+material flow
+
+# Structure, knowledge, and modeling actions
+process structure
+process topology
+stage partition
+stage-wise
+stage-specific
+inter-stage
+cross-stage
+feature extraction
+feature representation
+feature interaction
+feature fusion
+multi-stage feature fusion
+domain knowledge
+expert knowledge
+prior knowledge
+process knowledge
+knowledge-guided
+knowledge-enhanced
+
+# Evidence and case-study language
+case study
+benchmark case study
+industrial case study
+real-world
+real-world case study
+practical applicability
+industrial applicability
+diagnostic performance
+experimental results
+operating data
+production data
+
+# Candidate caution terms
+information exchange
+information transfer
+feature exchange
+process link
+known process link
+organization
+organize
+protocol
+deployment

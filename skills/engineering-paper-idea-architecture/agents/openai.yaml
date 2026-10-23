@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Paper Architecture"
+  short_description: "Turn an industrial idea into a testable paper story"
+  default_prompt: "Use $engineering-paper-idea-architecture to build a problem-design-evidence blueprint for this study."
+policy:
+  allow_implicit_invocation: true

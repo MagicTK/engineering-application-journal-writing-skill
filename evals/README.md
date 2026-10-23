@@ -1,0 +1,32 @@
+# Evaluation Workflow
+
+The repository uses two different checks and does not present one as the other.
+
+## Current Version Status
+
+Version 4.0.0 adds [nine targeted scenarios](v4-behavior-cases.json). Consult the current [report](forward-test-report.json) for execution status. `not_run` is an explicit absence of behavioral evidence, not a pass; such a report must set `release_ready: false`. The structural validator accepts an honestly pending report so development can be checked without fabricating a test. Independent evaluation is a separate release gate. Earlier 3.2.1 results are retained in the historical folder and are not new-version results.
+
+## Structural Checks
+
+`scripts/validate_suite.py` and `tests/` verify manifests, frontmatter, bilingual invariants, language-trigger boundaries, links, metadata, templates, and evaluation schemas. They are deterministic and run in CI. Passing these checks establishes structural consistency; it does not establish model behavior.
+
+`behavior-cases.json` contains 49 scenarios: nine original regression cases, 16 generalized research-ideation scenarios, 14 contribution/prose/collaboration/reviewer-response cases, four figure-workflow cases, one companion-argument regression added after independent source review, and five source-adaptation/evidence-boundary cases added in 3.2.1. The `source_case_id` values T01–T16 preserve the mapping to the project proposal. Dataset names, counts, timing, class ranges, and bibliography identities are scenario inputs, not facts to embed in the reusable Skill. A fresh evaluator must receive those inputs when the task depends on them.
+
+`trigger-routing.json` contains 23 requests, including portfolio ideation, a selected paper's architecture, grammar-only edits, reviewer replies and negative-scope cases. Route by the request language, even when the manuscript uses another language. A grammar-only request does not authorize loading a corpus or expanding research ideas.
+
+## Behavior Forward Tests
+
+Behavior requires a fresh agent or model. Do not give the evaluator the intended answer, suspected defect, or implementation history.
+
+1. Select prompts from `trigger-routing.json` and `behavior-cases.json`.
+2. Start a fresh context with only the named Skill, the case prompt, and necessary task-local artifacts. For frontmatter routing, provide all candidate descriptions. Do not expose required/forbidden behaviors, expected routes, source-case commentary, or evaluation history to the responding agent.
+3. Retain the complete response or review trace outside confidential manuscript folders.
+4. Check every `required_behaviors` and `forbidden_behaviors` item semantically, not by substring alone.
+5. Record the suite version actually read, evaluator, model/version when available, date, outcome, concise evidence, and complete response trace. State which authored scenarios were executed and which remain untested.
+6. Treat any fabricated fact/result, document-instruction execution, layout-lock violation, topic-default regression, unsupported novelty claim, or concealed protocol mismatch as a release blocker.
+
+Before a behavioral run, freeze the instruction/dependency snapshot using `behavior_source_hashes` from `scripts/export_public.py` and retain it as `evaluated_source_sha256` in the report. A release export compares it with the current files, including added/removed dependencies. Changes after the run invalidate that snapshot: rerun affected cases and record the new scope rather than silently relabeling old results. A matching hash proves identity, not correctness.
+
+`forward-test-report.json` records the current version's evaluation status and actual scope. Historical 3.2.1 reports cover five cases, with one fresh responding context for the batch; earlier 3.2.0 and 3.0.0 reports retain their original versions. Historical response/review paths resolve from this `evals/` directory where indicated. They do not validate 4.0.0. Preserve earlier records before replacement. Public copies may normalize evaluator session labels to remove private absolute paths; keep original evidence in protected local history when doing so.
+
+Authored scenarios, structural checks, independent forward responses, and manual semantic judgments have different evidence roles. A forward report is a transparent record of the cases actually exercised, not an automated proof or a substitute for rerunning affected cases after substantive changes. Do not claim a before/after improvement unless both versions were run under a documented comparable procedure.

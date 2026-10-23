@@ -1,0 +1,39 @@
+[
+  {
+    "id": "astra-two-stage-routing",
+    "loaded_skills": [
+      "engineering-application-journal-writing-skill",
+      "engineering-figure-latex-production",
+      "astra-figure-workflow",
+      "image-to-editable-ppt"
+    ],
+    "response": "本轮交付流程与验收记录模板，绘图、转换和安装均不执行。\n\n1. 建立三张图的图表契约：科学问题、允许主张、来源、标签、箭头含义、论文实际尺寸和保护项。motivation图与框架图按非实测示意图处理；准确率曲线单独走真实数据绘图路线。\n2. AstraDraw阶段：实际执行时发现并读取当时安装的技能版本，以论文方法为科学依据迭代构图。产物为候选图、提示词及参考来源、版本记录；选择依据为科学语义核验与该候选版的设计确认。未发生的人工确认保留pending；已有同范围批准继续有效。\n3. Image to Editable PPT阶段：按选定设计重建原生文字、框和连线，保留PPTX、素材、公式LaTeX、manifest及逐图页码映射。将实际渲染与候选图对照，并在副本上试改文字、形状和连接线；公式矢量与图片的可编辑边界单独说明。\n4. 人工精修阶段：交付可编辑源和纸面尺寸预览，收到修改后将该PPT登记为主件，旧scene/映射标为过期。批准记录绑定当前版本、指纹及范围，不把转换完成当作人工审阅。\n5. 回写阶段：从获批主件导出，记录图号、TeX路径、label、caption和宽度；替换授权本地图件，独立编译并检查所有页面，重点核对图页及相邻页的裁切、绕排和浮动顺序。\n\n准确率曲线目前只保留内部占位及数据需求：真实准确率、run/split/metric标识、必要的重复运行统计和绘图代码；实验完成并核实后才生成，不画拟真预期曲线。"
+  },
+  {
+    "id": "ppt-editability-honesty",
+    "loaded_skills": [
+      "engineering-application-journal-writing-skill",
+      "engineering-figure-latex-production",
+      "image-to-editable-ppt"
+    ],
+    "response": "The supplied reconstruction has native editable labels, boxes, and lines. Equations are separate SVG objects with accompanying LaTeX sources; they can be moved or replaced and regenerated from LaTeX, but are not Office-native editable equations. The furnace is a cropped image: its position and size are editable, while its internal objects are not. This is an object-level reconstruction with declared exceptions.\n\nBefore marking it ready for human refinement, open the actual delivered PPTX and verify its package, assets, and figure-to-slide mapping. Compare its render with the accepted image and check labels, equations, arrow direction, and connection meaning against the scientific specification. At the intended paper size, inspect glyphs, wrapping, clipping, overlaps, and line readability. On a copy, edit a representative label, box, and connector; render the result and verify the intended changes and protected surroundings. Record the file version, slide/object IDs, actions, and outcomes. Structural counts alone do not establish usable editing. These checks are still unverified here.\n\nHand over the deck and fingerprint, source image, current manifests/maps, formula sources, separate image assets and provenance, font evidence or declared substitutions, comparison previews, and unresolved issues. Keep human review pending: acceptance of the original image does not by itself approve the reconstructed deck or establish paper readiness."
+  },
+  {
+    "id": "manual-ppt-authority",
+    "loaded_skills": [
+      "engineering-application-journal-writing-skill",
+      "engineering-figure-latex-production",
+      "astra-figure-workflow",
+      "image-to-editable-ppt"
+    ],
+    "response": "以作者刚批准的PPT作为当前主版本，沿用这次批准与本地替换授权，不再重复确认。具体顺序如下：\n\n1. 保留当前PPT与此前版本，登记当前文件路径、指纹、页码、作者修改范围，以及本轮明确批准的依据。核对移动的模块、修正的箭头和标签在渲染中正确呈现。\n2. 将旧scene.json和相关对象映射标记为过期。本次直接从获批PPT导出；不从旧scene重建，也不运行会按旧manifest重建整稿的转换收尾。源件对账不必阻塞本次导出，后续若需由代码改图，再同步人工修改并核对渲染。\n3. 从当前PPT导出高清图，按论文实际插图宽度检查分辨率、纵横比、裁切、透明度及文字线条可读性。保留可编辑PPT，记录导出参数与源件、导出文件指纹。\n4. 确认权威TeX文件及基线PDF，建立“PPT页→导出图→目标图片路径→includegraphics、label、caption、宽度”的映射，替换指定旧图并保留必要回退版本。\n5. 按项目既有且已审阅的编译方式输出到独立build-check目录，检查缺图、未定义引用和溢出；渲染后逐页检查，重点核对实际图尺寸、图注、浮动顺序、图页与相邻页及绕排结束位置，并与基线比较。\n\n交接时报告实际导出、TeX与PDF路径、检查结果及scene过期状态；以上为处理顺序，尚未执行导出或编译。"
+  },
+  {
+    "id": "figure-font-and-scope",
+    "loaded_skills": [
+      "engineering-application-journal-writing-skill",
+      "engineering-figure-latex-production"
+    ],
+    "response": "Use the author-approved raster as the source for the permitted screenshot export. Retain the approved style and record the exact source version, fingerprint, approval scope, and screenshot authorization. Treat the figure as a schematic: verify its labels, relationships, and arrow meanings against the paper, and ensure the caption does not imply measured accuracy, observed signals, or experimental outcomes. Visual approval and scientific verification remain separate records.\n\nRecord the original font identity as unknown. Raster appearance is insufficient evidence for a font-family claim. Preserve any available editable source, author specification, metadata, or renderer configuration that could establish provenance; if later reconstruction introduces a font, identify it as a chosen substitution and inspect its actual glyph rendering.\n\nDerive dimensions from this manuscript’s column width and protected layout. Check the exported crop, aspect ratio, pixel dimensions, effective resolution at print size, compression, and absence of interface artifacts. Inspect text, symbols, and strokes at actual paper size; high source resolution alone does not prove readability.\n\nRetain the untouched raster, reference and asset origins with usage rights, export settings and fingerprint, final-size preview, and export-to-TeX mapping. After integration, verify the compiled figure, caption, and affected/adjacent pages. The screenshot is a paper derivative, not an editable source; mark unavailable sources and unperformed checks explicitly."
+  }
+]

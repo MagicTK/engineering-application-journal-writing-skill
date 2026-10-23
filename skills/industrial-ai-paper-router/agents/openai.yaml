@@ -1,0 +1,6 @@
+interface:
+  display_name: "Industrial AI Paper Router"
+  short_description: "Classify the problem, method, task, scale, and evidence"
+  default_prompt: "Use $industrial-ai-paper-router to classify this research topic and route it to the right engineering-paper workflow."
+policy:
+  allow_implicit_invocation: true

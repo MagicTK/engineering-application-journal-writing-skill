@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Journal Review Response"
+  short_description: "Prepare evidence-backed revisions and point-by-point responses"
+  default_prompt: "Use $engineering-review-response to address these reviewer comments, verify actual revisions and evidence, and prepare a point-by-point response with precise manuscript locations."
+policy:
+  allow_implicit_invocation: true

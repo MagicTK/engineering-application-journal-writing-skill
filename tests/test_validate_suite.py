@@ -1,0 +1,196 @@
+from __future__ import annotations
+
+import importlib.util
+import json
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SPEC = importlib.util.spec_from_file_location(
+    "validate_suite", ROOT / "scripts" / "validate_suite.py"
+)
+assert SPEC and SPEC.loader
+VALIDATOR = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(VALIDATOR)
+
+
+class SuiteValidatorTests(unittest.TestCase):
+    def test_credential_markers(self) -> None:
+        self.assertTrue(VALIDATOR.SECRET_RE.search('gh' + 'p_' + 'a' * 36))
+        self.assertTrue(VALIDATOR.SECRET_RE.search('-----BEGIN ' + 'OPENSSH PRIVATE KEY-----'))
+        self.assertFalse(VALIDATOR.SECRET_RE.search('Never publish credentials.'))
+
+    def test_private_root_path(self) -> None:
+        self.assertTrue(VALIDATOR.PRIVATE_PATH_RE.search('/' + 'root/' + 'private-project'))
+
+    def test_current_suite_passes(self) -> None:
+        self.assertEqual([], VALIDATOR.validate(ROOT))
+
+    def test_symlink_rejected_before_reading_manifest(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "suite-manifest.yaml").symlink_to(root / "missing-target")
+            self.assertEqual(
+                ["unreviewed symlink should not be committed: suite-manifest.yaml"],
+                VALIDATOR.validate(root),
+            )
+
+    def test_comment_case_has_literal_tex_commands(self) -> None:
+        for filename in ("v4-behavior-cases.json", "forward-test-report.json"):
+            payload = json.loads((ROOT / "evals" / filename).read_text())
+            case = next(c for c in payload["cases"] if c["id"] == "v4-comment-lock")
+            self.assertIn(chr(92) + "iffalse", case["prompt"])
+            self.assertNotIn(chr(92) * 2 + "iffalse", case["prompt"])
+
+    def test_manifest_version_and_pairs(self) -> None:
+        suite, records = VALIDATOR.parse_manifest(
+            (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
+        )
+        self.assertEqual("4.0.0", suite["version"])
+        self.assertEqual("whole-suite", suite["installation"])
+        self.assertEqual(14, len(records))
+
+    def test_bilingual_invariants_match(self) -> None:
+        _, records = VALIDATOR.parse_manifest(
+            (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
+        )
+        for record in records:
+            canonical = VALIDATOR.extract_invariants(ROOT / record["canonical"])
+            mirror = VALIDATOR.extract_invariants(ROOT / record["mirror"])
+            self.assertTrue(canonical, record["id"])
+            self.assertEqual(canonical, mirror, record["id"])
+
+    def test_eval_case_ids_are_unique(self) -> None:
+        for filename in (
+            "trigger-routing.json",
+            "behavior-cases.json",
+            "forward-test-report.json",
+        ):
+            payload = json.loads((ROOT / "evals" / filename).read_text(encoding="utf-8"))
+            ids = [case["id"] for case in payload["cases"]]
+            self.assertEqual(len(ids), len(set(ids)), filename)
+
+    def test_trigger_eval_skills_exist(self) -> None:
+        _, records = VALIDATOR.parse_manifest(
+            (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
+        )
+        known = {record["id"] for record in records}
+        known.update(f"{record['id']}-zh" for record in records)
+        payload = json.loads(
+            (ROOT / "evals" / "trigger-routing.json").read_text(encoding="utf-8")
+        )
+        for case in payload["cases"]:
+            expected = case["expected_skill"]
+            if expected is not None:
+                self.assertIn(expected, known, case["id"])
+
+    def test_genericity_regression_case_is_present(self) -> None:
+        payload = json.loads(
+            (ROOT / "evals" / "behavior-cases.json").read_text(encoding="utf-8")
+        )
+        cases = {case["id"]: case for case in payload["cases"]}
+        self.assertIn("dependency-not-default", cases)
+        self.assertIn(
+            "treat a model component as the industrial problem",
+            cases["dependency-not-default"]["forbidden_behaviors"],
+        )
+
+    def test_project_scenarios_preserve_complete_unique_mapping(self) -> None:
+        payload = json.loads(
+            (ROOT / "evals" / "behavior-cases.json").read_text(encoding="utf-8")
+        )
+        source_ids = [
+            case["source_case_id"]
+            for case in payload["cases"]
+            if "source_case_id" in case
+        ]
+        self.assertCountEqual([f"T{index:02}" for index in range(1, 17)], source_ids)
+
+    def test_behavior_schema_rejects_nontext_rubrics(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / "behavior.json"
+            for invalid in ([""], [None], ["valid", 7]):
+                payload = {
+                    "schema_version": 1,
+                    "cases": [{
+                        "id": "invalid-rubric",
+                        "prompt": "Review this case.",
+                        "required_behaviors": invalid,
+                        "forbidden_behaviors": ["invent evidence"],
+                    }],
+                }
+                path.write_text(json.dumps(payload), encoding="utf-8")
+                self.assertIn(
+                    "case invalid-rubric has invalid required_behaviors",
+                    VALIDATOR.validate_eval(path, "behavior"),
+                )
+
+    def test_generic_core_keeps_method_axis_separate(self) -> None:
+        root_skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        passport = (ROOT / "assets/templates/manuscript-passport.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("Keep the core workflow topic-neutral", root_skill)
+        self.assertIn("Primary method strategy", passport)
+        self.assertIn("Excluded Default Narratives", passport)
+
+    def test_bilingual_triggers_are_language_disjoint(self) -> None:
+        _, records = VALIDATOR.parse_manifest(
+            (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
+        )
+        for record in records:
+            canonical = VALIDATOR.parse_frontmatter(ROOT / record["canonical"])
+            mirror = VALIDATOR.parse_frontmatter(ROOT / record["mirror"])
+            self.assertIn("English-language requests", canonical["description"])
+            self.assertIn("中文请求", mirror["description"])
+
+    def test_evidence_profile_is_non_ordinal(self) -> None:
+        taxonomy = (ROOT / "references/industrial-ai-taxonomy.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("Evidence codes are non-ordinal", taxonomy)
+        for code in ("EA", "EB", "ER", "EP", "EO", "EX", "EV"):
+            self.assertIn(f"| {code} |", taxonomy)
+        passport = (ROOT / "assets/templates/manuscript-passport.md").read_text(
+            encoding="utf-8"
+        )
+        router = (ROOT / "skills/industrial-ai-paper-router/SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertNotIn("Available levels", passport)
+        self.assertNotIn("Required levels", passport)
+        self.assertNotIn("strongest evidence", router.lower())
+
+    def test_installer_copy_and_symlink_modes(self) -> None:
+        installer = ROOT / "scripts/install_suite.py"
+        with tempfile.TemporaryDirectory() as temp:
+            temp_root = Path(temp)
+            copy_target = temp_root / "copy" / "engineering-application-journal-writing-skill"
+            link_target = temp_root / "link" / "engineering-application-journal-writing-skill"
+
+            copied = subprocess.run(
+                [sys.executable, str(installer), "--copy", "--target", str(copy_target)],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(0, copied.returncode, copied.stderr)
+            self.assertTrue((copy_target / "SKILL.md").is_file())
+            self.assertTrue((copy_target / "references").is_dir())
+
+            linked = subprocess.run(
+                [sys.executable, str(installer), "--target", str(link_target)],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(0, linked.returncode, linked.stderr)
+            self.assertTrue(link_target.is_symlink())
+
+
+if __name__ == "__main__":
+    unittest.main()

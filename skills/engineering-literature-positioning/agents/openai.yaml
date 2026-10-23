@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Literature Positioning"
+  short_description: "Build a verified engineering literature position"
+  default_prompt: "Use $engineering-literature-positioning to map the literature, define the gap, and plan defensible citations."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "astra-two-stage-routing",
+    "loaded_skills": [
+      "engineering-figure-latex-production-zh"
+    ],
+    "response": "本轮只制定流程，绘图、转换、安装与编译均不执行。\n\n1. 先为三图建立图表契约：记录论文版本、科学问题、允许主张、标签与箭头语义、素材来源及本论文栏宽。motivation和算法框架归入非实测示意图；准确率曲线单独走真实数据路线。\n2. 两张示意图拟用AstraDraw迭代，阶段产物为候选图、提示词、参考素材来源和设计决策记录。技术标签按论文核对；选图依据绑定具体版本，未发生的人工确认保留待确认。实际执行时才发现并读取当前安装的AstraDraw技能。\n3. 选定设计再交Image to Editable PPT对象级重建；执行时读取该技能。交付PPTX、公式LaTeX、独立素材、manifest及图号—页号映射。对照原图，在副本上实测文字、框和连线编辑，披露公式、图片的编辑限制。\n4. 人工精修后登记PPT为当前主件，保存指纹与改动记录，标记旧scene/映射是否过期。批准须对应当前修订和范围，已有明确批准不重复询问。\n5. 从批准主件导出，记录裁切、分辨率和TeX插入映射；回写后编译，检查实际纸面大小及受影响页、相邻页。\n\n准确率图目前只保留内部占位和数据需求清单：待真实运行记录、数据划分、指标定义及结果到齐，再用可复现代码绘图；不生成曲线或误差条充当实验结果。"
+  },
+  {
+    "id": "ppt-editability-honesty",
+    "loaded_skills": [
+      "engineering-figure-latex-production"
+    ],
+    "response": "Handoff note: The reported deck contains native editable labels, boxes and lines. Equations are separate SVG assets with accompanying LaTeX sources; changing their mathematics requires editing and rerendering those sources, rather than editing an Office-native equation. The furnace is a cropped image: its placement, size and crop can be adjusted, but its internal components are not editable diagram objects. The deck is an object-level reconstruction, with these declared exceptions.\n\nBefore marking it ready for human refinement, open the actual delivered PPTX and compare its render with the accepted image. Check labels, equations and arrow meanings against the authoritative manuscript. At intended print size, inspect glyph coverage, wrapping, clipping, overlap and line readability. On a copy, edit a representative label, box and connector, rerender, and verify both the changes and protected surroundings. Record the file fingerprint, slide/object identifiers and outcomes; object counts alone do not verify editing.\n\nPackage the deck, source image, slide map, current manifests, formula sources and rendering route, independent assets, font provenance or substitutions, comparison preview and unresolved checks. Identify protected elements and how to return revisions. Image acceptance does not establish acceptance of the reconstructed deck: retain human review as pending unless there is applicable evidence. These checks are proposed, not reported as completed."
+  },
+  {
+    "id": "manual-ppt-authority",
+    "loaded_skills": [
+      "engineering-figure-latex-production-zh"
+    ],
+    "response": "按现有批准继续处理，无需作者重复确认。具体顺序如下；这里说明操作方案，不声称已导出或编译。\n\n1. 保留人工修订PPT及上一版本，登记当前文件指纹、图号/页号、作者改动和批准范围。对照前后渲染，核对模块位置、箭头端点及标签，确认导出对象确为已批准版本。\n2. 将旧scene.json及相关旧映射标为过期，当前PPT作为主件。直接从它导出无需先重建scene；后续若需源代码驱动编辑，再将人工改动同步至新源件并验证渲染一致，或继续编辑当前PPT。不能用旧scene重新生成覆盖人工修改。\n3. 从当前PPT导出高清论文图，记录主件与导出文件指纹、格式、裁切、纵横比、像素尺寸及预期印刷宽度；按实际纸面大小检查字形、线条、边缘和清晰度。\n4. 确认本地权威TeX与旧图引用位置，建立图号—PPT页—新图路径—includegraphics—label/caption—栏宽映射，替换授权图片并保留既有排版约束。\n5. 用项目既定且已审查的构建方式，在独立检查目录编译。查缺图、引用和溢出，再目检PDF全页，重点检查图所在页与相邻页的裁切、caption、浮动体顺序、绕排终止和受保护版式。\n\n交付当前PPT、高清图、更新的本地TeX、PDF及检查记录，注明scene仍过期和后续安全编辑入口。"
+  },
+  {
+    "id": "figure-font-and-scope",
+    "loaded_skills": [
+      "engineering-figure-latex-production"
+    ],
+    "response": "Keep the author-approved style and record the original raster's font identity as unknown. Do not infer a font family or glyph source from appearance. If later reconstruction requires a font choice, document the actual choice as a substitution and retain its supporting author instruction, metadata or rendering configuration. Derive print dimensions from this manuscript's class, column width and author constraints; another paper's typography and page dimensions are not defaults.\n\nFor the permitted screenshot export, bind the derivative to the exact source revision and retain the original raster, fingerprint, approval scope, capture method, crop, aspect ratio, pixel dimensions and intended print size. Verify that capture preserves the approved composition and check text, glyphs, arrows and strokes at that final size for blur, clipping or overlap. The screenshot remains a raster derivative, not an editable source.\n\nRecord the motivation figure's scientific question and schematic status. Check labels and depicted engineering relationships against the paper; schematic curves or symbols must not imply measured accuracy or causal evidence. Retain reference and asset origins, permitted uses, and any unavailable sources. Style acceptance, scientific verification and publication rights remain distinct records. When integrated, record the exact TeX figure/caption mapping and inspect the compiled figure plus affected and adjacent pages. None of these checks is claimed completed here."
+  }
+]

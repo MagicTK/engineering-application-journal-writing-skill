@@ -1,0 +1,6 @@
+interface:
+  display_name: "Background-Driven Application Paper"
+  short_description: "Derive a paper from a real industrial process"
+  default_prompt: "Use $background-driven-industrial-application to derive the paper story and evidence from this industrial process."
+policy:
+  allow_implicit_invocation: true

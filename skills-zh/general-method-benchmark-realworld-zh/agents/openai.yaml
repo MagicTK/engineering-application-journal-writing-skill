@@ -1,0 +1,6 @@
+interface:
+  display_name: "Benchmark 与真实应用论文"
+  short_description: "组织具有两类证据角色的通用方法论文"
+  default_prompt: "使用 $general-method-benchmark-realworld-zh 按受控验证和真实应用两类证据组织这篇论文。"
+policy:
+  allow_implicit_invocation: true

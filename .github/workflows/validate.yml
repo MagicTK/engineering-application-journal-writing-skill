@@ -1,0 +1,25 @@
+name: Validate skill suite
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate suite structure
+        run: python3 scripts/validate_suite.py
+      - name: Run validator tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: Check installation plan
+        run: python3 scripts/install_suite.py --dry-run --target "$RUNNER_TEMP/engineering-application-journal-writing-skill"

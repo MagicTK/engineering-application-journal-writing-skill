@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Experiment Design"
+  short_description: "Align experiments with engineering claims and evidence"
+  default_prompt: "Use $engineering-experiment-evidence-design to design and audit the experiments for this manuscript."
+policy:
+  allow_implicit_invocation: true

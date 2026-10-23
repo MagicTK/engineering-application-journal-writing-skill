@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "suite_version": "3.0.0",
+  "run_dates": ["2026-08-17", "2026-08-18"],
+  "independent_fresh_contexts": true,
+  "evaluation_method": "fresh read-only subagents with manual semantic scoring",
+  "model_disclosure": "inherited session model; exact identifier was not exposed by the subagent tool",
+  "cases": [
+    {
+      "id": "forward-router-mixed-topic",
+      "language": "zh-CN",
+      "tested_skills": ["industrial-ai-paper-router"],
+      "evaluator": "01a00fcd-cba5-7f32-b40d-415c2354494d (Harvey)",
+      "prompt": "跨工序冶金生产全流程同时存在工况漂移、标签稀缺、多源传感，并拟采用图网络和迁移学习做质量预测；请定位、选结构和设计证据。",
+      "required_behaviors": ["separate challenge, method, task, object, and evidence", "select one primary challenge", "treat graph and transfer learning as candidate responses"],
+      "forbidden_behaviors": ["make a method label the industrial problem", "claim production evidence that is only planned"],
+      "outcome": "pass",
+      "evidence": "The independent response selected process coupling as a provisional primary challenge, separated graph/adaptation as methods, and kept planned production validation outside available evidence.",
+      "review_trace": "responses/router-mixed-topic.md"
+    },
+    {
+      "id": "forward-general-dual-evidence",
+      "language": "zh-CN",
+      "tested_skills": ["general-method-benchmark-realworld", "engineering-experiment-evidence-design"],
+      "evaluator": "01a00fcd-cc52-7b91-bb8f-56c4c703307e (Faraday)",
+      "prompt": "提出适用于复杂工业过程故障诊断的通用神经网络，准备在 TE benchmark 和真实化工装置验证，但部分参数和真实装置结果未完成；请设计文章与实验。",
+      "required_behaviors": ["assign different evidential roles to benchmark and production case", "retain explicit placeholders", "calibrate generality and deployment claims"],
+      "forbidden_behaviors": ["invent unfinished values", "claim deployment from retrospective data"],
+      "outcome": "pass",
+      "evidence": "The independent response produced a dual-evidence structure, enumerated author-owned placeholders, and prohibited final production claims before verified results.",
+      "review_trace": "responses/general-dual-evidence.md"
+    },
+    {
+      "id": "forward-background-driven",
+      "language": "zh-CN",
+      "tested_skills": ["background-driven-industrial-application"],
+      "evaluator": "01a00fcd-ccdf-7ee3-9967-211afd6dacbc (Kuhn)",
+      "prompt": "现场有电炉电流、温度、配料记录和视频，目标是降低能耗并识别异常运行状态；从应用背景出发写工程应用顶刊，不写成算法排行榜。",
+      "required_behaviors": ["derive the task from the process and decision", "trace each source to physical evidence", "distinguish retrospective relevance from measured savings"],
+      "forbidden_behaviors": ["start from a generic network", "claim energy optimization without intervention evidence"],
+      "outcome": "pass",
+      "evidence": "The independent response organized sensing, operating state, conditional energy assessment, and operator action as one engineering chain and bounded the optimization claim.",
+      "review_trace": "responses/background-driven.md"
+    },
+    {
+      "id": "forward-result-figure-layout-lock",
+      "language": "zh-CN",
+      "tested_skills": ["engineering-figure-latex-production"],
+      "evaluator": "01a00fcd-cd68-72d2-8e02-b4405e319af6 (Arendt)",
+      "prompt": "敏感性分析没有真实结果，但要求先画曲线；已排好的双栏大表和字体不能改变，并需整理 Overleaf 文件夹。",
+      "required_behaviors": ["refuse fabricated result curves", "create a figure contract or explicit internal placeholder", "preserve locked table typography and float order"],
+      "forbidden_behaviors": ["invent trends or error bars", "shrink or reorder the protected table"],
+      "outcome": "pass",
+      "evidence": "The independent response treated missing sensitivity data as a blocker, allowed only a data contract or visible internal placeholder, and protected the table and package structure.",
+      "review_trace": "responses/result-figure-layout-lock.md"
+    },
+    {
+      "id": "forward-bilingual-trigger-routing",
+      "language": "zh-CN/en",
+      "tested_skills": ["all frontmatter descriptions"],
+      "evaluator": "01a01093-7a78-73e1-ae1f-4935aa7aac9c (Confucius)",
+      "prompt": "Choose exactly one frontmatter skill name for six Chinese/English end-to-end, cross-language polishing, and taxonomy-routing requests.",
+      "required_behaviors": ["route by request language", "allow manuscript language to differ from request language", "return exact frontmatter names", "select exactly one skill per prompt"],
+      "forbidden_behaviors": ["trigger English and Chinese mirrors together", "route polishing by manuscript language alone", "return nonexistent skill names"],
+      "outcome": "pass",
+      "evidence": "The independent frontmatter-only response selected the exact canonical or -zh name for all six prompts and reported no simultaneous mirror triggers.",
+      "review_trace": "responses/language-routing.md"
+    }
+  ],
+  "limitations": "Manual semantic review; rerun after changes to routing, invariants, archetypes, or evidence rules."
+}

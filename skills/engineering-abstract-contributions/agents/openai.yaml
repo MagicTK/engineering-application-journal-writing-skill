@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Abstract And Contributions"
+  short_description: "Link the abstract to mechanisms, contributions and evidence"
+  default_prompt: "Use $engineering-abstract-contributions to revise the abstract and identify minimal body synchronization."
+policy:
+  allow_implicit_invocation: true

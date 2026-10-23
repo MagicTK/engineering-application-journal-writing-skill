@@ -1,0 +1,6 @@
+interface:
+  display_name: "Engineering Application Journal Writing"
+  short_description: "Route and execute end-to-end industrial journal work"
+  default_prompt: "Use $engineering-application-journal-writing-skill to plan, revise, verify, and hand off this engineering-application manuscript."
+policy:
+  allow_implicit_invocation: true
