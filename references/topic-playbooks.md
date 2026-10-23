@@ -6,6 +6,12 @@ Load only the playbook matching the manuscript's actual challenge and method. Th
 
 Evidence lists are menus, not a requirement to run every test. Select a test because it can distinguish the stated claim from a plausible alternative. A multi-rate soft sensor, a zero-shot classifier and a weakly labeled detector need different targets, splits and metrics even when all use neural networks. Source IDs below refer to [published passages and transfer boundaries](published-evidence.md); they support scoped examples, not universal prescriptions.
 
+Names in these guides are scoped examples or routing labels, not an already
+certified glossary. Apply the [name-admission and Chinese-translation procedure](engineering-application-terminology-bank.md#0-admit-names-not-search-counts)
+before promoting a mechanism to a shared recommendation. A single source can
+support its own clearly attributed module, not a general method family; describe
+the verified operation when a broader name has not been established.
+
 ## Contents
 
 Observation and sampling; scarce supervision; multimode/nonstationary operation; multisource/multimodal data; plant-wide and multistage systems; graph/knowledge/causal/fuzzy models; generation and diffusion; LLMs; efficiency and edge use; interpretability and root cause; mixture of experts; compound/open-set faults; dynamic and time-frequency representations; control and decision systems.

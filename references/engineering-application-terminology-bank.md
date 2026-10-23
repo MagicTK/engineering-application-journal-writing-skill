@@ -11,7 +11,66 @@ Author drafts are not terminology authorities; computer-science channel-strategy
 papers may inform a scoped method discussion, not the generic engineering bank.
 
 A term is recommended only when its meaning matches the engineering object and
-model operation. Corpus absence is not a prohibition.
+model operation. Corpus absence is not a prohibition. The tables below explain
+semantic choices; they are not certification that every complete phrase has
+passed the multi-source admission check. Named-mechanism recommendations follow
+the evidence states below, including names already present in topic guides.
+
+## 0. Admit Names, Not Search Counts
+
+Before adding or recommending a mechanism, module, method, operation or processing
+stage as a reusable category, classify the **complete name**:
+
+| Status | Admission and permitted use |
+|---|---|
+| Multi-source general term | At least **two distinct published papers in relevant leading engineering/application journals** use the name, or semantically verified equivalents, for the same kind of object and operation. Prefer three to five when a term is new, polysemous or disputed. Record differences, not just supporting hits. This supports scoped use, not field-wide prevalence. |
+| Attributed paper-specific name | A source defines its own component. Retain its exact name with attribution when discussing that paper; one paper is sufficient for that purpose, not for promoting its name to a generic family. |
+| Functional description | Describe a verified action in ordinary prose, such as `a gate weights the features using the elapsed time since measurement`. This does not establish a named category. Do not disguise an unsupported capitalized module/acronym as a description to bypass the check. |
+| Author-proposed name | A genuinely new component may have an author-approved name and operational definition. Label it as the current work's proposal and keep its map in that project; novelty does not require two earlier papers with the same name. |
+| Pending | Evidence or semantic matching is incomplete. Do not list it as an established recommended mechanism. Keep the correct source name or a precise operational description while checking; do not invent a replacement mechanism. |
+
+This is a shared-bank admission rule, not a demand to attach two citations to
+every ordinary sentence or erase established method identities during a local
+grammar pass. Use existing verified records instead of repeatedly searching the
+same term. An unlisted name has **no completed admission record in this bank**;
+that is not evidence that it is invalid or absent from the literature.
+
+For each proposed entry:
+
+1. Read the manuscript operation, input/output and scope before searching.
+2. Inspect the relevant source definitions or equations. A bibliography entry,
+   quoted title or isolated citation mention does not count. A paper's
+   substantive explanation of an existing operation can count; it need not
+   claim to invent it.
+3. Deduplicate by scholarly work, not filename, website or page count. A
+   preprint, journal version and mirrored copy of one work count once. Note
+   shared lineage; repeated use of the same inherited paper-specific name is
+   not automatically an independent general category.
+4. Record exact matches separately from semantic equivalents. A shared word
+   such as `fusion` does not validate every adjective added to it. Similarity
+   must concern the operation and object, not merely a dictionary synonym.
+5. Verify Chinese **separately** through a standards/terminology authority or
+   a reliable Chinese scholarly source with an identifiable English term and
+   matching definition. Record the URL and passage/section checked. Search
+   snippets are leads; inaccessible bodies remain an access limitation. For
+   competing translations or cross-field meanings, seek a second independent
+   Chinese source. Machine translation and repetition on blogs are not evidence.
+6. Record English admission and Chinese verification as separate states. When
+   Chinese evidence is missing, keep the English term and a clearly descriptive
+   explanation, not a claimed standard translation. A Chinese computing paper
+   may establish a translation without establishing industrial-process usage.
+
+Minimal entry: `full English name | object/operation | status | distinct source
+IDs + PDF pages/sections | exact/equivalent use + differences | Chinese form +
+source URL/passage + status | permitted scope | unresolved checks`.
+
+Review names across entrypoints, shared references, examples, templates, headings
+and figure labels when maintaining the suite. Treat taxonomy labels as routing
+descriptors, not automatically admitted technical terms. Historical executed
+test prompts/responses remain unchanged evidence; their fictional module names
+must not become terminology authorities. English/Chinese mirrors must retain the
+same admission limits. A scan or a partial ledger does not establish that all
+names have been checked.
 
 ## 1. Concept Order
 
@@ -108,7 +167,7 @@ when those operations are what the method actually performs.
 
 ## 5. Feature Operations
 
-| Model action | Preferred term | Boundary |
+| Model action | Candidate wording by meaning | Boundary |
 |---|---|---|
 | Derive features from measurements | feature extraction | do not use for the final combination step |
 | Encode data in a learned space | feature representation; representation learning | name the represented object when ambiguity is possible |
@@ -135,7 +194,7 @@ of one batch, and a training stage are different objects. Likewise, `local/globa
 may refer to temporal receptive fields, variable neighborhoods or plant scope:
 name the referent before borrowing the phrase from another paper.
 
-Preferred patterns:
+Conditional descriptions, not a list of externally established module names:
 
 - stage-wise feature extraction;
 - stage-specific process measurements;
@@ -214,7 +273,9 @@ Extend this bank without mixing topic-specific terms into the generic core.
    paper rather than in this shared reference.
 
 New entries require external published-paper evidence and a clear semantic
-boundary. A term copied from an author draft is not evidence for inclusion.
+boundary, following Section 0. A term copied from an author draft is not evidence
+for general admission. The example families below are routing categories, not
+proof that each member or compound phrase has completed that check.
 
 Use separate sub-banks when enough external evidence has been collected:
 
@@ -228,3 +289,45 @@ Use separate sub-banks when enough external evidence has been collected:
 Keep the generic core stable. A topic-specific entry must state both the
 engineering problem it names and the method/evidence context in which it is
 appropriate.
+
+## 11. Checked Core Names And Remaining Scope
+
+Targeted definition checks on 2026-10-24 support the following **English base
+terms**, not all modified module names containing them. P IDs and PDF page
+positions refer to the [published index](published-evidence.md). These are
+original semantic summaries, not extracted source passages.
+
+| Base term | Checked distinct papers and operation | Boundary |
+|---|---|---|
+| feature extraction | P01 p.4 constructs multiscale features from stage measurements; P14 p.3 constructs temporal features through convolution. | Extracting representations is not selecting an existing subset or combining final decisions. |
+| feature fusion | P01 p.1 combines stage-wise representations; P03 p.1 combines temporal/series features; P14 pp.1-2 combines representations across scales/subgraphs. | Different fusion sources and levels; none licenses an arbitrary `causal`, `reliable` or topology-qualified name. |
+| attention mechanism / self-attention | P11 p.3 and P24 p.3 define query/key/value weighting with the self-attention inputs drawn from the same representation. | The checked common operation does not make all source-specific attention variants equivalent, causal or physically interpretable. |
+| gating mechanism | P08 p.5 uses multiplicative feature gating; P19 p.5 computes scale weights; P33 p.6 gates attention outputs. | Same general regulating role, different inputs and recipients. This does not establish an `age`-qualified module family. |
+| residual connection | P02 p.3 describes the residual backbone connection; P14 p.2 specifies an additive residual operation. | Check addition and any projection. A generic bypass, concatenation or any parallel branch is not automatically the same residual operation. |
+| message passing | P13 p.3 aggregates graph-node information; P14 p.4 updates features through graph convolutional propagation. | Graph computation, not evidence of physical fault propagation or communication-network transfer. |
+
+Chinese wording is independently supported for selected entries below. These
+translation sources do **not** enlarge the 40-paper industrial corpus or certify
+the performance/style claims made by their authors.
+
+| Chinese check | Primary online locator and checked content | Status and transfer boundary |
+|---|---|---|
+| feature fusion / 特征融合 | [Acta Automatica Sinica, c190428](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190428?viewType=HTML), bilingual abstract and keywords | Verified translation for combining features; image-reconstruction context, not an industrial method-prevalence claim. |
+| self-attention / 自注意力 | [Acta Automatica Sinica, c220027](https://www.aas.net.cn/article/doi/10.16383/j.aas.c220027), bilingual Fig.2 caption; [c220715](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c220715?viewType=HTML), bilingual abstract | Translation for self-attention, including named variants. This does not admit those variant names as general families or validate cross-attention. |
+| gating mechanism / 门控机制 | [Acta Automatica Sinica, c250366](https://www.aas.net.cn/article/doi/10.16383/j.aas.c250366), bilingual abstract | Verified base translation; the source concerns expert modules in language processing, not a time-interval gate in a process model. |
+| message passing / 消息传递 | [Journal of Software, 006311](https://www.jos.org.cn/jos/article/abstract/6311), bilingual abstract | The graph-computation context matches the intended sense; not a claim that all physical information transfer is GNN message passing. |
+
+Other Chinese counterparts and other method-family names have not all received
+this completed paired record. Keep them as source-attributed or definition-based
+working terminology until checked for the requested recommendation. In
+particular, a single checked soft-clustering example (P33), cross-attention
+example (P38), or mixture-of-experts example (P36) is not a two-paper admission
+record for that complete category. This is a limit of this ledger, not a claim
+that these methods occur only once in the field.
+
+`Cross-stage feature fusion`, `process-topology-guided integration` and similar
+compositional phrases above describe an operation only when the manuscript
+implements it. Their head words do not certify a conventional named module.
+Where an author defines a specific name, keep that identity separate from the
+shared-bank recommendation. More source checks should extend the evidence rows,
+not turn this incomplete snapshot into an automatic whitelist or blacklist.

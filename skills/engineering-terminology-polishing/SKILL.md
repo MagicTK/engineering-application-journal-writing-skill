@@ -5,7 +5,7 @@ description: Polish English or Chinese engineering-application journal prose whi
 
 # Engineering Terminology And Polishing
 
-Suite version: `4.1.5`
+Suite version: `4.1.6`
 
 ## Mission
 
@@ -57,6 +57,15 @@ Cover:
 Use the same term for the same object across title, Abstract, figures, formulas, tables, and Conclusion.
 
 Use the shared [engineering-application terminology bank](../../references/engineering-application-terminology-bank.md) for generic terms and caution words. Keep manuscript-specific terminology maps in the manuscript project rather than adding them to the shared bank.
+
+Apply its name-admission procedure before recommending a shared mechanism,
+module, method or operation category: at least two distinct relevant published
+journal papers with matching meanings, preferably three to five for ambiguous
+terms. Keep the full name separate from its head word. Verify Chinese online
+independently, preserving the English identity when a translation is unverified.
+Distinguish attributed single-paper names, author-proposed names and plain
+functional descriptions from general terms. Do not erase an accurate name or
+invent a replacement just because general-admission evidence is incomplete.
 
 For disputed state/condition, variable/attribute, sample/record and feature wording, read [context-sensitive terminology decisions](../../references/terminology-decisions.md). The read-only `scripts/audit_terminology.py` at the suite root can list candidates and recurring collocations; it does not judge grammar, expand arbitrary TeX macros or replace active-PDF verification. Do not treat corpus absence as a ban or the author's local preference as a universal rule.
 

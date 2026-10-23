@@ -4,7 +4,7 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.1.5: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.1.6: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
 The [current evaluation record](evals/README.md#current-version-status) identifies the tested version, actual cases, repairs and limits. Independent writing responses and deterministic packaging checks are reported separately. They do not certify every manuscript or every instruction; [versioned changes](CHANGELOG.md) explain what has been updated.
 
@@ -117,7 +117,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.1.5 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.1.6 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|
@@ -128,6 +128,8 @@ Version 4.1.5 contains **28 Skill-entry Markdown files, 26 reference Markdown fi
 | `evals/` | Synthetic scenarios, actual responses, evaluation scope and versioned records |
 
 Terminology guidance separates the object, task, context, scientific meaning and author preference. Paper-specific term decisions stay in that paper's project, not in a universal blacklist.
+
+General mechanism names require [two distinct published-paper contexts and a separate Chinese-language check](references/engineering-application-terminology-bank.md#0-admit-names-not-search-counts). One-paper module names remain attributed; descriptive phrases do not become established categories merely by appearing here. The core evidence ledger is partial, with unresolved entries explicitly left unverified.
 
 ### Conditional Topics
 

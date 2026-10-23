@@ -41,6 +41,13 @@ Do not infer the challenge from the proposed model name. Remove the model mental
 
 Methods are responses, not the paper's engineering problem. A method label never substitutes for a challenge, task, or evidence label.
 
+This table routes questions; it does not certify every label or modified module
+name as an established industrial term. Before recommending a name, apply the
+[multi-source terminology admission check](engineering-application-terminology-bank.md#0-admit-names-not-search-counts).
+Keep broad descriptive strategies, source-specific component names and general
+mechanism families distinct. An uncompleted evidence record does not require
+renaming the implemented method.
+
 ### T. Engineering Task
 
 | Code | Task | Primary output |

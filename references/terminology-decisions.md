@@ -12,6 +12,12 @@ Use this alongside the [terminology bank](engineering-application-terminology-ba
 
 No search hit means **not found in this searched corpus**, not ungrammatical or forbidden. Search frequency is not a measure of scientific correctness. The optional terminology audit script only finds candidates for human review.
 
+For general names of mechanisms, modules, methods or operations, follow the
+[two-source admission and separate Chinese check](engineering-application-terminology-bank.md#0-admit-names-not-search-counts).
+One source may establish its own defined name, not a general category. Preserve
+attribution, author-proposed identities and accurate plain descriptions. A
+familiar head word does not validate every compounded qualifier.
+
 ## Objects And Data Units
 
 | Choice | Use when | Do not imply |

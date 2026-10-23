@@ -12,6 +12,11 @@ Terminology hierarchy; variables and model objects; process/case terms; knowledg
 
 ## 1. Terminology Hierarchy
 
+Named mechanisms and compound module labels require the [shared-bank admission
+check](engineering-application-terminology-bank.md#0-admit-names-not-search-counts),
+including separate verification of Chinese wording. The examples below explain
+objects and prose roles; they are not an automatically approved naming list.
+
 Describe each concept at the correct level.
 
 | Level | Preferred focus | Typical terms |

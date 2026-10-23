@@ -5,7 +5,7 @@ description: Orchestrate end-to-end work on data-driven industrial and engineeri
 
 # Engineering Application Journal Writing
 
-Suite version: `4.1.5`
+Suite version: `4.1.6`
 
 ## Mission
 
@@ -57,6 +57,8 @@ First determine the working mode:
 For direct revision, implement and verify the requested changes. Discuss first only when a decision would change task definition, novelty, method meaning, evidence scope, or protected layout.
 
 For abstract/contribution linkage, use [engineering-abstract-contributions](skills/engineering-abstract-contributions/SKILL.md) and its minimal body-synchronization ledger. For authorized training or reruns, use [engineering-experiment-automation](skills/engineering-experiment-automation/SKILL.md); writing alone does not authorize execution. For disputed words, consult [context-sensitive terminology](references/terminology-decisions.md) and [published evidence](references/published-evidence.md), not a universal blacklist.
+
+Before recommending a general mechanism/module/method name, apply the [terminology admission rule](references/engineering-application-terminology-bank.md#0-admit-names-not-search-counts): two distinct matched published-paper contexts, preferably three to five for ambiguous terms, plus a separate reliable online check of Chinese wording. Preserve attributed single-paper names and author-defined new components without presenting them as established categories. Existing guide examples and synthetic test names do not bypass this rule.
 
 For journal migration, section consolidation, or completeness checks before shortening, read [journal migration and completeness](references/journal-migration-and-completeness.md) conditionally. It distinguishes verified venue requirements from observed writing choices and covers evidence-preserving restructuring and repeated-run reporting; it is a supporting reference, not another installable skill or a default page-cutting workflow.
 

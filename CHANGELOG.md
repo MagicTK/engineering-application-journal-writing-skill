@@ -1,5 +1,13 @@
 # Changes
 
+## 4.1.6 (2026-10-24)
+
+- Add a scoped two-paper admission requirement for shared mechanism, module and method names, with three-to-five-source review for ambiguous cases and separate online verification of Chinese wording.
+- Distinguish general terms, attributed paper-specific names, author proposals, functional descriptions and unresolved candidates. Existing routing examples do not certify complete compound names.
+- Record checked English base-term contexts and selected Chinese publication locators without claiming a completed whole-bank audit or a larger industrial corpus.
+- Replace filename-based PDF deduplication with byte-identity checks; retain page-level candidate contexts, reference-region warnings and unresolved scholarly-work identity. The local extractor's JSON schema changes to 2 and does not report automatic admission counts.
+- Preserve prior executed evaluation records. One fresh respondent passed four frozen-baseline requests, then reread the revised source for those four and two post-freeze controls. All six final outcomes pass within this terminology scope; no measured improvement over the passing baseline or full-suite certification is claimed. Seven new candidate-extractor tests bring the deterministic test count to 43.
+
 ## 4.1.5 (2026-10-24)
 
 - Clarified sampling frequency versus sampling period and kept source-specific rate-group numbering separate from physical units.

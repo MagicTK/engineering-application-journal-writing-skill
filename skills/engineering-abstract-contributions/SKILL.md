@@ -5,7 +5,7 @@ description: Revise an industrial or engineering paper's abstract and contributi
 
 # Engineering Abstract And Contributions
 
-Suite version: `4.1.5`
+Suite version: `4.1.6`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->

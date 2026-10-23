@@ -5,7 +5,7 @@ description: 数据驱动工业智能与工程应用期刊论文写作总控 Ski
 
 # 工程应用期刊论文写作总控
 
-套件版本：`4.1.5`
+套件版本：`4.1.6`
 
 ## 一、任务目标
 
@@ -47,6 +47,8 @@ description: 数据驱动工业智能与工程应用期刊论文写作总控 Ski
 识别当前请求属于：讨论、论文架构、正文修改、实验与证据设计、图表/LaTeX 生产、严谨性审稿，还是终稿交接。用户明确要求直接修改时，应完成修改和验证；只有在任务定义、创新点、方法含义、证据范围或受保护排版可能改变时才先讨论。
 
 摘要、贡献及正文关联使用[摘要与贡献](../engineering-abstract-contributions-zh/SKILL.md)和最小同步清单；获准训练或重跑时使用[实验自动化](../engineering-experiment-automation-zh/SKILL.md)，仅写作不授权执行。争议术语按[场景决策](../../references/terminology-decisions_CN.md)和[已发表证据](../../references/published-evidence.md)核对，不套用全局禁词表。
+
+推荐通用机制、模块或方法名之前，按[名称准入规则](../../references/engineering-application-terminology-bank_CN.md#零专业名称准入与译名核查)核对至少两篇不同已发表论文的相同语义，歧义较大时尽量三至五篇；中文译法另查可靠在线来源。保留有出处的单篇专名和作者新提组件，但不包装为已确立的通用类别。指南已有例子和合成测试名称也不免于此要求。
 
 涉及转刊、章节整合或压缩前完整性核对时，按需读取[期刊迁移与完整性](../../references/journal-migration-and-completeness_CN.md)。该参考区分已核实的期刊要求与观察到的写作选择，指导保全证据的结构调整及重复运行报告；它不是新的可安装技能，也不是默认压页流程。
 

@@ -1,3 +1,5 @@
+# Search candidates, not an approved glossary or a blacklist.
+# Full names require semantic admission and separate Chinese verification.
 # Engineering objects and tasks
 industrial process
 production process
