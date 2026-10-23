@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.11 (2026-10-24)
+
+- Add paired max-pooling and scoped cluster-soft-assignment definitions, with independent Chinese translation sources. Distinguish exact phrase matches from substantively matched definitions and shared methodological lineage. The selected index contains 48 papers, not a completed audit of every named mechanism.
+- Clarify pooling axes and represented scope, and distinguish graded assignments from subsequent hard decisions. Preserve legitimate global readouts and author-defined module names instead of turning local examples into blanket restrictions.
+- Keep the existing five-reference edit scope; no new topic guide or template. Correct stale source-count text in both terminology-bank introductions. Actual fictional-case validation and its limits are recorded separately; no manuscript or results are changed.
+
 ## 4.1.10 (2026-10-24)
 
 - Add a scoped class-prototype definition record from two published engineering contexts, with separate online Chinese terminology checks. The selected index contains 47 papers; the added smart-grid study is adjacent evidence, not proof of process-industry prevalence.

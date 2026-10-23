@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This revision uses a selected 47-paper corpus, not a systematic review. It adds a targeted class-prototype definition check to the earlier 46-paper corpus. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 47 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This revision uses a selected 48-paper corpus, not a systematic review. It adds a targeted soft-assignment definition check and revisits pooling definitions in existing sources. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 48 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本版在原有 46 篇基础上，针对类原型定义补读一篇，合计 47 篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为 PDF 文件页序。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本版在原有47篇基础上补查一篇软分配定义，并回查既有来源中的池化操作，合计48篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -59,6 +59,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P45 | [A Lightweight and Adaptive Knowledge Distillation Framework for Remaining Useful Life Prediction](https://doi.org/10.1109/TII.2022.3224969) | Adjacent equipment prognostics: hidden-feature/regression-target distillation, confidence-based exits and reparameterization address different parts of training and prediction. |
 | P46 | [Cross-sensor collaborative distillation with dynamic competitiveness balancing for fault diagnosis under imbalanced missing data](https://doi.org/10.1016/j.neucom.2026.133238) | Adjacent motor diagnosis: multisensor guidance trains single-sensor representations; sensor missingness is not class imbalance. The unnormalized-score prose conflicts with its softened-distribution formula and is not adopted as a verified operation. |
 | P47 | [Learning to Match Prototype for Few-Shot Classification of Attacks and Faults in Smart Grids](https://doi.org/10.1109/TCYB.2025.3632113) | Adjacent power-system classification: support-feature means provide class representatives, and a learned comparison yields query scores. Prototype construction, matching and episodic training have distinct roles; class overlap and label access require explicit definitions. |
+| P48 | [A Novel Clustering-Guided Framework for Rotating Machinery Fault Diagnosis With Extremely Limited Labeled Data](https://doi.org/10.1109/TII.2025.3568512) | Adjacent machinery diagnosis: sample-to-centroid soft assignments connect features to clustering losses and later hard labels. Label-guided targets and VAT are separate operations, not properties of every soft assignment. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -165,6 +166,14 @@ P47 pp.1,3-4 were read for the abstract, class/prototype definition and training
 Together with P46 pp.5-6, Eqs.(7)-(10), this supports a shared feature-space class-representative sense, not identical downstream use: P46 uses prototype similarities in knowledge transfer, whereas P47 uses query-to-prototype matching for classification. Preserve this input/output distinction in abstracts and contributions. Neither an encoder-derived mean nor its name automatically establishes an independently optimized parameter, physical operating state or a novel component. The two adjacent engineering settings do not make prototype learning mandatory for process diagnosis.
 
 本次只核查类代表的构造、消费该对象的操作，以及训练/预测标签关系；不把均值、参考样本和独立训练向量混为一物，也不把来源论文的完整模块名推广为通用机制。中文译名另见术语库的在线双语来源。
+
+## Pooling And Assignment Checks / 池化与分配定义补查
+
+P11 p.2 Eq.(2) and P15 p.5 Eq.(12) define regional max pooling. P01 p.4 Eq.(3) places global average pooling inside stage-wise extraction before later stage fusion; P02 pp.3-4 Eqs.(4)-(6) constructs a covariance-based pooled object and applies a matrix square root. These checks distinguish computation and represented scope, not interchangeable synonyms or guaranteed benefits. The max-pooling pair does not certify all named pooling variants.
+
+P48: [A Novel Clustering-Guided Framework for Rotating Machinery Fault Diagnosis With Extremely Limited Labeled Data](https://doi.org/10.1109/TII.2025.3568512), IEEE Transactions on Industrial Informatics, 2025. The [CityUHK published-version copy](https://scholars.cityu.edu.hk/ws/portalfiles/portal/315643543/305329621.pdf) includes a cover: PDF p.5 is printed p.6906. Its Section II-A, Eqs.(1)-(4), defines sample-to-centroid soft assignments, a sharpened training target and label-based target replacement. Section II-D on PDF p.6 distinguishes these assignments from the hard label obtained by argmax. Read scope: cover, abstract, these method passages and the adjacent centroid-initialization/VAT descriptions, not full experimental verification.
+
+P33 p.3 Section III-B, Eqs.(1)-(3), substantively explains the same normalized Student-t assignment family in DEC preliminaries. This is a semantic-equivalent definition, not a literal `soft assignment` hit or a claim that P33 proposes DEC. Both sources share methodological lineage; the pair supports a base operation used across papers, not two independent inventions. The checked assignment objects are samples, not process variables, and this evidence does not certify probability calibration or a new fuzzy gate. Chinese translation evidence is separately located in the terminology bank.
 
 ## Reusable Lessons / 可迁移结论
 
