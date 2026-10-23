@@ -60,6 +60,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **P45-P46 展示教师指导的学习：** 说明传递对象及使用它的学习者，再关联训练后预测器与工程输出，不把训练损失写成师生特征的最终融合。针对已核实的回归设计，合成两句为：Teacher features and predictions guide the student during training. The trained student estimates product quality from the available process measurements. 真实论文应补充具有区别性的传递操作，此通用描述不是创新贡献。若预测还使用独立退出控制器或保留教师调用，应说明真实关系，不能归功于蒸馏本身。贡献可连接特定指导规则与其训练的学生能力，但仍需各自的创新和结果依据。
 
+**P21 展示类别指导的表征学习：** 将估计类别信息与它在训练中指导的表征关系连接，不把时间模块和图模块列成互不相关的创新。对接口已核实设计的合成表达为：Temporal contrastive learning trains the encoder to associate contexts with later features across augmented views. Class estimates guide relationships between training samples, linking this representation objective to the diagnostic task. 预测时使用的编码器/分类器应在总览交代；只有为区分预测路径确有必要时才补入摘要。这里是训练关联，不是物理量预测或工艺拓扑学习。创新应在真实的耦合或目标构造及其证据，而不只是使用两种标准目标；其他对比设计仍需分别说明对象与配对依据。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

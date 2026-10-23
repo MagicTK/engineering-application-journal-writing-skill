@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.12 (2026-10-24)
+
+- Add two-source base-name records for contrastive learning and pseudo-labels, with independently checked Chinese scholarly translations. Keep hard class targets, soft class guidance, contrasted objects and source-specific module names distinct.
+- Connect training objectives to diagnostic prediction in the existing abstract/contribution and scarce-label guides. Do not confuse pair labels with physical fault classes, sample graphs with production topology, or latent pretext prediction with deployed forecasting.
+- Keep six existing reference files as the substantive edit scope, with no new topic guide or template. The selected corpus remains 48 papers; focused source reading and fictional-case validation are not a whole-bank certification.
+
 ## 4.1.11 (2026-10-24)
 
 - Add paired max-pooling and scoped cluster-soft-assignment definitions, with independent Chinese translation sources. Distinguish exact phrase matches from substantively matched definitions and shared methodological lineage. The selected index contains 48 papers, not a completed audit of every named mechanism.
