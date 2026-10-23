@@ -57,7 +57,7 @@ Generalization is an evaluation claim. Identify the population to which the pred
 Use these as editing questions, not rigid sentence templates:
 
 1. **Known to new:** does the opening connect to a defined object or the preceding result before introducing the next concept?
-2. **Subject and action:** can the reader identify what performs the operation, what changes, and under what condition? Keep the subject near its verb.
+2. **Subject and action:** can the reader identify what performs the operation, what changes, and under what condition? Keep the subject near its verb. When listing operations, make modifier scope explicit: a clause defining how one input is obtained must not ambiguously describe subsequent transformations. Reorder or split the sentence without changing the mathematical dependency.
 3. **Emphasis:** does the sentence end on the information the reader should carry forward?
 4. **Specific reference:** replace an ambiguous “this” with “this missingness pattern,” “this comparison,” or the appropriate object.
 5. **Information gain:** does the sentence add a fact, relation, operation, evidence, or necessary inference? Delete statements that only announce importance or clarity.

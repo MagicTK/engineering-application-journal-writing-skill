@@ -135,6 +135,9 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 | gating mechanism | P08 p.5 乘性特征门控；P19 p.5 尺度权重；P33 p.6 对注意力输出门控 | 调节作用相近，但输入和受作用对象不同；不据此建立带 age 修饰的通用家族 |
 | residual connection | P02 p.3 残差骨干；P14 p.2 加性残差操作 | 核对加法及映射，旁路、拼接或任意并行分支不自动等价 |
 | message passing | P13 p.3 图节点信息聚合；P14 p.4 图卷积特征传播 | 图计算不证明物理故障传播，也不等于通信网络传输 |
+| fuzzy clustering；fuzzy c-means (FCM) | P28 p.3 式(4)-(7)及算法1定义隶属度加权距离与中心/隶属度交替更新；P33 pp.3-4 的 III-C 及式(5)-(6)定义 FCM | 基础算法相同，但一个用于机械信号的储备池特征强化，一个用于不完整时序聚类；不把完整网络、强化环节或插补机制当作同义模块 |
+| diffusion model | P32 p.3 的 III-A 定义人工加噪与学习反向生成；P35 p.3 的 III-A 及式(14)在压缩特征上进行条件生成，再解码为信号 | 生成对象与条件不同；不自动表示传感器降噪、相同计算开销或某种通用工业模块专名 |
+| graph convolution；graph convolutional network (GCN) | P07 p.7 式(18)-(19)为归一化邻接、特征投影及门控非线性；P14 p.4 式(33)-(34)为邻接加权、特征投影及 ReLU | 共同点是图特征计算；变量-时间节点与过程变量节点的含义不同，图卷积不自动证明物理故障传播或因果拓扑 |
 
 中文另行核验：
 
@@ -144,6 +147,9 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 | self-attention / 自注意力 | [自动化学报 c220027](https://www.aas.net.cn/article/doi/10.16383/j.aas.c220027) 的图2双语图注；[c220715](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c220715?viewType=HTML) 的双语摘要 | 支持基础译法，不把其中的特有变体升级为通用家族，也不代替 cross-attention 的核查 |
 | gating mechanism / 门控机制 | [自动化学报 c250366](https://www.aas.net.cn/article/doi/10.16383/j.aas.c250366)，双语摘要 | 来源为语言处理中的专家模块，不为工业时间间隔门控的完整名称背书 |
 | message passing / 消息传递 | [软件学报 006311](https://www.jos.org.cn/jos/article/abstract/6311)，双语摘要 | 图计算语义对应；不能扩展为一切物理信息转移 |
+| fuzzy clustering / 模糊聚类；fuzzy c-means / 模糊c均值 | [自动化学报 c200392](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c200392?viewType=HTML)，双语题名及摘要 | 摘要明确区分传统 FCM 与污水处理监测中的鲁棒加权变体；支持基础译法，不把该变体完整专名升级为通用家族 |
+| diffusion model / 扩散模型 | [软件学报 007511，期刊电子版第413页](https://ebook.xml-journal.net/rjxb/2026/04/files/basic-html/page413.html)，双语题名、摘要和中文关键词 | 图像生成综述中的生成模型用语；不扩充流程工业应用证据，也不支持传感器信号恢复主张 |
+| graph convolutional network / 图卷积神经网络 | [自动化学报 c190720](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190720?viewType=HTML)，图8双语图注 | 核实网络名称译法；可访问的图注不单独验证所有图卷积变体及边的物理含义，英文操作依据见上表 |
 
 中文来源仅用于译法核对，不扩充 40 篇工业语料计数，也不为来源论文的实验或行文质量背书。其他中文对应和方法家族尚未全部完成配对记录；推荐前仍需检查，不能宣称全库通过。P33 的 soft clustering、P38 的 cross-attention、P36 的 mixture of experts 各有一个已读例子，不是各自完整类别的双论文准入记录，更不代表全领域仅这一篇。
 

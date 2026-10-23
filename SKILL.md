@@ -5,7 +5,7 @@ description: Orchestrate end-to-end work on data-driven industrial and engineeri
 
 # Engineering Application Journal Writing
 
-Suite version: `4.1.6`
+Suite version: `4.1.7`
 
 ## Mission
 

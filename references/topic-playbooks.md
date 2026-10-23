@@ -166,6 +166,8 @@ For fuzzy models, define the membership domain, rule/aggregation operation and i
 
 Do not treat all fuzzy mechanisms as a rule base. P27 uses a fuzzy predictor after deep feature extraction, P28 uses layer-wise fuzzy clustering to reinforce reservoir features, and P33 couples fuzzy clustering with imputation. Identify whether membership describes an input region, a temporal state, a cluster or another defined object. Clustering memberships do not by themselves supply readable expert rules; a fuzzy layer or a physically motivated kernel does not make the entire model interpretable without specifying what can be explained and to whom.
 
+Treat source-specific uses of `reinforcement` by their defined operation. P28 p.3 uses fuzzy clustering and center-related targets for feature fitting; that name is not evidence of reinforcement learning. Describe the actual objective and information flow. Only use the reinforcement-learning category when the study implements the corresponding learning setup, rather than inferring it from this word alone.
+
 Choose removed/randomized/corrupted-prior controls when they isolate the knowledge claim. Preserve constraints that define a valid process when constructing a perturbation; a physically impossible random graph can be a stress test but not a realistic operating alternative.
 
 ## 7. Generative, Diffusion, Or Data-Augmentation Methods

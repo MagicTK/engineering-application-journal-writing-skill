@@ -1,5 +1,13 @@
 # Changes
 
+## 4.1.7 (2026-10-24)
+
+- Extend the existing paired terminology ledger using six original papers' definitions and displayed equations for fuzzy clustering/FCM, diffusion models and graph convolution/GCN; keep source-specific variants and application domains separate.
+- Add independently checked Chinese scholarly locators, distinguishing bilingual abstracts from a network-name figure caption and leaving narrower unsupported claims unresolved.
+- Clarify that a source's feature-reinforcement terminology does not establish a reinforcement-learning setup. Keep the actual fitting objective and information flow.
+- Clarify modifier scope in method sentences so descriptions of input construction do not ambiguously govern later transformations.
+- Preserve the 4.1.6 evaluation record. One fresh respondent completed three baseline cases, then four candidate cases including a genuine offline-reinforcement-learning control. A graph-description ambiguity was retained in the initial evidence and corrected after a prose-rule refinement; all four final-source retests pass in that same context. This is scoped writing evidence, not full-suite certification or a statistical improvement claim.
+
 ## 4.1.6 (2026-10-24)
 
 - Add a scoped two-paper admission requirement for shared mechanism, module and method names, with three-to-five-source review for ambiguous cases and separate online verification of Chinese wording.
