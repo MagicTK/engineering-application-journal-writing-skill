@@ -5,7 +5,7 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 # General Method With Benchmark And Real-World Validation
 
-Suite version: `4.1.0`
+Suite version: `4.1.1`
 
 ## Mission
 
@@ -200,6 +200,8 @@ Do not write two disconnected result summaries. Synthesize them:
 5. What level of generality is justified?
 
 Use `consistent with` when the two cases support a common interpretation. Do not claim universal generalization from two cases.
+
+Retain different or reversed effects across cases and discuss the documented differences without inventing their cause. Separate retraining the same method for each case from transferring one fitted model. Do not pool metrics with incompatible targets, units or denominators. Use the [Discussion guidance](../../references/section-writing-guide.md#15-discussion) to turn those patterns into a bounded engineering interpretation.
 
 ## 14. Discussion And Conclusion
 

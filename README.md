@@ -4,9 +4,9 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.1.0: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.1.1: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
-Checked on 2026-10-24: 21 synthetic cases in one fresh responding context, followed by a targeted five-case retest after a prose-quality refinement; 36 deterministic tests and 28 entrypoint checks. This is scoped package and behavior evidence, not certification of every topic or manuscript. See the [evaluation record](evals/reviews/v41-independent-evaluation.md).
+This release reconciles cross-case interpretation, conclusion guidance and figure-preservation scope. Five new synthetic cases were evaluated in one fresh responding context; two were retested in the same context after a prose-quality repair. All final outcomes passed within that scope. See the [current report](evals/forward-test-report.json) and [review](evals/reviews/v411-independent-evaluation.md). The [4.1.0 evaluation](evals/reviews/v41-independent-evaluation.md) remains historical evidence, not certification of changed instructions or every manuscript.
 
 ## What It Does
 
@@ -117,7 +117,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.1.0 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.1.1 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|

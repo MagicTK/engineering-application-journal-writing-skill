@@ -156,7 +156,7 @@ Match the artifact to an engineering question:
 
 Use `consistent with` rather than causal wording unless the intervention and study design support the causal claim. A root-cause accuracy metric needs corresponding root-cause ground truth and an explicit evaluation unit; fault-category labels alone may not supply it. Deletion, replacement, or masking can create out-of-distribution inputs, so state the perturbation semantics and check whether that change explains the apparent attribution effect.
 
-A confusion matrix is useful only when class-pair errors are scientifically important. It is not required for every classification paper. Prefer an analysis that tests a central mechanism or engineering failure mode when page budget is limited.
+A confusion matrix can be useful when class-pair errors are scientifically important; it is not required for every classification paper. During evidence planning, prefer analysis that answers a central mechanism or engineering question. For an existing approved manuscript, preserve its figures and metrics: a constrained page budget or language review is not authorization to delete evidence. Propose any change to that scope for author confirmation.
 
 Sensitivity and interpretation plots are result-dependent artifacts. Their curves, point clouds, heat maps, and error bars must be generated from traceable experimental outputs; a design brief or placeholder may be prepared before the data, but the visible result cannot be fabricated.
 

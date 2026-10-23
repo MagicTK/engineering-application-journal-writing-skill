@@ -39,8 +39,8 @@ Recommended functions:
 1. General engineering context and the main difficulty.
 2. Specific limitation of existing methods.
 3. Proposed method and its purpose.
-4. Principal mechanism linked to challenge 1.
-5. Principal mechanism linked to challenge 2.
+4. Principal mechanism and the requirement it addresses.
+5. Any additional operation essential to that mechanism or its output, with the actual relationship made clear.
 6. Benchmark and real-world case studies.
 7. Evidence-based conclusion on effectiveness and practical relevance.
 
@@ -248,7 +248,7 @@ Include only facts that support understanding and reproducibility:
 - knowledge or constraints used by the method;
 - source of labels and their timing relative to prediction.
 
-Use a process figure when the textual description is difficult to follow. Put it before result figures.
+Use a process figure when the textual description is difficult to follow, and introduce its engineering context before interpreting result figures. Exact float placement follows the template and approved layout; this reading order does not authorize moving protected figures.
 
 ## 10. Comparison Methods
 
@@ -300,6 +300,10 @@ Recommended paragraph sequence:
 
 Write the supported finding directly, followed by its measurement and interpretation. Keep figure captions readable on their own, but do not mechanically repeat each result in an opening paragraph, closing paragraph, and caption. Distinguish observation from a mechanism inference; a plausible explanation needs a discriminating comparison or analysis before it can be treated as demonstrated.
 
+Select the pattern that answers the experimental question rather than narrating every model row. A main comparison can establish the aggregate ordering, a difficult fault or target can qualify that ordering, and a matched control can test the proposed explanation. These are distinct evidential roles, not compulsory paragraphs. A lower comparator score alone does not identify which feature it failed to learn. State numerical differences with their units and reference: percentage points for a difference between percentages, relative percent change only with an explicit denominator, and physical units for unnormalized prediction errors.
+
+Keep manuscript prose distinct from the accompanying review. A short Results/Discussion passage should state the relevant pattern, its engineering trade-off and the scope needed to read it correctly. Do not append a catalogue of absent experiments or unclaimed benefits to every paragraph. Put detailed verification requests in author notes; retain a material limitation in the prose when omission would alter its meaning. Direct descriptions of the measured setting can often carry scope without repeated `does not prove` clauses. Do not compensate for excessive detail by hiding an unfavorable outcome or splitting it into many tiny paragraphs.
+
 For imbalanced classification, do not rely on accuracy alone. Use macro metrics, weighted metrics, and class-wise behavior as appropriate.
 
 ## 13. Ablation And Sensitivity
@@ -335,7 +339,7 @@ Use `supports`, `is consistent with`, or `provides auxiliary evidence`. Do not c
 
 For feature projections, identify samples, model/run, preprocessing and projection settings. Matching colors and subplot scales do not verify that different methods used the same sample set. If an inherited comparison plot lacks its original embeddings or sample identifiers, record that provenance limit rather than inventing a common projection procedure. A visually separated projection is not proof of out-of-sample diagnosis or of learned physical causality.
 
-A confusion matrix is optional. Retain it only when specific class confusions carry engineering meaning and cannot be communicated more effectively through class-wise results, localization, robustness, or mechanism-focused analysis.
+A confusion matrix is optional when designing the evidence presentation. It is useful when specific class confusions carry engineering meaning; other analyses may answer a different central question better. When revising an existing manuscript, preserve approved figures and their layout. Suggest a possible omission or alternative separately if needed; language review or a page target does not authorize deleting them.
 
 ## 15. Discussion
 
@@ -355,6 +359,10 @@ Explain what the findings imply for the engineering decision and why the remaini
 
 Discussion may be a short subsection at the end of Experiments. Its length follows the findings and their implications, not a minimum paragraph count. One specific paragraph can be more useful than several generic ones.
 
+Across cases, separate an unchanged method principle from case-specific topology, inputs, labels and fitted parameters. The same method trained separately in two cases is not a trained model transferred between them. When effects differ, report the difference and examine documented task/data/configuration changes; do not assign a cause merely because the case names differ. Compare directions or normalized quantities only where meaningful, and do not average incompatible task metrics into a new overall score. A common positive result supports the evaluated cases; a mixed result may reveal a useful boundary rather than invalidate the entire study.
+
+An engineering implication should explain what a finding changes for the stated use: for example, whether extra measurements provide useful prediction information or whether reduced computation meets a stated deadline. If only model-level evidence exists, retain that level. Do not turn a classification gain into reduced downtime, financial savings or a maintenance recommendation without the corresponding decision and cost evidence. Put hypotheses and the specific comparison needed to test them in author notes or clearly identified discussion, not into completed-result language.
+
 ## 16. Conclusion
 
 Recommended order:
@@ -363,9 +371,11 @@ Recommended order:
 2. Summarize the principal mechanism at the idea level.
 3. Summarize benchmark and/or real-world evidence without repeating the full results table.
 4. State engineering relevance within the demonstrated scope.
-5. Give focused future work linked to current limitations.
+5. When useful, give focused future work linked to a material remaining condition.
 
 Do not introduce new contributions, experiments, or claims in the Conclusion.
+
+Close with what is now established, not another module inventory or a list of fashionable methods. Future work is optional unless required by the venue; choose an unresolved condition, why it matters, and the evaluation or capability needed next. A proposed next study is not an achieved benefit. P01 and P11 close without a future-work list, whereas P03 and P25 discuss extensions; these variations support choice, not a mandatory conclusion template. See the [source-reading notes](published-evidence.md).
 
 ## 17. Captions And Cross-References
 

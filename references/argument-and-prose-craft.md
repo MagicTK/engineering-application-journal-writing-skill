@@ -50,7 +50,7 @@ Avoid collective accusations such as “existing methods ignore industrial compl
 
 For a focused comparison, justify the reference method by task relevance and comparable assumptions. Report improvement relative to the evaluated references. A focused comparison need not claim superiority to every method, and it must still include the closest relevant alternatives when they could change the conclusion.
 
-Generalization is an evaluation claim. Identify what changes between training and evaluation, such as operating regimes, time periods, equipment, or sites. Robustness to a specified missing-data pattern does not by itself establish transfer to another plant. Link practical value to a measured quantity such as false alarms, detection delay, estimation error, annotation effort, or resource demand when that quantity is available.
+Generalization is an evaluation claim. Identify the population to which the prediction claim applies and the independent units held out. New samples from the same population can evaluate predictive generalization; changed regimes, periods, equipment or sites require corresponding evidence when transfer is claimed. Robustness to a specified missing-data pattern does not by itself establish transfer to another plant. Link practical value to a measured quantity such as false alarms, detection delay, estimation error, annotation effort, or resource demand when that quantity is available.
 
 ## 4. Make Sentences Carry The Reasoning
 

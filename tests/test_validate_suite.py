@@ -61,17 +61,25 @@ class SuiteValidatorTests(unittest.TestCase):
             )
 
     def test_comment_case_has_literal_tex_commands(self) -> None:
-        for filename in ("v4-behavior-cases.json", "forward-test-report.json"):
+        for filename in (
+            "v4-behavior-cases.json",
+            "history/v4.0.0/forward-test-report.json",
+            "history/v4.1.0/forward-test-report.json",
+            "forward-test-report.json",
+        ):
             payload = json.loads((ROOT / "evals" / filename).read_text())
-            case = next(c for c in payload["cases"] if c["id"] == "v4-comment-lock")
-            self.assertIn(chr(92) + "iffalse", case["prompt"])
-            self.assertNotIn(chr(92) * 2 + "iffalse", case["prompt"])
+            matches = [c for c in payload["cases"] if c["id"] == "v4-comment-lock"]
+            if filename != "forward-test-report.json":
+                self.assertEqual(1, len(matches), filename)
+            for case in matches:
+                self.assertIn(chr(92) + "iffalse", case["prompt"])
+                self.assertNotIn(chr(92) * 2 + "iffalse", case["prompt"])
 
     def test_manifest_version_and_pairs(self) -> None:
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.0", suite["version"])
+        self.assertEqual("4.1.1", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

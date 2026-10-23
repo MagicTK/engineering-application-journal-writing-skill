@@ -102,6 +102,19 @@ The following are original functional analyses of passages read during revision,
 
 These analyses inform [abstract craft](abstract-and-contribution-craft.md), [contribution routes](contribution-narratives.md), [terminology decisions](terminology-decisions.md), and [conditional topic guidance](topic-playbooks.md). They do not supply manuscript-ready claims, new experimental evidence, or a license to copy source prose.
 
+## Results And Closing Sections / 结果与结尾段落
+
+Additional targeted reading on 2026-10-24 examined these passages in the same corpus. These observations concern argument organization; they do not verify the source experiments or endorse every explanatory claim.
+
+| Source and PDF position | Observed structure | Transferable decision and boundary |
+|---|---|---|
+| P01 pp.7-8 | Results move from aggregate comparisons to difficult fault categories and fusion controls; the conclusion returns to the multiscale/multistage principle without a future-work list. | Select meaningful result patterns instead of transcribing every row. An explanation of why a comparator underperforms still requires its own evidence; an aggregate rank alone does not establish a failed mechanism. |
+| P03 pp.7-8 | A production-case description and comparison lead to a short method/evaluation conclusion and explicit future directions. | Distinguish the established result from proposed extensions. A named future model family does not establish that it resolves a present limitation; choose the needed capability and test, rather than copying the future-method name. |
+| P11 pp.8-9 | Coking-furnace settings identify which case-one parameters are reused and which output layers change; the conclusion emphasizes the methodological principle without a separate future-work list. | Shared design with case-specific fitting is not evidence that one trained model transferred. Published two-case structure does not make all data, configurations or evidence roles identical. |
+| P25 p.11 | The conclusion links multirate input treatment and supervised/unsupervised branches to quality prediction, then identifies further quality-target rates and label-quality conditions. | Future work can follow from a named measurement/supervision boundary. These proposed extensions are not already verified outcomes, and another paper need not inherit them. |
+
+同一语料中，结尾有的只收束方法与证据，有的另列后续条件，不能统一成固定段数。借鉴的是结果模式、方法角色和后续问题之间的关系，不照搬数值、因果解释、方法名称或未来收益。
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.

@@ -5,7 +5,7 @@ description: Revise an AI for Engineering journal manuscript in response to revi
 
 # Engineering Journal Review Response
 
-Suite version: `4.1.0`
+Suite version: `4.1.1`
 
 ## Mission
 

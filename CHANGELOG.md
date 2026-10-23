@@ -1,5 +1,15 @@
 # Changes
 
+## 4.1.1 (2026-10-24)
+
+- Reconciled within-population generalization guidance with the evidence-design rules; removed residual two-challenge pressure from the abstract outline.
+- Distinguished evidence planning from authority to remove approved figures or change their placement during language review.
+- Added cross-case interpretation guidance: separately fitting a method is not transferring a fitted model; retain reversed effects and do not combine incompatible metrics.
+- Strengthened result-to-Discussion-to-Conclusion writing using targeted closing-section readings from four existing corpus sources. Kept future work optional and connected to a specific unresolved condition, not a list of fashionable models.
+- Clarified the Chinese two-case quality gate so a real-world dataset remains legitimate while its engineering provenance and task must be explained.
+- Separated manuscript Results/Discussion from accompanying verification notes, preserving material scope and unfavorable outcomes without stacking review-style caveats in every paragraph.
+- Evaluated five new synthetic cases in one fresh responding context; after a prose-quality repair, retested two in that same context. All five final outcomes passed within the stated scope; initial responses and the quality issue remain visible. The 4.1.0 report remains immutable historical evidence.
+
 ## 4.1.0 (2026-10-24)
 
 - Deepened existing abstract and contribution guidance using checked passages from the initial 26-paper corpus, then added twelve targeted sources; added explicit object flow, parallel-path and training-versus-inference distinctions.
