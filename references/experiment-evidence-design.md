@@ -92,6 +92,8 @@ Check whether adjacent or overlapping windows cross splits. Ensure normalization
 
 For early prediction or online monitoring, exclude future measurements, downstream inspection results, or labels unavailable at decision time.
 
+Judge this boundary at the actual output time, not from an architecture name. A bidirectional encoder may analyze a complete batch at batch end, or a completed trailing window for its endpoint decision. Unmasked attention within that available input is not automatically future leakage or a pointwise causal model. Likewise, smoothing over a TRAIN sequence can support parameter fitting while TEST prediction uses only current and past observations. A historical state estimate revised with later observations is a delayed estimate, not the prediction originally available at that earlier time. State the target time, information cutoff and issued output before proposing a mask or model change.
+
 For adaptive evaluation, record the sequence `predict -> receive permitted feedback -> update` or the actual declared alternative. Target labels used to measure a prediction must not silently enter that prediction's adaptation step. Delayed quality assays require their release times to be distinguished from the time of the represented process sample. For augmentation, split independent real units before fitting the generator; synthetic relatives of a test unit must not leak into training. These rules concern information access, not whether a model is called online, generative or semisupervised.
 
 ## 4. Comparison Fairness Record

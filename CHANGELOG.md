@@ -1,5 +1,14 @@
 # Changes
 
+## 4.1.5 (2026-10-24)
+
+- Clarified sampling frequency versus sampling period and kept source-specific rate-group numbering separate from physical units.
+- Connected acquisition conditions to the implemented estimation route: observed-subset inference, completed-grid prediction, representation alignment and scarce-label learning are not interchangeable mechanisms. Added one conditional, synthetic prose example inside the existing argument guide.
+- Distinguished training smoothing, completed-batch bidirectional analysis, trailing-window attention and current-time prediction. Temporal validity follows the information available for the actual output, not an architecture-name blacklist.
+- Rechecked P08/P17/P34 formulation and method passages, including displayed sampling definitions and training/prediction flow. Kept the existing 40-source, 14-pair, 26-reference organization.
+- Removed a stale duplicated evaluation summary from the bilingual README; the current evaluation page now owns test-scope reporting.
+- One fresh respondent passed four baseline cases, then reread the revised source for those four and a post-freeze completion-route positive control. All five final outcomes pass within that scope; this is preservation and coverage evidence, not a measured gain over the passing baseline or full-suite certification.
+
 ## 4.1.4 (2026-10-24)
 
 - Clarified input-dependent assignments/gates, changing state or score statistics, and actual parameter adaptation in the existing terminology and direction guides. Preserved valid online-learning descriptions rather than imposing a fixed-model assumption.

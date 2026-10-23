@@ -162,6 +162,14 @@ This scaffold is not manuscript-ready. Obtain the real values and supporting ana
 
 The connection is between a fixed structural assignment and a changing modeled contribution, not between `good knowledge` and `bad data`. This example explains a design reason, not a demonstrated accuracy gain or proof that learned weights measure diagnostic relevance. It need not be used in a method without those two confirmed properties. For a time-frequency paper, replace this reasoning with its actual temporal or spectral requirement rather than importing a grouping narrative.
 
+### G. An Observation Pattern Becomes An Estimation Requirement
+
+**Synthetic, confirmed setting:** sensor groups have different fixed sampling intervals; the proposed estimator uses the observed variables directly in a likelihood, and a supervised equation maps its estimated state to a quality target. It does not first impute a complete measurement grid.
+
+**Local transition:** "The sensor groups are measured at different intervals, leaving only a subset of variables observed at many prediction times. An observed-subset likelihood incorporates the available measurements into a common state estimate. A supervised output equation relates this state to the quality target."
+
+The acquisition fact motivates the operation, and the resulting state supplies the target estimate. This is not an assertion that unobserved values have been recovered or that all multi-rate methods need a latent state. A completion-based or interval-encoding method needs its own verified connection instead. If comparing prior work, add the checked assumption and source that make this requirement relevant; these three sentences alone do not establish novelty or a literature gap.
+
 ## 8. Delivery And Final Pass
 
 Separate the output into manuscript text and concise author notes when unresolved support exists. Author notes identify the source, experiment, or scientific decision needed; the manuscript contains the supported argument. Use visibly marked placeholders only in an internal draft. Do not silently resolve scientific uncertainty through language edits.
