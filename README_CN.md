@@ -4,7 +4,7 @@
 
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
-**4.1.8：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+**4.1.9：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
 
 本版补充部分方法名称的定义和译名证据。实际测试范围与未完成核查见[评估记录](evals/README.md)；术语库不是已经全面验证的白名单。
 
@@ -119,7 +119,7 @@ python3 scripts/install_suite.py --copy
 
 ## 文件怎样组织
 
-4.1.8 包含 **28 个 Skill 入口 Markdown、26 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
+4.1.9 包含 **28 个 Skill 入口 Markdown、26 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
 
 | 目录 | 内容 |
 |---|---|
@@ -143,7 +143,7 @@ python3 scripts/install_suite.py --copy
 
 - [摘要贡献写法](references/abstract-and-contribution-craft_CN.md)、[正文同步模板](assets/templates/abstract-body-sync.md)。
 - [章节指南](references/section-writing-guide.md)、[论证与行文](references/argument-and-prose-craft.md)、[贡献论证路径](references/contribution-narratives.md)。
-- [术语决策](references/terminology-decisions_CN.md)、[通用术语库](references/engineering-application-terminology-bank_CN.md)、[43 篇文献证据](references/published-evidence.md)。
+- [术语决策](references/terminology-decisions_CN.md)、[通用术语库](references/engineering-application-terminology-bank_CN.md)、[46 篇文献证据](references/published-evidence.md)。
 - [实验执行](references/experiment-execution_CN.md)、[运行清单](assets/templates/experiment-run-manifest.md)、[实验证据](references/experiment-evidence-design.md)。
 - [图表规范](references/figure-and-latex-production.md)、[转刊完整性](references/journal-migration-and-completeness_CN.md)、[作者交接](assets/templates/author-handoff.md)。
 

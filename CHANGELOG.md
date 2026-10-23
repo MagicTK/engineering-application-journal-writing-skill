@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.9 (2026-10-24)
+
+- Extend the existing bilingual definition ledger with domain adaptation and knowledge distillation, using distinct source definitions and separate online Chinese-name checks. The selected index now contains 46 papers; this is not a whole-bank terminology certification.
+- Separate label-space relations from label availability, alignment losses from prediction aggregation, and teacher training targets from retained inference components. Preserve regression distillation and genuine teacher execution without inventing compression or online-learning benefits.
+- Record a rendered source's prose/formula conflict instead of promoting its disputed score description or paper-specific module name to generic guidance. Add training-to-prediction writing guidance to the existing abstract/contribution reference.
+- One fresh respondent passed three frozen-baseline requests, then all four candidate requests including a post-freeze retained-teacher control in the same context. Preserve the actual responses and bounded maintainer review; no measured gain over the passing baseline or full-suite certification is claimed.
+
 ## 4.1.8 (2026-10-24)
 
 - Add paired definition evidence for cross-attention and mixture of experts to the existing bilingual ledger, with separate online Chinese-name checks. The selected source index now contains 43 papers, not a claim of corpus-wide admission.

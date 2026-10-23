@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This revision uses a selected 43-paper corpus, not a systematic review. It extends the earlier 40-paper corpus with three targeted definition checks on expert mixtures and attention. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 43 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This revision uses a selected 46-paper corpus, not a systematic review. It extends the earlier 43-paper corpus with targeted domain-adaptation and knowledge-distillation definition checks. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 46 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本版在原有 40 篇基础上，针对混合专家与注意力定义补读三篇，合计 43 篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为 PDF 文件页序。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本版在原有 43 篇基础上，针对域适应与知识蒸馏定义补读三篇，合计 46 篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为 PDF 文件页序。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -55,6 +55,9 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P41 | [Contextual Mixture of Experts: Integrating Knowledge into Predictive Modeling](https://doi.org/10.1109/TII.2022.3224973) | Process soft sensing with linear experts and input-dependent gates. Coefficient sparsity, mixture probabilities and possibility-based prior knowledge have different roles. |
 | P42 | [Dual Cross-Attention Transformer Networks for Temporal Predictive Modeling of Industrial Process](https://doi.org/10.1109/TIM.2024.3385820) | The title names an architecture whose defined components apply self-attention along time and variable axes. Read those definitions before treating the title as a generic cross-attention example. |
 | P43 | [CAT-EDNet: Cross-Attention Transformer-Based Encoder-Decoder Network for Salient Defect Detection of Strip Steel Surface](https://doi.org/10.1109/TIM.2022.3165270) | Adjacent surface-inspection setting: queries from one encoder scale attend to concatenated multiscale keys/values from one image. Cross-attention does not require separately acquired modalities. |
+| P44 | [A Multisource Domain Adaptation Network for Process Fault Diagnosis Under Different Working Conditions](https://doi.org/10.1109/TIE.2022.3194654) | Process diagnosis: source-target distribution losses and classifier-output combination have distinct roles; the target class space is a source-space subset. Its training notation includes target labels, so the supervision setting must not be inferred from the title. |
+| P45 | [A Lightweight and Adaptive Knowledge Distillation Framework for Remaining Useful Life Prediction](https://doi.org/10.1109/TII.2022.3224969) | Adjacent equipment prognostics: hidden-feature/regression-target distillation, confidence-based exits and reparameterization address different parts of training and prediction. |
+| P46 | [Cross-sensor collaborative distillation with dynamic competitiveness balancing for fault diagnosis under imbalanced missing data](https://doi.org/10.1016/j.neucom.2026.133238) | Adjacent motor diagnosis: multisensor guidance trains single-sensor representations; sensor missingness is not class imbalance. The unnormalized-score prose conflicts with its softened-distribution formula and is not adopted as a verified operation. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -143,6 +146,16 @@ Additional targeted reading on 2026-10-24 checked existing sources rather than a
 | P29 p.3, Methods and framework caption | Concrete pretrained-model identities are retained in the textualization and embedding description. | A named component may clarify the implemented method. Keep an identity or fixed dimension in Methods when needed to define the operation; use a category and symbolic interface when the method genuinely has that scope. This observation does not verify arbitrary backbone compatibility. |
 
 These checks concern reporting definitions and scientific scope, not experimental reproduction or a recommendation to copy the sources' numerical findings. 对象、计分规则及模型身份的保留取决于科学含义；不能只因某种写法已发表就统一套用。
+
+## Adaptation And Distillation Reading / 适应与蒸馏补读
+
+| Source and PDF position | Checked mechanism | Writing consequence |
+|---|---|---|
+| P10 pp.4-5; P44 pp.1-6, with p.5 visually checked | P10 defines shared class spaces, unlabeled target measurements and local/global alignment losses. P44 defines a target class subset, distribution objectives and a separate weighted combination of classifier outputs; Eq.(15) and Algorithm I include target labels. | Domain shift, class-space overlap, supervision and prediction fusion are separate questions. Do not transfer P10's unsupervised setting to P44 or assume that an adaptation loss is a prediction-time module. |
+| P45 pp.1,3-5, with pp.4-5 visually checked | Student heads match teacher penultimate-layer features and regression targets. Conditional training guidance, confidence-target generation, learned exit prediction and model reparameterization have different roles. | Relate the teacher's training guidance to the student's prediction without inventing runtime teacher fusion. A training confidence target that uses labels does not by itself imply access to test labels; trace the later learned predictor. Distillation does not itself establish online learning or a measured speedup. |
+| P46 pp.1,3,5-6, with p.5 visually checked | Multisensor guidance enters single-sensor learning through softened-output and semantic-similarity objectives. Eq.(6), its symbol definitions and Fig.2 use softmax and temperature, contrary to the neighboring unnormalized-score explanation. | Preserve the basic teacher-guided learning role and its sensor-availability purpose, but do not certify the disputed scoring operation without implementation/author clarification. Its full balancing-mechanism name remains source-specific; publication is not a reason to copy every term or equation claim. |
+
+上述为机制和写法的定点核查，不是对来源实验或实现的复现。分类概率、隐层特征、回归目标和原型相似度不能只为句式整齐而互换；源域、目标域、教师、学生也不是两组可随意混用的概念。
 
 ## Reusable Lessons / 可迁移结论
 

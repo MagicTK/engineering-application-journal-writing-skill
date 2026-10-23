@@ -58,6 +58,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **P40 展示交替关联：** 标签表示引导特征筛选，筛选后的特征又改变下一轮标签更新所用的样本邻域。双向依赖各说明一次，再交代返回的特征子集。合成写法为：During fitting, label weights guide feature selection, while the selected features refine the sample neighborhoods used to update those weights. The resulting subset supplies the inputs to the diagnostic predictor. 只有这些接口与原方法相符时才采用；标签权重不自动是实测故障严重程度，筛选特征也不自动减少传感器。这种相互作用可以组织成一项关联贡献，但本身不证明收敛、创新或性能改善。
 
+**P45-P46 展示教师指导的学习：** 说明传递对象及使用它的学习者，再关联训练后预测器与工程输出，不把训练损失写成师生特征的最终融合。针对已核实的回归设计，合成两句为：Teacher features and predictions guide the student during training. The trained student estimates product quality from the available process measurements. 真实论文应补充具有区别性的传递操作，此通用描述不是创新贡献。若预测还使用独立退出控制器或保留教师调用，应说明真实关系，不能归功于蒸馏本身。贡献可连接特定指导规则与其训练的学生能力，但仍需各自的创新和结果依据。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

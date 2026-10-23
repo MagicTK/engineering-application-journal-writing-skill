@@ -4,7 +4,7 @@
 
 This reference supports writing for industrial, control, automation, process,
 manufacturing, and equipment-oriented journals. The current release provides a
-[43-paper published evidence index](published-evidence.md) and
+[46-paper published evidence index](published-evidence.md) and
 [context-sensitive decisions](terminology-decisions.md). Earlier private corpus
 frequency counts are omitted because this public package cannot reproduce them.
 Author drafts are not terminology authorities; computer-science channel-strategy
@@ -310,9 +310,11 @@ original semantic summaries, not extracted source passages.
 | graph convolution; graph convolutional network (GCN) | P07 p.7, Eqs.(18)-(19), combines normalized adjacency, feature projections and a gated nonlinearity; P14 p.4, Eqs.(33)-(34), uses adjacency-weighted feature projection and ReLU. | Common graph-feature computation, not identical graphs: variable-time nodes versus process-variable nodes. A GCN operation does not establish a physical or causal meaning for learned edges. |
 | cross-attention | P38 p.6, Eq.(7), uses queries from one modality and keys/values from the other; P43 pp.4-5, Eqs.(1)-(2) and Figs.6-7, uses queries from one encoder scale and keys/values from concatenated scales. | Same query-to-key/value weighting principle, different representations and attention axes. Distinct modalities are not required; key/value features may include the queried scale. P42 p.4 defines cross-time and cross-variable **self-attention** despite its dual-cross-attention title. That title is not a second definition of the P38/P43 operation. Preserve attributed names, but inspect inputs before classifying a new module. |
 | mixture of experts (MoE) | P36 pp.2-3, Eq.(2) and Eqs.(5)-(6), defines gated combinations of expert outputs and task-specific expert features; P41 pp.2-3, Eqs.(1)-(3), defines weighted expert predictions with input-dependent gates. | Shared mixture principle, not identical experts or outputs. P41 uses linear expert models, so `neural network` is not part of the base definition. Coefficient sparsity from regularization does not establish sparse expert execution, and a gate need not select one discrete operating mode. |
+| domain adaptation | P10 pp.4-5 defines labeled-source/unlabeled-target learning with identical class spaces and local/global distribution losses; P44 pp.2,4-6 defines multiple source-target branches, distribution losses and prediction combination with a target class space contained in the source space. | Both address transfer across domain distributions, but label-space relations and label access differ. P44 Eq.(15) and Algorithm I explicitly contain target-label symbols; do not label its setting unsupervised from its title. An alignment objective and prediction fusion are distinct operations. |
+| knowledge distillation (KD) | P45 pp.3-5 trains student heads to match teacher hidden features and regression targets; P46 pp.3,5-6 transfers multisensor-model guidance to single-sensor predictions through softened-output and semantic-similarity losses. | Teacher-guided learning is shared; task, transferred objects and sensor access differ. Classification probabilities, identical architectures and model compression are not universal requirements. P46's prose about unnormalized scores conflicts with the displayed softmax/temperature definition in Eq.(6); that specific claim is excluded. These adjacent equipment studies support the base method, not every named distillation variant or process-industry prevalence. |
 
 Chinese wording is independently supported for selected entries below. These
-translation sources do **not** enlarge the 43-paper industrial corpus or certify
+translation sources do **not** enlarge the 46-paper industrial corpus or certify
 the performance/style claims made by their authors.
 
 | Chinese check | Primary online locator and checked content | Status and transfer boundary |
@@ -326,14 +328,16 @@ the performance/style claims made by their authors.
 | graph convolutional network / 图卷积神经网络 | [Acta Automatica Sinica, c190720](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190720?viewType=HTML), bilingual Fig.8 caption | Verifies the network-name translation. The accessible caption does not independently verify every graph-convolution variant or a physical meaning for its edges; the English operation evidence is recorded above. |
 | cross-attention / 交叉注意力 | [Acta Automatica Sinica, c250203](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250203?viewType=HTML), bilingual Table 1 heading and its exogenous-variable fusion entries | Verifies this base translation in a time-series review. The table groups several architectures; it does not make their query/key/value definitions identical. English operation evidence comes from P38/P43, not from counting the table's cited titles. |
 | mixture of experts / 混合专家 | [Acta Automatica Sinica, c250366](https://www.aas.net.cn/article/doi/10.16383/j.aas.c250366), bilingual title, abstract and keywords | Verifies the base translation. Its language-processing model uses specialized sparse mechanisms; these are not requirements for every industrial MoE or evidence that linear experts are neural subnetworks. |
+| domain adaptation / 域适应 | [Acta Automatica Sinica, c200238](https://www.aas.net.cn/article/doi/10.16383/j.aas.c200238), bilingual title and abstracts | Verifies this translation and distinguishes ordinary and complex label-space settings. It does not make identical class spaces a requirement of every adaptation study. Other Chinese variants need their own check before being called equivalent standard translations. |
+| knowledge distillation / 知识蒸馏 | [Journal of Software, 006933](https://www.jos.org.cn/jos/article/abstract/6933), bilingual title and abstracts | Verifies the base translation; the abstract also distinguishes output, intermediate and graph-based knowledge. Its introductory large-teacher/small-student account is not a universal restriction on model size or task. This is translation evidence, not an additional industrial application paper. |
 
 Other Chinese counterparts and other method-family names have not all received
 this completed paired record. Keep them as source-attributed or definition-based
 working terminology until checked for the requested recommendation. In
 particular, a checked soft-clustering example (P33) does not admit every soft
 assignment mechanism, and paired base MoE or cross-attention records do not admit
-all source-specific variants. Knowledge-distillation and other candidate
-definitions still require their own completed records. This is a limit of this
+all source-specific variants. Modified adaptation/distillation names and other
+candidate definitions still require their own completed records. This is a limit of this
 ledger, not a claim that these methods occur only once in the field.
 
 `Cross-stage feature fusion`, `process-topology-guided integration` and similar

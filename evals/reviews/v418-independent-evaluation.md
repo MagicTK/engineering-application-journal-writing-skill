@@ -25,7 +25,7 @@ These cases cover the changed naming and operation boundaries, not every termino
 - [Initial candidate responses](../responses/v418-initial-revised.md)
 - [Bilingual synchronization retest](../responses/v418-bilingual-retest.md)
 - [Final-source responses](../responses/v418-final-retest.md)
-- [Executed cases and final fingerprints](../forward-test-report.json)
+- [Executed cases and final fingerprints](../history/v4.1.8/forward-test-report.json)
 - [Definition and translation ledger](../../references/engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
 
 Public responses are preserved as returned. Exact dispatches, intermediate and final fingerprints, and runtime response records are retained privately. An initial pending-report schema error was repaired to the existing schema before structural tests passed; no validator was weakened. Structural validation, installation, export identity and remote publication remain separate checks.
