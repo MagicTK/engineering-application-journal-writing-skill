@@ -4,7 +4,7 @@
 
 This reference supports writing for industrial, control, automation, process,
 manufacturing, and equipment-oriented journals. The current release provides a
-[55-paper published evidence index](published-evidence.md) and
+[58-paper published evidence index](published-evidence.md) and
 [context-sensitive decisions](terminology-decisions.md). Earlier private corpus
 frequency counts are omitted because this public package cannot reproduce them.
 Author drafts are not terminology authorities; computer-science channel-strategy
@@ -229,7 +229,24 @@ when that is the actual object and a spatial interpretation adds no information.
 | Information available before the inference it informs | prior knowledge; prior matrix; structural bias | specify its source, construction and model role; not every preset quantity is knowledge |
 
 State the knowledge source first, then name the mathematical form by which it
-enters the model. Published examples include P04 and P12-P14 in the evidence index.
+enters the model. P14 uses a process-informed partition, P56 models uncertain
+graph information probabilistically, and P57 connects subprocess structure to
+network construction. These are different uses of knowledge, not three names
+for the same module.
+
+`Prior knowledge` is broader than a `prior distribution`. A fixed topology or
+normalized weight matrix is not, by itself, a probability distribution over
+possible graphs or model parameters. For a Bayesian use, identify the random
+object, distribution and data used to update it; do not rename ordinary learned
+weights a posterior. A probability normalization constraint is also not a
+physical conservation law. The Chinese wording and limited source scope are
+recorded in [the knowledge audit](published-evidence.md#knowledge-entry-and-constraint-scope).
+
+Keep knowledge-derived structure, a penalty on a stated relation, and a
+constraint-satisfying construction distinct. A physical interpretation needs
+the corresponding quantity or mapping, not only an industrial graph or a loss
+named `physics`. See [the conditional playbook](topic-playbooks.md#6-graph-knowledge-guided-causal-or-fuzzy-modeling)
+before choosing a more specific mechanism name or guarantee.
 
 Prefer syntactically light forms:
 
@@ -336,7 +353,7 @@ original semantic summaries, not extracted source passages.
 | multilabel / multi-label learning and classification | P37 pp.2,4, Section II-B2 and Eqs.(16)-(19), combines pairwise predictions into multiple subsystem-fault decisions; P39 pp.2-3, Section II-A, defines binary fault indicators with more than one positive for compound faults and a subsequent decision rule. P40 p.3 defines a binary sample-by-label matrix, with multilabel evaluation on p.5. | P37/P39 are distinct works by the same author pair; P40 provides a different team's related feature-selection setting. The shared target permits several labels per sample, not ambiguous alternatives or necessarily missing annotations. Pairwise classifiers and their fusion rules are source-specific. A local softmax classifier can participate in a multilabel system; inspect the final output rather than prescribing sigmoid heads or calling every compound-fault task multilabel. |
 
 Chinese wording is independently supported for selected entries below. These
-translation sources do **not** enlarge the 55-paper engineering corpus or certify
+translation sources do **not** enlarge the 58-paper engineering corpus or certify
 the performance/style claims made by their authors.
 
 | Chinese check | Primary online locator and checked content | Status and transfer boundary |

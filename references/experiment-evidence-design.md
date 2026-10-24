@@ -168,6 +168,12 @@ A confusion matrix can be useful when class-pair errors are scientifically impor
 
 Sensitivity and interpretation plots are result-dependent artifacts. Their curves, point clouds, heat maps, and error bars must be generated from traceable experimental outputs; a design brief or placeholder may be prepared before the data, but the visible result cannot be fabricated.
 
+### Knowledge And Physical-Constraint Claims
+
+If the claimed benefit is physical consistency, define the tested equation or inequality, its variables/units, applicable conditions and tolerance. Evaluate its residual or violation at the claimed output and on the claimed evaluation domain; a smaller total training loss or better diagnostic score does not establish this property. A finite-weight penalty can trade off against other objectives. Even a zero residual at training points does not by itself prove satisfaction everywhere. For an exact construction or projection, check the relation it actually enforces and preserve a justified guarantee within that scope; empirical residual checks and mathematical guarantees are different evidence.
+
+For a knowledge-guided architecture without a physical-consistency claim, select evidence about its actual contribution, such as prediction quality with the specified structural information. Do not require a conservation-law experiment or redesign. If an uncertain prior is central, state its source, what is updated and which data are available for that update; examine prior misspecification only when it is part of the claim. Keep these as targeted author checks, not permission to alter results or launch experiments. For knowledge represented in latent space, establish the mapping before interpreting embedding-distance changes as physical-law compliance.
+
 ## 8. Metric Integrity
 
 Define:

@@ -180,6 +180,19 @@ Make the knowledge entry point explicit: data organization, graph edge/bias, los
 
 Check knowledge provenance separately from its name. In P12, variable-wise class statistics construct the expert support, abstention and rejection regions; `expert system` does not mean that every quantity was supplied independently by a human expert. Describe which rules are specified, which quantities are estimated from labeled measurements, and which partition supplies those measurements. P14 uses process-informed subgraphs and prediction-trained adjacency. A given physical partition, learned edge weights and a decision-level support vector are not interchangeable priors.
 
+For a knowledge-based contribution, connect the known fact to its actual recipient:
+
+| Implemented form | Connection to explain | Claim boundary |
+|---|---|---|
+| Process-based architecture or input organization | Which connections, groups or delays follow the process description, and what remains learned? P57 uses subprocess structure in network construction. | A structural correspondence is not automatically a solved physical equation. |
+| Distribution over an uncertain object | Which graph/parameter is random, how prior information enters its distribution, and how permitted observations update it? P56 makes uncertain graph knowledge explicit. | A normalized matrix alone does not establish a distribution over matrices or a Bayesian update. |
+| Additional training penalty | Which measured quantity, output or latent relation is penalized, and how does that shape the predictor? P58 operates on latent pair distances. | Penalizing deviations does not by itself enforce exact satisfaction. Latent distances are not physical balance residuals without a justified mapping. |
+| Construction or constrained computation | Which specified relation is satisfied, over which output/domain, under what assumptions and numerical tolerance? | Preserve a verified guarantee for that relation; do not extend it to all process laws or operating conditions. |
+
+These are operational distinctions, not newly admitted mechanism families. Keep a source's complete proposed name attributed. In an abstract or contribution, write the connection positively, for example, `A balance-residual penalty couples the predictor to the process model during training`, only when that is the implemented operation. Put unresolved source-equation differences in the author notes, not a succession of disclaimers in the manuscript. A source's use of `ensure` or `physics-informed` is not a substitute for checking its equations and the represented physical quantities. Name a supported mechanism and its tested effect instead of making every knowledge-guided design a physics-informed neural network.
+
+中文同样区分“工艺知识决定连接”“先验分布描述不确定对象”“损失项惩罚偏离”和“构造满足指定约束”。先把作用写准确，再选择名称；确有保证则保留其明确范围，不为了谨慎而一律降成“可能有帮助”。只有命名或保证性主张涉及这些区别时才展开，不给普通语言润色额外安排物理建模任务。
+
 For a causal claim, name the target (for example a directed dependence structure, an intervention effect or a root-cause ranking), its assumptions and the evidence available. Good diagnostic accuracy does not establish any of these by itself. An expert-consistent graph can support engineering plausibility without proving causal identification.
 
 A causal temporal convolution concerns past-versus-future information access; a predictive adjacency is a learned relationship; physical causal identification needs additional assumptions and evidence. P14 provides a useful place to inspect these distinct roles, not a license to equate them. Check the complete computation before using `hard exclusion`, `sparse` or `independent`: logit reweighting followed by softmax is not automatically class exclusion, and a block-diagonal adjacency does not prevent a later dense layer from combining groups. Resolve equation, pseudocode and implementation differences in author notes before strengthening the prose.

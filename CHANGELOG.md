@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.21 (2026-10-24)
+
+- Inspect three further published industrial studies to distinguish process-based architecture, uncertain graph priors and latent-space regularization. Record limited reading depth and source-equation discrepancies rather than treating publication as mathematical validation.
+- Refine knowledge terminology and contribution writing around the actual source, recipient and operation. Distinguish a prior distribution from a fixed normalized matrix, and a training penalty from a construction satisfying a specified constraint; preserve valid scoped guarantees.
+- Five existing references carry the substantive changes. Chinese wording is checked independently; the added sources do not automatically admit their complete mechanism names. No new topic guide, template, manuscript edit or research experiment. Fictional-case checks are separate from scientific validation.
+
 ## 4.1.20 (2026-10-24)
 
 - Add a definition-checked multilabel learning/classification record from three existing industrial studies, keeping shared authorship, local classifier outputs and final fault-set semantics explicit. Verify the Chinese base translation separately in two original journal sources.

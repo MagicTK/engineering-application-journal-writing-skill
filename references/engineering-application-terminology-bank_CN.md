@@ -2,7 +2,7 @@
 
 ## 使用边界
 
-本文件服务于工业过程、控制、自动化、制造与装备类工程应用论文。本版提供[55 篇已发表文献索引](published-evidence.md)及[按场景选择术语的规则](terminology-decisions_CN.md)。旧版私有语料词频无法在公开包中复现，因此不再作为公开频次证据。不以作者草稿为术语权威；计算机 Channel Strategy 文献仅用于相关方法讨论，不作为通用工程词库的默认来源。未检索到不等于禁用。
+本文件服务于工业过程、控制、自动化、制造与装备类工程应用论文。本版提供[58 篇已发表文献索引](published-evidence.md)及[按场景选择术语的规则](terminology-decisions_CN.md)。旧版私有语料词频无法在公开包中复现，因此不再作为公开频次证据。不以作者草稿为术语权威；计算机 Channel Strategy 文献仅用于相关方法讨论，不作为通用工程词库的默认来源。未检索到不等于禁用。
 
 下列语义表不等于每个完整搭配都已通过多来源核验。现有词条及专题指南中的名称也要遵守以下准入规则；不能仅因已写入 Skill，就反过来当作权威。
 
@@ -92,6 +92,10 @@ stage-wise feature extraction、stage-specific measurements、inter-stage relati
 stage-level 表示尺度，例如每工序一个池化向量；stage-structured 表示保留了按工序组织的结构，二者不能互换。生产工序、同一批次的时间阶段、训练阶段也不是同一对象。local/global 可以指时间感受野、变量邻域或全厂范围，必须先明确指代，不能因为别的论文使用就照搬。
 
 工艺流程、设备关系和控制结构用 process knowledge/process topology；现场工程师提供的信息用 expert knowledge；混合来源可统称 domain knowledge。prior knowledge/prior matrix/structural bias 应说明信息来源、构建方式及其支持哪一步推断，不能把所有预设量都称为先验知识。
+
+知识的来源、数学形式与作用位置分别说明：P14采用工艺知识划分，P56以概率形式描述不确定的图信息，P57把子过程结构用于网络构建，不能把它们统称为同一个模块。prior knowledge的含义比prior distribution宽；固定拓扑或归一化权重矩阵本身不是“可能图结构或参数的概率分布”。贝叶斯表述需明确随机对象、分布及更新所用数据，不把普通学习权重改称后验；概率归一化约束也不是物理守恒律。中文译法与核验范围见[知识作用核查](published-evidence.md#knowledge-entry-and-constraint-scope)。
+
+还需区分知识确定的结构、对某种关系施加的损失惩罚，以及满足指定约束的构造。物理解释需要对应物理量或映射，不能仅凭工业图结构或名为physics的损失推导。选择更具体的机制名与保证性表述前，按[条件性专题规则](topic-playbooks.md#6-graph-knowledge-guided-causal-or-fuzzy-modeling)核对。
 
 公开仿真或标准过程使用 benchmark case study；来自实际生产过程的数据通常使用 real-world industrial case study、real-world production data 或 actual production conditions。只有当离线/在线状态本身影响研究设计或结论边界时才使用 `offline`，不能把它作为所有真实产线数据的默认标签。顺序回放或流式算法本身不等于实际部署；online/prospective evaluation 应与真实实施方式一致。deployment 需实际接入运行流程，并区分建议、影子运行与影响生产动作的闭环使用。
 
@@ -188,6 +192,6 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 | slow feature analysis / 慢特征分析 | [自动化学报c201035](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c201035?viewType=HTML)与[c230154](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c230154?viewType=HTML)，双语摘要与关键词 | 两篇均在过程运行状态评价中明确使用基础名称及SFA缩写；不因此将各自KPI驱动、分布式/动态变体的完整名称升级为通用模块名，不验证其公式和实验 |
 | multi-label learning / 多标签学习 | [微电子学与计算机2022.0266](https://mc.spacejournal.cn/cn/article/doi/10.19304/J.ISSN1000-7180.2022.0266)，双语题名及摘要；[软件学报2024,35(6):2775-2794电子期刊页199](https://ebook.xml-journal.net/rjxb/2024/06/files/basic-html/page199.html)，双语题名与摘要开头 | 两者明确对应基础名称，前者还定义每个样本可关联多个标签。通用学习/软件语境只核实译法，不作为流程工业普遍性证据，不准入其完整特征选择变体或证明物理故障交互 |
 
-中文来源仅用于译法核对，不扩充 55 篇工程语料计数，也不为来源论文的实验或行文质量背书。其他中文对应和方法家族尚未全部完成配对记录；推荐前仍需检查，不能宣称全库通过。P33/P48的限定分配定义不能认可任意soft assignment机制，MoE或交叉注意力的基础准入也不认可所有特有变体。加限定词后的适应/蒸馏名称等仍需单独完成记录；这不是说它们在领域中只有单篇用例。
+中文来源仅用于译法核对，不扩充 58 篇工程语料计数，也不为来源论文的实验或行文质量背书。其他中文对应和方法家族尚未全部完成配对记录；推荐前仍需检查，不能宣称全库通过。P33/P48的限定分配定义不能认可任意soft assignment机制，MoE或交叉注意力的基础准入也不认可所有特有变体。加限定词后的适应/蒸馏名称等仍需单独完成记录；这不是说它们在领域中只有单篇用例。
 
 组合词如 cross-stage feature fusion、process-topology-guided integration 可在实现吻合时描述操作，但基础词的依据不等于完整模块名的通行依据。继续补充证据行，不把当前未完成的表变成自动白名单或黑名单。
