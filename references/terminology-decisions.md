@@ -257,6 +257,15 @@ confuse a parameter mask with a missing-measurement mask, graph-edge removal or
 channel deletion. Keep the actual training and retained prediction paths clear
 in the abstract, contribution and overview, without inventing a new module name.
 
+When pruned model variants are prepared and retrained before evaluation, keep
+that preparation distinct from a runtime policy that selects an existing variant
+or routes a task elsewhere (P85 p.4). Input-dependent model choice need not update
+any predictor weights. Specify what an accuracy constraint uses: a candidate's
+estimated aggregate accuracy is not the realized correctness of every prediction.
+A modeled computation-cost relation can support a simulation result under that
+relation, not automatically device latency. Connect the selected model to the
+actual fault decision and preserve the evaluation level in the result sentence.
+
 An exact branch conversion also depends on operations, not a shared name. P45 p.5 describes merging compatible convolution/normalization branches before a shared activation. Fixed inference normalization can be affine; input-batch-dependent normalization is a different computation. Combining affine preactivations before one activation is not generally equivalent to averaging separately activated head outputs. Check padding, shapes, biases, statistics and activation placement before asserting equality; keep P45's full conversion claims attributed rather than certifying all source formulas or a generic module family.
 
 ## Topic-Specific Terms

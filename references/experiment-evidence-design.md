@@ -287,6 +287,15 @@ runtime claims, not merely to report a verified masking operation. Range clippin
 and an input-gradient penalty are different computations, even when a source
 uses inconsistent terminology; resolve that source note before borrowing a name.
 
+If several variants coexist, distinguish the selected variant's cost from the
+resident model collection: include stored weights, masks/indices and any routing
+state in the memory claim at issue. P85 selects among prepared instances; P86
+explicitly addresses sparse-index overhead. Neither makes storage free. Separate
+analytical/simulated costs from timing on the actual backend, and identify how
+candidate accuracy estimates were obtained before using them in selection. A
+constraint on an estimated accuracy profile is not a per-sample correctness
+guarantee. These checks do not require a hardware trial for a count-only claim.
+
 For a feature/sensor-selection claim, identify the candidate objects, ranking or selection rule, retained output and its use in the predictor. A positive weighting of all inputs does not itself delete a feature, even if the source calls its layer feature selection. For explicit subsets, trace retained descriptors back to required raw measurements and preprocessing. Permit computation of only selected descriptors when the actual dependencies support it; do not assume the complete original feature pipeline must always run.
 
 State which data fit the selector, label transformations, subset size and stopping rule. Supervised selection is part of model fitting, so test labels used to choose a subset also influence the reported predictor. Use an actually performed training-only selection procedure or a predefined setting; do not invent a validation split to repair the account. Independent selection stability is relevant when stability is claimed, not mandatory evidence for every local grammar revision.

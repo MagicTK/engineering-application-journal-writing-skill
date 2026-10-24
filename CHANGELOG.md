@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.55 (2026-10-25)
+
+- Complete a scoped parameter-pruning definition pair from published IIoT-service and sparse-hardware studies; revisit the independent Chinese base wording. Do not inherit every graph/channel/token variant or source-specific full name.
+- Connect model preparation, fixed-variant runtime selection and fault decisions in existing bilingual writing guidance. Distinguish nonzeros, dense storage, sparse indices and the memory occupied by a resident collection of models.
+- Keep cost-model simulation separate from device measurements and accuracy-profile constraints separate from per-prediction correctness. Add two scoped published-work records, not another topic or template; real manuscripts and results are unchanged.
+
 ## 4.1.54 (2026-10-25)
 
 - Add a scoped Dempster combination definition pair and independently checked Chinese wording variants. Keep theoretical definitions, actual network operations and paper-specific improved designs distinct.

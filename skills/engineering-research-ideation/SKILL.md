@@ -7,7 +7,7 @@ description: Build or revise an AI-for-engineering research portfolio, compare m
 
 [中文执行版](../../skills-zh/engineering-research-ideation-zh/SKILL.md)
 
-Suite version: `4.1.54`
+Suite version: `4.1.55`
 
 ## Scope
 

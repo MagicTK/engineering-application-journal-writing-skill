@@ -388,6 +388,19 @@ the [operation and phase distinctions](terminology-decisions.md#structure-and-op
 and [resource boundary](experiment-evidence-design.md#selection-outputs-and-resource-claims)
 only when relevant to the manuscript's claims.
 
+P85 p.4 prepares and retrains pruned variants before selecting execution at a
+gateway or edge server; P86 pp.3-5 separates parameter removal from the hardware
+representation and nonzero-index generation needed to execute it. This supports
+the [scoped base pruning record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope),
+not a universal ratio between zeros, stored bytes and latency. For a runtime
+selection design, connect state observations to the chosen fixed predictor and
+decision, not to invented online fitting. A collection of resident variants has
+its own memory footprint. Keep simulated resource gains under their stated cost
+model distinct from observed device gains; an accuracy-profile constraint uses
+an estimate rather than guaranteeing each task's diagnostic correctness.
+
+中文也区分生成并重训模型变体、运行时选择模型以及真正更新参数。说明被选模型如何形成故障决策；内存对应单个变体还是常驻集合，成本来自模拟假设还是设备测量，准确率条件使用什么估计，都须与实际证据相符，不为所有轻量化研究强加同一部署故事。
+
 ## 10. Interpretability, Localization, Root Cause, And Trust
 
 Writing priorities:

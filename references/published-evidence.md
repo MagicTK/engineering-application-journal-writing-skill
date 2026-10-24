@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 84-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 84 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 86-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 86 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计84篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计86篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -96,6 +96,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P82 | [Root cause diagnosis in multivariate time series based on modified temporal convolution and multi-head self-attention](https://doi.org/10.1016/j.jprocont.2022.06.014) | JPC 117 (2022), pp.14-25. Section 3.1 explains causal temporal feature extraction before separate relationship learning and root scoring. Full MTCMS naming and causal-verification claims remain attributed, not generic module definitions. |
 | P83 | [TARD: Test-time domain adaptation for robust fault detection under evolving operating conditions](https://doi.org/10.1016/j.ress.2025.112135) | RESS 271 (2026), 112135. Read in [author v2](https://arxiv.org/abs/2507.16354v2); target-side fitting and test-time statistics have different roles. Journal-version formula identity is not certified. |
 | P84 | [Robust fault diagnosis of a high-voltage circuit breaker via an ensemble echo state network with evidence fusion](https://doi.org/10.1007/s40747-023-01025-3) | Complex & Intelligent Systems 9 (2023), pp.5991-6007; publisher open version. Adjacent electrical-equipment study: pp.8-10 separate mass-combination preliminaries, source-specific weighting and complete conflict. Full IDS-ESN claims are not generalized. |
+| P85 | [Joint Task Offloading, DNN Pruning, and Computing Resource Allocation for Fault Detection With Dynamic Constraints in Industrial IoT](https://doi.org/10.1109/TCCN.2025.3529688) | TCCN 11(5), 2025, pp.3486-3501; [author-hosted published PDF](https://qiang-john-ye.github.io/Papers/Joint_Task_Offloading_DNN_Pruning_and_Computing_Resource_Allocation_for_Fault_Detection_With_Dynamic_Constraints_in_Industrial_IoT.pdf). IIoT-service context: parameter masks/retraining precede selection among model instances. Modeled task costs are not current-device measurements. |
+| P86 | [A Hardware-Friendly Approach Towards Sparse Neural Networks Based on LFSR-Generated Pseudo-Random Sequences](https://doi.org/10.1109/TCSI.2020.3037028) | TCSI 68(2), 2021, pp.751-764; [research-group-hosted published PDF](https://icsrl.ece.gatech.edu/files/2021/06/09264691.pdf). Adjacent sparse-hardware study: selected parameters are regularized, zeroed and retrained; storage/indexing and execution are separate considerations. Full LGPS designs remain attributed. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -542,7 +544,7 @@ Chinese wording was separately checked in the [AAS c230457 Fig.5 bilingual capti
 
 P74 pp.1,3-5 and the relevant p.8 complexity discussion were read; pp.4-5 were rendered. Its patch module explicitly preserves shape, while Eqs.(9)-(10) aggregate with one class query and retain the other channel-value tokens. These are attributed selection/aggregation operations, not a second pruning implementation. P31 p.1 and pp.3-4 were reread: the described adaptive polynomial-degree adjustment occurs during training; its related-work pruning mention is not an implemented pruning definition. P45 pp.4-5 was reread, with p.5 rendered, for masked distillation, exits and multihead/multibranch conversion. The affine branch conversion requires its stated shape/padding conditions; the per-head ReLU in Eq.(6) and merged projection before ReLU in Eq.(20) require clarification of the aggregation target before an exact multihead equivalence is transferred. Source indices, biases, normalization details, complete formulas, simulator results and speed claims were not independently reproduced.
 
-The original bilingual abstract/keywords of [AAS c180275](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180275) separately verify network pruning / 网络剪枝; the accessible page did not supply the full body. Two potentially relevant publisher pruning articles could not be read beyond search results because their pages were inaccessible. Neither those snippets, a background mention nor shape-preserving selective weighting completes the requested paired industrial operation record. Pruning and complete conversion-family names therefore remain uncompleted in this ledger, not disproven or universally forbidden. No new generic module family is admitted by this check.
+The original bilingual abstract/keywords of [AAS c180275](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180275) separately verify network pruning / 网络剪枝; the accessible page did not supply the full body. At that earlier check, two potentially relevant publisher pruning articles were inaccessible, and snippets, background mentions and shape-preserving weighting did not complete the operation pair. The later P85/P86 reading below supplies a scoped parameter-pruning definition pair from different published engineering works; it does not retrospectively certify the inaccessible papers, two process-diagnosis implementations or every complete conversion-family name. The latter names remain pending, not disproven or universally forbidden.
 
 ### Relationship Models, Origin Decisions And Causal Scope
 
@@ -586,6 +588,37 @@ certificate checks were disabled, and the original-page web reading is recorded
 separately from that failed download.
 
 基础公式、质量构造、来源权重及最终决策应分开核对。全集质量与空集冲突质量不同，更多来源不直接证明独立或校准。迁移实际定义与衔接方式，不迁移完整改进模块名或来源的可靠性保证。
+
+## Pruning, Model Preparation And Runtime Choice / 剪枝、模型准备与运行选择
+
+Selected definition reading on 2026-10-25 checked P85 p.4, Section III-A2,
+and P86 pp.3-5, Section II-B1 and III, in their author/research-group-hosted
+published PDFs. Both specify selecting network weights/connections for zeroing
+or removal and retraining; their selection criteria and roles differ. P85
+prepares multiple instances before runtime selection and uses a computation-cost
+model. P86 separately designs nonzero-position generation and sparse execution.
+These are matched base-operation explanations, not two process-diagnosis
+implementations or admission of the full JOPA/LGPS names. Selected P85 p.4 and
+P86 pp.3-5 were visually inspected. Source formulas, reported effects and complete
+implementations were not reproduced.
+
+P85's linear pruning-rate/cost relation is part of its model, not a measured
+universal law for dense backends. P86's own regularization and subsequent exact
+zeroing are separate steps; being close to zero is not the same as being removed.
+Keep the actual retained graph and index/storage accounting before transferring
+an efficiency claim. Source-specific mask/retraining and model-selection phases
+can guide the prose without requiring every compact industrial predictor to use
+that pipeline.
+
+The original [AAS c180275 page](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180275),
+paired abstracts/keywords and Fig.2 caption, was revisited for network pruning /
+网络剪枝. The readable page does not provide the full equation body. This
+translation check adds no industrial-definition ID or full qualified-name
+admission. A JAS journal page remained inaccessible, and the separately read
+related preprint's publication correspondence is still unchecked; neither is
+counted to complete the present pair.
+
+将参数移除、稀疏存储、设备执行及模型选择分开；准确率估计与每次预测正确性也分开。摘要应按实际关系连接模型准备与运行决策，结果保留模拟、实测或部署的真实证据范围，而非套用统一的压缩叙事。
 
 ## Reusable Lessons / 可迁移结论
 

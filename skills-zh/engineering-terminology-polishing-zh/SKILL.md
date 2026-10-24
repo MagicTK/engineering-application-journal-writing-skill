@@ -7,7 +7,7 @@ description: 工程应用论文术语与语言润色 Skill 中文执行版。在
 
 [English](../../skills/engineering-terminology-polishing/SKILL.md)
 
-套件版本：`4.1.54`
+套件版本：`4.1.55`
 
 ## 一、任务目标
 

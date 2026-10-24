@@ -37,6 +37,16 @@ and implementation checks in Methods or author notes. A pruning operation can
 support a representation-learning contribution without establishing deployment
 compression; its name alone supplies neither novelty nor a measured benefit.
 
+**Prepared models and runtime decisions, illustrated by P85:** when a system
+selects among fixed model variants, connect available operating/network state to
+that choice and the resulting engineering decision. For a verified design:
+"A scheduler selects a prepared model using the current queue and link state.
+The selected model classifies the incoming measurements." Add the distinguishing
+selection principle or joint decision, not a fictional sequence of online weight
+updates. If evidence uses a modeled execution cost, keep the simulation scope in
+the result instead of rewriting it as measured device acceleration. One variant's
+count is not the memory occupied by a resident collection of variants.
+
 When alignment is the advance, identify what is brought into correspondence and by which criterion: sample times, dimensions, feature distributions or paired representations. Connect that operation to the learned predictor or next computation, not to an unverified claim that all diagnostic information is preserved. A method sentence can state that an objective encourages a property; a result sentence needs evidence that the property or downstream benefit was obtained. See the [alignment distinctions](terminology-decisions.md#alignment-state-the-object-and-criterion); keep only the central relationship in the abstract.
 
 For each retained mechanism, recover three things: **the object changed, the operation, and the reason the changed object is useful to the next task**. The abstract should retain the distinguishing operation and its purpose, not every tensor name. The method section can carry exact dimensions. Never compress variable features, pooled group features and a stage summary into one interchangeable `feature` if the next operation consumes only one of them.
