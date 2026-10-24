@@ -263,7 +263,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.65", suite["version"])
+        self.assertEqual("4.1.66", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -330,6 +330,25 @@ class SuiteValidatorTests(unittest.TestCase):
         )
         self.assertIn(
             "permit final-evaluation-label checkpoint selection when no gradient is used",
+            case["forbidden_behaviors"],
+        )
+
+    def test_domain_generalization_access_case_is_registered(self) -> None:
+        payload = json.loads(
+            (ROOT / "evals" / "behavior-cases.json").read_text(encoding="utf-8")
+        )
+        cases = {case["id"]: case for case in payload["cases"]}
+        self.assertTrue(
+            "domain-generalization-access-boundary" in cases,
+            "Domain-generalization access regression is missing",
+        )
+        case = cases["domain-generalization-access-boundary"]
+        self.assertIn(
+            "distinguish a fixed current-window input transform from target-pool statistic fitting",
+            case["required_behaviors"],
+        )
+        self.assertIn(
+            "infer unseen-fault recognition from unseen operating conditions",
             case["forbidden_behaviors"],
         )
 

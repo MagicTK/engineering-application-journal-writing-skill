@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 98-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 98 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 99-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 99 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计98篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计99篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -110,6 +110,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P96 | [An imbalanced domain-adversarial hypergraph convolutional network for robust fault diagnosis of rotating machinery](https://doi.org/10.1016/j.eswa.2026.131898) | ESWA 316 (2026), Art.131898. Section 2.3, p.3, defines a class factor on cross-entropy; Section 3.4.1, p.6, separately uses a logit margin and factor. A background definition is not the entire proposed objective or evidence of real misclassification cost. Full IDAHGCN/alignment, notation and performance are not certified. |
 | P97 | [Intelligent fault diagnosis for chemical process under imbalanced data: A non-local frequency-domain sparse hash autoencoder approach](https://doi.org/10.1016/j.psep.2026.108502) | PSEP 208 (2026), Art.108502. P.4 Table 1 shows class-weighted cross-entropy, while p.8 Eqs.(35)-(36) shows binary cross-entropy with an overall objective coefficient. Record this unresolved difference, not a verified complete loss or clean second class-weighting definition. Full NFSH-AE, signal filtering, sparsity, splits and results are not certified. |
 | P98 | [Class-weighted alignment and reliable self-training for cross-domain fault diagnosis under class-imbalanced conditions](https://doi.org/10.1016/j.psep.2026.108820) | PSEP 211 (2026), Art.108820. P.6 Eqs.(10)-(12) scale target features inside a mapping using counts from target pseudo-labels; pp.5-6 separate classification objectives. A feature-alignment coefficient is not a classification-loss factor. Full CWA-RST, kernel choice, inverse-frequency wording, complete implementation and performance claims remain unverified. |
+| P99 | [Lifeisgood: Learning Invariant Features via In-Label Swapping for Generalizing Out-of-Distribution in Machine Fault Diagnosis](https://doi.org/10.1109/TCYB.2025.3578712) | TCYB 55(8), 2025, pp.3699-3712. P.4 Section II-B3 defines learning on available domains for unseen distributions; p.7 Algorithm 1 and Section V-A separate source training/model selection and prediction. Full swapping mechanisms, invariance definitions/theorems, causal interpretation and performance are not certified by this setting check. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -823,6 +824,35 @@ for more fluent prose, infer preserved feature statistics from coefficient
 normalization, or turn training-only weighting into a prediction-time gate.
 Existing Chinese base-wording records remain scoped; no new Chinese mechanism
 translation is admitted by these functional descriptions.
+
+### Source-Only Generalization Setting / 源侧开发与未见域预测
+
+P50 p.2 and P99 p.4 explicitly define learning from available source domains
+for prediction on unseen distributions. P50 pp.3,5-6 and P99 pp.3,6-7 were read
+for notation, training and evaluation boundaries; P50 pp.2,5,6 and P99 pp.4,7
+were rendered and visually checked. Both are machinery studies and use multiple
+source domains in their inspected designs. This supports the base DG setting,
+not a universal source-count minimum, a common perturbation module or a causal
+guarantee. P99 p.7 uses source-domain validation for model selection; transfer the
+access distinction, not its percentage or an invented validation procedure.
+
+P50 p.3 calls a style-reference feature target in its background explanation;
+trace its origin before equating it with the held-out domain. P.5 Eqs.(27)-(29)
+display mean-derived and standard-deviation-derived symbols in scale/offset
+positions requiring reconciliation, and p.6 Algorithm 1 changes branch notation.
+Those implementation checks remain unresolved; the full DGNSU/MNGP/ANLF designs
+are not certified. P99's specific invariant-feature definition, swapping design,
+theory and performance also remain attributed, not universal DG requirements.
+
+The original AAS c200238 Tables 3/11 support 领域泛化 and its target-unavailable
+context; the c260215 priority-publication title/abstract/keywords support
+域泛化. These distinct Chinese works verify wording variants, not two extra
+industrial implementations or the complete federated/open-set method. The
+[terminology record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+keeps their URLs and limits. A fixed within-window transform and fitting stored
+statistics on a whole target pool have different information access; describe
+legitimate hybrid profiles separately rather than banning ordinary inputs or
+silently rewriting target-adaptive work as source-only development.
 
 ## Reusable Lessons / 可迁移结论
 

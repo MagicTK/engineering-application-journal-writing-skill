@@ -18,7 +18,7 @@ Five independent axes; boundary rules; routing procedure; manuscript archetype s
 |---|---|---|
 | C1 | Incomplete or asynchronous observation | Are values missing, irregularly timed, delayed, censored, or sampled at different fixed rates? What mechanism creates the observation pattern? |
 | C2 | Limited or imperfect supervision | What is limited: label count, granularity, reliability or knowledge of the true label? Distinguish missing annotations, candidate labels, incorrect labels and simultaneous fault labels. |
-| C3 | Distribution evolution | Are operating modes discrete, continuously drifting, nonstationary, cross-site, or open-set? What information is available during adaptation? |
+| C3 | Distribution evolution | Are operating modes discrete, continuously drifting, nonstationary or cross-site? What source/target information is available during development and prediction, with or without adaptation? Does the class space also change? |
 | C4 | Heterogeneous information | Are there multiple sources, modalities, temporal scales, or semantic levels? How are they synchronized and what physical evidence does each carry? |
 | C5 | Interacting subsystem and process coupling | Do interactions, propagation paths, material/information flows, or long-range dependencies make local modeling insufficient? Which relationships are known and which must be learned? |
 | C6 | Deployment constraints | Are latency, memory, energy, bandwidth, edge hardware, online updating, or operator workload part of the research question? |
@@ -35,7 +35,7 @@ Do not infer the challenge from the proposed model name. Remove the model mental
 | M3 | Relational and structured modeling | graph learning, topology constraints, causal discovery, knowledge-guided relations |
 | M4 | Multiscale, time-frequency, and fusion modeling | multiscale encoders, spectral analysis, cross-attention, multimodal or multisource fusion |
 | M5 | Reconstruction-based and generative modeling | autoencoders, VAE, GAN, diffusion, conditional synthesis; distinguish representation training from sample generation |
-| M6 | Learning and adaptation strategy | transfer, domain adaptation, continual/incremental learning, self-/semi-/weak supervision, test-time adaptation |
+| M6 | Learning and adaptation strategy | transfer, domain adaptation, domain generalization, continual/incremental learning, self-/semi-/weak supervision, test-time adaptation |
 | M7 | Routing, foundation-model, and uncertainty mechanisms | mixture of experts, LLM-assisted semantics, fuzzy systems, probabilistic calibration |
 | M8 | Efficient or intrinsically interpretable mechanisms | low rank, sparsity, distillation, pruning, compact operators, ante-hoc explanations |
 

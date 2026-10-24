@@ -163,6 +163,17 @@ meaning of suppression, and a dense input-dependent gate need not be sparse
 execution or online learning. Keep those audit judgments in the author note
 unless needed to interpret a retained manuscript claim.
 
+**Source-only generalization, illustrated by P50/P99:** connect the training
+operation to the retained diagnostic predictor, not an invented final fusion
+stage. For verified fictional interfaces: "Source-derived feature perturbations
+and a consistency objective jointly train the diagnostic representation. The
+trained encoder and classifier diagnose measurements from held-out operating
+conditions." Replace the generic objective with the actual distinguishing rule
+before claiming a contribution. Do not add target fitting merely to link the
+sentences, equate an invariance aim with physical causes, or convert mixed
+condition-level results into an overall gain. Routine selection details belong
+in settings or the author note unless they define the claimed advance.
+
 **Source-model transfer, illustrated by P78/P79:** this is a relationship across
 learning phases, not necessarily fusion of source and target features. Explain
 the engineering access restriction, the retained source knowledge and the

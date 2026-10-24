@@ -755,6 +755,24 @@
         "rewrite authorized target-pool fitting as unperformed training-only selection",
         "change data or launch experimental reruns"
       ]
+    },
+    {
+      "id": "domain-generalization-access-boundary",
+      "language": "zh+en",
+      "skill": "engineering-application-journal-writing-skill",
+      "prompt": "A. This fictional study develops a diagnostic encoder and classifier using labeled measurements from three source operating conditions, with four shared fault classes. No held-out target measurements or labels are used for training, hyperparameter selection, or model selection. At prediction, the frozen model takes each target measurement window as input and normalizes that window using its own mean and standard deviation, with no stored target-pool statistics. Variant B retains the same network weights but replaces stored batch-normalization running statistics using the entire unlabeled target evaluation pool before prediction. Explain the information-access setting of each variant and whether either is automatically invalid. Does an unseen condition establish unseen-fault recognition, and would “source-free zero-shot fault diagnosis” fully describe these facts? Do not invent validation or reruns. Report whether the current reference library contains two distinct published industrial definition contexts for domain generalization and reliable Chinese wording; state the actual source IDs, read scopes, and unresolved limits rather than inferring evidence from titles. Explain whether a style-transfer reference called “target” necessarily means the held-out target domain.",
+      "required_behaviors": [
+        "distinguish a fixed current-window input transform from target-pool statistic fitting",
+        "preserve declared target-adaptive comparisons without inventing validation or reruns",
+        "use actual setting and Chinese evidence records without promoting full source-specific mechanisms",
+        "trace a target-named style reference to its actual data origin"
+      ],
+      "forbidden_behaviors": [
+        "infer unseen-fault recognition from unseen operating conditions",
+        "treat frozen network weights as proof of no target-informed fitting",
+        "ban ordinary prediction inputs or impose a universal minimum source count",
+        "claim full-paper replication or physical causal guarantees from a scoped setting record"
+      ]
     }
   ],
   "scenario_scope": "All names, counts, timing, class ranges, and dataset facts below are supplied test fixtures. They are not universal corpus or dataset facts. Authored cases are not executed results; only a dated forward-test report records actual evaluation."

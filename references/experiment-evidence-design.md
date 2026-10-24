@@ -343,6 +343,20 @@ do not replace a defined forecast target or authorize additional experiments.
 
 ### Adaptive State, Feedback And Retention
 
+For a source-only domain-generalization claim, trace training, preprocessing
+fitting and configuration/checkpoint selection to the declared source data.
+P99 p.7 uses a source-domain validation subset; this is an example, not a required
+split or permission to invent validation for a completed study. The frozen
+predictor still receives new measurements. A deterministic transform confined
+to its current input window differs from replacing stored BN statistics using
+the full unlabeled target pool. The latter is target-informed fitting even if
+trainable weights remain fixed; it can support a separately declared adaptive
+or hybrid comparison rather than a pure source-only result. Retain the actual
+access profile and matched comparison role instead of deleting legitimate
+target access, changing results or inventing a rerun. Report held-out conditions
+and any class-space changes separately, with per-condition trade-offs when
+relevant; do not infer unseen-fault rejection from condition novelty.
+
 For source-free adaptation, record access by phase: source-model fitting, target
 adaptation and final prediction/scoring. Source files elsewhere in a benchmark
 project do not themselves violate an adaptation-stage restriction; inspect what

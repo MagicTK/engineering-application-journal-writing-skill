@@ -90,6 +90,24 @@ access, source/target class overlap and prediction timing are separate axes.
 Do not rename known-class adaptation zero-shot merely because target annotations
 are absent, or infer a causal online stream from the source-free label.
 
+For **domain generalization**, distinguish source-only model development from
+prediction on a previously unseen domain (P50 p.2; P99 pp.4,7). The prediction
+still consumes its permitted measurement input. A fixed normalization computed
+within that input window differs from refitting stored statistics on the whole
+unlabeled target pool. The latter changes the access profile even with frozen
+network weights; a declared target-adaptive or hybrid setting can be legitimate
+but is not the same source-only comparison. Shared fault classes under new
+operating conditions do not establish unseen-fault recognition. If a source uses
+`zero-shot transfer` for unseen domains, preserve its explicit meaning rather
+than silently interpreting it as class-level zero-shot diagnosis.
+
+Trace a style-reference feature called `target` to its origin: in P50's p.3
+background formula it names a recipient style, not by itself permission to use
+the held-out target domain. An invariance objective also does not identify
+physical causes or guarantee identical representations under every shift.
+Record actual source counts, selection data and changing objects rather than
+turning one multisource implementation into a universal DG requirement.
+
 Trace a `pseudo-source` object to its data origin and construction. A bank of
 pseudolabeled target samples does not become acquired source data through its
 name, nor add new independent measurements. State the verified access restriction

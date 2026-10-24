@@ -166,6 +166,20 @@ Writing priorities:
 
 For static domain adaptation, describe source/target data access and the representation or objective being aligned. A training alignment objective is not necessarily part of the deployed prediction path (P10). For continual updates, additionally describe update triggers, retained information, adaptation delay and forgetting. A static cross-condition comparison does not establish continual learning. Reserve unknown-class rejection for an actual open-set task; an unseen operating condition need not contain an unseen fault class.
 
+For **domain generalization**, make the unobserved-condition requirement lead to
+the actual source-side learning operation, then to the predictor retained for
+new measurements (P50/P99). State which domains supply training and model
+selection; do not infer an available validation split or impose another paper's
+source count. Source-statistic perturbations and same-label feature swapping
+are different attributed responses, not a required common DG module. A
+within-window input transform may remain fixed while its numerical result
+depends on the input. Fitting stored statistics from a whole target pool changes
+that profile, even without gradient updates; report a legitimate target-adaptive
+variant separately. Keep the evidence boundary in settings and the actual
+mechanism-to-prediction relation in the abstract. Use the
+[scoped setting record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+without turning an invariance objective into physical causal identification.
+
 Check **label-space relations and label availability separately**. P10 uses identical source/target class spaces with unlabeled target measurements, whereas P44 addresses a target class subset and its training equations include target-label symbols. Neither assumption transfers automatically to another adaptation paper. If a target label enters a loss, identify whether it is observed, inferred or evaluation-only before assigning a supervision category; a pseudolabel is not a measured annotation. Domain adaptation is broader than unsupervised adaptation. In a multisource design, distinguish distribution alignment during fitting from a separate weighted combination of classifier predictions; the two may coexist without any source/target feature fusion at inference.
 
 When historical measurements cannot be provided for target adaptation, describe

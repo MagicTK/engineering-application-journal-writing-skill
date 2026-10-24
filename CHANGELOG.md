@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.66 (2026-10-25)
+
+- Added a scoped domain-generalization setting record from two distinct TCYB definition/training contexts, with separately checked Chinese 领域泛化/域泛化 variants. Full paper-specific mechanisms, source-formula conflicts and guarantees remain outside this admission.
+- Connected source-side training to the retained diagnostic predictor in the existing abstract/contribution and topic guides. Distinguished window-local inputs from target-pool statistic fitting, without banning declared adaptive comparisons or inventing validation and experimental results.
+- Extended the existing routing question and registered a focused access-boundary regression. Authored-case inventory and executed response evidence remain separate; release validation is required before publication.
+
 ## 4.1.65 (2026-10-25)
 
 - Distinguish coefficients applied to classification loss, features before a mapping, and discriminator inputs. Preserve valid mapping-homogeneity cases and avoid interpreting normalized coefficients as unchanged feature geometry.

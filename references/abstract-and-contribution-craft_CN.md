@@ -83,6 +83,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **门控贡献及其使用者：** 连清由什么决定门、门调节什么、调节后的贡献用在哪里。对接口已核实的双路径分类器，可写：Local and neighborhood features jointly determine a gate that scales the neighborhood contribution. Adding that contribution to the local features forms the classifier input. 其他设计可能门控专家或注意力输出，不强套这一路径。有区别的门控设计应连接真实任务证据，不把基础门本身单列为发明；残差旁路改变“抑制”的含义，稠密输入相关门也不等于稀疏执行或在线学习。除非影响正文保留主张的解释，这些核查意见放作者说明，不堆入摘要。
 
+**源侧泛化学习，参见P50/P99：**连接训练操作及保留的诊断预测器，不虚构最终融合阶段。对接口已核实的虚构设计可写：Source-derived feature perturbations and a consistency objective jointly train the diagnostic representation. The trained encoder and classifier diagnose measurements from held-out operating conditions. 主张贡献前，将泛称目标替换为真正有区别的学习规则；不为串句新增目标拟合，不将不变性目标写成物理因果，也不将不同工况上的有升有降改写为总体收益。常规选择细节放设置或作者意见，除非它定义了所提推进。
+
 **源模型迁移，参见P78/P79：**这是学习阶段之间的关系，不必是源/目标特征融合。连清工程访问限制、保留的源知识及用于训练目标预测器的指导。已核实设计可参照这一合成承接：A source-trained model initializes the target predictor. Target-derived class guidance then trains its representation from the available measurements, and the adapted model performs fault classification. 应把泛称guidance换成真实有区别性的选择规则或目标，必要时说明更新哪些组件。已有source-free条件可形成动机，但不使目标学习设计自动新颖。保留批次/数据流范围及观察到的类别权衡，不把审查排除条款填进摘要。
 
 冻结骨干的预测也可与经目标信息调整的校正相结合。连清变化对象与校正后的预测/决策，分开先前校准和评价期更新；摘要保留有区别的适应原则，常规缓冲/优化器细节放方法，不再列成若干独立贡献。
