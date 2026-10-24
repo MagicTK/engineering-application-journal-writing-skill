@@ -69,7 +69,9 @@ For `dynamic` or `adaptive`, identify **what changes**. Input-conditioned attent
 
 Do not globally replace `variable-specific` with `variable-wise`: the former describes what is distinctive; the latter often describes organization or computation. The reviewed corpus does not establish every exact collocation above. These distinctions are semantic guidance; retain only phrases supported by the actual mechanism and the author's accepted terminology.
 
-`Feature selection` retains a subset of defined descriptors; `feature extraction` constructs descriptors, and `sensor selection` changes which physical measurements are required. P40 returns selected feature indices. Several retained spectral or statistical features may still require every original sensor and its preprocessing. State the reduced object before claiming fewer sensors, cheaper acquisition or faster inference.
+For explicit subset selection, `feature selection` retains identified input descriptors: P40 returns selected feature indices, and P61 eliminates process-variable inputs using a ranking criterion. `Feature extraction` constructs descriptors. Published names also need their local definition: P62 calls an input-weighting/ranking layer a feature-selection layer, without defining a fixed-size subset in that layer. Preserve that attributed name and describe the weighting; do not turn every attention weight into a selection mechanism or insist that a weighted input is a newly extracted coordinate.
+
+State which object is reduced. Several retained spectral or statistical descriptors may still require every original sensor. A later implementation may compute only the retained descriptors if their dependencies allow it; neither that saving nor removal of sensors follows from the selected-feature count alone. Check acquisition and preprocessing dependencies before claiming fewer required measurements, and measure the relevant computation before claiming faster inference. An explicitly implemented sensor subset can support a reduced-input claim without requiring a separate physical removal trial.
 
 ## Label Objects
 

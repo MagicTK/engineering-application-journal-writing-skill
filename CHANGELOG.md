@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.24 (2026-10-24)
+
+- Check feature-selection definitions in a process study and an existing multilabel study, alongside a published input-weighting layer with the same name. Refine the overly categorical selection-versus-extraction rule while keeping attributed source names intact.
+- Trace selected descriptors to required measurements and computation before discussing resource savings. Preserve actual input reductions and permit computing only selected descriptors when dependencies allow it; connect selection fitting to the existing training boundary.
+- Seven existing references carry the changes. Chinese base wording is checked in two original journal pages. No new topic guide, manuscript edit or research experiment; behavioral checks use fictional cases.
+
 ## 4.1.23 (2026-10-24)
 
 - A whole-passage fictional probe preserved the science but exposed two prose defects: a conclusion replayed experimental setup, and a contribution included internal novelty-classification commentary. Refine the existing contribution and conclusion guides while preserving conditions that materially change a claim.

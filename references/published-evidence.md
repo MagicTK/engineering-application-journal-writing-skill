@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 60-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 60 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 62-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 62 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计60篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计62篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -72,6 +72,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P58 | [Entropy-enhanced batch sampling and conformal learning in VGAE for physics-informed causal discovery and fault diagnosis](https://doi.org/10.1016/j.compchemeng.2025.109053) | Industrial graph modeling: the inspected physics-named term acts on latent pair distances. Keep the complete model name attributed and do not infer exact physical or causal guarantees from its wording. |
 | P59 | [Physics-informed neural networks with hard linear equality constraints](https://doi.org/10.1016/j.compchemeng.2024.108764) | Computers & Chemical Engineering 189 (2024), 108764. Constrained neural surrogate modeling; see the version-specific reading record below. |
 | P60 | [Physics-informed neural networks with hard nonlinear equality and inequality constraints](https://doi.org/10.1016/j.compchemeng.2025.109418) | Computers & Chemical Engineering 204 (2026), 109418. Nonlinear constrained neural surrogate modeling; see the version-specific reading record below. |
+| P61 | [A Nonlinear Support Vector Machine-Based Feature Selection Approach for Fault Detection and Diagnosis: Application to the Tennessee Eastman Process](https://doi.org/10.1002/aic.16497) | AIChE Journal 65(3), 2019, pp.992-1005. Process-variable subset selection through a sensitivity ranking and recursive elimination; this is distinct from classifier support-vector selection. |
+| P62 | [FS-SCF network: Neural network interpretability based on counterfactual generation and feature selection for fault diagnosis](https://doi.org/10.1016/j.eswa.2023.121670) | Expert Systems With Applications 237 (2024), 121670. Its attributed feature-selection layer weights inputs and provides rankings; inspect that operation before inferring subset removal or physical causality. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -261,6 +263,14 @@ P01 pp.4-5, Sections 3.3.2-3.4 and Eqs.(3),(7)-(10), separates stage-wise poolin
 P02 p.5, Section 3.3.2 and Eq.(31), uses `high-order feature aggregation` for a weighted combination of first- and second-order pooled features. Repeated occurrences in that paper count as one work, and do not establish its full name as a generic family. Its prose's max-pooling wording differs from the average defined in Eq.(28); this bounded discrepancy is retained rather than resolved without implementation evidence. Reading these definitions supports operation-sensitive writing, not a universal aggregation/fusion split or verification of the papers' performance claims. No source implementation or experiment was reproduced in this check.
 
 本组回读将基础特征融合的依据从摘要推进到方法定义，区分隐特征、预测输出、图组装及实际运算。中文基础译名另行核对；不新增工程论文计数，不把相关基础运算视为完整模块名的多源证明，也不借出版状态消除来源内部的表述差异。
+
+### Selection, Weighting And Measurement Dependencies
+
+Definition checks on 2026-10-24 revisited P40 pp.3-4, Section III-B and Algorithm 1: coefficient-row rankings guide descriptor deletion, and the algorithm returns selected indices. P61 pp.1-4 and p.6 defines process-variable inputs, binary subset variables in Eq.(5), sensitivity ranking and recursive elimination. The implemented heuristic is not a verified globally optimal subset solver; its classification support vectors are samples, a different selected object. The p.6 account refers to training/validation pairs and later uses `testing` in that discussion, so these passages are not imported as an independently verified evaluation procedure.
+
+P62 pp.1,3-5 was read for its attributed operation, with p.4 visually checked. Section 2.1 multiplies each input by a trainable weight and penalizes deviation of their sum from one. Section 3.1 uses the weights to rank features and to weight a counterfactual objective. That regularizer alone does not impose a fixed-size subset. Preserve the source's layer name while distinguishing ranking, weighting and actual removal; do not transfer its causal interpretations or neighboring counterfactual-loss explanations as established physical evidence.
+
+The base feature-selection translation was separately checked in the bilingual title/abstract of Microelectronics & Computer 2021.1033 and in the bilingual title, abstract and keywords of Acta Automatica Sinica c150851. These are translation sources, not additional industrial studies or validation of full proposed names. No source implementation or experiment was reproduced.
 
 ## Reusable Lessons / 可迁移结论
 
