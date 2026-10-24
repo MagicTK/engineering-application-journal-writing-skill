@@ -241,6 +241,27 @@ M_{\mathrm{weighted}}=\frac{\sum_k n_k M_k}{\sum_k n_k}.
 
 Do not assume class-wise F1 averages reproduce micro-F1 or accuracy.
 
+Separate metric support weights from fitting coefficients and sampling. For a
+declared fixed-denominator expected loss with class draw probabilities `q_k`,
+class loss weights `w_k` and class-conditional mean losses, contributions are
+proportional to `q_k * w_k` times those means. Changing both the sampler and the
+loss weights changes this objective; it is not automatically an error or a
+second correction that must be removed. Check the implemented reduction and
+normalization, especially when a minibatch denominator also depends on weights.
+Do not impose weights summing to one as a universal requirement. Determine class
+counts and any chosen weighting rule from permitted fitting/selection resources,
+not final-evaluation labels.
+
+A support-weighted F1 gives larger classes larger aggregation weights; it does
+not establish a class-weighted training loss or equal attention to rare faults.
+Use class-wise and/or macro results when the claim concerns minority outcomes,
+and a defined cost evaluation for operational-cost claims. Preserve the actual
+evaluation population rather than silently balancing the test set. A valid
+balanced test can answer an equal-class question, but is not automatically an
+estimate under production prevalence. Report mixed outcomes directly: improved
+weighted F1 and reduced macro F1 are compatible findings, not grounds for
+changing either number or claiming universal class improvement.
+
 For zero-shot evaluation, record the classes supplying real labeled training
 measurements, the semantic resources, generated features and any unlabeled target
 pool separately. IDs on generated examples do not create real unseen-class

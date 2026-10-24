@@ -95,6 +95,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **观测时间，参见P08/P24/P73：**将已采对象接到它实际提供输入的表征或估计器。摘要可由不同原生采样计划，引出利用现有测量或真实间隔的操作，再接质量量、图或报警。对已核实的间隔加权预测器，可写：Each stream is encoded at its native observation times. Measured intervals weight these representations before fusion for quality estimation. 再加入实际有区别的设计，不新造时间模块名。贡献可落在预测器怎样利用这些观测；用了中间观测不等于恢复全部未观测值。结果保留有据收益及仍存在的速率/间隔敏感性。
 
+**训练损失加权：**将权重作用、受训学习器及工程决策连起来。接口相符时可写：Class-dependent weights scale the training errors of the temporal classifier. The fitted model assigns fault classes to new process measurements. 再补真实有区别性的权重规则，不把常规加权本身写成创新。训练系数不自动是预测时门控、特征融合模块或额外分数乘子。P93说明加权拟合，P92/P94则对增强前的选样加权，不能凭名称替代接口核对。结果落到实报指标及相关类别权衡；加权平均提高不单独证明稀有故障改善。权重和采样的详细运算放设置，不逐项塞进摘要。正文写保留的分类器如何预测，而不是在每句补排除条款。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

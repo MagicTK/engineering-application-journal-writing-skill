@@ -219,6 +219,18 @@ training, name the trained representation and retained predictor rather than
 inventing a final feature-fusion module. Place quantity/interpretation checks in
 the author note; keep supported task meaning and empirical trade-offs in prose.
 
+**Training-loss weighting:** connect the factors to the learner, then the
+retained classifier to the engineering decision. If verified: "Class-dependent
+weights scale the training errors of the temporal classifier. The fitted model
+assigns fault classes to new process measurements." Supply the actual
+distinguishing rule rather than claiming routine weighting as an advance. Do not
+turn a training coefficient into an inference-time gate, feature-fusion module or
+additional score multiplier. P93 illustrates weighted fitting, whereas P92/P94
+weight augmentation selection; those names cannot substitute for this interface
+check. Close on the reported metric and relevant class trade-off. A weighted
+aggregate gain alone does not substantiate rare-fault improvement; explain the
+weight/sampler arithmetic in the settings, not in every abstract.
+
 **Evidence combination:** connect the encoded outputs to the kind of combination
 actually performed and to the final diagnostic decision. A feature sum feeds a
 classifier; a defined mass-combination rule produces masses that need their own

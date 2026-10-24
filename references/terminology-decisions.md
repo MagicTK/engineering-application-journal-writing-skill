@@ -117,6 +117,33 @@ For explicit subset selection, `feature selection` retains identified input desc
 
 State which object is reduced. Several retained spectral or statistical descriptors may still require every original sensor. A later implementation may compute only the retained descriptors if their dependencies allow it; neither that saving nor removal of sensors follows from the selected-feature count alone. Check acquisition and preprocessing dependencies before claiming fewer required measurements, and measure the relevant computation before claiming faster inference. An explicitly implemented sensor subset can support a reduced-input claim without requiring a separate physical removal trial.
 
+## Weight Roles And Class Decisions
+
+Name what a weight multiplies and which phase uses it. P92 p.4 weights the
+selection of minority examples for sample generation; P93 p.5 weights training
+residuals in an ELM objective; P94 pp.3-4 uses reweighting to select prototypes
+before augmentation. These are distinct roles, not a matched definition pair
+for one class-weighted classifier. P39 p.5 instead uses a prediction-dependent
+focal factor in a classification objective; it is not automatically an
+inverse-frequency class weight. Preserve each source's attributed name without
+borrowing its causal or minority-benefit claims.
+
+For fixed class weights in a supplied method, say that per-class factors weight
+the specified training loss. Sampling probabilities change which examples are
+drawn; feature weights change a representation; decision-score weights change
+prediction; support weights in weighted F1 change an evaluation average. One
+does not establish another. A sample-dependent coefficient need not be constant
+within a class. If a coefficient scales a residual before squaring, inspect the
+resulting squared coefficient rather than rewriting it as a linear loss weight.
+
+Follow the fitted predictor to its actual decision. A loss weight need not be
+multiplied into class scores again at prediction. An explicitly implemented
+score adjustment remains valid but is a separate operation. Check how weights
+were determined and how sampling changes their effective objective using
+[the metric and weighting guidance](experiment-evidence-design.md#8-metric-integrity).
+Describe observed class trade-offs rather than inferring minority improvement,
+calibration or physical misclassification cost from the word balanced.
+
 ## Label Objects
 
 | Term or object | Meaning to establish |

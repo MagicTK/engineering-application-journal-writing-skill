@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.59 (2026-10-25)
+
+- Separate augmentation-selection weights, sample-error weights, class loss factors, sampling probabilities, prediction-score adjustments and support-weighted metrics in existing guidance. Connect the actual training operation to the retained diagnostic predictor.
+- Add three selected published contrast records and one independently checked Chinese weighted-cross-entropy wording. Their different operations do not complete a matched general class-weighting or focal-loss definition pair; full module names and causal claims remain unadmitted.
+- Preserve mixed class-level findings in abstract/contribution writing. Clarify sampler/loss interactions without banning valid combinations or confusing aggregate F1 gains with minority improvements. No topic, template, real manuscript or experimental result is added or changed.
+
 ## 4.1.58 (2026-10-25)
 
 - Clarify the compact evaluation-query rule in both experiment entrypoints so it does not forbid legitimate training-episode or active-acquisition labels. Preserve final-evaluation independence without classifying permissions from the word query alone.

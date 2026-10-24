@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 91-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 91 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 94-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 94 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计91篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计94篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -103,10 +103,43 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P89 | [Fault Diagnosis of Rotating Machinery With Limited Expert Interaction: A Multicriteria Active Learning Approach Based on Broad Learning System](https://doi.org/10.1109/TCST.2022.3200214) | TCST 31(2), 2023, pp.953-960. Adjacent machinery study: p.3 Section II-B explicitly links pool selection, expert labels, acquisition budgets and classifier updating. Full MCAL/BLS designs and annotation-time claims remain source-specific. |
 | P90 | [Fusing information entropy and similarity: A novel active learning strategy for chemical process fault classifications](https://doi.org/10.1016/j.chemolab.2023.104821) | Chemometrics and Intelligent Laboratory Systems 237 (2023), Art.104821. Sections 3.1-3.3, pp.4-5, define sample acquisition, external labeling and classifier refitting for a chemical-process benchmark. Its full E-ECos strategy and pseudocode details are not generic base definitions. |
 | P91 | [A Discrimination-Guided Active Learning Method Based on Marginal Representations for Industrial Compound Fault Diagnosis](https://doi.org/10.1109/TASE.2023.3325271) | TASE 21(4), 2024, pp.6411-6422. Adjacent machinery study: p.4 Section II-B describes queried expert labels and subsequent classifier retraining. It shares authors/research lineage with P89, not an additional independent invention of active learning. |
+| P92 | [An Imbalance Modified Deep Neural Network With Dynamical Incremental Learning for Chemical Fault Diagnosis](https://doi.org/10.1109/TIE.2018.2798633) | TIE 66(1), 2019, pp.540-550. Section III-A1, p.4, weights selection of minority examples for generation, not per-class cross-entropy terms. Full IM-SMOTE/incremental names, update-set notation and experimental claims remain attributed and unverified here. |
+| P93 | [Compound-Fault Diagnosis of Rotating Machinery: A Fused Imbalance Learning Method](https://doi.org/10.1109/TCST.2020.3015514) | TCST 29(4), 2021, pp.1462-1474. Adjacent machinery study: p.5, Section III-B2 and Eq.(27), scales training residuals before a squared norm. The sensitivity-derived sample matrix is not automatically an inverse-class-frequency factor or a prediction gate; the full FILM/ELM and evidence-fusion designs are not certified. |
+| P94 | [Imbalanced fault diagnosis based on sample-weighted counterfactual](https://doi.org/10.1016/j.compchemeng.2025.109434) | CCE 204 (2026), Art.109434. Sections 3.1.1-3.1.2, pp.3-4, derive weights for prototype selection before augmentation. This role is distinct from loss weighting; full stable-learning, causal, counterfactual-feasibility and performance claims were not validated. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Weighting Roles, Fitted Predictors And Class-Level Evidence
+
+P92 pp.1,4, P93 pp.1,5 and P94 pp.1,3-4 were selected, read and visually
+inspected; P39 pp.1,5 was reread and inspected. P92 Section III-A1 uses weights
+to select examples for generation; P93 Eq.(27) weights fitting residuals before
+squaring; P94 Section 3.1 selects augmentation prototypes after sample
+reweighting. P39 Eq.(13) uses a prediction-dependent focal factor. These distinct
+roles do not form a matched pair for fixed class weighting in cross-entropy.
+P93/P39 also share authors/research lineage. No generic full weighting module is
+admitted from those shared words, and no field-wide prevalence is claimed.
+Full source formulas, causal assertions, update-set notation, augmentation
+validity and reported experimental benefits are outside this selected check.
+
+Original paired abstracts in [Coal Science and Technology,
+cst.2023-0903](https://www.mtkxjs.com.cn/article/doi/10.12438/cst.2023-0903)
+separately pair weighted cross-entropy loss with 加权交叉熵损失. The accessible
+HTML has no loss equation. This is a wording check, not a full computation,
+another English definition pair or verification of the source's transfer and
+minority-class performance claims. A failed source download and search-result
+snippets did not supply missing definitions.
+
+For writing, connect the weighted object and actual training/augmentation role
+to the retained predictor rather than adding an inference-time gate. Distinguish
+the sampling distribution, loss coefficients and evaluation supports. An
+aggregate weighted-F1 gain can coexist with reduced macro or minority outcomes;
+state the actual finding and trade-off. Fixed class factors, prediction-dependent
+factors and sample-dependent residual weights need their own definitions, not a
+single inherited rule. This scope supports functional descriptions of supplied
+operations while leaving unmatched general-name records unresolved.
 
 ### Acquired Labels, Learner Updates And Final Diagnosis
 

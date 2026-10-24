@@ -195,10 +195,13 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 | multilabel / multi-label learning and classification | P37 pp.2、4第II-B2节及式(16)-(19)将成对分类结果汇总为多个子系统故障判断；P39 pp.2-3第II-A节定义允许多个正项的故障指示向量及后续决策。P40 p.3定义样本-标签二值矩阵，p.5进行多标签评价 | P37/P39是同一作者组合的不同工作，P40提供另一团队的相关特征选择语境。共同点是每个样本可对应多个标签，不等于候选标签歧义或标注缺失。成对分类及其融合规则仍为来源具体设计。局部softmax分类器可以组成多标签系统，应检查最终输出，不能统一要求sigmoid头，也不能把所有复合故障任务都称为多标签分类 |
 | physics-informed neural network (PINN) | P59作者版本第1、3.2节与P60作者版本v2第1、2节，均将物理约束引入神经代理模型，具体采用训练惩罚或输出约束 | 两篇不同化工论文，后者沿前者方向扩展；基础类别不限于PDE残差损失，但软/硬约束变体及完整专名不可互换。说明实际物理关系及作用位置 |
 
+**权重角色边界：**P92 p.4、P93 p.5及P94 pp.3-4分别对生成种子选择、拟合残差及增强原型选择加权，尚未完成分类训练中class weighting的匹配双来源，也不构成weighted cross-entropy、focal loss或统一平衡模块的双来源。P39随预测改变的focal因子又是另一对象。按已核实的乘法对象及阶段写普通功能描述；未完成配对不等于禁止有效的数学操作或作者已确认的新名称。详见[语境裁定](terminology-decisions_CN.md#权重作用与类别决策)。
+
 中文另行核验：
 
 | 中英对应 | 在线原始来源及已读位置 | 使用边界 |
 |---|---|---|
+| weighted cross-entropy loss / 加权交叉熵损失（函数） | [煤炭科学技术cst.2023-0903](https://www.mtkxjs.com.cn/article/doi/10.12438/cst.2023-0903)，原始双语摘要 | 明确对应少数类训练中的用词，可读HTML没有损失方程，仅核译法，不认证完整运算或两篇英文定义。通用class weighting中文名称、频数倒数规则、focal变体及完整TLCNN名称均不由此获证；不增加工程定义ID |
 | active learning / 主动学习 | [软件学报2024,35(3):1125-1139](https://www.jos.org.cn/jos/article/abstract/7073)，原始双语摘要；[系统仿真学报2021,33(6):1350-1357](https://www.china-simulation.com/CN/abstract/abstract2630.shtml)，原始双语题名及摘要 | 两个不同期刊原始页分别在多模态训练与软测量中对应选择性标注的基础词。只核用词及角色，不称完整方法审查，也不增加英文工业定义ID；不认证全部选择策略译名、预测器类别、完整自提名或标注成本主张 |
 | soft-threshold function / 软阈值函数；soft thresholding / 软阈值化 | [东北大学学报（自然科学版）2024,45(11):1587-1594](https://xuebao.neu.edu.cn/natural/CN/10.12068/j.issn.1005-3026.2024.11.009)，原始双语摘要；[北京航空航天大学学报2021,47(7):1399-1406](https://bhxb.buaa.edu.cn/bhzk/cn/article/doi/10.13700/j.bh.1001-5965.2020.0194)，原始双语摘要与关键词 | 两原始期刊页分别对应函数及操作名称；可读HTML无完整方法方程正文。不认证全部残差收缩模块名、最优性或噪声分离，也不增加两项工业英文定义计数 |
 | zero-shot learning / 零样本学习；zero-shot fault diagnosis / 零样本故障诊断 | [软件学报6146](https://www.jos.org.cn/jos/article/abstract/6146)，原始双语题名、摘要及关键词；[电工技术学报231335](https://dgjsxb.ces-transaction.com/CN/10.19595/j.cnki.1000-6753.tces.231335)，原始双语题名、摘要及配对关键词 | 两者明确对应零样本学习，后者另对应零样本故障诊断。可读摘要页核实用词及类别语义语境，不认证完整算法或所有广义变体，不增加工业语料ID。另读[仪器仪表学报J2514442摘要](https://yqyb.cis.org.cn/yqyb/article/abstract/J2514442)，其generalized zero-shot/zero-sample用词变体不确立唯一英文译法或完整指标定义 |

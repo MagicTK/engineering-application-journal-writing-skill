@@ -72,6 +72,22 @@ Branch by the actual supervision arrangement:
 
 P05-P06 exemplify semantic transfer; P17 uses labeled and unlabeled measurements for concentration prediction; P21 couples self-supervised and diagnostic learning; P22 learns from segment labels for point-level detection. Their method names do not make these supervision arrangements interchangeable. P18 adds long-tailed classes and cross-domain information, in an adjacent equipment setting.
 
+If class-frequency imbalance is central, distinguish the learning response from
+the evaluation average. A class-dependent loss factor, altered sampling
+probabilities and generated minority examples act at different points. P92's
+generation-seed weights, P93's weighted fitting residuals and P94's
+augmentation-prototype selection illustrate why a shared weight word does not
+identify the operation. State what changes the training distribution or
+objective, how it trains the retained classifier and which decision is used for
+new measurements. A larger weighted F1 can coexist with worse minority or macro
+performance. Select class-wise/macro or application-cost evidence when those
+benefits are claimed, rather than renaming an aggregate gain as balanced
+diagnosis. Record train/evaluation class counts and matched sampling/weighting
+controls; multiple balancing operations can be legitimate, but their combination
+defines a different objective. This conditional route does not turn ordinary
+class weighting into a novel contribution or make imbalance every paper's
+headline. See [weight roles](terminology-decisions.md#weight-roles-and-class-decisions).
+
 For zero-shot diagnosis, trace how semantic knowledge reaches the final decision.
 P05/P06 map measurements toward class-semantic descriptions, whereas P80 uses
 descriptions to generate unseen-class features before fitting a diagnostic
