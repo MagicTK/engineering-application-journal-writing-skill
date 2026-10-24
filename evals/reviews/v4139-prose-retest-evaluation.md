@@ -1,0 +1,24 @@
+# Class-Evidence Prose Retest Before The Index Repair
+
+Date: 2026-10-24. Version: 4.1.39.
+
+One pre-change context answered the original quantity request scientifically correctly on v4.1.38. It separately disclosed an internal full-quota-output privacy violation. Its final response has no account values; raw service output is not published, and that context is not described as privacy-clean throughout. This was not a demonstrated scientific failure.
+
+Nine existing references were extended with a scoped two-publication evidence-name record, separate Chinese wording and output-to-consumer guidance. The initial four-request context passed the mathematical and scientific checks, but the maintainer identified a redundant defensive ending in C. The [initial review](v4139-initial-evaluation.md) and [actual initial response](../responses/v4139-initial.md) retain that finding. Two existing bilingual terminology-decision references were clarified; no case facts or requests changed, and a new fresh context answered the same A-D on the repaired fingerprint.
+
+The maintainer reviewed the actual retest response below. There was no independent second grader, whole-bank certification or scientific reproduction. The [pre-change response](../responses/v4139-baseline.md) and [prose-retest response](../responses/v4139-prose-retest.md) are retained. At this point three completed contexts handled one pre-change, four diagnostic and four retest requests; these are not nine independent model runs. Source, expanded coverage and quota-output instructions changed between baseline and initial checks. The later prose repair was followed by one fresh-context retest, not a controlled general writing-performance study.
+
+| Final Case | Observed Response | Maintainer Assessment |
+|---|---|---|
+| M4139-A | Correct e, b, p, u and rejection decisions for both samples; a 50-word method passage. | Pass. Expected probabilities remain valid model outputs, while uncertainty is not equated with error probability, physical reliability or certain unknown detection. |
+| M4139-B | Evidence scaling gives alpha=[71,11], p=[71/82,11/82], u=1/41; direct alpha scaling gives [80,20], [0.8,0.2], 0.02. A 31-word explanation preserves this distinction. | Pass. The legitimate alpha-scaling invariance is retained; neither transformation becomes online training or an empirical reliability result. |
+| M4139-C | Error rates 20%/60%, observed accuracies 80%/40%, absolute confidence gaps 0/40 percentage points and u=0.2/0.02; a 47-word result paragraph. | Pass. The result reports the same 20-sample bin positively and leaves the unclaimed population-wide calibration extension in the author note. Threshold selection and probability calibration remain distinct. |
+| M4139-D | A 180-word abstract and 49-word overall-design contribution candidate connect paired signals, controlled feature fusion, an evidence head, class prediction and rejection. | Pass. The result keeps higher observed pre-rejection classification/unknown-rejection performance and higher known false rejection. Routine testing is not another contribution, and unknown rejection is not naming a new class or deployment. |
+
+Word counts and synthetic arithmetic were independently checked. The A method passage uses an imperative decision sentence, and the D contribution could admit stylistic alternatives. These are not scientific failures; this check does not certify every returned sentence as final journal-polished prose. No exact sentence is prescribed as a universal template.
+
+All contexts had preset historical summaries and reported no active retrieval or use of them as case evidence; they are fresh task contexts, not provably memory-blank models. The final respondent reports current references, targeted section searches, required bootstrap files and a read-only quota service. No account values appear in its final response. We do not independently certify every internal service trace. Only private local reference links and whitespace are normalized for public responses; raw answers remain private.
+
+The repaired 102-file instruction/dependency fingerprint was unchanged through the final retest. Targeted source reading paired P52 and P75 in their stated class-evidence formulation and recorded shared authorship/lineage, rather than counting accepted/publisher copies twice or generalizing full network names. Chinese wording was read separately from an original bilingual source. The selected engineering index contains 75 works, not 75 fully revalidated papers. No manuscript, Overleaf source, real figure, dataset or experimental result was edited.
+
+After this passed prose check, the new P75 row was found separated from the Markdown source table. A failing-first structural regression, table repair and validator change followed. This retained response is not the final post-index-repair validation; the final fingerprint requires its own check.

@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.39 (2026-10-24)
+
+- Complete a scoped two-publication record for nonnegative class-evidence Dirichlet classification, noting the sources' shared authorship and EVGG lineage. Verify Chinese base terminology separately from an original bilingual scholarly source.
+- Distinguish evidence, prior-inclusive strength, belief masses, expected class probabilities and uncertainty. Connect a shared output head to the actual classification/rejection consumers without inventing a serial fusion path or an error-probability interpretation.
+- Refine nine existing references and add one engineering-source ID. Synthetic checks cover quantity definitions, scaling, observed calibration and linked abstract/contribution writing; no manuscript, result or protected figure is edited.
+- Catch source-ID rows separated from the source table by blank or prose lines, with a failing-first regression and a final-snapshot retest. This guards the documented index structure, not arbitrary Markdown rendering or scientific source validity.
+
 ## 4.1.38 (2026-10-24)
 
 - Distinguish mean run-wise metrics from explicitly pooled-prediction metrics without silently changing the approved evaluation target. Repeated predictions are not new acquired test samples.

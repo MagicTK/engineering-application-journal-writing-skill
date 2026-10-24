@@ -52,6 +52,7 @@ Choose the connection from the actual dependency:
 | Adaptation across phases | What changes, using which newly available information | Calling a learning phase a production stage |
 | Update control | Which event changes learning, and when the required feedback is available | Implying that an update trigger controls sensor acquisition or is itself a fault alarm |
 | Alternating refinement | Which two objects update each other during fitting, and what is retained for prediction | Describing a reciprocal training cycle as two independent modules or a one-way inference pipeline |
+| One head, different decision outputs | Which head quantity supplies the class estimate, and which supplies a defined uncertainty or rejection decision | Calling evidence, belief mass and class probability interchangeable, or inventing rejection because uncertainty is reported |
 
 Make the final method sentence advance from operation to task meaning. It may explain that a representation combines local measurements with system-level context, or that a predictor uses information from unlabeled observations. It should not re-list all modules or promote combination itself to proven generalization. A verified short sentence is preferable to a long sentence containing two vague `which` clauses.
 

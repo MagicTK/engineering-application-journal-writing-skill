@@ -73,6 +73,22 @@ class SuiteValidatorTests(unittest.TestCase):
             (root / "README_CN.md").write_text("[2 篇文献](references/published-evidence.md)")
             self.assertEqual([], VALIDATOR.check_evidence_counts(root))
 
+    def test_evidence_source_rows_are_contiguous(self) -> None:
+        for separator in ("", "\n", "   \n", "A paragraph breaks the table.\n"):
+            with self.subTest(separator=separator), tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                (root / "references").mkdir()
+                (root / "references/published-evidence.md").write_text(
+                    "A selected 2-paper corpus.\n## Sources / 来源\n"
+                    "| ID | Work |\n|---|---|\n| P01 | One |\n"
+                    + separator + "| P02 | Two |\nSome source titles\n"
+                )
+                issues = VALIDATOR.check_evidence_counts(root)
+                if separator:
+                    self.assertTrue(any("contiguous" in issue for issue in issues), issues)
+                else:
+                    self.assertEqual([], issues)
+
     def test_evidence_count_rejects_stale_bilingual_navigation(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -179,7 +195,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.38", suite["version"])
+        self.assertEqual("4.1.39", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

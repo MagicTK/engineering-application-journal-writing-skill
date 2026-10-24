@@ -157,11 +157,16 @@ def check_evidence_counts(root: Path) -> list[str]:
         return ["published evidence index has no source table"]
     scope, table = text.split("## Sources /", 1)
     table = table.split("Some source titles", 1)[0]
-    identifiers = re.findall(r"^\| (P\d{2,}) \|", table, re.M)
+    source_rows = list(re.finditer(r"^\| (P\d{2,}) \|[^\n]*", table, re.M))
+    identifiers = [row.group(1) for row in source_rows]
     count = len(set(identifiers))
     issues: list[str] = []
     if not count or count != len(identifiers):
         issues.append("published evidence index needs distinct nonempty source IDs")
+    if source_rows:
+        source_block = table[source_rows[0].start():source_rows[-1].end()]
+        if any(not line.startswith("|") for line in source_block.splitlines()):
+            issues.append("published source rows must stay in one contiguous Markdown table")
     seen_dois: dict[str, str] = {}
     for row in re.finditer(r"^\| (P\d{2,}) \| ([^\n]+)", table, re.M):
         source_id, columns = row.groups()

@@ -266,6 +266,8 @@ For classifier-logit energy `E(z) = -T log sum_c exp(z_c/T)` with fixed positive
 
 Keep the proposed evaluation proportional to the retained claim. If a model only learns feature perturbations and outputs known fault labels, evaluate its stated condition-generalization task without inventing a rejection head. If an uncertainty estimate does drive rejection, the chain `estimate -> decision -> measured outcome` should appear consistently in the overview, contributions and results. Designing these checks does not authorize running new experiments or changing recorded outcomes.
 
+For a Dirichlet class-evidence output, reduced uncertainty mass is a change in a model quantity, not an error-rate measurement. Probability calibration evaluates the stated probabilities against outcomes; calibration of an error-probability score would target that different event. Neither follows merely from threshold selection on separate calibration data. Equal class-probability means can accompany different concentration, so preserve both the score definition and the measured decision outcome before describing a reliability improvement. Use the [quantity check](terminology-decisions.md#evidential-classification-quantities) without requiring every uncertainty score to be an error probability.
+
 ## 9. Consistency Ledger
 
 Maintain one ledger for confirmed results:
