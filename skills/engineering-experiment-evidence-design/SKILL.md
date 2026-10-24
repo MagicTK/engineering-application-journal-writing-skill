@@ -7,7 +7,7 @@ description: Design, audit, and organize experimental evidence for engineering-a
 
 [中文执行版](../../skills-zh/engineering-experiment-evidence-design-zh/SKILL.md)
 
-Suite version: `4.1.63`
+Suite version: `4.1.64`
 
 ## Mission
 
@@ -93,7 +93,7 @@ Use a layered comparison set when appropriate:
 - strongest industrial or task-specific method;
 - proposed method.
 
-For every method, record implementation source, input adaptation, hyperparameter selection, information access, and whether results were reproduced or cited. Do not compare a method using future information with one restricted to online-available variables.
+For every method, record implementation source, input adaptation, hyperparameter selection, information access, and whether results were reproduced or cited. Do not present methods with different prediction-time information as equal-access competitors. A clearly labeled reference with extra inputs may be reported separately; explain its purpose and access in the [comparison record](../../references/experiment-evidence-design.md#4-comparison-fairness-record).
 
 Separate the industrial challenge from the method family with [the taxonomy](../../references/industrial-ai-taxonomy.md). A preprocessing strategy used to make a comparison method accept the input is not automatically a separate comparison method. Describe its construction and declared data access: training and any separately defined validation data for source-only selection, or permitted target measurements for declared adaptation. Labels reserved for final scoring cannot select the input construction.
 

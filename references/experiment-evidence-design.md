@@ -119,6 +119,8 @@ Known adaptation:
 
 Report method variants once in the settings. Tables may use shorter names when unambiguous.
 
+Separate matched-information comparisons from references with additional inputs. A separately labeled reference using later-released measurements can examine performance under that extra access, but is not an equal-access online competitor or a proven upper bound. State the input timing and purpose, and exclude it from matched-information win counts. Do not infer leakage in the main method solely from a separate reference's access. If the added input contains the prediction target itself, explain the resulting circularity rather than interpreting it as predictive skill. This is not a requirement to add such a reference or rerun an otherwise valid study.
+
 For a limited-label comparison, record unique source/base annotations, current-task support labels and derived training examples separately. Repeated episodes and augmented views can reuse the same labels. Match earlier training/semantic resources when the claim is about that comparison, or disclose the relevant difference and scope the finding accordingly; a pretrained model is not invalid merely because it used more historical labels. A `K`-shot result concerns its declared support budget, not automatically the total human annotation cost. A total-cost claim also needs the relevant earlier labeling resources and a defined comparison. Use the [few-shot distinctions](topic-playbooks.md#2-scarce-labels-few-shot-zero-shot-weak-or-self-supervised-learning) only for studies with this claim, not as extra requirements for every diagnostic paper.
 
 For active acquisition, report the budget unit: new distinct labeled samples,

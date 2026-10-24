@@ -105,9 +105,9 @@ Confirm:
 - whether the unit is a time point, window, batch, run, product, machine, furnace, campaign, or production lot;
 - whether windowing occurs after the split;
 - whether overlapping windows cross split boundaries;
-- whether normalization, imputation, feature selection, clustering, or resampling uses training data only;
+- the data used to fit or select normalization, imputation, feature-selection, clustering or resampling settings under the declared access regime, without selection by labels reserved for final evaluation;
 - whether repeated products or operating campaigns appear across splits;
-- whether comparison methods use the same information and split.
+- whether primary same-information comparisons use matched access and splits, with differently informed references labeled and interpreted separately.
 
 For time-dependent industrial data, random sample splitting may overestimate performance. The manuscript should explain the chosen split and its operational meaning.
 

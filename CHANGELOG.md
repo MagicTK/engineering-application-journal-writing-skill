@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.64 (2026-10-25)
+
+- Narrow the English comparison rule to equal-access claims, with a matching clarification in the Chinese entrypoint. Separately labeled references using extra information may answer a different question without becoming fair online competitors or proven performance bounds.
+- Distinguish a separate reference's access from leakage in the main method, and identify target-containing inputs as a possible circular reference. Do not prescribe an unperformed reference or rerun. Extend existing experiment guidance, not the terminology, topic or template inventory; real manuscripts and results remain unchanged.
+- Refine two compact rigor-checklist items after independent reading so their fitting/access scope is explicit rather than appearing to require training-only processing or prohibit differently informed references.
+
 ## 4.1.63 (2026-10-25)
 
 - Corroborate scoped Chinese free-energy wording using an official scholarly commentary and a separately inspected physics reference draft. Distinguish word form, classifier use, English operation records, Chinese method definitions and normative status; add no industrial source ID or complete module name.
