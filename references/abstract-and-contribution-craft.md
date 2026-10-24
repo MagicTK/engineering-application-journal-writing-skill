@@ -16,6 +16,16 @@ Do not require all papers to have grouping, stages, gates or multiple branches. 
 
 For multistage fusion only, inspect whether a pooled stage vector is the final output or an intermediate context returned to variable-level features. Independently encoded features can share encoder weights; `independent` does not necessarily mean separately parameterized. A residual branch may preserve features while a different fusion module combines them. An attention prior added to scores is not automatically a causal model or a hard topology constraint.
 
+When a feature bypass matters to the advance, explain its actual merger rather
+than deriving the operation from the module title. P11/P15/P14 define additive
+residual paths, including dimension matching where needed. For a verified design,
+`The mapped input is added to the transformed features, which then supply the
+classifier` states a positive connection. A different design may concatenate two
+parallel feature sets; retain an approved proposed name and describe that actual
+operation. Put shape checks in Methods and avoid claiming lossless information
+retention or a generalization gain merely from either merger. A routine residual
+connection is not automatically an independent contribution.
+
 Mark each operation as prediction-time computation, training objective, pretraining, or test-time adaptation. These are different relationships, not successive boxes in one forward pass. An alignment loss can shape an encoder during training without receiving its output during deployment; a reconstruction decoder can be absent at inference. When this distinction is central, the abstract needs one clear training-to-prediction connection rather than a fictional sequence. Published examples P10, P17 and P21 illustrate different training interactions; P25 even uses different branch components for training and prediction.
 
 A modified network copy is another possible training relationship. If a verified
@@ -169,7 +179,7 @@ Check the claimed output before choosing the ending: generation fidelity, qualit
 
 `Effectiveness`, `engineering applicability`, and `generalization` are different claims. The first needs relevant task evidence. For the second, identify the engineering setting and what the evaluation establishes: an engineering-grounded simulation can support relevance or feasibility under its modeled conditions, whereas applicability to an actual production setting needs representative evidence from that setting. Neither alone proves deployment. For generalization, specify the target population: a valid independent held-out split can assess prediction on new samples from that population, but transfer across conditions, sites or time regimes needs corresponding held-out evidence. `Verified` and `demonstrated` are both available for empirical evidence; neither creates proof or certifies deployment. Avoid empty superiority endings when a bounded finding is clearer.
 
-One closing sentence can name the cases and supported outcome. Use two when the second adds an actual finding, trade-off or evaluated condition, not a second statement that experiments were performed. Preserve parallel objects: `case studies on process A and process B` is coherent without turning one process into a dataset for grammatical symmetry. A two-case pattern is not mandatory for other studies.
+One closing sentence can name the cases and supported outcome. Use two when the second adds an actual finding, trade-off, evaluated condition or substantive engineering consequence, not a second statement that experiments were performed or a paraphrase of the same metric gain. A sentence saying the comparison supports the benefit of a combination adds little when the preceding result already states that the combination outperforms its matched single-path control. Keep a genuinely new interpretation; do not fill a word target with a validation restatement. Preserve parallel objects: `case studies on process A and process B` is coherent without turning one process into a dataset for grammatical symmetry. A two-case pattern is not mandatory for other studies.
 
 When correcting an overclaimed ending, write the supported finding at its actual evaluation level. Do not carry the deleted claim back into the abstract as a trailing statement that it was not established. For example, a contrast between adjusted and raw detection scores is itself an informative result; the reason for deleting an unsupported warning claim belongs in the author note. Retain a limitation in the abstract when it changes how the retained claim must be interpreted, such as the scoring rule or permitted target-data access. This is a placement decision, not a ban on negative findings or necessary qualifications.
 

@@ -1,0 +1,7 @@
+# Pre-Change Residual-Path Review
+
+Date: 2026-10-24. Source version: 4.1.46, immutable release export.
+
+The maintainer reviewed the [actual baseline](../responses/v4147-baseline.md). A correctly preserves a 6-by-4 dimension-matching linear path before residual addition and ReLU; identity-only shortcuts are not required. It separates network addition from signal and prediction residuals, and does not infer an invertible mapping, unconditional information retention, generalization or an anomaly threshold. B retains the approved hypothetical module name while explicitly describing concatenation and a shared per-variable encoder. It connects the parallel paths to classification and scopes the observed gain to the two matched cases. Ordinary validation is support for the design, not another innovation item.
+
+Core judgments already pass. English blocks contain 24,109 and31 independently counted whitespace-delimited words. One task context handled two constrained requests, not two independent model runs or a source-literature audit. Preset historical context was disclosed; a memory-blank condition and full internal access/service traces are not certified. No account values appear in the final answer. There is no independent second grader, controlled general writing gain, whole-bank certification or experiment reproduction. Wrapper and whitespace only are normalized; raw answers remain private. The hypothetical proposed name is not a terminology authority.

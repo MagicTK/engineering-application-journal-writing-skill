@@ -152,10 +152,20 @@ of a fault class.
 | causal convolution / predictive dependence / physical causation | A causal convolution excludes future inputs from a specified output; predictive dependence concerns information useful for prediction. Neither alone identifies a physical intervention effect or root cause. |
 | spatial / spatiotemporal | Define the represented axis or relation: physical layout, process topology, graph neighborhood, or explicitly defined inter-variable structure. For spatiotemporal, identify the time axis too. Model-grid adjacency does not establish physical proximity or process coupling. |
 | gate / attention / fusion module | a gate regulates a contribution; attention computes weighted relations/aggregation; a fusion module combines paths. Verify shapes and operations instead of interchanging names. |
+| residual connection / signal residual / prediction residual | An additive network path, a remainder after a specified signal decomposition, and a measurement-minus-prediction error are different objects. Define operands and the next use. A linear dimension-matching path can be a valid residual connection; concatenating independent paths does not establish an additive one. |
 | generator / discriminator / diagnostic classifier | Follow the actual input, output and training target. A generator may synthesize samples or encode acquired measurements; a discriminator may predict real/generated identity or domain identity. Neither target is automatically a physical fault class. Preserve attributed source names while describing their actual roles (P70-P72). |
 | unified / global / plant-wide representation | name the scope actually represented. Combining two paths does not itself prove universal generalization or complete plant coverage. |
 
 For `stage`, first distinguish a production unit, a temporal phase in a batch, and a learning phase. For `local/global`, identify the domain over which locality is defined. A temporal receptive field is not a plant region. For `propagation`, distinguish graph-feature updates from a physical disturbance spreading through the process. These decisions change scientific meaning, not merely style.
+
+For an additive residual path, check matching feature axes and the position of
+projection, activation and normalization (P11/P15/P14). A projected input is not
+an identity mapping, but its addition can still be residual learning. Do not infer
+lossless retention from the sum or turn a trend remainder into a fault score
+without its defined decision rule. Preserve an approved author-proposed component
+name while describing its actual merger; a title containing `residual` does not
+authorize changing concatenation into addition or admitting the full name as a
+general family. See the [checked base record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
 
 For origin analysis, distinguish the initiating disturbance, the earliest observed response and the model's selected node. A learned directed graph, a graph-load redistribution score and a real change to plant operation are different objects (P13/P16). Preserve a valid conditional causal-effect estimate from observational data when its target and identifying assumptions are stated; do not require a physical trial for every causal sentence. Conversely, a predictive relation or simulated graph attack alone does not identify a physical effect. Use the [interpretation evidence check](experiment-evidence-design.md#7-interpretation-design) for the corresponding claims, not as a compulsory addition to ordinary classification.
 

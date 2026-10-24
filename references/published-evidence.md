@@ -97,6 +97,48 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
+### Residual Paths: Definitions, Mappings And Feature Use
+
+P02 p.3, Section 3.2, was reread and rendered: it identifies a residual backbone
+and describes direct cross-layer transfer, but the inspected passage does not
+define the addition. Keep it as usage context rather than a second explicit
+operation definition. Its pp.4-5 were keyword-screened, not newly close-read for
+this decision. P14 pp.2-3, Sections II-A/III-B and Eqs.(5),(14), were reread and
+rendered: convolutional outputs are added to the input before activation. This
+supports the base operation, not every adjacent indexing, graph-normalization or
+causal claim.
+
+P11 p.3, Sections II-B3/III-A and Eqs.(6)-(7),(11)-(13), explicitly adds inputs to
+learned attention/feedforward or convolutional transforms. P15 p.4, Section II-B
+Eqs.(5)-(7), Fig.2 and Section III-A Eq.(9), explicitly distinguishes an unchanged
+input path from a dimension-matching linear map before addition. Both pages were
+read and rendered; selected neighboring introduction/implementation passages were
+also inspected, not the complete experiments. These are three distinct published
+process studies with P14; P11/P15 share author lineage. They support additive
+residual paths, not identical blocks, activation/normalization placement or all
+complete network names. P14 explicitly names residual connections; P11/P15's
+residual-learning/block definitions are checked operational equivalents, not
+claimed literal full-name hits. P15's nearby identity wording does not make its displayed
+linear projection an identity transformation. No full implementation, exact
+information-retention theorem or performance guarantee is certified.
+
+The original Chinese residual-connection passages were rechecked in
+[Coal Science and Technology, Section 1.3/Fig.3, PDF p.5](https://mtkxjs.com.cn/cn/article/pdf/preview/10.12438/cst.2024-1441.pdf)
+and [Transactions of the CSAE, Section 2.1, PDF p.4](https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202505227.pdf),
+with both pages rendered and inspected. The latter downloaded version is ten
+pages, cited as 42(8):47-56 on its first page, whereas the web-cached text retains
+an eleven-page 42(7):1-11 version under the same DOI. Record the actual version
+and locator; these are not two separate works. The pairing verifies the base
+translation, not source results or additional industrial-definition IDs.
+
+For writing, distinguish a network input added to a transform, a signal remainder
+and a prediction error. Match dimensions when required, state the actual merger
+of complementary paths and connect the output to its next task. An approved
+paper-specific name can remain without changing a concatenation into addition or
+promoting that complete name to a generic mechanism. These checks strengthen
+existing records; the indexed-work count is unchanged and no source experiment
+or private manuscript is reproduced.
+
 ### Class Semantics, Generated Features And The Final Predictor
 
 P05 pp.3-4, Section 3, and p.7, Algorithm 1/Section 4.3, were reread; pp.3,7 were rendered and visually inspected. Seen/unseen classes are disjoint in the measured training data, while class-semantic descriptions are available. The test-time procedure uses selected unlabeled target predictions to adjust semantic references. P06 p.1 metadata/abstract, pp.2-3, Section II-A and selected motivation passages, and p.4, Section IV-A overview, were reread; pp.2,4 were rendered and inspected. Its hierarchy concerns semantic attributes, not automatically production-stage partitions. Both works share Chunhui Zhao's research lineage; they are distinct works, not independent inventions of the basic setting. Their full test-time/hierarchical component names remain attributed.

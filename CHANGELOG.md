@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.47 (2026-10-24)
+
+- Strengthen the residual-connection record with three explicit additive definitions or checked operational equivalents from existing process-diagnosis works; retain backbone-only usage as context rather than a second operation definition. Disclose shared lineage and preserve complete author-proposed names.
+- Distinguish additive paths, dimension-matching mappings, concatenated parallel features, signal remainders and prediction errors in existing bilingual terminology/abstract guidance. State the actual merger and task use without deriving lossless retention or generalization from a title or addition alone.
+- Recheck original Chinese passages and record the actual downloaded pagination where a same-DOI cached version differs. No new paper IDs, direction files, private manuscript edits or research experiments are added; fictional forward cases and their limits remain separately recorded.
+- Retain an initial scientifically sound response that restated its comparison benefit, clarify the existing bilingual abstract-ending rule and retest against the new frozen snapshot; do not equate a local prose correction with a measured general writing gain.
+
 ## 4.1.46 (2026-10-24)
 
 - Separate indexed works, searched works, lexical candidate hits and substantively verified uses in existing corpus and bilingual terminology guidance. A bounded two-source naming decision is not a full-corpus reading claim or a field-prevalence estimate.
