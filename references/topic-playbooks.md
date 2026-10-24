@@ -116,6 +116,20 @@ For static domain adaptation, describe source/target data access and the represe
 
 Check **label-space relations and label availability separately**. P10 uses identical source/target class spaces with unlabeled target measurements, whereas P44 addresses a target class subset and its training equations include target-label symbols. Neither assumption transfers automatically to another adaptation paper. If a target label enters a loss, identify whether it is observed, inferred or evaluation-only before assigning a supervision category; a pseudolabel is not a measured annotation. Domain adaptation is broader than unsupervised adaptation. In a multisource design, distinguish distribution alignment during fitting from a separate weighted combination of classifier predictions; the two may coexist without any source/target feature fusion at inference.
 
+When historical measurements cannot be provided for target adaptation, describe
+what the source-trained model supplies and how target measurements use that
+knowledge. P78 updates selected encoder/classifier parameters, while P79 keeps its
+classifier weights as class references and updates its encoder. The common
+source-free constraint is adaptation-stage data access, not one fixed update
+architecture. In the abstract and overview, connect the model handoff, actual
+target-derived guidance and retained diagnostic predictor. A loss with
+`supervised` in its attributed name may use inferred target labels; follow their
+origin before classifying the study. P79's separate unknown-class decision is
+part of its declared label-space setting, not a capability supplied by the base
+source-free name. Use the [definition record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+and [data/phase distinctions](terminology-decisions.md#states-conditions-and-modes)
+without making these requirements the default story for ordinary classification.
+
 Name the aligned populations and criterion. A lower marginal discrepancy alone cannot establish class correspondence or target diagnostic accuracy; legitimate class-conditional alignment should retain its class guidance and access conditions. Evaluate the claimed prediction benefit separately from the internal alignment statistic, with class-level analysis when label-space mismatch is central. The [alignment distinctions](terminology-decisions.md#alignment-state-the-object-and-criterion) also prevent confusing domain matching with acquisition synchronization or mutual-information estimation.
 
 Check whether adaptation actually concerns learned parameters. Input-dependent routing can respond to a new window with frozen parameters; a recurrent state or rolling score reference may change without retraining. These mechanisms can be described as adaptive at their defined level, but they do not alone constitute continual learning. P24 conditions temporal weighting on observed intervals, whereas P04 defines a rolling statistical score after reconstruction. Keep the changing object consistent from contribution to Methods and evaluation; do not add an online-learning experiment to a paper that claims only input-conditioned weighting.

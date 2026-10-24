@@ -216,6 +216,27 @@ For a claimed improvement in learned temporal slowness, audit feature scale and 
 
 ### Adaptive State, Feedback And Retention
 
+For source-free adaptation, record access by phase: source-model fitting, target
+adaptation and final prediction/scoring. Source files elsewhere in a benchmark
+project do not themselves violate an adaptation-stage restriction; inspect what
+the adaptation loader, loss and selection procedure actually consume. List
+provided checkpoints, class references, statistics and any replay contents by
+their origin rather than assuming all model-retained information is raw data.
+Target-derived pseudolabel buffers reuse those target acquisitions. Distinguish
+allowed unlabeled target-pool adaptation from target-label-driven model or
+threshold selection; the latter changes the independence and supervision account
+even when labels never enter a gradient. Do not repair the prose by inventing an
+unperformed validation split or changing results.
+
+A frozen source model is a useful reference for the effect of adaptation.
+Compare other adapters under the declared information access for matched claims;
+a source-data-dependent method may remain a clearly labeled contextual reference,
+not a source-free comparator. State whether the target batch is visible before
+classification or predictions precede sequential feedback. Claims about future
+samples, unseen fault classes, deployment or formal privacy need their own
+evidence, not merely the source-free setting. Keep these records in experimental
+settings and author checks rather than loading every boundary into the abstract.
+
 For a central adaptation claim, record the object that changes, its update trigger, permitted observations/labels and the order of prediction, scoring and update. Include resets or persistence between domains, tasks and independent runs. Batch access can be legitimate when declared: P05 adjusts semantic references from a target test set without fitting network weights. That evaluation should be compared under matching target-data access, rather than described as a causal real-time stream merely because it uses no target labels. Conversely, a truly sequential method should retain the predictions made before later feedback or updates.
 
 Inspect side information used to trigger adaptation. P64 assumes an operator supplies mode-switch timing; this is different from detecting switches from unlabeled measurements. Threshold updates and network updates may follow different rules. When a threshold should be computed from past accepted values, preserve decision-before-update and any freeze/exclusion rule; computing it with the current anomaly can alter the alarm being evaluated. Do not convert an adaptive threshold into proof of learned fault representations.

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.42 (2026-10-24)
+
+- Pair the adaptation-stage source-data restriction in two distinct published process/machinery studies and verify Chinese wording separately in original bilingual scholarly pages. Full network names, update rules and label-space variants remain attributed.
+- Connect retained source knowledge, target-derived guidance and the adapted predictor in abstracts and contributions. Distinguish model parameters, raw-instance replay and target-derived buffers without making classifier freezing or unknown-class rejection universal requirements.
+- Refine existing phase-access and model-selection guidance; preserve declared batch adaptation and actual evidence. Add two scoped source records, not another topic/template, manuscript edit or scientific experiment.
+
 ## 4.1.41 (2026-10-24)
 
 - Pair Gaussian membership-function definitions in two distinct TFS works and verify Chinese Gaussian/antecedent/consequent wording independently. Full neuro-fuzzy system names remain attributed.

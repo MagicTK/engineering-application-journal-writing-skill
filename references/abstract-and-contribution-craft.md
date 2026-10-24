@@ -93,6 +93,19 @@ The second example needs no fabricated sequence of `reconstruction, then fusion,
 
 **Relationship modeling followed by origin analysis, illustrated by P13/P16:** identify the object passed to the decision rule, not merely a second module name. P13 uses learned graphs in a subsequent top-down node-scoring procedure; P16 analyzes abnormal links after detection. An abstract can connect the relationship representation to its actual ranking or interpretation output. A contribution should expose the distinguishing relation-to-decision design, rather than equating a prediction loss with root identification or repeating the graph learner as two advances. Keep a source's particular procedure attributed; do not invent a classifier, a physical intervention or a new contribution merely to complete a familiar pipeline.
 
+**Source-model transfer, illustrated by P78/P79:** this is a relationship across
+learning phases, not necessarily fusion of source and target features. Explain
+the engineering access restriction, the retained source knowledge and the
+target-side guidance that shapes the predictor. For a verified design, a
+synthetic connection is: "A source-trained model initializes the target
+predictor. Target-derived class guidance then trains its representation from
+the available measurements, and the adapted model performs fault
+classification." Replace the generic guidance with the actual distinguishing
+selection or objective; state which components change where that matters.
+An existing source-free setting motivates a contribution but does not itself
+make the target-learning design novel. Preserve batch/stream scope and observed
+class-level trade-offs without turning audit exclusions into abstract padding.
+
 **Rule-based prediction, illustrated by P27/P77:** distinguish input matching,
 rule-weighted numerical outputs and a final task decision. A Gaussian function
 name alone does not explain how a predictor uses the result. For a verified

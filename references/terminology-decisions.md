@@ -57,6 +57,12 @@ Do not replace `state` with `condition` merely for fluency: a continuously chang
 
 For an actual prototype, name what it represents and how it is constructed: a class-conditioned feature mean, a selected exemplar and an independently optimized reference vector are not interchangeable. P46 and P47 compute class representatives from labeled features, with different later uses. A mean computed through a learned encoder is not necessarily a separate trainable parameter, and a class representative is not a measured operating state. Describe its connection to the next operation, such as query matching or a training loss, rather than assuming every prototype is a classifier or every class has exactly one. See the [paired terminology record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope) for the checked scope and Chinese wording.
 
+P79 p.9 defines source-class prototypes from classifier weight vectors and keeps
+them fixed during target representation learning. Preserve that attributed
+construction rather than rewriting it as stored source-sample means. A model
+parameter used as a class reference, a source-instance replay buffer and a buffer
+constructed from target measurements are different retained objects.
+
 For `dynamic` or `adaptive`, identify **what changes**. Input-conditioned attention, group assignments or gates can change on every prediction while trained parameters remain fixed. A recurrent state or rolling reference statistic can also update without fitting model parameters. Online learning or test-time parameter adaptation is a different claim, requiring an actual update rule and its permitted information. P24's elapsed-interval weighting and P04's rolling anomaly-score statistics illustrate different changing objects; neither name alone establishes continual learning. Describe the verified operation directly, such as `input-dependent grouping`, without banning an accurately defined adaptive mechanism.
 
 Kalman state prediction/correction and EM parameter fitting also change different objects. Check the conditioning horizon: filtering for time `t` uses permitted observations through `t`; smoothing may revise that state using later observations. A forward/backward E-step on training sequences (P34/P73) does not itself imply future observations enter current-time prediction. Conversely, a fixed-lag retrospective estimate may legitimately use later measurements if issued after their release; it should not be reported as a zero-delay result. Keep prediction-time state recursion, parameter updates and the final quality estimate or monitoring decision distinct in the abstract and Methods. The [paired base-name record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope) does not admit every neural, adaptive or multirate full name.
@@ -64,6 +70,23 @@ Kalman state prediction/correction and EM parameter fitting also change differen
 Output delay alone does not establish use of later information: computation may finish late even when every input was already available at the target time. Compare actual measurement-release times with the claimed decision cutoff. Using later-released inputs for a claimed earlier decision is an information-access violation; misreporting a delayed computation as instantaneous is a latency/reporting problem even without later inputs. A cutoff described only as `available by issuance` does not identify the latest observation actually used.
 
 Adaptation need not involve gradient updates: P05 adjusts semantic reference vectors from unlabeled test-sample predictions while retaining its network forward outputs. Describe that changed object and the data available to it. A whole-target-batch adjustment and a causal stream with only past/current observations have different information access, even when both run at test time. Preserve a source's attributed adjustment name; do not call every changing threshold or reference vector incremental parameter learning.
+
+For **source-free domain adaptation**, identify the phase in which source samples
+are unavailable. A source-trained model can retain labeled historical knowledge
+while its target-side adaptation uses unlabeled measurements (P78/P79). Record
+the provided model information and actual updated components: freezing an entire
+classifier is one design, not the definition. Source-data access, target-label
+access, source/target class overlap and prediction timing are separate axes.
+Do not rename known-class adaptation zero-shot merely because target annotations
+are absent, or infer a causal online stream from the source-free label.
+
+Trace a `pseudo-source` object to its data origin and construction. A bank of
+pseudolabeled target samples does not become acquired source data through its
+name, nor add new independent measurements. State the verified access restriction
+positively in manuscript prose. If stronger privacy is claimed, establish its
+mechanism and scope separately; withholding raw source samples alone does not
+certify a formal privacy guarantee. Keep such claim checks in author notes when
+they are not needed to define the method.
 
 For incremental learning, specify the new information and model update rather than assuming new classes: P30 updates a classifier under distribution change, while P63 also accommodates changes in measured input dimensions. Continual-learning claims additionally concern learning across a sequence while retaining earlier capability (P64/P65); memory buffers are one possible design, not a requirement. These labels can overlap. State the actual sequence, feedback and retention question instead of forcing them into mutually exclusive categories.
 
