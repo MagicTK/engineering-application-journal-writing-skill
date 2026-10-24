@@ -1,5 +1,10 @@
 # Changes
 
+## 4.1.56 (2026-10-25)
+
+- Verify the generic Chinese multi-head attention wording in two original journal pages, separately from the existing self-attention and multi-head self-attention records. Preserve the different page-reading depths and source-specific improved names.
+- Recheck the existing English operation pair without expanding its scope or adding another topic, template or engineering-work ID. The fictional baseline already handled the scientific and writing distinctions correctly; the update closes a translation-evidence gap, not a demonstrated general writing deficit.
+
 ## 4.1.55 (2026-10-25)
 
 - Complete a scoped parameter-pruning definition pair from published IIoT-service and sparse-hardware studies; revisit the independent Chinese base wording. Do not inherit every graph/channel/token variant or source-specific full name.

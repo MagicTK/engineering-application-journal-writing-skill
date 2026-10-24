@@ -4,7 +4,7 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.1.55: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.1.56: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
 This version adds scoped definition and translation evidence for selected method names. See the [evaluation record](evals/README.md) for the tested cases and remaining audit limits; the terminology bank is not a completed whitelist.
 
@@ -119,7 +119,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.1.55 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.1.56 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|
