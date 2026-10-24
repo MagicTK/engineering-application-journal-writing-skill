@@ -264,6 +264,16 @@ loss, dividing by sample count or by the sum of its weights also gives different
 scales; a weight-sum reduction cancels that sample's positive class factor.
 This arithmetic does not prove that reweighting has no effect in general.
 
+For feature scaling, record whether a coefficient acts before or after a mapping
+or discriminator, as in the different P98/P44 interfaces. With `phi(v)=v^2`,
+`phi(3*2)=36` but `3*phi(2)=12`; a valid homogeneous-map equivalence should still
+be retained when it applies. A mean coefficient of one does not generally keep
+feature means or kernel geometry unchanged. Inspect the actual normalization,
+mapping, count source and prediction path before interpreting an alignment
+effect. This synthetic check neither identifies a source's kernel nor validates
+its reported alignment or minority-class gains, and does not require relocating
+the weight or rerunning an otherwise valid study.
+
 A support-weighted F1 gives larger classes larger aggregation weights; it does
 not establish a class-weighted training loss or equal attention to rare faults.
 Use class-wise and/or macro results when the claim concerns minority outcomes,

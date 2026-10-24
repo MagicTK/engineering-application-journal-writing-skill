@@ -244,6 +244,15 @@ check. Close on the reported metric and relevant class trade-off. A weighted
 aggregate gain alone does not substantiate rare-fault improvement; explain the
 weight/sampler arithmetic in the settings, not in every abstract.
 
+For a verified feature-weighted training design, preserve that different
+interface: "Class counts from target pseudo-labels determine how target features are scaled before
+a nonlinear alignment mapping. The learned encoder supplies features to the
+fault classifier." P98 illustrates placement before a mapping, not a verified
+choice of that synthetic nonlinear map. Add the actual distinguishing rule and
+its connection to classification training; do not invent a gate in the retained
+predictor. A contribution needs that advance and its evidence, not the word
+weighted alone. Keep mapping-equivalence checks in the author note or Methods.
+
 Use the same positive connection for a verified training-logit design, while
 preserving its different computation: "Class-prior offsets modify the logits
 used to train the classifier. The trained network assigns fault classes to new

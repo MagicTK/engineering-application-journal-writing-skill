@@ -412,6 +412,15 @@ admission remains incomplete here; these records support operation-sensitive
 descriptions without certifying full source methods or universal weight rules.
 See [contextual decisions](terminology-decisions.md#weight-roles-and-class-decisions).
 
+P98 p.6, Eqs.(10)-(12), supplies a further contrast: coefficients derived from
+target pseudo-label counts scale target features before a mapping in an
+alignment objective. This does not
+complete the classification-loss definition pair or admit its full CWA-RST or
+class-weighted-alignment names as generic mechanisms. P44 p.5, Eq.(13), has a
+different weighted-feature recipient, a domain discriminator. Match the operand,
+recipient and phase, not the shared adjective; normalization does not establish
+unchanged feature geometry or calibrated class probabilities.
+
 Chinese wording is independently supported for selected entries below. These
 translation sources do **not** enlarge that engineering corpus or certify
 the performance/style claims made by their authors.

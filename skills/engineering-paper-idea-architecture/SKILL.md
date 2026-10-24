@@ -7,7 +7,7 @@ description: Convert an industrial problem, partial method idea, dataset, or eng
 
 [中文执行版](../../skills-zh/engineering-paper-idea-architecture-zh/SKILL.md)
 
-Suite version: `4.1.64`
+Suite version: `4.1.65`
 
 ## Mission
 

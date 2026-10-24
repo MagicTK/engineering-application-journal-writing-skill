@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.65 (2026-10-25)
+
+- Distinguish coefficients applied to classification loss, features before a mapping, and discriminator inputs. Preserve valid mapping-homogeneity cases and avoid interpreting normalized coefficients as unchanged feature geometry.
+- Add one scoped published alignment example and recheck two existing interfaces. This does not complete the class-weighted classification-loss pair, admit full source-specific names or establish a new Chinese mechanism translation.
+- Connect the actual training recipient to the retained diagnostic predictor in existing bilingual abstract/contribution guidance. No new topic, template, real manuscript, experimental setting or result is introduced.
+- Clarify that the per-class counts come from target pseudo-label assignments when candidate classes are fixed, rather than suggesting creation of new classes.
+
 ## 4.1.64 (2026-10-25)
 
 - Narrow the English comparison rule to equal-access claims, with a matching clarification in the Chinese entrypoint. Separately labeled references using extra information may answer a different question without becoming fair online competitors or proven performance bounds.

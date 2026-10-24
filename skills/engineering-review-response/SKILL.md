@@ -7,7 +7,7 @@ description: Revise an AI for Engineering journal manuscript in response to revi
 
 [中文执行版](../../skills-zh/engineering-review-response-zh/SKILL.md)
 
-Suite version: `4.1.64`
+Suite version: `4.1.65`
 
 ## Mission
 

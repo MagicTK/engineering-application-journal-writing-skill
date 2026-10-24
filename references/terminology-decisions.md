@@ -180,6 +180,22 @@ does not establish another. A sample-dependent coefficient need not be constant
 within a class. If a coefficient scales a residual before squaring, inspect the
 resulting squared coefficient rather than rewriting it as a linear loss weight.
 
+Inspect the recipient of a feature coefficient too. P98 p.6, Eq.(10), scales
+target features using class counts derived from target pseudo-labels before
+the mapping `phi(w*f)`;
+P44 p.5, Eq.(13), instead supplies weighted features to a domain discriminator.
+Neither is another definition of the P96 classification-loss factor. In general,
+`phi(w*f)` cannot be rewritten as `w*phi(f)` without checking the mapping's
+homogeneity. Linear maps, and some appropriately homogeneous nonlinear maps,
+permit this equality. The selected P98 equation does not specify a verified
+nonlinear kernel; do not attribute the synthetic quadratic counterexample to
+its implementation. Its count-based expression is also not a literal
+inverse-frequency rule merely because nearby prose uses that wording. Keep the
+source formula and unresolved implementation details rather than moving its
+coefficient to a different layer for fluency.
+When the candidate classes are fixed, these counts concern pseudo-label
+assignments to those classes, not newly created fault categories.
+
 Follow the fitted predictor to its actual decision. A loss weight need not be
 multiplied into class scores again at prediction. An explicitly implemented
 score adjustment remains valid but is a separate operation. Check how weights

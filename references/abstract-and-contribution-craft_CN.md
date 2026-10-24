@@ -97,6 +97,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **训练损失加权：**将权重作用、受训学习器及工程决策连起来。接口相符时可写：Class-dependent weights scale the training errors of the temporal classifier. The fitted model assigns fault classes to new process measurements. 再补真实有区别性的权重规则，不把常规加权本身写成创新。训练系数不自动是预测时门控、特征融合模块或额外分数乘子。P93说明加权拟合，P92/P94则对增强前的选样加权，不能凭名称替代接口核对。结果落到实报指标及相关类别权衡；加权平均提高不单独证明稀有故障改善。权重和采样的详细运算放设置，不逐项塞进摘要。正文写保留的分类器如何预测，而不是在每句补排除条款。
 
+若核实为特征加权的训练设计，应保留另一接口：Class counts from target pseudo-labels determine how target features are scaled before a nonlinear alignment mapping. The learned encoder supplies features to the fault classifier. 这指非线性对齐映射之前的特征操作；P98只为系数位置提供例子，不认证此合成映射是其具体核实现。再补真实有区别的规则及其与分类训练的关联，不虚构保留预测器中的门控。贡献需要具体推进及证据，而非weighted这个词；映射等价性检查放作者说明或方法。
+
 同样的正面承接可用于已核实的训练logit调整，但须保留不同运算：Class-prior offsets modify the logits used to train the classifier. The trained network assigns fault classes to new process measurements. 再补真正有区别的偏置或更新规则，此功能描述本身不是新模块。P18分别调整训练logit和伪标签构造，P96则同时使用损失系数与间隔；应写清实际训练预测器的操作，不把所有不平衡策略写成特征融合或预测门控。来源冲突及分母核查放作者说明或方法，除非会改变摘要保留主张的解释。
 
 **未来量预测与寿命估计：**先明确模型的保留输出，再写其收益。接口核实后可写：Encoded process histories supply a regression head that predicts the future temperature trajectory. 再补实际有区别性的运行信息使用方式，不罗列常规层。明确规则若将轨迹转为报警，要有相应事件和时序评价；P95将这些作用分开，P45/P81则使用寿命目标。寿命估计器不必预测每条传感轨迹，也不必增加故障分类器。标签截断或尺度若影响主张解释就保留，结尾落到实测预测/寿命结果和重要步长权衡，不把误差下降改成预警更早或维修成本下降。常规预测或回归本身不另算贡献。

@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 97-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 97 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 98-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 98 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计97篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计98篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -109,6 +109,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P95 | [A meta-learning enhanced transformer for few-shot fault prognosis in multi-mode chemical processes](https://doi.org/10.1016/j.compchemeng.2026.109823) | CCE 214 (2026), Art.109823. Section 2.1, pp.3-4, defines history-to-future process-variable forecasting and a subsequent operating-limit alarm. This is not an RUL target or an automatic causal/control model; the full CPAM/MAML architecture, adaptation, alarm evaluation and performance claims were not certified. |
 | P96 | [An imbalanced domain-adversarial hypergraph convolutional network for robust fault diagnosis of rotating machinery](https://doi.org/10.1016/j.eswa.2026.131898) | ESWA 316 (2026), Art.131898. Section 2.3, p.3, defines a class factor on cross-entropy; Section 3.4.1, p.6, separately uses a logit margin and factor. A background definition is not the entire proposed objective or evidence of real misclassification cost. Full IDAHGCN/alignment, notation and performance are not certified. |
 | P97 | [Intelligent fault diagnosis for chemical process under imbalanced data: A non-local frequency-domain sparse hash autoencoder approach](https://doi.org/10.1016/j.psep.2026.108502) | PSEP 208 (2026), Art.108502. P.4 Table 1 shows class-weighted cross-entropy, while p.8 Eqs.(35)-(36) shows binary cross-entropy with an overall objective coefficient. Record this unresolved difference, not a verified complete loss or clean second class-weighting definition. Full NFSH-AE, signal filtering, sparsity, splits and results are not certified. |
+| P98 | [Class-weighted alignment and reliable self-training for cross-domain fault diagnosis under class-imbalanced conditions](https://doi.org/10.1016/j.psep.2026.108820) | PSEP 211 (2026), Art.108820. P.6 Eqs.(10)-(12) scale target features inside a mapping using counts from target pseudo-labels; pp.5-6 separate classification objectives. A feature-alignment coefficient is not a classification-loss factor. Full CWA-RST, kernel choice, inverse-frequency wording, complete implementation and performance claims remain unverified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -130,7 +131,7 @@ revision draft. Hosting on a journal site does not make it a current normative
 standard or a classifier-score definition. These different source types support
 a scoped wording record, not two independent Chinese classifier equations,
 physical thermodynamic interpretation or admission of a new complete module.
-No industrial source ID is added; the selected index remains97.
+That wording-only check added no industrial source ID.
 
 将词形、分类打分语境、英文运算定义与正式标准分别记录；官方导读不是中文期刊原始方法，修订初稿不是现行审定标准。公式约定仍须与论文自己的分数及使用者对应。
 
@@ -802,6 +803,26 @@ related preprint's publication correspondence is still unchecked; neither is
 counted to complete the present pair.
 
 将参数移除、稀疏存储、设备执行及模型选择分开；准确率估计与每次预测正确性也分开。摘要应按实际关系连接模型准备与运行决策，结果保留模拟、实测或部署的真实证据范围，而非套用统一的压缩叙事。
+
+## Coefficient Placement And The Retained Predictor
+
+P98 pp.4-6 were read for the displayed architecture and weighting interface;
+pp.1,7 supply identity and case context, not experimental certification. The
+actual p.6 Eq.(10) places the target coefficient inside the mapping, while
+Eqs.(11)-(12) use and normalize counts from target pseudo-labels. Nearby inverse-proportional
+wording is not a literal reciprocal formula. P44 p.5 Eq.(13) instead weights a
+domain-discriminator input; P96 p.3 Eqs.(3)-(4) multiplies classification loss.
+The three rendered definition pages were visually inspected, as was P98 p.4.
+These are distinct source interfaces, not a completed classification-weighting
+definition pair or admission of every full proposed module name.
+
+Describe the actual training recipient and then the retained predictor. A
+synthetic nonlinear-map counterexample tests coefficient placement, not a
+particular source kernel or its empirical advantage. Do not relocate a factor
+for more fluent prose, infer preserved feature statistics from coefficient
+normalization, or turn training-only weighting into a prediction-time gate.
+Existing Chinese base-wording records remain scoped; no new Chinese mechanism
+translation is admitted by these functional descriptions.
 
 ## Reusable Lessons / 可迁移结论
 
