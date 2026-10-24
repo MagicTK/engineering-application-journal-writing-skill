@@ -205,6 +205,16 @@ P33 pp.5-6 defines observation-masked training residuals, explicit observed/esti
 
 本组回读用于区分补全测量、训练重构目标与下游预测，并核对掩码、计分位置及分母。迁移基础术语与论证关系，不迁移来源论文的完整模块名，也不把出版状态当作公式或效果的担保。
 
+### Alignment Objects And Distribution Criteria
+
+Definition reading on 2026-10-24 revisited P08, P10, P32 and P44 without increasing the 52-paper count. P10 pp.5-6 defines a kernel mean-embedding discrepancy and combines local/global feature losses with source classification. P44 pp.4-5 instead defines domain-adversarial and class-weighted distribution objectives, followed by separate classifier-output combination. They support the base purpose `distribution alignment`, not identical assumptions or inference paths. P44's introductory MMD mention is not counted as a substantive MMD definition.
+
+P32 p.4, Eqs.(9)-(11), combines a noise-prediction loss with a kernel discrepancy between sampled and predicted noise. Together with P10 p.5, this supports the base MMD name while requiring different operands and training roles. The selected P32 passage does not fully specify every batch/primed-variable detail, and its mutual-information wording is not established by the displayed marginal discrepancy alone. This check does not certify its estimator implementation or complete Ada-MMD name as a general family.
+
+P08 pp.6-7 describes length projection of encoded sequences, contrastive representation learning and reconstruction. A common feature length is not acquired timestamp correspondence. PDF p.6 was visually checked: Eq.(16) displays opposite signs between its probability-sum and expectation forms. The subsequent neural/contrastive construction needs its own assumptions; this reading borrows the operation distinctions, not a proof of the source's information-theoretic claims. P32 p.4 was also visually checked. No source code, experiment or complete derivation was reproduced. The separately checked Chinese abstract passages are recorded in the terminology bank.
+
+本组区分时间对应、维度兼容、分布目标和配对表征学习；不把同一个“对齐”词视为同一操作，也不把已发表论文的互信息措辞直接迁移为结论。数学符号疑点按实际页码保留，不推断代码必然有错。
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.

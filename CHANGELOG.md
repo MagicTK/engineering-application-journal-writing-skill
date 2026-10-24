@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.15 (2026-10-24)
+
+- Add scoped two-source records for distribution alignment and maximum mean discrepancy, with separate bilingual scholarly translation checks. Revisit four existing sources; the selected index remains 52 works, not a completed whole-bank audit.
+- Distinguish acquisition correspondence, dimensional compatibility, distribution objectives and paired-representation learning in the existing terminology guidance. Keep marginal discrepancy separate from joint dependence and class semantics without forbidding legitimate synchronization or class-conditional alignment.
+- Connect alignment objectives to their actual training and prediction roles in abstract/contribution writing. Eight existing reference files carry the substantive changes; no new topic guide or template. Record source-equation limitations rather than treating publication as proof.
+
 ## 4.1.14 (2026-10-24)
 
 - Add paired definition records for missing-value imputation and reconstruction loss, with separate Chinese scholarly translation checks. Revisit three existing papers; the selected index remains 52 works, not a whole-bank certification.

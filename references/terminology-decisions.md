@@ -129,6 +129,19 @@ For `mask`, `sparse` and `constraint`, inspect where the operation acts. A zero-
 | cross-modal alignment / synchronization | Learned representation compatibility versus paired acquisition timing | P38 separates acquisition synchronization, token construction and cross-modal attention; equal feature dimensions do not prove temporal pairing. |
 | local outside-class / unknown fault | Outside one sub-classifier's label set versus unknown to the whole system | P37's pairwise OOD class does not by itself establish system-level novel-fault detection. |
 
+### Alignment: State The Object And Criterion
+
+Use `alignment` with the object it actually constrains, not as a synonym for fusion or recovered information.
+
+| Intended operation | What establishes the description | What does not follow |
+|---|---|---|
+| Acquisition/time correspondence | Timestamp, trigger, lag or event-matching rule linking observations | Equal tensor length or embedding width alone does not pair physical events. |
+| Dimensional compatibility | Projection or reshaping to a specified length/width | It need not interpolate measurements or estimate missing values; P08 p.6 maps encoded sequences to a common length. |
+| Distribution alignment | A defined statistical or adversarial objective on specified feature populations, as in P10/P44 | A marginal-distribution objective does not by itself align individual pairs or preserve class meanings. Class-conditional objectives require their actual label or pseudolabel source. |
+| Pair/representation agreement | A specified relation between paired or contrasted representations, as in P08 | The existence of an agreement objective is not proof of physical synchronization, causality or complete information retention. |
+
+For MMD, name both compared distributions and whether the quantity is a training objective or evaluation statistic. Matching two marginals is not the same as measuring mutual information, which depends on a joint distribution; some dependence criteria compare a joint distribution with a product distribution, so inspect the operands rather than rejecting every possible connection. A kernel discrepancy decreasing on fixed operands supports that limited observation, not automatically more shared diagnostic information. For abstract wording, retain the actual operation and intended task role; put unsupported interpretations and needed evidence in the author note, not a string of defensive qualifications in the replacement sentence.
+
 ## Reporting And Scope
 
 `Real-world data` describes provenance, not online operation. Do not routinely prefix it with `offline`; retain the distinction if retrospective versus prospective evaluation matters. Class imbalance belongs in dataset/metric analysis when relevant. Mention it in an abstract or contribution only when it is part of the research problem or supported advance, not merely a property of one case.
