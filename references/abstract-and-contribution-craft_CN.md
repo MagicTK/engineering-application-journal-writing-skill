@@ -73,6 +73,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **节点更新到任务使用的承接：** 先连清表示对象，不只排列图相关名字。对接口已核实的分类器，可用两句合成表达：Neighbor-weighted updates combine features over expert-specified variable connections. Unit-wise means summarize the updated features, and the concatenated unit vectors supply the fault classifier. 按需补充真实编码器及有区别的权重设计，常规操作本身不构成贡献。P07的变量-时间节点与P13的生产单元层级不同；分别说明实际轴、固定/学习连接和输出层级，不借用完整层级或因果名字拔高摘要。
 
+**门控贡献及其使用者：** 连清由什么决定门、门调节什么、调节后的贡献用在哪里。对接口已核实的双路径分类器，可写：Local and neighborhood features jointly determine a gate that scales the neighborhood contribution. Adding that contribution to the local features forms the classifier input. 其他设计可能门控专家或注意力输出，不强套这一路径。有区别的门控设计应连接真实任务证据，不把基础门本身单列为发明；残差旁路改变“抑制”的含义，稠密输入相关门也不等于稀疏执行或在线学习。除非影响正文保留主张的解释，这些核查意见放作者说明，不堆入摘要。
+
 **源模型迁移，参见P78/P79：**这是学习阶段之间的关系，不必是源/目标特征融合。连清工程访问限制、保留的源知识及用于训练目标预测器的指导。已核实设计可参照这一合成承接：A source-trained model initializes the target predictor. Target-derived class guidance then trains its representation from the available measurements, and the adapted model performs fault classification. 应把泛称guidance换成真实有区别性的选择规则或目标，必要时说明更新哪些组件。已有source-free条件可形成动机，但不使目标学习设计自动新颖。保留批次/数据流范围及观察到的类别权衡，不把审查排除条款填进摘要。
 
 **规则预测，参见P27/P77：**区分输入匹配、规则加权的数值输出及最终任务决策，不能只写高斯函数名而不说明下一步怎样使用。对已核实的回归设计，可直接表达为：Membership degrees determine rule weights, which combine local quality estimates into the final prediction. 再补本研究真正有区别性的学习或规则设计，不另列一串常规层。规则决策若在训练中指导编码器，应写受训表征及保留的预测器，不虚构最终特征融合模块。量的核对及解释边界放作者意见，正文保留受支持的任务意义及结果权衡。

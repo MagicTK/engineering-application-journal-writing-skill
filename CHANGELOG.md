@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.49 (2026-10-24)
+
+- Strengthen the existing gate record with three explicit feature-gating definitions, a distinct expert-gating context and independently checked Chinese originals. Preserve the source-specific recipients, axes, bypasses and full proposed names rather than treating all weights as one named module.
+- Clarify that a residual combination can preserve an ungated contribution even when the added branch is attenuated. Distinguish feature weights, probabilistic interpretations, actual variable removal, input dependence and selective execution without rejecting valid attention/gating overlap.
+- Link gate inputs, regulated contributions and task outputs in existing bilingual abstract/contribution guidance. Explain what a fixed-gate or branch-removal ablation actually changes; no approved data, manuscript, topic file or source ID is changed or added.
+- Retain unchanged fictional baseline/final requests and source fingerprints for behavioral validation. Passing local cases do not certify all complete names, source formulas or general writing quality.
+
 ## 4.1.48 (2026-10-24)
 
 - Strengthen the existing message-passing record with two explicit published TSMC process definitions, and distinguish node updates from later graph/unit summaries and task outputs. Preserve the different teams, graph meanings and source-specific names without certifying every indexing or causal claim.

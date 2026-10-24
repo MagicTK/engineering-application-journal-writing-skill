@@ -97,6 +97,45 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
+### Gate Inputs, Regulated Contributions And Bypasses
+
+P08 p.5, Eqs.(7)-(9), and the opening definition of sigmoid on p.6 were reread
+and rendered: one convolutional feature branch gates another before summation.
+P19 p.5, Eqs.(7)-(14) and Figs.2-3, was reread and rendered: pooled scale
+features determine sigmoid weights, followed by multiplication and residual
+addition, with a separate interlevel gate. P33 p.6, Eqs.(19)-(24), was reread
+and rendered: attention outputs are subsequently gated and concatenated. All
+three explicitly use the base gating-mechanism name; their regulated objects,
+axes and later computations differ. P19 is an adjacent machinery application
+and P33 is general incomplete-series evidence, not three process-industry
+definitions or a prevalence estimate.
+
+P36 pp.2-3, Section II-C/III-B, Eqs.(2)-(6) and Figs.2-3, was also reread and
+rendered: gating networks weight expert outputs before task-specific quality
+prediction. This is a related process-soft-sensing context, not a fourth literal
+gating-mechanism match or an identical architecture. P07 p.7's gated convolution
+was inspected as a further contrast, not another full-name admission; P07/P08
+share author lineage. First-page metadata was checked for these existing works;
+the full experiments and every source formula were not audited.
+
+The original [Acta Automatica Sinica c250366](https://www.aas.net.cn/article/doi/10.16383/j.aas.c250366)
+bilingual abstract and [JEIT240977](https://www.jeit.ac.cn/cn/article/doi/10.11999/JEIT240977)
+bilingual title/extended-abstract Methods pair gating mechanism with 门控机制
+in neural expert and parallel-feature contexts. Accessible HTML provides no gate
+equation, so this verifies the base translation, not their complete algorithms
+or additional industrial-definition IDs. Their full proposed names do not admit
+arbitrary time/age-qualified Chinese module names.
+
+For writing, trace the gate's inputs and recipient through any bypass to the
+actual task output. In P19's particular residual expression, sigmoid scaling
+attenuates the added branch while the unchanged feature also remains; it does
+not automatically suppress the final output relative to that feature. Clarify
+the actual ablation computation and distinguish learned input-conditioned
+weighting from online parameter fitting or selective execution. Preserve
+verified attention/gating overlap instead of enforcing a name-only taxonomy.
+This check strengthens existing records without adding an indexed work, topic
+or source experiment.
+
 ### Graph Messages, Summaries And Task Outputs
 
 P13 pp.2-4, Section II-B Eqs.(7)-(9) and Section III-C Eqs.(18)-(21),

@@ -114,6 +114,18 @@ from a production-unit hierarchy (P13). Preserve the actual axes, fixed versus
 learned connections and output level instead of borrowing a hierarchical or
 causal name to make the abstract sound stronger.
 
+**Gated contributions and their recipient:** describe what determines the gate,
+what it scales and where that contribution is used. For a verified two-path
+classifier: "Local and neighborhood features jointly determine a gate that
+scales the neighborhood contribution. Adding that contribution to the local
+features forms the classifier input." Other designs may gate different objects;
+do not force this structure onto expert mixing or attention-output gating.
+Connect any distinguishing gate design to its actual task evidence rather than
+presenting the base gate as a separate invention. A residual bypass changes the
+meaning of suppression, and a dense input-dependent gate need not be sparse
+execution or online learning. Keep those audit judgments in the author note
+unless needed to interpret a retained manuscript claim.
+
 **Source-model transfer, illustrated by P78/P79:** this is a relationship across
 learning phases, not necessarily fusion of source and target features. Explain
 the engineering access restriction, the retained source knowledge and the

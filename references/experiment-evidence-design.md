@@ -134,6 +134,19 @@ Use one-factor removal or a meaningful alternative. If modules interact strongly
 
 Avoid an ablation table that contains many arbitrary partial models but cannot isolate a scientific claim.
 
+For a claimed gate contribution, specify the replacement computation rather than
+only labeling a row `without gating`. In `F + g*F`, forcing `g=0` retains `F`,
+whereas `g=1` gives `2F`; neither is a universal neutral setting for all gated
+models. A fixed-coefficient control, deleting the gated branch and deleting the
+bypass answer different questions and may change information access or feature
+scale. Select controls for the actual claim and document the remaining
+differences. A gate's input dependence can change feature weighting with fixed
+parameters; this is not evidence of online learning. If both branches are fully
+computed before weighting, small gate values alone do not establish skipped
+computation or lower latency. These are design and interpretation checks, not
+permission to change approved results or launch additional experiments during a
+terminology revision.
+
 When interaction between constraints A and B is a central claim, state how A changes the information, assumptions, or decisions involved in B. Where meaningful and feasible, compare neither constraint, A only, B only, and both; distinguish this condition 2×2 from switching model components on and off. Select method controls that isolate the claim: unadapted source methods, a naive serial composition, and the joint design with matched information and resource budgets. If a condition is unavailable or scientifically invalid, document the limitation and narrow the claim.
 
 For comparable risk/error measurements on a common scale, the contrast `R_AB - R_A - R_B + R_0`, with uncertainty over the appropriate independent units, can diagnose interaction. It is scale-dependent and does not establish a causal mechanism. A joint design that shows no supported increment over the simpler composition warrants revising, merging, or rejecting that claim; the comparison must not presuppose a win.
