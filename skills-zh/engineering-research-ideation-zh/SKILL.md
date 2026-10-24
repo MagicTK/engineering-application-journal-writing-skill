@@ -5,7 +5,9 @@ description: 为AI for Engineering比较多个研究选题、组织研究组合�
 
 # 工业问题驱动的研究选题与贡献校准
 
-套件版本：`4.1.43`
+[English](../../skills/engineering-research-ideation/SKILL.md)
+
+套件版本：`4.1.44`
 
 ## 适用范围
 

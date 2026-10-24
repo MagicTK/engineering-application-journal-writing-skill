@@ -39,6 +39,20 @@ class SuiteValidatorTests(unittest.TestCase):
     def test_current_suite_passes(self) -> None:
         self.assertEqual([], VALIDATOR.validate(ROOT))
 
+    def test_bilingual_counterparts_are_directly_discoverable(self) -> None:
+        _, records = VALIDATOR.parse_manifest((ROOT / 'suite-manifest.yaml').read_text())
+        missing = []
+        for record in records:
+            canonical, mirror = ROOT / record['canonical'], ROOT / record['mirror']
+            for source, counterpart in ((canonical, mirror), (mirror, canonical)):
+                targets = {
+                    (source.parent / link.split('#', 1)[0]).resolve()
+                    for link in VALIDATOR.LINK_RE.findall(source.read_text())
+                }
+                if counterpart.resolve() not in targets:
+                    missing.append(str(source.relative_to(ROOT)))
+        self.assertEqual([], missing)
+
     def test_evidence_identifiers_resolve_to_unique_sources(self) -> None:
         index = (ROOT / "references/published-evidence.md").read_text()
         source_table = index.split("## Sources /", 1)[1].split("Some source titles", 1)[0]
@@ -195,7 +209,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.43", suite["version"])
+        self.assertEqual("4.1.44", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

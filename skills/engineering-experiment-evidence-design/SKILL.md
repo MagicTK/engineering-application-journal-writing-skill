@@ -5,7 +5,9 @@ description: Design, audit, and organize experimental evidence for engineering-a
 
 # Engineering Experiment And Evidence Design
 
-Suite version: `4.1.43`
+[中文执行版](../../skills-zh/engineering-experiment-evidence-design-zh/SKILL.md)
+
+Suite version: `4.1.44`
 
 ## Mission
 

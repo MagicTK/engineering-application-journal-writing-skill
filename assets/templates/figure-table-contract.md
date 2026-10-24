@@ -27,10 +27,20 @@
 
 - Panel logic:
 - Stable labels:
+- Label/translation evidence, only for introduced or changed technical names:
 - Color semantics:
 - Arrow semantics:
 - Required engineering object:
 - Minimum readable font size at final print:
+
+For changed technical names, record the referent/operation, manuscript locator,
+name status and applicable external/Chinese evidence using the
+[scoped naming check](../../references/figure-and-latex-production.md#scientific-names-and-translations).
+Reuse accepted label records for a visual-only repair; do not require a full
+name audit for every unchanged unit, class or operator.
+
+新增/改动技术名称时记录所指操作、正文位置、名称身份及所需外文/中文依据；
+纯视觉局部修复沿用已认可的标签记录，不把每个未改单位、类别或算子都重新审一遍。
 
 ## Caption Contract
 

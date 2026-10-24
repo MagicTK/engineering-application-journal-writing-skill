@@ -5,7 +5,9 @@ description: Plan, create, revise, and verify scientific figures, tables, LaTeX 
 
 # Engineering Figure And LaTeX Production
 
-Suite version: `4.1.43`
+[中文执行版](../../skills-zh/engineering-figure-latex-production-zh/SKILL.md)
+
+Suite version: `4.1.44`
 
 ## Mission
 
@@ -35,6 +37,8 @@ Do not run unknown project scripts or change the established package structure w
 Classify each figure or table as motivation, process/data generation, overall framework, module detail, comparative evidence, ablation, sensitivity, robustness, interpretation, or engineering outcome.
 
 Read [the complete figure and LaTeX guide](../../references/figure-and-latex-production.md). Create a Figure/Table Contract from [`assets/templates/figure-table-contract.md`](../../assets/templates/figure-table-contract.md) before substantial generation.
+
+For introduced, renamed or translated scientific labels, use the [name and translation checks](../../references/figure-and-latex-production.md#scientific-names-and-translations). Keep source-specific and author-proposed identities distinct from reusable categories. A color/font repair does not authorize renaming or require a new literature audit of every unchanged label.
 
 For non-measured framework, algorithm flow, system structure, motivation and mechanism diagrams, choose an available tool that preserves scientific structure and the required editable source. The [AstraDraw → editable PPT → human revision → paper pipeline](../../references/astra-editable-figure-pipeline.md) is optional, not an installation prerequisite. Route measured/result-dependent panels to real data and reproducible plotting; classify mixed panels separately. Resume an existing editable master for local object changes.
 

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.44 (2026-10-24)
+
+- Route standalone figure/LaTeX and optional diagram-production requests to the existing complete-name and separate Chinese-translation checks. Reuse the Figure/Table Contract for changed names without turning a visual-only repair into a full terminology audit.
+- Preserve author-proposed components and attributed source identities; ordinary labels and verified base terms do not justify unsupported qualifiers or silently authorize renaming.
+- Add direct relative navigation between all 14 English/Chinese pairs after a standalone test reported difficulty finding its mirror. A failing-first regression checks counterpart discoverability; no new direction, content reference, paper source or real figure edit is added.
+
 ## 4.1.43 (2026-10-24)
 
 - Ground multirate observation in two published rate-group definitions and independently check Chinese timing terminology. Keep full interval/attention network names attributed and cross-field asynchronous meanings separate.

@@ -5,7 +5,9 @@ description: 为工业智能实验实施和运行建立可复现的输入定义�
 
 # 工程实验自动化
 
-套件版本：`4.1.43`
+[English](../../skills/engineering-experiment-automation/SKILL.md)
+
+套件版本：`4.1.44`
 
 <!-- invariant: execution-authorization -->
 <!-- invariant: no-fabrication -->

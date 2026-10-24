@@ -105,6 +105,32 @@ Revise the authoritative manuscript and assign motivation, overview and module-d
 
 Use the correct model category, but retain a particular model identity, frozen/trainable status or fixed numerical interface when it defines the proposed operation. For example, modifying a specific encoder's internal update is not an arbitrary-backbone method merely because its diagram says `foundation model`. Use symbolic dimensions and category labels when the derivation and interface genuinely have that scope; put incidental checkpoint choices and run settings in Experiments. P29's Methods and framework caption retain concrete model identities, as documented in [the source notes](published-evidence.md). Neither naming a model nor replacing its name establishes cross-model performance. Keep the diagram, equations and claimed compatibility consistent.
 
+### Scientific names and translations
+
+For a new, renamed or translated mechanism label, record its complete wording,
+referent, verified operation and manuscript locator in the existing contract.
+Classify it using the [name-admission and translation rule](engineering-application-terminology-bank.md#0-admit-names-not-search-counts):
+a reusable category needs matched definitions in at least two distinct relevant
+published works; a paper-specific name retains attribution, and a current
+author-proposed component needs its own definition rather than earlier namesakes.
+The base word `fusion` does not establish every added qualifier. Check Chinese
+independently; keep a descriptive explanation or English identity when a claimed
+standard translation is unverified. A reference diagram's wording is not an
+additional definition or translation source by itself.
+
+Use a precise functional label when generic-name evidence is incomplete, without
+disguising an invented acronym as an established family. Match the label to the
+actual time quantity, operands and recipient; reweighting one encoded feature
+does not by itself establish physical causality or completed measurements.
+Ordinary units, class labels and operator symbols do not each require two papers.
+
+For a local color/font repair, retain approved wording and reuse existing scoped
+evidence. Record a newly noticed semantic concern separately instead of silently
+renaming the component or blocking the visual repair on a full literature audit.
+Visual approval does not certify an unresolved scientific label. Apply an
+authorized wording correction locally and propagate it to the matching caption,
+method and terminology map; it does not authorize changes to data or geometry.
+
 ## 4. Tables
 
 - Preserve author-approved font size, column grouping, spacing, and width.

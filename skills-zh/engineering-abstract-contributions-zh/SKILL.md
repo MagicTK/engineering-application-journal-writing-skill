@@ -5,7 +5,9 @@ description: 对照真实方法与证据修订工程应用论文摘要和贡献�
 
 # 工程论文摘要与贡献联动
 
-套件版本：`4.1.43`
+[English](../../skills/engineering-abstract-contributions/SKILL.md)
+
+套件版本：`4.1.44`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->

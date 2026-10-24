@@ -5,7 +5,9 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 # Background-Driven Industrial Application
 
-Suite version: `4.1.43`
+[中文执行版](../../skills-zh/background-driven-industrial-application-zh/SKILL.md)
+
+Suite version: `4.1.44`
 
 ## Mission
 

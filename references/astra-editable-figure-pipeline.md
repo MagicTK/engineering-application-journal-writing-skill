@@ -59,6 +59,12 @@ panel purpose, allowed labels and claims, and prohibited inferences. Record actu
 paper width/height constraints from the journal class, source and author locks.
 Do not inherit a case study's fonts, palette, width or page budget as defaults.
 
+When introducing, renaming or translating a technical label, use the
+[scientific-name and translation checks](figure-and-latex-production.md#scientific-names-and-translations)
+and record its identity/evidence in the existing Figure/Table Contract. Do not
+borrow a reference's proposed module name as a general category or rename
+approved content during a visual-only repair.
+
 References can guide style or a scientifically compatible mechanism. Record which
 role each reference has, its origin and permission status. They cannot silently add
 architecture, results, causal claims or publication rights. Keep unknown-license

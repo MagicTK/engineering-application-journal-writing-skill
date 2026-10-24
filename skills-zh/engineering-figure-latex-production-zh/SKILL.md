@@ -5,7 +5,9 @@ description: 工程应用论文图表与 LaTeX 生产 Skill 中文执行版。�
 
 # 工程应用论文图表与 LaTeX 生产
 
-套件版本：`4.1.43`
+[English](../../skills/engineering-figure-latex-production/SKILL.md)
+
+套件版本：`4.1.44`
 
 ## 一、任务目标
 
@@ -26,6 +28,8 @@ description: 工程应用论文图表与 LaTeX 生产 Skill 中文执行版。�
 先明确图表的科学作用，例如动机、过程/数据生成、整体框架、模块细节、主对比、消融、敏感性、鲁棒性、解释或工程结果；混合图按 panel 区分。读取[图表与 LaTeX 指南](../../references/figure-and-latex-production.md)，实质生成前使用 [`figure-table-contract.md`](../../assets/templates/figure-table-contract.md) 记录必要约束。
 
 非实测的整体框架、算法流程、系统结构、motivation 和机制示意图，选择能保留科学结构及所需可编辑源件的可用工具。[AstraDraw → 可编辑 PPT → 人工修订 → 论文闭环](../../references/astra-editable-figure-pipeline.md) 是可选路线，不是安装前置条件。实测/结果依赖 panel 使用真实数据和可复现绘图；混合图逐 panel 分流。已有可编辑主件的局部对象修改直接从当前主件续做。
+
+新增、改名或翻译科学标签时，执行[名称与译名核查](../../references/figure-and-latex-production.md#scientific-names-and-translations)，分清来源专名、作者自提名与通用类别。仅改颜色/字体不授权改名，也不要求对所有未改标签重新做文献审查。
 
 ## 四、保护证据真实性
 

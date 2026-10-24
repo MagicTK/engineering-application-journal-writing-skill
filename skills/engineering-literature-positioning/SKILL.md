@@ -5,7 +5,9 @@ description: Research and position an engineering-application journal paper usin
 
 # Engineering Literature Positioning
 
-Suite version: `4.1.43`
+[中文执行版](../../skills-zh/engineering-literature-positioning-zh/SKILL.md)
+
+Suite version: `4.1.44`
 
 ## Mission
 
