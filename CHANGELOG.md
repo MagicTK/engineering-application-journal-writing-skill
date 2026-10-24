@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.19 (2026-10-24)
+
+- A full-abstract fictional writing check exposed a contribution-organization defect: ordinary ablation support was promoted into an additional contribution. Preserve that initial response and distinguish design evidence from an independently motivated empirical finding.
+- Refine the existing bilingual abstract guide to describe the retained prediction path positively and place routine evaluation safeguards in experimental settings, while retaining information boundaries that define the research claim.
+- Three existing references carry the substantive changes. No new topic guide, template, source-paper count, manuscript edit or experiment. Repeated full-prose tasks and a genuine empirical-contribution control are recorded separately from structural tests.
+
 ## 4.1.18 (2026-10-24)
 
 - Replace abstract-only support for `feature fusion` with three papers' method definitions, actual operands and combination operators; separately recheck the Chinese base translation. The engineering index remains 55 works.
