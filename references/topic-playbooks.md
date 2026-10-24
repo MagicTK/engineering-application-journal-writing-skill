@@ -141,7 +141,7 @@ target-derived guidance and retained diagnostic predictor. A loss with
 origin before classifying the study. P79's separate unknown-class decision is
 part of its declared label-space setting, not a capability supplied by the base
 source-free name. Use the [definition record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
-and [data/phase distinctions](terminology-decisions.md#states-conditions-and-modes)
+and [data/phase distinctions](terminology-decisions.md#state-condition-and-mode)
 without making these requirements the default story for ordinary classification.
 
 Name the aligned populations and criterion. A lower marginal discrepancy alone cannot establish class correspondence or target diagnostic accuracy; legitimate class-conditional alignment should retain its class guidance and access conditions. Evaluate the claimed prediction benefit separately from the internal alignment statistic, with class-level analysis when label-space mismatch is central. The [alignment distinctions](terminology-decisions.md#alignment-state-the-object-and-criterion) also prevent confusing domain matching with acquisition synchronization or mutual-information estimation.

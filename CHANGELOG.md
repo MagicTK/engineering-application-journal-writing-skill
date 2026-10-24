@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.51 (2026-10-25)
+
+- Add a scoped causal-convolution definition pair from published industrial prognostics/process studies and independently verify the base Chinese name in two original scholarly sources. Full network names and physical-causality claims remain attributed rather than inherited.
+- Clarify current-position access, actual tap spacing, later-path dependencies and valid endpoint prediction. Existing abstract/evidence guidance remains the primary task-level connection; no new topic or template is added.
+- Repair a stale state/condition link and add a failing-first regression for links to the English terminology reference's current plain headings. This does not claim complete arbitrary-Markdown anchor validation. Scientific papers, figures, results and Overleaf projects are unchanged.
+
 ## 4.1.50 (2026-10-25)
 
 - Complete a scoped feature-averaging record using two explicit published GAP uses and a related node mean-pooling definition. Check Chinese 全局平均池化 separately in two original scholarly sources; retain the different reduction sets, downstream gates/readouts and source-specific names.

@@ -53,6 +53,23 @@ class SuiteValidatorTests(unittest.TestCase):
                     missing.append(str(source.relative_to(ROOT)))
         self.assertEqual([], missing)
 
+    def test_english_terminology_section_links_match_current_headings(self) -> None:
+        target = ROOT / 'references/terminology-decisions.md'
+        headings = re.findall(r'^#{1,6}\s+(.+)$', target.read_text(), re.M)
+        # This reference uses plain ASCII ATX headings, not arbitrary Markdown.
+        self.assertTrue(headings)
+        self.assertTrue(all(heading.isascii() for heading in headings))
+        anchors = {
+            re.sub(r'[^a-z0-9 _-]', '', heading.strip().lower()).replace(' ', '-')
+            for heading in headings
+        }
+        for folder in ('references', 'skills', 'skills-zh'):
+            for source in (ROOT / folder).rglob('*.md'):
+                for link in VALIDATOR.LINK_RE.findall(source.read_text()):
+                    filename, separator, fragment = link.partition('#')
+                    if separator and (source.parent / filename).resolve() == target:
+                        self.assertIn(fragment, anchors, f'{source.relative_to(ROOT)}: {link}')
+
     def test_evidence_identifiers_resolve_to_unique_sources(self) -> None:
         index = (ROOT / "references/published-evidence.md").read_text()
         source_table = index.split("## Sources /", 1)[1].split("Some source titles", 1)[0]
@@ -246,7 +263,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.50", suite["version"])
+        self.assertEqual("4.1.51", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

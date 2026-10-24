@@ -158,6 +158,16 @@ of a fault class.
 
 For `stage`, first distinguish a production unit, a temporal phase in a batch, and a learning phase. For `local/global`, identify the domain over which locality is defined. A temporal receptive field is not a plant region. For `propagation`, distinguish graph-feature updates from a physical disturbance spreading through the process. These decisions change scientific meaning, not merely style.
 
+For causal convolution, inspect the tap offsets, padding and time axis (P81/P82).
+Current-position access can satisfy a causal filter; strictly past-only prediction
+requires the corresponding input/target lag. Dilation spaces taps on the model
+grid rather than changing acquisition frequency. Trace subsequent operations
+before claiming pointwise causal output, using the [decision-time check](experiment-evidence-design.md#3-split-integrity-checklist).
+A completed trailing window can legitimately support an endpoint estimate even
+when internal positions interact across that available window. Preserve the
+actual task and [scoped base name](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope),
+not an unverified physical-causality or complete qualified-module claim.
+
 For graph-based descriptions, trace the node update separately from any later
 unit/graph summary and final decision. P13 combines neighboring and own-node
 features before a separate unit readout; P14 applies adjacency-weighted
