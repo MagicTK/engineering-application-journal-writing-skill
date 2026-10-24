@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.20 (2026-10-24)
+
+- Add a definition-checked multilabel learning/classification record from three existing industrial studies, keeping shared authorship, local classifier outputs and final fault-set semantics explicit. Verify the Chinese base translation separately in two original journal sources.
+- Connect compound-fault prose to the actual score combination and decision, without requiring sigmoid heads or replacing valid composite-class formulations. Distinguish label-wise errors from complete fault-set identification in claim-matched evaluation.
+- Five existing references carry the substantive changes. No new topic guide, template, engineering-source count, manuscript edit or research experiment. Fictional behavioral checks and a small metric counterexample are separate from research validation.
+
 ## 4.1.19 (2026-10-24)
 
 - A full-abstract fictional writing check exposed a contribution-organization defect: ordinary ablation support was promoted into an additional contribution. Preserve that initial response and distinguish design evidence from an independently motivated empirical finding.
