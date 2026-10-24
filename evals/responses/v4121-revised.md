@@ -56,4 +56,3 @@ Model B: For every \(u>0\), the output parameterization guarantees \(0<a,b<1\) a
 - **真正的新模块仍可由作者命名。** 可采用：“We introduce [author-defined name], which [states the implemented operation].” 将其明确标为本研究提出的名称，并定义输入、操作和输出；不必先有两篇同名论文，但名称中的保证性含义仍须有依据。
 
 这里依据的是 `references/engineering-application-terminology-bank.md` 第 0 节的名称准入规则，以及上述证据文件的既有记录。本轮未联网、未新增文献检索，也未重新在线核验译名。
-
