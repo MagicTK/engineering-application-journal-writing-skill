@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.45 (2026-10-24)
+
+- Clarify zero-shot diagnosis through acquired examples, class semantics, generated training features and the actual retained predictor, rather than a list of modules or an assumed final text/sensor fusion.
+- Check the base zero-shot term across three distinct published works, disclose shared lineage, independently verify Chinese wording, and add one source to the selected 80-work index. Full proposed component names remain attributed.
+- Link semantic matching and feature-generation roles in conditional abstract/contribution guidance; distinguish candidate spaces, allowed unlabeled target access and seen/unseen trade-offs without forcing them into every abstract. Forward behavioral validation uses the same fictional cases as the passing baseline; it does not establish a controlled improvement or full-source reproduction.
+
 ## 4.1.44 (2026-10-24)
 
 - Route standalone figure/LaTeX and optional diagram-production requests to the existing complete-name and separate Chinese-translation checks. Reuse the Figure/Table Contract for changed names without turning a visual-only repair into a full terminology audit.

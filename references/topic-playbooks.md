@@ -60,7 +60,7 @@ Branch by the actual supervision arrangement:
 | Setting | Essential writing distinction | Claim-matched evaluation |
 |---|---|---|
 | Few-shot classification | What counts as a shot, which classes are known, and whether support/query episodes or a fixed split are used | The declared label budgets and sampling variability; do not impose episodic evaluation on a non-episodic design |
-| Zero-shot diagnosis | Which fault classes lack labeled training samples; where their semantics come from; whether unseen-class measurements are used during adaptation | Class-disjoint evidence and semantic-source checks; seen/unseen balance or harmonic metrics when the test is generalized zero-shot, not automatically for unseen-only testing |
+| Zero-shot diagnosis | Which fault classes lack labeled real training measurements; where their semantics come from; whether generated features or unlabeled unseen-class measurements enter learning/adaptation | Verify the acquired-training class split and semantic source, not merely class IDs appearing in a loss; use seen/unseen balance or harmonic metrics for the declared joint-class evaluation, not automatically for unseen-only testing |
 | Semisupervised classification | Which samples are labeled, how unlabeled data affect learning, and whether source and target distributions differ | Matched label budgets and unlabeled-data controls; separate class-prior imbalance from feature-distribution shift |
 | Semisupervised regression/soft sensing | Which quality targets are observed and how unlabeled process measurements constrain the predictor | Regression error in the target's units, label-budget sensitivity and a relevant supervised control; no seen/unseen class metric without classes |
 | Weak segment/bag labels | The labeled unit and claimed prediction unit; distinguish bag classification from an explicitly defined finer-output mechanism | Evaluate at the claimed granularity; bag accuracy alone does not validate point localization, and a bag-only task need not invent point outputs |
@@ -70,6 +70,20 @@ Branch by the actual supervision arrangement:
 | Unsupervised clustering | Which object is clustered, how the number of clusters is determined, and how clusters are related to fault identities | Clustering quality and the declared evaluation-only label matching; do not conceal labels used for model selection or imply cluster indices already identify faults |
 
 P05-P06 exemplify semantic transfer; P17 uses labeled and unlabeled measurements for concentration prediction; P21 couples self-supervised and diagnostic learning; P22 learns from segment labels for point-level detection. Their method names do not make these supervision arrangements interchangeable. P18 adds long-tailed classes and cross-domain information, in an adjacent equipment setting.
+
+For zero-shot diagnosis, trace how semantic knowledge reaches the final decision.
+P05/P06 map measurements toward class-semantic descriptions, whereas P80 uses
+descriptions to generate unseen-class features before fitting a diagnostic
+classifier. Its attribute classifier also supplies a hidden representation for
+the final feature transformation; do not assume every generator-side component
+is discarded. These are different semantic-to-predictor relationships, not a
+mandatory final fusion of text and sensor features. Labeled generated vectors
+can support zero-shot learning without supplying new real fault acquisitions.
+State the actual retained computation, semantic provenance and allowed target
+access. P05's selected target predictions adjust semantic references; full-batch
+unlabeled access is not a purely inductive comparison merely because weights stay
+fixed. Use the [base-name record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+without transferring full FHZSL/ACGAN-FG/test-time-adjustment names as generic families.
 
 These labels need not be mutually exclusive. Semisupervised learning describes the use of labeled and unlabeled examples for the task; self-supervision describes how an auxiliary learning signal is constructed. P21 jointly trains diagnostic and self-generated temporal objectives, while P26 shares an encoder between class prediction and sampling-transformation prediction. Neither requires an invented pretraining/fine-tuning sequence. Conversely, adding a self-supervised objective to fully labeled task data does not by itself establish a semisupervised setting. In the abstract or contribution, connect the auxiliary target to the shared representation and task output rather than listing the two learning names. If both appear, do not use `SSL` ambiguously for both.
 

@@ -120,6 +120,25 @@ State which object is reduced. Several retained spectral or statistical descript
 
 P39-P40 are adjacent machinery examples for these distinctions, not evidence that all process-industry supervision has the same form. P40's neighborhood-derived label values illustrate a learned object; a physical severity interpretation requires an independently justified relation to damage, intensity or another stated severity target. Do not rename sound paper-specific terminology globally, or infer field-wide usage from a title.
 
+For zero-shot diagnosis, separate **measured training examples, class semantics
+and synthesized training objects**. P05/P06 provide descriptions of unseen faults
+without their labeled measurement examples; P80 additionally generates unseen-class
+features for classifier fitting. A conditioning class ID on a generated vector is
+not a newly acquired and annotated fault sample. Historical seen-class labels and
+expert descriptions remain supervision/resources, so zero-shot is not synonymous
+with an entirely unlabeled learning history. Record whether unlabeled unseen-class
+measurements enter adaptation separately from that labeled-example boundary.
+
+A fault-attribute entry can identify an affected variable or symptom without
+being that variable's measured value. P06's attribute hierarchy and P05's category
+descriptions have class-semantic roles; they do not rename raw process variables
+or define production-stage partitions. Semantic matching can identify a named
+unseen candidate, whereas unknown rejection only flags a sample outside the known
+set. Specify the candidate pool and the information used to construct or adjust
+its descriptions before borrowing either task name. No in-context demonstration
+in an LLM prompt is a different resource statement from absent labeled examples
+of a fault class.
+
 ## Structure And Operations
 
 | Distinction | Decision |

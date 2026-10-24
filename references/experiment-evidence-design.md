@@ -206,6 +206,21 @@ M_{\mathrm{weighted}}=\frac{\sum_k n_k M_k}{\sum_k n_k}.
 
 Do not assume class-wise F1 averages reproduce micro-F1 or accuracy.
 
+For zero-shot evaluation, record the classes supplying real labeled training
+measurements, the semantic resources, generated features and any unlabeled target
+pool separately. IDs on generated examples do not create real unseen-class
+annotations. Check both the test examples and the allowed prediction labels:
+unseen-only evaluation and a seen/unseen candidate union answer different
+questions. If reporting the seen/unseen harmonic mean, define the aggregation
+for `S` and `U` and compute `H = 2*S*U/(S+U)` on the same scale, with a stated
+zero-denominator convention; an arithmetic mean is another statistic. Report
+both components when their trade-off matters. Do not invent a joint-class
+experiment or impose its metric on a study that only tests unseen candidates.
+Document semantic construction/review and fitting/selection access; declared
+unlabeled target adaptation is distinct from using target ground truth to choose
+the model. Generated-feature realism, novelty and diagnostic usefulness require
+their actual evidence, not merely an attribute-consistency loss name.
+
 Check a metric's formula, implementation, scale and better/worse direction rather than copying its name from a reference paper. In generation studies, a discriminator's accuracy near chance has a different interpretation from diagnostic classification accuracy; establish the discriminator's data balance and held-out evaluation before interpreting indistinguishability. A generation-utility predictor must use the declared synthetic/real training arrangement and an untouched real test set. Visual overlap alone does not establish generation quality or privacy.
 
 Also identify the discrimination target. In P70, it is source versus target domain; in P71/P72's generation definitions, it is real versus generated input. Low domain discrimination can reflect confusion or a weak discriminator, not automatically useful class-conditional alignment; it is not a generation-fidelity score. A low GAN training loss or near-chance real/generated score does not establish convergence, diversity or diagnostic improvement. Evaluate the actual retained detection/classification path. If detection optimizes a latent input at prediction time (P71), include that work when making a latency claim; augmentation-only generation cost belongs to its actual training/generation phase.

@@ -106,6 +106,21 @@ An existing source-free setting motivates a contribution but does not itself
 make the target-learning design novel. Preserve batch/stream scope and observed
 class-level trade-offs without turning audit exclusions into abstract padding.
 
+**Semantic transfer, illustrated by P05/P06/P80:** state what the class
+descriptions enable rather than listing a text model beside a sensor model.
+For verified semantic matching, connect predicted attributes to the supplied
+candidate descriptions and fault identity. For verified feature generation,
+connect the descriptor-conditioned generator and its training constraint to
+the generated features, classifier fitting and retained prediction path. A
+synthetic connection is: "Class descriptions condition feature generation.
+The synthesized unseen-class features train a classifier that diagnoses real
+process measurements." Add the actual distinguishing constraint or matching
+rule; the existing zero-shot setting and ordinary validation are not themselves
+that advance. Keep any representation retained from a training component (as
+in P80), rather than assuming it vanishes at prediction. Preserve the actual
+candidate pool and observed seen/unseen trade-off without copying the resource
+ledger or every class count into the abstract.
+
 **Observation timing, illustrated by P08/P24/P73:** connect the acquired object
 to the specific representation or estimator it supplies. An abstract can move
 from different native sampling schedules to the operation that uses available
