@@ -1,5 +1,17 @@
 # Changes
 
+## 4.1.30 (2026-10-24)
+
+- Pair few-shot definitions from smart-grid and wind-turbine studies, preserving episodic base/support learning and fixed low-data training as different arrangements. Verify the Chinese base wording separately in two original scholarly pages.
+- Connect the declared label budget to abstract/contribution scope and comparison fairness. Separate historical annotations, current-task support labels and generated views; small support counts alone do not establish total annotation savings.
+- Refine existing references rather than adding another direction or template. Publication requires final-source fictional behavior checks; no manuscript changes or research experiments are authorized by these writing rules.
+
+## 4.1.26-4.1.29 (2026-10-24)
+
+- Distinguish autoencoder reconstruction, probabilistic latent modeling and task prediction; verify base names and Chinese translations without promoting complete source-specific network names.
+- Clarify joint versus staged self-supervision and task supervision, plus bag/instance units and the actual prediction granularity. Preserve legitimate bag-only classification and context-dependent collective anomalies.
+- Deduplicate DOI resolver variants by work while preserving case-sensitive/non-ASCII suffix details. Add regression coverage and final-source fictional checks; source reading and program checks do not certify industrial experiments or the whole terminology bank.
+
 ## 4.1.25 (2026-10-24)
 
 - Pair incremental and continual learning definitions from industrial papers, preserving their different supervision, update objects and retention goals. Revisit test-time semantic adjustment with fixed network outputs instead of requiring gradient updates for every adaptive operation.

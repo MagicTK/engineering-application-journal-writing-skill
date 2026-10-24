@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 68-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 68 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 69-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 69 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计68篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计69篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -80,10 +80,17 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P66 | [A Unified AutoEncoder-Based Representation Learning Framework for Fault Detection With Heterogeneous Feature Dimensions](https://doi.org/10.1109/TII.2025.3611706) | TII 22(2), 2026, pp.799-810. Published team work: distinguish reconstruction/label-dependent training from decoder-free fault-type classification, and input padding from measurement recovery. |
 | P67 | [Industrial Process Fault Detection Based on Siamese Recurrent Autoencoder](https://doi.org/10.1016/j.compchemeng.2024.108887) | Computers & Chemical Engineering 192 (2025), 108887. Paired recurrent representation training supports a latent-space monitoring statistic, not synthetic production-sample generation. |
 | P68 | [A Local Weighted Multi-Instance Multilabel Network for Fault Diagnosis of Rolling Bearings Using Encoder Signal](https://doi.org/10.1109/TIM.2020.2986853) | TIM 69(10), 2020, pp.8580-8589. Adjacent bearing-rig study: formal bags and learned feature instances have different roles from acquired windows; the full MIML name does not alone establish compound-fault experiments. |
+| P69 | [Sequence-spectrogram fusion network for wind turbine diagnosis through few-shot time-series classification](https://doi.org/10.1016/j.aei.2024.102976) | AEI 64 (2025), 102976. Adjacent wind-turbine study: fixed low-data training and derived spectrogram augmentation differ from episodic support/query learning and from independent new acquisitions. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Few-Shot Setting And Annotation Resources
+
+P47 p.2, Sections II-A/D, p.3 and p.5, Section IV-A, distinguishes abundant labeled base measurements from limited support examples and evaluation queries. P69 pp.1-3 and selected pp.8-10 passages instead describes limited fixed-set training with spectrogram augmentation; p.9 was visually inspected. It reports 33 original training windows per class and 792 augmented examples in one case. Derived images and paired copies are not additional independent acquisitions or annotations. These distinct arrangements support the shared few-shot base term, not a universal sample cutoff or episodic algorithm. Their complete component names remain attributed. The source's multimodal, generalization and production-status claims are not certified or transferred here.
+
+Chinese wording was checked separately in original bilingual titles/abstracts of Acta Aeronautica et Astronautica Sinica 10.7527/S1000-6893.2019.23756 and Journal of Software 006958. They support 小样本学习; they are translation evidence, not extra industrial source IDs. The JOS 006138 full-page attempts failed and were not counted as completed reading. No source experiment or implementation was reproduced.
 
 The following are original functional analyses of passages read during revision, not copied sentences or full-paper quality assessments. Page positions refer to the specified PDF versions. They record **what was checked and what may transfer**, rather than treating every listed source as support for every rule. The remaining source rows above retain their narrower inspection scope.
 

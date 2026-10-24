@@ -97,6 +97,8 @@ Check novelty and sentence linkage separately: a logically smooth item can still
 
 P38 separates model operations from a new cross-modal benchmark resource. A resource item should identify what data, annotations or evaluation capability it adds, with verified scope and access status. It is not equivalent to an item saying that the authors ran experiments; neither dataset size nor a promised release alone proves novelty or public availability.
 
+For a few-shot contribution, link the particular mechanism to learning or prediction with the declared limited labels. The setting itself is not a new mechanism. Distinguish few current-task labels from few labels across the full learning history before claiming reduced annotation requirements; put detailed resource accounting in experimental settings. The [scarce-label playbook](topic-playbooks.md#2-scarce-labels-few-shot-zero-shot-weak-or-self-supervised-learning) preserves legitimate base-data learning, fixed low-data training and episodic alternatives.
+
 ## 5. Close On Evidence At The Correct Level
 
 Parallel case phrasing can name two processes, or two datasets, but should not confuse a physical process with a data object. A simulator-derived benchmark and production data supply different evidence. `Real-world` describes provenance, not online deployment. Use `offline` only when the evaluation distinction matters.
