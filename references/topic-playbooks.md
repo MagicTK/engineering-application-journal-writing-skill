@@ -217,7 +217,18 @@ Do not make real-world intervention experiments a universal naming requirement. 
 
 A causal temporal convolution concerns past-versus-future information access; a predictive adjacency is a learned relationship; physical causal identification needs additional assumptions and evidence. P14 provides a useful place to inspect these distinct roles, not a license to equate them. Check the complete computation before using `hard exclusion`, `sparse` or `independent`: logit reweighting followed by softmax is not automatically class exclusion, and a block-diagonal adjacency does not prevent a later dense layer from combining groups. Resolve equation, pseudocode and implementation differences in author notes before strengthening the prose.
 
-For fuzzy models, define the membership domain, rule/aggregation operation and intended interpretation. Normalized memberships or softmax assignments are not automatically calibrated class probabilities. P07 uses fuzzy states to construct temporal relationships and training constraints; that does not justify applying calibration metrics to every membership value. Evidence might instead examine rule effects or membership sensitivity. Probability calibration is pertinent when an output is interpreted as a probability, including present-condition classification, not only future forecasting; evidential masses and fuzzy memberships require their own definitions.
+For fuzzy models, define the membership domain and the quantity passed to the
+next operation. In the checked normalized-rule predictors, input matches form
+rule activations that weight numerical outputs; P27 uses them for quality
+regression, whereas P77 combines class scores before a class-axis softmax.
+Rules need not correspond to fault classes, and numerical rule weights are not
+the final class probabilities. Other inference architectures need their own
+definitions. P07 instead uses fuzzy states to construct temporal relationships
+and training constraints. Select evidence for the claimed role: rule effects,
+membership sensitivity or the actual prediction decision. Probability calibration
+is relevant when an output is interpreted probabilistically, not a compulsory
+test for every fuzzy membership. See the
+[quantity and operator-order check](terminology-decisions.md#fuzzy-rule-outputs).
 
 Trace what an uncertainty-related quantity represents and where it acts. P49 pp.5-6 weights learned responses at feature positions; its specified weighted sum is not the formal Dempster combination discussed in its preliminaries. P50 pp.3-4 models variation in feature statistics to generate perturbed training features. Neither operation alone supplies a sample's probability of being correctly diagnosed. In contrast, P52 pp.2-3 connects class evidence, a Dirichlet distribution and a sample-level uncertainty output. These are attributed examples of different roles, not interchangeable modules or a completed general admission record for every evidential-learning name.
 
@@ -227,7 +238,16 @@ For the checked Dirichlet class-evidence formulation (P52/P75), connect the enco
 
 中文也应先交代量的对象和用途：用于特征加权、构造训练扰动、描述类别分布，还是控制最终拒识。它们可以共同服务诊断，但不能只因都与“不确定性”有关就写成同一类机制。方法段写清实际操作，实验段再报告已检验的作用，不必为普通分类器额外虚构拒识或校准任务。
 
-Do not treat all fuzzy mechanisms as a rule base. P27 uses a fuzzy predictor after deep feature extraction, P28 uses layer-wise fuzzy clustering to reinforce reservoir features, and P33 couples fuzzy clustering with imputation. Identify whether membership describes an input region, a temporal state, a cluster or another defined object. Clustering memberships do not by themselves supply readable expert rules; a fuzzy layer or a physically motivated kernel does not make the entire model interpretable without specifying what can be explained and to whom.
+Do not treat all fuzzy mechanisms as a rule base. P27 places fuzzy prediction
+after deep feature extraction, P28 uses fuzzy clustering to reinforce reservoir
+features, and P33 couples clustering with imputation. P77's fuzzy decisions also
+guide a deep branch through a training objective, a different relationship from
+concatenating their outputs. Identify the represented input region, temporal
+state, cluster or rule and its actual consumer. A rule learned on embeddings can
+serve numerical prediction without having a verified linguistic or physical
+interpretation. Preserve a documented readable rule base when the inputs and
+rule meanings support it; specify what can be explained and to whom rather than
+awarding or rejecting interpretability from the word `fuzzy` alone.
 
 Treat source-specific uses of `reinforcement` by their defined operation. P28 p.3 uses fuzzy clustering and center-related targets for feature fitting; that name is not evidence of reinforcement learning. Describe the actual objective and information flow. Only use the reinforcement-learning category when the study implements the corresponding learning setup, rather than inferring it from this word alone.
 

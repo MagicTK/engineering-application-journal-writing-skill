@@ -188,6 +188,38 @@ Use `alignment` with the object it actually constrains, not as a synonym for fus
 
 For MMD, name both compared distributions and whether the quantity is a training objective or evaluation statistic. Matching two marginals is not the same as measuring mutual information, which depends on a joint distribution; some dependence criteria compare a joint distribution with a product distribution, so inspect the operands rather than rejecting every possible connection. A kernel discrepancy decreasing on fixed operands supports that limited observation, not automatically more shared diagnostic information. For abstract wording, retain the actual operation and intended task role; put unsupported interpretations and needed evidence in the author note, not a string of defensive qualifications in the replacement sentence.
 
+## Fuzzy Rule Outputs
+
+For a predictor that combines local rule outputs using normalized activations,
+trace the quantities rather than using `membership` for the entire computation:
+
+`input representation -> membership degrees -> rule activations -> normalized rule weights -> local-output combination -> task output`
+
+P27 Eqs.(4)-(6) uses this relationship for quality regression. P77 Eqs.(3)-(7)
+combines local class scores before a class-axis softmax. The input match, product
+activation, rule weight, local consequent and final class probability are
+different objects. Membership values need not sum to one unless that partition
+is defined; normalization across rules does not make rules fault classes.
+Combining scores and then applying softmax generally differs from combining
+already-softmaxed probabilities. Preserve the actual order and legitimate class
+probability output without claiming empirical calibration from normalization.
+Other fuzzy inference systems need their own output and aggregation definitions;
+this checked path is not a mandatory architecture for every fuzzy model.
+
+Identify the domain of the rule inputs. A learned latent coordinate can support
+a numerical fuzzy predictor without a verified physical label such as high
+temperature. Conversely, physically defined inputs and documented linguistic
+rules can support a readable interpretation; do not ban that interpretation
+merely because another model uses embeddings. State whether rules come from
+experts, numerical fitting or both. Centers, widths and consequent coefficients
+can be learned without input-conditioned predictions becoming online training.
+
+In an abstract, connect the matching and rule output to the actual quality or
+diagnostic decision. If a consistency loss shapes rule activations during
+training, name that recipient instead of inventing another inference-time fusion
+module. Keep detailed quantity checks in author notes; see the
+[base-name and translation record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
+
 ## Evidential Classification Quantities
 
 For the checked nonnegative-evidence, unit-prior form in P52/P75, use the actual definitions: `alpha_k = e_k + 1`, `S = sum_k alpha_k`, `b_k = e_k/S`, `u = K/S`, and expected class probability `p_k = alpha_k/S = b_k + u/K`. The belief masses sum to `1-u`; the class probabilities sum to one. `S` includes the prior contribution K, so it is not just the learned evidence sum or an acquired-sample count. A different prior or evidential regression model needs its own definitions; do not impose this form on every method with `evidential` in its name.

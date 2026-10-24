@@ -93,6 +93,17 @@ The second example needs no fabricated sequence of `reconstruction, then fusion,
 
 **Relationship modeling followed by origin analysis, illustrated by P13/P16:** identify the object passed to the decision rule, not merely a second module name. P13 uses learned graphs in a subsequent top-down node-scoring procedure; P16 analyzes abnormal links after detection. An abstract can connect the relationship representation to its actual ranking or interpretation output. A contribution should expose the distinguishing relation-to-decision design, rather than equating a prediction loss with root identification or repeating the graph learner as two advances. Keep a source's particular procedure attributed; do not invent a classifier, a physical intervention or a new contribution merely to complete a familiar pipeline.
 
+**Rule-based prediction, illustrated by P27/P77:** distinguish input matching,
+rule-weighted numerical outputs and a final task decision. A Gaussian function
+name alone does not explain how a predictor uses the result. For a verified
+regression design, the connection can be stated directly: "Membership degrees
+determine rule weights, which combine local quality estimates into the final
+prediction." Add the actual distinguishing learning or rule-design principle,
+not another list of ordinary layers. When rule decisions guide an encoder during
+training, name the trained representation and retained predictor rather than
+inventing a final feature-fusion module. Place quantity/interpretation checks in
+the author note; keep supported task meaning and empirical trade-offs in prose.
+
 ## 4. Contributions Are Advances, Not An Execution Log
 
 For each candidate contribution, privately record: closest prior capability; remaining requirement; actual change; evidence that discriminates the change; scope. Do not state "the first" without a defensible literature search.

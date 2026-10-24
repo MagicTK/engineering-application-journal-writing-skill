@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.41 (2026-10-24)
+
+- Pair Gaussian membership-function definitions in two distinct TFS works and verify Chinese Gaussian/antecedent/consequent wording independently. Full neuro-fuzzy system names remain attributed.
+- Distinguish input memberships, rule activations, normalized rule weights, local outputs and task decisions. Preserve valid class probabilities while checking score/probability combination order and the actual interpretation of rule inputs.
+- Refine existing abstract, contribution, conditional-topic and evidence guidance for rule-based prediction and training constraints. Add one scoped source record, not another topic or template; no real manuscript or experiment is changed.
+
 ## 4.1.40 (2026-10-24)
 
 - Match complete names to definitions and cited algorithms, not repeated wording. Record a published GAN source's pruning/clipping conflict without treating that mention, an unchecked journal version or a translation match as another pruning implementation.

@@ -262,6 +262,18 @@ For a timing claim, separate the time represented by the input, the time all req
 
 ### Scores, Probabilities And Rejection Decisions
 
+For a claimed fuzzy-rule capability, inspect the input domain, membership
+functions, rule combination, consequent output and final decision separately.
+Ablate or inspect the specific rule-learning/consistency operation when it is
+central to the claim; a rule count alone does not establish interpretability or
+prediction improvement. Preserve an evidenced physical/linguistic interpretation
+where the input meanings and rules support it, and distinguish that evidence
+from a numerical head operating on learned coordinates. Evaluate quality error
+for a quality estimate and class/decision metrics for a diagnostic output. When
+the claimed benefit varies across operating conditions, retain both the aggregate
+gain and the conditions where performance worsens. Calibration tests concern
+an output given a probability interpretation, not every rule activation.
+
 Use this check for a claimed confidence, uncertainty or rejection capability, not as an extra experiment suite for every fuzzy model or classifier. First follow the quantity from its definition to its consumer: a feature weight, class probability, uncertainty score and thresholded rejection have different evidence needs.
 
 | Claim | Relevant check |

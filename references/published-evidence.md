@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 76-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 76 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 77-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 77 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计76篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计77篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -88,10 +88,17 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P74 | [Effective Fault Diagnosis for a Quadrotor Helicopter: A Lightweight Transformer With Selective Patches and Channels Modules Method](https://doi.org/10.1109/TCYB.2025.3552364) | TCYB 55(11), 2025, pp.5264-5274. Adjacent aerospace study: importance weighting preserves represented sets, while one class query changes the attention operator. Full selective-module names are attributed; SIL/HIL simulators are not recorded real-flight faults. |
 | P75 | [Reliable and Intelligent Fault Diagnosis with Evidential VGG Neural Networks](https://doi.org/10.1109/TIM.2023.3250308) | TIM 72 (2023), 3508612. Institutional accepted version: distinguish class evidence, belief masses, expected class probabilities and uncertainty; noise/sensor-failure scenarios differ from proof of unknown-class identification or plant deployment. |
 | P76 | [GPSC-GAN: A Data Enhanced Model for Intelligent Fault Diagnosis](https://doi.org/10.1109/TIM.2024.3457925) | TIM accepted manuscript: p.4's background pruning wording conflicts with the cited original clipping step; its own gradient penalty is a different computation. Full GPSC-GAN naming remains attributed, not a general pruning definition. |
+| P77 | [Composite Neuro-Fuzzy System-Guided Cross-Modal Zero-Sample Diagnostic Framework Using Multisource Heterogeneous Noncontact Sensing Data](https://doi.org/10.1109/TFUZZ.2024.3470960) | TFS 33(1), 2025, pp.302-313. Adjacent gearbox study: Gaussian input memberships, rule activations, class scores and probability outputs have separate roles; fuzzy decisions guide a deep branch through training. Full system names remain attributed. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Fuzzy Matching, Rule Outputs And Task Decisions
+
+P27 pp.3-4, Section III-A and Eqs.(4)-(6), was reread; p.4 was rendered. P77 p.1 metadata/abstract, p.5 Section III-B definitions and selected training/prediction passages on pp.6-8 were read; p.5 was rendered. Both define Gaussian input matching, but their rule outputs and tasks differ. P77's displayed Eqs.(5)-(7) combine class scores before class-axis softmax; Eq.(10) combines modality probabilities. These orders and objects should not be interchanged. P27's Eq.(7) expansion has an index inconsistency relative to Eqs.(5)-(6); P77 has neighboring dimensional/base-learner wording ambiguities. No complete source algorithm, guarantee, interpretation claim or experiment is certified.
+
+Chinese wording was checked independently in [USTB 2011.05.013](https://cje.ustb.edu.cn/cn/article/pdf/preview/10.13374/j.issn1001-053x.2011.05.013.pdf), Section 2.2/Fig.3, PDF pp.2-3, and the [Tsinghua University Press trial chapter](https://www.tup.tsinghua.edu.cn/upload/books/yz/053331-01.pdf), Section 1.1, PDF p.5. The paired terms are recorded in the terminology bank. Initial Chinese extraction/rendering omitted characters; the checked pages were successfully rendered with another existing PDF engine before visual verification. These translation sources add no engineering corpus IDs or complete module-name admission.
 
 ### Names, Computations And Training-Only Copies
 
@@ -374,7 +381,7 @@ P13 p.1 and pp.3-8 were reread; pp.5,7 were rendered. Prediction-trained graphs 
 
 The original bilingual title, abstracts and paired keywords at [AAS c200257](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c200257?viewType=HTML) verify root cause diagnosis / 根源诊断 and propagation path identification / 传播路径识别. Initial ordinary-page/PDF access failed; the HTML-view page supplied this material but not the full method body. The separate systems-journal page/PDF remained inaccessible. No additional translation variants or implemented method definitions are claimed from search snippets.
 
-As methodological background, [Pearl's primary PMLR abstract](https://proceedings.mlr.press/r0/pearl95a.html) identifies observational identification as a valid route, and the author-hosted [Statistics Surveys overview](https://ftp.cs.ucla.edu/pub/stat_ser/r350-reprint.pdf) distinguishes causal queries and the assumptions needed to answer them. These sources qualify the evidence rule; they are not two more industrial-operation papers or an admission record for every causal-module name. Observational identification need not require a new physical trial, while a graph attack alone does not establish a plant intervention. The selected engineering corpus remains 74 works.
+As methodological background, [Pearl's primary PMLR abstract](https://proceedings.mlr.press/r0/pearl95a.html) identifies observational identification as a valid route, and the author-hosted [Statistics Surveys overview](https://ftp.cs.ucla.edu/pub/stat_ser/r350-reprint.pdf) distinguishes causal queries and the assumptions needed to answer them. These sources qualify the evidence rule; they are not two more industrial-operation papers or an admission record for every causal-module name. Observational identification need not require a new physical trial, while a graph attack alone does not establish a plant intervention. That methodological-background check added no engineering-corpus entries; the current total is stated at the beginning of this index.
 
 ### Repetition, Aggregation And Uncertainty Graphics
 
