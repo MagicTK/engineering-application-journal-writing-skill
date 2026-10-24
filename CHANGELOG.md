@@ -1,5 +1,17 @@
 # Changes
 
+## 4.1.38 (2026-10-24)
+
+- Distinguish mean run-wise metrics from explicitly pooled-prediction metrics without silently changing the approved evaluation target. Repeated predictions are not new acquired test samples.
+- Connect paired-difference uncertainty, initialization variability and cross-validation fold variability to the actual result claims and figure captions. Preserve valid conditional inference without treating marginal SD overlap as a significance test.
+- Revisit an existing published source and six existing references. Four final fictional checks cover aggregation, paired comparisons, protected plot captions and Results/abstract/Conclusion writing; no scientific experiment or manuscript edit is performed.
+
+## 4.1.33-4.1.37 (2026-10-24)
+
+- Refine model-operation descriptions and their input/output dependencies, preserving the distinction between latent-state updates, parameter learning, feature selection and actual inference-graph reduction.
+- Ground origin-localization writing in the stated decision output and evaluation unit. Separate attention allocation, predictive attribution, observational causal identification and controlled interventions rather than imposing a single interpretation on every paper.
+- Add bounded source-reading and fictional behavioral records. Attributed network names remain attributed; unverified complete mechanism names are not admitted as generic categories.
+
 ## 4.1.32 (2026-10-24)
 
 - Recover candidate phrases and recurring collocations across ordinary source line wraps, retaining start/end source lines and paragraph boundaries. Respect literal percent-comment newline suppression and leading indentation rather than inserting a space unconditionally.

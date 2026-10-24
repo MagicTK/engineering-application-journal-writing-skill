@@ -51,6 +51,8 @@ replacement_dependencies:
 
 If `data_dependent: yes`, do not invent curves, heat maps, samples, error bars, distributions, or confusion matrices. Use a visible internal placeholder only in the working copy and list the required source data in the handoff.
 
+For uncertainty graphics, retain the underlying unit and statistic in the contract: variation across seeds, folds, events or samples; SD, SEM or a specified interval; and actual n. Relabeling an SD band as a confidence interval is not a caption-only correction. Parameter counts may be deterministic while measured performance varies. Distinguish ordered settings from nominal metric categories: a line joining ACC, F1 and AUC is not a temporal or parameter-response curve. Use the [repetition/figure guidance](journal-migration-and-completeness.md#match-uncertainty-to-the-figure) for the statistical choice. A language or caption correction does not authorize changing approved typography, geometry or plotting data.
+
 For substantial diagram production or revision, also maintain the
 [Figure Revision State](../assets/templates/figure-revision-state.md): selected
 design, scientific source, current editable master and fingerprint, native-object

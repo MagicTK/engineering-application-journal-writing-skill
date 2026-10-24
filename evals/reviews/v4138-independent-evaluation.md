@@ -1,0 +1,22 @@
+# Aggregation, Paired Comparisons And Uncertainty Writing
+
+Date: 2026-10-24. Version: 4.1.38.
+
+One pre-change task context answered the aggregation request scientifically correctly on the frozen v4.1.37 source. It distinguished mean run-wise F1 from pooled-prediction F1 and retained the true acquisition count. This is not a demonstrated scientific failure. The respondent disclosed that a full quota-service result had been echoed internally, violating its tool-output restriction. Its final response contains no account values; no raw quota-service output is published. We do not claim the baseline context was privacy-clean throughout.
+
+Six existing references were clarified around aggregation targets, paired-difference uncertainty, variability units, result/conclusion scope and plot contracts. No new topic, reference-content file or generic mechanism family was added. Final requests expanded to four, and the tool-output instruction was strengthened. Source, coverage, context and output instructions changed together; no controlled source-only or general writing-performance improvement is claimed.
+
+The maintainer reviewed the actual final response from one further fresh task context. There was no independent second grader, whole-bank certification or scientific experiment reproduction. The [baseline response](../responses/v4138-baseline.md) and [final response](../responses/v4138-independent.md) are retained. These are two completed contexts, not five independent model runs.
+
+| Final Case | Observed Response | Assessment |
+|---|---|---|
+| M4138-A | Run-wise macro-F1 values 7/9 and 1/7, mean 29/63, pooled macro-F1 7/16; both accuracy summaries are 1/2. Two result sentences have 25 and 24 words. | Pass. The two summaries retain their declared meanings, and 24 predictions are not promoted to 24 newly acquired test cases. The response conditions statistical independence of the 12 unique cases rather than establishing it from uniqueness alone. |
+| M4138-B | Mean difference 1 percentage point, difference sample SD 0.1, SEM about 0.044721, specified interval about [0.875854, 1.124146]; a 40-word result sentence. | Pass. The stipulated pairing and normality support the conditional positive comparison. Marginal-SD overlap is not used as a test, and missing pairing is not reconstructed from marginal summaries. No new-plant inference is added. |
+| M4138-C | Captions of 37 and 36 words retain four-initialization SD, a fixed test set and fixed architecture parameter counts. | Pass. Actual data and typography remain locked; SD is not relabeled CI, random parameter jitter is not invented, and fold SD and nominal metric categories retain their own meanings. P66 is consulted through the current guide record, not independently read by the respondent. |
+| M4138-D | Results, abstract closing and conclusion of 88, 30 and 43 words report higher observed means with slightly larger SDs. | Pass. Initialization and fold variability remain separate; no significance, stability or all-condition advantage is claimed, and ordinary verification does not pad the contribution list. |
+
+Word counts and the synthetic arithmetic were independently checked. The D results paragraph repeats the variability interpretation in its last two sentences; this is a local concision opportunity, not a scientific failure or a requirement that every future abstract enumerate SDs. Passing these requests does not certify every returned sentence as final journal-polished prose.
+
+Both contexts had preset historical summaries and reported no active retrieval or deliberate use of them. They are fresh task contexts, not provably memory-blank models. The final response reports current reference and bootstrap/quota access without exposing account values. Public responses normalize only private local reference links, line-end spaces and terminal blank lines; raw responses remain private. No manuscript, Overleaf source, real figure, dataset or experimental result was edited.
+
+The 102-file instruction/dependency fingerprint stayed unchanged through final testing. Targeted source reading revisited P66 pages 8-9, with page 9 visually inspected; P21/P11 were keyword-located excerpts, not new repeated-run definitions. The existing corpus remains 74 distinct works, not 74 fully revalidated papers. NIST statistical material was read as methodological guidance, not counted as two additional industrial definitions or a new mechanism admission.

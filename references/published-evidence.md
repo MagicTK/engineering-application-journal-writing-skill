@@ -368,6 +368,12 @@ The original bilingual title, abstracts and paired keywords at [AAS c200257](htt
 
 As methodological background, [Pearl's primary PMLR abstract](https://proceedings.mlr.press/r0/pearl95a.html) identifies observational identification as a valid route, and the author-hosted [Statistics Surveys overview](https://ftp.cs.ucla.edu/pub/stat_ser/r350-reprint.pdf) distinguishes causal queries and the assumptions needed to answer them. These sources qualify the evidence rule; they are not two more industrial-operation papers or an admission record for every causal-module name. Observational identification need not require a new physical trial, while a graph attack alone does not establish a plant intervention. The selected engineering corpus remains 74 works.
 
+### Repetition, Aggregation And Uncertainty Graphics
+
+P66 pp.8-9 was reread, with p.9 rendered. The comparison tables are labeled mean-only, while Fig.4 explicitly describes SD bands over five cross-validation folds. Its nominal x-axis lists different metrics. These are scoped examples of summary and graphic choices, not a requirement for five seed runs, an inferential confidence interval or a continuous response curve. Full formulas, experimental independence, source performance and the aggregate subset results were not independently verified or reproduced. Searches in other indexed papers did not establish another repetition definition: P21 p.7 uses SD for input standardization, and P11 p.3 repeats attention heads rather than experiments. Keyword hits alone do not settle the reporting unit.
+
+The original [NIST paired-observation guidance](https://www.itl.nist.gov/div898/handbook/prc/section3/prc311.htm) defines analysis of matched differences. The [NIST confidence-limit manual](https://www.itl.nist.gov/div898/software/dataplot/refman1/ch3/confiden.pdf), p.1 text, distinguishes sample SD, standard error and a constructed mean interval. These are statistical references, not extra industrial papers or proof that any journal mandates one repetition count or test. The suite's synthetic arithmetic checks illustrate nonlinear aggregation and paired differences; they do not reproduce the source study. The indexed engineering corpus remains 74 works and no new module family is admitted here.
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.
