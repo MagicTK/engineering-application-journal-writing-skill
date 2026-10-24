@@ -103,6 +103,43 @@ class SuiteValidatorTests(unittest.TestCase):
                 else:
                     self.assertEqual([], issues)
 
+    def test_evidence_narrative_counts_need_current_or_historical_scope(self) -> None:
+        cases = (
+            ("These checks do not increase the 1-paper engineering index.", True),
+            ("Reading did not add papers to the 1-source index.", True),
+            ("Reading did not increase the 1-paper count.", True),
+            ("The current 1-work corpus is unchanged.", True),
+            ("A historical check ended. The 1-paper index is unchanged.", True),
+            ("These checks do not increase the 2-paper engineering index.", False),
+            ("At that revision, the 1-paper engineering index was unchanged.", False),
+            ("A historical audit used the 1-source index.", False),
+            ("A selected 1-paper subset was reread.", False),
+        )
+        for narrative, expected_issue in cases:
+            with self.subTest(narrative=narrative), tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                (root / "references").mkdir()
+                (root / "references/published-evidence.md").write_text(
+                    "A selected 2-paper corpus.\n## Sources / 来源\n"
+                    "| P01 | One |\n| P02 | Two |\nSome source titles\n\n" + narrative
+                )
+                issues = VALIDATOR.check_evidence_counts(root)
+                self.assertEqual(expected_issue, any("narrative" in issue for issue in issues), issues)
+
+    def test_evaluation_examples_link_to_their_actual_primary_report_versions(self) -> None:
+        text = (ROOT / "evals/README.md").read_text()
+        for paragraph in re.split(r"\n\s*\n", text):
+            version = re.match(r"Version (\d+\.\d+\.\d+)\b", paragraph)
+            if version is None:
+                continue
+            for target in VALIDATOR.LINK_RE.findall(paragraph):
+                path = ROOT / "evals" / target.split("#", 1)[0]
+                if path.name == "forward-test-report.json":
+                    report = json.loads(path.read_text())
+                    self.assertEqual(version.group(1), report["suite_version"], target)
+                    # Later links may explicitly compare another historical version.
+                    break
+
     def test_evidence_count_rejects_stale_bilingual_navigation(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
@@ -209,7 +246,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.45", suite["version"])
+        self.assertEqual("4.1.46", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

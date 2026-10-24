@@ -105,6 +105,19 @@ Transfer boundary:
 
 Do not turn one paper's choice into a field rule. Record distributions and exceptions.
 
+Keep **indexed works, searched works, candidate-hit works and verified uses**
+separate. An index total is an inventory, not a full-reading count or a term's
+prevalence denominator. A declared search of eight works yielding four candidate
+hits can report that search yield; bibliography-only hits do not become matching
+method definitions. Two checked definitions can support the scoped naming
+decision without requiring a full audit of every indexed work, but do not make
+unchecked works negative examples or imply field-wide prevalence. Keep exact and
+semantic-equivalent uses, shared lineage and Chinese verification states visible.
+When revising this profile, use the current inventory total or explicitly identify
+an earlier revision/subset; a date alone may not distinguish multiple revisions.
+
+中文核查口径：收录量、实际检索量、候选命中文献量与已核实用法分别记录。部分原文阅读不能说成全部精读；题名或文末引用命中不补足方法定义。两篇已核定义可支持限定名称判断，但不能据此将未读论文记为未使用，也不能把候选命中数除以整个收录量当作领域普及率。保留同源、原词/近义及独立译名核查状态，历史数量须有明确版本或子集范围。
+
 Keep raw search output private when it includes extracted copyrighted passages.
 PDF search tools locate candidates, not accepted usages. Record PDF pages,
 scholarly-work identity, exact versus semantic-equivalent matching, excluded

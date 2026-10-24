@@ -1,0 +1,13 @@
+# Evidence-Scope Final Review
+
+Date: 2026-10-24. Source version: 4.1.46.
+
+The maintainer reviewed the [actual final response](../responses/v4146-independent.md) against the baseline's same fictional facts and constraints; only the permitted read root changed from the immutable previous export to the current frozen source.
+
+The response correctly separates 80 indexed works, eight searched works, four lexical candidates and two verified method definitions. It keeps the 4/8 search yield separate from field prevalence, excludes bibliography hits as definitions, and leaves the other relevant bodies unchecked rather than marking absence. It accepts a scoped two-work exact/equivalent operation match with disclosed lineage without requiring the whole index to be read. Machine translation, a different operation and an inaccessible page do not complete Chinese verification. The stale 55-work statement is replaced by a current inventory statement or an explicitly supported historical/subset scope. Attributed names remain usable.
+
+The English summary has 43 independently counted whitespace-delimited words. Core judgments pass, as they did in the 41-word baseline. This is one request per task context, not a literature audit, two model experiments or a controlled writing gain. Neither response supplied the requested preset-history disclosure; no memory-blank context or full internal trace is certified. No account values appear in their final answers. There is no independent second grader, whole-bank certification or scientific reproduction.
+
+Two distinct deterministic repairs are recorded separately. The narrative-count regression failed before implementation and passes afterward across nine subcases, while finding the three actual stale totals in the immutable prior export. A second failing-first check exposed a historical example's primary report link pointing to the current version. Its initial broad check also flagged a legitimate later cross-version comparison; it was narrowed to each example's primary report. Historical records and explicit cross-version links remain intact. These tests check the stated forms/primary navigation, not every numerical sentence or every scientific assertion.
+
+Instructions and dependencies were unchanged during the final response. The evaluation README and tests were adjusted outside that behavioral snapshot and outside the respondent's allowed read scope; their navigation repair is established by the program check, not this writing response. Public normalization concerns artifact wrapper, local-reference links if any and whitespace only; raw answers remain private.

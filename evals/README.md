@@ -4,7 +4,17 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
-Version 4.1.20 used one fresh responding context for four fictional requests on local versus final label spaces, entrywise versus complete-set evidence, a legitimate composite-class formulation and full-name/translation admission. All four passed maintainer semantic review; the small metric counterexample was independently calculated. See the [review and actual response](reviews/v4120-independent-evaluation.md) and [current report](forward-test-report.json). There was no baseline or independent second grader; this is scoped behavioral evidence, not measured general improvement or whole-bank certification.
+Read the [current report](forward-test-report.json) for the evaluated suite version,
+actual cases, source snapshot, response/review traces and pending or passed state.
+Its tested scope is not a full-suite certificate. Historical examples below retain
+their own versioned reports and do not validate changed instructions. The
+[changelog](../CHANGELOG.md) summarizes later content changes; the current report,
+not the first historical example or the number of stored files, identifies the
+present evaluation status.
+
+## Selected Historical Examples
+
+Version 4.1.20 used one fresh responding context for four fictional requests on local versus final label spaces, entrywise versus complete-set evidence, a legitimate composite-class formulation and full-name/translation admission. All four passed maintainer semantic review; the small metric counterexample was independently calculated. See the [review and actual response](reviews/v4120-independent-evaluation.md) and [archived report](history/v4.1.20/forward-test-report.json). There was no baseline or independent second grader; this is scoped behavioral evidence, not measured general improvement or whole-bank certification.
 
 Version 4.1.19 used two separate fresh contexts: two complete abstract/contribution requests first exposed an ordinary-ablation contribution item in a 4.1.18 response; after targeted instruction repair, the unchanged requests and an added genuine empirical-contribution control passed maintainer semantic review. See the [review and preserved responses](reviews/v4119-independent-evaluation.md) and [archived report](history/v4.1.19/forward-test-report.json). The review retains a minor optional repetition edit in one final answer. This is an observed case-level correction, not statistical improvement, perfect prose or whole-suite certification; there was no independent second grader.
 
@@ -73,6 +83,6 @@ Behavior requires a fresh agent or model. Do not give the evaluator the intended
 
 Before a behavioral run, freeze the instruction/dependency snapshot using `behavior_source_hashes` from `scripts/export_public.py` and retain it as `evaluated_source_sha256` in the report. A release export compares it with the current files, including added/removed dependencies. Changes after the run invalidate that snapshot: rerun affected cases and record the new scope rather than silently relabeling old results. A matching hash proves identity, not correctness.
 
-`forward-test-report.json` records the current version's evaluation status and actual scope. Historical 4.0.0 reports cover nine cases in one fresh responding context, with final confirmation after instruction updates. Historical 3.2.1 reports cover five cases; earlier reports retain their original versions. Historical response/review paths resolve from this `evals/` directory where indicated. They do not validate 4.1.0. Preserve earlier records before replacement. Public copies may normalize evaluator session labels to remove private absolute paths; keep original evidence in protected local history when doing so. The 4.1.0 response traces contain only synthetic cases and are retained without rewriting the respondent's answers.
+`forward-test-report.json` records the current version's evaluation status and actual scope. Historical 4.0.0 reports cover nine cases in one fresh responding context, with final confirmation after instruction updates. Historical 3.2.1 reports cover five cases; earlier reports retain their original versions. Historical response/review paths resolve from this `evals/` directory where indicated. They do not validate a changed current snapshot. Preserve earlier records before replacement. Public copies may normalize evaluator session labels to remove private absolute paths; keep original evidence in protected local history when doing so. The 4.1.0 response traces contain only synthetic cases and are retained without rewriting the respondent's answers.
 
 Authored scenarios, structural checks, independent forward responses, and manual semantic judgments have different evidence roles. A forward report is a transparent record of the cases actually exercised, not an automated proof or a substitute for rerunning affected cases after substantive changes. Do not claim a before/after improvement unless both versions were run under a documented comparable procedure.

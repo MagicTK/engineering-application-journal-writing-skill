@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.46 (2026-10-24)
+
+- Separate indexed works, searched works, lexical candidate hits and substantively verified uses in existing corpus and bilingual terminology guidance. A bounded two-source naming decision is not a full-corpus reading claim or a field-prevalence estimate.
+- Remove three stale narrative totals from the evidence analysis without rewriting historical response records or adding papers. Add a failing-first regression for explicit narrative total forms, preserving clearly scoped history and subsets.
+- Separate the evaluation page's current-report navigation from selected historical examples and verify that each versioned example links to a report with its actual suite version; preserve the original reports and responses.
+- Check the counting and admission distinctions with one constrained fictional request before and after the revision. The deterministic regression demonstrates the validator repair; passing writing cases do not establish controlled general writing gains or whole-bank certification.
+
 ## 4.1.45 (2026-10-24)
 
 - Clarify zero-shot diagnosis through acquired examples, class semantics, generated training features and the actual retained predictor, rather than a list of modules or an assumed final text/sensor fusion.

@@ -142,7 +142,7 @@ For each audited item, record:
 | Preferred wording | An operation-specific alternative, not a mechanical synonym |
 | Propagation points | Abstract, figures, equations, experiments, Conclusion, and project terminology map |
 
-Coverage means the number within the sources actually searched, not a claim about the whole field. Mark unsearched usage as unchecked, not zero. A local grammar request does not require a whole-manuscript frequency ledger.
+Coverage means the number within the sources actually searched, not a claim about the whole field. Report candidate-hit works separately from verified substantive uses; the index inventory is not a full-reading count or prevalence denominator. Mark unsearched usage as unchecked, not zero. Use [the corpus profile](corpus-calibration-workflow.md#4-build-a-corpus-profile) for these counting distinctions. A local grammar request does not require a whole-manuscript frequency ledger.
 
 Verify collocations, not isolated words alone. A familiar word can still form
 an unidiomatic phrase, and the correct replacement may change the whole clause.

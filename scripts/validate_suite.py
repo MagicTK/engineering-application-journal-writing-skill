@@ -148,7 +148,7 @@ def resolver_doi_identity(target: str) -> str | None:
 
 
 def check_evidence_counts(root: Path) -> list[str]:
-    """Check current index claims and navigation, not dated historical counts."""
+    """Check explicit current totals and navigation, preserving scoped history."""
     index = root / "references/published-evidence.md"
     if not index.is_file():
         return []
@@ -182,6 +182,18 @@ def check_evidence_counts(root: Path) -> list[str]:
         for claimed in re.findall(pattern, scope):
             if int(claimed) != count:
                 issues.append(f"published evidence scope claims {claimed} sources; table has {count}")
+    total_form = re.compile(
+        r"\b(?:(?:the|this)(?:\s+current)?|current)\s+(\d+)[ -]"
+        r"(?:paper|source|work)\s+(?:engineering\s+)?(?:index|corpus|count)\b",
+        re.I,
+    )
+    for paragraph in re.split(r"\n\s*\n", text):
+        for match in total_form.finditer(paragraph):
+            prefix = re.split(r"(?<=[.!?。！？])\s+", paragraph[:match.start()])[-1]
+            if re.search(r"\b(?:historical|then-current|at that revision|at the time)\b|当时|历史", prefix, re.I):
+                continue
+            if int(match.group(1)) != count:
+                issues.append(f"published evidence narrative claims {match.group(1)} sources; table has {count}; clarify current total or historical scope")
     paths = [root / "README.md", root / "README_CN.md"]
     paths.extend(root.glob("references/engineering-application-terminology-bank*.md"))
     for path in paths:
