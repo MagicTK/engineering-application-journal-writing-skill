@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 67-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 67 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 68-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 68 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计67篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计68篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -79,6 +79,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P65 | [CoUDA: Continual Unsupervised Domain Adaptation for Industrial Fault Diagnosis Under Dynamic Working Conditions](https://doi.org/10.1109/TII.2025.3538135) | TII 21(5), 2025, pp.4072-4082. Sequential target adaptation retains source data and earlier model information while avoiding previous-target-instance replay. |
 | P66 | [A Unified AutoEncoder-Based Representation Learning Framework for Fault Detection With Heterogeneous Feature Dimensions](https://doi.org/10.1109/TII.2025.3611706) | TII 22(2), 2026, pp.799-810. Published team work: distinguish reconstruction/label-dependent training from decoder-free fault-type classification, and input padding from measurement recovery. |
 | P67 | [Industrial Process Fault Detection Based on Siamese Recurrent Autoencoder](https://doi.org/10.1016/j.compchemeng.2024.108887) | Computers & Chemical Engineering 192 (2025), 108887. Paired recurrent representation training supports a latent-space monitoring statistic, not synthetic production-sample generation. |
+| P68 | [A Local Weighted Multi-Instance Multilabel Network for Fault Diagnosis of Rolling Bearings Using Encoder Signal](https://doi.org/10.1109/TIM.2020.2986853) | TIM 69(10), 2020, pp.8580-8589. Adjacent bearing-rig study: formal bags and learned feature instances have different roles from acquired windows; the full MIML name does not alone establish compound-fault experiments. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -306,6 +307,16 @@ P22 pp.2-4 was reread for segment-level training labels and point-level outputs.
 Independent Chinese checks read the bilingual abstracts and keywords of Acta Automatica Sinica 10.3724/SP.J.1004.2013.01871 and c220421 for 半监督学习 and 自监督学习, and the original bilingual title/abstract of Journal of Computer-Aided Design & Computer Graphics 10.3724/SP.J.1089.2021.18594 for 弱监督. A different requested AAS page timed out or returned forbidden access and was not counted. These translation sources do not add engineering-work IDs. No new engineering source, research experiment or complete implementation validation is claimed.
 
 本组按真实标注的可用性/粒度、自建训练目标及训练阶段分别组织写作。联合训练不能被改写为先预训练后微调；变换种类与伪目标不能被计作新增实测故障或质量标注。基础名称配对与中文译名分别核查，完整模块名及弱监督不同用法不混为一物。
+
+### Instance Meaning, Bag Supervision And Final Output
+
+On 2026-10-24, P22 p.3 tail and p.4 beginning were reread for its traditional MIL definition and temporal-subsequence extension. P68 p.1 and pp.3-6 were read, with the beginning of p.7 additionally inspected and p.4 visually checked. Its formal MIML review defines instance/label bags; the proposed path constructs latent instances, relates them to class scores and aggregates them. The generic concept-layer figure and proposed aggregation are different passages, not interchangeable pooling recipes. Together P22/P68 support the bag-of-instances base, with different represented objects and decision scopes.
+
+P68's inspected evaluation concerns seven bearing states on a fault-simulation rig. It does not independently verify physically co-occurring faults or a multilabel decision rule merely because the full network name contains MIML. Its macro-F1 expression and window-evaluation design are not adopted as validated templates. Learned instance counts and overlapping windows do not establish new independent acquisitions. No source implementation, complete metric definition or experiment was reproduced.
+
+Chinese wording was checked through the original bilingual abstract/keywords of Journal of Nanjing University 10.13232/j.cnki.jnju.2026.02.012 and the bilingual title/abstract of Journal of Computer-Aided Design & Computer Graphics 10.3724/SP.J.1089.2018.16591. They support 多实例学习 and 多示例学习, with 包 and member terminology at the stated scope. An AAS candidate page timed out and was not counted. These are translation sources, not extra engineering-work IDs or admission of their complete proposed components.
+
+本组分别交代采集单元、学习样本、内部实例、包标签及输出单位；不把名称中的多实例、多标签当作多采集样本或多物理故障的证明。真实的包级分类可以保留包级任务，若主张更细定位再检查相应映射及证据。完整专名保留来源归属，不照搬其指标或实验设计。
 
 ## Reusable Lessons / 可迁移结论
 

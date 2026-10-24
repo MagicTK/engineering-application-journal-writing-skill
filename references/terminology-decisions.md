@@ -27,6 +27,7 @@ familiar head word does not validate every compounded qualifier.
 | feature / feature representation | an input descriptor or a learned representation; specify which if material | that the operation changes the measured variable itself |
 | channel | a tensor/model axis, after mapping it to variables or signals | one channel equals one variable in every model |
 | sample | the unit supplied to learning or evaluation, explicitly defined as a window, plate, batch, cycle or other object | a database row necessarily equals one statistically independent sample |
+| instance / bag (in multi-instance learning) | a defined member representation and the collection supplied to a bag-level learner; instances may be points, subsequences or learned features | an internal instance necessarily equals an independently acquired or individually labeled production sample; bag supervision necessarily supports fine localization |
 | observation / measurement | an acquired value, vector or observation event | one observation always has the same unit as one sample |
 | record | an actual log/database record when describing storage, linkage or acquisition | a preferred synonym for a training sample |
 | attribute | an actual semantic descriptor, graph-node attribute or metadata field | a default replacement for measured process variables |
