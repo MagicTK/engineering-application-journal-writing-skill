@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 86-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 86 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 88-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 88 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计86篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计88篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -98,10 +98,42 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P84 | [Robust fault diagnosis of a high-voltage circuit breaker via an ensemble echo state network with evidence fusion](https://doi.org/10.1007/s40747-023-01025-3) | Complex & Intelligent Systems 9 (2023), pp.5991-6007; publisher open version. Adjacent electrical-equipment study: pp.8-10 separate mass-combination preliminaries, source-specific weighting and complete conflict. Full IDS-ESN claims are not generalized. |
 | P85 | [Joint Task Offloading, DNN Pruning, and Computing Resource Allocation for Fault Detection With Dynamic Constraints in Industrial IoT](https://doi.org/10.1109/TCCN.2025.3529688) | TCCN 11(5), 2025, pp.3486-3501; [author-hosted published PDF](https://qiang-john-ye.github.io/Papers/Joint_Task_Offloading_DNN_Pruning_and_Computing_Resource_Allocation_for_Fault_Detection_With_Dynamic_Constraints_in_Industrial_IoT.pdf). IIoT-service context: parameter masks/retraining precede selection among model instances. Modeled task costs are not current-device measurements. |
 | P86 | [A Hardware-Friendly Approach Towards Sparse Neural Networks Based on LFSR-Generated Pseudo-Random Sequences](https://doi.org/10.1109/TCSI.2020.3037028) | TCSI 68(2), 2021, pp.751-764; [research-group-hosted published PDF](https://icsrl.ece.gatech.edu/files/2021/06/09264691.pdf). Adjacent sparse-hardware study: selected parameters are regularized, zeroed and retrained; storage/indexing and execution are separate considerations. Full LGPS designs remain attributed. |
+| P87 | [Multiscale Convolutional Neural Network With Self-Attention Mechanism and Soft Thresholding for Industrial Process Fault Diagnosis](https://doi.org/10.1109/TSMC.2026.3652405) | TSMC: Systems 56(4), 2026, pp.2647-2659. Published PDF p.3 Eq.(4) defines feature shrinkage; the adjacent threshold generator and full AM-MAST design remain source-specific. |
+| P88 | [Joint Threshold Learning Convolutional Networks for Intelligent Fault Diagnosis Under Nonstationary Conditions](https://doi.org/10.1109/TIM.2023.3301863) | TIM 72, 2023, Art.3526611. Adjacent rotating-machinery study: p.3 Eq.(2) defines soft feature thresholding; pp.3-4 distinguish filters, a reference path and fusion. Printed sigmoid/range inconsistencies are not imported. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Thresholded Features, Bypasses And The Evaluated Benefit
+
+P87 pp.1,3 and P88 pp.1,3-4 were selected, read and visually inspected. P87
+Eq.(4) and P88 Eq.(2) explicitly define the same signed soft-threshold map for a
+nonnegative threshold. They are distinct process/machinery works, not independent
+inventions or validation of complete AST/JTM/AM-MAST names. P87's explanatory
+contrast should not obscure that both conventional hard and soft maps can zero
+small values. P88's printed sigmoid expressions, Eqs.(3),(6), have a vanishing
+denominator at zero and conflict with the stated bounded range; they are not
+adopted. Its full hard-filter notation, fusion, gradients and reported gains were
+not certified by the base soft-map check. Read available operations, not only the
+abstract's denoising or efficiency claims.
+
+Original paired abstracts in [Journal of Northeastern University, 2024,
+45(11):1587-1594](https://xuebao.neu.edu.cn/natural/CN/10.12068/j.issn.1005-3026.2024.11.009)
+verify the function wording; original paired abstracts/keywords in [Journal of
+BUAA, 2021, 47(7):1399-1406](https://bhxb.buaa.edu.cn/bhzk/cn/article/doi/10.13700/j.bh.1001-5965.2020.0194)
+verify the operation wording. Their accessible HTML supplies no complete method
+equation bodies. These Chinese checks establish base wording, not full residual
+network names, optimal thresholds, all synonym variants or extra English
+industrial-definition IDs. A failed PDF-content-type open or unresolved template
+on another page does not supply missing evidence.
+
+The transferable writing relation is threshold input, changed features, actual
+bypass/fusion and engineering output. Preserve that relation without equating
+small amplitudes with noise or describing feature zeros as parameter pruning.
+Separate noisy-input diagnostic gains from a clean-signal recovery claim; a
+routine threshold map does not itself establish novelty, online learning or
+measured acceleration.
 
 ### Multihead Features And A Separate Coefficient Summary
 

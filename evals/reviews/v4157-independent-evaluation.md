@@ -1,0 +1,13 @@
+# Final Feature-Thresholding Review
+
+One fresh task context answered the unchanged two fictional requests on the final frozen v4.1.57 source; only the read root changed. Maintainer semantic review, no independent second grader or source-paper reread by the tester.
+
+- A passes: it computes the correct soft/hard/additive-bypass values and threshold equality behavior. The bypass can preserve small nonzero values and increase the final magnitude even when the transformed branch alone shrinks it.
+- It separates input-dependent feature processing from online parameter fitting, parameter pruning and dense-execution speed claims. It checks the printed expression at zero without silently repairing it or inferring noise identity from amplitude.
+- The P87/P88 base definition pair and separate Chinese function/operation names are retrieved with their actual source/reading boundaries. Source-specific full names, unrelated clipping, duplicate versions and translation pages do not inflate the English-definition count. An unlisted approved proposal is not rejected merely for being new.
+- The 33-word positive method sentence keeps A's additive bypass. B's 144-word abstract and 33-word candidate contribution instead retain the specified channel-statistic threshold generator, signed feature shrinkage, concatenation bypass, fusion projection and fixed-weight endpoint classifier. This architecture distinction is preserved rather than mechanically copying A's merger.
+- B closes on both stated simulated/recorded-production cases and their dimension-matched path-removal comparison under declared additive noise. It does not invent clean-signal recovery, measured acceleration, calibration, physical causes, early warning, cross-plant transfer or live deployment. The approved English name remains a proposal with novelty pending in author notes.
+
+The abstract is near this exercise's upper length bound and could select fewer implementation details for a different writing brief; its facts remain correct. These word limits are not universal journal rules, and the raw response is not rewritten to manufacture a perfect example.
+
+Two contexts completed two requests each, not four independent model experiments. Baseline scientific and writing behavior already passed; maintained evidence coverage improved, not a controlled general writing capability. Preset history is disclosed, neither context is claimed memory-blank, and no full internal service trace, whole-bank nomenclature/translation certification or scientific reproduction is established. Public normalization changes only wrappers, local links/line suffixes and whitespace; raw records remain private.

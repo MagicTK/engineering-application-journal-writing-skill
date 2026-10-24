@@ -28,6 +28,15 @@ connection is not automatically an independent contribution.
 
 Mark each operation as prediction-time computation, training objective, pretraining, or test-time adaptation. These are different relationships, not successive boxes in one forward pass. An alignment loss can shape an encoder during training without receiving its output during deployment; a reconstruction decoder can be absent at inference. When this distinction is central, the abstract needs one clear training-to-prediction connection rather than a fictional sequence. Published examples P10, P17 and P21 illustrate different training interactions; P25 even uses different branch components for training and prediction.
 
+For threshold-based feature processing, connect the threshold's input to the
+transformed features and their next use. A verified design may compute thresholds
+from encoded measurements, shrink the features and combine them with a bypass
+before classification. That positive chain is clearer than claiming that a
+threshold knows which components are noise. P87/P88 illustrate different
+threshold generators and mergers, not a compulsory architecture. Select the
+distinctive relationship for the contribution; routine thresholding alone is not
+new, and a noisy-input classification gain is not a clean-signal recovery score.
+
 A modified network copy is another possible training relationship. If a verified
 design uses a parameter-masked copy to supply contrastive views, connect that
 perturbation to the encoder it trains and then to the retained predictor. Explain

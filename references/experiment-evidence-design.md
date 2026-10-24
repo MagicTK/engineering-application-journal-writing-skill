@@ -165,6 +165,15 @@ Choose disturbances from the data-generation process:
 
 State severity, injection location, whether training includes the disturbance, and which metric defines acceptable degradation. Verify the original acquisition/generation noise before describing a benchmark as clean; newly injected noise is an additional stress test. Calibrate perturbation magnitude from training statistics and document whether the transformation preserves task labels. If it changes the physical fault state or label meaning, redesign the test or relabel with justified evidence rather than forcing the original label. Choose disturbance families relevant to the claimed scope; one Gaussian injection does not establish all field robustness.
 
+For threshold-based processing, distinguish a better downstream decision under
+declared noise from recovery of an independently known clean signal. The latter
+needs a matching reference and recovery metric; it is not required for a study
+claiming only diagnostic robustness. Trace any bypass before interpreting branch
+zeros as removed information. If comparing threshold generators, account for
+both the changed transformation and its fusion interface, rather than treating
+ordinary zero-valued activations as a measured execution-speed benefit. P87/P88
+support the operation distinction, not automatic verification of their gains.
+
 For missing-value recovery claims, separate accuracy at withheld entries from the downstream prediction result. When ground truth is available by deliberately hiding observed values in independent held-out units, score the hidden entries and report the masking pattern and denominator. Keep those values out of the supplied input and fitted preprocessing; define an aggregation that remains interpretable across different missing fractions and variable scales. A loss divided by the number of sequences is not automatically an error per missing entry. Naturally unobserved values without an independent reference cannot supply a direct recovery error; downstream diagnosis can still be evaluated legitimately. Randomly withheld values support the tested masking setting, not every sensor outage pattern. A reconstruction loss on observed entries (P33) or training degradation mask (P17) is not a substitute for this held-out evidence.
 
 When a method claims to leave observed measurements unchanged, inspect the final output equation or implementation rather than the mask's name. For finite placeholders, `x_complete = M*x_input + (1-M)*x_estimate`, with `M=1` at observed positions, preserves them by construction; masked selection must handle NaNs safely if they are present. A mask inside an encoder, or adding a learned output to the input, needs a separate check. Preservation is a useful property to report, not proof that the missing entries are accurate. This check does not require a method that estimates its output directly from available observations to introduce an imputation stage.

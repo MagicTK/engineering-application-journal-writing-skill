@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.57 (2026-10-25)
+
+- Add a scoped soft-thresholding definition pair from published process/machinery studies and separately checked Chinese function/operation names. Keep complete proposed modules attributed and exclude source formulas that contradict their stated range.
+- Connect threshold generation, feature shrinkage, bypass/fusion and diagnostic use in existing bilingual writing guidance. Separate feature zeros from parameter pruning, input dependence from online fitting, and noisy-input classification from clean-signal recovery.
+- Extend existing references, not the topic/template inventory. Two new selected published-work records do not imply complete paper audits or validation of their reported gains; real manuscripts and results remain unchanged.
+
 ## 4.1.56 (2026-10-25)
 
 - Verify the generic Chinese multi-head attention wording in two original journal pages, separately from the existing self-attention and multi-head self-attention records. Preserve the different page-reading depths and source-specific improved names.

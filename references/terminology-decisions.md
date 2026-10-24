@@ -221,6 +221,18 @@ semantics nor sensor removal. Input-dependent coefficients with fixed trained
 parameters are also different from online parameter learning; resource savings
 require a verified execution path rather than merely small weights.
 
+For soft thresholding with a nonnegative threshold, identify the transformed
+quantity (P87 p.3 Eq.(4); P88 p.3 Eq.(2)). The map sets values inside the threshold
+interval to zero and reduces larger magnitudes while retaining their signs.
+Applying it to feature values does not prune network parameters. A threshold
+computed from each input by fixed trained weights can vary without online
+learning. Follow the later bypass or fusion: a zero on this branch need not be a
+zero in the final representation. Small magnitude alone does not identify noise;
+describe shrinkage positively and reserve a measured denoising claim for matching
+evidence. Do not silently import P88's printed sigmoid formulas: at zero their
+denominator vanishes, contradicting the stated bounded range. The scoped base
+definition does not certify the complete source module or its implementation.
+
 For origin analysis, distinguish the initiating disturbance, the earliest observed response and the model's selected node. A learned directed graph, a graph-load redistribution score and a real change to plant operation are different objects (P13/P16). Preserve a valid conditional causal-effect estimate from observational data when its target and identifying assumptions are stated; do not require a physical trial for every causal sentence. Conversely, a predictive relation or simulated graph attack alone does not identify a physical effect. Use the [interpretation evidence check](experiment-evidence-design.md#7-interpretation-design) for the corresponding claims, not as a compulsory addition to ordinary classification.
 
 For `multiscale convolution`, state what varies across branches or layers and along which input axis. Kernel extent, dilation, stride and preceding layers jointly affect the input support; do not equate a kernel width with the full network's receptive field or a measured physical time constant. The checked base-name examples P01/P11/P15 use different branch supports, with addition or concatenation of their outputs. Their complete proposed block names remain attributed. A valid architectural `local/global` description need not claim physical process scales; a spectral-separation or plant-wide interpretation needs its own stated basis. For abstracts and contributions, connect the combined features to their actual next use instead of adding an unsupported physical benefit.

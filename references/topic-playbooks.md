@@ -507,6 +507,14 @@ Verify that the modeled axis is acquisition time before interpreting trends, lag
 
 For multiscale convolution, follow the varying support to the output and its next consumer. P11 pp.3-4 concatenates different-kernel branch outputs before later relation modeling; P15 pp.4-5 passes concatenated outputs to an LSTM; P01 p.4 adds parallel branch outputs and later pools each stage before fusion. These support a common different-support extraction principle, not a compulsory concatenation operator or one universal temporal axis. A short abstract can state what neighborhoods are encoded and how the combined representation supports the next operation; a contribution should explain the supported advance rather than list kernel sizes as novelty. Different kernel widths alone do not establish isolated frequency bands, physical time constants, noise removal or superior diagnosis. Test those interpretations when claimed; otherwise keep an accurate architectural description without demanding a separate physical-scale experiment.
 
+When thresholding is central, state whether it acts on measured signals,
+transform coefficients or learned feature values, and how the result reaches the
+decision. P87/P88 define soft feature shrinkage with different threshold-generation
+and fusion designs. It need not involve wavelets, sensor removal, parameter
+pruning or online fitting. Describe the actual input-dependent transformation
+and its tested task benefit; keep full source module names attributed. 中文：
+说明阈值处理的对象及后续融合，不将低幅值直接认定为噪声；特征收缩与参数剪枝、传感器删除不是同一主张。
+
 中文要点：先说明尺度是模型感受野还是有依据的工艺尺度，再连清分支输出及后续用途。可以合理使用已定义的local/global，不必强改成物理尺度；多尺度不等于多工序，也不由卷积核大小直接推出频带分离。基础名称和独立译名依据见[术语核验表](engineering-application-terminology-bank_CN.md#九已核验核心名称与未完成范围)。
 
 For SFA claims, trace the temporal objective and its nontriviality constraints. The classical definitions in P54/P55 minimize derivative energy under zero-mean, unit-variance and decorrelation constraints. A learned slow representation is not simply a moving-average trend; retain ordinary smoothing terminology when that is the actual operation. A deep model may instead use soft penalties or probabilistic dynamics: describe those choices rather than asserting exact equivalence to all classical constraints. Reconstruction does not itself impose zero mean, and decorrelation alone does not establish statistical independence. See the [feature-scale check](experiment-evidence-design.md#8-metric-integrity) before interpreting a smaller temporal-difference loss as better dynamics modeling.
