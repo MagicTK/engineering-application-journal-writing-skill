@@ -5,7 +5,7 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 # General Method With Benchmark And Real-World Validation
 
-Suite version: `4.1.30`
+Suite version: `4.1.31`
 
 ## Mission
 

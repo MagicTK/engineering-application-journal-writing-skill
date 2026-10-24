@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.31 (2026-10-24)
+
+- Pair soft-sensing task definitions with a semantically checked inferential-sensor description, preserving estimated quantities, observed inputs and time-specific target roles. Chinese model-task wording is verified separately; unresolved literal sensor/variable translations remain explicit.
+- Refine task routing for quality-category classification, continuous quality estimation and future forecasting. Localization and a causal explanation remain different outputs; published task names need not be renamed to match routing codes.
+- Revisit existing sources and references rather than adding a direction or corpus entry. Final-source fictional checks examine released assay inputs, category outputs and a legitimate future-target design; no manuscript or experiment result is changed.
+
 ## 4.1.30 (2026-10-24)
 
 - Pair few-shot definitions from smart-grid and wind-turbine studies, preserving episodic base/support learning and fixed low-data training as different arrangements. Verify the Chinese base wording separately in two original scholarly pages.

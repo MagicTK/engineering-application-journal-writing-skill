@@ -54,8 +54,8 @@ renaming the implemented method.
 |---|---|---|
 | T1 | Data restoration or synthesis | repaired, reconstructed, or generated industrial records |
 | T2 | Fault/anomaly detection and process monitoring | abnormality decision, alarm, monitoring statistic, or event interval |
-| T3 | Fault diagnosis or condition classification | fault type, operating condition, or unknown-class decision |
-| T4 | Localization, isolation, and root-cause analysis | responsible variable, unit, component, region, or propagation path |
+| T3 | Fault diagnosis, condition or quality-category classification | fault type, operating condition, product/quality category, or unknown-class decision |
+| T4 | Localization, isolation, and root-cause analysis | located variable/unit/region, isolated fault set, or a supported causal explanation/path; state which is actually produced |
 | T5 | Soft sensing, quality, KPI, environmental, or health prediction | continuous process/product variable, efficiency/emission indicator, or health indicator |
 | T6 | Forecasting and prognostics | future trajectory, remaining useful life, or degradation horizon |
 | T7 | System identification and causal discovery | dynamic relation, graph, mechanism, or causal structure |
@@ -63,6 +63,8 @@ renaming the implemented method.
 | T9 | Human-AI collaborative operation | recommendation plus operator interaction, confirmation, or intervention |
 
 Encode the task from the final decision output, not from the loss function.
+
+These are routing codes, not a demand to rename a published task. A quality-category predictor (P09) remains classification even when its features are learned through regression; estimating a continuous quality quantity fits T5. A soft sensor that forecasts a future quantity may use T5 and T6 together. Record the estimated quantity, target time and information available when the estimate is issued. A located region or ranked variable alone does not establish a responsible physical cause.
 
 A reconstruction objective does not make data synthesis the engineering task.
 An autoencoder may supply features to a classifier or a monitoring statistic;
@@ -111,7 +113,7 @@ Record operating status in the internal evidence ledger as `retrospective/offlin
 - **Nonstationary vs. multimode**: continuous drift and discrete operating regimes are different phenomena even when both occur.
 - **Multisource vs. multimodal vs. cross-modal**: different acquisition sources are not automatically different modalities; cross-modal claims require explicit alignment or interaction.
 - **Graph vs. causality**: a graph can encode correlation, topology, similarity, or message passing. Causal language requires causal assumptions and corresponding validation.
-- **Detection vs. diagnosis vs. localization**: whether, what type, and where/why are distinct outputs and need distinct evidence.
+- **Detection, diagnosis, localization and root cause**: an abnormality decision, a fault identity, a location and a causal explanation are different outputs. Published names vary; route from the actual output and evidence rather than treating every location as a cause.
 - **Interpretability vs. root cause**: attention or variable ranking is not root-cause proof. Validate fidelity, stability, and engineering correspondence.
 - **Lightweight vs. efficient**: parameter count alone does not establish latency, memory, energy, or deployability.
 

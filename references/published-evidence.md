@@ -86,6 +86,12 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
+### Soft-Sensor Targets, Inputs And Task Routing
+
+P34 pp.1,3 were reread for the quality-estimation task and its separate process/quality observation roles. P57 pp.1-2 were reread, with p.2 visually checked: its soft-sensor equation includes process measurements and earlier target values. P56 pp.1-2 defines an equivalent quality-inference task under a different sensor name. Together these support model-based indirect estimation, not one architecture or proof that every lagged assay is available when needed. The source-specific timing, constraints and optimization formulas are not certified implementations. P09 p.1 was separately reread: regression-derived features supply a quality-category classifier, so the final task is not determined by a regression component.
+
+Chinese soft-sensor/软测量 wording was checked in the original bilingual title of Acta Automatica Sinica c210035 and the bilingual title/abstract of Information and Control 2020.9311. Attempts to inspect the 2014.02179 article and the c170157 full-body/PDF definition of primary/secondary roles were unsuccessful; accessible title/abstract material and search snippets do not complete that translation check. No new engineering source ID, experiment reproduction or blanket admission of all virtual/inferential-sensor translations is claimed.
+
 ### Few-Shot Setting And Annotation Resources
 
 P47 p.2, Sections II-A/D, p.3 and p.5, Section IV-A, distinguishes abundant labeled base measurements from limited support examples and evaluation queries. P69 pp.1-3 and selected pp.8-10 passages instead describes limited fixed-set training with spectrogram augmentation; p.9 was visually inspected. It reports 33 original training windows per class and 792 augmented examples in one case. Derived images and paired copies are not additional independent acquisitions or annotations. These distinct arrangements support the shared few-shot base term, not a universal sample cutoff or episodic algorithm. Their complete component names remain attributed. The source's multimodal, generalization and production-status claims are not certified or transferred here.
