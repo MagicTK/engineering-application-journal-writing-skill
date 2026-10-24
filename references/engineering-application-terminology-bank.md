@@ -190,6 +190,8 @@ Name the actual operation instead of using vague `information exchange`
 wording. Information exchange remains legitimate when communication or transfer
 between defined entities is itself the operation.
 
+Selecting importance need not remove a represented object. P74 p.4 explicitly preserves the patch-module output shape; p.5 Eqs.(9)-(10) uses one class query to aggregate channel values and then retains the other value tokens in the output. Keep its complete SPM/SCM/SCA names attributed. This is not a matched definition of token/channel pruning, nor evidence that fewer physical sensors are required.
+
 ## 6. Multi-Stage And Plant-Wide Relations
 
 Use `stage-wise` for separate treatment of stages and `stage-specific` for a
@@ -373,6 +375,7 @@ the performance/style claims made by their authors.
 
 | Chinese check | Primary online locator and checked content | Status and transfer boundary |
 |---|---|---|
+| network pruning / 网络剪枝 (translation checked; English operation admission still pending here) | [Acta Automatica Sinica c180275](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180275), original bilingual abstract and paired keywords | Supports the base translation only. The accessible page supplied abstract/captions, not the full method body. This general model-optimization survey is not a second read industrial pruning implementation, and does not admit every qualified pruning name or certify acceleration. |
 | state-space model / 状态空间模型; Kalman filter/filtering / 卡尔曼滤波; fixed-lag smoother / 固定时延平滑 | [Acta Automatica Sinica c230457](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c230457?viewType=HTML), paired Fig.5 caption; [AAS 2013.00043](https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.00043), bilingual title/abstract/keywords; [Bulletin of Surveying and Mapping, 2017.0338](https://html.rhhz.net/CHTB/html/2017-11-6.htm), original bilingual title/abstract/keywords and Sections 1-2 | The first pairs state-space wording inside a deep variant; the second explicitly pairs the Kalman base; the third distinguishes filtering and delayed smoothing. These verify wording, not every full linear-Gaussian/neural/lagged variant or industrial operation. Accessible AAS captions/abstracts are not full-body definition reading, and translation pages add no process-study IDs. |
 | generative adversarial network / 生成对抗网络; source variant 生成式对抗网络 | [Acta Automatica Sinica c180831](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180831), original bilingual title/abstract/keywords; [Journal on Communications, 10.11959/j.issn.1000-436x.2018032](https://www.joconline.com.cn/zh/article/doi/10.11959/j.issn.1000-436x.2018032/), original bilingual title/abstract | Both explicitly pair GAN base wording. These translation sources do not add industrial-operation definitions, certify all named variants or make every complete adversarial pipeline unsupervised. Keep the meaning of generated object and discriminator target explicit. |
 | multiscale convolution / 多尺度卷积; receptive field / 感受野 | [Journal of Computer Applications, 10.11772/j.issn.1001-9081.2023020185](https://www.joca.cn/CN/abstract/abstract26521.shtml), bilingual title and abstracts; [Acta Automatica Sinica c190376](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190376?viewType=HTML), bilingual title, keywords and Fig.4 caption | The first directly pairs the convolution name; the second pairs receptive-field wording in its named enhanced variant. Only these base translations are supported. These adjacent computing/vision pages add no process-industry definition IDs and do not admit complete named blocks or validate a physical frequency interpretation. The AAS accessible page supplied captions, not the full body definition. |
@@ -421,6 +424,8 @@ assignment mechanism, and paired base MoE or cross-attention records do not admi
 all source-specific variants. Modified adaptation/distillation names and other
 candidate definitions still require their own completed records. This is a limit of this
 ledger, not a claim that these methods occur only once in the field.
+
+In particular, the current P31/P74 checks do not complete a pruning-operation pair: P31's inspected adaptive-degree method is not pruning, and P74's selective weighting preserves its represented set. P45's multihead/multibranch conversion remains an attributed operation, not completed general admission of every reparameterization family. Search titles, related-work mentions and translation matches do not close those gaps. Accurate author-defined or definition-based descriptions may still be used without inventing a field-wide convention.
 
 `Cross-stage feature fusion`, `process-topology-guided integration` and similar
 compositional phrases above describe an operation only when the manuscript

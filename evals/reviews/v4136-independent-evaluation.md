@@ -1,0 +1,16 @@
+# Selection, Execution Shape And Name Evidence Evaluation
+
+Date: 2026-10-24. Version: 4.1.36.
+
+One fresh task context handled four frozen-source fictional requests. The maintainer reviewed its actual answers. There was no no-Skill baseline, independent second grader, controlled writing-performance comparison, full-bank terminology certification or scientific experiment reproduction. This check follows focused reading of P74, P31 and P45; it does not admit a new generic module family. The [actual response](../responses/v4136-independent.md) is retained.
+
+| Case | Observed response | Maintainer assessment |
+|---|---|---|
+| M4136-A | A 70-word overview and 29-word contribution candidate follow the class query through aggregation and concatenation to a retained 9x16 representation and classification. | Pass. Query reduction is not misreported as token pruning, sensor removal or full-model acceleration. Scientific limits stay in the author note, not an avoidable negative closing in the reusable prose. |
+| M4136-B | Preserves both dense 8-channel zeroing and actual 4-channel structural removal; the 33-word local replacement retains all six physical sensors. | Pass. Accurate removal/pruning wording is allowed despite an incomplete shared admission ledger. Shape-only claims do not acquire a mandatory hardware experiment; measured latency or task benefit is not invented. |
+| M4136-C | Gives the exact affine sum x+4 before shared ReLU and the counterexample 0.5 versus 0 for the two activation/averaging orders. | Pass. A genuine compatible merge is retained, but arbitrary activated heads and batch-dependent normalization are not certified. Simple arithmetic was independently checked; it is not a research experiment. |
+| M4136-D | Separates incomplete English operation evidence, attributed SPM/SCM/SCA/conversion names, the base Chinese translation and a legitimate new author-defined name. | Pass. Background mentions, inaccessible pages and translation evidence do not complete two industrial definitions; pending status is not evidence that the established word is wrong or rare. |
+
+The respondent disclosed preset historical summaries and reported no active task-history retrieval or use. This was a fresh task context, not a provably memory-blank model. It reported current Skill reading, generic bootstrap and a read-only platform quota check. Its broad phrase about no networking is understood as no literature/web browsing, not absence of all service interaction. No account values were printed. Public response normalization changes only private local reference links, line-end spaces and terminal blank lines; the raw record remains private. The first staged whitespace check caught three Markdown hard-break spaces in this response. They were normalized before publication, without changing its text or the tested instructions.
+
+The final 102-file instruction/dependency hash set was unchanged through the check. Whitespace token counts were independently verified. Partial source reading and successful fictional controls do not certify all formulas, resource measurements, manuscript quality or publication acceptance. No manuscript, Overleaf source, real figure, dataset or experimental result was edited.

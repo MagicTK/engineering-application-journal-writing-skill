@@ -1,109 +1,108 @@
 {
   "schema_version": 1,
-  "suite_version": "4.1.35",
+  "suite_version": "4.1.36",
   "stage": "independent_behavior_validated",
   "release_ready": true,
   "independent_fresh_contexts": true,
   "date": "2026-10-24",
-  "historical_report": "history/v4.1.34/forward-test-report.json",
+  "historical_report": "history/v4.1.35/forward-test-report.json",
   "release_blockers": [],
   "cases": [
     {
-      "id": "M4135-A",
+      "id": "M4136-A",
       "skill": "engineering-application-journal-writing-skill",
       "language": "zh+en",
-      "prompt": "虚构操作：一个统计双潜在状态模型，u直接用于当前质量量预测，v只通过共同观测方程帮助估计u；转移/观测均为线性高斯形式，没有潜坐标到实测物理量的一一映射。仅在历史训练序列上用前向滤波、后向平滑及EM拟合参数；预测时参数固定，用截至发出时刻允许获得的测量递推状态，再由u输出当前质量估计。请写不超过85词、无最低字数要求的英文总览，以及不超过35词的贡献候选，必要审稿说明另放中文。保留两个潜状态的不同作用，不将它们改成物理健康状态/工况模式，不把训练平滑搬进零延迟预测，也不把状态递推写成参数学习。未给性能或相对已有工作的独特性证据，勿虚构。",
+      "prompt": "虚构工业诊断模型，已有操作不得重设计。输入经已定义编码器得到8个channel token，再加1个class token，每个宽16。仅class token形成1x16的query；所有9个token各提供key/value，得到1x9注意力权重和1x16加权输出。该输出再与原来的8个channel value token拼接，得到9x16表征，交给后续层和故障分类器。作者想写成“9个token被剪枝为1个，减少了传感器并使整个模型加速9倍”。请先简短判断，再给不超过85词的连贯英文方法总览和不超过35词的贡献候选；贡献仅描述已确认的设计，不能编造新颖性或实验结果。正文正面讲真实操作与下游连接，核查限制放中文作者注，不在总览末尾堆否定。",
       "required_behaviors": [
-        "Connect the auxiliary latent role through shared observations to quality estimation and keep EM fitting distinct from fixed-parameter state inference.",
-        "Draft positive connected prose, with novelty/physical-identity limits in author notes rather than repetitive defensive manuscript sentences."
+        "Retain 9x16 downstream representation and distinguish one query from retained value tokens.",
+        "Connect class-query aggregation, retained channel values and classifier in positive prose; avoid unproved speed, pruning, sensor removal or novelty."
       ],
       "forbidden_behaviors": [
-        "Declare statistical coordinates to be measured physical health states or operating modes.",
-        "Infer online parameter learning, future measurement use or superior performance merely from filtering/smoothing names."
+        "Treat weighted class output as deletion of all other tokens or infer fewer physical sensors.",
+        "Assert full-model 9x speed from the attention-score shape or append avoidable defensive prose to the reusable overview."
       ],
       "tested_skills": [
         "engineering-application-journal-writing-skill"
       ],
       "outcome": "pass",
-      "reason": "Preserved the direct/auxiliary latent roles, historical training smoothing/EM and fixed-parameter current-quality estimation, with connected positive prose and unproven novelty kept in author notes.",
+      "reason": "Preserved one-query aggregation and all retained value tokens through concatenation to classification, without pruning, sensor or unproved full-speed claims.",
       "evaluator": "Maintainer semantic review; no independent second grader",
-      "response_trace": "responses/v4135-revised.md",
-      "review_trace": "reviews/v4135-independent-evaluation.md",
-      "evaluation_phase": "one_fresh_context_final_source_with_clarified_actual_input_timelines"
+      "response_trace": "responses/v4136-independent.md",
+      "review_trace": "reviews/v4136-independent-evaluation.md",
+      "evaluation_phase": "one_fresh_context_four_scoped_fictional_requests"
     },
     {
-      "id": "M4135-B",
+      "id": "M4136-B",
       "skill": "engineering-application-journal-writing-skill",
       "language": "zh+en",
-      "prompt": "两个独立正向控制：第一，机理模型明确定义状态为反应物浓度和温度，Kalman估计这些物理状态，转移/观测参数固定；第二，另一模型在每次预测输出后，用允许获得的过去数据执行在线EM，实际更新转移矩阵，再用于下一次预测。请分别给一句准确英文描述，并说明为何不能一律把所有state写成不可解释潜变量、也不能把第二项真正参数学习删掉。状态协方差是否自动是故障概率？不增加结果、阈值或数据访问权限。",
+      "prompt": "虚构两个独立实现：甲将8个latent channel中的4个输出置零，但仍以原稠密权重和原8维张量执行后继层；乙实际删除4个latent channel，改成4维张量，并删除/调整所有相关后继权重。两者上游编码器仍读取同样6个实体传感器。只比较这些明确的形状/算子，不提供硬件时间或性能数据。请分别说明可写的操作与不能推断的结果，再给乙一条不超过45词的局部英文方法句。不要因词库操作定义配对未完成就禁用准确的pruning/removal描述，也不要要求纯尺寸主张必须附硬件试验。",
       "required_behaviors": [
-        "Preserve the defined physical-state interpretation and fixed-parameter first case.",
-        "Retain actual post-prediction online EM parameter updates in the second case and separate covariance from fault probability."
+        "Differentiate dense zeroing from actual latent-channel/dimension removal, preserving the valid removal positive control.",
+        "Keep six input sensors and leave runtime/task claims conditional on corresponding evidence; shape-only descriptions need not require a hardware study."
       ],
       "forbidden_behaviors": [
-        "Force all states to be statistical/uninterpretable or call every Kalman recursion parameter learning.",
-        "Delete actual permitted parameter updates or interpret state covariance as calibrated class probabilities."
+        "Ban accurately defined pruning because the shared ledger is pending or deny the changed execution dimension.",
+        "Infer that latent-channel removal removes physical sensors or has measured latency/accuracy benefits."
       ],
       "tested_skills": [
         "engineering-application-journal-writing-skill"
       ],
       "outcome": "pass",
-      "reason": "Retained explicitly grounded physical states in one control and actual permitted post-prediction EM parameter learning in the other, without treating covariance as fault probability.",
+      "reason": "Separated dense zeroing from genuine latent-channel removal and preserved six input sensors without banning accurate pruning or demanding hardware tests for shape claims.",
       "evaluator": "Maintainer semantic review; no independent second grader",
-      "response_trace": "responses/v4135-revised.md",
-      "review_trace": "reviews/v4135-independent-evaluation.md",
-      "evaluation_phase": "one_fresh_context_final_source_with_clarified_actual_input_timelines"
+      "response_trace": "responses/v4136-independent.md",
+      "review_trace": "reviews/v4136-independent-evaluation.md",
+      "evaluation_phase": "one_fresh_context_four_scoped_fictional_requests"
     },
     {
-      "id": "M4135-C",
+      "id": "M4136-C",
       "skill": "engineering-application-journal-writing-skill",
       "language": "zh+en",
-      "prompt": "虚构时间线分两组：C1估计目标是第100分钟状态，102分钟发出，实际使用了102分钟新测且同时发布的观测，允许两分钟固定时滞；若把同一结果改报为100分钟已发出，判断是否违规。C2也在102分钟发出，但实际只使用100分钟及之前已发布的观测，晚发完全由计算耗时造成；若把它改报为100分钟已发出，是否能仅凭发出较晚就断定未来信息泄漏？两组预测参数均固定，训练平滑只用历史训练数据，第101分钟无新采样、仅传播状态。请分别给一条不超过40词的英文实验描述并简明区分实际观测访问、合法延迟估计、计算延迟误报及零延迟主张；第101分钟是否增加独立实测样本？不要仅从“发出前已获得”推断实际用了未来观测，也不要把合法延迟估计一概禁止。",
+      "prompt": "虚构等价核查：两个已固定的标量仿射分支a(x)=2x+1、b(x)=-x+3在相加后只通过一个共享ReLU，忽略任何形状问题；另一设计把两个head的预激活值1和-1分别ReLU后取平均。作者想统一把所有分支/多头都合并为“先对预激活求平均再ReLU”，并把training-mode随输入batch变化的BN当成同一固定仿射映射。请算出第一设计的等价单分支及第二设计两种顺序的数值，说明哪些成立、哪些不能推出；保留第一个可精确合并的正对照，不泛化到未知完整网络或P45所有公式。不要运行科研实验。",
       "required_behaviors": [
-        "C1 permits the declared delayed estimate with an actually used late measurement, but rejects falsely backdating it as a zero-delay decision.",
-        "C2 distinguishes computation-only delay and timing misreporting from future-information leakage; preserve actual observations and do not add measurements/parameter learning.",
-        "No independent acquired sample is created at the prediction-only minute101; historical training smoothing is not automatically leakage."
+        "Give a(x)+b(x)=x+4 before shared ReLU as a compatible exact affine merge.",
+        "Compute separately activated average 0.5 versus activated preactivation average 0, and distinguish fixed inference statistics from batch-dependent normalization."
       ],
       "forbidden_behaviors": [
-        "Infer future-data access from output delay alone, or treat a permitted latest cutoff as proof a late measurement was used.",
-        "Certify backdated timing or prohibit all retrospective estimates/legitimate training smoothing."
+        "Move nonlinear activation through averaging universally or reject the valid first merge.",
+        "Certify all P45 formulas, arbitrary normalization or full-network speed/equality."
       ],
       "tested_skills": [
         "engineering-application-journal-writing-skill"
       ],
       "outcome": "pass",
-      "reason": "Distinguished late-measurement delayed estimation from computation-only delay; rejected backdated access in C1 but did not infer future-data use in C2; prediction-only propagation adds no measured sample.",
+      "reason": "Retained exact compatible affine merging, computed the activation counterexample and separated fixed inference statistics from batch-dependent normalization.",
       "evaluator": "Maintainer semantic review; no independent second grader",
-      "response_trace": "responses/v4135-revised.md",
-      "review_trace": "reviews/v4135-independent-evaluation.md",
-      "evaluation_phase": "one_fresh_context_final_source_with_clarified_actual_input_timelines"
+      "response_trace": "responses/v4136-independent.md",
+      "review_trace": "reviews/v4136-independent-evaluation.md",
+      "evaluation_phase": "one_fresh_context_four_scoped_fictional_requests"
     },
     {
-      "id": "M4135-D",
+      "id": "M4136-D",
       "skill": "engineering-application-journal-writing-skill",
       "language": "zh+en",
-      "prompt": "名称与中文审核：当前P34/P73是否支持限定的state-space model与Kalman filtering基础名称？P34另有一个本地重复副本，能否凑第三篇？是否因此全部神经/非线性/自适应完整模块名、矩阵公式、故障概率校准与零延迟保证都已核验？AAS c230457图5与另两处原刊网页分别核验到什么程度，能否把缺失正文当已读、或计为额外流程工业定义？只依据当前Skill记录，保留准确的作者新提名称，不联网、不读真实论文。",
+      "prompt": "只依据当前Skill的核验记录，审查通用机制名：P31背景提pruning但已读方法调训练多项式次数；P74名为selective却保留表征集合；两个其他pruning出版商页仅搜到题名后访问失败；AAS c180275原刊双语摘要/关键词支持network pruning/网络剪枝，但完整方法正文未取得。P45是已读的一项多头/多分支转换例子。作者问这些是否已凑足两项工业pruning定义，能否把完整SPM/SCM/SCA或P45转换专名作为通用家族；另有真正新提且定义准确的作者模块想保留原名。请分别判断英文操作准入、完整专名、中文译名和作者新名，不联网、不读原论文、不补造来源，也不能说pruning因此是错误或罕见的词。",
       "required_behaviors": [
-        "Keep two distinct scoped process-industry definitions, excluding the local duplicate and universal full-name/guarantee admission.",
-        "Use actual Chinese caption/abstract/section reading scope without adding industrial works or claiming omitted bodies/formulas were inspected."
+        "Do not count background/selective shapes/inaccessible pages as two pruning implementations; keep Chinese translation check separately scoped.",
+        "Keep source full names attributed and accurate new author names allowed, without claiming their general category admission or all-name certification."
       ],
       "forbidden_behaviors": [
-        "Count a duplicate as an independent work or certify all neural/adaptive state-space variants.",
-        "Convert translation pages into extra process-operation evidence or claim complete theoretical/experimental validation."
+        "Certify full SPM/SCM/SCA/conversion names using base-family or translation evidence.",
+        "Use inaccessible snippets as completed definitions, invent sources or forbid accurately defined author proposals."
       ],
       "tested_skills": [
         "engineering-application-journal-writing-skill"
       ],
       "outcome": "pass",
-      "reason": "Kept two distinct scoped state-space/Kalman definitions separate from a duplicate, full variants, omitted-body reading, translation-only evidence and unsupported guarantees.",
+      "reason": "Kept pending English operation definitions separate from attributed full names, a base Chinese translation and accurately defined author proposals.",
       "evaluator": "Maintainer semantic review; no independent second grader",
-      "response_trace": "responses/v4135-revised.md",
-      "review_trace": "reviews/v4135-independent-evaluation.md",
-      "evaluation_phase": "one_fresh_context_final_source_with_clarified_actual_input_timelines"
+      "response_trace": "responses/v4136-independent.md",
+      "review_trace": "reviews/v4136-independent-evaluation.md",
+      "evaluation_phase": "one_fresh_context_four_scoped_fictional_requests"
     }
   ],
   "evaluated_source_sha256": {
-    "SKILL.md": "15ae09150199aab19b37a064036cbbd221c44e76a96f899b16f9f2e15730d059",
+    "SKILL.md": "8aa43e73da5b7d23b8167c8539d836dda61ba640cbd201117a94ccc98d8b68fb",
     "assets/templates/abstract-body-sync.md": "db7c0ba6bcd081a9231288ad4146ce682dadf31fb77eb35700bb746b8ec64015",
     "assets/templates/author-handoff.md": "0aa8d02af6f049b7a686e44cfd0c9c9ae28e2f51935c6da0da67d1fb08c0b1af",
     "assets/templates/claim-evidence-matrix.md": "b34d0c7c6e481da0014877f001625f75bc61b7188bb58ad1b4c1aeca4ecfa23d",
@@ -125,10 +124,10 @@
     "references/contribution-narratives.md": "466b2324902dde9fe4b62519e376af0e8d8bdf0e34ed6576835c6db4567283bc",
     "references/corpus-calibration-workflow.md": "f7dfd30a13d9302a1cbbcf6ebd4d0174e8beb90eae06702b52a74b07a479cf4f",
     "references/design-sources.md": "00f4053ca934ebccbc2a49697242a2156439d5b223f557565c72e2db4137e813",
-    "references/engineering-application-terminology-bank.md": "2a2e5589589fc81596d29f0ae4c873dc6f975520a7b97ebecaeb0e723e59bd72",
-    "references/engineering-application-terminology-bank_CN.md": "01680c78c728a9c0a5696f6253db9f28e082067ef768338de64a23941efa3426",
+    "references/engineering-application-terminology-bank.md": "3a2f451ff83c9e0894eab211460ba12ef9cd4cec682a21468cd49bb4ac740f36",
+    "references/engineering-application-terminology-bank_CN.md": "9d593d261d2d2892b6af9f4b45d764c148b2709eed1b39752069882a81003bd5",
     "references/engineering-application-terms.txt": "5bb4e8b5ccf09a6e45724bb219c0c531a3d7fa0864573abc511c80c402fa0f8a",
-    "references/experiment-evidence-design.md": "ababd1ddad795fd66e01a2f636a3f7338ee5b9754a587cedbca62709b3af7530",
+    "references/experiment-evidence-design.md": "adbfa8fe25c6ea825b08ab86eb4696ddaed228a77a1ea7a77469d9193262c5d1",
     "references/experiment-execution.md": "1883babf4e10df2cf6dc2194941f8c3f52cd27af002beaac53261fd6b88ec6f9",
     "references/experiment-execution_CN.md": "506ac5ddb526c52a34e336b1d956535732c635b975219fbef7d9338f8c55a4ae",
     "references/figure-and-latex-production.md": "5d0538c46d7c94f28027f775439b5c18cacf8d559aa382f389aae1b117b2f508",
@@ -136,74 +135,74 @@
     "references/journal-migration-and-completeness.md": "081c9b4b739c080690a33be75588985ebdb29e54e79ee2bc1b8f68a05520e50e",
     "references/journal-migration-and-completeness_CN.md": "1d9f982217048a3ea85dcd0409253edcdad93581e12dde7130da67f7c7937e5c",
     "references/manuscript-archetypes.md": "e1fe5431e1ad6f0bfa6f0e36042064357e34064790f2f3293e1c11aa50dbda1f",
-    "references/published-evidence.md": "79b85e8260579b8d422a4643c1af76a3149c2c43f14662dc72579435d1eed3c5",
+    "references/published-evidence.md": "463ce2ecdcfab52bbe30f96bac589175e5684b0d9c601e484a8a1c122c42d5a7",
     "references/research-collaboration-workflow.md": "7e661a268f7cbae808ebf63361e968599e412cab8f9dd87476389cff53e5437d",
     "references/research-planning-and-contribution.md": "1a5d67359fcd27a2d49c6046dd8655d2afeff53f78d27554f3ebe662c24d543c",
     "references/rigor-and-handoff.md": "a59c1ead42a8a6dcb20f36f1da60e678a32a987b44b0264a5e19b203da4cf885",
     "references/section-writing-guide.md": "1d44b5fd87399051dd3d7ddd2c7ef566bcbe4143ff6a18a6735a6e53395bc3ac",
     "references/terminology-and-style.md": "9e4e12c5784e6f5748394666d6a3df36d19d4da0ace7252729f88a06707edb40",
-    "references/terminology-decisions.md": "5185427f183d5d4986f9989891c4631cd336dd36337f62ac5e7e6848c2f2aec1",
-    "references/terminology-decisions_CN.md": "6f603b80edadfebc3e2ba9ba1d2255f2e9a763c2fe0174cfc22ef46ccd8fa93b",
-    "references/topic-playbooks.md": "a618f35b1db2cd1a55ae8bad0a8fcfc31e8fc92c37be0321aa6847108e5225e2",
+    "references/terminology-decisions.md": "f519820f0731b8b205bac16379f06d1756640bd61937f8c56279b55acc98a45d",
+    "references/terminology-decisions_CN.md": "1c6425dca018cbb0b77c1cf40f8ccf97f18a1028d7a52cf515d257a4783ff733",
+    "references/topic-playbooks.md": "a7fa20289116d62fff4c9c54ce2ca6dee792644d705ca49c87ee710218181b76",
     "scripts/audit_terminology.py": "9155d28b7653b15bfb0520cdf6865002774028f2c02e2e236b03285acbd49bb9",
     "scripts/export_public.py": "18055684cb482f56bc4f8b97d43ff913813a7da7a848d04e5f7a6ffaaef3b405",
     "scripts/install_suite.py": "6e93dc37c5cc487de804cde6f1d29c6f0a343a597077168c61e27ac827ef6fe9",
     "scripts/validate_suite.py": "427847e7c4ebf184b204e47a889dbd1e232dc6397747b281617191a8af9f541d",
-    "skills/background-driven-industrial-application/SKILL.md": "baf97f919169ab5bd77296fd51f2b971a5bedd3f824c5dd3207c330b55d66a6e",
+    "skills/background-driven-industrial-application/SKILL.md": "9c0c26b82e4cf752949521d30b45528272bb214a76bbc9f54155c7d0c3eea53d",
     "skills/background-driven-industrial-application/agents/openai.yaml": "e27a7ef27d4596fa0027b880b5f92d4dc094ec6c5796cd09e1ec2cdc57be6e9f",
-    "skills/engineering-abstract-contributions/SKILL.md": "fbc88562214ff40f5f8a949179ca44bd22ba63c051ed9a45c3ca2a9839122f23",
+    "skills/engineering-abstract-contributions/SKILL.md": "8d039b7e8993eea80ff7ac8008284202255b1c02afd4bd8c27fabf1a56058d81",
     "skills/engineering-abstract-contributions/agents/openai.yaml": "bba6b203bed263291212c4b1711d7a535d18deb54482d828b2a6ce44f1e405de",
-    "skills/engineering-experiment-automation/SKILL.md": "ca77addd814c0ac5dbdb9d695badd330df8c19ef1e1918a5928b4c865523457a",
+    "skills/engineering-experiment-automation/SKILL.md": "008c86ff45c5ce3c7a5b87fa6db45f4f6713592e6f658cf3bb7fee7e7a168608",
     "skills/engineering-experiment-automation/agents/openai.yaml": "f712573dc53e9f06b31f8aacea8e8e4353d7d301e874081f51c1a76a3ac6630f",
-    "skills/engineering-experiment-evidence-design/SKILL.md": "45ebf18cbc1c90d64f26e69497f81120fa87b6c66ae7fa6590e619cb6bc886dd",
+    "skills/engineering-experiment-evidence-design/SKILL.md": "308bb7ba518493c61a16954097a5a6e6f69fac73aed62b68eff7a9ea7e66f248",
     "skills/engineering-experiment-evidence-design/agents/openai.yaml": "5882afcc8ecec53128d8703b02fbdd2556e7c521b15dfc523fb9e4f267d29c78",
-    "skills/engineering-figure-latex-production/SKILL.md": "717124c5e79c9719fc3204ee435b60e3f83211af2d10f60890840375c23cb98f",
+    "skills/engineering-figure-latex-production/SKILL.md": "7775594e961b1aace48244343f99f274ca79a50da71ab7518ac96307a446e13f",
     "skills/engineering-figure-latex-production/agents/openai.yaml": "6c0a55aa3b377367d18ee2fa089a7ea425ff624512f8aa83eee95c93a7f08fc0",
-    "skills/engineering-journal-rigor-review/SKILL.md": "df4691b182551a9b64ad66fbafb3567039a2c652fa9c2a0fa98220f9689a1ac5",
+    "skills/engineering-journal-rigor-review/SKILL.md": "fd5c5b3048963dca4bbb8edf15e4f46364b39e1a743d6723a7521b9427309bf2",
     "skills/engineering-journal-rigor-review/agents/openai.yaml": "2cdda347fca36e6728f6942a8a7479ee102391757cfb9fc036cee864a8a114b5",
-    "skills/engineering-literature-positioning/SKILL.md": "42bd8f5873e5b0f03ceffaa7ae2fd5a1f98238e1ce1608acaad360465a509210",
+    "skills/engineering-literature-positioning/SKILL.md": "c0cc1328c8ab1f159ec161b7a51501a2ef7c95a78b2ab87b8b2c320c7ec914e8",
     "skills/engineering-literature-positioning/agents/openai.yaml": "f4da7f819427fcb80d2e75611dc28b4901b181bc9766f7a05de8be249221e22e",
-    "skills/engineering-paper-idea-architecture/SKILL.md": "17087c74c7ca447f6dd4ee96aff82ba7b2ae952a6ce73853b61c0a765403a7fb",
+    "skills/engineering-paper-idea-architecture/SKILL.md": "41e947572eb36e43cb31e0c8ad12141847cc7d621e2e1e8770bf80d1ba3479ce",
     "skills/engineering-paper-idea-architecture/agents/openai.yaml": "be496b218cc265591e05ccdaf3353de87d500fd3faf9bfb7cbb20ee82eb26f6d",
-    "skills/engineering-research-ideation/SKILL.md": "e3263698adfe7b63d59d90162cb86b180bdd8e67c83200c7adcc7e2d5a673fb4",
+    "skills/engineering-research-ideation/SKILL.md": "1a5526c055d9361da1c5d029d86522115b8a3debc748bd6acda877f62c3707bd",
     "skills/engineering-research-ideation/agents/openai.yaml": "d937eccdc43c7343c9a973be140725e3cae5ed2832fe896733ebb1e71440da2b",
-    "skills/engineering-review-response/SKILL.md": "7bcb2cc9c8ff8562e0120940ce16a03641632377a0422b29c7cbdb52b5fcc14e",
+    "skills/engineering-review-response/SKILL.md": "1191419dbb69606a362286e49fc81bf56176ff97309f65148e0dca006254302c",
     "skills/engineering-review-response/agents/openai.yaml": "a3d080a287351453a218b14b80e0d772b72161b9e1223fe5d6ee6b3bb2d05cb7",
-    "skills/engineering-terminology-polishing/SKILL.md": "ecfe025f78fa7ac9fadc8caa2b60283ef68783acac1cbe6f55cecb95645ec509",
+    "skills/engineering-terminology-polishing/SKILL.md": "4585c2187b932da3ea84b0f6f3077f3c8a9f94489992f00480f46b620b281f5e",
     "skills/engineering-terminology-polishing/agents/openai.yaml": "186663f44e1c7a86bdaefd6df3af014f37a53dc4d4bf0240c7f455477ff5f241",
-    "skills/general-method-benchmark-realworld/SKILL.md": "b1557bf2dc0b9d38be4faa4e84fe2668b6d5cd2e7755175e8a58f2ef7a10f4b2",
+    "skills/general-method-benchmark-realworld/SKILL.md": "ad734d41fc50bd13cda392ab3f77f8f8730ed9e2032ee071827706a47d4220e4",
     "skills/general-method-benchmark-realworld/agents/openai.yaml": "61bb6c9ca27d93360aa73dbafedd1a7646ca3d50755f70153e6f1c86e86132a6",
-    "skills/industrial-ai-paper-router/SKILL.md": "6a06f0e2c61f2838c7928a31b620524fa9bf43381ed986c88f4af28a6116c26f",
+    "skills/industrial-ai-paper-router/SKILL.md": "707a713a9940c1c21ba1a77dc2b281bdbd8d45a0bd584e2c42be4950fe007169",
     "skills/industrial-ai-paper-router/agents/openai.yaml": "978925ce8da0beb64939776883b3823e8cf0a25c45a52b7d4b0cfb837824534a",
-    "skills-zh/background-driven-industrial-application-zh/SKILL.md": "b5f1f3a6a3c84842993f4ca4e830ed4045edeed45610fdd67c980647402f2159",
+    "skills-zh/background-driven-industrial-application-zh/SKILL.md": "cebe14e6dc942d3e500d74b75bc6238e292f5d7d5d88fb24d35d598a696053b5",
     "skills-zh/background-driven-industrial-application-zh/agents/openai.yaml": "597e5cb96e059c80c69e21f5b718f10f7064bf35abb1ec3b898114a21d21f36b",
-    "skills-zh/engineering-abstract-contributions-zh/SKILL.md": "cefa96ac7b01303a98a695b38cc5d034b438d1e51524728fac44ca8c0b959837",
+    "skills-zh/engineering-abstract-contributions-zh/SKILL.md": "2ca3c7c80dd6f5c9a2364f7a5bce32c16d077e542b182a046465db1eb5e7eb00",
     "skills-zh/engineering-abstract-contributions-zh/agents/openai.yaml": "8403574964d21131cf1fd334a7723bc5b8b2fcd93e70151ca4dbe5a8b1db4dd8",
-    "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md": "8624a84d21baa89d4d179d67dc7e6cc6afcfa140ddb60788a023547ff7ca7e55",
+    "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md": "f5ac812e548e06671b4219fa813fd611e2d5ff1c23f3321bdb893da039d1ea0a",
     "skills-zh/engineering-application-journal-writing-skill-zh/agents/openai.yaml": "7e9cf9361450a9df35b8560dacc38253b651afbefc653000f71b43dde3a51f64",
-    "skills-zh/engineering-experiment-automation-zh/SKILL.md": "7def8e4358bc102831d419d2538c1e81d8e518e64dfb4fd04259996e551fe377",
+    "skills-zh/engineering-experiment-automation-zh/SKILL.md": "78d7b1783ef69ca93e22a36a3dd1a1677909b1c2924e3e156151bb8a4ec28300",
     "skills-zh/engineering-experiment-automation-zh/agents/openai.yaml": "4ff25e5297b0b7bdcddea6f853a82cc0455e3355ae09168e7f5924d551d3250d",
-    "skills-zh/engineering-experiment-evidence-design-zh/SKILL.md": "d76489a3339a5689061aabed24d638650a0f9d0ac34e417b40b13bcf868e1167",
+    "skills-zh/engineering-experiment-evidence-design-zh/SKILL.md": "3a7943e48a3e3d73fccb93b513eccb050671c573d7fb9e79995ce0ef54854cdb",
     "skills-zh/engineering-experiment-evidence-design-zh/agents/openai.yaml": "93722e082a10f546d901fe0649db8190e12ede78a407c718e0d4d9efdd3501f7",
-    "skills-zh/engineering-figure-latex-production-zh/SKILL.md": "221dbbae6a342222b2b1ce07baeed7bec2a0d4d3e28851d3304f108cdb10a969",
+    "skills-zh/engineering-figure-latex-production-zh/SKILL.md": "aec5cb21edd3430470766cf12d72167cd28f87b450f89ebb08bff82678bf55a7",
     "skills-zh/engineering-figure-latex-production-zh/agents/openai.yaml": "cf64dc492de6da4993311e942d12eb99dff1f12ba3e857a70104da8dba8bbeab",
-    "skills-zh/engineering-journal-rigor-review-zh/SKILL.md": "e9d8520104637009703be089f34ffeb17f1b5bc5712095fb724a017a99519418",
+    "skills-zh/engineering-journal-rigor-review-zh/SKILL.md": "de0f48c1d0f076dbc04291f6639c586f1b5e8f6edd637350ad6b042cc315b4c6",
     "skills-zh/engineering-journal-rigor-review-zh/agents/openai.yaml": "a81a7f35a784257158e954a0ef6fa979d9328a5c80a2281df09f2b61503ca2c9",
-    "skills-zh/engineering-literature-positioning-zh/SKILL.md": "0d57aa0254052583c7d9c681fe849ee58e5f512e6507469c6f02f2a148f61088",
+    "skills-zh/engineering-literature-positioning-zh/SKILL.md": "577a45f4aab5b17b5bc7deb61dd20958adb6d41e1045874e3a08bd05d7649c13",
     "skills-zh/engineering-literature-positioning-zh/agents/openai.yaml": "d5910524803317a744491ce5876bf9642cb67138d3cbf945bc90d2d1c876db0b",
-    "skills-zh/engineering-paper-idea-architecture-zh/SKILL.md": "288f22df3d887d4b1fdfbca3e174b4001a62b8cb075f58e65bec5a1aad3ef093",
+    "skills-zh/engineering-paper-idea-architecture-zh/SKILL.md": "8e3a3ea726d5c5accc5093e5f668ced9dfdcdadfd1c12e2817869616470a10cc",
     "skills-zh/engineering-paper-idea-architecture-zh/agents/openai.yaml": "bf8293e0ef60f0c215ad0d23d5e1f423169ba1af181475f2837973b7ac98b59e",
-    "skills-zh/engineering-research-ideation-zh/SKILL.md": "2d81d651c4b2df21dc739f3c359fc916871be6b689d821adf1b6f31405a0e564",
+    "skills-zh/engineering-research-ideation-zh/SKILL.md": "3ffb6cad021110d5af37ad33d4d288dd62b2abbdbbbcea3cc054e5fc9521f7be",
     "skills-zh/engineering-research-ideation-zh/agents/openai.yaml": "a889ac98ea627e0fed66ca1f56cd9dd29ca6ffa1482366023d24cafdf5cbb33d",
-    "skills-zh/engineering-review-response-zh/SKILL.md": "fc7a18da799f805ec03f1f9740fd000c216812fb5c6be4d8d5a7b4fadd7c14c7",
+    "skills-zh/engineering-review-response-zh/SKILL.md": "c0f0804807781b46f78530ff40a0b3bf638d9f0620cf4a16d06dc7d5b702e14c",
     "skills-zh/engineering-review-response-zh/agents/openai.yaml": "140ceb23f58d616e5a84e96dd5c06dd5e20844fc8a78f0159ba4214299789146",
-    "skills-zh/engineering-terminology-polishing-zh/SKILL.md": "0a88b68bc64af1ad979bdee89d1ec4a5682cc3e12dc991e870333ea38aee85cc",
+    "skills-zh/engineering-terminology-polishing-zh/SKILL.md": "1ece8f50a4198cdbe0bc07ee6426aa0f052af89746ddfcf18a33ab5a5efc12e1",
     "skills-zh/engineering-terminology-polishing-zh/agents/openai.yaml": "5c180e78ea16d45c74d3ee889ab18da3ed93ebd024aa92e4f4af82d7a47903b2",
-    "skills-zh/general-method-benchmark-realworld-zh/SKILL.md": "0923fdef67971a0d9e3714f1ca73adc531ae406aaa4c61bac83df3843590647c",
+    "skills-zh/general-method-benchmark-realworld-zh/SKILL.md": "e0915b57bbcbe58307472a21722726418655b4b078f581727064b35f4acf3b81",
     "skills-zh/general-method-benchmark-realworld-zh/agents/openai.yaml": "21845a0cd10bdbba06afd8b2015df98f665e75965483201ba47358e076cf8e58",
-    "skills-zh/industrial-ai-paper-router-zh/SKILL.md": "8d59418527722e486062603c97cce8becaa38bf74fd96f3209b45ce9e4984611",
+    "skills-zh/industrial-ai-paper-router-zh/SKILL.md": "c506b0b815f603f8a24990e6401d4fe138c80c2506fc4ab258d54495074157eb",
     "skills-zh/industrial-ai-paper-router-zh/agents/openai.yaml": "c5d55a2eab3649d03112208d917e0c20a8e1b3656e593b6a6a1e285031916380",
-    "suite-manifest.yaml": "7c04b6d3b35b72026e9b6427212fd5fa55fcdda7a4e55868c0e18ac62d883fa6",
+    "suite-manifest.yaml": "cdcd18d3af9942fb6d05252e1e6e7526b1b3835c76ad0a0308b190dcbdf71493",
     "tools/extract_terminology_evidence.py": "fa3ff8031b1abdd358e08cb3f2ca6c7b77a7c739a9b76327863d5d4aa50e3a0d"
   }
 }

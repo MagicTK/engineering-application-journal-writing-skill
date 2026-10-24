@@ -85,6 +85,8 @@
 
 优先说明具体操作，避免笼统的 `information exchange`；若确实描述已定义实体之间的通信或交换，该词可以成立。
 
+选择重要性不必删除表征对象。P74 p.4明确保留patch模块输出形状，p.5式(9)-(10)用一个class查询聚合channel值，再保留其他值token构成输出。完整SPM/SCM/SCA名称仍归属来源，不凑成token/channel剪枝的操作定义，也不证明需要更少实体传感器。
+
 ## 六、多工序、知识与案例
 
 stage-wise feature extraction、stage-specific measurements、inter-stage relationships、cross-stage feature fusion、process-topology-guided integration 可按实际对象作条件性描述，不把这些组合搭配自动当作已有通用模块名。spatial/spatio-temporal 要说明所指结构与时间轴，不限于物理空间：例如 P11 在卷积语境使用 spatial，但这种模型用法本身不证明变量间存在物理邻近或工艺关系。当前研究若仅建模变量关系，可直接写 inter-variable relationships，避免添加未经支持的空间解释。
@@ -182,6 +184,7 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 | 中英对应 | 在线原始来源及已读位置 | 使用边界 |
 |---|---|---|
 | soft sensing / soft sensor modeling / 软测量、软测量建模 | [自动化学报c210035](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c210035)，原始双语题名；[信息与控制2020.9311](https://xk.sia.cn/article/doi/10.13976/j.cnki.xk.2020.9311?viewType=HTML)，原始双语题名及摘要 | 两者明确对应soft-sensor建模与软测量，后者另描述难测变量估计；只核实模型任务译法，不认证inferential、virtual、primary、secondary的所有中文译名及来源性能结论。译名网页不增加工程语料ID |
+| network pruning / 网络剪枝（仅译名已核，英文操作配对仍未完成） | [自动化学报c180275](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180275)原始双语摘要及配对关键词 | 仅支持基础译法，可读页有摘要/图注，未提供完整方法正文。该通用模型优化综述不算第二个已读工业剪枝实现，也不准入所有限定名称或认证加速 |
 | state-space model / 状态空间模型；Kalman filter/filtering / 卡尔曼滤波；fixed-lag smoother / 固定时延平滑 | [自动化学报c230457](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c230457?viewType=HTML)图5双语图注；[AAS 2013.00043](https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.00043)双语题名、摘要、关键词；[测绘通报2017.0338](https://html.rhhz.net/CHTB/html/2017-11-6.htm)原始双语题名、摘要、关键词及第1-2节 | 第一处在深度变体中对应状态空间基础词，第二处对应Kalman基础词，第三处区分滤波与延迟平滑。只核实用语，不认证所有线性高斯/神经/时滞完整变体或工业操作。AAS可读图注/摘要不等于完整正文定义，译名页不增加流程研究ID |
 | generative adversarial network / 生成对抗网络；来源变体生成式对抗网络 | [自动化学报c180831](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180831)原始双语题名、摘要及关键词；[通信学报10.11959/j.issn.1000-436x.2018032](https://www.joconline.com.cn/zh/article/doi/10.11959/j.issn.1000-436x.2018032/)原始双语题名及摘要 | 两者明确对应GAN基础词；不增加工业操作定义篇数，不认证所有完整变体，也不把每种完整对抗流程都规定为无监督。被生成对象与判别目标须另明确 |
 | multiscale convolution / 多尺度卷积；receptive field / 感受野 | [计算机应用10.11772/j.issn.1001-9081.2023020185](https://www.joca.cn/CN/abstract/abstract26521.shtml)原始双语题名、摘要；[自动化学报c190376](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190376?viewType=HTML)双语题名、关键词及图4图注 | 前者直接对应多尺度卷积，后者在增强变体中核实感受野译法，仅支持基础词；相邻计算机/视觉网页不增加流程工业定义ID，不准入其完整模块名或认证物理频率含义。AAS可读页面包含图注，未提供完整正文定义 |
