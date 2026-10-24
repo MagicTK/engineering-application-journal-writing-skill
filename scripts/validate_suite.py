@@ -129,6 +129,39 @@ def check_links(path: Path) -> list[str]:
     return issues
 
 
+def check_evidence_counts(root: Path) -> list[str]:
+    """Check current index claims and navigation, not dated historical counts."""
+    index = root / "references/published-evidence.md"
+    if not index.is_file():
+        return []
+    text = index.read_text(encoding="utf-8")
+    if "## Sources /" not in text:
+        return ["published evidence index has no source table"]
+    scope, table = text.split("## Sources /", 1)
+    table = table.split("Some source titles", 1)[0]
+    identifiers = re.findall(r"^\| (P\d{2,}) \|", table, re.M)
+    count = len(set(identifiers))
+    issues: list[str] = []
+    if not count or count != len(identifiers):
+        issues.append("published evidence index needs distinct nonempty source IDs")
+    for pattern in (r"selected (\d+)-paper corpus", r"all (\d+) papers", r"合计\s*(\d+)\s*篇"):
+        for claimed in re.findall(pattern, scope):
+            if int(claimed) != count:
+                issues.append(f"published evidence scope claims {claimed} sources; table has {count}")
+    paths = [root / "README.md", root / "README_CN.md"]
+    paths.extend(root.glob("references/engineering-application-terminology-bank*.md"))
+    for path in paths:
+        if not path.is_file():
+            continue
+        for label, target in re.findall(r"\[([^\]]+)\]\(([^)]+)\)", path.read_text(encoding="utf-8")):
+            if Path(clean_link_target(target)).name != "published-evidence.md":
+                continue
+            match = re.search(r"(\d+)\s*(?:-paper|paper|篇)", label)
+            if match and int(match.group(1)) != count:
+                issues.append(f"{path.relative_to(root)}: evidence link claims {match.group(1)} sources; table has {count}")
+    return issues
+
+
 def validate_eval(
     path: Path, expected_kind: str, known_skills: set[str] | None = None
 ) -> list[str]:
@@ -382,6 +415,8 @@ def validate(root: Path = ROOT) -> list[str]:
                     issues.append(
                         f"evals/forward-test-report.json: {case_id} missing trace {trace}"
                     )
+
+    issues.extend(check_evidence_counts(root))
 
     text_suffixes = {
         ".md", ".yaml", ".yml", ".json", ".py", ".toml", ".txt",

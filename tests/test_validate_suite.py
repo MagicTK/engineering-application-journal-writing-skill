@@ -60,6 +60,47 @@ class SuiteValidatorTests(unittest.TestCase):
                 VALIDATOR.validate(root),
             )
 
+    def test_evidence_count_allows_generic_links_and_history(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "references").mkdir()
+            (root / "references/published-evidence.md").write_text(
+                "A selected 2-paper corpus; not all 2 papers fully read. 合计2篇。\n"
+                "## Sources / 来源\n| P01 | One |\n| P02 | Two |\n"
+                "Some source titles\nHistorical audit used a 1-paper subset.\n"
+            )
+            (root / "README.md").write_text("[published evidence](references/published-evidence.md)")
+            (root / "README_CN.md").write_text("[2 篇文献](references/published-evidence.md)")
+            self.assertEqual([], VALIDATOR.check_evidence_counts(root))
+
+    def test_evidence_count_rejects_stale_bilingual_navigation(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "references").mkdir()
+            (root / "references/published-evidence.md").write_text(
+                "A selected 2-paper corpus.\n## Sources / 来源\n"
+                "| P01 | One |\n| P02 | Two |\nSome source titles\n"
+            )
+            (root / "README.md").write_text("[1-paper index](references/published-evidence.md)")
+            (root / "references/engineering-application-terminology-bank_CN.md").write_text(
+                "[3 篇文献](published-evidence.md)"
+            )
+            issues = VALIDATOR.check_evidence_counts(root)
+            self.assertEqual(2, len(issues))
+            self.assertTrue(all("table has 2" in issue for issue in issues))
+
+    def test_evidence_count_checks_scope_and_duplicate_ids(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "references").mkdir()
+            (root / "references/published-evidence.md").write_text(
+                "A selected 2-paper corpus; 合计2篇。\n## Sources / 来源\n"
+                "| P01 | One |\n| P01 | Copy |\nSome source titles\n"
+            )
+            issues = VALIDATOR.check_evidence_counts(root)
+            self.assertEqual(3, len(issues))
+            self.assertIn("distinct nonempty source IDs", issues[0])
+
     def test_comment_case_has_literal_tex_commands(self) -> None:
         for filename in (
             "v4-behavior-cases.json",
@@ -79,7 +120,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.22", suite["version"])
+        self.assertEqual("4.1.23", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

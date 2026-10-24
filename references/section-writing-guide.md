@@ -375,6 +375,8 @@ Recommended order:
 
 Do not introduce new contributions, experiments, or claims in the Conclusion.
 
+Select facts by their role in the closing argument, not merely because they were verified. Detailed split counts, preprocessing checks and scoring procedures usually belong in Methods or Experiments; repeating the full checklist can displace the principal finding. Retain a condition here when it changes the finding's meaning, such as a required feedback delay, a demonstrated operating range or a measured accuracy-resource trade-off. A decisive number may help; omit neither an unfavorable result nor the evidence needed to interpret it. Connect what the design makes possible to what the evaluation actually establishes, without converting a plausible mechanism into a proven cause.
+
 Close with what is now established, not another module inventory or a list of fashionable methods. Future work is optional unless required by the venue; choose an unresolved condition, why it matters, and the evaluation or capability needed next. A proposed next study is not an achieved benefit. P01 and P11 close without a future-work list, whereas P03 and P25 discuss extensions; these variations support choice, not a mandatory conclusion template. See the [source-reading notes](published-evidence.md).
 
 ## 17. Captions And Cross-References

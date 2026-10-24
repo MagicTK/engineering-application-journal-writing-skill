@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.23 (2026-10-24)
+
+- A whole-passage fictional probe preserved the science but exposed two prose defects: a conclusion replayed experimental setup, and a contribution included internal novelty-classification commentary. Refine the existing contribution and conclusion guides while preserving conditions that materially change a claim.
+- Revisit the linked argument in P17, P30 and P34 rather than adding literature or copying their wording. Keep the current 60-work index distinct from a full-corpus certification.
+- Remove stale duplicated source totals from bilingual navigation and terminology introductions. Check current index totals and numeric navigation labels against distinct source IDs; historical audit counts remain unchanged. No new topic guide, manuscript edit or research experiment.
+
 ## 4.1.22 (2026-10-24)
 
 - Admit the PINN base category through two distinct published chemical-engineering works and an independent Chinese terminology check. Track author versions and shared methodological lineage; complete proposed network names remain attributed.

@@ -4,7 +4,7 @@
 
 This reference supports writing for industrial, control, automation, process,
 manufacturing, and equipment-oriented journals. The current release provides a
-[60-paper published evidence index](published-evidence.md) and
+[published evidence index](published-evidence.md) and
 [context-sensitive decisions](terminology-decisions.md). Earlier private corpus
 frequency counts are omitted because this public package cannot reproduce them.
 Author drafts are not terminology authorities; computer-science channel-strategy
@@ -354,7 +354,7 @@ original semantic summaries, not extracted source passages.
 | physics-informed neural network (PINN) | P59 author version, Section 1 and Section 3.2; P60 author version v2, Section 1 and Section 2: physical constraints inform neural surrogate models through training penalties or constrained outputs. | Two distinct chemical-engineering works, with P60 extending P59's line of work. The base category is not limited to PDE residual losses; its hard/soft variants and complete proposed names are not interchangeable. Specify the implemented physical relation and its entry point. |
 
 Chinese wording is independently supported for selected entries below. These
-translation sources do **not** enlarge the 60-paper engineering corpus or certify
+translation sources do **not** enlarge that engineering corpus or certify
 the performance/style claims made by their authors.
 
 | Chinese check | Primary online locator and checked content | Status and transfer boundary |
