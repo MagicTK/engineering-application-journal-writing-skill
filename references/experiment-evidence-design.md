@@ -193,6 +193,41 @@ For missing-value recovery claims, separate accuracy at withheld entries from th
 
 When a method claims to leave observed measurements unchanged, inspect the final output equation or implementation rather than the mask's name. For finite placeholders, `x_complete = M*x_input + (1-M)*x_estimate`, with `M=1` at observed positions, preserves them by construction; masked selection must handle NaNs safely if they are present. A mask inside an encoder, or adding a learned output to the input, needs a separate check. Preservation is a useful property to report, not proof that the missing entries are accurate. This check does not require a method that estimates its output directly from available observations to introduce an imputation stage.
 
+### Input-Attack Evaluation
+
+Use this route when the claim concerns deliberately manipulated diagnostic
+inputs, not as a compulsory extension of ordinary noise robustness. Record the
+attacker's objective, knowledge/access, modifiable channels, input coordinates,
+budget and evaluated decision. Check the complete defended prediction path,
+including any preprocessing. P101 gives a selected training/evaluation example;
+P102's abstract motivates attack-aware evaluation but does not supply a fully
+checked algorithm or a security guarantee.
+
+Budgets must refer to defined coordinates. In a supplied two-channel example,
+normalization divides by training standard deviations `[1,100]`; a normalized
+infinity-norm bound of `0.1` permits raw-coordinate magnitudes `[0.1,10]`. A raw
+bound of `0.1` instead gives normalized magnitudes `[0.1,0.001]`. Compare the
+declared perturbation sets, physical units and preprocessing rather than equating
+identical numbers. A small bound alone does not establish preserved physical
+fault labels or a valid process trajectory. Additional perturbed versions of one
+acquisition are not additional independent measured units.
+
+State scoring populations. For a fictional 100-input evaluation with 80 initially
+correct predictions, 30 induced errors among those 80 and no recovered original
+errors, post-attack accuracy is `50/100`; success conditional on initial
+correctness is `30/80=37.5%`. These are different denominators, not two scores to
+rename interchangeably. Define any success/accuracy metric in the actual study
+and retain clean as well as attacked performance when the claim requires both.
+
+A fixed-attack comparison legitimately measures performance under that specified
+attack. A stronger defense-aware claim needs attacks that account for the actual
+pipeline, permitted knowledge and resource budgets; inaccessible gradients alone
+are not a robustness certificate. Empirical attack results do not prove a global
+worst-case or production-system safety guarantee. Preserve a justified formal
+guarantee within its own assumptions when one exists. Keep additional checks as
+an author/experiment handoff unless execution is separately authorized; do not
+rewrite results or silently run attacks during a language revision.
+
 ## 7. Interpretation Design
 
 Match the artifact to an engineering question:

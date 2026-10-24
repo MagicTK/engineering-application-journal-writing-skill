@@ -243,6 +243,17 @@ trade-off. Do not recast lower error as longer warning lead or maintenance savin
 These findings support the actual advance; ordinary forecasting or regression
 alone does not become another contribution.
 
+**Training with deliberately perturbed diagnostic inputs:** connect that
+training construction to the retained predictor, rather than inventing a
+generator/discriminator or a prediction-time attack branch. For verified
+fictional interfaces: "Bounded perturbations of labeled measurements train a
+temporal diagnostic model. Its trained encoder and classifier assign fault
+categories to incoming measurements." Add the actual distinguishing construction
+before claiming a contribution. Keep coordinate/budget details in settings unless
+they define the advance; report results under the evaluated manipulations, not
+as an automatic physical-security or global-robustness guarantee. This is a
+functional writing example, not admission of a complete named defense mechanism.
+
 **Training-loss weighting:** connect the factors to the learner, then the
 retained classifier to the engineering decision. If verified: "Class-dependent
 weights scale the training errors of the temporal classifier. The fitted model

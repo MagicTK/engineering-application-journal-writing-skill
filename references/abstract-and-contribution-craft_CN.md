@@ -107,6 +107,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 若系数求导是核心且实现已核实，可直接连接训练作用：Joint differentiation through the probability-derived weights and classification loss trains the diagnostic encoder. The trained classifier diagnoses new measurements from this representation. 再补真正有区别的加权规则，普通乘法求导本身不构成新颖性；若实际停止因子梯度，则照实描述。常规计算图核查放方法或作者说明，不把另一个模块名或整套求导排除项塞进摘要。
 
+有意扰动的诊断输入若用于训练，应连接该构造与保留的预测器，而非补造生成器/判别器或预测时攻击分支。对接口已核实的虚构设计可写：Bounded perturbations of labeled measurements train a temporal diagnostic model. Its trained encoder and classifier assign fault categories to incoming measurements. 再补真正有区别的构造，常规训练策略本身不自动成为贡献。坐标/预算细节一般放设置，除非它定义了推进；结果落到已测输入变化范围，不直接改成物理安全或全局鲁棒保证。这是功能写法，不准入完整防御机制名称。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

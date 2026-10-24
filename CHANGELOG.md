@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.68 (2026-10-25)
+
+- Corrected ambiguous English/Chinese GAN-generated-data wording and narrowed the generator/discriminator playbook. Sample synthesis, domain discrimination and deliberately manipulated diagnostic inputs retain distinct roles.
+- Added conditional coordinate, scoring-population and defense-aware evaluation guidance, linked to positive training-to-predictor prose. Bounded comparisons remain legitimate; no attacks or experiments are executed by writing maintenance.
+- Recorded one selected TSMC training passage and one EAAI institutional abstract at their different depths. No complete attack-training/PGD mechanism or newly inaccessible Chinese translation is promoted as verified.
+
 ## 4.1.67 (2026-10-25)
 
 - Added a narrow two-work record for class factors on classification log-loss terms. Full ordinary weighted-CE/adaptive-loss admission remains separate; accepted-manuscript provenance and unresolved mapping details are retained.

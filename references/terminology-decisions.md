@@ -160,6 +160,34 @@ different from later realized measurements. Name the actual information access
 and output using [forecast/life evaluation](experiment-evidence-design.md#forecasting-and-life-evaluation),
 not a universal ban on future-indexed quantities or historical target creation.
 
+## Adversarial: Identify The Opponent And Changed Object
+
+Identify the actual game before using the shared adjective. In the checked
+sample-synthesis GAN definitions, a generator learns against real/generated
+discrimination (P71/P72). Domain discrimination instead trains a representation
+against source/target identification (P70/P44). An input-attack evaluation
+deliberately modifies measurements to induce a wrong diagnostic decision;
+P101 describes that role and P102's abstract corroborates its purpose. These are
+different targets, not evidence for one universal module or for one another's
+robustness. Preserve a technically defined source name without inferring its
+operation from the word alone.
+
+Call GAN-produced data generated or synthesized samples when that is the actual
+object. Do not automatically call them adversarial examples merely because the
+generator was trained adversarially. Conversely, training a classifier with
+purposefully perturbed inputs need not introduce a GAN or a new inference branch.
+P101 p.8 supplies one such training context; P102's abstract is not a second
+full training definition. Keep the [bank's scoped contrast](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope),
+including its incomplete algorithm/Chinese-name admission, separate from whether
+an actual author's defined method is valid.
+
+Noise stress, deliberate input manipulation, a learned-graph node attack and a
+physical plant intervention also change different objects. A bounded numerical
+perturbation does not by itself prove unchanged fault semantics, physical
+imperceptibility or process security. Use the conditional
+[input-attack evidence check](experiment-evidence-design.md#input-attack-evaluation)
+only when that claim is made, not as another required experiment for every paper.
+
 ## Weight Roles And Class Decisions
 
 Name what a weight multiplies and which phase uses it. P92 p.4 weights the

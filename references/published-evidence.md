@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 100-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 100 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 102-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 102 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计100篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计102篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -112,6 +112,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P98 | [Class-weighted alignment and reliable self-training for cross-domain fault diagnosis under class-imbalanced conditions](https://doi.org/10.1016/j.psep.2026.108820) | PSEP 211 (2026), Art.108820. P.6 Eqs.(10)-(12) scale target features inside a mapping using counts from target pseudo-labels; pp.5-6 separate classification objectives. A feature-alignment coefficient is not a classification-loss factor. Full CWA-RST, kernel choice, inverse-frequency wording, complete implementation and performance claims remain unverified. |
 | P99 | [Lifeisgood: Learning Invariant Features via In-Label Swapping for Generalizing Out-of-Distribution in Machine Fault Diagnosis](https://doi.org/10.1109/TCYB.2025.3578712) | TCYB 55(8), 2025, pp.3699-3712. P.4 Section II-B3 defines learning on available domains for unseen distributions; p.7 Algorithm 1 and Section V-A separate source training/model selection and prediction. Full swapping mechanisms, invariance definitions/theorems, causal interpretation and performance are not certified by this setting check. |
 | P100 | [Pareto-Optimal Adaptive Loss Residual Shrinkage Network for Imbalanced Fault Diagnostics of Machines](https://doi.org/10.1109/TII.2021.3094186) | TII, read in author-uploaded accepted HTML, Section II-B, Eqs.(6)-(9): class-factor placement plus an additional prediction-dependent batch factor. Coefficient mapping and full PALRSN remain unverified. |
+| P101 | [An Adversarial Robustness Enhancement Framework for Industrial Fault Diagnosis System With Spectral and Data Imbalance Awareness](https://doi.org/10.1109/TSMC.2026.3659658) | TSMC: Systems 56(6), 2026, pp.3789-3803. PDF pp.1,8 describes intentional input perturbations and their use during training; selected pp.9,12 discusses attack evaluation. Full MLNM-FrSh, equations, manifold/security claims and results are not certified. |
+| P102 | [Evaluating practical adversarial robustness of fault diagnosis systems via spectrogram-aware ensemble method](https://doi.org/10.1016/j.engappai.2024.107980) | EAAI 130 (2024), Art.107980. Institutional author abstract describes spectral input manipulation for black-box evaluation. This is purpose-level corroboration, not a full SAEM or attack-training definition, method audit or performance verification. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -873,6 +875,30 @@ differentiable designs. The original operation does not acquire novelty merely
 from weighting or differentiation. Current scope is in the
 [factor record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
 and [gradient distinction](terminology-decisions.md#weight-roles-and-class-decisions).
+
+### Adversarial Referents And Evaluation / 作用对象与评价范围
+
+P101 pp.1,8 and selected pp.9,12 were read, with p.8 rendered and visually
+checked. Its training paragraph supplies one input-perturbation context, not
+certification of the full framework, a universal PGD setting or physical
+semantics from a small budget. P102's actual
+[institutional abstract](https://scholarworks.dongguk.edu/item/2d6151e3-226d-400b-8a78-682ba712d8ca)
+corroborates spectral attack purpose only. It was not read as a full algorithm
+or a second attack-based-training definition.
+
+This contrast exposed an ambiguity in the former GAN bank wording, not a new
+generic mechanism: P71/P72 concern synthesized data, whereas input manipulation
+aims at inducing diagnostic errors. The corrected English/Chinese rows name the
+actual generator/discriminator action. Existing verified GAN translations are
+retained. Newly sought attack-specific Chinese pages were inaccessible or
+restricted; search snippets did not complete a new translation record.
+
+Separate synthetic coordinate and scoring checks illustrate declared budgets
+and denominators; they are not source experiments, attack execution, physical
+label-preservation evidence or security guarantees. Their conditional writing
+and evaluation implications are in the
+[referent decision](terminology-decisions.md#adversarial-identify-the-opponent-and-changed-object)
+and [input-attack route](experiment-evidence-design.md#input-attack-evaluation).
 
 ## Reusable Lessons / 可迁移结论
 
