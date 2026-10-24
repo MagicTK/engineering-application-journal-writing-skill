@@ -173,7 +173,7 @@ calibration or physical misclassification cost from the word balanced.
 
 | Term or object | Meaning to establish |
 |---|---|
-| query label | Identify the phase and role: supervision in a training episode, a newly acquired training annotation, or a label reserved for final evaluation. The word query alone does not determine permission. |
+| query label | Identify the phase and role: supervision in training, selection using a query in a documented validation episode, a newly acquired training annotation, or a label reserved for final evaluation. The word query alone does not determine permission. |
 | missing annotation | An unknown target, not a confirmed negative; define whether absence applies to an entire sample or selected labels |
 | candidate-label set | Alternative possible targets; state how many may be true and whether the true target is guaranteed to be included |
 | multilabel target | Multiple labels may genuinely apply to the same sample; this is not ambiguity merely because more than one entry is positive |

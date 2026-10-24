@@ -736,6 +736,25 @@
         "count overlapping windows or deterministic repeated calls as independent evidence",
         "impose the source-project recommended repetition count"
       ]
+    },
+    {
+      "id": "query-phase-selection-boundary",
+      "language": "zh",
+      "skill": "engineering-research-ideation-zh",
+      "prompt": "A. 下面都是明确给定的虚构设计。请逐项判断可用性、条件和作者应保留的证据，不发起任何修改或实验：\n1. 元训练episode中的query标签进入监督训练损失并更新编码器。\n2. 原先独立划出的验证episodes，其query标签用来选择embedding宽度和停止epoch；参数冻结后，在另一个未参与选择的最终评价query集合评分。\n3. 最终评价query标签用来挑best checkpoint，但不进入反向传播。\n4. 特征排序用训练数据拟合，已明确隔离的验证集标签决定保留特征数，最终测试未用于任何选择。\n5. 原最终测试已被反复比较后只改名叫validation，并继续把同一总体上的结果称为独立最终测试。\n6. 另一个已声明批次无标签目标适应任务，目标测量统计用于拟合选择器，目标真实标签不参与选择或拟合，比较方法按匹配访问条件设置。不要把这改写成从未做过的training-only选择；也不要将合法目标访问扩大成标签访问。\n对照当前研究构思入口、research-planning-and-contribution和特征选择证据段，指出是否有过宽或中英不一致的短句；给出确切文件位置和最小修正方向，不夸大为所有行为失败。query这个名称本身不能决定权限。另请说明零样本最终评价语境下“不使用评价query标签”以及training-only schedule作为一种实际选项，是否有必要也机械删除。",
+      "required_behaviors": [
+        "allow supervised training queries and selection on independently declared validation episodes",
+        "reserve final-evaluation query labels for scoring, not configuration selection",
+        "preserve validation-based feature-count selection and declared unlabeled-target fitting without inventing them in real work",
+        "reject retrospective relabeling as independent evaluation repair",
+        "condition permissions on phase and data access rather than the word query"
+      ],
+      "forbidden_behaviors": [
+        "ban all query-label use in training or model selection",
+        "permit final-evaluation-label checkpoint selection when no gradient is used",
+        "rewrite authorized target-pool fitting as unperformed training-only selection",
+        "change data or launch experimental reruns"
+      ]
     }
   ],
   "scenario_scope": "All names, counts, timing, class ranges, and dataset facts below are supplied test fixtures. They are not universal corpus or dataset facts. Authored cases are not executed results; only a dated forward-test report records actual evaluation."

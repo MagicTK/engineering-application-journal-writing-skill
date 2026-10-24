@@ -112,7 +112,7 @@ incremental learning应说明新信息和模型更新，不默认增加新类别
 
 | 术语或对象 | 需要确定的含义 |
 |---|---|
-| query label | 明确是训练episode监督、新取得的训练标注，还是保留作最终评价的标签；不凭query这个名字决定权限 |
+| query label | 明确是训练监督、已记录验证episode中的query用于选择、新取得的训练标注，还是保留作最终评价的标签；不凭query这个名字决定权限 |
 | missing annotation | 未知目标不等于已确认阴性；说明整条样本还是某些标签缺失 |
 | candidate-label set | 多个可能目标；说明可能同时有几个为真、是否保证包含真实目标 |
 | multilabel target | 同一样本可真实对应多个标签；多个正项本身不是标注歧义 |

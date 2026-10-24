@@ -7,7 +7,7 @@ description: Design, audit, and organize experimental evidence for engineering-a
 
 [中文执行版](../../skills-zh/engineering-experiment-evidence-design-zh/SKILL.md)
 
-Suite version: `4.1.60`
+Suite version: `4.1.61`
 
 ## Mission
 
@@ -65,7 +65,7 @@ Do not call two datasets complementary unless their evidential roles are stated.
 
 Reuse source-verified settings before asking the author. Record source version/page or file/config/hash, raw points, windows, independent events, class range, sampling interval, condition splits and unlabeled-data access; same dataset name is not a version identifier. Use [the data-version record](../../assets/templates/data-version-record.md) when these facts affect comparability. Diagnose transcription/export conflicts before proposing a matched rerun; do not silently blend result populations.
 
-Define low-label, few-shot, zero labeled target-condition data, and unseen fault-class zero-shot separately. Labels reserved for final evaluation cannot select the model. Training-episode query labels and labels acquired through a declared active-learning pool have different, potentially valid learning roles; identify the actual stage and permissions. Adjacent/non-overlapping windows do not by themselves constitute independent shots. Verify the actual condition-by-class file matrix rather than assuming a full factorial dataset. Apply [task and representation boundaries](../../references/research-planning-and-contribution.md) when missingness, tokenization, multi-label claims, or early-fault timing matters.
+Define low-label, few-shot, zero labeled target-condition data, and unseen fault-class zero-shot separately. Labels reserved for final evaluation cannot select the model. Training-query supervision, documented validation-query model selection and labels acquired through a declared active-learning pool have different, potentially valid roles; identify the actual stage and permissions. Do not invent a validation split to justify selection. Adjacent/non-overlapping windows do not by themselves constitute independent shots. Verify the actual condition-by-class file matrix rather than assuming a full factorial dataset. Apply [task and representation boundaries](../../references/research-planning-and-contribution.md) when missingness, tokenization, multi-label claims, or early-fault timing matters.
 
 ## 4. Audit Data Provenance And Splits
 
@@ -95,7 +95,7 @@ Use a layered comparison set when appropriate:
 
 For every method, record implementation source, input adaptation, hyperparameter selection, information access, and whether results were reproduced or cited. Do not compare a method using future information with one restricted to online-available variables.
 
-Separate the industrial challenge from the method family with [the taxonomy](../../references/industrial-ai-taxonomy.md). A preprocessing strategy used to make a comparison method accept the input is not automatically a separate comparison method. State the input construction in prose and select it using training/validation data only.
+Separate the industrial challenge from the method family with [the taxonomy](../../references/industrial-ai-taxonomy.md). A preprocessing strategy used to make a comparison method accept the input is not automatically a separate comparison method. Describe its construction and declared data access: training and any separately defined validation data for source-only selection, or permitted target measurements for declared adaptation. Labels reserved for final scoring cannot select the input construction.
 
 ## 6. Design Ablations Around Contributions
 

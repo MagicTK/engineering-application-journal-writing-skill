@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.61 (2026-10-25)
+
+- Repair overbroad query-label wording in the research-planning reference and bilingual ideation entrypoints. Distinguish training supervision, actually separated validation-query selection and final-evaluation labels without inventing a validation set.
+- Keep selector fitting and model-selection access faithful to the declared task, including valid validation-based selection or unlabeled target-pool fitting. Follow-up testing also narrows input-adaptation restrictions in both experiment entrypoints and the evidence reference. Preserve legitimate training-only options and reject retrospective relabeling as independent evaluation repair.
+- Add one phase-boundary regression to the existing case bank and a failing-first registration test. Recheck the existing published training-query example; no new name, translation, paper ID, topic, template or real manuscript/result is introduced.
+
 ## 4.1.60 (2026-10-25)
 
 - Clarify future process trajectories, current health indicators, remaining life and forecast-based alarms in existing task routing, section, terminology and evidence guidance. Preserve actual time/cycle units, capped-life targets and issue-time information access without banning legitimate historical supervision or known future plans.

@@ -7,7 +7,7 @@ description: Plan, create, revise, and verify scientific figures, tables, LaTeX 
 
 [中文执行版](../../skills-zh/engineering-figure-latex-production-zh/SKILL.md)
 
-Suite version: `4.1.60`
+Suite version: `4.1.61`
 
 ## Mission
 

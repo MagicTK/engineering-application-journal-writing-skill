@@ -7,7 +7,7 @@ description: Build or revise an AI-for-engineering research portfolio, compare m
 
 [中文执行版](../../skills-zh/engineering-research-ideation-zh/SKILL.md)
 
-Suite version: `4.1.60`
+Suite version: `4.1.61`
 
 ## Scope
 
@@ -56,7 +56,7 @@ Inherit verified, versioned data facts and ask only about necessary unknown fiel
 Apply only the distinctions relevant to the candidate:
 
 - zero labeled target-condition examples with known source fault classes differs from unseen fault-class zero-shot; state what information is zero;
-- few-shot support and query require a defined independent unit, separate model selection, and explicit unlabeled-data access;
+- few-shot support/query need defined independent units and phase roles; training-query supervision and documented selection on separately defined validation queries differ from use of final-evaluation labels, which cannot select the model; declare unlabeled-data access separately;
 - scheduled unobserved samples, random missing observations, and physically absent sensors or stages have different targets;
 - equal token dimensions do not prove retained time information or compatibility with a pretrained encoder;
 - numerical multi-source input does not by itself establish a multimodal task; single-class labels do not become multi-label evidence;

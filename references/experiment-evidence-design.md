@@ -134,7 +134,7 @@ prediction and feedback order. Record stopping/model choices without using the
 labels reserved for final evaluation. P89-P91 support the acquisition role, not
 automatic validation of all source splits, budget symbols or savings claims.
 
-Input adaptation such as interpolation, aggregation, masking, or resampling is normally a documented setting, not a separate method row. Select it without test-set access. Do not import published single-rate results into a newly constructed multi-rate, missing-data, multimode, or cross-domain setting unless information access and data construction are demonstrably identical.
+Input adaptation such as interpolation, aggregation, masking, or resampling is normally a documented setting, not a separate method row. For source-only selection, use training data and any separately defined validation data. Declared target adaptation may fit preprocessing to permitted target measurements; labels reserved for final scoring cannot select it. Record the actual access conditions rather than replacing target fitting with an unperformed source-only procedure. Do not import published single-rate results into a newly constructed multi-rate, missing-data, multimode, or cross-domain setting unless information access and data construction are demonstrably identical.
 
 ## 5. Ablation Design
 
@@ -373,7 +373,15 @@ guarantee. These checks do not require a hardware trial for a count-only claim.
 
 For a feature/sensor-selection claim, identify the candidate objects, ranking or selection rule, retained output and its use in the predictor. A positive weighting of all inputs does not itself delete a feature, even if the source calls its layer feature selection. For explicit subsets, trace retained descriptors back to required raw measurements and preprocessing. Permit computation of only selected descriptors when the actual dependencies support it; do not assume the complete original feature pipeline must always run.
 
-State which data fit the selector, label transformations, subset size and stopping rule. Supervised selection is part of model fitting, so test labels used to choose a subset also influence the reported predictor. Use an actually performed training-only selection procedure or a predefined setting; do not invent a validation split to repair the account. Independent selection stability is relevant when stability is claimed, not mandatory evidence for every local grammar revision.
+State which data fit the selector, label transformations, subset size and stopping
+rule. Supervised selection is part of model fitting, so final-test labels used to
+choose a subset also influence the reported predictor. Describe the permitted
+fitting and model-selection data actually used: a training-only rule, a predefined
+setting, documented validation-based selection or declared unlabeled target-pool
+fitting can have different legitimate roles. Do not invent an unperformed split
+or rewrite target fitting as source-only selection; retrospective renaming of a
+selected final test does not restore independence. Independent selection stability
+is relevant when stability is claimed, not mandatory for every grammar revision.
 
 Report resource savings at the measured level: descriptor count, required measurement channels, prediction latency or another stated quantity. A reduced descriptor count alone establishes none of the others. If the deployed computation demonstrably reads only two sensors, retain that reduced-input result; claiming that the plant can remove hardware or reduce maintenance costs additionally requires evidence about its other sensing and control uses. Learned ranks or counterfactual changes in a classifier do not alone identify physical fault causes.
 

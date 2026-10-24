@@ -263,7 +263,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.60", suite["version"])
+        self.assertEqual("4.1.61", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -312,6 +312,25 @@ class SuiteValidatorTests(unittest.TestCase):
         self.assertIn(
             "treat a model component as the industrial problem",
             cases["dependency-not-default"]["forbidden_behaviors"],
+        )
+
+    def test_query_phase_selection_case_is_registered(self) -> None:
+        payload = json.loads(
+            (ROOT / "evals" / "behavior-cases.json").read_text(encoding="utf-8")
+        )
+        cases = {case["id"]: case for case in payload["cases"]}
+        self.assertTrue(
+            "query-phase-selection-boundary" in cases,
+            "Phase-selection regression case is missing",
+        )
+        case = cases["query-phase-selection-boundary"]
+        self.assertIn(
+            "allow supervised training queries and selection on independently declared validation episodes",
+            case["required_behaviors"],
+        )
+        self.assertIn(
+            "permit final-evaluation-label checkpoint selection when no gradient is used",
+            case["forbidden_behaviors"],
         )
 
     def test_project_scenarios_preserve_complete_unique_mapping(self) -> None:

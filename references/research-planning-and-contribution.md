@@ -30,7 +30,15 @@ Use [a data-version record](../assets/templates/data-version-record.md) for ambi
 
 A mismatch first requires diagnosis: transcription error, table exported from the wrong run, or genuinely different experimental populations. Use existing compatible evidence when available; propose a matched rerun only when needed and within authorized scope. Do not blend incompatible results or start training merely because an audit discovered a mismatch.
 
-For support/query studies, distinguish task construction from model development. Declare whether support adaptation and unlabeled query access are allowed; freeze model/hyperparameter selection independently of query labels. Split by the appropriate run/event/condition before windowing where necessary. Non-overlapping adjacent windows alone do not establish independence.
+For support/query studies, identify the training, validation and final-evaluation
+roles actually present. Training queries may supply supervised losses (P47
+pp.3-4); separately defined validation episodes may use their query labels for
+model selection. Final-evaluation query labels cannot select models or settings,
+even without gradient updates. Declare support adaptation and unlabeled-query
+access separately. Do not invent a validation partition or treat retrospective
+renaming as independent evaluation. Split by the appropriate run/event/condition
+before windowing where necessary; non-overlapping adjacent windows alone do not
+establish independence.
 
 For zero-shot statements, specify zero target labels, zero target observations, or unseen classes, along with source-class coverage and auxiliary information. Do not translate one into another. A condition list does not imply every fault-condition combination exists; verify the file/label matrix.
 
