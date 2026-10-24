@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.32 (2026-10-24)
+
+- Recover candidate phrases and recurring collocations across ordinary source line wraps, retaining start/end source lines and paragraph boundaries. Respect literal percent-comment newline suppression and leading indentation rather than inserting a space unconditionally.
+- Keep excluded citation/URL/bibliography material and literal directive lines as conservative phrase boundaries, preventing fabricated adjacent phrases. Linked display prose remains reviewable; custom TeX execution still requires compiled-PDF inspection.
+- Add regression and read-only command-line tests, plus a synthetic local TeX tokenizer check. The tool remains candidate-only: no manuscript edit, word blacklist or scholarly-name admission is automated.
+
 ## 4.1.31 (2026-10-24)
 
 - Pair soft-sensing task definitions with a semantically checked inferential-sensor description, preserving estimated quantities, observed inputs and time-specific target roles. Chinese model-task wording is verified separately; unresolved literal sensor/variable translations remain explicit.

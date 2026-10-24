@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from bisect import bisect_right
 from collections import Counter
 import json
 from pathlib import Path
@@ -27,6 +28,7 @@ RULES = {
 STOP = set("a an and are as at be been being but by can could do does for from has have in into is it its may of on or our that the their these they this those through to was were which will with within without we such each than then also".split())
 TOKEN = re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
 CONTROL = re.compile(r"\\(iffalse|iftrue|else|fi)\b")
+PROSE_BOUNDARY = "\x00"
 NONPROSE_ENVIRONMENT = re.compile(
     r"\\begin\s*\{thebibliography\}.*?\\end\s*\{thebibliography\}", re.S
 )
@@ -94,14 +96,64 @@ def visible_lines(source: str, tex: bool = True) -> list[tuple[int, str]]:
 
 
 def prose_lines(rows: list[tuple[int, str]]) -> list[tuple[int, str]]:
-    """Mask known TeX reference metadata without changing source line numbers."""
+    """Mask reference metadata and mark exclusions without changing line numbers."""
     def blank(match: re.Match[str]) -> str:
         return re.sub(r"[^\n]", " ", match.group())
 
+    def block_boundary(match: re.Match[str]) -> str:
+        return PROSE_BOUNDARY + blank(match)[1:]
+
     text = "\n".join(line for _, line in rows)
-    text = NONPROSE_ENVIRONMENT.sub(blank, text)
-    text = NONPROSE_ARGUMENT.sub(blank, text)
+    text = NONPROSE_ENVIRONMENT.sub(block_boundary, text)
+    text = NONPROSE_ARGUMENT.sub(block_boundary, text)
     return [(number, line) for (number, _), line in zip(rows, text.split("\n"))]
+
+
+def prose_blocks(source: str, rows: list[tuple[int, str]], tex: bool) -> list[tuple[str, list[int], list[int]]]:
+    """Join ordinary wraps, retaining line spans and conservative TeX boundaries."""
+    raw_lines = source.splitlines()
+    blocks = []
+    parts: list[str] = []
+    starts: list[int] = []
+    numbers: list[int] = []
+    length = 0
+
+    def flush() -> None:
+        nonlocal length
+        if starts:
+            blocks.append(("".join(parts), starts[:], numbers[:]))
+        parts.clear()
+        starts.clear()
+        numbers.clear()
+        length = 0
+
+    for number, line in rows:
+        raw = raw_lines[number - 1]
+        if not raw.strip():
+            flush()
+            continue
+        stripped = strip_comment(raw) if tex else raw
+        # Do not guess whitespace across conditional or comment-environment directives.
+        directive = tex and bool(CONTROL.search(stripped) or r"\begin{comment}" in stripped or r"\end{comment}" in stripped)
+        if directive:
+            flush()
+        line = line.lstrip(" \t") if tex else line
+        segments = re.split(PROSE_BOUNDARY + r"|\\par\b", line) if tex else [line]
+        for index, segment in enumerate(segments):
+            if index:
+                flush()
+            if segment:
+                starts.append(length)
+                numbers.append(number)
+                parts.append(segment)
+                length += len(segment)
+        if not tex or stripped == raw:
+            parts.append(" ")
+            length += 1
+        if directive:
+            flush()
+    flush()
+    return blocks
 
 
 def audit(source: str, *, tex: bool = True, min_count: int = 3, top: int = 60) -> dict:
@@ -109,17 +161,21 @@ def audit(source: str, *, tex: bool = True, min_count: int = 3, top: int = 60) -
     if tex:
         rows = prose_lines(rows)
     joined = "\n".join(line for _, line in rows)
+    blocks = prose_blocks(source, rows, tex)
     candidates = []
     for rule, (pattern, question) in RULES.items():
         regex = re.compile(pattern, re.I)
         occurrences = [
-            {"line": number, "term": match.group(), "context": line[max(0, match.start()-70):match.end()+90].strip()}
-            for number, line in rows for match in regex.finditer(line)
+            {"line": numbers[bisect_right(starts, match.start()) - 1],
+             "end_line": numbers[bisect_right(starts, match.end() - 1) - 1],
+             "term": re.sub(r"\s+", " ", match.group()),
+             "context": re.sub(r"\s+", " ", text[max(0, match.start()-70):match.end()+90]).strip()}
+            for text, starts, numbers in blocks for match in regex.finditer(text)
         ]
         if occurrences:
             candidates.append({"rule": rule, "count": len(occurrences), "question": question, "occurrences": occurrences})
     counts: Counter[str] = Counter()
-    for _, line in rows:
+    for line, _, _ in blocks:
         line = re.sub(r"\\[A-Za-z]+\*?", " ", line)
         for segment in re.split(r"[.!?;:{}]", line):
             tokens = [token.lower() for token in TOKEN.findall(segment)]
@@ -131,8 +187,8 @@ def audit(source: str, *, tex: bool = True, min_count: int = 3, top: int = 60) -
     abstract = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", joined, re.S) if tex else None
     return {
         "mode": "review_candidates_only",
-        "limitations": ["Not a TeX compiler: custom macros, input files and arbitrary conditional branches require active-PDF verification.", "Known citation/reference keys, URL targets and literal thebibliography blocks are excluded in TeX mode; custom or nested forms need manual screening.", "Candidate context is line-based; formulas, quoted titles and noun/verb ambiguity need manual screening.", "Frequency is not evidence that wording is right or wrong; no automatic replacements are proposed."],
-        "abstract_whitespace_word_count": len(abstract.group(1).split()) if abstract else None,
+        "limitations": ["Not a TeX compiler: custom macros, input files, verbatim/catcode changes and arbitrary conditional branches require active-PDF verification.", "Known citation/reference keys, URL targets and literal thebibliography blocks are excluded and separate phrase spans in TeX mode; custom or nested forms need manual screening.", "Ordinary wraps are joined within paragraphs with source start/end lines retained; literal percent newline suppression is recognized. Conditional/comment-environment directive lines are conservative boundaries. Formulas, quoted titles and noun/verb ambiguity need manual screening.", "Frequency is not evidence that wording is right or wrong; no automatic replacements are proposed."],
+        "abstract_whitespace_word_count": len(abstract.group(1).replace(PROSE_BOUNDARY, "").split()) if abstract else None,
         "candidates": candidates,
         "recurring_terms": [{"term": term, "count": count} for term, count in counts.most_common() if count >= min_count][:top],
     }

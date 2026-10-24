@@ -1,5 +1,9 @@
 import importlib.util
+import json
 from pathlib import Path
+import subprocess
+import sys
+import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -92,6 +96,103 @@ class TerminologyAuditTests(unittest.TestCase):
         self.assertEqual(candidate["rule"], "offline")
         self.assertIn("measurement procedures", candidate["question"])
         self.assertNotIn("replacement", candidate)
+
+    def test_wrapped_candidates_keep_source_spans_and_frequency(self):
+        source = "\n\n".join(["We use information\nexchange for learning."] * 3)
+        source += "\n\nvariable-specific\nfeatures remain available."
+        output = MODULE.audit(source, min_count=3, top=1000)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(by_rule.get("exchange", {}).get("count", 0), 3)
+        occurrences = by_rule["exchange"]["occurrences"]
+        self.assertEqual([(o["line"], o.get("end_line")) for o in occurrences], [(1, 2), (4, 5), (7, 8)])
+        self.assertTrue(all(o["term"] == "information exchange" for o in occurrences))
+        self.assertTrue(all("\n" not in o["context"] for o in occurrences))
+        feature = by_rule["variable-feature"]["occurrences"][0]
+        self.assertEqual((feature["line"], feature.get("end_line")), (10, 11))
+        self.assertIn({"term": "information exchange", "count": 3}, output["recurring_terms"])
+
+    def test_phrases_do_not_cross_paragraph_or_excluded_metadata_boundaries(self):
+        sources = [
+            "information\n\nexchange",
+            "information\n  \nexchange",
+            r"information\par exchange",
+            "information\n\\begin{thebibliography}{9}\n\\bibitem{x} attributes\n\\end{thebibliography}\nexchange",
+            r"information\begin{thebibliography}{9}\bibitem{x} attributes\end{thebibliography}exchange",
+            r"information\label{not-a-space}exchange",
+            r"information\cite{attributes}exchange",
+            "information\n\\url{https://example.org/attributes}\nexchange",
+        ]
+        for source in sources:
+            with self.subTest(source=source):
+                output = MODULE.audit(source, min_count=1, top=1000)
+                self.assertFalse(any(c["rule"] in {"exchange", "attribute"} for c in output["candidates"]))
+                self.assertNotIn({"term": "information exchange", "count": 1}, output["recurring_terms"])
+
+    def test_percent_newline_suppression_and_comment_only_lines(self):
+        cases = [
+            ("information% hidden attributes\nexchange", 0),
+            ("information% hidden attributes\n  exchange", 0),
+            ("information % hidden attributes\nexchange", 1),
+            ("information\n% hidden attributes\nexchange", 1),
+            ("information% hidden\n% hidden attributes\nexchange", 0),
+            ("information% hidden\n% hidden attributes\n  exchange", 0),
+        ]
+        for source, expected in cases:
+            with self.subTest(source=source):
+                output = MODULE.audit(source, min_count=1, top=1000)
+                by_rule = {item["rule"]: item for item in output["candidates"]}
+                self.assertEqual(by_rule.get("exchange", {}).get("count", 0), expected)
+                self.assertNotIn("attribute", by_rule)
+                frequency = next((x["count"] for x in output["recurring_terms"] if x["term"] == "information exchange"), 0)
+                self.assertEqual(frequency, expected)
+
+    def test_wrapping_preserves_literal_branch_exclusion(self):
+        source = "\n".join([
+            r"\iffalse", "attributes", r"\else", "operating", "conditions remain relevant.", r"\fi",
+            r"\begin{comment}", "records", r"\end{comment}",
+        ])
+        output = MODULE.audit(source)
+        self.assertEqual([c["rule"] for c in output["candidates"]], ["state-condition"])
+        occurrence = output["candidates"][0]["occurrences"][0]
+        self.assertEqual((occurrence["line"], occurrence.get("end_line")), (4, 5))
+
+    def test_plain_wrapping_does_not_enable_tex_comment_or_branch_rules(self):
+        source = "information\nexchange\n% attributes\n\\iffalse records\\fi"
+        output = MODULE.audit(source, tex=False)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(by_rule.get("exchange", {}).get("count", 0), 1)
+        self.assertEqual(by_rule["attribute"]["count"], 1)
+        self.assertEqual(by_rule["record"]["count"], 1)
+
+    def test_cli_wrapped_audit_is_read_only(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "synthetic.tex"
+            source = "\n\n".join(["information\nexchange"] * 3).encode()
+            path.write_bytes(source)
+            result = subprocess.run(
+                [sys.executable, "-B", str(ROOT / "scripts/audit_terminology.py"), str(path), "--min-count", "3"],
+                capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = json.loads(result.stdout)
+            self.assertIn({"term": "information exchange", "count": 3}, output["recurring_terms"])
+            self.assertEqual(path.read_bytes(), source)
+            self.assertEqual(list(Path(folder).iterdir()), [path])
+
+    def test_literal_space_rules_have_ordinary_wrapping_parity(self):
+        phrases = [
+            "operating conditions", "variable specific features", "variable-wise features",
+            "cross stage", "stage level", "information exchange", "offline assay",
+            "real time", "membership degrees", "message passing", "root cause", "development set",
+        ]
+        for phrase in phrases:
+            words = phrase.split()
+            flat = {item["rule"]: item["count"] for item in MODULE.audit(phrase)["candidates"]}
+            for cut in range(1, len(words)):
+                with self.subTest(phrase=phrase, cut=cut):
+                    wrapped = " ".join(words[:cut]) + "\n" + " ".join(words[cut:])
+                    actual = {item["rule"]: item["count"] for item in MODULE.audit(wrapped)["candidates"]}
+                    self.assertEqual(actual, flat)
 
 
 if __name__ == "__main__":
