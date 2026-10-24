@@ -158,6 +158,17 @@ of a fault class.
 
 For `stage`, first distinguish a production unit, a temporal phase in a batch, and a learning phase. For `local/global`, identify the domain over which locality is defined. A temporal receptive field is not a plant region. For `propagation`, distinguish graph-feature updates from a physical disturbance spreading through the process. These decisions change scientific meaning, not merely style.
 
+For graph-based descriptions, trace the node update separately from any later
+unit/graph summary and final decision. P13 combines neighboring and own-node
+features before a separate unit readout; P14 applies adjacency-weighted
+projections before feature fusion and classification. A mean over updated nodes
+does not itself make those node representations identical, although the summary
+need not preserve their individual values. State the receiver/sender convention
+from the actual multiplication; do not infer it from `A_ij` or a borrowed drawing.
+Learned weights within a fixed allowed edge set do not establish that the whole
+topology was learned. Use the [scoped message-passing record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+without importing a source's full causal or hierarchical component name.
+
 For an additive residual path, check matching feature axes and the position of
 projection, activation and normalization (P11/P15/P14). A projected input is not
 an identity mapping, but its addition can still be residual learning. Do not infer

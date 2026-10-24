@@ -103,6 +103,17 @@ The second example needs no fabricated sequence of `reconstruction, then fusion,
 
 **Relationship modeling followed by origin analysis, illustrated by P13/P16:** identify the object passed to the decision rule, not merely a second module name. P13 uses learned graphs in a subsequent top-down node-scoring procedure; P16 analyzes abnormal links after detection. An abstract can connect the relationship representation to its actual ranking or interpretation output. A contribution should expose the distinguishing relation-to-decision design, rather than equating a prediction loss with root identification or repeating the graph learner as two advances. Keep a source's particular procedure attributed; do not invent a classifier, a physical intervention or a new contribution merely to complete a familiar pipeline.
 
+**Node updates followed by task-level use:** connect the represented objects,
+not just graph-related names. For a verified classifier design, two synthetic
+sentences are: "Neighbor-weighted updates combine features over expert-specified
+variable connections. Unit-wise means summarize the updated features, and the
+concatenated unit vectors supply the fault classifier." Add the actual encoder
+and distinctive weighting design where needed; these ordinary operations alone
+are not a contribution. A graph whose nodes are variable-time pairs (P07) differs
+from a production-unit hierarchy (P13). Preserve the actual axes, fixed versus
+learned connections and output level instead of borrowing a hierarchical or
+causal name to make the abstract sound stronger.
+
 **Source-model transfer, illustrated by P78/P79:** this is a relationship across
 learning phases, not necessarily fusion of source and target features. Explain
 the engineering access restriction, the retained source knowledge and the

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.48 (2026-10-24)
+
+- Strengthen the existing message-passing record with two explicit published TSMC process definitions, and distinguish node updates from later graph/unit summaries and task outputs. Preserve the different teams, graph meanings and source-specific names without certifying every indexing or causal claim.
+- Independently check the base Chinese translation in two original scholarly sources. Their full proposed network names and nonindustrial contexts do not become generic industrial mechanisms or additional industrial-definition counts.
+- Refine seven existing terminology, abstract/contribution and source-analysis references; no new topic or source ID, real manuscript edit or research experiment is added. Baseline and final fictional checks use the same facts and constraints, with their limitations separately recorded.
+
 ## 4.1.47 (2026-10-24)
 
 - Strengthen the residual-connection record with three explicit additive definitions or checked operational equivalents from existing process-diagnosis works; retain backbone-only usage as context rather than a second operation definition. Disclose shared lineage and preserve complete author-proposed names.

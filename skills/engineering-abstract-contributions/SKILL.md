@@ -7,7 +7,7 @@ description: Revise an industrial or engineering paper's abstract and contributi
 
 [中文执行版](../../skills-zh/engineering-abstract-contributions-zh/SKILL.md)
 
-Suite version: `4.1.47`
+Suite version: `4.1.48`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->

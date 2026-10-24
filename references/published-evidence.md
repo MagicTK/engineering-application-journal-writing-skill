@@ -97,6 +97,41 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
+### Graph Messages, Summaries And Task Outputs
+
+P13 pp.2-4, Section II-B Eqs.(7)-(9) and Section III-C Eqs.(18)-(21),
+were reread and rendered. Neighbor-based node updates precede a separate graph
+summary used to initialize unit-level modeling; p.3 explicitly calls the update
+message passing. Its source-specific causal construction and subsequent origin
+search are separate claims, not part of the base name's meaning. P14 p.4,
+Section III-D2-5, was reread and rendered: it explicitly names GCN message
+passing, defines adjacency-weighted node updates in Eqs.(33)-(34), then combines
+convolutional features for classification. These are two distinct TSMC process
+works by different teams, supporting the base operation rather than every
+modified layer name. Source orientation and adjacency-normalization notation
+need their own implementation checks; no blanket formula certification follows.
+
+P07 p.7, Eqs.(17)-(22) and Figs.6-7, was also reread and rendered as a contrast:
+its graph nodes combine variable and time identities, with gated graph
+convolution, temporal combination and feature pooling. This strengthens context,
+not a third asserted literal message-passing hit or a production-stage hierarchy.
+Only these selected passages and first-page metadata were checked here, not
+complete experiments.
+
+The original [Journal of Software 006601](https://www.jos.org.cn/html/2022/8/6601.htm)
+bilingual title/abstract and Section 1.2, and [Acta Automatica Sinica c220371](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c220371?viewType=HTML)
+bilingual title/abstract/keywords, independently pair message passing with
+消息传递 in graph-computation contexts. The latter accessible HTML lacks the
+method body. These translation sources do not add industrial-definition IDs or
+validate their full proposed network names as generic categories.
+
+For writing, follow node features through the specified neighbors, any later
+unit/graph summary and the actual decision. Learning edge weights within a known
+connection set differs from learning every connection; a graph summary is not
+automatically a physical propagation estimate or a root-location output. State
+the distinguishing design and its evaluated effect, not a borrowed module title.
+No new indexed work or source experiment is added by this check.
+
 ### Residual Paths: Definitions, Mappings And Feature Use
 
 P02 p.3, Section 3.2, was reread and rendered: it identifies a residual backbone
