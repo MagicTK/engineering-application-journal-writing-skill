@@ -158,6 +158,16 @@ of a fault class.
 
 For `stage`, first distinguish a production unit, a temporal phase in a batch, and a learning phase. For `local/global`, identify the domain over which locality is defined. A temporal receptive field is not a plant region. For `propagation`, distinguish graph-feature updates from a physical disturbance spreading through the process. These decisions change scientific meaning, not merely style.
 
+For multi-head attention, separate the head axis, attended positions and feature
+axis. P11 concatenates head features before output projection; P82 additionally
+routes coefficient matrices to a different summary. State which object is merged
+and what receives it. Different query/key/value projections of one input can
+still be self-attention; a separate query source changes that input relationship,
+not the head count. Normalized attention rows do not make the projected output
+a fault probability or prove independent physical relations. Use the [scoped
+multi-head record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope),
+not the base attention name to admit every full variant.
+
 For causal convolution, inspect the tap offsets, padding and time axis (P81/P82).
 Current-position access can satisfy a causal filter; strictly past-only prediction
 requires the corresponding input/target lag. Dilation spaces taps on the model

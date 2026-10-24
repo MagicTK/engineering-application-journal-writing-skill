@@ -295,6 +295,15 @@ Report resource savings at the measured level: descriptor count, required measur
 
 For attention-cost analysis, record query count, key/value count, embedding widths and any later concatenation. A score array has `n_query * n_key` entries; its weighted output may be smaller while the downstream representation retains all value tokens (P74). That entry count is neither a complete FLOP count nor measured runtime. Trace projections, normalization, later layers, memory layout and any actually skipped work when those affect the claim. Dense zeroing and a dimension-reduced execution graph have different cost implications. If a converted graph is claimed to be exactly equivalent, check inference-mode statistics and activation placement against the original graph before comparing resources; a faster nonequivalent graph may be a valid approximation, but needs that description and its task evaluation.
 
+For a head-count comparison, record per-head widths, total concatenated width,
+projection sizes and all changed operations. Holding total width fixed and holding
+per-head width fixed define different comparisons; neither automatically gives
+equal parameters or runtime. State the actual control rather than silently
+resizing it to make the result fairer. A matched single-head comparison can test
+the stated task benefit, but does not prove that heads identify independent
+physical factors. Additional controls are needed only for the stronger retained
+claim, and their design does not authorize rerunning experiments.
+
 ### Multilabel And Compound-Fault Decisions
 
 Use this check when several labels can apply to one sample or when the claim concerns identifying a complete compound fault. Distinguish scores/rankings, thresholded label indicators and the final fault set. Document threshold selection and the encoding of normal operation; do not silently impose an all-zero convention on a study with a separate normal label or detector. Local mutually exclusive classifiers can still yield a multilabel final decision through a defined combination rule (P37/P39).

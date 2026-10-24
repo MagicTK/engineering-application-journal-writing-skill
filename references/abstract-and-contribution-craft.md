@@ -75,6 +75,14 @@ Choose the connection from the actual dependency:
 
 Make the final method sentence advance from operation to task meaning. It may explain that a representation combines local measurements with system-level context, or that a predictor uses information from unlabeled observations. It should not re-list all modules or promote combination itself to proven generalization. A verified short sentence is preferable to a long sentence containing two vague `which` clauses.
 
+When multi-head processing is central, explain the represented inputs and how the
+head outputs reach the predictor, rather than describing head count as additional
+physical sensors or independently discovered relations. P11/P82 distinguish
+combined head features from any separate use of attention coefficients. Preserve
+that distinction in an overview; include only the connection needed to understand
+the abstract's actual advance. Ordinary parallel heads alone are not a new
+contribution, and their normalization is not the final task decision.
+
 ## 3. Illustrative Repair, Not Manuscript Text
 
 **Synthetic specification:** a shared encoder yields per-sensor features; a relation module updates those features; the classifier combines the updated features with their unchanged counterparts. No domain-transfer experiment exists.

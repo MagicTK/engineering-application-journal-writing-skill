@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.52 (2026-10-25)
+
+- Complete a scoped multihead self-attention record from two distinct published process studies and separately check the full Chinese term in two original scholarly pages. Preserve source-specific architecture names, axes and access limitations.
+- Separate head features, coefficient matrices, concatenation/output projection and later task summaries in existing bilingual terminology and abstract/contribution guidance. Head count is not a count of sensors, classes or independent physical factors.
+- Clarify fixed-total-width versus fixed-per-head-width controls without prescribing another experiment or changing real results. No topic, template, source ID, manuscript, figure or Overleaf project is added or changed.
+
 ## 4.1.51 (2026-10-25)
 
 - Add a scoped causal-convolution definition pair from published industrial prognostics/process studies and independently verify the base Chinese name in two original scholarly sources. Full network names and physical-causality claims remain attributed rather than inherited.

@@ -99,6 +99,14 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
+### Multihead Features And A Separate Coefficient Summary
+
+P11 p.1 metadata and selected pp.2-4 context were reread; p.3 was rendered and inspected. Eqs.(3)-(4) define separate query/key/value projections, head-wise attention, feature concatenation and an output projection. P82 p.1 metadata and selected pp.4-5 were reread; p.4 was rendered and inspected. Eq.(4)/Fig.5 defines parallel projected self-attention, with a concatenated prediction path and a separate coefficient-pooling/threshold path. These two different process studies support the scoped multihead form, not independent invention, identical axes or the full source models' physical-causality guarantees. P11's stated per-head dimensions are a source convention, not a mandatory Transformer width rule; P82's complete indexing, loss and causal-identification arguments were not certified.
+
+P24 p.3 was reread and rendered: it defines same-input self-attention and places a named multihead operator inside a Transformer block, but does not explicitly expand the head merger on that page. It is context, not a third matched merger definition. Selected pp.4-5 were read for the later interval-weighted output; the rendered p.5 was not independently visually inspected this round. Its complete formulas and tensor conventions remain unchecked.
+
+Chinese wording was separately read through the original [CIESC Journal bilingual abstracts/keywords](https://hgxb.cip.com.cn/CN/Y2024/V75/I12/4654) and [Journal of Jiangsu University bilingual title](https://zzs.ujs.edu.cn/xbzkb/CN/10.3969/j.issn.1671-7775.2023.04.011). Both pair multi-head self-attention with 多头自注意力; the latter's abstract remained unresolved template text. Direct terminal downloads were denied, so those are actual browser-tool page reads, not downloaded or full-method checks. A separate Chinese NLP-review page timed out and contributes no completed evidence. Translation pages add no engineering-corpus IDs and do not validate full model names or performance claims.
+
 ### Causal Filters And The Actual Prediction Time
 
 P81 p.1 metadata and p.3, Section III-B/Eq.(1), were read; p.3 was rendered and visually inspected. Its filter uses the present position and dilated historical positions. P82 p.1 metadata and selected pp.3-5 method context were read, with p.3 rendered and inspected: Section 3.1/Fig.3 explains causal temporal extraction before separate relationship learning and scoring. Its printed `causal convolution` phrase crosses a line break. These are distinct published industrial works supporting a time-indexed operation, not two independent inventions or certification of their complete prognostic/causal architectures. P82's attention, confounder and root-identification claims were not independently established by this layer check.
