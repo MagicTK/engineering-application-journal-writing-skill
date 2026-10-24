@@ -79,6 +79,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **源模型迁移，参见P78/P79：**这是学习阶段之间的关系，不必是源/目标特征融合。连清工程访问限制、保留的源知识及用于训练目标预测器的指导。已核实设计可参照这一合成承接：A source-trained model initializes the target predictor. Target-derived class guidance then trains its representation from the available measurements, and the adapted model performs fault classification. 应把泛称guidance换成真实有区别性的选择规则或目标，必要时说明更新哪些组件。已有source-free条件可形成动机，但不使目标学习设计自动新颖。保留批次/数据流范围及观察到的类别权衡，不把审查排除条款填进摘要。
 
+冻结骨干的预测也可与经目标信息调整的校正相结合。连清变化对象与校正后的预测/决策，分开先前校准和评价期更新；摘要保留有区别的适应原则，常规缓冲/优化器细节放方法，不再列成若干独立贡献。
+
 **规则预测，参见P27/P77：**区分输入匹配、规则加权的数值输出及最终任务决策，不能只写高斯函数名而不说明下一步怎样使用。对已核实的回归设计，可直接表达为：Membership degrees determine rule weights, which combine local quality estimates into the final prediction. 再补本研究真正有区别性的学习或规则设计，不另列一串常规层。规则决策若在训练中指导编码器，应写受训表征及保留的预测器，不虚构最终特征融合模块。量的核对及解释边界放作者意见，正文保留受支持的任务意义及结果权衡。
 
 **语义迁移，参见P05/P06/P80：**写清类别描述实际使什么成为可能，不将文本模型与传感模型并列罗列。语义匹配应由预测属性承接预给候选描述及故障名；特征生成应将描述条件生成器及训练约束接到生成特征、分类器拟合和保留的预测路径。合成承接为：Class descriptions condition feature generation. The synthesized unseen-class features train a classifier that diagnoses real process measurements. 再补本研究有区别性的约束或匹配规则，已有零样本设置及常规验证不单独成为推进。P80等设计保留训练组件的某些表征时应照实说明，不能默认全部丢弃。摘要保留真实候选集合和已见/未见表现权衡，不照搬完整资源账目或每类数量。

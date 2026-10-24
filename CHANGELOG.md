@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.53 (2026-10-25)
+
+- Pair a source-specific semantic adjustment with a version-qualified published process TTA account, and independently check 测试时适应 in an original bilingual scholarly page. Distinguish exact name matches, operational equivalents and unverified final-version formulas.
+- Separate target-side fitting, trainable weights, reference/statistic updates and prediction order in existing bilingual terminology and abstract/contribution guidance. Preserve normal-calibration assumptions and the real data used by inputs and losses without inventing a universal adaptation recipe.
+- Add one scoped published-work record, not a topic or template. Real manuscripts, figures, experimental results and Overleaf projects are unchanged.
+
 ## 4.1.52 (2026-10-25)
 
 - Complete a scoped multihead self-attention record from two distinct published process studies and separately check the full Chinese term in two original scholarly pages. Preserve source-specific architecture names, axes and access limitations.

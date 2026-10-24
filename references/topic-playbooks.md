@@ -152,6 +152,14 @@ Select chronological, mode-held-out, cross-period or cross-site evaluation accor
 
 Trace adaptation at its actual granularity. P63 separates an evolving subspace/classifier from out-of-sample prediction and conditions classifier learning on revealed labels. P64 assumes operator-known mode switches for model updates and separately adapts an alarm threshold; its online wording does not establish automatic switch discovery. P05's test-time operation pools selected unlabeled predictions to adjust semantic references without another network forward/backward pass. State whether a current sample, a past window or the full target batch supplies an update, and whether the resulting state persists or resets between cases. Use that information in the method overview and the [adaptive evaluation check](experiment-evidence-design.md#adaptive-state-feedback-and-retention) when adaptation is a central claim.
 
+Write initial target-side fitting separately from evaluation-time adaptation.
+Specify the data used by each component's input, loss and changing statistics;
+control-only forward inputs do not establish sensor-free fitting. Known-healthy
+calibration and absent fault-type labels are also different resource statements.
+Use the [scoped test-time record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+without treating all adaptive forward calculations as learning or every current
+batch as illegal access. The actual decision time determines the allowed horizon.
+
 For retention or replay claims, identify what remains accessible. P64 caches historical latent features and constrains parameter changes; P65 avoids replay of previous target-domain instances while continuing to use labeled source-domain samples and an earlier model. Neither example establishes a requirement to store raw data, a universal source-free setting or a privacy guarantee. Explain the retained information and its role in the next update, then assess earlier as well as current conditions if retaining earlier capability is claimed. Shared labels across changing domains are compatible with continual learning; new fault classes require a separate class-incremental definition.
 
 Name the distribution that changes, not just `concept drift`. P30 defines a change in `P(X|Y)` while keeping class priors fixed; other work may use drift terminology for `P(Y|X)`, `P(X)` or `P(Y)`. Preserve the manuscript's equations and assumptions rather than transferring a name alone. Do not equate every observed prediction error with a detected drift event.

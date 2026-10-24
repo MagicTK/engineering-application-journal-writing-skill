@@ -71,6 +71,16 @@ Output delay alone does not establish use of later information: computation may 
 
 Adaptation need not involve gradient updates: P05 adjusts semantic reference vectors from unlabeled test-sample predictions while retaining its network forward outputs. Describe that changed object and the data available to it. A whole-target-batch adjustment and a causal stream with only past/current observations have different information access, even when both run at test time. Preserve a source's attributed adjustment name; do not call every changing threshold or reference vector incremental parameter learning.
 
+Separate target-side fitting from evaluation-time updates. A frozen backbone can
+receive a correction from another component that was fitted earlier; its later
+statistics may change while both networks' trainable weights remain fixed.
+Control-only inputs to that later update do not imply that the earlier fitting
+loss never used sensor measurements. Similarly, confirmed-normal calibration
+data retain their health-status information even without fault-type labels.
+Describe these phases positively, using the [scoped test-time record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+where applicable. An analytically assigned bias can itself be a model parameter;
+absence of backpropagation does not make a changed parameter unchanged.
+
 For **source-free domain adaptation**, identify the phase in which source samples
 are unavailable. A source-trained model can retain labeled historical knowledge
 while its target-side adaptation uses unlabeled measurements (P78/P79). Record

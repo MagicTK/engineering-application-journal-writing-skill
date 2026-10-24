@@ -147,6 +147,12 @@ An existing source-free setting motivates a contribution but does not itself
 make the target-learning design novel. Preserve batch/stream scope and observed
 class-level trade-offs without turning audit exclusions into abstract padding.
 
+A frozen backbone's prediction may instead be combined with a target-adjusted
+correction. Connect the changed object to the corrected prediction or
+decision, separating prior calibration from updates during evaluation. Keep the
+distinctive adaptation principle in the abstract; routine buffer and optimizer
+details belong in Methods, not another list of independent contributions.
+
 **Semantic transfer, illustrated by P05/P06/P80:** state what the class
 descriptions enable rather than listing a text model beside a sensor model.
 For verified semantic matching, connect predicted attributes to the supplied
