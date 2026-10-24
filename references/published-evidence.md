@@ -923,6 +923,30 @@ The synthetic moment/coverage fixture is independent arithmetic, not a source
 experiment or calibrated interval. See the [quantity route](terminology-decisions.md#predictive-outputs-and-intervals)
 and [claim-specific evaluation](experiment-evidence-design.md#output-prediction-intervals).
 
+### Counterfactual Generation: Target, Consumer And Feasibility
+
+P62 pp.1,4-7 and P94 pp.1,4-5 were selectively reread for generation interfaces;
+P62 pp.5,7 and P94 pp.4-5 were visually inspected. Both change measurement
+inputs toward a specified model class, while their architectures and uses differ:
+P62 returns generated explanations, and P94 uses generation for augmentation
+and importance analysis. This completes a scoped base-operation record without
+adopting their complete networks, objectives, causal claims or feasibility
+guarantees. P94's specific constraint evaluators and source implementations were
+not independently reproduced; a stated repair/constraint procedure is not a
+certificate for every unencoded process relation.
+
+The original [Control Theory & Applications page, CCTA240576](https://jcta.alljournals.cn/cta_cn/ch/reader/view_abstract.aspx?file_no=CCTA240576&html_url=cta_cn/article/html/CCTA240576&journal_id=cta_cn),
+bilingual title, abstracts and keywords, separately verifies `counterfactual
+explanation` / 反事实解释. It is wording evidence, not a full FICE audit or
+another industrial-generation definition. An inaccessible Aerospace Control PDF
+does not complete other Chinese compound-name checks. These rereadings add no
+paper IDs; the indexed corpus remains 104 selected works, not 104 full audits.
+The exact balance/decision fixture illustrates a model-valid but inconsistent
+input and a proved empty target set in that fixed context, not a plant
+intervention or a universal impossibility result. Follow the
+[quantity/use distinction](terminology-decisions.md#counterfactual-inputs-and-their-use)
+and [output-specific evidence](experiment-evidence-design.md#counterfactual-outputs).
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.

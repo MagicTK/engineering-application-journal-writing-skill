@@ -55,6 +55,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 预测不确定性主张应连清估计量、区间与实际用途，不把概率模型和可靠性保证列成互不相关的点。针对接口已核实的合成设计，可写：Process measurements condition a distribution for the quality variable. Its interval bounds feed the declared warning rule, linking the estimated output range to the monitoring decision. 若无告警规则，就止于真实的质量估计或区间。贡献说明有区别的估计或区间构造如何产生可评价的输出，结果保留重要的覆盖率、宽度与工况差异；普通抽样数和核查排除项留在设置或作者说明。P103/P104提供不同的输出到用途关系，不要求将两种方法融合，也不把一个分布或近似写成已经证实的工程收益。
 
+生成反事实输入时，把候选连到真实使用者。对接口已核实的增强设计，可写：Candidate inputs are adjusted toward the requested diagnostic class and checked by a fixed model. The accepted candidates augment real training data for the classifier that diagnoses new measurements. 模型解释设计则可能在预测时返回原始预测、改动后的输入及其模型响应（P62/P94用途不同），不能一律移除生成路径。贡献需说明有区别的生成或学习原则，普通类别引导本身不构成创新；结果保留重要类别权衡，不把模型内改动写成已验证的工艺动作。参见[按输出选择证据](experiment-evidence-design.md#counterfactual-outputs)，不将这些替代关系堆成固定模块清单。
+
 ## 3. 合成例子
 
 已知设计：共享编码器产生各传感器特征，关系模块更新这些特征，分类器融合更新后与原始编码特征；没有跨域验证。

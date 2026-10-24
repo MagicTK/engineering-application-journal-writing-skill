@@ -248,6 +248,38 @@ A confusion matrix can be useful when class-pair errors are scientifically impor
 
 Sensitivity and interpretation plots are result-dependent artifacts. Their curves, point clouds, heat maps, and error bars must be generated from traceable experimental outputs; a design brief or placeholder may be prepared before the data, but the visible result cannot be fabricated.
 
+### Counterfactual Outputs
+
+Select checks by the returned object's use. For a model explanation, define the
+original input, requested class/score, evaluation model and permitted edits.
+For a class-change claim, check that the requested class differs from the
+original prediction. Target agreement under that model is a valid metric; it
+does not independently verify a real fault label. Separate distance, number of changes and diversity
+from target agreement. Report the candidate denominator when quoting a success
+rate: agreement among accepted outputs is not agreement among all attempts.
+
+If claiming physical feasibility or an actionable correction, specify immutable
+and controllable variables, coordinate bounds, relevant joint relations, units,
+context and tolerances. Evaluate the constraints actually claimed, using the
+[physical-constraint guidance](#knowledge-and-physical-constraint-claims).
+Coordinate clipping alone cannot establish an unencoded balance, and static
+feasibility alone cannot establish dynamic reachability or intervention benefit.
+Preserve justified analytical or observational evidence; a real plant trial is
+not mandatory for a model-only explanation. Distinguish a proved empty feasible
+target set from a heuristic failing to find a candidate.
+
+For augmentation, trace permitted training measurements through generation and
+acceptance into the downstream learner. Evaluate that learner on untouched real
+units rather than using the generation model's target agreement as a utility
+score. State what is retained at prediction: P62 explicitly returns generated
+explanations, while P94 motivates generation for augmentation. No common name
+settles that interface. Keep observed class-level trade-offs and avoid turning
+generated fault examples into a demonstrated process-correction policy.
+
+These checks address the manuscript's retained claim; they do not require a
+counterfactual branch, physical trial or another experiment suite in ordinary
+diagnosis papers, and they do not authorize changing results or running studies.
+
 ### Knowledge And Physical-Constraint Claims
 
 If the claimed benefit is physical consistency, define the tested equation or inequality, its variables/units, applicable conditions and tolerance. Evaluate its residual or violation at the claimed output and on the claimed evaluation domain; a smaller total training loss or better diagnostic score does not establish this property. A finite-weight penalty can trade off against other objectives. Even a zero residual at training points does not by itself prove satisfaction everywhere. For an exact construction or projection, check the relation it actually enforces and preserve a justified guarantee within that scope; empirical residual checks and mathematical guarantees are different evidence.

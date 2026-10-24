@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.70 (2026-10-25)
+
+- Recorded a two-work, classifier-targeted counterfactual-generation scope and separately verified Chinese explanation wording. Complete source-specific architectures, causal-effect and physical-feasibility claims remain outside the base-name record.
+- Connected generated inputs to model interpretation or training augmentation, preserving their different prediction-time interfaces in existing abstract/contribution and topic guidance.
+- Added conditional checks for target agreement, candidate denominators, joint feasibility and downstream utility without prescribing real process interventions or another experiment suite for every diagnostic paper.
+
 ## 4.1.69 (2026-10-25)
 
 - Clarified output prediction intervals, posterior/latent quantities, Monte Carlo numerical error and repeated-training graphics without imposing interval prediction on point-estimation papers.

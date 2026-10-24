@@ -163,6 +163,19 @@ meaning of suppression, and a dense input-dependent gate need not be sparse
 execution or online learning. Keep those audit judgments in the author note
 unless needed to interpret a retained manuscript claim.
 
+**Counterfactual outputs, illustrated by P62/P94:** link the generated object
+to its actual consumer. For a verified augmentation interface: "Candidate inputs
+are adjusted toward the requested diagnostic class and checked by a fixed model.
+The accepted candidates augment real training data for the classifier that
+diagnoses new measurements." A model-explanation interface may instead return
+the original prediction, changed inputs and their model responses. Preserve
+that different output rather than automatically removing generation at
+prediction. A contribution needs the study's distinguishing generation or
+learning principle, not routine class targeting alone. Keep physical-action
+claims within their evidence, and retain important downstream trade-offs in the
+result sentence. These are alternative relationships, not modules every paper
+should combine. See [output-specific checks](experiment-evidence-design.md#counterfactual-outputs).
+
 **Predictive uncertainty, illustrated by P103/P104:** connect the estimated
 output to its actual use instead of listing a probabilistic model beside an
 unrelated reliability claim. For a verified fictional interface: "Process

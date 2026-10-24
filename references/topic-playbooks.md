@@ -477,6 +477,18 @@ Evidence priorities:
 
 For root-cause metrics and distribution shifts introduced by explanation perturbations, use [the interpretation evidence guidance](experiment-evidence-design.md#7-interpretation-design).
 
+For counterfactual outputs, first identify their use. P62 pp.5,7 returns
+generated inputs and model responses for interpretation; P94 pp.4-5 uses
+target-class generation for augmentation and importance analysis. Connect the
+candidate to the explanation or trained predictor instead of inventing a final
+feature-fusion stage. A desired-class match and small input distance are not
+the same as a physically achievable correction. Use the
+[counterfactual-output route](experiment-evidence-design.md#counterfactual-outputs)
+for the actual claim; retain legitimate model-level explanations and do not
+infer a causal action merely from the shared name.
+
+中文：生成的候选用于解释模型、训练增强还是建议动作，应分别交代输出和使用者；不把分类目标一致性直接写成实际工艺可行性，也不因未验证工艺动作而否定模型级解释。
+
 For an origin-location method, trace what connects the learned relationships to the returned candidate. P13 pp.4-5 learns unit and variable graphs through prediction, then performs graph-node attacks and a separate top-down score search. P16 pp.6,10 instead follows fault detection with abnormal-link annotation and process-based interpretation. Preserve their attributed names and different decision rules; neither establishes one mandatory root-cause module. In an overview or contribution, explain how the relationship model supplies the search or interpretation, and why its unit of output answers the engineering question. Do not append a fault classifier to a method that returns a root location, or turn a diagnostic classifier's heatmap into an origin decision without a defined rule and evidence. A graph-load score is a modeled quantity, not automatically physical equipment load or measured process intervention response.
 
 For quality-related work, distinguish the task from the industrial reason it matters. P01's production case classifies product-shape abnormalities; P09 predicts quality categories using regression-derived representations; P16 defines quality-related detection statistics and a further root-cause analysis. These are different routes, not a hierarchy that every paper must implement:

@@ -189,6 +189,36 @@ does not establish coverage in every operating condition. Use the
 [conditional interval-evaluation route](experiment-evidence-design.md#output-prediction-intervals)
 only when such outputs or reliability claims are actually part of the paper.
 
+## Counterfactual Inputs And Their Use
+
+For classifier-directed counterfactual generation, identify the original input,
+requested outcome, changed coordinates, returned candidate and model used to
+judge its target agreement. State whether that outcome differs from the
+original; agreement with an already-predicted class is not a class-changing
+explanation. P62 pp.5,7 returns desired-class inputs for model
+interpretation; P94 pp.4-5 perturbs selected inputs toward target fault classes
+for augmentation. This supports a scoped shared operation, not one architecture,
+one prediction-time path or identification of real process causes.
+
+| Intended use | Follow the output to | Distinct evidence |
+|---|---|---|
+| Model explanation | changed inputs and the specified model's response | target agreement, meaningful change/distance and explanation scope |
+| Training augmentation | candidate acceptance, training data and retained predictor | utility on untouched real evaluation units |
+| Proposed process action | controllable settings and the process response | stated joint constraints, reachability and identified effect at the claimed scope |
+
+Model-level target agreement is a legitimate property, but not a measured new
+fault or successful corrective action. Small changes, coordinate bounds and
+joint physical consistency are different properties. Even a jointly consistent
+vector is not automatically a reachable safe control trajectory. Conversely,
+do not require a plant intervention for every model explanation or valid
+observational causal estimate. Keep the declared causal target and identifying
+assumptions when that is the actual study.
+
+State whether any candidate meeting the requested outcome exists under the
+declared constraints. A failed finite search alone does not prove nonexistence.
+Use [counterfactual-output evaluation](experiment-evidence-design.md#counterfactual-outputs)
+only for the retained generation, explanation, augmentation or action claim.
+
 ## Adversarial: Identify The Opponent And Changed Object
 
 Identify the actual game before using the shared adjective. In the checked
