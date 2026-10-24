@@ -197,6 +197,14 @@ P52's institutional accepted version, pp.2-3, Sections II-A to III-A, defines kn
 
 本组区分的是模型量及其用途，不按题名把“证据、不确定性、可信”归成同一种机制。逐项定义不等于复现来源方法；存在符号疑点时保留来源身份，限制可迁移范围，不自行修正对方实验。
 
+### Completion Targets And Reconstruction Evidence
+
+Further definition reading on 2026-10-24 revisited P17, P25 and P33 without adding papers to the 52-source index. P25 p.4, Section 3.1, describes auxiliary-variable completion before sparse-quality learning; p.6 specifies the selected prediction branches. Its Eq.(5) adds a linear-operation output to the input while Eq.(6) marks observed entries with one. The claim that observations remain unchanged therefore needs the linear output's support or an explicit final selection rule; the paper-specific operator description alone is not an implementation verification. PDF p.4 was also visually checked. This is a bounded ambiguity, not a claimed reproduction failure.
+
+P33 pp.5-6 defines observation-masked training residuals, explicit observed/estimated sequence composition, and a separate latent representation for clustering. Eqs.(12), (18) normalize by the number of samples; that is not automatically a per-observed-entry or per-missing-entry error. P17 pp.4-5 separates reconstructed inputs from predicted concentrations, defines artificial input degradation and jointly trains its objectives. These passages support the base names `missing-value imputation` (P25/P33) and `reconstruction loss` (P17/P33), while differing in targets, masking and downstream roles. They do not make reconstruction, imputation and quality prediction synonymous or validate physical recovery from a lower training loss. Chinese translations are checked separately in the terminology bank. No experiments or implementations were reproduced.
+
+本组回读用于区分补全测量、训练重构目标与下游预测，并核对掩码、计分位置及分母。迁移基础术语与论证关系，不迁移来源论文的完整模块名，也不把出版状态当作公式或效果的担保。
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.14 (2026-10-24)
+
+- Add paired definition records for missing-value imputation and reconstruction loss, with separate Chinese scholarly translation checks. Revisit three existing papers; the selected index remains 52 works, not a whole-bank certification.
+- Separate completed measurements, reconstructed training targets, latent features and quality outputs in the existing topic guide. Keep mask roles and actual recipients visible in abstract/contribution wording without imposing an imputation stage on every incomplete-input model.
+- Match recovery claims to scored entries, mask patterns and normalization. Preserve valid held-out imputation tests and observed-value preservation while distinguishing them from downstream prediction evidence. Five existing references carry the substantive changes; no new topic guide or template.
+
 ## 4.1.13 (2026-10-24)
 
 - Distinguish feature-response weighting, feature-statistic perturbation, prediction uncertainty and rejection decisions in the existing topic/evidence guidance. Connect the defined quantity to its actual use in abstracts, contributions and evaluation without inventing additional tasks.
