@@ -1,64 +1,64 @@
 suite:
   name: engineering-application-journal-writing-skills
-  version: "4.1.49"
+  version: "4.1.50"
   canonical_language: en
   mirror_language: zh-CN
   installation: whole-suite
 
 skills:
   - id: engineering-abstract-contributions
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-abstract-contributions/SKILL.md
     mirror: skills-zh/engineering-abstract-contributions-zh/SKILL.md
   - id: engineering-experiment-automation
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-experiment-automation/SKILL.md
     mirror: skills-zh/engineering-experiment-automation-zh/SKILL.md
   - id: engineering-application-journal-writing-skill
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: SKILL.md
     mirror: skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md
   - id: industrial-ai-paper-router
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/industrial-ai-paper-router/SKILL.md
     mirror: skills-zh/industrial-ai-paper-router-zh/SKILL.md
   - id: engineering-literature-positioning
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-literature-positioning/SKILL.md
     mirror: skills-zh/engineering-literature-positioning-zh/SKILL.md
   - id: engineering-paper-idea-architecture
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-paper-idea-architecture/SKILL.md
     mirror: skills-zh/engineering-paper-idea-architecture-zh/SKILL.md
   - id: general-method-benchmark-realworld
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/general-method-benchmark-realworld/SKILL.md
     mirror: skills-zh/general-method-benchmark-realworld-zh/SKILL.md
   - id: background-driven-industrial-application
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/background-driven-industrial-application/SKILL.md
     mirror: skills-zh/background-driven-industrial-application-zh/SKILL.md
   - id: engineering-experiment-evidence-design
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-experiment-evidence-design/SKILL.md
     mirror: skills-zh/engineering-experiment-evidence-design-zh/SKILL.md
   - id: engineering-figure-latex-production
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-figure-latex-production/SKILL.md
     mirror: skills-zh/engineering-figure-latex-production-zh/SKILL.md
   - id: engineering-terminology-polishing
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-terminology-polishing/SKILL.md
     mirror: skills-zh/engineering-terminology-polishing-zh/SKILL.md
   - id: engineering-journal-rigor-review
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-journal-rigor-review/SKILL.md
     mirror: skills-zh/engineering-journal-rigor-review-zh/SKILL.md
   - id: engineering-research-ideation
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-research-ideation/SKILL.md
     mirror: skills-zh/engineering-research-ideation-zh/SKILL.md
   - id: engineering-review-response
-    version: "4.1.49"
+    version: "4.1.50"
     canonical: skills/engineering-review-response/SKILL.md
     mirror: skills-zh/engineering-review-response-zh/SKILL.md

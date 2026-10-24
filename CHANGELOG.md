@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.50 (2026-10-25)
+
+- Complete a scoped feature-averaging record using two explicit published GAP uses and a related node mean-pooling definition. Check Chinese 全局平均池化 separately in two original scholarly sources; retain the different reduction sets, downstream gates/readouts and source-specific names.
+- Distinguish equal-unit means from all-node means, validity-mask denominators from measured zeros, and a uniform reduction from a subsequent learned projection. Do not infer whole-plant relationships, sensor removal or complete model-order invariance from a pooling name.
+- Extend five existing references rather than add another topic, abstract template or engineering source ID. Keep access-limited pruning and exact classifier-free-energy translation leads pending; no manuscript, real result or scientific experiment is changed.
+
 ## 4.1.49 (2026-10-24)
 
 - Strengthen the existing gate record with three explicit feature-gating definitions, a distinct expert-gating context and independently checked Chinese originals. Preserve the source-specific recipients, axes, bypasses and full proposed names rather than treating all weights as one named module.
