@@ -1,0 +1,22 @@
+# Relationship-To-Origin Writing And Causal Evidence Evaluation
+
+Date: 2026-10-24. Version: 4.1.37.
+
+The first attempted pre-change check was interrupted by the user and its agent was shut down without a completed answer. After the handle was confirmed absent, a replacement fresh task context answered one request on the frozen v4.1.36 source. It correctly rejected a blanket ban on observational causal effects and derived 0.5 for the specified structural model. This was not a demonstrated model failure. The original request did not explicitly exclude degenerate observation support; its answer does not certify estimation for all such data.
+
+The existing interpretation guide was clarified to remove an intervention-only implication and to distinguish attention allocation, predictive attribution, graph attacks, origin decisions and physical interventions. The final version also links relationship modeling to its actual decision output and separates edge, event and class metrics. The final B request explicitly supplies independent positive-variance Gaussian disturbances; the source, support-condition clarification, context and test coverage changed. No controlled source-only improvement or general writing-performance gain is claimed.
+
+One further fresh task context handled final A-D. The maintainer reviewed its actual answers; there was no independent second grader, whole-bank certification or scientific experiment reproduction. The [pre-change response](../responses/v4137-baseline.md) and [final response](../responses/v4137-independent.md) are retained. These are two completed task contexts, not five independent model runs; the interrupted attempt is not a result.
+
+| Final case | Observed response | Maintainer assessment |
+|---|---|---|
+| M4137-A | A 52-word related-work bridge, 74-word overview and 30-word contribution candidate connect fixed units, prediction-trained variable/unit graphs and top-down candidate selection. | Pass. The returned object remains an initiating-variable estimate; no classifier, physical equipment attack, physical-load interpretation, completed evaluation or unsupported field-wide failure is added. |
+| M4137-B | A 30-word method sentence retains observational adjustment under the specified causal model; the derived unit effect is 0.5. | Pass. Model assumptions, data-based estimation, actual intervention evidence and event-specific origins remain distinct. Neither reality of the assumed graph nor a finite-sample coefficient is certified. |
+| M4137-C | A 62-word results paragraph separates graph precision/recall/F1 = 4/6, event top-1 = 9/12, top-3 = 11/12 and a separate class-F1 of 0.92. | Pass. Conditional within-unit success is not substituted for end-to-end event localization; an earliest-response proxy is not promoted to a physical initiating cause. |
+| M4137-D | Three local replacements of 14, 19 and 32 words describe attention allocation, modeled candidate scoring and genuine controlled simulator interventions. | Pass. The positive simulator control retains its intervention meaning under tested conditions without being called a real-plant or all-condition trial. |
+
+Word counts and simple arithmetic were independently checked. The C phrase `injection-record origins` is compact synthetic prose, not a newly admitted technical term or a prescribed collocation for manuscripts. Passing these bounded requests does not certify every replacement as a final journal-polished sentence.
+
+The baseline respondent separately disclosed its actual source/bootstrap/quota access; the final respondent included that disclosure with its answer. Both had preset historical summaries, reported no active retrieval or deliberate use of task history, and could not establish zero implicit influence. These were fresh task contexts, not provably memory-blank models. Read-only platform quota services were accessed; no account values were printed. Public responses normalize only private local reference links, line-end spaces and terminal blank lines, preserving raw responses privately.
+
+The final 102-file instruction/dependency hash set was unchanged through testing. The response reports targeted use of four current references, not complete reading or behavioral coverage of every reference. Source reading was scoped to the recorded P13/P16 passages and methodological/translation material; it does not certify all source equations, causal claims or results. No manuscript, Overleaf source, real figure, dataset or experimental result was edited.

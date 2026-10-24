@@ -137,6 +137,7 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 
 | 基础术语 | 不同论文及实际操作 | 边界 |
 |---|---|---|
+| root cause identification / root cause recognition（任务名，不是一种机制） | P13 pp.4-5定义先定位单元、再返回变量的图搜索，pp.7-8区分关系恢复评分与根源位置结果；P16 pp.6,10在检测后通过异常关系标记及工艺解释识别起源变量 | 两篇不同流程研究以不同规则处理起源定位任务，不构成某一种因果学习、级联或自动排序模块的操作配对，也不证明物理效应。保留参考起源定义、输出层级及来源专名；故障类别或最早响应传感器不自动是同一个起源 |
 | soft sensing / soft sensor modeling；inferential sensor modeling（限定语义等价） | P34 p.1说明由可测过程变量估计难测质量量；P57 pp.1-2第2.1节式(1)从输入测量及目标历史估计关键变量；P56 pp.1-2以inferential sensor名称定义相应质量推断任务 | 三篇不同流程工业研究支持模型化间接估计，结构、目标与信息条件不同。P34/P57明确使用soft-sensing名称，P56是已核对语义等价而非每个名称的第二个原词命中。不表示柔性材料硬件、在线部署或自动故障识别；估计当前量与预测未来量须看目标/发出时刻。完整网络及所有virtual-sensing同义译名不因此准入 |
 | few-shot learning (FSL) | P47 pp.2-3第II-C/D节及p.5第IV-A节结合大量有标签基础测量与有限支持集；P69 pp.2-3第1-2节及pp.8-9第4.1节在少量固定标注训练集上生成增强视图并训练 | 两篇不同相邻工程研究支持少量样本学习的问题设置，不规定一种算法。说明shot单位、所涉类别及各阶段标签可用性；基础名称不保证元学习、未见类别或统一数量阈值。支持样本数不证明全流程标注节省，增强不增加独立实测标注。完整L2MP/SSFN部件名称仍归属来源 |
 | multi-instance learning (MIL) | P22 pp.3-4第III-B节式(1)-(3)联系实例表征、包聚合与包标签，第IV-A节扩展到时序子序列；P68 p.3第III节在MIML表述中定义实例包，pp.4-5第IV-B节构造并聚合隐特征实例 | 两篇不同工程作品支持实例包学习基础，成员、标签空间及最终输出不同。P68为相邻轴承研究，其MIML输入定义支持此基础记录，不准入完整MIML/LWMIML名称或认证复合故障预测。内部实例数不等于独立采集数，集体异常不必能由单个时间点独立辨识 |
@@ -183,6 +184,7 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 
 | 中英对应 | 在线原始来源及已读位置 | 使用边界 |
 |---|---|---|
+| root cause diagnosis / 根源诊断；propagation path identification / 传播路径识别 | [自动化学报c200257](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c200257?viewType=HTML)，原始双语题名、摘要及配对关键词 | 核实这两个来源搭配，不自动认证所有identification/recognition同义搭配、“根因识别”这一单独译法或完整因果模块名。可读页有摘要/图注，未取得完整方法定义正文；译名记录不补充第二项工业实现定义 |
 | soft sensing / soft sensor modeling / 软测量、软测量建模 | [自动化学报c210035](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c210035)，原始双语题名；[信息与控制2020.9311](https://xk.sia.cn/article/doi/10.13976/j.cnki.xk.2020.9311?viewType=HTML)，原始双语题名及摘要 | 两者明确对应soft-sensor建模与软测量，后者另描述难测变量估计；只核实模型任务译法，不认证inferential、virtual、primary、secondary的所有中文译名及来源性能结论。译名网页不增加工程语料ID |
 | network pruning / 网络剪枝（仅译名已核，英文操作配对仍未完成） | [自动化学报c180275](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180275)原始双语摘要及配对关键词 | 仅支持基础译法，可读页有摘要/图注，未提供完整方法正文。该通用模型优化综述不算第二个已读工业剪枝实现，也不准入所有限定名称或认证加速 |
 | state-space model / 状态空间模型；Kalman filter/filtering / 卡尔曼滤波；fixed-lag smoother / 固定时延平滑 | [自动化学报c230457](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c230457?viewType=HTML)图5双语图注；[AAS 2013.00043](https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.00043)双语题名、摘要、关键词；[测绘通报2017.0338](https://html.rhhz.net/CHTB/html/2017-11-6.htm)原始双语题名、摘要、关键词及第1-2节 | 第一处在深度变体中对应状态空间基础词，第二处对应Kalman基础词，第三处区分滤波与延迟平滑。只核实用语，不认证所有线性高斯/神经/时滞完整变体或工业操作。AAS可读图注/摘要不等于完整正文定义，译名页不增加流程研究ID |

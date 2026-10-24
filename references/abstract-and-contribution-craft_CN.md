@@ -64,6 +64,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **P21 展示类别指导的表征学习：** 将估计类别信息与它在训练中指导的表征关系连接，不把时间模块和图模块列成互不相关的创新。对接口已核实设计的合成表达为：Temporal contrastive learning trains the encoder to associate contexts with later features across augmented views. Class estimates guide relationships between training samples, linking this representation objective to the diagnostic task. 预测时使用的编码器/分类器应在总览交代；只有为区分预测路径确有必要时才补入摘要。这里是训练关联，不是物理量预测或工艺拓扑学习。创新应在真实的耦合或目标构造及其证据，而不只是使用两种标准目标；其他对比设计仍需分别说明对象与配对依据。
 
+**P13/P16展示关系建模到原因分析的承接：** 说明传给决策规则的对象，不只再列一个模块名。P13将学习图用于随后自上而下的节点评分，P16在检测后分析异常关系。摘要连清关系表征与实际排序或解释输出；贡献应交代有区别的“关系到决策”设计，不能把预测损失本身写成根因识别，或将同一图学习重复算两项推进。来源特有步骤保留归属，不为凑完整流水线而虚构分类器、物理干预或新贡献。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。
