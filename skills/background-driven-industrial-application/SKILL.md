@@ -5,7 +5,7 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 # Background-Driven Industrial Application
 
-Suite version: `4.1.24`
+Suite version: `4.1.25`
 
 ## Mission
 

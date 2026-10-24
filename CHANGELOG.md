@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.25 (2026-10-24)
+
+- Pair incremental and continual learning definitions from industrial papers, preserving their different supervision, update objects and retention goals. Revisit test-time semantic adjustment with fixed network outputs instead of requiring gradient updates for every adaptive operation.
+- Connect operator-supplied change timing, target-batch access, threshold updates and retention evaluation to their actual claims. Scope replay-free wording by which data are unavailable; retained source samples, latent buffers and model states have different roles.
+- Seven existing references carry the changes. Track two verified Chinese continual-learning variants and keep unresolved translation/name checks explicit. No new topic guide, manuscript edit or research experiment; behavioral checks use fictional cases.
+
 ## 4.1.24 (2026-10-24)
 
 - Check feature-selection definitions in a process study and an existing multilabel study, alongside a published input-weighting layer with the same name. Refine the overly categorical selection-versus-extraction rule while keeping attributed source names intact.

@@ -5,7 +5,7 @@ description: 通用工程方法 + benchmark/real-world 双案例论文 Skill 中
 
 # 通用方法与 Benchmark/Real-World 双案例论文
 
-套件版本：`4.1.24`
+套件版本：`4.1.25`
 
 ## 一、任务目标
 

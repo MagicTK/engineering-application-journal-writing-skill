@@ -56,6 +56,10 @@ For an actual prototype, name what it represents and how it is constructed: a cl
 
 For `dynamic` or `adaptive`, identify **what changes**. Input-conditioned attention, group assignments or gates can change on every prediction while trained parameters remain fixed. A recurrent state or rolling reference statistic can also update without fitting model parameters. Online learning or test-time parameter adaptation is a different claim, requiring an actual update rule and its permitted information. P24's elapsed-interval weighting and P04's rolling anomaly-score statistics illustrate different changing objects; neither name alone establishes continual learning. Describe the verified operation directly, such as `input-dependent grouping`, without banning an accurately defined adaptive mechanism.
 
+Adaptation need not involve gradient updates: P05 adjusts semantic reference vectors from unlabeled test-sample predictions while retaining its network forward outputs. Describe that changed object and the data available to it. A whole-target-batch adjustment and a causal stream with only past/current observations have different information access, even when both run at test time. Preserve a source's attributed adjustment name; do not call every changing threshold or reference vector incremental parameter learning.
+
+For incremental learning, specify the new information and model update rather than assuming new classes: P30 updates a classifier under distribution change, while P63 also accommodates changes in measured input dimensions. Continual-learning claims additionally concern learning across a sequence while retaining earlier capability (P64/P65); memory buffers are one possible design, not a requirement. These labels can overlap. State the actual sequence, feedback and retention question instead of forcing them into mutually exclusive categories.
+
 ## Variables And Their Features
 
 | Wording | Meaning and caution |
