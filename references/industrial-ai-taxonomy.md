@@ -34,7 +34,7 @@ Do not infer the challenge from the proposed model name. Remove the model mental
 | M2 | Temporal and sequence representation | CNN, RNN/GRU, Transformer, state-space sequence models, temporal mixing |
 | M3 | Relational and structured modeling | graph learning, topology constraints, causal discovery, knowledge-guided relations |
 | M4 | Multiscale, time-frequency, and fusion modeling | multiscale encoders, spectral analysis, cross-attention, multimodal or multisource fusion |
-| M5 | Generative modeling | GAN, VAE, diffusion, conditional synthesis, reconstruction |
+| M5 | Reconstruction-based and generative modeling | autoencoders, VAE, GAN, diffusion, conditional synthesis; distinguish representation training from sample generation |
 | M6 | Learning and adaptation strategy | transfer, domain adaptation, continual/incremental learning, self-/semi-/weak supervision, test-time adaptation |
 | M7 | Routing, foundation-model, and uncertainty mechanisms | mixture of experts, LLM-assisted semantics, fuzzy systems, probabilistic calibration |
 | M8 | Efficient or intrinsically interpretable mechanisms | low rank, sparsity, distillation, pruning, compact operators, ante-hoc explanations |
@@ -63,6 +63,13 @@ renaming the implemented method.
 | T9 | Human-AI collaborative operation | recommendation plus operator interaction, confirmation, or intervention |
 
 Encode the task from the final decision output, not from the loss function.
+
+A reconstruction objective does not make data synthesis the engineering task.
+An autoencoder may supply features to a classifier or a monitoring statistic;
+a VAE may support quality prediction without generating augmentation samples.
+Keep those final outputs under T2, T3 or T5 as appropriate. Select generation
+quality and synthetic-to-real evidence only when generated data are an actual
+output or training input; see the [role-specific playbook](topic-playbooks.md#7-reconstruction-based-generative-diffusion-or-data-augmentation-methods).
 
 ### O. Engineering Object And Scale
 

@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 65-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 65 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 67-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 67 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计65篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计67篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -77,6 +77,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P63 | [Industrial Fault Diagnosis With Incremental Learning Capability Under Varying Sensory Data](https://doi.org/10.1109/TSMC.2024.3500019) | TSMC: Systems 55(2), 2025, pp.1322-1333. Distinguish subspace/classifier fitting, revealed labels and out-of-sample prediction when inputs change. |
 | P64 | [Adaptive continual fault detection for industrial processes with evolving data distributions](https://doi.org/10.1016/j.compchemeng.2026.109749) | Computers & Chemical Engineering 213 (2026), 109749. Operator-known switches trigger model adaptation; historical feature retention and adaptive thresholds are separate operations. |
 | P65 | [CoUDA: Continual Unsupervised Domain Adaptation for Industrial Fault Diagnosis Under Dynamic Working Conditions](https://doi.org/10.1109/TII.2025.3538135) | TII 21(5), 2025, pp.4072-4082. Sequential target adaptation retains source data and earlier model information while avoiding previous-target-instance replay. |
+| P66 | [A Unified AutoEncoder-Based Representation Learning Framework for Fault Detection With Heterogeneous Feature Dimensions](https://doi.org/10.1109/TII.2025.3611706) | TII 22(2), 2026, pp.799-810. Published team work: distinguish reconstruction/label-dependent training from decoder-free fault-type classification, and input padding from measurement recovery. |
+| P67 | [Industrial Process Fault Detection Based on Siamese Recurrent Autoencoder](https://doi.org/10.1016/j.compchemeng.2024.108887) | Computers & Chemical Engineering 192 (2025), 108887. Paired recurrent representation training supports a latent-space monitoring statistic, not synthetic production-sample generation. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -284,6 +286,16 @@ P64 pp.1,3-6 separates operator-known mode changes, incremental model training, 
 P05 pp.3,6-7 was reread, with p.7 visually checked. Its Algorithm 1 collects selected unlabeled predictions, adjusts category semantic references and then classifies the remaining samples; the text explicitly avoids another network forward/backward pass. This is a source-specific test-time adjustment, not evidence that every adaptation must update weights or that full-batch target access establishes causal streaming. A second matched industrial definition and an exact Chinese record for the complete test-time name remain outside this admission record.
 
 Chinese checks used the original bilingual abstracts/keywords of Acta Automatica Sinica c240805 and c220312. They explicitly pair continual learning with 持续学习 and 连续学习 respectively; c220312 separately identifies the class-incremental subtype. Other requested incremental-learning pages returned access errors and were not treated as read definitions. Translation evidence is separate from industrial-work counts. No source experiment or software implementation was reproduced.
+
+### Reconstruction Roles And Probabilistic Latent Models
+
+On 2026-10-24, P66 p.1, the end of p.2, beginning of p.3 and pp.5-6 were read; p.5 was visually checked. The preliminary AE definition uses encoder/decoder reconstruction, while the proposed representation retains token dimensions, includes label-dependent objectives and discards decoding for classifier-based fault-type prediction. Its Eq.(10) scores reconstructed token features, distinct from the raw-value output described elsewhere. Transfer the explicit target and retained information path, not a generic claim that every AE compresses, imputes or detects through reconstruction residuals. P67 pp.1,3-4 was read for its AE definition, paired recurrent training and latent-space monitoring role. The two works support the base AE architecture, not their full model names or an identical decision rule. Training pairs also do not become independent new production measurements by being combined.
+
+P17 pp.3-4 was reread and P64 p.2 was additionally inspected for their VAE definitions. Both connect probabilistic latent modeling to reconstruction and variational terms, with different downstream uses. P64 explicitly states its prior, approximate posterior, likelihood and ELBO; P17 combines reconstruction and concentration prediction. P17's sampling expression uses a variance-named quantity as its multiplier, and its conditional-posterior notation needs reconciliation with the encoder description. No ambiguous source formula is reproduced as a standard recipe. This reading admits the base name, not calibrated predictive uncertainty, complete theoretical validation or an augmentation path not actually present.
+
+Chinese checks read the original bilingual title/abstract and paired keywords of Acta Automatica Sinica c200684 and c210035; c190857's bilingual stacked-denoising name was also inspected. They verify 自编码器 and 变分自编码器 at the stated base/variant scope, not additional industrial-operation evidence. Other search leads or title-only mentions did not count as definition pairs. No paper, software implementation or experiment was reproduced in this check.
+
+本组按重构目标、训练监督与最终输出区分表征学习、概率潜变量模型、监测与生成。基础术语有独立定义配对，完整模块名不随之通用化；中文另行核验。新增的是写作路由及作用关系，不迁移来源公式疑点、专有生产信息或实验数值。
 
 ## Reusable Lessons / 可迁移结论
 

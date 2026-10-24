@@ -219,21 +219,26 @@ Treat source-specific uses of `reinforcement` by their defined operation. P28 p.
 
 Choose removed/randomized/corrupted-prior controls when they isolate the knowledge claim. Preserve constraints that define a valid process when constructing a perturbation; a physically impossible random graph can be a stress test but not a realistic operating alternative.
 
-## 7. Generative, Diffusion, Or Data-Augmentation Methods
+## 7. Reconstruction-Based, Generative, Diffusion, Or Data-Augmentation Methods
 
 Writing priorities:
 
-- establish whether generation is the primary task or a training aid for diagnosis/prediction;
-- explain the actual need for generation and the limitation addressed; scarcity, imbalance and corruption are possible motivations, not compulsory background claims;
-- state conditioning information and prevent train-test contamination.
+- identify the role: reconstruction-based representation learning, probabilistic latent modeling, generated-data output or downstream augmentation;
+- connect the reconstructed or generated object to its actual consumer, separating training objectives from the retained prediction path;
+- explain the need for that role; scarcity, imbalance and corruption are possible motivations, not compulsory background claims;
+- state conditioning information and the data available during fitting and prediction.
 
-Evidence priorities:
+Select evidence by that role:
 
-- real-test-set downstream performance;
-- diversity, coverage, fidelity, and class consistency;
-- comparisons against simpler augmentation;
-- synthetic-to-real ablations;
-- expert or mechanism checks where meaningful.
+- for representation learning, evaluate the downstream task and use matched objective/path controls when claiming their benefit;
+- for a reconstruction-based detector, define the scored quantity, reference distribution and alarm rule; a latent-space statistic need not be a reconstruction residual;
+- for generated-data output, examine fidelity, coverage, diversity and condition consistency where they answer the stated generation question;
+- for augmentation, evaluate on untouched real test units, compare relevant simpler alternatives and check the synthetic/real training composition;
+- use expert or mechanism checks for physical claims when meaningful, not as a ritual for every decoder.
+
+An autoencoder's reconstruction objective does not make its complete pipeline unsupervised or require every latent representation to have fewer coordinates. P66 pp.2-3 defines encoder/decoder reconstruction, while pp.5-6 retains token dimensions, uses label-dependent objectives and removes decoding from the classification path. P67 pp.3-4 instead connects recurrent encoding and contrastive training to a latent-space monitoring statistic. In abstracts and contributions, state how the learned representation supports the claimed output; do not replace either actual path with synthetic-data generation, imputation or a mandatory residual threshold. Keep source-specific full model names attributed.
+
+For a VAE, identify the latent prior, approximate posterior, decoder likelihood and variational objective before transferring the name (P17 pp.3-4; P64 pp.2-3). A stochastic latent variable is not by itself proof of a variational objective or calibrated predictive uncertainty. Check whether an encoder head returns a standard deviation, variance or log variance: these require different transformations in Gaussian sampling. State the actual prediction rule, such as a latent mean or an average over samples, if it affects the claimed output. Do not import an ambiguous source formula or imply that every application must produce uncertainty intervals or synthetic samples. Paired base-name and Chinese-translation records are in the [terminology bank](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
 
 For generation as the task (P32), distinguish fidelity, diversity, condition consistency and downstream utility. Downstream utility can be one evaluation dimension without making diagnosis the primary task. P32 motivates generation with data availability, but this does not require another manuscript to assert an unobserved shortage. For augmentation as the means (P35), trace real training samples through the generator to the downstream learner, then evaluate that learner on untouched real test units. Do not put an augmentation-only generator into the diagnostic inference path. A latent-space generator also needs its encoder/decoder roles made clear; lower latent dimensionality alone does not measure total generation cost.
 
