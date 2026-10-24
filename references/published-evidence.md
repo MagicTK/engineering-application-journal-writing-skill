@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 83-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 83 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 84-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 84 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计83篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计84篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -95,6 +95,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P81 | [Dual Attention-Based Temporal Convolutional Network for Fault Prognosis Under Time-Varying Operating Conditions](https://doi.org/10.1109/TIM.2021.3053992) | TIM 70 (2021), 3512210. Section III-B defines a causal dilated sequence filter before the proposed prognostic architecture. This layer definition does not certify every later temporal operation or physical causal effect. |
 | P82 | [Root cause diagnosis in multivariate time series based on modified temporal convolution and multi-head self-attention](https://doi.org/10.1016/j.jprocont.2022.06.014) | JPC 117 (2022), pp.14-25. Section 3.1 explains causal temporal feature extraction before separate relationship learning and root scoring. Full MTCMS naming and causal-verification claims remain attributed, not generic module definitions. |
 | P83 | [TARD: Test-time domain adaptation for robust fault detection under evolving operating conditions](https://doi.org/10.1016/j.ress.2025.112135) | RESS 271 (2026), 112135. Read in [author v2](https://arxiv.org/abs/2507.16354v2); target-side fitting and test-time statistics have different roles. Journal-version formula identity is not certified. |
+| P84 | [Robust fault diagnosis of a high-voltage circuit breaker via an ensemble echo state network with evidence fusion](https://doi.org/10.1007/s40747-023-01025-3) | Complex & Intelligent Systems 9 (2023), pp.5991-6007; publisher open version. Adjacent electrical-equipment study: pp.8-10 separate mass-combination preliminaries, source-specific weighting and complete conflict. Full IDS-ESN claims are not generalized. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -562,6 +563,29 @@ The original [NIST paired-observation guidance](https://www.itl.nist.gov/div898/
 P52 pp.2-3 was reread, with p.3 visually inspected for Fig.2, Algorithm 1 and the probability/evidence definitions. P75's abstract, Section II definitions across pp.2-3 and the p.4 inference description were read; p.3 was visually inspected. These distinct TII/TIM works share authors and an EVGG lineage. Their matched base is nonnegative class evidence parameterizing a Dirichlet model, not independent invention or general admission of their full named networks/losses. The scoped name/quantity records distinguish belief masses, expected probabilities and uncertainty. No complete loss, calibration guarantee, open-set performance or experiment was reproduced.
 
 The original [Chinese review, jig.250475](https://doi.org/10.11834/jig.250475), bilingual title/abstract/keywords and Sections 1.2-1.3, PDF pp.1-2,5-6, verifies 证据深度学习 and 主观逻辑; p.5 was visually inspected. Its defined b/u wording is recorded separately in the terminology bank, not promoted into all translation variants. Mathematical mapping and epistemic/aleatoric interpretation claims elsewhere in the review are not certified by this terminology reading. A mechanical-fault article's template-only Chinese page and an inaccessible publisher method page were not used to complete translation or operation records. Translation/background pages do not enlarge the engineering index; its current total is stated at the beginning.
+
+## Mass Combination And Decision / 质量合成与决策
+
+Definition reading on 2026-10-25 revisited P49 p.3, Eqs.(6)-(7), and read P84
+p.8, Eqs.(8)-(11), in the publisher version. Both define the normalized
+intersection-product rule over a hypothesis frame; P84 pp.9-10 adds its own
+source-weighting design and discusses complete conflict. These are two matched
+theoretical definitions, not certification of two unmodified implementations.
+P49 pp.5-6, Eqs.(28)-(31), instead specifies learned response weighting and
+feature summation in its network. Keep that operation distinct from its
+preliminaries. Selected P49 p.3 and P84 pp.8-10 were visually inspected; neither
+complete implementation nor experiment was reproduced.
+
+The original [BUPT article](https://html.rhhz.net/buptjournal/html/20190104.htm),
+paired abstracts/keywords and Section 1, Definition 1, Eqs.(1)-(2), supports
+Dempster合成规则. The original [AAS c190676 page](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190676?viewType=HTML),
+paired abstracts and Table 3, supports Dempster组合规则; its readable content is
+not a complete method-body check. These translation records do not enlarge the
+engineering index. Direct AAS downloads failed certificate verification; no
+certificate checks were disabled, and the original-page web reading is recorded
+separately from that failed download.
+
+基础公式、质量构造、来源权重及最终决策应分开核对。全集质量与空集冲突质量不同，更多来源不直接证明独立或校准。迁移实际定义与衔接方式，不迁移完整改进模块名或来源的可靠性保证。
 
 ## Reusable Lessons / 可迁移结论
 

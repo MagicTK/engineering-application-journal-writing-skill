@@ -341,6 +341,37 @@ Connect each output to its actual consumer: a class decision may use p, while a 
 
 In results about a defined calibration bin, report the observed frequency and confidence gap for that bin. Carry the scope in the result itself, for example, `Confidence agrees with observed accuracy in this bin, whereas the comparison model has a larger confidence-accuracy gap.` When no population-wide claim remains, put the reason for refusing such a guarantee in the author note rather than repeating it as a closing negative sentence. Retain a substantive negative finding or necessary limitation when it changes the result's interpretation.
 
+## Combining Belief Masses
+
+When the implemented operation is Dempster's rule, identify the common hypothesis
+frame and the mass assigned to its subsets. For nonempty A, the normalized rule
+is `m(A) = sum_{B intersect C = A} m1(B)m2(C)/(1-K)`, where
+`K = sum_{B intersect C = empty} m1(B)m2(C)` and `m(empty)=0`.
+It requires `K < 1`; for `K = 1`, the normalized expression is undefined.
+A declared abstention or an explicitly specified alternative can handle that
+case, but adding an epsilon silently changes the computation. Keep numerical
+tolerances and fallback behavior in Methods rather than inventing them while
+polishing an abstract. The [definition record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+separates the base rule from source-specific improved designs.
+
+Keep the objects distinct: a softmax-weighted feature sum combines feature
+vectors, a class-evidence head constructs masses, and the rule combines mass
+functions. Source discounting, when actually implemented with `0 <= r <= 1`, can
+scale non-total masses by r and assign `1-r+r*m(Theta)` to the total frame; it is not merely
+renormalizing the surviving singleton masses. Define whether the total-frame
+mass represents uncommitted support, and distinguish Theta from the empty set.
+Separate heads or sensors do not alone establish independent evidence. Nor is
+an agreement-derived or learned weight automatically calibrated reliability.
+
+Connect combined masses to the actual task decision. If a probability transform
+is used, state its definition; the mass on a set of hypotheses is not already a
+probability for one class. Do not silently substitute class renormalization,
+discard total-frame mass, or add rejection to a classifier that has none. A
+positive abstract can connect source outputs, the distinguishing combination
+principle and the final decision without reciting the full algebra. Put unresolved
+source-dependence and calibration checks in author notes unless they qualify a
+retained claim. A correct base formula is not itself a new contribution.
+
 ## Reporting And Scope
 
 `Real-world data` describes provenance, not online operation. Do not routinely prefix it with `offline`; retain the distinction if retrospective versus prospective evaluation matters. Class imbalance belongs in dataset/metric analysis when relevant. Mention it in an abstract or contribution only when it is part of the research problem or supported advance, not merely a property of one case.

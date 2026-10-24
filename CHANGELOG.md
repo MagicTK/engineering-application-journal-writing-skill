@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.54 (2026-10-25)
+
+- Add a scoped Dempster combination definition pair and independently checked Chinese wording variants. Keep theoretical definitions, actual network operations and paper-specific improved designs distinct.
+- Connect encoded evidence, mass construction, source weighting, combination and diagnostic decisions in existing bilingual guidance. Preserve total-frame support and declared conflict handling without inferring source independence or calibrated reliability.
+- Add one adjacent published-work record, not a topic or template. Real manuscripts, figures, experimental results and Overleaf projects are unchanged.
+
 ## 4.1.53 (2026-10-25)
 
 - Pair a source-specific semantic adjustment with a version-qualified published process TTA account, and independently check 测试时适应 in an original bilingual scholarly page. Distinguish exact name matches, operational equivalents and unverified final-version formulas.

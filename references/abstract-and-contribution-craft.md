@@ -190,6 +190,16 @@ training, name the trained representation and retained predictor rather than
 inventing a final feature-fusion module. Place quantity/interpretation checks in
 the author note; keep supported task meaning and empirical trade-offs in prose.
 
+**Evidence combination:** connect the encoded outputs to the kind of combination
+actually performed and to the final diagnostic decision. A feature sum feeds a
+classifier; a defined mass-combination rule produces masses that need their own
+decision rule. When implemented, a concise connection is: "Each stream supplies
+class-support masses. Their combination yields the support used for the final
+fault decision." Add the actual differentiating weighting or conflict treatment,
+not a generic claim that combination guarantees reliability. A fallback need not
+appear in every abstract, but retain it when it defines the evaluated output.
+See [the mass-to-decision check](terminology-decisions.md#combining-belief-masses).
+
 ## 4. Contributions Are Advances, Not An Execution Log
 
 For each candidate contribution, privately record: closest prior capability; remaining requirement; actual change; evidence that discriminates the change; scope. Do not state "the first" without a defensible literature search.

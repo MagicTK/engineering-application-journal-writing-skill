@@ -272,7 +272,15 @@ Write the actual connection positively: when implemented, `Input-dependent weigh
 
 For the checked Dirichlet class-evidence formulation (P52/P75), connect the encoder to the evidence head, then distinguish the expected class probabilities from the uncertainty quantity and its actual use. The same head can supply these different outputs; they need not form a serial feature-fusion pipeline. See [the quantity definitions](terminology-decisions.md#evidential-classification-quantities). A smaller reported uncertainty is not itself an observed diagnostic improvement. Locate any advance in the particular learning/decision design and evidence, not merely the use of this existing base method. Other priors, regression outputs and evidence-combination rules need their own definitions.
 
-中文也应先交代量的对象和用途：用于特征加权、构造训练扰动、描述类别分布，还是控制最终拒识。它们可以共同服务诊断，但不能只因都与“不确定性”有关就写成同一类机制。方法段写清实际操作，实验段再报告已检验的作用，不必为普通分类器额外虚构拒识或校准任务。
+For actual mass-function combination, preserve the map from encoded evidence to
+mass construction, any source weighting, the combination operator and the final
+decision. P49/P84 supply a scoped base-rule definition record, not proof that
+every network named evidence fusion implements it. Distinct heads do not prove
+source independence. Define total-conflict behavior when relevant and distinguish
+uncommitted mass from a new unknown-fault class. See
+[the combination check](terminology-decisions.md#combining-belief-masses).
+
+中文也应先交代量的对象和用途：用于特征加权、构造训练扰动、描述类别分布，还是控制最终拒识。它们可以共同服务诊断，但不能只因都与“不确定性”有关就写成同一类机制。实际合成质量函数时，连清编码证据、质量构造、源加权、合成操作及最终决策，P49/P84只支持限定基础规则。不同头不证明独立，未分配质量也不直接新增未知故障类别。方法段写清实际操作，实验段再报告已检验的作用，不必为普通分类器额外虚构拒识或校准任务。
 
 Do not treat all fuzzy mechanisms as a rule base. P27 places fuzzy prediction
 after deep feature extraction, P28 uses fuzzy clustering to reinforce reservoir
