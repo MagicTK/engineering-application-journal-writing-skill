@@ -297,6 +297,16 @@ Chinese checks read the original bilingual title/abstract and paired keywords of
 
 本组按重构目标、训练监督与最终输出区分表征学习、概率潜变量模型、监测与生成。基础术语有独立定义配对，完整模块名不随之通用化；中文另行核验。新增的是写作路由及作用关系，不迁移来源公式疑点、专有生产信息或实验数值。
 
+### Supervision Conditions And Joint Objectives
+
+On 2026-10-24, P17 p.2 and pp.3-4 was reread for measured/unmeasured quality targets and joint reconstruction/prediction learning. P21 pp.3-4 and its already checked pp.5-6 distinguish labeled classification, self-generated temporal objectives and diagnostic inference. P26 pp.3-4 defines labeled class training and transformation-identity prediction on unlabeled series through a shared encoder. Together they support semisupervised learning; P21/P26 separately support self-supervised learning with different constructed targets. These are not mutually exclusive labels or evidence that every self-supervised method must pretrain then fine-tune. The augmentation assumptions, all equations and reported gains are not independently certified by this role reading.
+
+P22 pp.2-4 was reread for segment-level training labels and point-level outputs. P25 pp.1-5 distinguishes sparse quality observations, input completion and source-specific weakly-supervised branching/guidance. Its label use differs from P22's coarse granularity; the repeated adjective does not admit one common operator or require renaming either paper. P25's imputation-mask and variational-notation ambiguities remain outside any validated implementation recipe. P20 pp.3,6 was screened for its contrastive role, but was not needed as a second self-supervision definition in this check.
+
+Independent Chinese checks read the bilingual abstracts and keywords of Acta Automatica Sinica 10.3724/SP.J.1004.2013.01871 and c220421 for 半监督学习 and 自监督学习, and the original bilingual title/abstract of Journal of Computer-Aided Design & Computer Graphics 10.3724/SP.J.1089.2021.18594 for 弱监督. A different requested AAS page timed out or returned forbidden access and was not counted. These translation sources do not add engineering-work IDs. No new engineering source, research experiment or complete implementation validation is claimed.
+
+本组按真实标注的可用性/粒度、自建训练目标及训练阶段分别组织写作。联合训练不能被改写为先预训练后微调；变换种类与伪目标不能被计作新增实测故障或质量标注。基础名称配对与中文译名分别核查，完整模块名及弱监督不同用法不混为一物。
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.
