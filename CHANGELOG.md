@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.16 (2026-10-24)
+
+- Add a paired classical slow-feature-analysis definition and separately verified Chinese wording. Extend the selected index to 55 published works with explicit survey/application roles and source-specific limits, not whole-bank certification.
+- Clarify temporal scope, fixed versus re-estimated projections, parallel representation streams and training objectives in the existing dynamic-model guide. Preserve ordinary smoothing and genuinely new author-defined names instead of imposing SFA on every temporal model.
+- Add a feature-scale and time-axis check before interpreting reduced difference energy as better dynamics modeling. Five existing reference files carry the substantive changes; no new topic guide or template. Do not transfer reconstruction/centering, independence or efficiency claims merely because they appeared in a published source.
+
 ## 4.1.15 (2026-10-24)
 
 - Add scoped two-source records for distribution alignment and maximum mean discrepancy, with separate bilingual scholarly translation checks. Revisit four existing sources; the selected index remains 52 works, not a completed whole-bank audit.

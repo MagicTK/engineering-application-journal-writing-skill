@@ -4,7 +4,7 @@
 
 This reference supports writing for industrial, control, automation, process,
 manufacturing, and equipment-oriented journals. The current release provides a
-[52-paper published evidence index](published-evidence.md) and
+[55-paper published evidence index](published-evidence.md) and
 [context-sensitive decisions](terminology-decisions.md). Earlier private corpus
 frequency counts are omitted because this public package cannot reproduce them.
 Author drafts are not terminology authorities; computer-science channel-strategy
@@ -323,9 +323,10 @@ original semantic summaries, not extracted source passages.
 | reconstruction loss | P17 pp.4-5, Eqs.(6), (14), compares reconstructed inputs with input targets alongside concentration prediction; P33 p.6, Eq.(18), compares decoded sequences with observations using a mask. | Shared reconstruction objective, not a universal norm, denominator or scoring subset. State the target, mask and reduction actually used. Reconstruction may regularize a predictor without producing completed measurements at inference; a lower training loss does not measure unknown physical values. |
 | distribution alignment | P10 pp.5-6, Eqs.(15)-(17), reduces source/target feature-distribution discrepancy through a training objective; P44 pp.4-5, Eqs.(12)-(15), uses domain-adversarial and class-weighted distribution objectives. | Common distribution-matching purpose, different criteria, feature sets and supervision. Not timestamp synchronization, sample pairing or proof of retained fault semantics. Distinguish a marginal from a class-conditional target and measured reduction from an optimization aim. |
 | maximum mean discrepancy (MMD) | P10 p.5, Eq.(15), defines a kernel mean-embedding discrepancy for source/target features; P32 p.4, Eqs.(10)-(11), defines a kernel discrepancy between sampled noise and predicted noise within diffusion training. | Same base discrepancy, different operands and loss roles. P32's full Ada-MMD name and mutual-information wording do not follow from the base definition. P44's introductory mention alone is not a third operational definition. Check the actual estimator, kernel and aggregation before reproducing a formula. |
+| slow feature analysis (SFA) | P54 p.3, Eqs.(5)-(8), and P55 p.3, Eqs.(1)-(4), define mappings that minimize average squared temporal derivatives under zero-mean, unit-variance and decorrelation constraints. | Matching classical definitions in an industrial application and a methodological survey, with shared foundational lineage, not two independent inventions. This does not admit every supervised, probabilistic or deep variant as the same optimization. Slowness is temporal variation relative to feature scale, not low sampling rate, computational speed, quality relevance or low-pass filtering. P34 and P53 illustrate different adaptations whose stated objectives must be checked separately. |
 
 Chinese wording is independently supported for selected entries below. These
-translation sources do **not** enlarge the 52-paper engineering corpus or certify
+translation sources do **not** enlarge the 55-paper engineering corpus or certify
 the performance/style claims made by their authors.
 
 | Chinese check | Primary online locator and checked content | Status and transfer boundary |
@@ -351,6 +352,7 @@ the performance/style claims made by their authors.
 | reconstruction loss / 重构损失 | [Advanced Engineering Sciences, 2022, 54(5):240-248](https://scuaes.ijournals.cn/html/2022/5/202100675.html), bilingual abstracts and paired keywords | Verified loss-name translation in image inpainting. This does not establish a universal mask, industrial restoration capability or equivalent wording for every reconstruction objective. |
 | distribution alignment / 分布对齐 | [Acta Automatica Sinica, c250653](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250653?viewType=HTML), bilingual abstracts | Verified wording for a representation-distribution constraint in KPI forecasting with missing variables. The abstract is translation evidence, not verification of its full architecture, theory or results. |
 | maximum mean discrepancy / 最大均值差异 | [Acta Automatica Sinica, c190593](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190593?viewType=HTML), bilingual abstracts | Verified base loss/regularizer wording in bearing fault detection. Does not admit the source's full improved variant or establish equivalence to mutual information. |
+| slow feature analysis / 慢特征分析 | [Acta Automatica Sinica, c201035](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c201035?viewType=HTML) and [c230154](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c230154?viewType=HTML), bilingual abstracts and keywords | Both explicitly pair the base name with SFA in process operating-performance assessment. Their KPI-driven and distributed/dynamic variants are not thereby admitted as universal module names. Translation evidence does not validate those variants' equations or experiments. |
 
 Other Chinese counterparts and other method-family names have not all received
 this completed paired record. Keep them as source-attributed or definition-based
