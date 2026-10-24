@@ -28,6 +28,16 @@ connection is not automatically an independent contribution.
 
 Mark each operation as prediction-time computation, training objective, pretraining, or test-time adaptation. These are different relationships, not successive boxes in one forward pass. An alignment loss can shape an encoder during training without receiving its output during deployment; a reconstruction decoder can be absent at inference. When this distinction is central, the abstract needs one clear training-to-prediction connection rather than a fictional sequence. Published examples P10, P17 and P21 illustrate different training interactions; P25 even uses different branch components for training and prediction.
 
+For active label acquisition, connect the sample-selection principle to the
+annotations obtained, the learner they update and the predictor retained for
+the engineering task (P89-P91). This is a learning relationship, not a final
+fusion of labels and sensor features. State the distinguishing acquisition
+principle rather than treating a routine query loop as novelty. Put ordinary
+pool-separation safeguards and detailed budget accounting in settings or author
+notes; retain a simulated-annotation condition when needed to interpret a cost
+claim. A result at equal label budgets is not already a result about less human
+time or fewer labels at equal predictive performance.
+
 For threshold-based feature processing, connect the threshold's input to the
 transformed features and their next use. A verified design may compute thresholds
 from encoded measurements, shrink the features and combine them with a bypass

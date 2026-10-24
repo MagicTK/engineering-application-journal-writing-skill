@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.58 (2026-10-25)
+
+- Clarify the compact evaluation-query rule in both experiment entrypoints so it does not forbid legitimate training-episode or active-acquisition labels. Preserve final-evaluation independence without classifying permissions from the word query alone.
+- Add a scoped active-learning source group and independently checked Chinese wording. Connect acquisition, annotations, learner updates and final diagnosis in existing bilingual guidance, not a new topic/template.
+- Distinguish initial/new labels, cached reuse, simulated annotation, matched-budget accuracy and measured human effort. Three selected published works include two sharing a research line; full source strategies and reported savings are not certified. Real manuscripts and results remain unchanged.
+
 ## 4.1.57 (2026-10-25)
 
 - Add a scoped soft-thresholding definition pair from published process/machinery studies and separately checked Chinese function/operation names. Keep complete proposed modules attributed and exclude source formulas that contradict their stated range.

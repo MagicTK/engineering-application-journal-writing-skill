@@ -1,0 +1,13 @@
+# Final Annotation-Acquisition Review
+
+One fresh task context answered the unchanged two fictional requests on the final frozen v4.1.58 source; only the read root changed. Maintainer semantic review, not an independent second grader or source-paper reread by the tester.
+
+- A passes: acquired training annotations, supervised training-episode query labels and final evaluation labels retain different permissions. The final-evaluation-label embedding choice remains leakage; the specified physical-excitation design is not annotation acquisition.
+- It correctly reports 30 newly queried and 42 total acquired labels, with no multiplication for five cached training epochs. It distinguishes simulated oracle access from measured expert labor and model-generated targets from acquired annotations.
+- It retrieves the P89/P90 base operation pair and P91's additional shared-lineage context, plus the two separately checked Chinese pages at their actual reading depths. Full strategy names, budget conventions, claimed savings and deployment are not inherited. An unlisted approved proposal is not rejected merely for being new.
+- The 33-word method sentence preserves the authorized acquisition/refit arrangement. Its evaluation-label qualifier explains the requested role distinction; it is not a universal template for manuscript methods.
+- B's 121-word abstract and 39-word candidate contribution retain uncertainty/coverage scoring, true-label acquisition, pool removal, enlarged-set refitting and the retained known-class predictor. They preserve the simulated-annotation condition and the actual two-case matched-initial-seed/matched-new-label comparison without inventing pseudo-labeling, new-class discovery, a reinforcement policy, excitation, measured labor savings or deployment.
+
+The final abstract leaves the routine model-selection safeguard to the author note while retaining the information needed to interpret simulated annotation and the result. This is an observed placement choice in one response, not a controlled general writing improvement.
+
+Two completed contexts each answered two requests, not four independent model experiments. Baseline core scientific and writing decisions already passed; the compact rule's scope and maintained evidence availability improved. Preset history is disclosed, neither context is claimed memory-blank, and no complete internal service trace, whole-bank terminology/translation certification or scientific reproduction is established. Public normalization changes only wrappers, local links/line suffixes and whitespace; raw records remain private. Exercise word limits are not general journal requirements.

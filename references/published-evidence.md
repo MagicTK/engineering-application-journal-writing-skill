@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 88-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 88 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 91-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 91 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计88篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计91篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -100,10 +100,40 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P86 | [A Hardware-Friendly Approach Towards Sparse Neural Networks Based on LFSR-Generated Pseudo-Random Sequences](https://doi.org/10.1109/TCSI.2020.3037028) | TCSI 68(2), 2021, pp.751-764; [research-group-hosted published PDF](https://icsrl.ece.gatech.edu/files/2021/06/09264691.pdf). Adjacent sparse-hardware study: selected parameters are regularized, zeroed and retrained; storage/indexing and execution are separate considerations. Full LGPS designs remain attributed. |
 | P87 | [Multiscale Convolutional Neural Network With Self-Attention Mechanism and Soft Thresholding for Industrial Process Fault Diagnosis](https://doi.org/10.1109/TSMC.2026.3652405) | TSMC: Systems 56(4), 2026, pp.2647-2659. Published PDF p.3 Eq.(4) defines feature shrinkage; the adjacent threshold generator and full AM-MAST design remain source-specific. |
 | P88 | [Joint Threshold Learning Convolutional Networks for Intelligent Fault Diagnosis Under Nonstationary Conditions](https://doi.org/10.1109/TIM.2023.3301863) | TIM 72, 2023, Art.3526611. Adjacent rotating-machinery study: p.3 Eq.(2) defines soft feature thresholding; pp.3-4 distinguish filters, a reference path and fusion. Printed sigmoid/range inconsistencies are not imported. |
+| P89 | [Fault Diagnosis of Rotating Machinery With Limited Expert Interaction: A Multicriteria Active Learning Approach Based on Broad Learning System](https://doi.org/10.1109/TCST.2022.3200214) | TCST 31(2), 2023, pp.953-960. Adjacent machinery study: p.3 Section II-B explicitly links pool selection, expert labels, acquisition budgets and classifier updating. Full MCAL/BLS designs and annotation-time claims remain source-specific. |
+| P90 | [Fusing information entropy and similarity: A novel active learning strategy for chemical process fault classifications](https://doi.org/10.1016/j.chemolab.2023.104821) | Chemometrics and Intelligent Laboratory Systems 237 (2023), Art.104821. Sections 3.1-3.3, pp.4-5, define sample acquisition, external labeling and classifier refitting for a chemical-process benchmark. Its full E-ECos strategy and pseudocode details are not generic base definitions. |
+| P91 | [A Discrimination-Guided Active Learning Method Based on Marginal Representations for Industrial Compound Fault Diagnosis](https://doi.org/10.1109/TASE.2023.3325271) | TASE 21(4), 2024, pp.6411-6422. Adjacent machinery study: p.4 Section II-B describes queried expert labels and subsequent classifier retraining. It shares authors/research lineage with P89, not an additional independent invention of active learning. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Acquired Labels, Learner Updates And Final Diagnosis
+
+P89 pp.1,3, P90 pp.1,4-5 and P91 pp.1,4 were selected, read and visually
+inspected. P89 Section II-B, P90 Section 3.1/Fig.4/Table 1 and P91 Section II-B
+explicitly connect selection from unlabeled measurements, external annotation
+and learner updating. These are three distinct journal works in process and
+adjacent machinery settings, with shared authors/lineage for P89/P91. They support
+a scoped acquisition-based learning category, not every full strategy name,
+source normalization, budget symbol, loop index, split or claimed saving. P90's
+published year is 2023; navigation labels are not publication metadata.
+
+Original paired abstracts in [Journal of Software 7073](https://www.jos.org.cn/jos/article/abstract/7073)
+and original bilingual title/abstracts in [Journal of System Simulation
+20-0093](https://www.china-simulation.com/CN/abstract/abstract2630.shtml) separately
+verify active learning / 主动学习 in selective-annotation contexts. The readable
+pages do not provide a complete method audit. A timed-out HTML body or another
+unavailable abstract does not add evidence. These wording checks do not add two
+English industrial-definition IDs or validate full model names and cost claims.
+
+The writing connection is acquisition criterion, received labels, updated learner
+and retained task predictor. It is not inference-time fusion of annotation with
+sensor features. Distinguish acquired training labels and training-episode query
+labels from labels reserved for final evaluation. Label reuse does not multiply
+acquisition counts; a benchmark oracle can reveal stored labels without a live
+expert interaction. Explain a matched-budget predictive result at that level
+instead of inventing measured labor savings or fewer labels at equal accuracy.
 
 ### Thresholded Features, Bypasses And The Evaluated Benefit
 

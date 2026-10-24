@@ -7,7 +7,7 @@ description: Design, audit, and organize experimental evidence for engineering-a
 
 [中文执行版](../../skills-zh/engineering-experiment-evidence-design-zh/SKILL.md)
 
-Suite version: `4.1.57`
+Suite version: `4.1.58`
 
 ## Mission
 
@@ -65,7 +65,7 @@ Do not call two datasets complementary unless their evidential roles are stated.
 
 Reuse source-verified settings before asking the author. Record source version/page or file/config/hash, raw points, windows, independent events, class range, sampling interval, condition splits and unlabeled-data access; same dataset name is not a version identifier. Use [the data-version record](../../assets/templates/data-version-record.md) when these facts affect comparability. Diagnose transcription/export conflicts before proposing a matched rerun; do not silently blend result populations.
 
-Define low-label, few-shot, zero labeled target-condition data, and unseen fault-class zero-shot separately. Query labels cannot select the model, and adjacent/non-overlapping windows do not by themselves constitute independent shots. Verify the actual condition-by-class file matrix rather than assuming a full factorial dataset. Apply [task and representation boundaries](../../references/research-planning-and-contribution.md) when missingness, tokenization, multi-label claims, or early-fault timing matters.
+Define low-label, few-shot, zero labeled target-condition data, and unseen fault-class zero-shot separately. Labels reserved for final evaluation cannot select the model. Training-episode query labels and labels acquired through a declared active-learning pool have different, potentially valid learning roles; identify the actual stage and permissions. Adjacent/non-overlapping windows do not by themselves constitute independent shots. Verify the actual condition-by-class file matrix rather than assuming a full factorial dataset. Apply [task and representation boundaries](../../references/research-planning-and-contribution.md) when missingness, tokenization, multi-label claims, or early-fault timing matters.
 
 ## 4. Audit Data Provenance And Splits
 

@@ -7,7 +7,7 @@ description: 工程应用论文实验与证据设计 Skill 中文执行版。用
 
 [English](../../skills/engineering-experiment-evidence-design/SKILL.md)
 
-套件版本：`4.1.57`
+套件版本：`4.1.58`
 
 ## 一、任务目标
 
@@ -65,7 +65,7 @@ description: 工程应用论文实验与证据设计 Skill 中文执行版。用
 
 先复用带来源的数据设置，再问作者必要的未知字段。记录版本/页码或文件/配置/哈希、原始点数、窗口数、独立事件数、类别范围、采样间隔、工况划分和未标注数据访问；同名不等于同版本。影响可比性时用[数据版本表](../../assets/templates/data-version-record.md)。先判断转录、导出或实质协议冲突，再决定是否需要同协议重跑，不混合不同结果总体。
 
-少标签、few-shot、目标工况零标签与未见故障类别zero-shot分别定义；查询标签不能选模型，相邻或不重叠窗口也不自动成为独立shot。工况×故障覆盖从真实文件核验，不假定全因子数据。缺失、tokenization、多标签或故障早期时间涉及主张时，使用[任务与表示边界](../../references/research-planning-and-contribution.md)。
+少标签、few-shot、目标工况零标签与未见故障类别zero-shot分别定义；保留作最终评价的标签不能选模型。训练episode的query标签、声明允许的主动学习池所取得的标签具有不同且可能合法的学习角色，须核阶段与权限。相邻或不重叠窗口也不自动成为独立shot。工况×故障覆盖从真实文件核验，不假定全因子数据。缺失、tokenization、多标签或故障早期时间涉及主张时，使用[任务与表示边界](../../references/research-planning-and-contribution.md)。
 
 ## 五、核查数据来源与划分
 

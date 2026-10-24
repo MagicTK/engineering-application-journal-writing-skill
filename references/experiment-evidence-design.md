@@ -121,6 +121,19 @@ Report method variants once in the settings. Tables may use shorter names when u
 
 For a limited-label comparison, record unique source/base annotations, current-task support labels and derived training examples separately. Repeated episodes and augmented views can reuse the same labels. Match earlier training/semantic resources when the claim is about that comparison, or disclose the relevant difference and scope the finding accordingly; a pretrained model is not invalid merely because it used more historical labels. A `K`-shot result concerns its declared support budget, not automatically the total human annotation cost. A total-cost claim also needs the relevant earlier labeling resources and a defined comparison. Use the [few-shot distinctions](topic-playbooks.md#2-scarce-labels-few-shot-zero-shot-weak-or-self-supervised-learning) only for studies with this claim, not as extra requirements for every diagnostic paper.
 
+For active acquisition, report the budget unit: new distinct labeled samples,
+annotation requests, rounds, assays or measured labor are different quantities.
+Keep initial labels, newly acquired targets and generated targets separate;
+reusing cached labels in training does not create additional annotations. Compare
+selectors with matched initial resources, permitted acquisition pools and stated
+budgets. Higher accuracy at a fixed budget and fewer labels at a fixed accuracy
+are different findings. Revealing existing benchmark labels can evaluate a
+selection policy without measuring real expert time. Separate acquisition and
+final-evaluation units before windowing where needed; a stream must also specify
+prediction and feedback order. Record stopping/model choices without using the
+labels reserved for final evaluation. P89-P91 support the acquisition role, not
+automatic validation of all source splits, budget symbols or savings claims.
+
 Input adaptation such as interpolation, aggregation, masking, or resampling is normally a documented setting, not a separate method row. Select it without test-set access. Do not import published single-rate results into a newly constructed multi-rate, missing-data, multimode, or cross-domain setting unless information access and data construction are demonstrably identical.
 
 ## 5. Ablation Design

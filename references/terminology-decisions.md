@@ -121,6 +121,7 @@ State which object is reduced. Several retained spectral or statistical descript
 
 | Term or object | Meaning to establish |
 |---|---|
+| query label | Identify the phase and role: supervision in a training episode, a newly acquired training annotation, or a label reserved for final evaluation. The word query alone does not determine permission. |
 | missing annotation | An unknown target, not a confirmed negative; define whether absence applies to an entire sample or selected labels |
 | candidate-label set | Alternative possible targets; state how many may be true and whether the true target is guaranteed to be included |
 | multilabel target | Multiple labels may genuinely apply to the same sample; this is not ambiguity merely because more than one entry is positive |
@@ -129,6 +130,16 @@ State which object is reduced. Several retained spectral or statistical descript
 | noisy label / noisy measurement | Error in the annotation/target versus corruption of the input observation; identify which is affected and which reference supports evaluation |
 
 P39-P40 are adjacent machinery examples for these distinctions, not evidence that all process-industry supervision has the same form. P40's neighborhood-derived label values illustrate a learned object; a physical severity interpretation requires an independently justified relation to damage, intensity or another stated severity target. Do not rename sound paper-specific terminology globally, or infer field-wide usage from a title.
+
+For active learning, follow the selection, external annotation and learner update
+(P89-P91). Labels obtained from an authorized acquisition pool can legitimately
+train the predictor; labels reserved for final evaluation cannot select it.
+Model-generated targets are a different source of supervision. Active acquisition
+and semisupervised objectives can coexist, but merely scoring an unlabeled pool
+does not specify such an objective. Read what is selected: samples for annotation
+and physical inputs for fault-hypothesis discrimination are different actions.
+Keep the actual budget unit and acquisition phase rather than assigning all
+methods one query count, new-class rule or real-time interaction claim.
 
 For zero-shot diagnosis, separate **measured training examples, class semantics
 and synthesized training objects**. P05/P06 provide descriptions of unseen faults

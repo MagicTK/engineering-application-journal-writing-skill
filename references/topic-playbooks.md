@@ -63,6 +63,7 @@ Branch by the actual supervision arrangement:
 | Zero-shot diagnosis | Which fault classes lack labeled real training measurements; where their semantics come from; whether generated features or unlabeled unseen-class measurements enter learning/adaptation | Verify the acquired-training class split and semantic source, not merely class IDs appearing in a loss; use seen/unseen balance or harmonic metrics for the declared joint-class evaluation, not automatically for unseen-only testing |
 | Semisupervised classification | Which samples are labeled, how unlabeled data affect learning, and whether source and target distributions differ | Matched label budgets and unlabeled-data controls; separate class-prior imbalance from feature-distribution shift |
 | Semisupervised regression/soft sensing | Which quality targets are observed and how unlabeled process measurements constrain the predictor | Regression error in the target's units, label-budget sensitivity and a relevant supervised control; no seen/unseen class metric without classes |
+| Active annotation acquisition | Which samples or targets can be requested, from which pool/stream, at what cost and before which learner update | Match initial labeled resources and acquisition budgets; keep labels reserved for final evaluation separate and distinguish simulated label revelation from measured human effort |
 | Weak segment/bag labels | The labeled unit and claimed prediction unit; distinguish bag classification from an explicitly defined finer-output mechanism | Evaluate at the claimed granularity; bag accuracy alone does not validate point localization, and a bag-only task need not invent point outputs |
 | Candidate-label ambiguity | Whether one true label lies in a supplied candidate set, and how alternatives are resolved | Evaluate against independently established target labels; a candidate set is not a statement that all listed faults coexist |
 | Inaccurate labels or targets | Which annotations or assay values may be wrong, how this was established, and what the learning mechanism changes | Distinguish sensor corruption from target corruption; performance against an uncertain reference alone does not establish accuracy against the true physical target |
@@ -100,6 +101,19 @@ When a few-shot method uses class prototypes, connect the support features, prot
 For episodic learning, distinguish labeled queries used to train the model from held-out queries whose labels are unavailable to prediction. The former is not automatically test-label leakage. Conversely, calling a sample a `query` does not establish its permitted use: state the training/evaluation phase, the support/query roles and any allowed test-time adaptation. Verify class overlap separately from sample disjointness; few-shot does not by itself guarantee previously unseen classes. P47's formulation permits partial overlap or disjoint base/support classes, so its name cannot substitute for the actual split definition.
 
 Scope the label budget to its stage. P47 uses abundant labeled base data before limited support examples, whereas P69 pp.2-3,8-9 uses a small fixed training set with augmentation rather than an episodic support/query design. Both use `few-shot learning`; this establishes a shared limited-example setting, not one mandatory algorithm or a universal numerical cutoff. Report available source/base annotations, current-task labels and generated training views separately. Reusing a label over many episodes or augmentations does not create new independent annotations. A small support budget can substantiate adaptation with few current-task labels, but total annotation savings require a comparison that accounts for the relevant earlier labeling resources as well. Keep the abstract's scope accurate and develop the full accounting in the settings; do not turn every contribution into a resource disclaimer.
+
+For active learning, trace the acquisition cycle separately from final prediction.
+P89/P91 select machinery samples for expert annotation and subsequent classifier
+updates; P90 defines an analogous pool-based cycle for chemical-process fault
+classification. P89/P91 share a research line. These support the base operation,
+not one query criterion, budget unit, classifier or requirement to discover new
+classes. Identify the current learner, requested target, available pool/stream,
+label provider, stopping rule and retained predictor. A fixed-pool benchmark can
+validly reveal cached ground-truth labels for selected training samples, but this
+does not measure human annotation time. In a stream, specify when feedback is
+available relative to each evaluated decision. Do not infer annotation requests
+from an active-diagnosis title when the specified action is physical excitation.
+中文：查询训练标注、训练episode的query监督及最终评价标签分别核对；实际选择策略与更新后的预测器要衔接，不强加伪标签或新类发现。
 
 中文核查重点：类原型的来源及后续用途、训练查询与测试查询的标签边界、样本划分与类别划分分别交代；不把类代表写成物理工况，也不要求所有小样本方法都采用均值原型或分任务训练。分别报告基础/源数据、当前任务标注与增强视图；当前任务的少量支持样本不代表整个研究只使用这些标注，也不使合法的历史标注学习成为泄漏。
 
