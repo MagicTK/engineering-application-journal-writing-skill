@@ -5,7 +5,7 @@ description: Design, audit, and organize experimental evidence for engineering-a
 
 # Engineering Experiment And Evidence Design
 
-Suite version: `4.1.42`
+Suite version: `4.1.43`
 
 ## Mission
 

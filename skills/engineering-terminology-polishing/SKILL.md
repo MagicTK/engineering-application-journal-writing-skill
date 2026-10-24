@@ -5,7 +5,7 @@ description: Polish English or Chinese engineering-application journal prose whi
 
 # Engineering Terminology And Polishing
 
-Suite version: `4.1.42`
+Suite version: `4.1.43`
 
 ## Mission
 

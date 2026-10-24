@@ -88,7 +88,9 @@ Identify the real independence unit:
 - site;
 - time period.
 
-Check whether adjacent or overlapping windows cross splits. Ensure normalization, imputation, resampling, feature selection, and threshold selection use training data only unless clearly justified.
+Check whether adjacent or overlapping windows cross splits. Fit normalization and other preprocessing parameters, and choose imputation, resampling, feature-selection and threshold settings using the permitted fitting data, without test-label-driven selection. Applying a fixed transformation to permitted test measurements is different from fitting on test data: a deterministic timestamp mapping or forward hold is not itself test-set learning. For declared target-pool adaptation, document its distinct information access rather than silently treating it as ordinary source-only fitting.
+
+Record native observations separately from the model grid. A held/interpolated entry, padded position or entirely unobserved grid time is not another sensor acquisition. Count measurement values, multivariable samples, windows and quality targets in their declared units; the number of grid rows alone does not settle those counts. Distinguish scheduled absence under a slower clock from an unexpected sensor dropout and from deliberately withheld evaluation entries. Compare models at the same target/issue times with their actual available inputs; preserve a downsampled contextual baseline without presenting discarded observations as unavoidable for every comparator. These checks neither forbid valid resampling nor require an imputation output when the predictor uses available observations directly.
 
 For early prediction or online monitoring, exclude future measurements, downstream inspection results, or labels unavailable at decision time.
 

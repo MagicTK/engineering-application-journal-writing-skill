@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.43 (2026-10-24)
+
+- Ground multirate observation in two published rate-group definitions and independently check Chinese timing terminology. Keep full interval/attention network names attributed and cross-field asynchronous meanings separate.
+- Distinguish between-stream rates, within-stream intervals, timestamp offsets, release delay and missingness without treating them as mutually exclusive. Preserve legitimate average-frequency summaries and acquired-versus-grid counts.
+- Connect observation timing to actual representations and engineering outputs in existing abstract/contribution guidance. Clarify fitting versus applying fixed preprocessing; no new topic, source-corpus entry, manuscript edit or experiment is added.
+
 ## 4.1.42 (2026-10-24)
 
 - Pair the adaptation-stage source-data restriction in two distinct published process/machinery studies and verify Chinese wording separately in original bilingual scholarly pages. Full network names, update rules and label-space variants remain attributed.

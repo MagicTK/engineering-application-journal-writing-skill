@@ -106,6 +106,17 @@ An existing source-free setting motivates a contribution but does not itself
 make the target-learning design novel. Preserve batch/stream scope and observed
 class-level trade-offs without turning audit exclusions into abstract padding.
 
+**Observation timing, illustrated by P08/P24/P73:** connect the acquired object
+to the specific representation or estimator it supplies. An abstract can move
+from different native sampling schedules to the operation that uses available
+measurements or actual intervals, then to the quality estimate, graph or alarm.
+For a verified interval-weighted predictor: "Each stream is encoded at its native
+observation times. Measured intervals weight these representations before fusion
+for quality estimation." Add the real distinguishing design, not a new timing
+module name. A contribution may concern how the predictor uses those observations;
+using intermediate measurements is not proof of recovering every unobserved value.
+State the supported benefit and remaining rate/interval sensitivity in the result.
+
 **Rule-based prediction, illustrated by P27/P77:** distinguish input matching,
 rule-weighted numerical outputs and a final task decision. A Gaussian function
 name alone does not explain how a predictor uses the result. For a verified

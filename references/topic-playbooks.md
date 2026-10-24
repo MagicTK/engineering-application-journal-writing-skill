@@ -18,7 +18,7 @@ Observation and sampling; scarce supervision; multimode/nonstationary operation;
 
 ## 1. Incomplete, Asynchronous, Or Multi-Rate Observation
 
-First identify whether the study concerns missing values, irregular timing, delayed measurements, or groups with different fixed sampling rates. Do not merge these definitions for convenience.
+Identify the per-stream observation schedule, cross-stream timing, missing entries and measurement-release delay. These properties can coexist: streams with different fixed periods need not share timestamps, while a multirate study may also contain irregular observations. State the actual setting rather than forcing mutually exclusive categories.
 
 Writing priorities:
 
@@ -36,7 +36,7 @@ Evidence priorities:
 - rate/missingness severity analysis;
 - masks, timestamps, and reconstruction fidelity when they affect the task.
 
-Choose the narrative from the observation mechanism. For fixed multi-rate streams, explain which variables are measured at each rate and how slow measurements align with the prediction target; verify frequency versus period units before comparing rates. For irregular observations, explain how elapsed time differs from sequence position. P24 explicitly encodes both; its solution does not make every multi-rate problem irregular. For delayed quality assays, distinguish the time represented by a label from the time it becomes available. `Offline assay` can accurately describe laboratory measurement even when `offline dataset` adds nothing to provenance.
+Choose the narrative from the observation mechanism. P08/P73 define rate-dependent groups and available observations, while P24 distinguishes sequence position from measured time intervals. Explain how those particular observations or timing quantities enter the predictor: an observed-subset equation, a timing-conditioned representation and an estimated completed grid are different interfaces. Verify frequency/period units and offsets before calling streams aligned. For delayed quality assays, distinguish the time represented by a label from its release time. `Offline assay` can accurately describe laboratory measurement even when `offline dataset` adds nothing to provenance.
 
 Turn acquisition facts into the specific estimation requirement. A complete-observation comparator may discard useful measurements between shared observation times; a model that uses an observed-subset likelihood should explain how those measurements enter estimation. This is a different route from constructing a completed input grid, aligning rate-dependent representations, or learning with sparse quality targets. Name the route actually implemented and the intermediate object it supplies to the output. Do not add an imputation stage merely because some variables are unobserved. P08 develops representation alignment from a granularity question; P17 develops semisupervised regression from assay scarcity; P34 defines separate measurement and quality equations under multirate acquisition. These are alternative argument structures, not interchangeable remedies or evidence of complete information recovery.
 

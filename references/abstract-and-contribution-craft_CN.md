@@ -73,6 +73,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **规则预测，参见P27/P77：**区分输入匹配、规则加权的数值输出及最终任务决策，不能只写高斯函数名而不说明下一步怎样使用。对已核实的回归设计，可直接表达为：Membership degrees determine rule weights, which combine local quality estimates into the final prediction. 再补本研究真正有区别性的学习或规则设计，不另列一串常规层。规则决策若在训练中指导编码器，应写受训表征及保留的预测器，不虚构最终特征融合模块。量的核对及解释边界放作者意见，正文保留受支持的任务意义及结果权衡。
 
+**观测时间，参见P08/P24/P73：**将已采对象接到它实际提供输入的表征或估计器。摘要可由不同原生采样计划，引出利用现有测量或真实间隔的操作，再接质量量、图或报警。对已核实的间隔加权预测器，可写：Each stream is encoded at its native observation times. Measured intervals weight these representations before fusion for quality estimation. 再加入实际有区别的设计，不新造时间模块名。贡献可落在预测器怎样利用这些观测；用了中间观测不等于恢复全部未观测值。结果保留有据收益及仍存在的速率/间隔敏感性。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。
