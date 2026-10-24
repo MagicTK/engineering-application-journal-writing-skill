@@ -196,6 +196,22 @@ Pointwise, point-adjusted and event-level scores answer different questions. In 
 
 For a timing claim, separate the time represented by the input, the time all required information becomes available, model computation, and the first emitted alarm. A centered window with future observations is delayed analysis of its center even when its forward pass is fast. Derive detection delay from unadjusted alarm times and an identified onset reference; report missed events separately rather than silently excluding them. For a bounded follow-up using existing traces, calculate per-event first-alarm delay alongside detected/total events. False-positive observations, false alarm episodes and alarms per operating hour have different denominators; name the one used. Do not require these additional metrics for a paper that only makes an accurately scoped window-classification claim.
 
+### Scores, Probabilities And Rejection Decisions
+
+Use this check for a claimed confidence, uncertainty or rejection capability, not as an extra experiment suite for every fuzzy model or classifier. First follow the quantity from its definition to its consumer: a feature weight, class probability, uncertainty score and thresholded rejection have different evidence needs.
+
+| Claim | Relevant check |
+|---|---|
+| weights improve feature combination | isolate the weighting operation with matched inputs and inspect the task outcome; unit-sum weights alone do not measure reliability |
+| predicted probabilities reflect correctness frequencies | compare predictions with held-out outcomes over the stated population; classification accuracy alone does not establish calibration |
+| a score distinguishes known from unknown inputs | evaluate the declared known/unknown sets and score direction; ranking performance does not establish a useful fixed threshold or calibrated probabilities |
+| a rejection rule is useful at an operating point | report known-class errors including false rejection, unknown rejection, and threshold selection without held-out test labels; an aggregate depends on the known/unknown mixture |
+| abstaining improves accepted predictions | report both the fraction retained and errors among retained predictions, with rejected samples accounted for separately |
+
+For classifier-logit energy `E(z) = -T log sum_c exp(z_c/T)` with fixed positive `T`, adding the same constant `a` to every class logit leaves softmax probabilities unchanged but changes energy to `E(z)-a`. This algebraic check shows why the score is not itself a probability and why a threshold is not portable merely because class probabilities match. Verify score sign and range against the actual implementation; do not replace a disputed sign or threshold by guessing. P18 and P51 use related base definitions for different purposes, as recorded in [the terminology bank](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
+
+Keep the proposed evaluation proportional to the retained claim. If a model only learns feature perturbations and outputs known fault labels, evaluate its stated condition-generalization task without inventing a rejection head. If an uncertainty estimate does drive rejection, the chain `estimate -> decision -> measured outcome` should appear consistently in the overview, contributions and results. Designing these checks does not authorize running new experiments or changing recorded outcomes.
+
 ## 9. Consistency Ledger
 
 Maintain one ledger for confirmed results:

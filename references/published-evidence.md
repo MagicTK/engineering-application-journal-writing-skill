@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This revision uses a selected 48-paper corpus, not a systematic review. It revisits contrastive-learning and pseudo-label definitions in existing sources and their connection to diagnostic prediction. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 48 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This revision uses a selected 52-paper corpus, not a systematic review. It adds targeted checks of feature weighting, feature-statistic perturbation, classifier-logit scoring and unknown-class decisions. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 52 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本版在原有47篇基础上补查一篇软分配定义，并回查既有来源中的池化操作，合计48篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本版在原有48篇基础上，补查特征加权、特征统计扰动、分类分数与未知类判断的四篇来源，合计52篇。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -60,12 +60,16 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P46 | [Cross-sensor collaborative distillation with dynamic competitiveness balancing for fault diagnosis under imbalanced missing data](https://doi.org/10.1016/j.neucom.2026.133238) | Adjacent motor diagnosis: multisensor guidance trains single-sensor representations; sensor missingness is not class imbalance. The unnormalized-score prose conflicts with its softened-distribution formula and is not adopted as a verified operation. |
 | P47 | [Learning to Match Prototype for Few-Shot Classification of Attacks and Faults in Smart Grids](https://doi.org/10.1109/TCYB.2025.3632113) | Adjacent power-system classification: support-feature means provide class representatives, and a learned comparison yields query scores. Prototype construction, matching and episodic training have distinct roles; class overlap and label access require explicit definitions. |
 | P48 | [A Novel Clustering-Guided Framework for Rotating Machinery Fault Diagnosis With Extremely Limited Labeled Data](https://doi.org/10.1109/TII.2025.3568512) | Adjacent machinery diagnosis: sample-to-centroid soft assignments connect features to clustering losses and later hard labels. Label-guided targets and VAT are separate operations, not properties of every soft assignment. |
+| P49 | [SREFNet: A Spectral Residual-Based Evidence Fusion Network for Industrial Fault Diagnosis](https://doi.org/10.1061/AJRUA6.RUENG-2063) | Process diagnosis: inspect the implemented feature-response weighting separately from evidence-theory preliminaries. A normalized combination does not establish probability calibration. |
+| P50 | [Domain Perturbation With Uncertainty for Bearing Fault Diagnosis Under Unseen Conditions](https://doi.org/10.1109/TCYB.2025.3581309) | Adjacent machinery diagnosis: uncertain feature statistics guide training perturbations; their role differs from per-prediction uncertainty used for rejection. |
+| P51 | [GWLSTM: A Spatial-Temporal Fusion Graph Wavelet LSTM for Trustworthy Open-Set Fault Diagnosis](https://doi.org/10.1109/TSMC.2026.3703212) | Adjacent machinery diagnosis: a classifier-logit energy score supports a known/unknown decision. Inspect sign, range and threshold consistency before transferring its complete rule. |
+| P52 | [Trustworthy Fault Diagnosis with Uncertainty Estimation through Evidential Convolutional Neural Networks](https://eprints.lancs.ac.uk/id/eprint/187603/) | IEEE TII 19(11), 2023, pp.10842-10852; institutional accepted version. Class evidence supplies distribution parameters and uncertainty for unknown-sample detection. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
-The following are original functional analyses of passages read during revision, not copied sentences or full-paper quality assessments. Page positions refer to the locally supplied publisher PDFs. They record **what was checked and what may transfer**, rather than treating every listed source as support for every rule. The remaining source rows above retain their narrower inspection scope.
+The following are original functional analyses of passages read during revision, not copied sentences or full-paper quality assessments. Page positions refer to the specified PDF versions. They record **what was checked and what may transfer**, rather than treating every listed source as support for every rule. The remaining source rows above retain their narrower inspection scope.
 
 以下记录已阅读段落的作用、可迁移原则和不可照搬的边界，不是逐句翻译或全篇质量背书。摘要是否简短、贡献是否列两项或四项，均只描述这篇文章的组织方式，不成为强制模板。
 
@@ -179,7 +183,19 @@ P33 p.3 Section III-B, Eqs.(1)-(3), substantively explains the same normalized S
 
 P20 PDF p.6, Section III-D and Eqs.(18)-(21), scores graph-node representations against graph summaries using constructed positive/negative examples. P21 PDF pp.4-5, Section III-C and Eqs.(4)-(6), instead contrasts temporal contexts with later latent features across augmented views. Both substantively define contrastive learning; the common base name does not make their objects or full component names equivalent. P20's temporal exclusion rule on p.6 is a selection rule, not independent proof of statistical independence. The adjacent feature-contrast formula in Section III-E is not part of this admission record or a verified general mechanism.
 
-P18 PDF p.5, Eq.(10), generates hard pseudo-labels from adjusted predictions for target-data training. P21 PDF p.5, Section III-D and Eq.(7), uses estimated class distributions to guide a graph over samples, not physical variables. PDF p.6, Eq.(11) and the following paragraph explicitly distinguish joint training losses from test-time use of the encoder/classifier. These passages support base terminology and writing roles, not validation of every equation, augmentation assumption or reported benefit. Chinese wording is checked independently in the terminology bank; the corpus count remains 48.
+P18 PDF p.5, Eq.(10), generates hard pseudo-labels from adjusted predictions for target-data training. P21 PDF p.5, Section III-D and Eq.(7), uses estimated class distributions to guide a graph over samples, not physical variables. PDF p.6, Eq.(11) and the following paragraph explicitly distinguish joint training losses from test-time use of the encoder/classifier. These passages support base terminology and writing roles, not validation of every equation, augmentation assumption or reported benefit. Chinese wording is checked independently in the terminology bank.
+
+## Uncertainty Objects And Decisions / 不确定性对象与决策
+
+P49 pp.3,5-6 distinguish evidence-theory preliminaries from the implemented response generation and weighted sum, Eqs.(28)-(31). Weights are normalized across learned responses at feature positions. This supports an input-dependent feature-combination description, not verification of calibrated reliability or strict Dempster combination. The source's full component name remains attributed; its presence does not admit every evidence-fusion variant.
+
+P50 pp.1,3-4 describe source-domain feature statistics and distributions used for training perturbations, Eqs.(3)-(11). The modeled variability is not a per-sample error probability. This reading does not verify all perturbation assumptions or generalization results.
+
+P18 p.3 Eq.(4) and P51 p.5 Eq.(18) define related negative-log-sum-exp classifier scores. P51 pp.5-6 were also visually checked: its nonnegative displayed logits, negative-energy comparison and negative threshold need reconciliation before reproducing the full decision. Algorithm 1 separates training updates from test classification. Preserve the shared score definition without certifying the disputed rule or assuming test-time label access. No implementation was inspected.
+
+P52's institutional accepted version, pp.2-3, Sections II-A to III-A, defines known/unknown classes and connects class evidence to distribution parameters and an uncertainty output. This supports the task/quantity distinction, not independent verification of its calibration or performance claims. Together P51/P52 support the scoped open-set task; their mechanisms differ. Chinese translation evidence is separate in the terminology bank.
+
+本组区分的是模型量及其用途，不按题名把“证据、不确定性、可信”归成同一种机制。逐项定义不等于复现来源方法；存在符号疑点时保留来源身份，限制可迁移范围，不自行修正对方实验。
 
 ## Reusable Lessons / 可迁移结论
 

@@ -4,7 +4,9 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
-Version 4.1.12 used one fresh responding context for four fictional requests about training-target terminology, abstract/contribution connections, legitimate supervised contrastive pairs and complete-name admission. All four passed maintainer semantic review within that scope. No baseline or independent second grader was used; this is not measured improvement or whole-bank certification. See the [review and actual responses](reviews/v4112-independent-evaluation.md) and [current report](forward-test-report.json).
+Version 4.1.13 used one fresh responding context for five fictional requests about feature weights, uncertainty outputs, score/threshold consistency, genuine open-set decisions and complete-name/translation admission. All five passed maintainer semantic review within that scope; no baseline or independent second grader was used. See the [review and actual response](reviews/v4113-independent-evaluation.md) and [current report](forward-test-report.json). This is not measured improvement or whole-bank certification.
+
+Version 4.1.12 used one fresh responding context for four fictional requests about training-target terminology, abstract/contribution connections, legitimate supervised contrastive pairs and complete-name admission. All four passed maintainer semantic review within that scope. No baseline or independent second grader was used; this is not measured improvement or whole-bank certification. See the [review and actual responses](reviews/v4112-independent-evaluation.md) and [archived report](history/v4.1.12/forward-test-report.json).
 
 Version 4.1.11 used one fresh responding context for four requests about pooling scope, soft assignments, complete names and a legitimate whole-plant readout. All four passed within that scope; no baseline or independent second grader was used. See the [semantic review](reviews/v4111-independent-evaluation.md) and [archived report](history/v4.1.11/forward-test-report.json).
 

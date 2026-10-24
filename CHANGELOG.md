@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.13 (2026-10-24)
+
+- Distinguish feature-response weighting, feature-statistic perturbation, prediction uncertainty and rejection decisions in the existing topic/evidence guidance. Connect the defined quantity to its actual use in abstracts, contributions and evaluation without inventing additional tasks.
+- Add scoped paired records for classifier-logit energy and open-set recognition. Verify the Chinese open-set translation independently; leave the specific energy-score translation pending rather than borrowing physical-energy terminology.
+- Extend the selected evidence index to 52 published works. Record equation/rule limitations instead of treating publication as certification. Five existing references carry the substantive changes; no new topic guide or template is added.
+
 ## 4.1.12 (2026-10-24)
 
 - Add two-source base-name records for contrastive learning and pseudo-labels, with independently checked Chinese scholarly translations. Keep hard class targets, soft class guidance, contrasted objects and source-specific module names distinct.
