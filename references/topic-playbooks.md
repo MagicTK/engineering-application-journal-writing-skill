@@ -388,10 +388,10 @@ Check the complete decision rule before copying a threshold: score definition, s
 
 Writing priorities:
 
-- derive relevant time scales, dynamics, or frequency bands from process behavior or sensing physics;
+- identify the modeled scale: an architectural receptive field, a sampling/time window, a frequency band, or a production hierarchy; relate it to process behavior when making that physical claim;
 - distinguish slow operating evolution, transient response, periodic structure, and measurement noise;
 - explain why a representation is needed before naming its encoder or transform;
-- avoid generic `local/global feature` language when no engineering scale is defined.
+- define the scope of `local/global features`; architectural locality is legitimate, but is not automatically a physical process scale or plant-wide coverage.
 
 Evidence priorities:
 
@@ -402,6 +402,10 @@ Evidence priorities:
 - efficiency analysis if the representation is claimed to be lightweight.
 
 Verify that the modeled axis is acquisition time before interpreting trends, lags or frequencies physically. Stacking unrelated product samples or repeating a static vector does not supply a temporal trajectory. For multiscale or local/global descriptions, identify whether scale means time window, frequency band, graph neighborhood or production hierarchy. Convolutional feature channels need not correspond to the original process variables (P11). Describe training regularizers separately from prediction-time branches rather than making the abstract list every loss as another representation module.
+
+For multiscale convolution, follow the varying support to the output and its next consumer. P11 pp.3-4 concatenates different-kernel branch outputs before later relation modeling; P15 pp.4-5 passes concatenated outputs to an LSTM; P01 p.4 adds parallel branch outputs and later pools each stage before fusion. These support a common different-support extraction principle, not a compulsory concatenation operator or one universal temporal axis. A short abstract can state what neighborhoods are encoded and how the combined representation supports the next operation; a contribution should explain the supported advance rather than list kernel sizes as novelty. Different kernel widths alone do not establish isolated frequency bands, physical time constants, noise removal or superior diagnosis. Test those interpretations when claimed; otherwise keep an accurate architectural description without demanding a separate physical-scale experiment.
+
+中文要点：先说明尺度是模型感受野还是有依据的工艺尺度，再连清分支输出及后续用途。可以合理使用已定义的local/global，不必强改成物理尺度；多尺度不等于多工序，也不由卷积核大小直接推出频带分离。基础名称和独立译名依据见[术语核验表](engineering-application-terminology-bank_CN.md#九已核验核心名称与未完成范围)。
 
 For SFA claims, trace the temporal objective and its nontriviality constraints. The classical definitions in P54/P55 minimize derivative energy under zero-mean, unit-variance and decorrelation constraints. A learned slow representation is not simply a moving-average trend; retain ordinary smoothing terminology when that is the actual operation. A deep model may instead use soft penalties or probabilistic dynamics: describe those choices rather than asserting exact equivalence to all classical constraints. Reconstruction does not itself impose zero mean, and decorrelation alone does not establish statistical independence. See the [feature-scale check](experiment-evidence-design.md#8-metric-integrity) before interpreting a smaller temporal-difference loss as better dynamics modeling.
 

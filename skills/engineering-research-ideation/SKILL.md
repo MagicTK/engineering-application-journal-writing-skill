@@ -5,7 +5,7 @@ description: Build or revise an AI-for-engineering research portfolio, compare m
 
 # Engineering Research Ideation
 
-Suite version: `4.1.32`
+Suite version: `4.1.33`
 
 ## Scope
 

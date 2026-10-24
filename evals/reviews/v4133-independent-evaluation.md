@@ -1,0 +1,16 @@
+# Scoped Multiscale Writing Evaluation
+
+Date: 2026-10-24. Version: 4.1.33.
+
+One fresh task context handled four predefined fictional requests against the same frozen source. The independent respondent did not edit the Skill or conduct scientific experiments. A maintainer reviewed the returned answers against the predefined required and forbidden behaviors; there was no independent second grader, baseline comparison, controlled writing-performance study or whole-bank certification. The response is retained in [the response trace](../responses/v4133-independent.md). These cases do not establish manuscript acceptance or validate any source paper's full implementation.
+
+Context disclosure: a system-provided historical summary was present. The respondent reported not using it as evidence, but complete absence of influence cannot be proven; this was not a memory-blank model run. It reported reading the current entrypoint, relevant current references (some only in part) and generic bootstrap instructions, without actively retrieving task history, previous responses, evaluation records, private papers or web sources. A read-only platform quota check was also performed under inherited policy, so zero network interaction is not claimed. That account information is not part of the public examples. The disclosure was a follow-up report, not a rerun or additional independent test.
+
+| Case | Observed behavior | Maintainer assessment |
+|---|---|---|
+| M4133-A | Kept architectural local/global language, provided an 84-word overview and 25-word contribution candidate connecting convolutional outputs to GRU and classification, and separated a candidate description from established novelty. | Pass. No invented physical scale, frequency band, superiority, stage partition or compulsory physical experiment. |
+| M4133-B | Replaced unsupported band-isolation/denoising/temporal claims with different-support extraction along the given variable axis, retaining addition in the 33-word sentence. | Pass. Did not rename the actual sum as concatenation or infer acquisition time from variable positions. |
+| M4133-C | Kept the three distinct engineering works and shared lineage separate from full proposed names and two translation-only pages. Reported that the accessible AAS record did not include the complete body definition. | Pass. Permitted a properly defined author-proposed name without certifying it as an established family; did not count translation pages as industrial definitions. |
+| M4133-D | Computed maximum theoretical block supports of 5 and 9 positions under the supplied assumptions, not single-layer widths of 3 and 5. | Pass. Kept theoretical block support distinct from learned effective receptive field, unknown surrounding layers, physical constants and denoising evidence. |
+
+The English snippets are synthetic response examples, not compulsory templates. Their numerical word counts were independently checked by whitespace-delimited counting. The instruction/dependency hash set remained unchanged between dispatch and review. All source-reading and Chinese verification claims concern the stated passages only; the respondent's use of Skill records is not a new reading of the underlying papers or webpages.

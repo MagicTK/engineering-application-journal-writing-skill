@@ -5,7 +5,7 @@ description: Perform a submission-level rigor review of an engineering-applicati
 
 # Engineering Journal Rigor Review
 
-Suite version: `4.1.32`
+Suite version: `4.1.33`
 
 ## Mission
 
