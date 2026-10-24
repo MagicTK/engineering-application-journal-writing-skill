@@ -313,6 +313,17 @@ For selection-based designs, identify whether the output is a ranking, a weighte
 
 Separate fewer attention queries from fewer retained tokens. P74 pp.4-5 preserves patch representations, aggregates channel values with one class query, then retains the other value tokens for later processing. Its full selective-module names are attributed examples, not pruning-family admission. P31 p.4 changes polynomial degree during the described training procedure, not by deleting a subset of nodes. P45 p.5 instead describes converting compatible training branches for prediction; that conversion is distinct from its distillation losses and conditional exits. In an abstract or contribution, explain which operation changes, what representation remains and how it reaches the task output. Do not turn all three designs into the same compression story or equate a smaller score map with complete-model acceleration. Use the [mechanism-to-prose check](abstract-and-contribution-craft.md#2-give-each-sentence-a-job-and-a-connection) to keep implementation checks in author notes unless needed to define the contribution.
 
+For a parameter-masked design, distinguish scalar sparsity from deleting whole
+filters/channels, changing a value range and penalizing gradients. Identify
+whether the modified network is the retained predictor or an auxiliary training
+copy. A sparse copy used to construct contrastive views can train a full predictor
+without compressing it. A contribution may concern this particular learning
+interaction, subject to prior-work and outcome checks; do not recast it as edge
+deployment or treat the pruning ratio as the measured latency reduction. Check
+the [operation and phase distinctions](terminology-decisions.md#structure-and-operations)
+and [resource boundary](experiment-evidence-design.md#selection-outputs-and-resource-claims)
+only when relevant to the manuscript's claims.
+
 ## 10. Interpretability, Localization, Root Cause, And Trust
 
 Writing priorities:

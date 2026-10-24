@@ -131,6 +131,24 @@ For `mask`, `sparse` and `constraint`, inspect where the operation acts. A zero-
 
 For a compression or selection claim, follow tensor sizes and the retained execution graph. P74's smaller query set changes the attention-score operation while its output still includes the other channel-value tokens; selective weighting is not proof of a smaller represented set. Zero weights may remain stored and executed densely, while actual channel removal may reduce later tensor dimensions. Neither operation alone establishes fewer required sensors or measured speed. Preserve an accurately defined removal operation rather than banning it because another source only reweights features.
 
+A fixed parameter mask that zeros selected scalar weights can accurately be
+described as unstructured weight pruning even when tensor shapes stay unchanged.
+Distinguish the nonzero-weight count, allocated parameter slots, serialized bytes
+and executed operations. The named operation does not establish a resource gain.
+Conversely, clipping all weights to an interval changes their range, not their
+membership in a retained subset. P76's background wording conflicts with the
+original WGAN clipping step; its own input-gradient penalty is a third operation.
+Preserve source attribution while describing the verified computation. See the
+[name-admission check](engineering-application-terminology-bank.md#0-admit-names-not-search-counts)
+before promoting complete names to shared recommendations.
+
+Also record **where the modified object is used**. A masked encoder copy may
+supply a training view while the original encoder supplies predictions. That
+relationship can be useful without making the deployed model smaller. Do not
+confuse a parameter mask with a missing-measurement mask, graph-edge removal or
+channel deletion. Keep the actual training and retained prediction paths clear
+in the abstract, contribution and overview, without inventing a new module name.
+
 An exact branch conversion also depends on operations, not a shared name. P45 p.5 describes merging compatible convolution/normalization branches before a shared activation. Fixed inference normalization can be affine; input-batch-dependent normalization is a different computation. Combining affine preactivations before one activation is not generally equivalent to averaging separately activated head outputs. Check padding, shapes, biases, statistics and activation placement before asserting equality; keep P45's full conversion claims attributed rather than certifying all source formulas or a generic module family.
 
 ## Topic-Specific Terms

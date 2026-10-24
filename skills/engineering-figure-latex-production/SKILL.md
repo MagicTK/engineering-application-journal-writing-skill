@@ -5,7 +5,7 @@ description: Plan, create, revise, and verify scientific figures, tables, LaTeX 
 
 # Engineering Figure And LaTeX Production
 
-Suite version: `4.1.39`
+Suite version: `4.1.40`
 
 ## Mission
 

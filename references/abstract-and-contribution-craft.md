@@ -18,6 +18,15 @@ For multistage fusion only, inspect whether a pooled stage vector is the final o
 
 Mark each operation as prediction-time computation, training objective, pretraining, or test-time adaptation. These are different relationships, not successive boxes in one forward pass. An alignment loss can shape an encoder during training without receiving its output during deployment; a reconstruction decoder can be absent at inference. When this distinction is central, the abstract needs one clear training-to-prediction connection rather than a fictional sequence. Published examples P10, P17 and P21 illustrate different training interactions; P25 even uses different branch components for training and prediction.
 
+A modified network copy is another possible training relationship. If a verified
+design uses a parameter-masked copy to supply contrastive views, connect that
+perturbation to the encoder it trains and then to the retained predictor. Explain
+the distinctive pairing or learning rule where it matters, rather than presenting
+the copy as a subsequent compressed classifier. Keep routine mask percentages
+and implementation checks in Methods or author notes. A pruning operation can
+support a representation-learning contribution without establishing deployment
+compression; its name alone supplies neither novelty nor a measured benefit.
+
 When alignment is the advance, identify what is brought into correspondence and by which criterion: sample times, dimensions, feature distributions or paired representations. Connect that operation to the learned predictor or next computation, not to an unverified claim that all diagnostic information is preserved. A method sentence can state that an objective encourages a property; a result sentence needs evidence that the property or downstream benefit was obtained. See the [alignment distinctions](terminology-decisions.md#alignment-state-the-object-and-criterion); keep only the central relationship in the abstract.
 
 For each retained mechanism, recover three things: **the object changed, the operation, and the reason the changed object is useful to the next task**. The abstract should retain the distinguishing operation and its purpose, not every tensor name. The method section can carry exact dimensions. Never compress variable features, pooled group features and a stage summary into one interchangeable `feature` if the next operation consumes only one of them.

@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 75-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 75 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 76-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 76 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计75篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计76篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -87,10 +87,17 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P73 | [Total Structure Multirate Autoregressive Dynamic Latent Variable Model for Multirate Dynamic Process Fault Detection](https://doi.org/10.1109/TSMC.2025.3578475) | TSMC: Systems 55(9), 2025, pp.6397-6408. Separate latent dynamics/observations, state filtering/smoothing, EM fitting and final monitoring statistics. Shared/rate-specific latent structure is not automatically a production-stage hierarchy. |
 | P74 | [Effective Fault Diagnosis for a Quadrotor Helicopter: A Lightweight Transformer With Selective Patches and Channels Modules Method](https://doi.org/10.1109/TCYB.2025.3552364) | TCYB 55(11), 2025, pp.5264-5274. Adjacent aerospace study: importance weighting preserves represented sets, while one class query changes the attention operator. Full selective-module names are attributed; SIL/HIL simulators are not recorded real-flight faults. |
 | P75 | [Reliable and Intelligent Fault Diagnosis with Evidential VGG Neural Networks](https://doi.org/10.1109/TIM.2023.3250308) | TIM 72 (2023), 3508612. Institutional accepted version: distinguish class evidence, belief masses, expected class probabilities and uncertainty; noise/sensor-failure scenarios differ from proof of unknown-class identification or plant deployment. |
+| P76 | [GPSC-GAN: A Data Enhanced Model for Intelligent Fault Diagnosis](https://doi.org/10.1109/TIM.2024.3457925) | TIM accepted manuscript: p.4's background pruning wording conflicts with the cited original clipping step; its own gradient penalty is a different computation. Full GPSC-GAN naming remains attributed, not a general pruning definition. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Names, Computations And Training-Only Copies
+
+P76's [institutional accepted manuscript](https://publications.aston.ac.uk/id/eprint/46775/1/Accepted_version_-_GPSC-GAN_A_Data_Enhanced_Model_for_Intelligent_Fault_Diagnosis.pdf), p.1 metadata, p.4 Sections III-A/B and p.16 references were checked; p.4 was rendered. Its background wording, the [original WGAN](https://proceedings.mlr.press/v70/arjovsky17a/arjovsky17a.pdf) p.4 algorithm and its own Eq.(3) must not be counted as matching pruning definitions. This is targeted source-conflict analysis, not certification of the complete GAN or its claims.
+
+The [2405.20700v1 author preprint](https://arxiv.org/pdf/2405.20700v1), pp.4-7 Section III, separately defines masked training copies; p.5 was rendered. Its exact update rules and full proposed names remain attributed. The potentially related JAS.2026.126002 journal body could not be accessed and its version match was not verified. Neither the preprint nor a journal-title match is added as another published corpus work or used to complete the pruning pair. The separately checked AAS c180275 translation record remains limited to the base wording. Training perturbation, retained prediction computation and measured resource benefit are distinct writing claims.
 
 ### Soft-Sensor Targets, Inputs And Task Routing
 

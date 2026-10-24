@@ -5,7 +5,7 @@ description: Classify and route a data-driven industrial engineering research id
 
 # Industrial AI Paper Router
 
-Suite version: `4.1.39`
+Suite version: `4.1.40`
 
 ## Mission
 

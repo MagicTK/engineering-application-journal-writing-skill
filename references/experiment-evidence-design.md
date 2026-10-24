@@ -226,6 +226,16 @@ Specify the scope of replay-free or data-access statements: past target examples
 
 ### Selection Outputs And Resource Claims
 
+For parameter pruning, record the selected parameter set, mask/removal rule,
+remaining nonzeros and retained prediction graph. Count stored parameter slots
+and bytes separately: zeroed entries can remain in dense storage and dense
+execution. If the pruned copy exists only during fitting, evaluate its training
+contribution and the actual predictor rather than assigning its sparsity to
+deployment. Require a matched timing boundary and measured runtime only for
+runtime claims, not merely to report a verified masking operation. Range clipping
+and an input-gradient penalty are different computations, even when a source
+uses inconsistent terminology; resolve that source note before borrowing a name.
+
 For a feature/sensor-selection claim, identify the candidate objects, ranking or selection rule, retained output and its use in the predictor. A positive weighting of all inputs does not itself delete a feature, even if the source calls its layer feature selection. For explicit subsets, trace retained descriptors back to required raw measurements and preprocessing. Permit computation of only selected descriptors when the actual dependencies support it; do not assume the complete original feature pipeline must always run.
 
 State which data fit the selector, label transformations, subset size and stopping rule. Supervised selection is part of model fitting, so test labels used to choose a subset also influence the reported predictor. Use an actually performed training-only selection procedure or a predefined setting; do not invent a validation split to repair the account. Independent selection stability is relevant when stability is claimed, not mandatory evidence for every local grammar revision.

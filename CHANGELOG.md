@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.40 (2026-10-24)
+
+- Match complete names to definitions and cited algorithms, not repeated wording. Record a published GAN source's pruning/clipping conflict without treating that mention, an unchecked journal version or a translation match as another pruning implementation.
+- Separate masked scalar weights, deleted channels, range clipping and gradient penalties. Preserve accurate unstructured-pruning descriptions while checking dense storage, retained prediction graphs and measured resource claims separately.
+- Connect training-only modified copies to the representation they train and the actual predictor in abstracts and contributions. Extend nine existing references; no new topic or template, real manuscript edit or scientific experiment is added.
+
 ## 4.1.39 (2026-10-24)
 
 - Complete a scoped two-publication record for nonnegative class-evidence Dirichlet classification, noting the sources' shared authorship and EVGG lineage. Verify Chinese base terminology separately from an original bilingual scholarly source.

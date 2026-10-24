@@ -64,6 +64,16 @@ Minimal entry: `full English name | object/operation | status | distinct source
 IDs + PDF pages/sections | exact/equivalent use + differences | Chinese form +
 source URL/passage + status | permitted scope | unresolved checks`.
 
+When a source's name conflicts with its equation or the original algorithm it
+cites, record the conflict and follow the actual computation before matching
+names. Do not count two verbal mentions as two matching definitions. For
+example, P76 p.4 calls a WGAN background step `weight pruning`, whereas the
+[original WGAN algorithm](https://proceedings.mlr.press/v70/arjovsky17a/arjovsky17a.pdf),
+p.4, Algorithm 1, line 7, clips weights to a fixed interval. P76's own Eq.(3)
+instead penalizes an input-gradient norm. These are not three synonymous
+pruning definitions. This source check does not certify either paper's complete
+algorithm or a global Lipschitz guarantee.
+
 Keep audit commentary separate from replacement prose. A method sentence should
 positively state the verified computation and its use; remove unsupported
 interpretations rather than routinely appending `not a probability`, `not causal`
@@ -429,7 +439,7 @@ all source-specific variants. Modified adaptation/distillation names and other
 candidate definitions still require their own completed records. This is a limit of this
 ledger, not a claim that these methods occur only once in the field.
 
-In particular, the current P31/P74 checks do not complete a pruning-operation pair: P31's inspected adaptive-degree method is not pruning, and P74's selective weighting preserves its represented set. P45's multihead/multibranch conversion remains an attributed operation, not completed general admission of every reparameterization family. Search titles, related-work mentions and translation matches do not close those gaps. Accurate author-defined or definition-based descriptions may still be used without inventing a field-wide convention.
+In particular, the current P31/P74 checks do not complete a pruning-operation pair: P31's inspected adaptive-degree method is not pruning, and P74's selective weighting preserves its represented set. P76's conflicting background wording is not a second implemented pruning definition. A separately read author preprint describes parameter masking, but its journal-version method was not accessible and its publication match remains unchecked; it does not complete the two-published-work record. P45's multihead/multibranch conversion remains an attributed operation, not completed general admission of every reparameterization family. Search titles, related-work mentions and translation matches do not close those gaps. Accurate author-defined or definition-based descriptions may still be used without inventing a field-wide convention.
 
 `Cross-stage feature fusion`, `process-topology-guided integration` and similar
 compositional phrases above describe an operation only when the manuscript
