@@ -7,6 +7,7 @@ import json
 import re
 import sys
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +23,7 @@ SECRET_RE = re.compile(
     r"|-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"
 )
 QUOTED_YAML_RE = re.compile(r'^\s*([a-z_]+):\s*"(.*)"\s*$')
+DOI_ASCII_FOLD = str.maketrans("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz")
 
 REQUIRED_TEMPLATES = {
     "manuscript-passport.md",
@@ -129,6 +131,22 @@ def check_links(path: Path) -> list[str]:
     return issues
 
 
+def resolver_doi_identity(target: str) -> str | None:
+    """Compare common resolver forms, not registration or scholarly equivalence."""
+    try:
+        url = urlsplit(target.strip().strip("<>"))
+        if url.scheme.lower() not in {"http", "https"} or url.hostname not in {"doi.org", "dx.doi.org"}:
+            return None
+        doi = unquote(url.path, encoding="utf-8", errors="strict").removeprefix("/")
+    except (ValueError, UnicodeDecodeError):
+        return None
+    prefix, separator, suffix = doi.partition("/")
+    if not separator or not prefix.startswith("10.") or not suffix:
+        return None
+    # DOI equivalence folds Basic Latin A-Z only, not arbitrary Unicode letters.
+    return doi.translate(DOI_ASCII_FOLD)
+
+
 def check_evidence_counts(root: Path) -> list[str]:
     """Check current index claims and navigation, not dated historical counts."""
     index = root / "references/published-evidence.md"
@@ -144,6 +162,17 @@ def check_evidence_counts(root: Path) -> list[str]:
     issues: list[str] = []
     if not count or count != len(identifiers):
         issues.append("published evidence index needs distinct nonempty source IDs")
+    seen_dois: dict[str, str] = {}
+    for row in re.finditer(r"^\| (P\d{2,}) \| ([^\n]+)", table, re.M):
+        source_id, columns = row.groups()
+        primary_citation = columns.split("|", 1)[0]
+        link = re.search(r"\]\((\S+)\)", primary_citation)
+        doi = resolver_doi_identity(link.group(1)) if link else None
+        if doi is None:
+            continue
+        previous = seen_dois.setdefault(doi, source_id)
+        if previous != source_id:
+            issues.append(f"published evidence source IDs {previous} and {source_id} share DOI {doi}; inspect work identity")
     for pattern in (r"selected (\d+)-paper corpus", r"all (\d+) papers", r"合计\s*(\d+)\s*篇"):
         for claimed in re.findall(pattern, scope):
             if int(claimed) != count:

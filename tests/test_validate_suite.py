@@ -116,11 +116,70 @@ class SuiteValidatorTests(unittest.TestCase):
                 self.assertIn(chr(92) + "iffalse", case["prompt"])
                 self.assertNotIn(chr(92) * 2 + "iffalse", case["prompt"])
 
+    def test_evidence_rejects_duplicate_doi_resolver_forms(self) -> None:
+        alternatives = (
+            "http://dx.doi.org/10.1000/example(part)",
+            "https://DOI.ORG/10.1000/EXAMPLE(PART)?download=1#abstract",
+            "https://doi.org/10.1000%2Fexample%28part%29",
+            "<https://doi.org/10.1000/example(part)>",
+        )
+        for alternative in alternatives:
+            with self.subTest(target=alternative), tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                (root / "references").mkdir()
+                (root / "references/published-evidence.md").write_text(
+                    "A selected 2-paper corpus.\n## Sources / 来源\n"
+                    "| P01 | [Original](https://doi.org/10.1000/Example(Part)) | Note |\n"
+                    f"| P02 | [Another download]({alternative}) | Note |\n"
+                    "Some source titles\n"
+                )
+                issues = VALIDATOR.check_evidence_counts(root)
+                self.assertEqual(1, len(issues))
+                self.assertIn("P01 and P02 share DOI", issues[0])
+
+    def test_evidence_doi_comparison_preserves_suffix_identity(self) -> None:
+        distinct_pairs = (
+            ("10.1000/%C3%81", "10.1000/%C3%A1"),
+            ("10.1000/part", "10.1000/part/"),
+            ("10.1000/part%252Fextra", "10.1000/part%2Fextra"),
+            ("10.1000/part%23tail", "10.1000/part#tail"),
+        )
+        for first, second in distinct_pairs:
+            with self.subTest(first=first, second=second), tempfile.TemporaryDirectory() as temp:
+                root = Path(temp)
+                (root / "references").mkdir()
+                (root / "references/published-evidence.md").write_text(
+                    "A selected 2-paper corpus.\n## Sources / 来源\n"
+                    f"| P01 | [First](https://doi.org/{first}) | Note |\n"
+                    f"| P02 | [Second](https://doi.org/{second}) | Note |\n"
+                    "Some source titles\n"
+                )
+                self.assertEqual([], VALIDATOR.check_evidence_counts(root))
+
+    def test_evidence_doi_check_uses_primary_citations_only(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / "references").mkdir()
+            (root / "references/published-evidence.md").write_text(
+                "A selected 2-paper corpus.\n## Sources / 来源\n"
+                "| P01 | [Same title](https://doi.org/10.1000/first) | [Background](https://doi.org/10.1000/second) |\n"
+                "| P02 | [Same title](https://doi.org/10.1000/second) | Note |\n"
+                "Some source titles\n[Repeated discussion](https://doi.org/10.1000/first)\n"
+            )
+            self.assertEqual([], VALIDATOR.check_evidence_counts(root))
+            (root / "references/published-evidence.md").write_text(
+                "A selected 2-paper corpus.\n## Sources / 来源\n"
+                "| P01 | [One](https://archive.example/one) | Note |\n"
+                "| P02 | [Two](https://archive.example/two) | Note |\n"
+                "Some source titles\n"
+            )
+            self.assertEqual([], VALIDATOR.check_evidence_counts(root))
+
     def test_manifest_version_and_pairs(self) -> None:
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.27", suite["version"])
+        self.assertEqual("4.1.28", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
