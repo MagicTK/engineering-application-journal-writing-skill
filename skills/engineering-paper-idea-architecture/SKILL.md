@@ -5,7 +5,7 @@ description: Convert an industrial problem, partial method idea, dataset, or eng
 
 # Engineering Paper Idea And Architecture
 
-Suite version: `4.1.16`
+Suite version: `4.1.17`
 
 ## Mission
 

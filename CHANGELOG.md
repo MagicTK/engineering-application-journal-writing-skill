@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.17 (2026-10-24)
+
+- Complete scoped Chinese checks for classifier-logit energy function/score and residual connection in the existing bilingual terminology ledger. Record original-journal and author-hosted-translation roles separately; the selected engineering index remains 55 works.
+- Preserve the different source names `free energy` and `energy function`; do not transfer a verified neighboring translation to an unchecked exact term, or turn scores into calibrated probabilities. Separate network residual addition from signal remainders, prediction errors and concatenation.
+- Three existing references carry the substantive edits. No new topic guide, template, manuscript change or experiment; fictional-case responses and their verification limits are recorded separately.
+- An initial fictional response correctly scoped the terms but inserted an unnecessary negative clause into replacement prose. Clarify that author-facing audit limits stay separate from affirmative method descriptions; re-test the revised instructions and retain the first response.
+
 ## 4.1.16 (2026-10-24)
 
 - Add a paired classical slow-feature-analysis definition and separately verified Chinese wording. Extend the selected index to 55 published works with explicit survey/application roles and source-specific limits, not whole-bank certification.
