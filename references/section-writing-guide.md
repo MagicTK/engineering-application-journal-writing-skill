@@ -169,6 +169,12 @@ Keep definitions that establish the task, assumptions or later derivation. Remov
 
 The opening should turn the preceding engineering requirement into the quantities and information actually available. The ending should identify the resulting estimation, classification or optimization task that Methodology addresses. Those links can take a clause each; do not add a second miniature Introduction. Keep the task definition separate from the proposed solution: an assumed production-unit partition may belong here, whereas a newly designed grouping module usually belongs in Methodology. P17 connects process and assay availability to the regression task; P30 defines a changing distribution before deriving a response. Neither supplies a mandatory section length or heading.
 
+For a future-oriented task, define the forecast origin, target time/horizon and
+whether the output is a trajectory, life quantity or alarm. Keep a transformed
+life label distinct from its uncapped reference. Use the [conditional target
+route](topic-playbooks.md#forecasting-and-life-targets) rather than importing an
+equipment-life formulation into every process forecast.
+
 ## 6. Overall Architecture
 
 An `Overview` or `Framework Overview` subsection is optional. It is useful when a framework figure and several modules need a shared data-flow explanation. Otherwise, introduce the framework in the opening paragraphs of Methodology and begin numbered subsections with the first substantive mechanism.

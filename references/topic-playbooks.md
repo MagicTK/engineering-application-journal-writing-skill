@@ -555,6 +555,40 @@ Keep the meaning of `global/local` explicit. P54 pp.4-5 applies one historical-d
 
 For a latent state-space model, separate model structure, state estimation, parameter fitting and the task output. P34 pp.3-6 uses latent inference to supply a quality predictor; P73 pp.4-6 uses inferred dynamic/static variables and residuals for monitoring statistics. Their filtering/smoothing operations help fit or apply the model, but are not interchangeable with an online parameter-learning rule. In an abstract or contribution, state how the inferred representation supports that final task, selecting the needed connection rather than listing every estimation step. A latent coordinate need not be physically interpretable, and a valid mechanism-based physical-state model should not be relabeled as uninterpretable merely for consistency. P73's global/local scopes refer to shared versus rate-specific latent structure, not production stages. A step with no acquired measurement can propagate a model prediction without adding a new measured observation. Check the actual observation schedule, conditioning horizon and prediction release time before claims about missing-data recovery, forecast horizons or zero-delay operation; choose additional tests only for the interpretations claimed.
 
+### Forecasting And Life Targets
+
+Choose the target before borrowing prognostic language. P45 p.6 defines a
+window-to-RUL task with a maximum life label; P81 p.3 defines RUL regression and
+p.6 distinguishes its engine and time-to-failure cases. P95 pp.3-4 instead
+predicts future process-variable trajectories for a later limit-crossing alarm.
+These routes share a future-oriented engineering purpose, not one output or
+mandatory architecture. A current health indicator, future temperature vector,
+remaining-life estimate and fault-class label are different targets.
+
+For RUL, establish the failure endpoint or end-of-use criterion, prediction time,
+units and label construction. A capped or piecewise life label has a defined
+early plateau; that is not evidence that physical remaining life is constant.
+Historical end times can legitimately construct supervised training targets
+without being supplied to prediction. If an endpoint was not observed, state
+the actual available label information rather than silently treating the last
+record as failure. Do not turn an equipment-life convention into the default
+target for a chemical-process forecast.
+
+For trajectory prediction, define the input cutoff, target variables, horizon
+and direct-output or recursive rollout. Distinguish measurements available at
+issue time from later realized inputs; a genuinely known planned control
+sequence can be a legitimate input in another declared task. Explain how the
+encoded history supplies the retained prediction head. If a forecast is
+converted to an alarm, connect the explicit rule to its event/timing evaluation;
+lower trajectory error alone establishes neither longer warning lead nor a
+life estimate. Keep mixed horizon and alarm outcomes in Results and the
+abstract's closing finding when material. See [target semantics](terminology-decisions.md#forecast-targets-and-life-quantities)
+and [forecast/life evidence](experiment-evidence-design.md#forecasting-and-life-evaluation).
+
+中文：先按最终输出区分未来过程量、当前健康指标、剩余寿命与故障类别。
+寿命截断标签不等于实际寿命恒定；未来轨迹误差、越限事件识别与提前量是不同证据。
+不用一种设备寿命写法统一所有流程工业预测。
+
 ## 14. Control, Optimization, Scheduling, And Human-AI Decision
 
 Writing priorities:

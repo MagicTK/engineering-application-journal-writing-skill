@@ -219,6 +219,19 @@ training, name the trained representation and retained predictor rather than
 inventing a final feature-fusion module. Place quantity/interpretation checks in
 the author note; keep supported task meaning and empirical trade-offs in prose.
 
+**Forecasting and life estimation:** identify the retained output before stating
+its benefit. For a verified forecast design: "Encoded process histories supply a
+regression head that predicts the future temperature trajectory." Add the actual
+distinguishing use of operating information, not a routine layer list. If a
+declared rule then converts that trajectory to an alarm, state that connection
+only with its matching event/timing evidence. P95 separates these roles; P45/P81
+instead supply life targets. A life estimator need not forecast each sensor
+trajectory or run a fault classifier. Keep a label cap/scaling where it governs
+the claim, and close on the measured forecast/life result and material horizon
+trade-off. Do not recast lower error as longer warning lead or maintenance savings.
+These findings support the actual advance; ordinary forecasting or regression
+alone does not become another contribution.
+
 **Training-loss weighting:** connect the factors to the learner, then the
 retained classifier to the engineering decision. If verified: "Class-dependent
 weights scale the training errors of the temporal classifier. The fitted model

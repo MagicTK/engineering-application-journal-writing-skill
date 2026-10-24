@@ -287,6 +287,38 @@ Lock the aggregation and comparison unit along with the metric. Mean run-wise sc
 
 For a claimed improvement in learned temporal slowness, audit feature scale and the time axis. If `z_new(t) = c z_old(t)`, its unnormalized squared first-difference energy scales by `c^2` even though the trajectory has only changed amplitude. Check normalization or noncollapse constraints, sampling intervals, feature dimensions and the aggregation before comparing scores; a first difference per sample is not a derivative per physical unit time when intervals differ. Classical SFA constrains the representation to exclude trivial constant solutions, whereas a deep model may encourage the corresponding properties with soft penalties. Report the actual objective and separately evaluate the retained prediction or monitoring claim. Do not prescribe a new SFA experiment for a model that only claims ordinary trend smoothing.
 
+### Forecasting And Life Evaluation
+
+Record the forecast origin, latest available observations, target quantities,
+horizons and issue times. Evaluate the declared rollout: supplying true earlier
+targets during training is not the same as using them during a multistep test
+rollout. Actual future measurements are unavailable to a claimed current-time
+forecast; genuinely known future operating plans can be allowed exogenous
+inputs when stated. Fit preprocessing using permitted data. Audit overlapping
+input/target times rather than forbidding all shared historical context.
+Chronological evaluation on an existing asset and prediction on held-out assets
+answer different questions; neither split is universally mandatory for the other.
+
+For life estimates, record the endpoint definition, time/cycle units, life-label
+cap or scaling and the evaluated reference. Constructing historical supervised
+targets from known end times is legitimate; feeding those outcomes into a
+declared unknown-future prediction is not. Do not assign an unobserved failure
+time merely because recording ended. Identify whether errors are aggregated
+over windows, trajectory endpoints, assets or horizons; pooled and equal-asset
+averages can give different results. A point estimate or small RMSE does not
+establish a calibrated interval, and a capped-label error need not equal error
+on uncapped remaining life. P45/P81 support the target distinctions, not one
+mandatory cap, sampling clock or universal evaluation formula.
+
+If future trajectories drive an alarm (P95), separately evaluate the stated
+conversion rule and event matching at actual issue times. Prediction horizon,
+execution latency and measured warning lead are distinct. Reduced average
+trajectory RMSE can coexist with worse long-horizon error or unchanged event
+F1; retain the actual trade-off instead of implying improved warning or RUL.
+Choose timing, missed-event or false-alarm evidence only for those claims; the
+[continuous-monitoring rules](#continuous-monitoring-what-is-scored-and-when)
+do not replace a defined forecast target or authorize additional experiments.
+
 ### Adaptive State, Feedback And Retention
 
 For source-free adaptation, record access by phase: source-model fitting, target

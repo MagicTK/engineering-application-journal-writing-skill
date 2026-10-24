@@ -117,6 +117,31 @@ For explicit subset selection, `feature selection` retains identified input desc
 
 State which object is reduced. Several retained spectral or statistical descriptors may still require every original sensor. A later implementation may compute only the retained descriptors if their dependencies allow it; neither that saving nor removal of sensors follows from the selected-feature count alone. Check acquisition and preprocessing dependencies before claiming fewer required measurements, and measure the relevant computation before claiming faster inference. An explicitly implemented sensor subset can support a reduced-input claim without requiring a separate physical removal trial.
 
+## Forecast Targets And Life Quantities
+
+Define what is predicted and relative to which time. P45 p.6 constructs RUL
+labels from run-to-failure trajectories with a maximum label; P81 pp.3,6 uses
+RUL/TTF targets for its declared cases. P95 pp.3-4 forecasts process-variable
+values and separately connects them to operating-limit alarms. Its broad
+prognosis label is not a reason to rename all future trajectories as RUL.
+
+| Object | State explicitly | Do not infer |
+|---|---|---|
+| Future process-variable trajectory | predicted quantities, units, issue time, horizon and allowed inputs | a remaining-life target, physical causal model or implemented alarm |
+| Current health indicator | how the indicator is constructed and evaluated | time to failure without an established endpoint mapping |
+| Remaining useful life | current reference time, end-of-use/failure criterion, units and target definition | that a cycle is a second or every future alarm crossing ends useful life |
+| Capped/normalized life label | cap or scaling and the reference used for evaluation | an early constant physical remaining life or error on the uncapped target |
+| Forecast-based alarm | decision rule, reference event and actual issue/crossing times | longer warning lead from lower trajectory RMSE alone |
+
+Keep operating cycles, physical time, raw sensor samples and model windows
+distinct. A sensor's sampling frequency does not define the duration of a life
+cycle. Known historical failure times can label training histories without
+being model inputs; unknown evaluation outcomes must not enter the declared
+current-time prediction. Planned future controls available at issue time are
+different from later realized measurements. Name the actual information access
+and output using [forecast/life evaluation](experiment-evidence-design.md#forecasting-and-life-evaluation),
+not a universal ban on future-indexed quantities or historical target creation.
+
 ## Weight Roles And Class Decisions
 
 Name what a weight multiplies and which phase uses it. P92 p.4 weights the

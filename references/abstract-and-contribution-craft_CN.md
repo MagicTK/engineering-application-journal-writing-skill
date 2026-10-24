@@ -97,6 +97,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **训练损失加权：**将权重作用、受训学习器及工程决策连起来。接口相符时可写：Class-dependent weights scale the training errors of the temporal classifier. The fitted model assigns fault classes to new process measurements. 再补真实有区别性的权重规则，不把常规加权本身写成创新。训练系数不自动是预测时门控、特征融合模块或额外分数乘子。P93说明加权拟合，P92/P94则对增强前的选样加权，不能凭名称替代接口核对。结果落到实报指标及相关类别权衡；加权平均提高不单独证明稀有故障改善。权重和采样的详细运算放设置，不逐项塞进摘要。正文写保留的分类器如何预测，而不是在每句补排除条款。
 
+**未来量预测与寿命估计：**先明确模型的保留输出，再写其收益。接口核实后可写：Encoded process histories supply a regression head that predicts the future temperature trajectory. 再补实际有区别性的运行信息使用方式，不罗列常规层。明确规则若将轨迹转为报警，要有相应事件和时序评价；P95将这些作用分开，P45/P81则使用寿命目标。寿命估计器不必预测每条传感轨迹，也不必增加故障分类器。标签截断或尺度若影响主张解释就保留，结尾落到实测预测/寿命结果和重要步长权衡，不把误差下降改成预警更早或维修成本下降。常规预测或回归本身不另算贡献。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

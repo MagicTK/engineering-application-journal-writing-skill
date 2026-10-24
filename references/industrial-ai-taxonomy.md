@@ -66,6 +66,11 @@ Encode the task from the final decision output, not from the loss function.
 
 These are routing codes, not a demand to rename a published task. A quality-category predictor (P09) remains classification even when its features are learned through regression; estimating a continuous quality quantity fits T5. A soft sensor that forecasts a future quantity may use T5 and T6 together. Record the estimated quantity, target time and information available when the estimate is issued. A located region or ranked variable alone does not establish a responsible physical cause.
 
+For T6, use the [forecasting/life-target route](topic-playbooks.md#forecasting-and-life-targets)
+to distinguish predicted process trajectories from remaining life and current
+health assessment. A downstream alarm requires its own stated decision rule;
+the word prognosis does not establish one universal target or an RUL estimator.
+
 A reconstruction objective does not make data synthesis the engineering task.
 An autoencoder may supply features to a classifier or a monitoring statistic;
 a VAE may support quality prediction without generating augmentation samples.

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.60 (2026-10-25)
+
+- Clarify future process trajectories, current health indicators, remaining life and forecast-based alarms in existing task routing, section, terminology and evidence guidance. Preserve actual time/cycle units, capped-life targets and issue-time information access without banning legitimate historical supervision or known future plans.
+- Recheck two existing published RUL contexts and separately verify two Chinese wording variants. Add one selected chemical-process forecasting source to distinguish prediction from its later alarm rule, not to admit every complete prognostic module or certify source results.
+- Connect encoded histories to the retained regression output in abstract/contribution writing and preserve mixed horizon/event outcomes. No new topic/template or real manuscript/result is added or changed; a runtime quota sentence in the fictional baseline wrapper is transparently redacted from the public trace.
+
 ## 4.1.59 (2026-10-25)
 
 - Separate augmentation-selection weights, sample-error weights, class loss factors, sampling probabilities, prediction-score adjustments and support-weighted metrics in existing guidance. Connect the actual training operation to the retained diagnostic predictor.

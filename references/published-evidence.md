@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 94-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 94 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 95-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 95 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计94篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计95篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -106,10 +106,48 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P92 | [An Imbalance Modified Deep Neural Network With Dynamical Incremental Learning for Chemical Fault Diagnosis](https://doi.org/10.1109/TIE.2018.2798633) | TIE 66(1), 2019, pp.540-550. Section III-A1, p.4, weights selection of minority examples for generation, not per-class cross-entropy terms. Full IM-SMOTE/incremental names, update-set notation and experimental claims remain attributed and unverified here. |
 | P93 | [Compound-Fault Diagnosis of Rotating Machinery: A Fused Imbalance Learning Method](https://doi.org/10.1109/TCST.2020.3015514) | TCST 29(4), 2021, pp.1462-1474. Adjacent machinery study: p.5, Section III-B2 and Eq.(27), scales training residuals before a squared norm. The sensitivity-derived sample matrix is not automatically an inverse-class-frequency factor or a prediction gate; the full FILM/ELM and evidence-fusion designs are not certified. |
 | P94 | [Imbalanced fault diagnosis based on sample-weighted counterfactual](https://doi.org/10.1016/j.compchemeng.2025.109434) | CCE 204 (2026), Art.109434. Sections 3.1.1-3.1.2, pp.3-4, derive weights for prototype selection before augmentation. This role is distinct from loss weighting; full stable-learning, causal, counterfactual-feasibility and performance claims were not validated. |
+| P95 | [A meta-learning enhanced transformer for few-shot fault prognosis in multi-mode chemical processes](https://doi.org/10.1016/j.compchemeng.2026.109823) | CCE 214 (2026), Art.109823. Section 2.1, pp.3-4, defines history-to-future process-variable forecasting and a subsequent operating-limit alarm. This is not an RUL target or an automatic causal/control model; the full CPAM/MAML architecture, adaptation, alarm evaluation and performance claims were not certified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Future Trajectories, Remaining Life And The Engineering Decision
+
+P45 pp.1,6 and P81 pp.1,3,6 were reread, rendered and visually inspected for
+their life targets; P95 pp.1,3-4 was read, rendered and inspected for its forecast
+formulation. P45 Section IV-A constructs window-linked RUL labels from completed
+trajectories and caps the engine label; P81 Section III-A defines RUL regression,
+with Section V distinguishing engine life and an etching-system TTF case.
+The shared engine benchmark convention is not independent invention or a
+universal life-label rule. The selected check does not certify their indexing,
+normalization, full networks, target adaptation or reported results.
+
+P95 Section 2.1 instead predicts future process-variable trajectories and then
+describes how prescribed operating limits produce prognostic alarms. Forecasting
+error, event discrimination and warning timing remain separate evidence. Its
+study excludes unknown future control trajectories; that does not prohibit
+another declared forecaster from using genuinely known future plans. Transfer
+the target-to-decision connection, not the complete CPAM name, physical causal
+claims, full loss normalization, alarm matching, adaptation or deployment claims.
+The source's broad contrasts about other task families are not general rules.
+
+Original paired titles/abstracts in two [Chinese Journal of Engineering
+works](https://cje.ustb.edu.cn/article/doi/10.13374/j.issn2095-9389.2019.10.10.005)
+and [the equivalent-cycle battery study](https://cje.ustb.edu.cn/cn/article/id/e8a2f2f8-f620-4dba-8882-355fe77d5255)
+separately verify remaining useful life / 剩余寿命 and 剩余使用寿命. The first
+abstract defines current-to-useful-end length, while the second states a battery
+endpoint convention. Accessible HTML has no complete method equation bodies.
+These are wording/target checks, not extra industrial-definition counts or a
+universal endpoint threshold. An unavailable AAS page was not counted as read.
+
+In an abstract, problem statement or overview, connect available history to the
+predicted quantity, then any actual alarm or life decision. Preserve the role of
+operating inputs and the evaluated cap/horizon where they matter. A current
+health score or lower trajectory RMSE does not alone establish RUL accuracy or
+longer warning lead. A contribution can concern the supported forecasting
+capability or engineering finding without listing an invented fault classifier,
+maintenance optimizer or every routine temporal layer.
 
 ### Weighting Roles, Fitted Predictors And Class-Level Evidence
 
