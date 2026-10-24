@@ -114,6 +114,26 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
+### Chinese Wording, Domain Use And Evidence Status
+
+On 2026-10-25, the official [CCF Multimedia Technical Committee commentary](https://tc.ccf.org.cn/tcmt/xsdt/lwdd/2025-02-12/837946.shtml),
+item04 Methods, was read for its use of Energy/Helmholtz自由能 in classifier OOD
+scoring. This is wording corroboration in an official scholarly commentary,
+not a Chinese journal method or an additional engineering operation definition.
+Its linked CVPR paper could not be fetched in this pass and was not counted as
+read. Existing P18/P51 operation records remain the English definition basis.
+
+The [physics terminology reference PDF](https://wulixb.iphy.ac.cn/fileWLXB/cms/news/info/upload/%E7%89%A9%E7%90%86%E5%AD%A6%E5%90%8D%E8%AF%8D%EF%BC%88%E5%8F%82%E8%80%83%EF%BC%89.pdf)
+was read and visually inspected on PDF pp.1,72,83. It pairs free energy with
+自由能 and the qualified Helmholtz wording, but its cover identifies a March2010
+revision draft. Hosting on a journal site does not make it a current normative
+standard or a classifier-score definition. These different source types support
+a scoped wording record, not two independent Chinese classifier equations,
+physical thermodynamic interpretation or admission of a new complete module.
+No industrial source ID is added; the selected index remains97.
+
+将词形、分类打分语境、英文运算定义与正式标准分别记录；官方导读不是中文期刊原始方法，修订初稿不是现行审定标准。公式约定仍须与论文自己的分数及使用者对应。
+
 ### Loss Factors, Logit Offsets And Source Consistency
 
 On 2026-10-25, P96 pp.1,3,6 and P97 pp.1,4,8 were read for their identity
@@ -603,7 +623,7 @@ P50 pp.1,3-4 describe source-domain feature statistics and distributions used fo
 
 P18 p.3 Eq.(4) and P51 p.5 Eq.(18) define related negative-log-sum-exp classifier scores. P51 pp.5-6 were also visually checked: its nonnegative displayed logits, negative-energy comparison and negative threshold need reconciliation before reproducing the full decision. Algorithm 1 separates training updates from test classification. Preserve the shared score definition without certifying the disputed rule or assuming test-time label access. No implementation was inspected.
 
-A subsequent wording check preserves P18's `free energy` and P51's `energy function` as different source names for the scoped computation. The terminology bank now records Chinese `能量函数` and `能量分数` from a Chinese journal's matching logit definition and an author-hosted Chinese translation's OOD discussion. The latter is translation-use evidence, not an additional independent method definition. `自由能` in this context remains separately unverified. Two Chinese journal passages also explicitly pair `residual connection` with `残差连接`; that check concerns network addition, not a generic signal remainder. These translation sources add no engineering-work IDs, and no associated performance claim is adopted.
+A subsequent wording check preserves P18's `free energy` and P51's `energy function` as different source names for the scoped computation. The terminology bank records Chinese `能量函数` and `能量分数` from a Chinese journal's matching logit definition and an author-hosted Chinese translation's OOD discussion. The latter is translation-use evidence, not an additional independent method definition. At that check, `自由能` in this context remained separately unverified; the later scoped wording corroboration and its different source types are recorded above. Two Chinese journal passages also explicitly pair `residual connection` with `残差连接`; that check concerns network addition, not a generic signal remainder. These translation sources add no engineering-work IDs, and no associated performance claim is adopted.
 
 P52's institutional accepted version, pp.2-3, Sections II-A to III-A, defines known/unknown classes and connects class evidence to distribution parameters and an uncertainty output. This supports the task/quantity distinction, not independent verification of its calibration or performance claims. Together P51/P52 support the scoped open-set task; their mechanisms differ. Chinese translation evidence is separate in the terminology bank.
 

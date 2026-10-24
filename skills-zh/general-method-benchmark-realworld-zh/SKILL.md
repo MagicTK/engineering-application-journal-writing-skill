@@ -7,7 +7,7 @@ description: 通用工程方法 + benchmark/real-world 双案例论文 Skill 中
 
 [English](../../skills/general-method-benchmark-realworld/SKILL.md)
 
-套件版本：`4.1.62`
+套件版本：`4.1.63`
 
 ## 一、任务目标
 

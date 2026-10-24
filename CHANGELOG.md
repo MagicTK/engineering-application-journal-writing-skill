@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.63 (2026-10-25)
+
+- Corroborate scoped Chinese free-energy wording using an official scholarly commentary and a separately inspected physics reference draft. Distinguish word form, classifier use, English operation records, Chinese method definitions and normative status; add no industrial source ID or complete module name.
+- Refine global versus input-dependent logit-offset checks, including equivalent threshold transformation, ranking and frozen operating-point behavior. Do not require a new experiment for an algebraically equivalent notation change.
+- Preserve positive same-head classification/rejection writing and its actual metric trade-offs during independent testing. No new topic, template, real manuscript or experiment is introduced.
+
 ## 4.1.62 (2026-10-25)
 
 - Distinguish outer classification-loss factors, training-logit offsets, margin changes and later score consumers in existing bilingual terminology, abstract/contribution and topic guidance. Keep the actual training rule connected to the retained predictor.

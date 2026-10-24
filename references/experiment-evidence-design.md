@@ -448,6 +448,15 @@ Use this check for a claimed confidence, uncertainty or rejection capability, no
 
 For classifier-logit energy `E(z) = -T log sum_c exp(z_c/T)` with fixed positive `T`, adding the same constant `a` to every class logit leaves softmax probabilities unchanged but changes energy to `E(z)-a`. This algebraic check shows why the score is not itself a probability and why a threshold is not portable merely because class probabilities match. Verify score sign and range against the actual implementation; do not replace a disputed sign or threshold by guessing. P18 and P51 use related base definitions for different purposes, as recorded in [the terminology bank](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
 
+For a global constant shared by all samples, changing a threshold `t` to `t-a`
+preserves `E>t` decisions and score ordering. A purely equivalent notation change
+does not itself require a new training run. An input-dependent common offset
+`a(x)` still preserves each sample's softmax but can change energy ordering;
+one global threshold correction is not generally equivalent. Keep ranking
+metrics distinct from a frozen operating point: a uniform score translation can
+preserve the former while an untransformed threshold changes decisions. Evaluate
+the actual score/threshold pair, not the name energy or unchanged class accuracy.
+
 Keep the proposed evaluation proportional to the retained claim. If a model only learns feature perturbations and outputs known fault labels, evaluate its stated condition-generalization task without inventing a rejection head. If an uncertainty estimate does drive rejection, the chain `estimate -> decision -> measured outcome` should appear consistently in the overview, contributions and results. Designing these checks does not authorize running new experiments or changing recorded outcomes.
 
 For a Dirichlet class-evidence output, reduced uncertainty mass is a change in a model quantity, not an error-rate measurement. Probability calibration evaluates the stated probabilities against outcomes; calibration of an error-probability score would target that different event. Neither follows merely from threshold selection on separate calibration data. Equal class-probability means can accompany different concentration, so preserve both the score definition and the measured decision outcome before describing a reliability improvement. Use the [quantity check](terminology-decisions.md#evidential-classification-quantities) without requiring every uncertainty score to be an error probability.
