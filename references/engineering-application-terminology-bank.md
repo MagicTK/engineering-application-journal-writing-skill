@@ -401,6 +401,15 @@ in a classification loss, weighted cross-entropy, focal loss or one universal
 balancing module. P39's prediction-dependent focal factor is a further distinct
 object. Describe a verified method's actual multiplication and phase; the absent
 pair is not a ban on valid mathematical weighting or an approved new name.
+P96 p.3, Eqs.(3)-(4), adds one clear background definition of a class factor
+multiplying cross-entropy; its p.6 proposed loss also includes a logit margin.
+P97 p.4, Table 1, contains a class-weighted expression, but p.8, Eqs.(35)-(36),
+instead shows binary cross-entropy with an overall objective coefficient. This
+unresolved internal discrepancy is not used to finish a clean definition pair.
+P18 p.4, Eq.(6), adjusts training logits inside the loss and is not another
+outer-class-factor definition. Generic weighted-cross-entropy/class-weighting
+admission remains incomplete here; these records support operation-sensitive
+descriptions without certifying full source methods or universal weight rules.
 See [contextual decisions](terminology-decisions.md#weight-roles-and-class-decisions).
 
 Chinese wording is independently supported for selected entries below. These

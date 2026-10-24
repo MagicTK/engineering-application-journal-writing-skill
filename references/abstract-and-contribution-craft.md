@@ -244,6 +244,17 @@ check. Close on the reported metric and relevant class trade-off. A weighted
 aggregate gain alone does not substantiate rare-fault improvement; explain the
 weight/sampler arithmetic in the settings, not in every abstract.
 
+Use the same positive connection for a verified training-logit design, while
+preserving its different computation: "Class-prior offsets modify the logits
+used to train the classifier. The trained network assigns fault classes to new
+process measurements." Add the actual distinguishing offset or update rule;
+this functional example is not itself a new module. P18 uses a training offset
+and a separate pseudo-label adjustment, while P96 combines a loss factor and a
+margin. Name the operation that actually trains the retained predictor, rather
+than describing all imbalance responses as feature fusion or a prediction gate.
+Keep source inconsistencies and denominator checks in author notes or Methods
+unless they change the retained abstract claim.
+
 **Evidence combination:** connect the encoded outputs to the kind of combination
 actually performed and to the final diagnostic decision. A feature sum feeds a
 classifier; a defined mass-combination rule produces masses that need their own

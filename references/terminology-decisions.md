@@ -153,6 +153,25 @@ focal factor in a classification objective; it is not automatically an
 inverse-frequency class weight. Preserve each source's attributed name without
 borrowing its causal or minority-benefit claims.
 
+P96 p.3, Eqs.(3)-(4), explicitly multiplies cross-entropy by a class factor;
+its proposed objective on p.6 additionally changes a class logit through a
+margin, then applies a factor. These are two identifiable operations. P97 p.4,
+Table 1, calls a class-factor expression weighted cross-entropy, but p.8,
+Eqs.(35)-(36), instead displays unweighted binary cross-entropy with one scalar
+classification-objective coefficient. Keep this source conflict unresolved
+without implementation evidence; neither its title nor its algorithm alone
+certifies the whole reported loss or completes a clean matched-name pair.
+
+An offset applied to logits inside the logarithm is different from multiplying
+the final cross-entropy term. P18 p.4, Eq.(6), uses class-prior offsets in a
+training objective; p.5, Eq.(10), uses an adjustment for pseudo-label construction,
+not automatically for the final diagnostic prediction. Record the sign, operand
+and consumer at each phase rather than treating opposite signs as an error or
+moving an adjustment to inference because it is called post-hoc. Keep logit as
+an explicitly defined pre-normalization class score when a Chinese translation
+has not been independently established; do not substitute probability or physical
+cost. Source-specific balanced-softmax and margin names stay attributed.
+
 For fixed class weights in a supplied method, say that per-class factors weight
 the specified training loss. Sampling probabilities change which examples are
 drawn; feature weights change a representation; decision-score weights change

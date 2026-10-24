@@ -252,6 +252,16 @@ Do not impose weights summing to one as a universal requirement. Determine class
 counts and any chosen weighting rule from permitted fitting/selection resources,
 not final-evaluation labels.
 
+Check where a factor enters the implemented objective. Multiplying a true-class
+cross-entropy term and shifting logits inside the logarithm are different
+computations; a later pseudo-label adjustment is another use, as in P18. P96
+separates a class factor from a logit margin. When a source algorithm and equation
+disagree, as in P97 Table 1 versus Eqs.(35)-(36), retain the conflict rather than
+copying one as an established recipe. For the supplied single-sample weighted
+loss, dividing by sample count or by the sum of its weights also gives different
+scales; a weight-sum reduction cancels that sample's positive class factor.
+This arithmetic does not prove that reweighting has no effect in general.
+
 A support-weighted F1 gives larger classes larger aggregation weights; it does
 not establish a class-weighted training loss or equal attention to rare faults.
 Use class-wise and/or macro results when the claim concerns minority outcomes,

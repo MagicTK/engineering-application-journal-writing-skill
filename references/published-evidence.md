@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 95-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 95 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 97-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 97 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计95篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计97篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -107,10 +107,38 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P93 | [Compound-Fault Diagnosis of Rotating Machinery: A Fused Imbalance Learning Method](https://doi.org/10.1109/TCST.2020.3015514) | TCST 29(4), 2021, pp.1462-1474. Adjacent machinery study: p.5, Section III-B2 and Eq.(27), scales training residuals before a squared norm. The sensitivity-derived sample matrix is not automatically an inverse-class-frequency factor or a prediction gate; the full FILM/ELM and evidence-fusion designs are not certified. |
 | P94 | [Imbalanced fault diagnosis based on sample-weighted counterfactual](https://doi.org/10.1016/j.compchemeng.2025.109434) | CCE 204 (2026), Art.109434. Sections 3.1.1-3.1.2, pp.3-4, derive weights for prototype selection before augmentation. This role is distinct from loss weighting; full stable-learning, causal, counterfactual-feasibility and performance claims were not validated. |
 | P95 | [A meta-learning enhanced transformer for few-shot fault prognosis in multi-mode chemical processes](https://doi.org/10.1016/j.compchemeng.2026.109823) | CCE 214 (2026), Art.109823. Section 2.1, pp.3-4, defines history-to-future process-variable forecasting and a subsequent operating-limit alarm. This is not an RUL target or an automatic causal/control model; the full CPAM/MAML architecture, adaptation, alarm evaluation and performance claims were not certified. |
+| P96 | [An imbalanced domain-adversarial hypergraph convolutional network for robust fault diagnosis of rotating machinery](https://doi.org/10.1016/j.eswa.2026.131898) | ESWA 316 (2026), Art.131898. Section 2.3, p.3, defines a class factor on cross-entropy; Section 3.4.1, p.6, separately uses a logit margin and factor. A background definition is not the entire proposed objective or evidence of real misclassification cost. Full IDAHGCN/alignment, notation and performance are not certified. |
+| P97 | [Intelligent fault diagnosis for chemical process under imbalanced data: A non-local frequency-domain sparse hash autoencoder approach](https://doi.org/10.1016/j.psep.2026.108502) | PSEP 208 (2026), Art.108502. P.4 Table 1 shows class-weighted cross-entropy, while p.8 Eqs.(35)-(36) shows binary cross-entropy with an overall objective coefficient. Record this unresolved difference, not a verified complete loss or clean second class-weighting definition. Full NFSH-AE, signal filtering, sparsity, splits and results are not certified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Loss Factors, Logit Offsets And Source Consistency
+
+On 2026-10-25, P96 pp.1,3,6 and P97 pp.1,4,8 were read for their identity
+and selected loss descriptions; the four method pages were rendered and visually
+inspected. P96 distinguishes a background class factor from its proposed
+margin-adjusted, weighted objective. P97's algorithm and later loss equations
+differ and were not reconciled without implementation evidence. This adds two
+scoped reading records, not two clean matching definitions or full-paper audits.
+Generic class-weighting/weighted-cross-entropy admission remains incomplete.
+
+Existing P18 pp.1,4-6 were reread, with pp.4-5 visually inspected: Eq.(6) puts
+a prior-dependent offset inside the training loss, while Eq.(10) adjusts scores
+to construct pseudo-labels. That later use is not automatically final diagnostic
+inference. Keep these consumers distinct in an overview. A concise method
+sentence should connect the actual training rule to the retained predictor,
+not replace it with a feature-fusion or prediction-gate story. Ordinary weighting
+or a familiar loss name is not itself a new contribution.
+
+The original [Coal Science and Technology paired abstracts](https://www.mtkxjs.com.cn/article/doi/10.12438/cst.2023-0903)
+were reopened for weighted cross-entropy loss / 加权交叉熵损失. The accessible
+page still supplies no loss equation. This rechecks wording only; it neither
+resolves P97 nor supplies a second industrial operation definition. Other search
+leads with no readable method were not counted.
+
+将外乘损失系数、对数内部的logit调整和伪标签/预测用途分开；来源算法与公式冲突时保留核实状态，不以发表或名称出现替代一致性证据。摘要与贡献保留真实操作对预测器的作用，不堆入全部审查排除项。
 
 ### Future Trajectories, Remaining Life And The Engineering Decision
 

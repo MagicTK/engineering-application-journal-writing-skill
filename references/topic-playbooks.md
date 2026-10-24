@@ -88,6 +88,14 @@ defines a different objective. This conditional route does not turn ordinary
 class weighting into a novel contribution or make imbalance every paper's
 headline. See [weight roles](terminology-decisions.md#weight-roles-and-class-decisions).
 
+Distinguish outer loss factors from training-logit offsets and later score
+adjustments. P18 uses prior-dependent logits for training and a separate
+pseudo-label construction; P96 combines a class factor with a margin. Neither
+design is described faithfully by moving every balancing operation into a final
+prediction gate. A source's proposed loss and its background definition are also
+different passages, and P97's algorithm/equation conflict needs implementation
+evidence before either can be treated as its definitive training rule.
+
 For zero-shot diagnosis, trace how semantic knowledge reaches the final decision.
 P05/P06 map measurements toward class-semantic descriptions, whereas P80 uses
 descriptions to generate unseen-class features before fitting a diagnostic

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.62 (2026-10-25)
+
+- Distinguish outer classification-loss factors, training-logit offsets, margin changes and later score consumers in existing bilingual terminology, abstract/contribution and topic guidance. Keep the actual training rule connected to the retained predictor.
+- Add two scoped published reading records, including an unresolved algorithm/equation discrepancy, and revisit the existing prior-offset example. These records do not complete a clean generic class-weighting pair or admit a full source-specific loss/module name.
+- Recheck the existing Chinese weighted-cross-entropy wording and make loss-reduction dependence explicit. Preserve mixed class/aggregate outcomes, no fixed novel-module template, and no changes to real manuscripts, experiments or data.
+
 ## 4.1.61 (2026-10-25)
 
 - Repair overbroad query-label wording in the research-planning reference and bilingual ideation entrypoints. Distinguish training supervision, actually separated validation-query selection and final-evaluation labels without inventing a validation set.
