@@ -5,7 +5,7 @@ description: Research and position an engineering-application journal paper usin
 
 # Engineering Literature Positioning
 
-Suite version: `4.1.21`
+Suite version: `4.1.22`
 
 ## Mission
 

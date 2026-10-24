@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.22 (2026-10-24)
+
+- Admit the PINN base category through two distinct published chemical-engineering works and an independent Chinese terminology check. Track author versions and shared methodological lineage; complete proposed network names remain attributed.
+- Clarify the writing distinction between a constraint layer used during training and correction after training. Fixed layer parameters do not imply an absent gradient path or prohibit algebraic/hard-constrained PINN formulations.
+- Refine claim-matched checks for scaled variables, equality versus inequality scope, and feasible versus globally nearest predictions. Five existing references carry the substantive changes; no new topic guide, template, manuscript edit or research experiment. Fictional behavioral tests do not establish scientific reproducibility.
+
 ## 4.1.21 (2026-10-24)
 
 - Inspect three further published industrial studies to distinguish process-based architecture, uncertain graph priors and latent-space regularization. Record limited reading depth and source-equation discrepancies rather than treating publication as mathematical validation.

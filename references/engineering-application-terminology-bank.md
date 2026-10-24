@@ -4,7 +4,7 @@
 
 This reference supports writing for industrial, control, automation, process,
 manufacturing, and equipment-oriented journals. The current release provides a
-[58-paper published evidence index](published-evidence.md) and
+[60-paper published evidence index](published-evidence.md) and
 [context-sensitive decisions](terminology-decisions.md). Earlier private corpus
 frequency counts are omitted because this public package cannot reproduce them.
 Author drafts are not terminology authorities; computer-science channel-strategy
@@ -351,13 +351,15 @@ original semantic summaries, not extracted source passages.
 | maximum mean discrepancy (MMD) | P10 p.5, Eq.(15), defines a kernel mean-embedding discrepancy for source/target features; P32 p.4, Eqs.(10)-(11), defines a kernel discrepancy between sampled noise and predicted noise within diffusion training. | Same base discrepancy, different operands and loss roles. P32's full Ada-MMD name and mutual-information wording do not follow from the base definition. P44's introductory mention alone is not a third operational definition. Check the actual estimator, kernel and aggregation before reproducing a formula. |
 | slow feature analysis (SFA) | P54 p.3, Eqs.(5)-(8), and P55 p.3, Eqs.(1)-(4), define mappings that minimize average squared temporal derivatives under zero-mean, unit-variance and decorrelation constraints. | Matching classical definitions in an industrial application and a methodological survey, with shared foundational lineage, not two independent inventions. This does not admit every supervised, probabilistic or deep variant as the same optimization. Slowness is temporal variation relative to feature scale, not low sampling rate, computational speed, quality relevance or low-pass filtering. P34 and P53 illustrate different adaptations whose stated objectives must be checked separately. |
 | multilabel / multi-label learning and classification | P37 pp.2,4, Section II-B2 and Eqs.(16)-(19), combines pairwise predictions into multiple subsystem-fault decisions; P39 pp.2-3, Section II-A, defines binary fault indicators with more than one positive for compound faults and a subsequent decision rule. P40 p.3 defines a binary sample-by-label matrix, with multilabel evaluation on p.5. | P37/P39 are distinct works by the same author pair; P40 provides a different team's related feature-selection setting. The shared target permits several labels per sample, not ambiguous alternatives or necessarily missing annotations. Pairwise classifiers and their fusion rules are source-specific. A local softmax classifier can participate in a multilabel system; inspect the final output rather than prescribing sigmoid heads or calling every compound-fault task multilabel. |
+| physics-informed neural network (PINN) | P59 author version, Section 1 and Section 3.2; P60 author version v2, Section 1 and Section 2: physical constraints inform neural surrogate models through training penalties or constrained outputs. | Two distinct chemical-engineering works, with P60 extending P59's line of work. The base category is not limited to PDE residual losses; its hard/soft variants and complete proposed names are not interchangeable. Specify the implemented physical relation and its entry point. |
 
 Chinese wording is independently supported for selected entries below. These
-translation sources do **not** enlarge the 58-paper engineering corpus or certify
+translation sources do **not** enlarge the 60-paper engineering corpus or certify
 the performance/style claims made by their authors.
 
 | Chinese check | Primary online locator and checked content | Status and transfer boundary |
 |---|---|---|
+| physics-informed neural network / 物理信息神经网络 | [Earth Science Frontiers, 10.13745/j.esf.sf.2025.10.38](https://jypl.pku.edu.cn/Article/info?aid=388874189), original Chinese abstract explicitly supplies the English term and abbreviation | Base translation verified. This is not admission of arbitrary physics-qualified module names or validation of the article's numerical claims. |
 | feature fusion / 特征融合 | [Acta Automatica Sinica, c190428](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190428?viewType=HTML), bilingual abstract and keywords | Verified translation for combining features; image-reconstruction context, not an industrial method-prevalence claim. |
 | self-attention / 自注意力 | [Acta Automatica Sinica, c220027](https://www.aas.net.cn/article/doi/10.16383/j.aas.c220027), bilingual Fig.2 caption; [c220715](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c220715?viewType=HTML), bilingual abstract | Translation for self-attention, including named variants. This does not admit those variant names as general families or validate cross-attention. |
 | gating mechanism / 门控机制 | [Acta Automatica Sinica, c250366](https://www.aas.net.cn/article/doi/10.16383/j.aas.c250366), bilingual abstract | Verified base translation; the source concerns expert modules in language processing, not a time-interval gate in a process model. |

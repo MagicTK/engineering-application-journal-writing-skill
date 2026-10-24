@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This revision uses a selected 58-paper corpus, not a systematic review. The latest additions distinguish probabilistic knowledge, process-based architecture and latent-space regularization; they do not admit every physics-informed mechanism name. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 58 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This revision uses a selected 60-paper corpus, not a systematic review. The latest pair supports the PINN base category and distinguishes training-time constraint layers from post-training correction; complete proposed model names remain attributed. Selected abstract, introductory and method passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 60 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本版在原有55篇基础上，补查概率形式的知识、工艺结构与隐空间正则项三篇来源，合计58篇，不据此准入所有物理信息相关机制名称。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本版在原有58篇基础上补查两篇化工领域约束神经网络论文，合计60篇；支持PINN基础名称，区分训练内约束与训练后修正，不把论文专名升级为通用模块。针对选定摘要、引言与方法段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成系统综述、全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52采用机构提供的接受稿，P59/P60注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -70,6 +70,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P56 | [Improving Data-Driven Inferential Sensor Modeling by Industrial Knowledge: A Bayesian Perspective](https://doi.org/10.1109/TSMC.2024.3493071) | Process soft sensing: uncertain graph knowledge is represented probabilistically. Distinguish prior information, a distribution over graphs and normalization requirements; do not copy every displayed formula. |
 | P57 | [A soft sensor modeling framework embedded with domain knowledge based on spatio-temporal deep LSTM for process industry](https://doi.org/10.1016/j.engappai.2023.106847) | Process soft sensing: time-delay analysis and subprocess knowledge inform input organization and network structure. These are not automatically physical-equation penalties. |
 | P58 | [Entropy-enhanced batch sampling and conformal learning in VGAE for physics-informed causal discovery and fault diagnosis](https://doi.org/10.1016/j.compchemeng.2025.109053) | Industrial graph modeling: the inspected physics-named term acts on latent pair distances. Keep the complete model name attributed and do not infer exact physical or causal guarantees from its wording. |
+| P59 | [Physics-informed neural networks with hard linear equality constraints](https://doi.org/10.1016/j.compchemeng.2024.108764) | Computers & Chemical Engineering 189 (2024), 108764. Constrained neural surrogate modeling; see the version-specific reading record below. |
+| P60 | [Physics-informed neural networks with hard nonlinear equality and inequality constraints](https://doi.org/10.1016/j.compchemeng.2025.109418) | Computers & Chemical Engineering 204 (2026), 109418. Nonlinear constrained neural surrogate modeling; see the version-specific reading record below. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -149,7 +151,18 @@ Targeted reading on 2026-10-24 checked the following different uses of industria
 
 Separate Chinese checks used original scholarly pages: the bilingual keywords and abstract of [Transactions of Beijing Institute of Technology, 2002(5):543-548](https://journal.bit.edu.cn/zrb/ch/reader/view_abstract.aspx?file_no=20020504&flag=1) explicitly pair `prior distribution` with `先验分布`; the scholarly-platform abstract for [Earth Science Frontiers, DOI 10.13745/j.esf.sf.2025.10.38](https://jypl.pku.edu.cn/Article/info?aid=388874189) explicitly pairs `physics-informed neural networks` with `物理信息神经网络` and distinguishes approximate boundary satisfaction from a hard-constraint approach. Only those pages were read, not their complete methods. The latter DOI's destination and two alternative prior-distribution pages were inaccessible during this check and were not counted as additional evidence.
 
-这两项中文核验只确认原文对应和语境，不将一个译名核验扩展成所有复合模块的准入，也不扩充58篇工程语料数量。知识形式、作用位置和约束范围在[专题规则](topic-playbooks.md#6-graph-knowledge-guided-causal-or-fuzzy-modeling)与[评价规则](experiment-evidence-design.md#knowledge-and-physical-constraint-claims)中分别处理；来源措辞与数学作用不一致时保留问题，不替作者猜测修正式。
+这两项中文核验只确认原文对应和语境，不将一个译名核验扩展成所有复合模块的准入，也不计入工程语料数量。知识形式、作用位置和约束范围在[专题规则](topic-playbooks.md#6-graph-knowledge-guided-causal-or-fuzzy-modeling)与[评价规则](experiment-evidence-design.md#knowledge-and-physical-constraint-claims)中分别处理；来源措辞与数学作用不一致时保留问题，不替作者猜测修正式。
+
+### Constrained Neural Models / 约束神经模型
+
+Two published chemical-engineering works were checked through publisher metadata and specified author versions on 2026-10-24. Each author version and journal article count as **one work**. The teams differ, but P60 builds on P59; this is recurring base usage, not independent invention or a frequency survey.
+
+| Work and inspected version | Definition and writing implication | Scope retained |
+|---|---|---|
+| P59 [arXiv:2402.07251v1](https://arxiv.org/html/2402.07251v1), Section 1 and Section 3.2; PDF pp.3-4,8-12 | A fixed affine projection participates in training and inference. Theorem 1 states a full-row-rank condition; Remark 3 separates this from post-training correction. | Exactness concerns specified linear equalities. The full KKT-hPINN name stays attributed; no complete implementation or experiment reproduction was performed. |
+| P60 [arXiv:2507.08124v2](https://arxiv.org/html/2507.08124v2), Sections 1,2,2.1; PDF pp.1-7 | Physical constraints include algebraic relations; the iterative layer returns corrected outputs for loss computation. Section 2 distinguishes nonconvex feasibility from global minimum-distance projection. | Use v2's explicit distinction, not v1's broader projection wording. Numerical convergence and differentiation require implementation checks; the full KKT-Hardnet name stays attributed. |
+
+The PINN Chinese translation was rechecked on the original scholarly-platform abstract linked above. Publisher metadata confirm the two publications, but the inspected author versions are not asserted to be text-identical to the final journal PDFs. No additional proposed mechanism name is admitted from a title or bibliography mention.
 
 ## Results And Closing Sections / 结果与结尾段落
 
