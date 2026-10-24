@@ -53,6 +53,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 多头处理是核心时，连清输入对象、头输出及预测器，不将头数写成新增物理传感器或独立发现的关系。P11/P82区分合并后的头特征与注意力系数的单独用途，总览保留真实区别，摘要只选理解实际推进所需的关联。普通并行头本身不成为新贡献，其归一化也不是最终任务决策。
 
+预测不确定性主张应连清估计量、区间与实际用途，不把概率模型和可靠性保证列成互不相关的点。针对接口已核实的合成设计，可写：Process measurements condition a distribution for the quality variable. Its interval bounds feed the declared warning rule, linking the estimated output range to the monitoring decision. 若无告警规则，就止于真实的质量估计或区间。贡献说明有区别的估计或区间构造如何产生可评价的输出，结果保留重要的覆盖率、宽度与工况差异；普通抽样数和核查排除项留在设置或作者说明。P103/P104提供不同的输出到用途关系，不要求将两种方法融合，也不把一个分布或近似写成已经证实的工程收益。
+
 ## 3. 合成例子
 
 已知设计：共享编码器产生各传感器特征，关系模块更新这些特征，分类器融合更新后与原始编码特征；没有跨域验证。

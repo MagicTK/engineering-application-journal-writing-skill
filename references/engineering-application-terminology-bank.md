@@ -283,6 +283,21 @@ when the distinction from prospective, online, shadow-mode, or closed-loop
 evaluation is analytically important; do not use it as the default label for
 all production-source datasets.
 
+For predictive uncertainty, specify the estimated quantity before choosing an
+interval label. P103's output distribution used for process monitoring and
+P104's quality-variable bounds support an object-to-decision contrast, not one
+shared interval algorithm or new module family. Use the
+[quantity distinction](terminology-decisions.md#predictive-outputs-and-intervals)
+and [conditional evaluation](experiment-evidence-design.md#output-prediction-intervals).
+
+Chinese wording was checked separately in the original
+[power-load article](https://html.rhhz.net/dlgcjs/HTML/201123940.html), Section 3
+and Figs.8-9: `prediction interval` / 预测区间 and `prediction interval coverage
+probability` / 预测区间覆盖率. Its rendered Eq.(8) reverses the inside/outside
+indicator relative to its following prose; that unresolved conflict is not
+copied as a formula. This is wording evidence, not a second audited English
+interval mechanism or validation of every metric/translation in that article.
+
 ## 9. Caution List
 
 These are context restrictions, not an absolute blacklist.

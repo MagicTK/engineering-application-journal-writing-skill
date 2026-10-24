@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 102-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 102 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 104-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 104 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计102篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计104篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -114,6 +114,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P100 | [Pareto-Optimal Adaptive Loss Residual Shrinkage Network for Imbalanced Fault Diagnostics of Machines](https://doi.org/10.1109/TII.2021.3094186) | TII, read in author-uploaded accepted HTML, Section II-B, Eqs.(6)-(9): class-factor placement plus an additional prediction-dependent batch factor. Coefficient mapping and full PALRSN remain unverified. |
 | P101 | [An Adversarial Robustness Enhancement Framework for Industrial Fault Diagnosis System With Spectral and Data Imbalance Awareness](https://doi.org/10.1109/TSMC.2026.3659658) | TSMC: Systems 56(6), 2026, pp.3789-3803. PDF pp.1,8 describes intentional input perturbations and their use during training; selected pp.9,12 discusses attack evaluation. Full MLNM-FrSh, equations, manifold/security claims and results are not certified. |
 | P102 | [Evaluating practical adversarial robustness of fault diagnosis systems via spectrogram-aware ensemble method](https://doi.org/10.1016/j.engappai.2024.107980) | EAAI 130 (2024), Art.107980. Institutional author abstract describes spectral input manipulation for black-box evaluation. This is purpose-level corroboration, not a full SAEM or attack-training definition, method audit or performance verification. |
+| P103 | [Fault detection and identification using Bayesian recurrent neural networks](https://doi.org/10.1016/j.compchemeng.2020.106991) | CCE 141 (2020), Art.106991. Published author-hosted PDF pp.4-6: predictive moments feed process-monitoring decisions. Output variation, numerical sampling error and marginal/joint decisions differ; full BRNN theory, implementation and results are not certified. |
+| P104 | [Prediction interval soft sensor for dissolved oxygen content estimation in an electric arc furnace](https://doi.org/10.1016/j.asoc.2024.112246) | Applied Soft Computing 167 (2024), Art.112246. Published institutional PDF pp.5-6: scalar-output bounds, stated approximation assumptions, coverage and width. This is a soft-sensing quantity/evaluation record, not generic admission of the full fuzzy interval variants. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -899,6 +901,27 @@ label-preservation evidence or security guarantees. Their conditional writing
 and evaluation implications are in the
 [referent decision](terminology-decisions.md#adversarial-identify-the-opponent-and-changed-object)
 and [input-attack route](experiment-evidence-design.md#input-attack-evaluation).
+
+### Output Uncertainty, Intervals And Their Consumers
+
+P103's published PDF was read at pp.1,4-6 and selected p.7, with pp.4,6
+visually inspected; the local 2019 preprint is a different version, not an
+extra work. P104 was read at pp.1-2 and selected pp.4-6, with p.5 visually
+inspected. The former estimates predictive moments for monitoring; the latter
+constructs scalar-output bounds and evaluates coverage with width. They ground
+the distinction between an estimated quantity and its decision use, not two
+matching definitions of every interval algorithm. Source-specific variance
+approximations, notation, full methods and performance are not reproduced or
+certified.
+
+The original Chinese [power-load article](https://html.rhhz.net/dlgcjs/HTML/201123940.html),
+Section 3 and Figs.8-9, corroborates the interval/coverage wordings. Its HTML
+Eq.(8) and accompanying prose conflict about the coverage indicator, so the
+formula is not adopted. Inaccessible Chinese pages and a publisher 403 add no
+definition evidence. This translation check adds no engineering index ID.
+The synthetic moment/coverage fixture is independent arithmetic, not a source
+experiment or calibrated interval. See the [quantity route](terminology-decisions.md#predictive-outputs-and-intervals)
+and [claim-specific evaluation](experiment-evidence-design.md#output-prediction-intervals).
 
 ## Reusable Lessons / 可迁移结论
 

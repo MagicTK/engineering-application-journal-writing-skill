@@ -105,6 +105,10 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 
 类别不平衡属于数据属性而不是默认的论文卖点。若它影响训练或评价，应在数据集小节给出类别数量，在实验设置中说明权重/采样策略，在指标小节解释 macro、weighted 或 class-wise 指标，并在结果中分析受影响类别。除非类别不平衡本身就是核心科学问题或贡献，否则不在摘要、贡献、实验总览和结论中突出。
 
+预测不确定性先明确量，再选择区间名称。P103的过程监测预测分布与P104的质量变量区间支持对象到用途的区别，不是同一套区间算法或新模块家族。参见[量的区分](terminology-decisions_CN.md#预测输出与区间)及[条件性评价](experiment-evidence-design.md#output-prediction-intervals)。
+
+中文词形另查[电力负荷原始论文](https://html.rhhz.net/dlgcjs/HTML/201123940.html)第3节及图8-9：prediction interval对应预测区间，prediction interval coverage probability对应预测区间覆盖率。其HTML式(8)的区间内外指示值与后文解释相反，未解歧义，不能照抄该式。该记录仅核词形/语境，不充第二套英文区间方法的完整审计或该文所有指标译法的认可。
+
 ## 七、慎用词
 
 | 词语 | 风险 | 推荐替代 |

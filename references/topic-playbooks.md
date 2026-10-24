@@ -616,6 +616,18 @@ and [forecast/life evidence](experiment-evidence-design.md#forecasting-and-life-
 寿命截断标签不等于实际寿命恒定；未来轨迹误差、越限事件识别与提前量是不同证据。
 不用一种设备寿命写法统一所有流程工业预测。
 
+For soft sensing or forecasting with an uncertainty output, identify whether
+the model estimates a mean, a new observation's distribution or a joint region.
+P103's monitoring distribution and P104's scalar quality intervals have different
+consumers. Connect the estimated quantity to actual interval endpoints and any
+warning rule; do not borrow calibration, safety or condition-wise reliability
+from a Bayesian, fuzzy or probabilistic label. Read the
+[output-interval guidance](experiment-evidence-design.md#output-prediction-intervals)
+only for the corresponding claim. A point-prediction study need not add an
+interval model, and a latent-variable model need not output uncertainty bounds.
+
+中文：软测量或预测含不确定性输出时，先分清均值、新观测值分布与联合区域，再连接到区间和实际决策；不把重复训练误差条当成单样本预测范围，也不为普通点预测强加区间实验。
+
 ## 14. Control, Optimization, Scheduling, And Human-AI Decision
 
 Writing priorities:

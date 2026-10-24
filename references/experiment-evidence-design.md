@@ -386,6 +386,38 @@ Choose timing, missed-event or false-alarm evidence only for those claims; the
 [continuous-monitoring rules](#continuous-monitoring-what-is-scored-and-when)
 do not replace a defined forecast target or authorize additional experiments.
 
+### Output Prediction Intervals
+
+Use this route for claimed interval or predictive-distribution outputs, not as
+a mandatory extension of point prediction. Define the target observation,
+issue time, input cutoff, units, nominal level and endpoint construction.
+Record what model/noise variation is represented and which approximation is
+used. Keep fitting, any actual calibration or threshold selection, and held-out
+evaluation separate; do not invent a calibration set the study did not use.
+
+For a scalar interval, empirical coverage counts measured targets between the
+declared endpoints. Report its denominator and evaluate width on the same
+targets and scale. State any normalization reference; widths with incompatible
+normalizations are not directly comparable. A very wide interval can cover
+many targets without being useful. P104 pp.5-6 supplies a scoped coverage/width
+example, not a universal formula or a requirement to copy all its metrics.
+
+Match a reliability claim to its population. Overall coverage can conceal poor
+coverage in a minority condition; where condition-level reliability is claimed,
+retain the relevant breakdown and its sample support. Individual-variable or
+horizon coverage does not by itself establish simultaneous coverage of a vector
+or trajectory. Keep dependent time points and independent production units
+distinct when estimating uncertainty in measured coverage. The nominal level,
+a finite test fraction and a verified conditional guarantee are different claims.
+
+If bounds drive a warning or control action, define that rule and evaluate its
+actual decisions. Coverage alone is not false-alarm performance or operational
+safety. Trace the output-to-decision connection rather than adding another
+fusion module to the overview. These checks authorize neither new experiments
+nor changes to accepted results; [predictive-quantity guidance](terminology-decisions.md#predictive-outputs-and-intervals)
+and [repetition reporting](journal-migration-and-completeness.md#report-actual-repetitions)
+address different uncertainty targets.
+
 ### Adaptive State, Feedback And Retention
 
 For a source-only domain-generalization claim, trace training, preprocessing

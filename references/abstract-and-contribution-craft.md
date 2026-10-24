@@ -163,6 +163,19 @@ meaning of suppression, and a dense input-dependent gate need not be sparse
 execution or online learning. Keep those audit judgments in the author note
 unless needed to interpret a retained manuscript claim.
 
+**Predictive uncertainty, illustrated by P103/P104:** connect the estimated
+output to its actual use instead of listing a probabilistic model beside an
+unrelated reliability claim. For a verified fictional interface: "Process
+measurements condition a distribution for the quality variable. Its interval
+bounds feed the declared warning rule, linking the estimated output range to
+the monitoring decision." If there is no warning rule, end at the actual
+quality estimate or interval. Explain the study's distinguishing estimator or
+interval construction before claiming novelty. Contributions connect that
+design to an evaluable output; Results retain material coverage/width and
+condition-level limitations. Put routine sampling counts and audit exclusions
+in settings or the author note, not in a defensive abstract. A distribution,
+its approximation and a demonstrated engineering benefit remain distinct.
+
 **Source-only generalization, illustrated by P50/P99:** connect the training
 operation to the retained diagnostic predictor, not an invented final fusion
 stage. For verified fictional interfaces: "Source-derived feature perturbations

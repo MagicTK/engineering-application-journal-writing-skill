@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.69 (2026-10-25)
+
+- Clarified output prediction intervals, posterior/latent quantities, Monte Carlo numerical error and repeated-training graphics without imposing interval prediction on point-estimation papers.
+- Connected estimated quality distributions, declared bounds and actual decision use in existing abstract/contribution and topic guidance. Coverage, width and condition-specific claims retain separate evidence needs.
+- Recorded two distinct published engineering contexts and separately checked Chinese wording with an explicit source-formula conflict. No full interval algorithm, new generic mechanism, safety guarantee or experimental result is certified.
+
 ## 4.1.68 (2026-10-25)
 
 - Corrected ambiguous English/Chinese GAN-generated-data wording and narrowed the generator/discriminator playbook. Sample synthesis, domain discrimination and deliberately manipulated diagnostic inputs retain distinct roles.

@@ -160,6 +160,35 @@ different from later realized measurements. Name the actual information access
 and output using [forecast/life evaluation](experiment-evidence-design.md#forecasting-and-life-evaluation),
 not a universal ban on future-indexed quantities or historical target creation.
 
+## Predictive Outputs And Intervals
+
+Name the random quantity before calling an output uncertain. A distribution
+over model parameters, latent features, a conditional mean and a new measured
+quality value are not interchangeable. A credible interval concerns its stated
+posterior quantity; an output prediction interval concerns a specified
+observation, not automatically the mean. Repeated-training score error bars
+describe yet another source of variation.
+
+For stochastic prediction, distinguish variation represented by the predictive
+distribution from numerical error in estimating its moments. More Monte Carlo
+draws can improve that numerical approximation. Dividing predictive SD by the
+square root of the draw count constructs neither an observation interval nor
+automatically a valid mean interval; mean-estimation error needs its own
+variance components and draw-dependence assumptions. Identify included
+observation noise and model uncertainty rather than
+assuming latent variance covers both. A Gaussian moment approximation is not
+an exact quantile calculation for an arbitrary predictive distribution.
+
+P103 pp.4-6 connects predictive quantities to process monitoring; P104 pp.5-6
+defines output intervals and coverage/width evaluation for soft sensing.
+These are different mechanisms and tasks, not a matched admission of their
+complete method names. Specify scalar marginal intervals versus a joint
+multivariable region, target/issue times, units and the consumer of the bounds.
+Nominal coverage and observed coverage are distinct; aggregate coverage alone
+does not establish coverage in every operating condition. Use the
+[conditional interval-evaluation route](experiment-evidence-design.md#output-prediction-intervals)
+only when such outputs or reliability claims are actually part of the paper.
+
 ## Adversarial: Identify The Opponent And Changed Object
 
 Identify the actual game before using the shared adjective. In the checked
