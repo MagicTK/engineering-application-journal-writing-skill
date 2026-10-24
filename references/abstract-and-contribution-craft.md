@@ -255,6 +255,15 @@ check. Close on the reported metric and relevant class trade-off. A weighted
 aggregate gain alone does not substantiate rare-fault improvement; explain the
 weight/sampler arithmetic in the settings, not in every abstract.
 
+If differentiation through the coefficient is central and verified, connect it
+to learning rather than listing another module: "Joint differentiation through
+the probability-derived weights and classification loss trains the diagnostic
+encoder. The trained classifier diagnoses new measurements from this
+representation." Name the actual distinguishing weighting rule before claiming
+an advance; ordinary product-rule differentiation is not novelty. A detached
+implementation needs its own accurate description. Routine computation-graph
+checks belong in Methods or the author note, not every abstract.
+
 For a verified feature-weighted training design, preserve that different
 interface: "Class counts from target pseudo-labels determine how target features are scaled before
 a nonlinear alignment mapping. The learned encoder supplies features to the

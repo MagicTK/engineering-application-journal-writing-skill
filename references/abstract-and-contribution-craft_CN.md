@@ -105,6 +105,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **未来量预测与寿命估计：**先明确模型的保留输出，再写其收益。接口核实后可写：Encoded process histories supply a regression head that predicts the future temperature trajectory. 再补实际有区别性的运行信息使用方式，不罗列常规层。明确规则若将轨迹转为报警，要有相应事件和时序评价；P95将这些作用分开，P45/P81则使用寿命目标。寿命估计器不必预测每条传感轨迹，也不必增加故障分类器。标签截断或尺度若影响主张解释就保留，结尾落到实测预测/寿命结果和重要步长权衡，不把误差下降改成预警更早或维修成本下降。常规预测或回归本身不另算贡献。
 
+若系数求导是核心且实现已核实，可直接连接训练作用：Joint differentiation through the probability-derived weights and classification loss trains the diagnostic encoder. The trained classifier diagnoses new measurements from this representation. 再补真正有区别的加权规则，普通乘法求导本身不构成新颖性；若实际停止因子梯度，则照实描述。常规计算图核查放方法或作者说明，不把另一个模块名或整套求导排除项塞进摘要。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

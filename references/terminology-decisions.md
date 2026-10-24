@@ -198,6 +198,19 @@ does not establish another. A sample-dependent coefficient need not be constant
 within a class. If a coefficient scales a residual before squaring, inspect the
 resulting squared coefficient rather than rewriting it as a linear loss weight.
 
+Also inspect a loss coefficient's **computation graph**. A prediction-derived
+factor can contribute its own derivative; stop-gradient treats its current value
+as fixed for that update. For the supplied synthetic `L=(1-q)^2*(-ln q)`, at
+`q=1/2` the full derivative with respect to `q` is `-ln(2)-1/2`, whereas stopping
+the factor gradient gives `-1/2`. For `q=sigmoid(z)`, the corresponding logit
+derivatives are `-ln(2)/4-1/8` and `-1/8`. Equal forward coefficients therefore
+need not imply equal updates. Frozen parameters in a weighting network do not
+alone block gradients through its input. A count-derived constant, a
+differentiable confidence factor and a detached forward factor require their
+actual implementation; do not impose one treatment or infer another inference
+module. P96/P100's [class-factor placement record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+does not certify complete losses or source gradient implementations.
+
 Inspect the recipient of a feature coefficient too. P98 p.6, Eq.(10), scales
 target features using class counts derived from target pseudo-labels before
 the mapping `phi(w*f)`;

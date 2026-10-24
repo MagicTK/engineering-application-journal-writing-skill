@@ -337,6 +337,7 @@ original semantic summaries, not extracted source passages.
 
 | Base term | Checked distinct papers and operation | Boundary |
 |---|---|---|
+| class weighting (classification log-loss factor; placement checked) | P96 p.3, Eqs.(3)-(4), and P100 author accepted manuscript, Section II-B, Eq.(9), apply category factors to classification log-loss terms. | Matched factor placement, not identical whole losses. P100 adds a prediction-dependent batch factor and has an unresolved coefficient map. Ordinary weighted-CE and full adaptive-loss names are not admitted by this narrower record. |
 | domain generalization (DG; source-only development to unseen-domain prediction) | P50 p.2, introduction and Section II-A, defines source-data training without target access; pp.3,6 specify source training and unseen-domain testing. P99 p.4, Section II-B3, defines learning on available domains for unseen distributions; p.7 Algorithm 1 and Section V-A separate source training/selection from testing. | Two distinct TCYB machinery works support this learning/evaluation setting, not one perturbation, invariance or causal mechanism. Both inspected implementations use multiple sources; their source counts are not a universal minimum. Ordinary measurement input at prediction is permitted; target-pool statistic fitting is a different access profile. New operating conditions need not introduce new fault classes. Full DGNSU/Lifeisgood mechanisms, the latter's theoretical guarantees, P50's unresolved style-symbol interface and complete results are not certified. |
 | remaining useful life (RUL) prediction / estimation | P45 p.6, Section IV-A, constructs window-linked life labels from run-to-failure trajectories and imposes a maximum RUL; P81 p.3, Section III-A, defines measurement-to-RUL regression, with p.6 specifying its engine life labels and separate TTF application. | Two distinct published works support estimating remaining life to a defined endpoint, not a mandatory network, cap or sampling clock. Their engine examples share a benchmark convention; this is not independent invention or evidence that every future-variable forecast estimates RUL. Full MDER/DATCN names, label-index details, normalization and performance claims remain unverified by this target check. |
 | active learning (annotation-acquisition setting checked) | P89 p.3, Section II-B, selects batches from an unlabeled pool for expert labels and updates the classifier; P90 pp.4-5, Section 3.1/Fig.4/Table 1, defines the corresponding selection, labeling and refitting loop for chemical-process classification; P91 p.4, Section II-B, connects queried expert labels to classifier retraining for compound faults. | Three distinct published works support label acquisition for learning, not one query criterion, budget unit or predictor architecture. P89/P91 share authors and a research line; P90 is a different process study. Training-pool query labels are not held-out evaluation labels or model-generated targets. A specified excitation-based diagnosis design is a different use of active. Full MCAL/DGMR/E-ECos names, source pseudocode details, annotation savings and field deployment are not certified by this base record. |
@@ -397,8 +398,8 @@ original semantic summaries, not extracted source passages.
 
 **Weighting-role boundary:** P92 p.4, P93 p.5 and P94 pp.3-4 supply different
 operations: choosing generation seeds, weighting fitting residuals and selecting
-augmentation prototypes. This does not complete a matched definition pair for class weighting
-in a classification loss, weighted cross-entropy, focal loss or one universal
+augmentation prototypes. These records alone do not complete a matched definition
+pair for classification-loss weighting, weighted cross-entropy, focal loss or one universal
 balancing module. P39's prediction-dependent focal factor is a further distinct
 object. Describe a verified method's actual multiplication and phase; the absent
 pair is not a ban on valid mathematical weighting or an approved new name.
@@ -408,15 +409,16 @@ P97 p.4, Table 1, contains a class-weighted expression, but p.8, Eqs.(35)-(36),
 instead shows binary cross-entropy with an overall objective coefficient. This
 unresolved internal discrepancy is not used to finish a clean definition pair.
 P18 p.4, Eq.(6), adjusts training logits inside the loss and is not another
-outer-class-factor definition. Generic weighted-cross-entropy/class-weighting
-admission remains incomplete here; these records support operation-sensitive
-descriptions without certifying full source methods or universal weight rules.
+outer-class-factor definition. The P96/P100 row above now supports the narrower
+class-factor placement. A matched ordinary weighted-cross-entropy whole-loss
+record remains incomplete; do not erase source differences or certify complete
+methods and universal weight rules from this component match.
 See [contextual decisions](terminology-decisions.md#weight-roles-and-class-decisions).
 
 P98 p.6, Eqs.(10)-(12), supplies a further contrast: coefficients derived from
 target pseudo-label counts scale target features before a mapping in an
 alignment objective. This does not
-complete the classification-loss definition pair or admit its full CWA-RST or
+contribute to that classification-factor pair or admit its full CWA-RST or
 class-weighted-alignment names as generic mechanisms. P44 p.5, Eq.(13), has a
 different weighted-feature recipient, a domain discriminator. Match the operand,
 recipient and phase, not the shared adjective; normalization does not establish

@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 99-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 99 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 100-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 100 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计99篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计100篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -111,6 +111,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P97 | [Intelligent fault diagnosis for chemical process under imbalanced data: A non-local frequency-domain sparse hash autoencoder approach](https://doi.org/10.1016/j.psep.2026.108502) | PSEP 208 (2026), Art.108502. P.4 Table 1 shows class-weighted cross-entropy, while p.8 Eqs.(35)-(36) shows binary cross-entropy with an overall objective coefficient. Record this unresolved difference, not a verified complete loss or clean second class-weighting definition. Full NFSH-AE, signal filtering, sparsity, splits and results are not certified. |
 | P98 | [Class-weighted alignment and reliable self-training for cross-domain fault diagnosis under class-imbalanced conditions](https://doi.org/10.1016/j.psep.2026.108820) | PSEP 211 (2026), Art.108820. P.6 Eqs.(10)-(12) scale target features inside a mapping using counts from target pseudo-labels; pp.5-6 separate classification objectives. A feature-alignment coefficient is not a classification-loss factor. Full CWA-RST, kernel choice, inverse-frequency wording, complete implementation and performance claims remain unverified. |
 | P99 | [Lifeisgood: Learning Invariant Features via In-Label Swapping for Generalizing Out-of-Distribution in Machine Fault Diagnosis](https://doi.org/10.1109/TCYB.2025.3578712) | TCYB 55(8), 2025, pp.3699-3712. P.4 Section II-B3 defines learning on available domains for unseen distributions; p.7 Algorithm 1 and Section V-A separate source training/model selection and prediction. Full swapping mechanisms, invariance definitions/theorems, causal interpretation and performance are not certified by this setting check. |
+| P100 | [Pareto-Optimal Adaptive Loss Residual Shrinkage Network for Imbalanced Fault Diagnostics of Machines](https://doi.org/10.1109/TII.2021.3094186) | TII, read in author-uploaded accepted HTML, Section II-B, Eqs.(6)-(9): class-factor placement plus an additional prediction-dependent batch factor. Coefficient mapping and full PALRSN remain unverified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -144,7 +145,9 @@ inspected. P96 distinguishes a background class factor from its proposed
 margin-adjusted, weighted objective. P97's algorithm and later loss equations
 differ and were not reconciled without implementation evidence. This adds two
 scoped reading records, not two clean matching definitions or full-paper audits.
-Generic class-weighting/weighted-cross-entropy admission remains incomplete.
+At that stage no matched class-factor pair was completed. The later P96/P100
+record below now verifies placement only; an identical ordinary weighted-CE
+whole-loss record remains incomplete.
 
 Existing P18 pp.1,4-6 were reread, with pp.4-5 visually inspected: Eq.(6) puts
 a prior-dependent offset inside the training loss, while Eq.(10) adjusts scores
@@ -853,6 +856,23 @@ keeps their URLs and limits. A fixed within-window transform and fitting stored
 statistics on a whole target pool have different information access; describe
 legitimate hybrid profiles separately rather than banning ordinary inputs or
 silently rewriting target-adaptive work as source-only development.
+
+### Classification Factors And Differentiation / 类别系数与求导
+
+P100's [author-uploaded accepted manuscript](https://www.researchgate.net/publication/353228028_Pareto-Optimal_Adaptive_Loss_Residual_Shrinkage_Network_for_Imbalanced_Fault_Diagnostics_of_Machines),
+identity and Section II-B Eqs.(6)-(9), was read as HTML, not a final-version PDF.
+Together with P96 p.3 it supports class-factor placement only. P100's sigmoid
+expressions/range need reconciliation; full losses and gradient implementations
+are not certified. P97's earlier discrepancy remains unresolved.
+
+A separate synthetic product-rule check distinguishes equal forward weights from
+equal parameter gradients. This is calculus for supplied functions, not source
+implementation evidence or focal-loss name admission. Record actual gradient
+paths before describing a learning rule; preserve verified detached and
+differentiable designs. The original operation does not acquire novelty merely
+from weighting or differentiation. Current scope is in the
+[factor record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+and [gradient distinction](terminology-decisions.md#weight-roles-and-class-decisions).
 
 ## Reusable Lessons / 可迁移结论
 

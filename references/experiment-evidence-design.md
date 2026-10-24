@@ -264,6 +264,16 @@ loss, dividing by sample count or by the sum of its weights also gives different
 scales; a weight-sum reduction cancels that sample's positive class factor.
 This arithmetic does not prove that reweighting has no effect in general.
 
+A prediction-dependent coefficient needs a computation-graph check as well as
+a forward formula. Record whether gradients pass through its construction,
+whether it is detached for the update, and when any count/score statistics are
+refreshed. Identical coefficient values can yield different training gradients;
+freezing a separate component's weights does not by itself cut its input path.
+Use the [synthetic product-rule check](terminology-decisions.md#weight-roles-and-class-decisions)
+to explain this distinction, not to assert a source paper's implementation.
+Retain a verified differentiable or detached design; unresolved details belong
+in the implementation handoff, not an invented rerun or an automatic flaw claim.
+
 For feature scaling, record whether a coefficient acts before or after a mapping
 or discriminator, as in the different P98/P44 interfaces. With `phi(v)=v^2`,
 `phi(3*2)=36` but `3*phi(2)=12`; a valid homogeneous-map equivalence should still

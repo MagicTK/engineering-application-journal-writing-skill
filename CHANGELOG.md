@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.67 (2026-10-25)
+
+- Added a narrow two-work record for class factors on classification log-loss terms. Full ordinary weighted-CE/adaptive-loss admission remains separate; accepted-manuscript provenance and unresolved mapping details are retained.
+- Clarified coefficient computation graphs, positive training-to-predictor prose and implementation handoff. A synthetic product-rule check distinguishes equal forward weights from equal gradients without certifying a source implementation.
+- Kept the existing topic/entrypoint structure and authored-case inventory; no new full module or Chinese compound name is introduced. Actual response validation precedes publication.
+
 ## 4.1.66 (2026-10-25)
 
 - Added a scoped domain-generalization setting record from two distinct TCYB definition/training contexts, with separately checked Chinese 领域泛化/域泛化 variants. Full paper-specific mechanisms, source-formula conflicts and guarantees remain outside this admission.
