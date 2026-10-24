@@ -52,7 +52,7 @@ renaming the implemented method.
 
 | Code | Task | Primary output |
 |---|---|---|
-| T1 | Data restoration or synthesis | repaired, reconstructed, or generated industrial records |
+| T1 | Data restoration or synthesis | repaired, reconstructed, or generated industrial data or samples |
 | T2 | Fault/anomaly detection and process monitoring | abnormality decision, alarm, monitoring statistic, or event interval |
 | T3 | Fault diagnosis, condition or quality-category classification | fault type, operating condition, product/quality category, or unknown-class decision |
 | T4 | Localization, isolation, and root-cause analysis | located variable/unit/region, isolated fault set, or a supported causal explanation/path; state which is actually produced |
@@ -72,6 +72,8 @@ a VAE may support quality prediction without generating augmentation samples.
 Keep those final outputs under T2, T3 or T5 as appropriate. Select generation
 quality and synthetic-to-real evidence only when generated data are an actual
 output or training input; see the [role-specific playbook](topic-playbooks.md#7-reconstruction-based-generative-diffusion-or-data-augmentation-methods).
+
+An adversarially trained feature generator may support performance-grade classification without synthesizing acquired-data samples (P70). Likewise, an adversarial sample generator may be training support for T3 rather than the T1 final output (P72). Record the discriminator's target and the retained prediction path; the word `generator` or `GAN` does not determine the task code.
 
 ### O. Engineering Object And Scale
 
