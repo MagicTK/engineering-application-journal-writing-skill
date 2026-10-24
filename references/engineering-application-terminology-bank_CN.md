@@ -79,7 +79,7 @@
 | 编码到特征空间 | feature representation; representation learning |
 | 建模表征间关系，不自动等于物理影响或因果 | feature/variable/inter-stage interaction |
 | 合并多个特征源 | feature fusion; feature integration |
-| 加权求和或形成上下文 | feature/context aggregation |
+| 结合一组明确的编码特征，交代输入、轴及运算，不限于注意力或降维 | feature aggregation；输出确为上下文时可用context aggregation |
 | 沿图边传递或更新表征 | feature propagation; message passing；说明图和更新操作 |
 | 扰动沿物理过程传播 | fault propagation；需有工艺知识或传播方向与影响的证据 |
 
@@ -132,7 +132,7 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 | 基础术语 | 不同论文及实际操作 | 边界 |
 |---|---|---|
 | feature extraction | P01 p.4 从工序测量构建多尺度特征；P14 p.3 用卷积构建时序特征 | 区别于选取已有特征子集或融合最终决策 |
-| feature fusion | P01 p.1 融合工序表征；P03 p.1 融合时序/序列特征；P14 pp.1-2 融合尺度/子图表征 | 来源与融合层级不同；不支持任意“因果、可靠、拓扑”等限定名 |
+| feature fusion | P01 pp.4-5第3.4节式(7)-(10)，用拓扑与相似性矩阵分别结合工序特征，再将两路结果相加；P03 pp.4-5第2.3.2节式(17)，加权结合两路注意力表征；P14 p.4第III-D4节式(35)，将多尺度卷积输出拼接后用于分类 | 三篇独立作品中有两篇来自相关团队，支持基础特征组合术语，不支持唯一通用算子。P14式(28)的块对角图组装是另一项操作。基础词及这些定义不能直接准入带“因果、可靠、拓扑”等限定的完整模块家族名 |
 | attention mechanism / self-attention | P11 p.3 与 P24 p.3 定义查询、键和值的加权，自注意力来自同一输入表征 | 不把论文特有变体混为一类，也不自动证明因果或物理解释 |
 | gating mechanism | P08 p.5 乘性特征门控；P19 p.5 尺度权重；P33 p.6 对注意力输出门控 | 调节作用相近，但输入和受作用对象不同；不据此建立带 age 修饰的通用家族 |
 | residual connection | P02 p.3 残差骨干；P14 p.2 加性残差操作 | 核对加法及映射，旁路、拼接或任意并行分支不自动等价。网络连接与预测误差、去趋势后的剩余分量不同；迁移residual措辞前先明确运算对象 |

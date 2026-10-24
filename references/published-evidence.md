@@ -223,6 +223,14 @@ P08 pp.6-7 describes length projection of encoded sequences, contrastive represe
 
 本组区分时间对应、维度兼容、分布目标和配对表征学习；不把同一个“对齐”词视为同一操作，也不把已发表论文的互信息措辞直接迁移为结论。数学符号疑点按实际页码保留，不推断代码必然有错。
 
+### Feature Combination: Definitions Before Names
+
+P01 pp.4-5, Sections 3.3.2-3.4 and Eqs.(3),(7)-(10), separates stage-wise pooling from topology/similarity-based feature combinations and the final addition. P03 pp.4-5, Section 2.3.2 and Eq.(17), combines two attention-derived representations by weighted addition. P14 p.4, Section III-D4 and Eq.(35), concatenates multiscale convolution outputs before classification. These are three distinct published works, with P01/P03 sharing team lineage, and support the base `feature fusion` name while retaining different sources and operators. P14's separate block-diagonal adjacency assembly, Eq.(28), is not itself cross-subgraph feature mixing. The Chinese base translation was rechecked in the original bilingual abstract and keywords of [Acta Automatica Sinica, c190428](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c190428?viewType=HTML); it is translation evidence, not an additional process-industry definition.
+
+P02 p.5, Section 3.3.2 and Eq.(31), uses `high-order feature aggregation` for a weighted combination of first- and second-order pooled features. Repeated occurrences in that paper count as one work, and do not establish its full name as a generic family. Its prose's max-pooling wording differs from the average defined in Eq.(28); this bounded discrepancy is retained rather than resolved without implementation evidence. Reading these definitions supports operation-sensitive writing, not a universal aggregation/fusion split or verification of the papers' performance claims. No source implementation or experiment was reproduced in this check.
+
+本组回读将基础特征融合的依据从摘要推进到方法定义，区分隐特征、预测输出、图组装及实际运算。中文基础译名另行核对；不新增工程论文计数，不把相关基础运算视为完整模块名的多源证明，也不借出版状态消除来源内部的表述差异。
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.

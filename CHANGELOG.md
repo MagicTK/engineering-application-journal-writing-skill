@@ -1,5 +1,12 @@
 # Changes
 
+## 4.1.18 (2026-10-24)
+
+- Replace abstract-only support for `feature fusion` with three papers' method definitions, actual operands and combination operators; separately recheck the Chinese base translation. The engineering index remains 55 works.
+- Correct the overly narrow aggregation-as-summary wording. Distinguish feature combination, classifier-output combination and graph assembly without imposing a universal aggregation/fusion split or inventing attention, gates or alignment.
+- Keep full component names separate from base terms and repeated mentions separate from distinct works. Retain a source's max-versus-average pooling discrepancy as unresolved implementation evidence.
+- Five existing references carry the substantive changes; no new topic guide, template, manuscript edit or experiment. Behavioral validation scope and actual responses are recorded separately.
+
 ## 4.1.17 (2026-10-24)
 
 - Complete scoped Chinese checks for classifier-logit energy function/score and residual connection in the existing bilingual terminology ledger. Record original-journal and author-hosted-translation roles separately; the selected engineering index remains 55 works.
