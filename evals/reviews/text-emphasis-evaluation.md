@@ -42,4 +42,4 @@ No claim of memory-blank testing, general writing gain, scientific reproduction
 or venue acceptance is made. No private paper or experimental data is included.
 
 See the [request, synthetic source and actual first answer](../responses/text-emphasis-independent.md)
-and [current report](../forward-test-report.json).
+and [versioned report](../history/v4.2.24/forward-test-report.json).

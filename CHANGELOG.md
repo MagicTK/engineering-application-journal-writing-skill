@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.25 (2026-10-26)
+
+- Added a scoped meta-learning base-name record using two distinct engineering-journal contexts and a separately checked original Chinese bilingual source.
+- Connected task-learned initializations or representations/matchers to their actual new-task use within the existing scarce-label playbook, without requiring every design to update parameters at prediction.
+- Added one selected source reading and reused the existing prototype source; no Skill, manuscript template, scientific experiment or private-paper change was introduced.
+
 ## 4.2.24 (2026-10-26)
 
 - Fixed the optional read-only terminology helper so common literal text-emphasis wrappers no longer hide phrase candidates or recurring collocations.

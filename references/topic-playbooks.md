@@ -132,6 +132,20 @@ Trace generated class guidance to its actual consumer: P18 uses adjusted predict
 
 中文核查重点：对比对象及配对依据、伪标签的硬/软形式和实际使用者、样本图与物理变量图、训练任务与预测输出分别核对。正负配对不自动是正常/故障分类；真实类别指导的有监督配对可以成立。增强是否保留故障特征需依据，不将这些内部核查逐项塞进摘要。
 
+For **meta-learning**, name what is learned across tasks and how a new task uses
+it. P125 learns an initialization through task-specific updates and an outer
+objective, then fine-tunes using new-condition support samples. P47 instead
+trains a representation and matcher; its prediction algorithm recomputes class
+representatives from support features using the optimized networks. Temporary
+task parameters, learned shared parameters and support-derived representatives
+have different roles. In an abstract or overview, connect the learned object to
+the actual adaptation or prediction operation rather than treating the learning
+loops as another sequence of feature-fusion modules. The
+[scoped base-name record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+does not require every design to update network parameters for a new task.
+
+中文：交代跨任务学得的是初始参数、表征还是匹配规则，再说明新任务使用支持样本微调参数或构造类代表，最后怎样预测。不把计算任务写成生产工序，也不因重算类代表就认定发生了网络参数学习；摘要保留真正连接方法与用途的关系即可。
+
 When a few-shot method uses class prototypes, connect the support features, prototype construction and query-scoring operation. P47 computes support-feature means and uses a learned matching function; the mean construction is not itself a newly invented physical-state estimator. A prototype can be derived from a trained embedding without being an independently optimized parameter. Do not impose this mean construction on a method that defines exemplars, multiple representatives or another estimator. Put the actual advance in the contribution, not every standard constituent of this chain.
 
 For episodic learning, distinguish labeled queries used to train the model from held-out queries whose labels are unavailable to prediction. The former is not automatically test-label leakage. Independently defined validation episodes can use their query labels for model selection when that partition was actually performed; retrospective renaming of selected final queries does not create independent evaluation. Conversely, calling a sample a `query` does not establish its permitted use: state the training/validation/evaluation phase, the support/query roles and any allowed test-time adaptation. Verify class overlap separately from sample disjointness; few-shot does not by itself guarantee previously unseen classes. P47's formulation permits partial overlap or disjoint base/support classes, so its name cannot substitute for the actual split definition.

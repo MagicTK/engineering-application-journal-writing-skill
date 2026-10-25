@@ -170,6 +170,7 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 
 | 基础术语 | 不同论文及实际操作 | 边界 |
 |---|---|---|
+| meta-learning（核查任务/episode学习形式） | P47 p.2第II-C节式(1)通过episode中受支持集条件化的query目标学习，pp.3-4及算法1学习表征与匹配器，再结合支持集类代表预测；P125 p.3第II-A节式(2)及pp.5-6第III-B节式(12)-(15)/算法1，经任务内更新及外层目标学习初始参数，再用新工况支持样本拟合 | 两篇不同工程作品支持跨任务学习可复用的学习方式，不规定一种架构或预测期更新规则。分清跨任务学得对象、任务内临时参数、支持集派生量及保留的预测器。样本少不自动构成元学习；基础名不保证无标签训练、未见类识别或测试时梯度更新。完整L2MP/MLDSP名称、全部来源公式及效果主张仍归属来源，不由本记录认证 |
 | few-shot learning (FSL) | P47 pp.2-3第II-C/D节及p.5第IV-A节结合大量有标签基础测量与有限支持集；P69 pp.2-3第1-2节及pp.8-9第4.1节在少量固定标注训练集上生成增强视图并训练 | 两篇不同相邻工程研究支持少量样本学习的问题设置，不规定一种算法。说明shot单位、所涉类别及各阶段标签可用性；基础名称不保证元学习、未见类别或统一数量阈值。支持样本数不证明全流程标注节省，增强不增加独立实测标注。完整L2MP/SSFN部件名称仍归属来源 |
 | zero-shot learning (ZSL) / zero-shot fault diagnosis（本记录核查类别语义设置） | P05 pp.3-4第3节定义已见/未见不相交类别及预给语义；P06 pp.2-3第II-A节将测量映射到已知故障属性；P80 pp.2-3第II-A/III节及p.6第III-C节生成未见类特征用于分类器训练 | 三篇不同已发表作品支持诊断缺少带标签真实训练测量的类别，并可使用类别描述。P05/P06有共同作者及研究脉络，P80为另一团队的生成设计。语义、生成特征标签及声明允许的无标签目标访问，不等于采集了带标签未见类实测样本；匹配与特征生成是不同训练/预测路径。零样本不表示整个学习历史没有监督；候选类别与实际保留预测组件须定义，完整分层、生成及测试时组件名仍归属来源 |
 | semisupervised / semi-supervised learning | P17 p.2第II节区分已测与未测浓度目标，pp.3-4结合有标签/无标签训练；P21 p.3第III-A节定义两类batch及监督、自监督训练；P26 pp.3-4另明确已标类别与无标签变换预测 | 三篇不同作品支持利用任务有标签及无标签样本学习，输出与训练设计不同；不统一要求类别不相交测试、伪标签或独立预训练。本记录针对这些明确设置，不概括所有检测领域对该名称的不同用法 |
@@ -261,6 +262,7 @@ P96 p.3式(3)-(4)为明确的分类交叉熵外乘类别因子；P97表1与式(3
 
 | 中英对应 | 在线原始来源及已读位置 | 使用边界 |
 |---|---|---|
+| meta-learning / 元学习 | [电信科学2021009](https://www.telecomsci.com/zh/article/doi/10.11959/j.issn.1000-0801.2021009/)，原始双语题名、摘要及书目信息 | 独立核基础译法，工程定义配对另见P47/P125。该综述不增加工业方法ID，也不规定统一实现；完整MAML/模块译名及网页更广泛的能力主张不由此准入 |
 | quantization / 量化 | [高技术通讯202406004](https://journals.istic.ac.cn/gjstxcn/ch/reader/view_abstract.aspx?file_no=202406004&flag=1)，原始双语题名、关键词及摘要 | 独立支持基础译法，英文操作配对另见P123/P124；完整自适应PoT方法未精读或准入。[TensorFlow中文原指南](https://www.tensorflow.org/model_optimization/guide/quantization/training?hl=zh-cn)另佐证模拟后转换及自身的量化感知训练用词，但不是又一篇工程期刊定义，也不认证当前API或性能保证 |
 | low-rank adaptation / 低秩适应；低秩适配 | [数据采集与处理202403006](https://sjcj.nuaa.edu.cn/sjcjycl/article/abstract/202403006)，原始双语题名及摘要；[中国图象图形学报jig.240011](https://www.cjig.cn/rc-pub/front/front-article/download/61781372/lowqualitypdf/Advances%20in%20edge-cloud%20collaboration%20and%20evolution%20for%20large-small%20models.pdf)，PDF p.5第1.1节适配微调段 | 前者题名对应低秩适应，后者明确配对低秩适配/LoRA并解释加性低秩更新；保留两个已核译法，不排名唯一标准。前者摘要英文拼写adaption不作为规范名复制。译名来源不增加工业定义ID，不认证全部PEFT变体，也不移植其隐私/性能保证 |
 | SHAP / Shapley 加性解释 | [AWS官方中文指导](https://docs.aws.amazon.com/zh_cn/prescriptive-guidance/latest/ml-model-interpretability/local.html)，局部可解释性开头段 | 属于官方技术用语证据，不计作第三篇工业期刊定义，也不声称规范性中文标准。保留易识别的SHAP名称，不因此认可所有中文变体或该页其他建议 |
