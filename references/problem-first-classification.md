@@ -37,6 +37,8 @@ Compound-fault diagnosis can use multi-label outputs, but combinations may also
 be modeled as classes or other declared outputs. Multi-label learning is not the
 definition of compound faults and does not follow from a title. Likewise, MoE
 is not restricted to LLMs; a source's expert/router design needs its own account.
+In problem-only mode, leave methods unselected; when the author requests
+candidates, use the [problem-to-method navigation](#6-when-requested-problem-to-method-navigation).
 
 ## 2. Problem Terms And Their Boundaries
 

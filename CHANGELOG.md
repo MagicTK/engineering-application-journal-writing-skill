@@ -1,5 +1,10 @@
 # Changes
 
+## 4.2.20 (2026-10-25)
+
+- Removed a stale Chinese sentence that could defer all time-series mechanism suggestions even after an explicit author request. Both language versions now distinguish problem-only classification from requested candidate navigation at the same point.
+- Reused the existing conditional navigation and evidence boundaries; added no method prescription, generic module name, manuscript template or scientific experiment.
+
 ## 4.2.19 (2026-10-25)
 
 - Corrected an overrestrictive Related Work rule: a useful closing synthesis may connect existing capabilities, define study scope or motivate a justified comparison without introducing another research gap.

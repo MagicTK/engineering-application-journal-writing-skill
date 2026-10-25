@@ -21,4 +21,4 @@ The respondent disclosed inherited conversation rules/history summary and memory
 
 The source review concerns rhetorical roles, not endorsement of broad comparative claims in published examples. No journal rule requires every closing paragraph to be retained, removed or made novel. The result establishes only the stated fictional-use outcome, not general writing superiority, literature completeness, research novelty or acceptance probability. Program/structure checks are separate.
 
-See the [actual request and first answer](../responses/related-work-synthesis-independent.md) and [current evaluation report](../forward-test-report.json).
+See the [actual request and first answer](../responses/related-work-synthesis-independent.md) and [versioned evaluation report](../history/v4.2.19/forward-test-report.json).
