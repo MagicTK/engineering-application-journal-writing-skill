@@ -71,5 +71,5 @@ publication acceptance or whole-bank correctness.
 
 See the [earlier first answer](../responses/class-arrival-baseline.md),
 [candidate first answer](../responses/class-arrival-candidate.md),
-[current report](../forward-test-report.json) and
+[report for this version](../history/v4.2.31/forward-test-report.json) and
 [preserved previous report](../history/v4.2.30/forward-test-report.json).

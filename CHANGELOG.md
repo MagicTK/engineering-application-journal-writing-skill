@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.32 (2026-10-26)
+
+- Added a scoped Bayesian-inference base record using two existing published process-engineering sources and separately checked Chinese wording; kept the corpus count unchanged.
+- Connected uncertain expert information, posterior fitting and the implemented prediction rule in the existing knowledge playbook, without requiring online updates or treating nonlinear prediction averages as parameter plug-ins.
+- Preserved the already validated core prose and conditional, many-to-many problem-to-method navigation; no new Skill, template, research experiment or manuscript edit was introduced.
+
 ## 4.2.31 (2026-10-26)
 
 - Completed base incremental-learning Chinese wording from original journal pages, preserving the existing class-incremental translation variant.

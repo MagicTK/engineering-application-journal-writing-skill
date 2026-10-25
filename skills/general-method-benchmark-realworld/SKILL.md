@@ -7,7 +7,7 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 [中文执行版](../../skills-zh/general-method-benchmark-realworld-zh/SKILL.md)
 
-Suite version: `4.2.31`
+Suite version: `4.2.32`
 
 ## Mission
 
