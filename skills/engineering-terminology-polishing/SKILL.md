@@ -7,7 +7,7 @@ description: Polish English or Chinese engineering-application journal prose whi
 
 [中文执行版](../../skills-zh/engineering-terminology-polishing-zh/SKILL.md)
 
-Suite version: `4.2.5`
+Suite version: `4.2.6`
 
 ## Mission
 
@@ -59,6 +59,8 @@ Cover:
 Use the same term for the same object across title, Abstract, figures, formulas, tables, and Conclusion.
 
 Use the shared [engineering-application terminology bank](../../references/engineering-application-terminology-bank.md) for generic terms and caution words. Keep manuscript-specific terminology maps in the manuscript project rather than adding them to the shared bank.
+
+For an already checked base name, choose the relevant [lookup group](../../references/engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope), then read its exact record, scope and separate Chinese wording check. These are reading routes, not exclusive problem/method classes; a local wording query need not load every unrelated record.
 
 Apply its name-admission procedure before recommending a shared mechanism,
 module, method or operation category: at least two distinct relevant published

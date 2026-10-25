@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.6 (2026-10-25)
+
+- Grouped the 62 existing checked records in each language by lookup purpose, separating task/observation questions, data-use phases, learning guidance, network operations, modeling and evidence quantities.
+- Preserved every record and the downstream scope/Chinese-wording material byte-for-byte; the groups are navigation rather than an exclusive taxonomy or a problem-to-method prescription.
+- Linked terminology entrypoints to selective lookup without adding terminology admissions, source IDs, Skill/topic files or scientific experiments.
+
 ## 4.2.5 (2026-10-25)
 
 - Connected weak/incipient fault problems to the existing timing and evidence rules, separating imposed severity, measured signatures, physical evolution and issued alarms.
