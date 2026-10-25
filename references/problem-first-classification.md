@@ -66,6 +66,48 @@ an industrial cause, such as safety restrictions or assay cost, unless supplied
 or documented. Explain an important limitation where it motivates the study;
 minor dataset characteristics belong in dataset/analysis sections.
 
+### Observation Availability And Counting
+
+Use this profile when incomplete or differently timed measurements are the
+industrial difficulty. The existing sampling and mask guides already distinguish
+these objects; establish them here before selecting a method or experiment.
+
+| Field | Record only what affects this problem |
+|---|---|
+| Native schedule | Physical quantity, time units, native schedule and expected acquisitions; distinguish regular clocks from irregular acquisition times and gaps caused by lost observations |
+| Availability | Acquisition/represented time, release time and decision time; separate late reporting, unavailable measurements and physical process lag |
+| Model grid | Which positions are acquired, held, interpolated, padded or entirely unsampled; a measured zero remains an observation |
+| Extent and counting unit | Affected variables, intervals or units; numerator, denominator and whether the count concerns values, windows, events or elapsed duration |
+| Provenance | Actual acquisition limitation versus deliberate masking; known causes and unknowns, without identifying a statistical missingness mechanism from the mask alone |
+
+A blank on a common model grid need not be a failed expected acquisition.
+A slower clock may schedule no measurement there. A value can also exist but
+remain unavailable at the declared decision time. Later release can support a
+declared delayed estimate; it does not make the value available to an earlier
+issued decision. Uneven received gaps do not by themselves identify whether
+the native schedule was irregular or a regular acquisition was lost.
+
+Keep a generator parameter separate from its realized missing fraction. A
+segment-start count divided by sequence length is not the fraction of missing
+measurement entries: segment length, overlap, boundary clipping and affected
+variables matter. State the denominator before comparing percentages, including
+whether it covers expected acquisitions, all model-grid positions, only affected
+variables or the entire variable set. Compute a realized fraction from the
+specified mask when available; do not invent one from an incomplete description.
+
+P73 p.3 Section III-A/Fig.1 distinguishes sampling-group observations and blank
+grid positions. P24 pp.2-3 describes changing acquisition intervals, not merely
+several fixed clocks. P37 p.6 Section III-B defines its segment-start ratio and
+separately controls segment length; its code-level overlap/clipping behavior and
+realized entry fractions are not established by that passage. These are different
+observation roles, not a shared new module or a result audit.
+
+Keep this detail in the working profile or data/settings section. In an abstract,
+contribution or introductory transition, select the actual consequential
+limitation and connect it to the verified response; do not list every mask and
+clock field. A classification-only request does not authorize imputation, a new
+predictor, a preferred learning paradigm or a new experimental plan.
+
 <a id="operating-variation-and-class-novelty"></a>
 
 ### Operating Conditions And Cross-Condition Problems

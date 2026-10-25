@@ -127,6 +127,17 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ### Problem Profiles And Supervision Signals
 
+The observation-profile extension rereads P24 p.1 identity/abstract and pp.2-3
+selected acquisition-interval/sequence passages, P73 p.1 identity/abstract and
+pp.2-3 selected multirate framing/Section III-A, and P37 p.6 Section III-B's
+segment-start ratio. P24 Fig.3 and P73 Fig.1/observation definition on p.3 were
+rendered and visually read. A rate-dependent blank, an uneven acquisition
+interval and a missing-segment generator parameter are different objects.
+P37's reported parameter does not certify its realized masked-entry percentage
+or uninspected code behavior. This is problem/counting calibration, not new
+full-module admission, verification of attention/state equations, or result
+reproduction; earlier scoped records and limits remain unchanged.
+
 The resource/wording extension rereads P31 p.10 Table VIII/Fig.10 and its
 Computation Complexity Analysis discussion, and P45 pp.7-8 device discussion/
 Table II, with both table pages rendered and visually read. The first reports training-time/parameter

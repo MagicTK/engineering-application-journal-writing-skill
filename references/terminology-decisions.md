@@ -598,6 +598,10 @@ For **soft sensing**, name the estimated quantity and the measurements available
 
 For a uniformly sampled stream, frequency `f` (observations per unit time) and period `Delta t` satisfy `f = 1 / Delta t`. A longer period means a lower frequency. For irregular observations, a declared average-frequency statistic can be useful, but does not make intervals equal; the reciprocal of mean interval and mean reciprocal interval generally differ. Check units before translating a rate-group index or interval multiplier into physical frequency. Sequence position, elapsed observation time, time since the latest measurement, assay-release delay and physical process lag denote different quantities. Use the actual timing input and its recipient, not a new time-qualified mechanism name. Holding a value on a model grid reuses a measurement rather than creating another acquisition.
 
+For problem-only wording, use the [observation availability/counting profile](problem-first-classification.md#observation-availability-and-counting)
+before selecting a method. A grid blank, a lost expected acquisition and a
+late-released value can require different descriptions and denominators.
+
 - **Limited supervision:** few-shot counts labeled examples; zero-shot requires a clear unseen-class definition and available semantics; semi-supervision uses labeled and unlabeled data; weak supervision may use bags or coarse labels; self-supervision specifies how targets arise. These settings are not interchangeable. See P05-P06 and P17-P22.
 - **Fuzzy models:** membership degree is not automatically a calibrated probability; define the actual membership and aggregation. A fuzzy clustering layer does not necessarily contain linguistic rules. An evidential uncertainty score is a different object unless the method establishes a connection. See P07 and P27-P29, P33.
 - **Knowledge-guided models:** distinguish expert rules, process topology, physical laws and learned similarities. A prior's provenance and role matter more than the adjective. See P04, P12-P14.

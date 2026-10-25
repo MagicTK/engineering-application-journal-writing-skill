@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.3 (2026-10-25)
+
+- Added an optional observation-availability/counting profile within the existing problem guide, distinguishing native schedules, release times, grid positions and expected acquisitions before choosing methods.
+- Clarified generator parameters versus realized missing-entry fractions, including segment overlap, boundary clipping and affected-variable denominators.
+- Connected the profile to existing sampling, terminology and evaluation guidance without duplicating a method catalogue or adding new topic templates, mechanism names or scientific experiments.
+- Reread three existing published observation contexts, preserving their different meanings and incomplete implementation/result-verification scope.
+
 ## 4.2.2 (2026-10-25)
 
 - Applied source-checked operating-condition wording and clearer bilingual headings, retaining the previous anchors for existing links.

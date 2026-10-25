@@ -195,6 +195,14 @@ support the operation distinction, not automatic verification of their gains.
 
 For missing-value recovery claims, separate accuracy at withheld entries from the downstream prediction result. When ground truth is available by deliberately hiding observed values in independent held-out units, score the hidden entries and report the masking pattern and denominator. Keep those values out of the supplied input and fitted preprocessing; define an aggregation that remains interpretable across different missing fractions and variable scales. A loss divided by the number of sequences is not automatically an error per missing entry. Naturally unobserved values without an independent reference cannot supply a direct recovery error; downstream diagnosis can still be evaluated legitimately. Randomly withheld values support the tested masking setting, not every sensor outage pattern. A reconstruction loss on observed entries (P33) or training degradation mask (P17) is not a substitute for this held-out evidence.
 
+For a missingness severity parameter, inspect its actual definition. A
+segment-start ratio and a realized mask fraction have different numerators;
+segment lengths, overlaps, boundary clipping and affected-variable coverage
+can change the latter. P37 p.6 defines the former, not a verified realized
+entry fraction. Use the [observation counting profile](problem-first-classification.md#observation-availability-and-counting)
+to keep expected acquisitions and common-grid blanks distinct. Do not relabel
+published generator settings or infer unreported source-code behavior.
+
 When a method claims to leave observed measurements unchanged, inspect the final output equation or implementation rather than the mask's name. For finite placeholders, `x_complete = M*x_input + (1-M)*x_estimate`, with `M=1` at observed positions, preserves them by construction; masked selection must handle NaNs safely if they are present. A mask inside an encoder, or adding a learned output to the input, needs a separate check. Preservation is a useful property to report, not proof that the missing entries are accurate. This check does not require a method that estimates its output directly from available observations to introduce an imputation stage.
 
 For missing-data supervision and evaluation, distinguish the reference

@@ -18,6 +18,10 @@ Observation and sampling; scarce supervision; multimode/nonstationary operation;
 
 ## 1. Incomplete, Asynchronous, Or Multi-Rate Observation
 
+For problem-only work, start with the [observation availability/counting profile](problem-first-classification.md#observation-availability-and-counting).
+It separates acquisition schedules, release times and counting units without
+requiring the method or evidence plan below.
+
 Identify the per-stream observation schedule, cross-stream timing, missing entries and measurement-release delay. These properties can coexist: streams with different fixed periods need not share timestamps, while a multirate study may also contain irregular observations. State the actual setting rather than forcing mutually exclusive categories.
 
 Writing priorities:

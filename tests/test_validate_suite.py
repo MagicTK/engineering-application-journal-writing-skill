@@ -296,7 +296,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.2", suite["version"])
+        self.assertEqual("4.2.3", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -496,6 +496,28 @@ class SuiteValidatorTests(unittest.TestCase):
             self.assertIn(marker.casefold(), en.casefold())
         for marker in ("时限来源", "容量约束", "比较目标", "同时常驻"):
             self.assertIn(marker, zh)
+
+    def test_observation_profile_separates_schedule_release_and_model_grid(self) -> None:
+        en = " ".join((ROOT / "references/problem-first-classification.md").read_text().split())
+        zh = (ROOT / "references/problem-first-classification_CN.md").read_text()
+        for marker in ("Observation Availability And Counting", "native schedule", "release time",
+                       "expected acquisitions", "model grid", "measured zero", "P24", "P73"):
+            self.assertIn(marker.casefold(), en.casefold())
+        for marker in ("观测可用性与计数", "原生采样", "发布时刻", "预期采集", "模型网格"):
+            self.assertIn(marker, zh)
+        for filename, fragment in (("topic-playbooks.md", "observation-availability-and-counting"),
+                                   ("terminology-decisions_CN.md", "观测可用性与计数")):
+            self.assertIn(fragment, (ROOT / "references" / filename).read_text())
+
+    def test_missing_fraction_records_generator_and_realized_denominators(self) -> None:
+        for filename, markers in (
+            ("problem-first-classification.md", ("segment-start", "overlap", "clipping", "P37", "denominator")),
+            ("problem-first-classification_CN.md", ("缺失段起点", "重叠", "截断", "P37", "分母")),
+            ("experiment-evidence-design.md", ("segment-start", "realized mask")),
+        ):
+            text = " ".join((ROOT / "references" / filename).read_text().split())
+            for marker in markers:
+                self.assertIn(marker, text, filename)
 
     def test_generic_core_keeps_method_axis_separate(self) -> None:
         root_skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
