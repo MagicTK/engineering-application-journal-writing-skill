@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.17 (2026-10-25)
+
+- Promoted abstract information selection into the bilingual task entrypoints after setup-heavy first drafts in actual fictional-use checks.
+- Clarified how to state a supplied study purpose without inventing a prior-work failure, while retaining details that define the method or evidence scope.
+- Preserved accepted author openings and section-specific detail; no new template, mechanism name or fixed abstract length was introduced.
+
 ## 4.2.16 (2026-10-25)
 
 - Distinguished diffusion-derived training perturbations from learned reverse generation within the existing conditional playbook, with bilingual guidance on targets and retained prediction components.
