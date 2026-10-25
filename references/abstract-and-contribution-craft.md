@@ -151,6 +151,18 @@ from a production-unit hierarchy (P13). Preserve the actual axes, fixed versus
 learned connections and output level instead of borrowing a hierarchical or
 causal name to make the abstract sound stronger.
 
+**Multiple domains versus multiple input streams:** connect training resources
+to the actual prediction, not an unexplained multisource-fusion phrase. For a
+verified domain-branch design: "Branches learn diagnostic features from their
+respective operating-condition datasets, guided by target-domain alignment.
+Their class probabilities for the same target input are averaged for diagnosis."
+Specify permitted target access and the real combination when material. This
+example neither adds a sensor modality nor establishes novelty; a contribution
+needs the distinguishing learning/decision design and evidence. For acquired
+video/current instead, explain their actual interaction and output. Do not
+rewrite probability combination as feature fusion, or put training-only inputs
+into the prediction path. Separate derived-view counts from acquired units.
+
 **Imputation before a quality predictor:** connect the estimated object to its
 actual consumer. For a verified two-component design: "An imputer estimates
 unavailable auxiliary measurements. Combining these estimates with available

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.73 (2026-10-25)
+
+- Clarified source-role routing across operating-domain datasets, acquired streams and derived representations, preserving the earlier conditional alignment and provenance guidance.
+- Linked multi-domain training resources to the retained prediction combination in bilingual abstract/contribution guidance, without inventing sensor fusion or generalizing source-specific modules.
+- Revisited existing P44/P38 role passages; added no engineering source IDs, generic mechanism names, translation admissions, topic or template files.
+
 ## 4.1.72 (2026-10-25)
 
 - Extended the existing imputation record with two industrial-data TNNLS/TCYB contexts, retaining the earlier P25/P33 scope and separately checked Chinese wording variants.

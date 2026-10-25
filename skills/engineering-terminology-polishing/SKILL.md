@@ -7,7 +7,7 @@ description: Polish English or Chinese engineering-application journal prose whi
 
 [中文执行版](../../skills-zh/engineering-terminology-polishing-zh/SKILL.md)
 
-Suite version: `4.1.72`
+Suite version: `4.1.73`
 
 ## Mission
 

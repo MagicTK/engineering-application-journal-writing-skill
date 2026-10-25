@@ -7,7 +7,7 @@ description: Orchestrate end-to-end work on data-driven industrial and engineeri
 
 [中文执行版](skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md)
 
-Suite version: `4.1.72`
+Suite version: `4.1.73`
 
 ## Mission
 

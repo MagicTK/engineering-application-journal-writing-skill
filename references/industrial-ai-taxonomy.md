@@ -19,7 +19,7 @@ Five independent axes; boundary rules; routing procedure; manuscript archetype s
 | C1 | Incomplete or asynchronous observation | Are values missing, irregularly timed, delayed, censored, or sampled at different fixed rates? What mechanism creates the observation pattern? |
 | C2 | Limited or imperfect supervision | What is limited: label count, granularity, reliability or knowledge of the true label? Distinguish missing annotations, candidate labels, incorrect labels and simultaneous fault labels. |
 | C3 | Distribution evolution | Are operating modes discrete, continuously drifting, nonstationary or cross-site? What source/target information is available during development and prediction, with or without adaptation? Does the class space also change? |
-| C4 | Heterogeneous information | Are there multiple sources, modalities, temporal scales, or semantic levels? How are they synchronized and what physical evidence does each carry? |
+| C4 | Heterogeneous information | Do acquisition streams, derived representations, temporal scales or semantic levels carry different information? Which inputs require pairing/synchronization, and what physical or derived evidence does each carry? |
 | C5 | Interacting subsystem and process coupling | Do interactions, propagation paths, material/information flows, or long-range dependencies make local modeling insufficient? Which relationships are known and which must be learned? |
 | C6 | Deployment constraints | Are latency, memory, energy, bandwidth, edge hardware, online updating, or operator workload part of the research question? |
 | C7 | Trust, safety, and decision accountability | Are calibrated uncertainty, auditable evidence, risk control, human confirmation, or a safe abstention mechanism required? What evidence can validate that requirement? |
@@ -118,13 +118,20 @@ Record operating status in the internal evidence ledger as `retrospective/offlin
 - **Missing vs. irregular vs. multi-rate**: missing means a required value is absent; irregular means observation intervals vary; multi-rate means variables or groups follow different sampling rates, often regularly within each group. They may coexist.
 - **Supervision quantity vs. meaning**: few-shot and zero-shot concern specified labeled support; weak supervision may involve coarse, ambiguous or inaccurate annotations; self-supervision constructs a learning target from data. A multi-hot target for simultaneous faults is not an ambiguous candidate set. Define the particular arrangement rather than routing by a title alone; see the [supervision playbook](topic-playbooks.md#2-scarce-labels-few-shot-zero-shot-weak-or-self-supervised-learning).
 - **Nonstationary vs. multimode**: continuous drift and discrete operating regimes are different phenomena even when both occur.
-- **Multisource vs. multimodal vs. cross-modal**: different acquisition sources are not automatically different modalities; cross-modal claims require explicit alignment or interaction.
+- **Multisource vs. multimodal vs. cross-modal**: first identify operating-domain datasets, acquired streams and derived views; different acquisition sources are not automatically different modalities. Cross-modal claims require the actual alignment, interaction or training-to-prediction relation, not synchronization of unrelated domain events.
 - **Graph vs. causality**: a graph can encode correlation, topology, similarity, or message passing. Causal language requires causal assumptions and corresponding validation.
 - **Detection, diagnosis, localization and root cause**: an abnormality decision, a fault identity, a location and a causal explanation are different outputs. Published names vary; route from the actual output and evidence rather than treating every location as a cause.
 - **Interpretability vs. root cause**: attention or variable ranking is not root-cause proof. Validate fidelity, stability, and engineering correspondence.
 - **Lightweight vs. efficient**: parameter count alone does not establish latency, memory, energy, or deployability.
 
 ## 3. Routing Procedure
+
+**Source-role routing:** use the distribution/access questions under C3/M6
+when source denotes operating domains, and C4/M4 when heterogeneous acquired or
+derived inputs motivate representation/fusion. Use both where both matter;
+source count alone does not establish a shift or select a method. Follow the
+[source-role account](terminology-decisions.md#source-roles-and-representation-provenance)
+before prescribing synchronization, modality-removal tests or a fusion narrative.
 
 1. Identify the industrial object and the decision supported by the output.
 2. Assign the task code from that output.

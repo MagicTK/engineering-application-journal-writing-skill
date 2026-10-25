@@ -189,6 +189,33 @@ does not establish coverage in every operating condition. Use the
 [conditional interval-evaluation route](experiment-evidence-design.md#output-prediction-intervals)
 only when such outputs or reliability claims are actually part of the paper.
 
+## Source Roles And Representation Provenance
+
+Resolve what `source` denotes before assigning a problem, method or test suite.
+Several operating domains and several simultaneously acquired streams are not
+the same information profile; derived views add another distinction.
+
+| Source role | What must be connected in the paper | Appropriate question |
+|---|---|---|
+| Operating domains, such as different conditions or sites | Training populations, target access, branch learning and the retained target predictor; P44 pp.2,4-5 illustrates this role. | What distribution/label spaces and fitting information differ? Unrelated events need not be synchronized. |
+| Acquired streams for one event/unit | Physical measurements, pairing/timing and their actual fusion or cross-modal use; P38 pp.4,6-7 illustrates video/current. | Which streams are available at the claimed decision time and what correspondence is required? |
+| Derived views of a parent measurement | Transformation, parent identity and the recipient representation model | What is newly represented rather than newly acquired or annotated? Preserve parent grouping when assessing independence. |
+
+These roles can coexist. Two sources alone establish neither different
+modalities nor domain shift. Preserve a source's sound attributed use of
+`multimodal` or `multiview` while making acquisition provenance explicit; a
+derived representation is not independently acquired evidence. Count parent
+units, views and label assignments separately, without equating a count to
+statistical independence or annotation effort.
+
+Trace information by phase. Multiple training domains may supply learned
+branches whose decisions about one target input are combined; this is not
+runtime fusion of the source datasets. Training-only modalities may guide a
+predictor that uses fewer inputs. State whether the recipient combines features,
+logits or probabilities, and select evaluation for that actual interface.
+P44/P38 provide contrasting source roles, not a matched definition pair for a
+new universal fusion/adaptation module; their full algorithms remain attributed.
+
 ## Imputation Masks And Training Targets
 
 For measurement imputation, identify the unavailable entries and the information

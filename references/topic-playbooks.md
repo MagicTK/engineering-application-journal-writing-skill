@@ -220,6 +220,15 @@ For adaptive models, state **what triggers which update, using what available in
 
 ## 4. Multisource, Multimodal, Or Cross-Modal Industrial Evidence
 
+First resolve what source denotes: operating-domain datasets, separately
+acquired input streams or derived views. For domain-transfer questions use
+Section 3; for actual acquisition/representation interactions use this section,
+or combine both when justified. A multisource title alone does not require
+synchronizing unrelated condition datasets or adding sensor-modality tests.
+See [source roles](terminology-decisions.md#source-roles-and-representation-provenance).
+
+中文：先辨来源角色再选方向与评价，不把多个工况域默认写成多种同步传感输入；父样本及其派生表示不重复算独立采集。
+
 Writing priorities:
 
 - trace each source from physical event to sensor response and sample unit;
@@ -230,7 +239,7 @@ Writing priorities:
 Evidence priorities:
 
 - single-source and fusion comparisons; for numerical-to-image same-source views, select numerical-only, visual-only, fusion, and a simple image-model control as needed to isolate representation or pretrained-backbone claims;
-- missing/corrupted modality tests;
+- missing/corrupted modality tests relevant to the claimed availability or disturbance robustness;
 - alignment perturbation;
 - modality contribution and failure cases;
 - localization or decision evidence when the application requires it.

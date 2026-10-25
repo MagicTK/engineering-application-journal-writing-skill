@@ -117,6 +117,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 **插补到质量预测：** 连清估计对象及实际接收者。对已核实的双组件设计，可写：An imputer estimates unavailable auxiliary measurements. Combining these estimates with available measurements supplies a quality predictor trained on the available quality labels. 再按真实推进补充依赖建模或耦合设计，常规填补与预测不自动构成新颖性。插补若本身就是主要输出，保留该任务，下游预测作为效用证据而非强造回归器；仅插补器用观测值训练不等于整个有标签下游流程无监督。拟合及预测访问在方法中照实说明。
 
+**多个数据域与多种输入流：** 连清训练资源和真实预测路径，不以泛泛的多源融合代替操作。对已核实的域分支设计，可写：Branches learn diagnostic features from their respective operating-condition datasets, guided by target-domain alignment. Their class probabilities for the same target input are averaged for diagnosis. 按实际补充允许的目标信息及组合规则；例子不新增传感模态，也不自动证明新颖性，贡献仍须有区别性的学习/决策设计与证据。视频/电流等采集流则写实际交互及输出，不把概率组合写成特征融合，或将训练期输入强加给预测。派生视图与实际采集单位分别计数。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

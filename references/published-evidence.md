@@ -540,6 +540,27 @@ These analyses inform [abstract craft](abstract-and-contribution-craft.md), [con
 
 这些定义核对补充的是名称适用范围，不以论文数量替代语义核查；不复制源文句子，也不为源文全部推导或实验背书。
 
+## Source Roles: Domains, Streams And Views
+
+P44 identity p.1, selected pp.2,4-5 were reread, with pp.2,5 visually inspected.
+Its source domains concern different working conditions, with learned branches
+and subsequent prediction combination. The target-label symbols in Eq.(15) and
+Algorithm I remain explicit; this role reading does not certify its supervision
+setting, full FC-MSDA, weighting formula or results. P38 identity p.1, selected
+p.4 input/output description and pp.6-7 acquisition passages were reread, with
+pp.6-7 visually inspected: video and current are separately acquired paired
+streams. Their documented timing is not the same as learned feature alignment.
+Full FmFormer, source sample independence, annotation quality and results were
+not reproduced or certified.
+
+These existing works supply a contrast in what source denotes, not two matching
+definitions of a new universal multisource module or an interchangeable fitting
+profile. Earlier P69 reading already distinguishes derived spectrogram views
+from new acquisitions; it is not claimed as a fresh full-paper read here.
+No source IDs, general mechanism names or Chinese translation admissions were
+added in this role/routing check. Counts in the associated synthetic fixtures
+are not published process results or evidence of independent samples.
+
 ## Additional Industrial Imputation Contexts
 
 The existing P25/P33 definition pair and AAS translation record remain valid
