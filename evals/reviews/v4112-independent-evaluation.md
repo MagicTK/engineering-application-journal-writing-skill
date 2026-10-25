@@ -1,6 +1,6 @@
 # 4.1.12 Focused Behavioral Review
 
-Date: 2026-10-24. One fresh respondent read the frozen candidate and relevant Skill references, then answered four fictional requests. It received raw case facts and tasks, not the required/forbidden-behavior rubric, earlier responses or implementation conclusions. No private manuscript or experiment was supplied. [Actual responses](../responses/v4112-revised.md) and the [current report](../forward-test-report.json) preserve the evidence.
+Date: 2026-10-24. One fresh respondent read the frozen candidate and relevant Skill references, then answered four fictional requests. It received raw case facts and tasks, not the required/forbidden-behavior rubric, earlier responses or implementation conclusions. No private manuscript or experiment was supplied. [Actual responses](../responses/v4112-revised.md) and the [4.1.12 report](../history/v4.1.12/forward-test-report.json) preserve the evidence.
 
 The maintainer applied the predeclared checks semantically. There was no independent second grader or baseline run. These results establish bounded behavior on four cases, not a measured improvement over 4.1.11, four independent contexts, universal writing quality or complete terminology certification.
 

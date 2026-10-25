@@ -207,6 +207,28 @@ class SuiteValidatorTests(unittest.TestCase):
                     # Later links may explicitly compare another historical version.
                     break
 
+    def test_historical_reviews_link_to_their_own_primary_reports(self) -> None:
+        eval_dir = ROOT / "evals"
+        for archive in sorted((eval_dir / "history").glob("*/forward-test-report.json")):
+            report = json.loads(archive.read_text())
+            review_paths = {
+                case["review_trace"]
+                for case in report.get("cases", [])
+                if case.get("review_trace", "").startswith("reviews/")
+            }
+            for relative in sorted(review_paths):
+                review = eval_dir / relative
+                for target in VALIDATOR.LINK_RE.findall(review.read_text()):
+                    path = (review.parent / target.split("#", 1)[0]).resolve()
+                    if path.name != "forward-test-report.json":
+                        continue
+                    with self.subTest(review=relative, version=report["suite_version"]):
+                        self.assertEqual(archive.resolve(), path)
+                        linked = json.loads(path.read_text())
+                        self.assertEqual(report["suite_version"], linked["suite_version"])
+                    # A later link can intentionally compare a previous version.
+                    break
+
     def test_evidence_count_rejects_stale_bilingual_navigation(self) -> None:
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

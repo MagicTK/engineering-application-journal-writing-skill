@@ -28,7 +28,7 @@ The revised abstract has 178 whitespace-delimited words, independently counted. 
 
 - [Three baseline responses](../responses/v414-baseline.md)
 - [Five revised-source responses](../responses/v414-revised.md)
-- [Requests, outcomes and exact instruction fingerprints](../forward-test-report.json)
+- [Requests, outcomes and exact instruction fingerprints](../history/v4.1.4/forward-test-report.json)
 
 The same respondent answered the revised requests after completing the baseline. All five final cases pass the checked scope; three also had passing baselines. This validates preservation and the new positive controls, not a measured gain over 4.1.3. Application-specific paths are omitted from the public response copies; the prose and original private tool results are preserved. No actual manuscript, paper text, experimental data or local project record is distributed.
 

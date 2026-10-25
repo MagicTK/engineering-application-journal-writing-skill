@@ -4,7 +4,7 @@
 
 One fresh responding context read the frozen candidate Skill and relevant references, then answered four fictional author requests. It did not receive expected answers, grading criteria, private source-reading notes or earlier responses. Requests and criteria were fixed before dispatch. The maintainer reviewed the actual response; there was no independent second grader, baseline comparison or claim of general performance improvement. The 102 instruction/dependency hashes remained unchanged during the test.
 
-See the [unchanged response text](../responses/v4120-revised.md) and [case report](../forward-test-report.json). Public response links were made repository-relative; the private dispatch and full returned response are retained by the maintainer. No manuscript, private data or scientific experiment was used.
+See the [unchanged response text](../responses/v4120-revised.md) and [case report](../history/v4.1.20/forward-test-report.json). Public response links were made repository-relative; the private dispatch and full returned response are retained by the maintainer. No manuscript, private data or scientific experiment was used.
 
 ## Observed Outcomes
 

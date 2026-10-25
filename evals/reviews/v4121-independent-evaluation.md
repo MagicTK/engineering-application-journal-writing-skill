@@ -4,7 +4,7 @@
 
 Four fictional requests and their expected/forbidden behaviors were specified before dispatch. A fresh-context worker received only the requests and the frozen public Skill path, without conversation history, previous responses or the scoring criteria. It was instructed not to read real manuscripts, private records or evals, not to browse, and not to edit or run research experiments. The maintainer reviewed the returned response after the run. There was no independent second grader or baseline comparison.
 
-The executed response is retained in [v4121-revised.md](../responses/v4121-revised.md); prompts, criteria, outcomes and source hashes are in [the forward report](../forward-test-report.json). The 102 frozen instruction/dependency hashes were checked again after the response. Entry validation and unit tests are separate structural evidence, not writing-performance evidence.
+The executed response is retained in [v4121-revised.md](../responses/v4121-revised.md); prompts, criteria, outcomes and source hashes are in [the forward report](../history/v4.1.21/forward-test-report.json). The 102 frozen instruction/dependency hashes were checked again after the response. Entry validation and unit tests are separate structural evidence, not writing-performance evidence.
 
 ## Observed Outcomes
 

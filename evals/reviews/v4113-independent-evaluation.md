@@ -2,7 +2,7 @@
 
 Date: 2026-10-24. One fresh responding context answered five predeclared fictional requests using the frozen candidate. The maintainer reviewed the actual answers against the required and forbidden behaviors. There was no baseline run, independent second grader or scientific experiment. Passing these cases is not measured improvement or whole-bank certification.
 
-The [report](../forward-test-report.json) records the exact prompts, criteria and 102 instruction/dependency fingerprints. The [actual response](../responses/v4113-revised.md) is preserved without editorial correction. Private dispatch and source-reading records remain outside the public package.
+The [report](../history/v4.1.13/forward-test-report.json) records the exact prompts, criteria and 102 instruction/dependency fingerprints. The [actual response](../responses/v4113-revised.md) is preserved without editorial correction. Private dispatch and source-reading records remain outside the public package.
 
 | Case | Observed behavior | Outcome |
 |---|---|---|

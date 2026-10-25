@@ -8,7 +8,7 @@ After the monitoring and figure guidance changed, the same respondent reread the
 
 - [Baseline responses](../responses/v413-initial-batch.md)
 - [Revised-source responses and final targeted retest](../responses/v413-targeted-retest.md)
-- [Versioned report and instruction fingerprints](../forward-test-report.json)
+- [Versioned report and instruction fingerprints](../history/v4.1.3/forward-test-report.json)
 
 The public response text is preserved. Environment-specific instruction links in the first revised-source trace are normalized to repository-relative links; original tool results and source snapshots remain in private evidence storage. No paper text, data, figure or local manuscript record is distributed.
 

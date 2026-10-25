@@ -6,6 +6,7 @@
 - Grounded the profile in two additional published source passages and a deeper reading of the existing fermentation example; checked both temporal-phase translations against original bilingual journal pages.
 - Connected problem wording to interpretation without prescribing an alignment algorithm or treating time-window counts as independent production batches.
 - Added no general module name, Skill, manuscript template, scientific experiment or change to private papers and results.
+- Corrected eight historical review links to their own archived reports and added a regression check. Original responses, reported outcomes and the 4.2.15 behavior-tested instructions are unchanged.
 
 ## 4.2.14 (2026-10-25)
 

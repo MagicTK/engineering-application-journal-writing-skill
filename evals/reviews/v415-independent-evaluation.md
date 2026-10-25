@@ -22,6 +22,6 @@ All four baselines already passed. The update makes source-grounded distinctions
 
 - [Baseline responses](../responses/v415-baseline.md)
 - [Revised and additional responses](../responses/v415-revised.md)
-- [Requests, criteria and exact source fingerprints](../forward-test-report.json)
+- [Requests, criteria and exact source fingerprints](../history/v4.1.5/forward-test-report.json)
 
 The baseline and revised response text is retained as returned. The public copies omit no scientific prose and contain only fictional task facts. Actual manuscripts, source-paper text, experimental data, local paths and private run records are not distributed. The stale README evaluation paragraph was separately repaired by linking to the current evaluation page instead of duplicating version-specific counts. Source identity, deterministic checks, installation and remote publication require their own verification and are not inferred from these responses.
