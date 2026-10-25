@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.28 (2026-10-26)
+
+- Added a scoped deep-reinforcement-learning base record from two distinct published engineering contexts, with a separate original Chinese journal wording check.
+- Linked class-dependent training feedback to its retained diagnostic decision model in the existing playbook, preserving the distinction from physical actuation and controller evaluation.
+- Kept source-specific module names, unresolved formulas and implementation boundaries outside the admission; no new Skill, template, scientific experiment or real manuscript edit was introduced.
+
 ## 4.2.27 (2026-10-26)
 
 - Added a scoped input-identity field and bilingual problem-writing example within the existing observation guide, distinguishing configuration changes from lost measurements and column reordering.

@@ -405,6 +405,10 @@ awarding or rejecting interpretability from the word `fuzzy` alone.
 
 Treat source-specific uses of `reinforcement` by their defined operation. P28 p.3 uses fuzzy clustering and center-related targets for feature fitting; that name is not evidence of reinforcement learning. Describe the actual objective and information flow. Only use the reinforcement-learning category when the study implements the corresponding learning setup, rather than inferring it from this word alone.
 
+For a reward-trained diagnostic design, connect the training feedback to the neural decision model and its returned class action (P126/P127). A suitable overview can explain how class-dependent rewards shape the learned decision rule, then how the retained model identifies a fault category from measurements. When an action instead changes a process input, follow that actual actuation and evaluation path using the existing [control/decision guidance](#14-control-optimization-scheduling-and-human-ai-decision). The [scoped DRL record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope) supplies base-name evidence, not a mandatory reward, neural architecture or supervision setting.
+
+中文：先连清训练反馈如何形成诊断决策，以及模型最终返回什么类别；动作若实际改变工艺输入，再按真实控制路径说明和验证。类别反馈训练与物理控制不是同一用途，不把来源的完整模块名当成共同机制，也不替普通诊断研究补造控制环节。
+
 Choose removed/randomized/corrupted-prior controls when they isolate the knowledge claim. Preserve constraints that define a valid process when constructing a perturbation; a physically impossible random graph can be a stress test but not a realistic operating alternative.
 
 ## 7. Reconstruction-Based, Generative, Diffusion, Or Data-Augmentation Methods

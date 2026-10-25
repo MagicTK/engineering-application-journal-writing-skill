@@ -18,4 +18,4 @@ The initial baseline review suggested moving its closing scope statements to aut
 
 The candidate passes the requested role-preservation, positive problem/requirement connection and author-note separation at this case's level. It does not establish ideal prose for every section, whole-corpus terminology validation, real model capability or a venue outcome. Equal array dimensions, a declared variable universe and a retained predictor require their actual information boundaries; the test performs no scientific experiment.
 
-See the [baseline request and first answer](../responses/input-identity-baseline.md), [candidate request and first answer](../responses/input-identity-candidate.md), and [versioned report](../forward-test-report.json).
+See the [baseline request and first answer](../responses/input-identity-baseline.md), [candidate request and first answer](../responses/input-identity-candidate.md), and [versioned report](../history/v4.2.27/forward-test-report.json).
