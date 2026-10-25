@@ -35,7 +35,7 @@ online queries are not counted as Chinese-term or publisher verification.
 
 - A kept input calibration bias separate from laboratory target uncertainty.
   It did not infer target bias or absent labels from uncertainty alone.
-- A treated bias/sticking as diagnostic classes in the specified sensor task,
+- A treated bias/stuck readings as diagnostic classes in the specified sensor task,
   and did not erase them as unwanted noise. It retained unknown causes for
   statistical outliers and rejected blanket deletion without inventing a cause.
 - A correctly identified manually misentered fault categories as annotation
