@@ -19,9 +19,9 @@ Five independent axes; boundary rules; routing procedure; manuscript archetype s
 
 | Code | Challenge | Questions that must be answered |
 |---|---|---|
-| C1 | Incomplete or asynchronous observation | Are values missing, irregularly timed, delayed, censored, or sampled at different fixed rates? What mechanism creates the observation pattern? |
+| C1 | Observation availability and measurement quality | Are values missing, irregularly timed, delayed, censored, sampled at different fixed rates, or affected by established measurement errors? Separate availability from value reliability, and identify whether a sensor fault is the target or an input limitation; use the [measurement-role profile](problem-first-classification.md#measurement-quality-and-diagnostic-signals). |
 | C2 | Limited or imperfect supervision | What is limited: label count, granularity, reliability or knowledge of the true label? Distinguish missing annotations, candidate labels, incorrect labels and simultaneous fault labels. |
-| C3 | Distribution evolution | Are operating modes discrete, continuously drifting, nonstationary or cross-site? What source/target information is available during development and prediction, with or without adaptation? Does the class space also change? |
+| C3 | Operating conditions and distribution change | Which operating conditions differ, or vary over time? Are discrete modes defined, and is a distribution change established? What source/target information is available during development and prediction, with or without adaptation? Does the class space also change? |
 | C4 | Heterogeneous information | Do acquisition streams, derived representations, temporal scales or semantic levels carry different information? Which inputs require pairing/synchronization, and what physical or derived evidence does each carry? |
 | C5 | Interacting subsystem and process coupling | Do interactions, propagation paths, material/information flows, or long-range dependencies make local modeling insufficient? Which relationships are known and which must be learned? |
 | C6 | Deployment constraints | Are latency, memory, energy, bandwidth, edge hardware, online updating, or operator workload part of the research question? |

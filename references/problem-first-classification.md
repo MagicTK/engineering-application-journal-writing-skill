@@ -19,6 +19,7 @@ evidence that every topic has been reviewed.
 | Search lead | What it identifies first | Problem to establish, not assume |
 |---|---|---|
 | Missing data, multi-rate, irregular sampling | Observation limitation | Which measurement is absent or unavailable when needed, and why |
+| Measurement noise, sensor errors, outliers | Observation quality or a diagnostic target | Which quantity is affected, what establishes an error, and whether the change is interference or a signal to diagnose |
 | Few-shot, weak supervision, limited labels | Support or annotation limitation | Quantity, granularity, reliability, class coverage and stage-specific access |
 | Multimode, nonstationary, unseen conditions | Operating/distribution setting | Discrete regimes, continuous change, or a specified development-to-use shift |
 | Compound faults | Coexisting-fault setting | Whether several faults coexist, how combinations are labeled and what the output represents |
@@ -46,6 +47,7 @@ in the [published index](published-evidence.md) and
 | Industrial difficulty | Candidate English wording | What makes the wording precise |
 |---|---|---|
 | Incomplete observations | missing measurements; missing values; incomplete process data | Identify variable/time coverage and missingness mechanism; actual absent values differ from deliberately masked evaluation targets |
+| Unreliable measured inputs | measurement noise; noisy process measurements; measurement bias when established | Identify the measurement and reference; a present but inaccurate value differs from a missing value, an incorrect label and a genuine process change |
 | Different acquisition rates | multi-rate sampling; multi-rate process measurements | Different variable/group sampling clocks; do not infer irregular intervals within each clock |
 | Uneven timestamps | irregularly sampled measurements | Variable time gaps, not merely several different fixed rates |
 | Timing mismatch or late availability | asynchronous measurements; reporting delay; delayed quality measurements | Separate acquisition time, report-availability time, alignment and physical process lag |
@@ -96,6 +98,36 @@ post-onset detection delay and prediction before a future event are different
 claims. Reuse the [existing timing rule](research-planning-and-contribution.md#representation-and-task-boundaries)
 and [alarm-evidence guidance](experiment-evidence-design.md#continuous-monitoring-what-is-scored-and-when);
 do not demand new timing experiments for correctly scoped classification.
+
+### Measurement Quality And Diagnostic Signals
+
+Establish the affected quantity and its task role before using a data-quality
+label. An error in an input measurement, an uncertain assay used as a regression
+target, and an incorrect fault-category annotation affect different parts of the
+study. A continuous target can itself be measured; describe its uncertainty at
+the target, rather than treating all measurement noise as input corruption.
+
+A statistical outlier identifies unusualness relative to a stated reference,
+not its physical cause. A process disturbance can produce a valid measured
+response. A biased or stuck sensor may be the fault to diagnose in one study
+and an input limitation for another. Identify the role before recommending
+cleaning, replacement or exclusion. Keep the acquisition-quality issue separate
+from genuine process dynamics and class novelty.
+
+For this problem profile, record only the affected input/target, the supplied
+reference or known intervention, the affected variables/intervals, and the
+intended decision. Unknown causes stay unknown. Artificially added noise is a
+declared test condition, not evidence that the original acquisition was noiseless
+or that field noise has that distribution. In paper prose, lead with the actual
+difficulty and connect it to the verified response; use the existing
+[robustness guidance](experiment-evidence-design.md#6-robustness-design) when
+evidence design is requested, without selecting denoising or a new experiment
+during problem-only classification.
+
+P87 p.8 and P88 pp.6-7 evaluate diagnosis under specified added-noise scenarios;
+P115 pp.4-5 instead uses outlier indicators as information for feature extraction.
+These contexts support a role-sensitive reading, not a universal outlier-removal
+rule, certification of their results, or admission of their full module names.
 
 ### Observation Availability And Counting
 

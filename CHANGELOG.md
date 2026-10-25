@@ -1,5 +1,17 @@
 # Changes
 
+## 4.2.12 (2026-10-25)
+
+- Made measurement quality visible in problem-first routing, alongside observation availability rather than only within experiment guidance.
+- Distinguished input errors, measured-target uncertainty, incorrect annotations and diagnostic signals; retained task-dependent roles for outliers and sensor faults without prescribing cleaning or a new method.
+- Read two existing noise-evaluation contexts and one attributed outlier-information example; admitted no new general mechanism names or Chinese compound translations.
+
+## 4.2.11 (2026-10-25)
+
+- Made the C3 routing heading explicitly cover operating-condition differences as well as distribution change; different conditions need not form a temporal evolution.
+- Retained the existing scoped condition/state, temporal-order, class-space and supervision guidance without adding a method recipe or terminology admission.
+- Corrected the bilingual README reference-file inventory and added a test against the actual entrypoint, reference and template files.
+
 ## 4.2.10 (2026-10-25)
 
 - Clarified regression target coordinates, physical-unit error labels, ratio-error denominators and legitimate R2/software conventions within the existing checks.

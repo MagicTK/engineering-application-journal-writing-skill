@@ -39,6 +39,23 @@ class SuiteValidatorTests(unittest.TestCase):
     def test_current_suite_passes(self) -> None:
         self.assertEqual([], VALIDATOR.validate(ROOT))
 
+    def test_readme_repository_inventory_matches_files(self) -> None:
+        _, records = VALIDATOR.parse_manifest((ROOT / "suite-manifest.yaml").read_text())
+        expected = (
+            len({record[key] for record in records for key in ("canonical", "mirror")}),
+            len(list((ROOT / "references").rglob("*.md"))),
+            len(list((ROOT / "assets/templates").rglob("*.md"))),
+        )
+        patterns = {
+            "README.md": r"\*\*(\d+) Skill-entry Markdown files, (\d+) reference Markdown files and (\d+) working-template Markdown files\*\*",
+            "README_CN.md": r"\*\*(\d+) 个 Skill 入口 Markdown、(\d+) 份专题参考 Markdown、(\d+) 份工作模板 Markdown\*\*",
+        }
+        for filename, pattern in patterns.items():
+            with self.subTest(filename=filename):
+                match = re.search(pattern, (ROOT / filename).read_text())
+                self.assertIsNotNone(match, f"{filename}: repository inventory missing")
+                self.assertEqual(expected, tuple(map(int, match.groups())), filename)
+
     def test_bilingual_counterparts_are_directly_discoverable(self) -> None:
         _, records = VALIDATOR.parse_manifest((ROOT / 'suite-manifest.yaml').read_text())
         missing = []
@@ -296,7 +313,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.10", suite["version"])
+        self.assertEqual("4.2.12", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

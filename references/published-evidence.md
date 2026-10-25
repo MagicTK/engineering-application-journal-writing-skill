@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 114-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 114 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 115-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 115 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计114篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计115篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -126,10 +126,29 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P112 | [Aerial Visual Perception in Smart Farming: Field Study of Wheat Yellow Rust Monitoring](https://doi.org/10.1109/TII.2020.2979237) | TII 17(3) (2021), pp.2242-2249. Read the [institution-hosted accepted version](https://repository.essex.ac.uk/27051/8/ALL_TII-19-5199.pdf): p.4 Eq.(2), p.5 Fig.6, selected identity/abstract. Adjacent engineering-image evidence for the mean categorical weighted loss, not process-window terminology, complete U-Net validation or final-layout formula identity. |
 | P113 | [A unified model integrating Granger causality-based causal discovery and fault diagnosis in chemical processes](https://doi.org/10.1016/j.compchemeng.2025.109028) | CCE 196 (2025), Art.109028; supplied published PDF pp.1-4 selected identity, framing and history-based definition, especially p.3 Section 2.2/Eq.(2). Conditional predictive distributions and physical mechanisms are distinguished; complete CR-VAE, formula guarantees and results are not certified. |
 | P114 | [Root cause diagnosis of plant-wide oscillations using Granger causality](https://doi.org/10.1016/j.jprocont.2013.11.009) | JPC 24 (2014), pp.450-459; supplied published PDF pp.1-3 selected identity, introduction and Section 2.1/Eqs.(1)-(7). Linear residual comparison and conditioning support a scoped predictive-history record; full spectral, feature-selection and root-cause procedures are outside this check. Its same-title IFAC 2012 version is not a second work. |
+| P115 | [Integrating Outlier-Type Prior Knowledge Into Convolutional Neural Networks Based on an Attention Mechanism for Fault Diagnosis](https://doi.org/10.1109/TSMC.2024.3461668) | TSMC: Systems 54(12), 2024, pp.7834-7847; supplied published PDF p.1 and selected pp.4-5. Outlier indicators inform feature extraction, illustrating a diagnostic information role rather than automatic measurement-error removal. Full module names, statistical calibration and reported gains are not certified here. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Measurement Quality And Diagnostic Information
+
+P87 p.8 specifies added Gaussian noise after normalization and evaluates
+diagnostic performance. P88 pp.1,6-7 frames noisy-input diagnosis in adjacent
+rotating machinery and compares specified noise scenarios. These support
+describing the actual noise setting, not assuming clean original data or
+transferring one tested distribution to all field interference. P115 p.4
+Section III-B constructs outlier indicators relative to a reference; p.5
+Section III-C uses those indicators in feature extraction. An unusual value
+can therefore have a diagnostic information role, not an automatic deletion
+instruction. The sources illustrate different roles, not matching definitions
+of one new mechanism. Their full designs, formulas and performance were not
+revalidated in this check; P88's earlier recorded formula concerns remain.
+
+This bounded reading uses the supplied journal PDFs. Online source/Chinese
+wording queries were unavailable in this round and are not recorded as
+completed verification. No new Chinese compound module name is admitted.
 
 ### Problem Profiles And Supervision Signals
 
