@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 107-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 107 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 108-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 108 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计107篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计108篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -119,6 +119,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P105 | [Residual-Hypergraph Convolution Network: A Model-Based and Data-Driven Integrated Approach for Fault Diagnosis in Complex Equipment](https://doi.org/10.1109/TIM.2022.3227609) | TIM 72, Art.3501811; institutional record reports online publication 8 Dec 2022. Read author-uploaded manuscript HTML, selected Sections III and IV-B, Eqs.(5)-(8): equipment-node membership and normalized node-edge-node base propagation. Full Res-HGCN, signed matrix/degree implementation, physical relations and results are not certified. |
 | P106 | [Industrial Data Imputation Based on Multiscale Spatiotemporal Information Embedding With Asymmetrical Transformer](https://doi.org/10.1109/TNNLS.2025.3527581) | TNNLS, read IEEE early-access article PDF: selected p.5 Section III-B/Eqs.(16)-(19), p.6 Algorithm 1. Observed=1 mask, initial filling, measurement estimates and downstream use have separate roles. Missing-position target implementation, full MSST-Former, current issue pagination and results are not certified. |
 | P107 | [Imputation of Missing Values in Time Series Using an Adaptive-Learned Median-Filled Deep Autoencoder](https://doi.org/10.1109/TCYB.2022.3167995) | TCYB 53(2), February 2023; published PDF pp.3-4, Sections II-B/III-A, Eqs.(4)-(8), selected p.5: missing=1 mask and iterative measurement completion. This base-operation record does not certify complete AM-DAE, parameter/target access at every phase or results. |
+| P108 | [Optimize TSK Fuzzy Systems for Classification Problems: Minibatch Gradient Descent With Uniform Regularization and Batch Normalization](https://doi.org/10.1109/TFUZZ.2020.2967282) | TFS 28(12), 2020, pp.3065-3075; published author-lab PDF identity p.1 and selected Section II-A p.2: affine class consequents and normalized rule combination. Full optimization variants, implementation and results are outside this check. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -455,6 +456,13 @@ P79's [institutional record](https://livrepository.liverpool.ac.uk/id/eprint/316
 Chinese wording was separately verified in the original bilingual title, abstract, keywords and introductory definition of [Journal of Software 6467](https://www.jos.org.cn/html/2022/4/6467.htm), and the original title/bilingual abstracts on the official [JCST 10.1007/s11390-021-1106-5 Chinese page](https://jcst.ict.ac.cn/cn/article/doi/10.1007/s11390-021-1106-5). They support the recorded wording variants without ranking one as the uniquely accepted translation. JCST's pseudo-source samples are constructed from target samples and predicted labels, not acquired source-instance replay. The computing-context pages supply terminology evidence, not two extra industrial operation definitions or permission to adopt their full method names. Source-model knowledge, adaptation inputs, model selection and final prediction should remain distinct in the engineering writing.
 
 ### Fuzzy Matching, Rule Outputs And Task Decisions
+
+P77 p.5 Eq.(8) and P108 p.2 Section II-A were separately read and visually
+checked for the scoped first-order TSK rule record. A survey's name mentions
+were not counted as another definition. Original paired wording and Section 1
+of [智能系统学报202408015](https://html.rhhz.net/tis/html/202408015.htm)
+were checked separately for Chinese names; its later parameter account is not
+adopted. This does not certify complete neuro-fuzzy systems or source results.
 
 P27 pp.3-4, Section III-A and Eqs.(4)-(6), was reread; p.4 was rendered. P77 p.1 metadata/abstract, p.5 Section III-B definitions and selected training/prediction passages on pp.6-8 were read; p.5 was rendered. Both define Gaussian input matching, but their rule outputs and tasks differ. P77's displayed Eqs.(5)-(7) combine class scores before class-axis softmax; Eq.(10) combines modality probabilities. These orders and objects should not be interchanged. P27's Eq.(7) expansion has an index inconsistency relative to Eqs.(5)-(6); P77 has neighboring dimensional/base-learner wording ambiguities. No complete source algorithm, guarantee, interpretation claim or experiment is certified.
 

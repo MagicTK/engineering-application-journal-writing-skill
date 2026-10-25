@@ -648,6 +648,15 @@ probability output without claiming empirical calibration from normalization.
 Other fuzzy inference systems need their own output and aggregation definitions;
 this checked path is not a mandatory architecture for every fuzzy model.
 
+Name the local consequent and its aggregation separately. A constant consequent
+and an affine function of the input are different local models; input-dependent
+rule weights can make either complete mapping nonlinear. With antecedent
+functions fixed, the combined numerical score can be linear in consequent
+coefficients without being affine in the input. Joint antecedent/consequent
+fitting and any later softmax need their actual objectives. The scoped P77/P108
+TSK record does not make every Gaussian-weighted model the same classifier,
+or turn its numerical rules into expert-defined physical regimes.
+
 Identify the domain of the rule inputs. A learned latent coordinate can support
 a numerical fuzzy predictor without a verified physical label such as high
 temperature. Conversely, physically defined inputs and documented linguistic

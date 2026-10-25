@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.75 (2026-10-25)
+
+- Added a scoped first-order TSK rule/classifier definition record from two distinct TFS works, with a separate original Chinese scholarly wording check.
+- Distinguished local consequents, fixed-antecedent parameter fitting and the complete input-output mapping; retained existing Gaussian-membership and rule-output guidance.
+- Added no topic or template files, and did not promote complete source-specific neuro-fuzzy or optimization names to general families.
+
 ## 4.1.74 (2026-10-25)
 
 - Aligned English/Chinese experiment quality gates with the existing claim-specific evidence framework: analytical properties, empirical effects and resource validity need different support, not a mandatory deletion row each.
