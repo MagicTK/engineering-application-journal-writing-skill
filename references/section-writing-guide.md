@@ -148,7 +148,7 @@ Make the progression cumulative: what one family enables becomes the starting po
 
 Represent prior work fairly. A source that evaluates one setting establishes evidence for that setting. An untested setting remains unresolved; it is not an observed failure. Identify a limitation through an explicit assumption, a reported result, or a documented comparison, and cite the source supporting that exact statement. Avoid unqualified `existing methods ignore` or `all methods fail` claims.
 
-Avoid a final synthesis paragraph if it merely repeats all subsection endings. Retain it only when it introduces a genuinely new integration gap.
+Keep a final synthesis when it draws a useful connection or comparison across the reviewed work, delimits the study, or carries an established requirement into the proposed approach. It need not introduce a new research gap. Combine or remove it when it merely repeats earlier endings; do not invent an additional gap to justify its presence.
 
 ## 5. Problem Formulation
 

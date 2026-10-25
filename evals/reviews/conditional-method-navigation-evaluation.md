@@ -24,4 +24,4 @@ The respondent disclosed inherited context and memory-index navigation, plus tar
 
 The new navigation is many-to-many, not a universal recommendation table or engineering-name admission. The four conference leads retain their identities and original tasks. This result does not verify all topics, all terminology, all instructions, research novelty, empirical gains or journal acceptance. No new general mechanism name, Skill or manuscript template was admitted.
 
-See the [actual request and first answer](../responses/conditional-method-navigation-independent.md) and [versioned evaluation state](../forward-test-report.json).
+See the [actual request and first answer](../responses/conditional-method-navigation-independent.md) and [versioned evaluation state](../history/v4.2.18/forward-test-report.json).

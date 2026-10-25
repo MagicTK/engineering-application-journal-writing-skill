@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.19 (2026-10-25)
+
+- Corrected an overrestrictive Related Work rule: a useful closing synthesis may connect existing capabilities, define study scope or motivate a justified comparison without introducing another research gap.
+- Linked the existing bilingual literature-positioning entrypoints to that functional criterion, while retaining removal or merging of purely repetitive endings and fair treatment of untested settings.
+- Added no new section template, generic mechanism name, terminology record or scientific experiment; author-approved manuscripts remain untouched.
+
 ## 4.2.18 (2026-10-25)
 
 - Added conditional, many-to-many problem-to-method navigation within the existing bilingual problem guide, linking industrial conditions to candidate roles and transfer checks rather than prescribing a model per problem.

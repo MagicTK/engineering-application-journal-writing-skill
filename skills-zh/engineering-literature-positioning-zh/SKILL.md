@@ -7,7 +7,7 @@ description: 工程应用论文文献调研与研究定位 Skill 中文执行版
 
 [English](../../skills/engineering-literature-positioning/SKILL.md)
 
-套件版本：`4.2.18`
+套件版本：`4.2.19`
 
 ## 一、任务目标
 
@@ -123,7 +123,7 @@ description: 工程应用论文文献调研与研究定位 Skill 中文执行版
 4. 提炼有依据的未解决需求，或将已建立的能力带入下一主题；
 5. 转向下一类别或最终定位。
 
-不要每段都使用同一种 `However` 句式。最后一节收束到 gap，不重复整个引言。
+不要每段都使用同一种 `However` 句式。各主题应收束到有依据的研究定位，不重复整个引言。末段按[论证功能](../../references/section-writing-guide.md#4-related-work)判断：有用的综合、比较、范围说明或承接可以保留，不要求再造一个新 gap。
 
 ## 十一、预期产物
 

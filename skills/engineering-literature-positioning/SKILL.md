@@ -7,7 +7,7 @@ description: Research and position an engineering-application journal paper usin
 
 [中文执行版](../../skills-zh/engineering-literature-positioning-zh/SKILL.md)
 
-Suite version: `4.2.18`
+Suite version: `4.2.19`
 
 ## Mission
 
@@ -156,7 +156,7 @@ Group by the argument needed to establish the gap. For each subsection:
 4. identify a supported remaining requirement, or carry the established capability into the next theme;
 5. transition to the next family or final positioning.
 
-Do not end every paragraph with the same `However, ...` construction. The final subsection should converge on the unresolved problem without repeating the full Introduction.
+Do not end every paragraph with the same `However, ...` construction. Let the reviewed themes converge on the study's supported position without repeating the Introduction. Judge a closing synthesis by its [argument function](../../references/section-writing-guide.md#4-related-work), not by whether it adds another gap.
 
 ## 10. Citation Planning
 
