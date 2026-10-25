@@ -26,4 +26,4 @@ There were two separate responding contexts: the initial 4.2.20 answer and the r
 
 The maintainer read P18 selected pp.1-7, including the p.7 reference-template qualification, and P17 p.1; selected pages were visually checked. These are source-role checks, not a new generic name/translation admission or validation of source equations and results. The fictional training head, samples and metrics are not an EnergyMatch reproduction. A mistaken preliminary source-role note was corrected against P17 before revised-source dispatch; it did not enter public instructions.
 
-See the [initial request and answer](../responses/auxiliary-guidance-initial.md), [revised-source first answer, feedback and final answer](../responses/auxiliary-guidance-revised.md), and [current report](../forward-test-report.json). Program checks and publication integrity are separate.
+See the [initial request and answer](../responses/auxiliary-guidance-initial.md), [revised-source first answer, feedback and final answer](../responses/auxiliary-guidance-revised.md), and [v4.2.21 report](../history/v4.2.21/forward-test-report.json). Program checks and publication integrity are separate.

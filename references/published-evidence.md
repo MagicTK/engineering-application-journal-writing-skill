@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 120-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 120 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 122-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 122 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计120篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计122篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -132,10 +132,35 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P118 | [A survey on multistage/multiphase statistical modeling methods for batch processes](https://doi.org/10.1016/j.arcontrol.2009.08.001) | Annual Reviews in Control 33 (2009), pp.172-183. Read supplied PDF pp.1-3: the source's unit/phase distinction, batch/variable-wise unfolding and unequal-duration alignment. Modeling phases may differ from physical operating phases; preserve the definition rather than imposing it on all papers. This is a scoped survey reading, not validation of the surveyed algorithms. |
 | P119 | [Phase adaptive RVM model for quality prediction of multiphase batch processes with limited modeling batches](https://doi.org/10.1016/j.chemolab.2016.05.017) | Chemometrics and Intelligent Laboratory Systems 156 (2016), pp.81-88. Read supplied PDF pp.1-4: batch/time/variable axes, replicated final-quality targets and phase-specific prediction. Its injection-molding example uses five training batches and assumes equal duration; it is not evidence of variable-length performance. P118/P119 share an author; P09 supplies a separate fermentation context. Full PARVM, displayed formula consistency and results are not certified. |
 | P120 | [Remaining Useful Life Prediction for Bearing Based on Coupled Diffusion Process and Temporal Attention](https://doi.org/10.1109/TIM.2024.3366270) | TIM 73 (2024), 3510310. Adjacent bearing-prognosis study: pp.1-5 connect training input/target perturbations, prediction and output denoising; p.4 Fig.2 visually checked. Its complete CDTA name, noise-preservation arguments, DSM implementation and results are not certified as general definitions. |
+| P121 | [MPSS: A spatiotemporal-decoupled massively pretrained soft sensor for general industrial scenarios with heterogeneous data robustness](https://doi.org/10.1016/j.jprocont.2026.103660) | JPC 160 (2026), 103660; supplied published PDF pp.1-4,7 and selected p.8, with pp.5,7 visually checked. Numerical reconstruction pretraining and supervised task adaptation have different targets; p.7 Section 3.3/Eq.(21) defines additive low-rank updates around frozen weights before regression. Full routing/prefix modules, matrix conventions, forgetting/generalization assertions and results are not certified. |
+| P122 | [AeroGPT: Leveraging Large-Scale Audio Model for Aero-Engine Bearing Fault Diagnosis](https://doi.org/10.1109/TCYB.2026.3668256) | TCYB, online 12 March 2026, supplied accepted-for-publication PDF awaiting issue pagination. Read pp.1-5,7 and selected p.6; pp.4-5 visually checked. Section III-C/Eq.(3) defines low-rank weight updates; training templates and generated category texts have distinct roles. Readable labels do not alone establish faithful explanations, actionable maintenance or unknown-class recognition. Full VSA/GFC, all equations and results are not certified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Pretrained Models: Numerical Prediction And Generated Decisions
+
+P121 pp.4-5,7 connects masked numerical pretraining to a downstream regression
+head with frozen base weights and learned low-rank updates. P122 pp.4-5,7 instead
+connects vibration/text training pairs to generated diagnostic text. Both are
+pretraining/adaptation accounts, not the same inference output or evidence plan.
+P121's task-target supervision and P122's label-derived template targets remain
+supervision even when their base weights are frozen. Their stronger statements
+about universal transfer, avoiding forgetting, eliminated postprocessing or
+actionability are not adopted as writing rules.
+
+For the LoRA base-name record, the inspected definitions are P121 p.7
+Section 3.3/Eq.(21) and P122 p.5 Section III-C/Eq.(3), with both pages visually
+checked. The matched object is an additive low-rank weight update around a
+fixed pretrained base, not all parameter-efficient techniques or low rank of the
+effective full matrix. The original Chinese title/abstract in
+[Data Acquisition and Processing](https://sjcj.nuaa.edu.cn/sjcjycl/article/abstract/202403006)
+and the adaptation paragraph on PDF p.5 of
+[JIG jig.240011](https://www.cjig.cn/rc-pub/front/front-article/download/61781372/lowqualitypdf/Advances%20in%20edge-cloud%20collaboration%20and%20evolution%20for%20large-small%20models.pdf)
+separately verify 低秩适应 and 低秩适配. The latter PDF was read as text, not
+visually inspected; these checks add no industrial-definition IDs or full-model
+performance guarantees.
 
 ### Measurement Quality And Diagnostic Information
 

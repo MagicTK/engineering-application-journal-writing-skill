@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.22 (2026-10-25)
+
+- Replaced the generic foundation-model evidence list with conditional roles for numerical prediction, semantic guidance, measurement textualization and generated decisions within the existing playbook.
+- Added a scoped LoRA base-name record from two distinct engineering-journal definitions and independently checked Chinese variants; kept complete source modules, performance guarantees and other PEFT variants outside that admission.
+- Added two selected source readings with explicit passage/visual coverage. Existing v4.2.21 already handled the fictional numeric/text-output cases correctly; this update improves source coverage and navigation, not a claimed repair of a baseline scientific failure.
+- Added no Skill, manuscript template, scientific experiment or change to private papers or results.
+
 ## 4.2.21 (2026-10-25)
 
 - Applied abstract information selection explicitly to revision as well as new drafting, after an actual first response accurately reproduced the implementation but read as a compact Methods inventory.

@@ -464,18 +464,38 @@ Writing priorities:
 - keep the industrial data and decision path primary;
 - do not imply physical understanding from fluent text alone.
 
-Evidence priorities:
+Choose evidence from the pretrained component's actual role; a numerical
+predictor need not generate language, and a one-time semantic source need not
+execute at every prediction.
 
-- prompt/model/version sensitivity;
-- ablation of semantic information;
-- hallucination and invalid-output rate;
-- privacy and data-governance boundary;
-- comparison with non-LLM semantic baselines;
-- human review when outputs enter operational decisions.
+| Role | Connection to describe | Evidence relevant to the retained claim |
+|---|---|---|
+| Numerical representation or prediction | Pretraining objective, downstream fitting and the numerical task output | Pretraining/downstream data access, target definitions and a matched predictive comparison; language-output measures are not applicable without language output. |
+| Category descriptions or other semantic guidance | Verified text source, represented categories and downstream consumer | Semantic-source provenance, information access and a semantic-information comparison when its benefit is claimed. |
+| Textualized measurements | Available measurements, conversion and task predictor | Retained quantities, units and timing; include conversion/service costs when required for prediction. |
+| Generated diagnoses, explanations or recommendations | Permitted input, generation and the actual decision consumer | Model/prompt version, output interpretation and task-appropriate scoring; evaluate explanation fidelity or action utility only when claimed. |
+
+For category-text outputs, define the mapping and treatment of unmatched answers
+before evaluation. A score conditional on valid answers has a different
+denominator from all-sample accuracy. An invalid answer is not automatically an
+implemented unknown-class rejection or a fully defined hallucination measure.
+Keep privacy and data-governance checks attached to the actual data flow; human
+review matters when generated advice enters operational decisions.
 
 If an LLM supplies category semantics rather than predictions, trace `source text -> verified descriptor -> downstream learner`, including whether the text identifies test classes or outcomes. P05 motivates this distinction. Knowledge retrieval, semantic annotation and test-time adaptation are separate operations; do not hide their information access under a single `LLM-assisted` label. Do not transmit private process data to a service without explicit authorization.
 
 A different route textualizes numerical measurements before embedding them (P29). Specify the measurements, time context, units and prompt information available to the textualizer, and distinguish its output from independently supplied class descriptions. Check that true fault labels or later outcomes were not inserted into sample text. External textualization cost belongs to the inference boundary when it is required for each prediction; a training-only semantic lookup has a different boundary. P29 formulates its compression-derived prior on embedded samples, not directly on the raw measurements or prose. Identify the compressed object and its encoding before interpreting a compression score; such a proxy is not automatically a physical measure of system complexity.
+
+P121 pp.4-5,7 instead connects numerical masked pretraining to supervised
+soft sensing through a frozen backbone, learned weight updates and a regression
+head. P122 pp.4-7 adapts an audio-language model using vibration/text pairs and
+generates fault-category text. Their pretraining and task adaptation are learning
+phases, not additional production stages; frozen base weights do not remove
+downstream supervision. In an abstract, connect the transferred representation
+to the final task rather than assigning language reasoning to every pretrained
+model or equating readable labels with validated maintenance explanations.
+
+中文要点：按数值预测、语义指导、测量文本化及诊断文本生成的实际角色选证据，不给所有预训练方法统一追加提示词或幻觉实验。生成类别文本须连清映射规则与计分分母；冻结基座后学习权重增量仍是任务适应。LoRA基础名称及两个已核译法见[术语记录](engineering-application-terminology-bank_CN.md#九已核验核心名称与未完成范围)，完整来源模块名仍保留归属。
 
 ## 9. Lightweight, Efficient, Online, Or Edge-Oriented Methods
 
