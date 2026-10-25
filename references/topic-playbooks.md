@@ -427,6 +427,21 @@ For a VAE, identify the latent prior, approximate posterior, decoder likelihood 
 
 For generation as the task (P32), distinguish fidelity, diversity, condition consistency and downstream utility. Downstream utility can be one evaluation dimension without making diagnosis the primary task. P32 motivates generation with data availability, but this does not require another manuscript to assert an unobserved shortage. For augmentation as the means (P35), trace real training samples through the generator to the downstream learner, then evaluate that learner on untouched real test units. Do not put an augmentation-only generator into the diagnostic inference path. A latent-space generator also needs its encoder/decoder roles made clear; lower latent dimensionality alone does not measure total generation cost.
 
+Check whether a diffusion-related design actually learns a reverse sampler or
+uses a noising construction to train a predictor. P120 perturbs training inputs
+and regression targets, then describes a prediction network and output denoising;
+P35 instead generates latent features and decodes additional training signals.
+Keep the target of each loss and the retained prediction path explicit. A
+noisy regression target remains derived from an observed target, and an output
+called denoised is not automatically a restored sensor measurement. Do not infer
+a score-matching objective or iterative reverse sampling from a module's name
+alone. In prose, connect the training perturbation to the predictor it trains;
+do not force a separate synthetic-dataset-to-classifier story. Preserve P120's
+attributed name without importing its unverified preservation or generalization
+claims as a general diffusion mechanism.
+
+中文：先看加噪对象、学习目标和预测时保留的部件。对训练输入和回归目标加噪，与反向生成后解码新增训练信号，是不同的用法。扰动后的目标仍依赖原始标注；输出端写了去噪，也不等于恢复了现场传感器信号。摘要应连清扰动怎样服务预测，不强行写成先生成独立数据集再训练分类器。
+
 For methods with a generator and discriminator, inspect what is generated and what the discriminator predicts before writing the method-to-task link. P70 pp.3-4 maps acquired measurements to features and uses source/target discrimination to inform performance-grade learning; its full GAN-named method does not establish synthetic sample augmentation. P72 p.5 instead generates training examples for a separate fault classifier. P71 pp.4-5 retains generator inversion and discriminator scores for detection, then describes a discriminator-derived classification path. Thus neither `all generators run at diagnosis time` nor `all generators are discarded after training` is a safe generalization. In an abstract or contribution, connect the particular training signal or generated object to the retained predictor; a training adversary need not become another sequential inference module. Keep full source names attributed, and do not promise exact alignment, equilibrium or preserved fault information merely because the objective is adversarial.
 
 Purposefully changing diagnostic inputs to induce errors is a different role;

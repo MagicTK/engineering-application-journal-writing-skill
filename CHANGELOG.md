@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.16 (2026-10-25)
+
+- Distinguished diffusion-derived training perturbations from learned reverse generation within the existing conditional playbook, with bilingual guidance on targets and retained prediction components.
+- Added one attributed bearing-prognosis reading and reread the existing latent-generation definition; preserved source-specific names and unresolved source claims rather than admitting a new general module.
+- Kept noisy training targets separate from new annotations and output denoising separate from sensor restoration. No manuscript template, mechanism name, experiment or private-paper change was added.
+
 ## 4.2.15 (2026-10-25)
 
 - Added a conditional batch-process problem profile within the existing bilingual guide: production batches, temporal phases, duration differences, quality targets and decision times remain distinct.
