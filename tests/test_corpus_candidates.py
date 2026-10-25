@@ -71,6 +71,89 @@ class CorpusCandidateTests(unittest.TestCase):
             self.assertEqual(result["status"], "candidate_search_only")
             self.assertNotIn("paper_count", result)
 
+    def test_missing_pdf_dependency_fails_without_replacing_report(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/"paper.pdf").write_bytes(b"fictional PDF fixture")
+            terms, output = root/"terms.txt", root/"report.json"
+            terms.write_text("feature fusion\n")
+            output.write_text('{"existing": true}\n')
+            argv = ["search", "--corpus", f"fictional={root}", "--terms", str(terms), "--output", str(output)]
+            error = ModuleNotFoundError("No module named 'pypdf'", name="pypdf")
+            stderr = io.StringIO()
+            with patch("sys.argv", argv), patch.object(MODULE, "pdf_pages", side_effect=error), \
+                 contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(stderr):
+                self.assertEqual(MODULE.main(), 2)
+            self.assertIn("pypdf", stderr.getvalue())
+            self.assertEqual(output.read_text(), '{"existing": true}\n')
+
+    def test_partial_pdf_failure_preserves_candidates_but_signals_incomplete(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/"good.pdf").write_bytes(b"fictional readable PDF")
+            (root/"broken.pdf").write_bytes(b"fictional broken PDF")
+            terms, output = root/"terms.txt", root/"report.json"
+            terms.write_text("feature fusion\n")
+            argv = ["search", "--corpus", f"fictional={root}", "--terms", str(terms), "--output", str(output)]
+            def reader(path):
+                if path.name == "broken.pdf":
+                    raise ValueError("unreadable fixture")
+                return ["Feature fusion combines inputs."]
+            with patch("sys.argv", argv), patch.object(MODULE, "pdf_pages", side_effect=reader), \
+                 contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(MODULE.main(), 1)
+            result = json.loads(output.read_text())
+            self.assertEqual(result["coverage"]["status"], "partial")
+            self.assertEqual(result["coverage"]["searchable_unique_files"], 1)
+            self.assertEqual(result["coverage"]["failed_file_reads"], 1)
+            self.assertEqual(len(result["evidence"]["feature fusion"]), 1)
+            self.assertEqual(result["status"], "candidate_search_only")
+
+    def test_all_pdf_reads_failed_are_not_successful_zero_hits(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/"broken.pdf").write_bytes(b"fictional broken PDF")
+            terms, output = root/"terms.txt", root/"report.json"
+            terms.write_text("feature fusion\n")
+            argv = ["search", "--corpus", f"fictional={root}", "--terms", str(terms), "--output", str(output)]
+            with patch("sys.argv", argv), patch.object(MODULE, "pdf_pages", side_effect=ValueError("broken")), \
+                 contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(MODULE.main(), 1)
+            result = json.loads(output.read_text())
+            self.assertEqual(result["coverage"]["status"], "failed")
+            self.assertEqual(result["coverage"]["parsed_unique_files"], 0)
+            self.assertEqual(len(result["failures"]), 1)
+
+    def test_textless_pdf_is_retained_but_not_counted_as_searchable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root/"blank.pdf").write_bytes(b"fictional no-text PDF")
+            terms, output = root/"terms.txt", root/"report.json"
+            terms.write_text("feature fusion\n")
+            argv = ["search", "--corpus", f"fictional={root}", "--terms", str(terms), "--output", str(output)]
+            with patch("sys.argv", argv), patch.object(MODULE, "pdf_pages", return_value=["", "  "]), \
+                 contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+                self.assertEqual(MODULE.main(), 1)
+            result = json.loads(output.read_text())
+            self.assertEqual(result["unique_file_count"], 1)
+            self.assertEqual(result["coverage"]["status"], "failed")
+            self.assertEqual(result["coverage"]["searchable_unique_files"], 0)
+            self.assertEqual(result["coverage"]["unsearchable_unique_files"], 1)
+            self.assertEqual(result["files"][0]["text_pages"], 0)
+            self.assertEqual(result["evidence"], {})
+
+    def test_empty_corpus_is_explicit_not_negative_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            terms, output = root/"terms.txt", root/"report.json"
+            terms.write_text("feature fusion\n")
+            argv = ["search", "--corpus", f"fictional={root}", "--terms", str(terms), "--output", str(output)]
+            with patch("sys.argv", argv), contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(MODULE.main(), 0)
+            result = json.loads(output.read_text())
+            self.assertEqual(result["coverage"]["status"], "empty")
+            self.assertEqual(result["coverage"]["searchable_unique_files"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

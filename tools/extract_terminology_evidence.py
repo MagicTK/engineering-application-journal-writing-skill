@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import json
 import re
+import sys
 from collections import defaultdict
 from pathlib import Path
 
@@ -108,7 +109,7 @@ def main() -> int:
         parser.error("output must be a .json file different from the terms input")
     terms = read_terms(args.terms.resolve())
     evidence = defaultdict(list)
-    files, duplicates, failures = [], [], []
+    files, duplicates, failures, no_text = [], [], [], []
     seen_hashes, seen_names = {}, defaultdict(list)
     for corpus_name, corpus_dir in args.corpus:
         if not corpus_dir.is_dir():
@@ -122,18 +123,34 @@ def main() -> int:
                     continue
                 seen_hashes[digest] = str(pdf)
                 pages = pdf_pages(pdf)
+            except ModuleNotFoundError as exc:
+                if exc.name == "pypdf":
+                    print("This optional PDF helper requires pypdf in the selected Python environment; "
+                          "no report was written or replaced.", file=sys.stderr)
+                    return 2
+                failures.append({"path": str(pdf), "error": str(exc)})
+                continue
             except Exception as exc:
                 failures.append({"path": str(pdf), "error": str(exc)})
                 continue
+            text_pages = sum(bool(page.strip()) for page in pages)
             entry = {"corpus": corpus_name, "file": pdf.name, "path": str(pdf),
                      "sha256": digest, "pdf_pages": len(pages),
+                     "text_pages": text_pages,
                      "work_identity": "requires_bibliographic_review"}
             files.append(entry)
             seen_names[pdf.stem.casefold()].append(str(pdf))
+            if not text_pages:
+                no_text.append({"path": str(pdf), "pdf_pages": len(pages),
+                                "reason": "no_extractable_text"})
+                continue
             for term in terms:
                 result = scan_pages(pages, term, args.contexts_per_paper, args.context_radius)
                 if result["candidate_occurrences"]:
                     evidence[term].append({**entry, **result})
+    searchable = len(files) - len(no_text)
+    incomplete = bool(failures or no_text)
+    coverage_status = ("partial" if searchable else "failed") if incomplete else ("complete" if files else "empty")
     payload = {
         "schema_version": 2,
         "status": "candidate_search_only",
@@ -144,21 +161,31 @@ def main() -> int:
             "Matching ignores case and hyphen/space variants, not morphology or semantic synonyms.",
             "Different PDFs may be versions of the same work; names do not establish identity.",
             "English matches do not verify Chinese translations. Keep extracted contexts private.",
+            "Coverage records file processing and presence of extractable text, not text accuracy or close reading.",
+            "Empty, partial or failed coverage cannot establish that a term is absent from the requested corpus.",
         ],
         "corpora": [{"name": n, "path": str(p)} for n, p in args.corpus],
         "terms": terms,
         "unique_file_count": len(files),
+        "coverage": {"status": coverage_status, "parsed_unique_files": len(files),
+                     "searchable_unique_files": searchable, "unsearchable_unique_files": len(no_text),
+                     "failed_file_reads": len(failures)},
         "files": files,
         "evidence": evidence,
         "failures": failures,
+        "no_text_files": no_text,
         "byte_identical_files_skipped": duplicates,
         "same_name_files_retained": {n: paths for n, paths in seen_names.items() if len(paths)>1},
     }
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-    print(f"Searched {len(files)} distinct PDF files; {len(duplicates)} byte-identical copies skipped; "
-          f"{len(failures)} failures. Candidate contexts written to {output}; admission requires review.")
-    return 0
+    print(f"Parsed {len(files)} distinct PDF files; {searchable} contain extractable text; "
+          f"{len(duplicates)} byte-identical copies skipped; {len(failures)} read failures; "
+          f"{len(no_text)} files without text. Candidate contexts written to {output}; admission requires review.")
+    if incomplete:
+        print("PDF coverage is incomplete. Inspect failures and no_text_files in the retained report; "
+              "zero candidates are not absence evidence.", file=sys.stderr)
+    return 1 if incomplete else 0
 
 
 if __name__ == "__main__":

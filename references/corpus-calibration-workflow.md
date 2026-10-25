@@ -133,6 +133,14 @@ available for inspection. Matching handles case and hyphen/space variants, not
 inflections or conceptual synonyms; add those search forms deliberately and
 review their meanings. This is candidate generation, never automatic admission.
 
+The helper reports processing/text coverage separately from terminology evidence.
+Missing `pypdf` returns exit2 before writing or replacing the report. Read failures
+or PDFs with no extractable text return exit1 while retaining usable candidates
+and explicit failure/no-text records. Empty folders are marked `empty`, not a
+negative terminology result. Even `complete` means only that the requested file
+processing found some extractable text per parsed unique file; it does not
+certify text accuracy, full-paper reading, definitions or Chinese translations.
+
 For abstract or contribution analysis, record sentence functions rather than sentence molds: the engineering property, remaining capability, proposed principle, intermediate object, next operation, final task and evaluation finding. Include sequential, parallel and training-objective relationships when present. A method section must confirm any interface the abstract leaves ambiguous; do not infer it from the abstract alone. Public notes should contain original analysis and bibliographic pointers, not extracted full-text passages or private manuscript examples.
 
 ## 5. Priority Order

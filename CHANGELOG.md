@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.4 (2026-10-25)
+
+- Made PDF terminology searches distinguish processing/text coverage from candidate matches, retaining usable candidates when some inputs fail.
+- Fail fast when the optional PDF dependency is missing; return an incomplete-search status for unreadable or textless PDFs instead of a successful zero-hit search.
+- Marked empty corpora explicitly and kept all candidate uses semantically unverified; no new terminology, topic templates or scientific experiments were added.
+
 ## 4.2.3 (2026-10-25)
 
 - Added an optional observation-availability/counting profile within the existing problem guide, distinguishing native schedules, release times, grid positions and expected acquisitions before choosing methods.
