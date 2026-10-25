@@ -7,7 +7,7 @@ description: Plan or operate reproducible industrial-AI experiments with explici
 
 [中文执行版](../../skills-zh/engineering-experiment-automation-zh/SKILL.md)
 
-Suite version: `4.2.28`
+Suite version: `4.2.29`
 
 <!-- invariant: execution-authorization -->
 <!-- invariant: no-fabrication -->

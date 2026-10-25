@@ -18,4 +18,4 @@ The candidate positively connects each method's operation to its actual consumer
 
 One respondent handles both designs in each version. The exact toy arithmetic is separately checked by the maintainer, not a research experiment. The respondents did not independently verify the original journal definitions or every frozen dependency. Method names, actual implementation, scientific validity and venue suitability remain separate from a passing writing-use check. No new Skill, template or real manuscript edit was introduced.
 
-See the [baseline request and first answer](../responses/policy-roles-baseline.md), [candidate request and first answer](../responses/policy-roles-candidate.md), and [versioned report](../forward-test-report.json).
+See the [baseline request and first answer](../responses/policy-roles-baseline.md), [candidate request and first answer](../responses/policy-roles-candidate.md), and [versioned report](../history/v4.2.28/forward-test-report.json).

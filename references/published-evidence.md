@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 127-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 127 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 129-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 129 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计127篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83/P124注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计129篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83/P124/P128/P129注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -139,10 +139,25 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P125 | [Meta-Learning With Distributional Similarity Preference for Few-Shot Fault Diagnosis Under Varying Working Conditions](https://doi.org/10.1109/TCYB.2023.3338768) | TCYB54(5)(2024),2746-2756; supplied published PDF pp.1-6, with p.5 visually checked. Section II-A/Eq.(2) defines task-level learning; Section III-B/Eqs.(12)-(15) and p.6 Algorithm 1 separate task-adapted parameters, initialization learning, new-condition support fitting and prediction. New-condition measurements also inform source-task sampling. Full MLDSP, Eq.(14)'s unresolved loss-sign notation, source sampling counts and all generalization/results claims are not certified. |
 | P126 | [An adaptive reward enhanced deep reinforcement learning method for industrial process fault detection](https://doi.org/10.1016/j.compchemeng.2026.109638) | CCE 210 (2026), 109638; supplied published PDF pp.1-4,6, with p.3/Fig.1 visually checked. Process windows supply states and diagnostic classes supply actions; neural action values and class-dependent training rewards have different roles. Full AIR-DRL, max/argmax and state-index details, reward-learning formulas and results are not certified. |
 | P127 | [A deep reinforcement learning-based intelligent fault diagnosis framework for rolling bearings under imbalanced datasets](https://doi.org/10.1016/j.conengprac.2024.105845) | CEP 145 (2024), 105845; supplied published PDF pp.1-5, with p.5 visually checked. Adjacent bearing diagnosis: neural policy/value learning uses class feedback, and the testing prose retains the Actor's class-decision output. Environment-state label notation and complete implementation inputs remain unresolved; full A2C/attention design, gradient/reward formulas, calibration and performance are not certified. |
+| P128 | [LLM-based domain-specific knowledge graph construction and hybrid retrieval-augmented generation](https://doi.org/10.1016/j.jmsy.2026.04.023) | JMS 86 (2026), pp.1022-1038; [institutional author post-print](https://orca.cardiff.ac.uk/id/eprint/186397/). PDF pp.16-18, Section 4.2/Algorithm 1: query-conditioned graph and source-text retrieval supplies generation for equipment technical analysis. Full IC-HRAG, final-version formula identity and results are not certified. |
+| P129 | [Towards intelligent knowledge assistance in abrasive belt grinding via a retrieval-augmented generation chatbot with reliability support](https://doi.org/10.1016/j.compind.2026.104479) | Computers in Industry 178 (2026), 104479; [institutional author post-print](https://orca.cardiff.ac.uk/id/eprint/186490/). PDF pp.11-14, Section 3/Table 3: retrieved/reranked fragments supply knowledge-assistance responses. Full BelGrindGPT/conflict filter, scoring and deployment claims are not certified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Retrieved Knowledge And Generated Engineering Answers
+
+P128 and P129 support the base RAG information path through different retrieval
+designs, not a compulsory graph, reranker or fine-tuning recipe. Both readings
+use institution-hosted author post-prints; publisher metadata agrees, but final
+formula identity and visual page inspection were not established. Their
+equipment/knowledge-assistance outputs do not validate sensor-based fault
+classification, physical root causes or closed-loop action. Separate Chinese
+wording is checked in the original [TIS 202506029 paired title, abstracts,
+keywords and Section 1.1](https://html.rhhz.net/tis/html/202506029.htm), not counted
+as another industrial implementation. Complete source-specific names and
+performance claims remain outside the base admission.
 
 ### Pretrained Models: Numerical Prediction And Generated Decisions
 

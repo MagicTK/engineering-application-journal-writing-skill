@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.29 (2026-10-26)
+
+- Added a scoped RAG base-name record from two original engineering-journal author post-prints and a separately checked Chinese journal definition.
+- Connected query-dependent evidence retrieval to generated engineering answers in the existing LLM role guide, without making knowledge QA into sensor diagnosis, physical causality or a weight-update claim.
+- Kept full source-specific retrieval/conflict-filtering names and performance claims attributed; no new Skill, template, research experiment or manuscript edit was introduced.
+
 ## 4.2.28 (2026-10-26)
 
 - Added a scoped deep-reinforcement-learning base record from two distinct published engineering contexts, with a separate original Chinese journal wording check.

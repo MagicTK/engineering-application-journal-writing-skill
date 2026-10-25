@@ -493,6 +493,7 @@ execute at every prediction.
 | Numerical representation or prediction | Pretraining objective, downstream fitting and the numerical task output | Pretraining/downstream data access, target definitions and a matched predictive comparison; language-output measures are not applicable without language output. |
 | Category descriptions or other semantic guidance | Verified text source, represented categories and downstream consumer | Semantic-source provenance, information access and a semantic-information comparison when its benefit is claimed. |
 | Textualized measurements | Available measurements, conversion and task predictor | Retained quantities, units and timing; include conversion/service costs when required for prediction. |
+| Retrieved engineering knowledge | Query, selected documents/graph evidence and generated response | Knowledge-source applicability and access, retrieval relevance, and support for the actual answer; document QA is not automatically sensor-based fault diagnosis or verified physical causality. |
 | Generated diagnoses, explanations or recommendations | Permitted input, generation and the actual decision consumer | Model/prompt version, output interpretation and task-appropriate scoring; evaluate explanation fidelity or action utility only when claimed. |
 
 For category-text outputs, define the mapping and treatment of unmatched answers
@@ -503,6 +504,15 @@ Keep privacy and data-governance checks attached to the actual data flow; human
 review matters when generated advice enters operational decisions.
 
 If an LLM supplies category semantics rather than predictions, trace `source text -> verified descriptor -> downstream learner`, including whether the text identifies test classes or outcomes. P05 motivates this distinction. Knowledge retrieval, semantic annotation and test-time adaptation are separate operations; do not hide their information access under a single `LLM-assisted` label. Do not transmit private process data to a service without explicit authorization.
+
+For RAG, explain how query-dependent evidence selection supplies the generated
+answer: P128 links retrieved graph knowledge to source text, while P129 supplies
+selected document fragments. A supplied context alone does not establish a
+retrieval implementation. In an abstract or contribution, connect the actual
+knowledge-access difficulty to that information path and the evaluated output,
+without claiming an improved numerical predictor or operational action unless
+that consumer was evaluated. Base-name and Chinese-wording checks are recorded
+in the [terminology bank](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
 
 A different route textualizes numerical measurements before embedding them (P29). Specify the measurements, time context, units and prompt information available to the textualizer, and distinguish its output from independently supplied class descriptions. Check that true fault labels or later outcomes were not inserted into sample text. External textualization cost belongs to the inference boundary when it is required for each prediction; a training-only semantic lookup has a different boundary. P29 formulates its compression-derived prior on embedded samples, not directly on the raw measurements or prose. Identify the compressed object and its encoding before interpreting a compression score; such a proxy is not automatically a physical measure of system complexity.
 
