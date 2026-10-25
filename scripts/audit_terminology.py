@@ -28,6 +28,7 @@ RULES = {
 STOP = set("a an and are as at be been being but by can could do does for from has have in into is it its may of on or our that the their these they this those through to was were which will with within without we such each than then also".split())
 TOKEN = re.compile(r"[A-Za-z]+(?:[-'][A-Za-z]+)*")
 CONTROL = re.compile(r"\\(iffalse|iftrue|else|fi)\b")
+DIRECTIVE = re.compile(CONTROL.pattern + r"|\\(begin|end)\{comment\}")
 PROSE_BOUNDARY = "\x00"
 NONPROSE_ENVIRONMENT = re.compile(
     r"\\begin\s*\{thebibliography\}.*?\\end\s*\{thebibliography\}", re.S
@@ -63,22 +64,16 @@ def visible_lines(source: str, tex: bool = True) -> list[tuple[int, str]]:
         if not tex:
             rows.append((number, line))
             continue
-        if comment_environment:
-            if r"\end{comment}" not in line:
-                rows.append((number, ""))
-                continue
-            line = line.split(r"\end{comment}", 1)[1]
-            comment_environment = False
-        if r"\begin{comment}" in line:
-            before, after = line.split(r"\begin{comment}", 1)
-            if r"\end{comment}" in after:
-                line = before + after.split(r"\end{comment}", 1)[1]
-            else:
-                line = before
-                comment_environment = True
         pieces = []
         start = 0
-        for match in CONTROL.finditer(line):
+        for match in DIRECTIVE.finditer(line):
+            # Inactive branches do not execute comment environments; their bodies
+            # still contain conditional tokens that TeX uses to find the branch end.
+            if comment_environment:
+                if match.group(2) == "end":
+                    comment_environment = False
+                start = match.end()
+                continue
             if all(stack):
                 pieces.append(line[start:match.start()])
             command = match.group(1)
@@ -88,8 +83,12 @@ def visible_lines(source: str, tex: bool = True) -> list[tuple[int, str]]:
                 stack[-1] = not stack[-1]
             elif command == "fi" and stack:
                 stack.pop()
+            elif match.group(2) == "begin" and all(stack):
+                comment_environment = True
+            elif match.group(2) == "end" and all(stack):
+                pieces.append(match.group())
             start = match.end()
-        if all(stack):
+        if all(stack) and not comment_environment:
             pieces.append(line[start:])
         rows.append((number, "".join(pieces)))
     return rows

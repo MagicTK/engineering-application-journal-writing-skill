@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.13 (2026-10-25)
+
+- Fixed the read-only terminology scanner's interaction between literal conditionals and comment environments: an inactive comment opener no longer hides later active prose.
+- Added regression checks for both inactive branches, nested literal conditionals and conditional-looking text inside an active comment environment; source line locations and candidate-only decisions are preserved.
+- Added no writing template, mechanism name, terminology admission or change to manuscript content.
+
 ## 4.2.12 (2026-10-25)
 
 - Made measurement quality visible in problem-first routing, alongside observation availability rather than only within experiment guidance.

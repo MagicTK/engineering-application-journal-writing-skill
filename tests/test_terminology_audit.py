@@ -31,6 +31,46 @@ class TerminologyAuditTests(unittest.TestCase):
         output = MODULE.audit("\\begin{comment}\nrecords\n\\end{comment}\nprocess variables")
         self.assertFalse(output["candidates"])
 
+    def test_inactive_comment_open_does_not_hide_active_branch(self):
+        source = "\n".join([
+            r"\iffalse", r"\begin{comment}", "attributes", r"\else",
+            "operating conditions", r"\fi", "records",
+        ])
+        output = MODULE.audit(source)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(set(by_rule), {"state-condition", "record"})
+        self.assertEqual(by_rule["state-condition"]["occurrences"][0]["line"], 5)
+        self.assertEqual(by_rule["record"]["occurrences"][0]["line"], 7)
+
+    def test_inactive_else_comment_open_does_not_hide_following_body(self):
+        source = "\n".join([
+            r"\iftrue", "operating conditions", r"\else",
+            r"\begin{comment}", "attributes", r"\fi", "records",
+        ])
+        output = MODULE.audit(source)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(set(by_rule), {"state-condition", "record"})
+        self.assertEqual(by_rule["record"]["occurrences"][0]["line"], 7)
+
+    def test_inactive_comment_open_preserves_nested_conditional_depth(self):
+        source = "\n".join([
+            r"\iffalse", r"\begin{comment}", r"\iftrue", "attributes",
+            r"\else", "offline", r"\fi", r"\else", "records", r"\fi",
+        ])
+        output = MODULE.audit(source)
+        self.assertEqual([c["rule"] for c in output["candidates"]], ["record"])
+        self.assertEqual(output["candidates"][0]["occurrences"][0]["line"], 9)
+
+    def test_active_comment_body_does_not_change_literal_branch_state(self):
+        source = "\n".join([
+            r"\iftrue", r"\begin{comment}", r"\else", "attributes",
+            r"\iffalse", r"\end{comment}", "operating conditions", r"\fi", "records",
+        ])
+        output = MODULE.audit(source)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(set(by_rule), {"state-condition", "record"})
+        self.assertEqual(by_rule["state-condition"]["occurrences"][0]["line"], 7)
+
     def test_bibliography_is_not_body_and_line_numbers_survive(self):
         source = "\n".join([
             "Process variables are measured.",

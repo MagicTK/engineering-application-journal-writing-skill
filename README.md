@@ -4,7 +4,7 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.2.12: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.2.13: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
 The 4.2 line adds [problem-first industrial classification](references/problem-first-classification.md): separate observation, annotation, operating and resource difficulties from tasks, system scales and candidate methods. It distinguishes supervision information from self-generated training signals and permits problem-only work without inventing an architecture. See the [evaluation record](evals/README.md) for actual tests and audit limits; the terminology bank is not a completed whitelist.
 
@@ -120,7 +120,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.2.12 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.2.13 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|
@@ -154,7 +154,7 @@ Read-only terminology candidates from a local source:
 python3 scripts/audit_terminology.py manuscript.tex --min-count 3
 ```
 
-The tool skips percent comments, inactive literal `iftrue`/`iffalse` branches, comment environments, common citation/reference keys, URL targets and literal `thebibliography` blocks. It preserves source line numbers and linked display prose. Ordinary line wraps within a paragraph can form one candidate or recurring phrase; `line` and `end_line` locate its source span. Empty paragraphs, literal `\par`, excluded metadata and conditional/comment-environment directive lines conservatively separate spans. Literal percent-comment newline suppression is recognized. It does **not** expand arbitrary TeX macros, inspect included files, prove a phrase wrong or edit the manuscript. Verify active text against the compiled PDF; custom/nested syntax, verbatim and changed category codes still need manual review.
+The tool skips percent comments, inactive literal `iftrue`/`iffalse` branches, comment environments, common citation/reference keys, URL targets and literal `thebibliography` blocks. A comment environment opens only in an active literal branch. It preserves source line numbers and linked display prose. Ordinary line wraps within a paragraph can form one candidate or recurring phrase; `line` and `end_line` locate its source span. Empty paragraphs, literal `\par`, excluded metadata and conditional/comment-environment directive lines conservatively separate spans. Literal percent-comment newline suppression is recognized. It does **not** expand arbitrary TeX macros, inspect included files, prove a phrase wrong or edit the manuscript. Verify active text against the compiled PDF; custom/nested syntax, verbatim and changed category codes still need manual review.
 
 ## Evidence, Privacy And Attribution
 
