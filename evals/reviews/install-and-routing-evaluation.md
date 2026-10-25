@@ -24,4 +24,4 @@ Existing problem-first guidance already handled these roles. The candidate only 
 
 The routing respondent handles two examples, not two independent replications. No no-Skill writing baseline, quantitative quality gain, whole-corpus certification, scientific experiment, actual manuscript, result or venue outcome is established. No user-installed Skill was changed.
 
-See the [actual copy-use request and first answer](../responses/copy-install-independent.md), [actual sample/routing request and first answer](../responses/sample-objective-routing-independent.md), and [versioned report](../forward-test-report.json).
+See the [actual copy-use request and first answer](../responses/copy-install-independent.md), [actual sample/routing request and first answer](../responses/sample-objective-routing-independent.md), and [versioned report](../history/v4.2.26/forward-test-report.json).

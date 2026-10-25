@@ -186,6 +186,7 @@ these objects; establish them here before selecting a method or experiment.
 |---|---|
 | Native schedule | Physical quantity, time units, native schedule and expected acquisitions; distinguish regular clocks from irregular acquisition times and gaps caused by lost observations |
 | Availability | Acquisition/represented time, release time and decision time; separate late reporting, unavailable measurements and physical process lag |
+| Input identity and set | Physical variable IDs/units, configuration-specific membership and correspondence; distinguish an added/retired measurement from a lost expected value or merely reordered columns |
 | Model grid | Which positions are acquired, held, interpolated, padded or entirely unsampled; a measured zero remains an observation |
 | Extent and counting unit | Affected variables, intervals or units; numerator, denominator and whether the count concerns values, windows, events or elapsed duration |
 | Provenance | Actual acquisition limitation versus deliberate masking; known causes and unknowns, without identifying a statistical missingness mechanism from the mask alone |
@@ -217,6 +218,32 @@ contribution or introductory transition, select the actual consequential
 limitation and connect it to the verified response; do not list every mask and
 clock field. A classification-only request does not authorize imputation, a new
 predictor, a preferred learning paradigm or a new experimental plan.
+
+### Changing Input Variables And Configurations
+
+When instrumentation changes, establish which physical variables exist in each
+configuration and which were available during model development. Equal vector
+widths can conceal different variables; different column orders can preserve
+the same variables. An expected measurement that was lost is another case.
+Representing these situations in one array does not make their meanings equal.
+
+P63 pp.2-3 distinguishes added, retired and missing sensor measurements in a
+sequential diagnosis setting. P66 pp.3-4 instead represents heterogeneous input
+subsets through a declared universe of observed variable types. These different
+published contexts support an input-identity question, not one common module or
+proof of arbitrary future-variable handling. Pooled known configurations and
+sequentially changing inputs need their actual development/use boundaries.
+
+For an introductory problem statement, connect the consequential difficulty to
+the requirement in positive terms. For example, when these facts hold:
+`Changes in instrumentation alter the variables available for diagnosis, while
+occasional acquisition failures leave scheduled measurements unobserved.
+Learning from these configurations therefore requires preserving variable
+identity and distinguishing structural input differences from missing values.`
+This is an illustrative connection, not a fixed sentence or a new method claim.
+Put the detailed configuration inventory, missing-rate denominator and untested
+future-variable scope in settings or author notes unless one is the central
+problem. New input variables do not by themselves establish new fault classes.
 
 <a id="operating-variation-and-class-novelty"></a>
 

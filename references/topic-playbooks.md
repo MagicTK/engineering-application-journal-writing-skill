@@ -232,6 +232,8 @@ Select chronological, mode-held-out, cross-period or cross-site evaluation accor
 
 Trace adaptation at its actual granularity. P63 separates an evolving subspace/classifier from out-of-sample prediction and conditions classifier learning on revealed labels. P64 assumes operator-known mode switches for model updates and separately adapts an alarm threshold; its online wording does not establish automatic switch discovery. P05's test-time operation pools selected unlabeled predictions to adjust semantic references without another network forward/backward pass. State whether a current sample, a past window or the full target batch supplies an update, and whether the resulting state persists or resets between cases. Use that information in the method overview and the [adaptive evaluation check](experiment-evidence-design.md#adaptive-state-feedback-and-retention) when adaptation is a central claim.
 
+When the inputs themselves change, use the [variable-identity profile](problem-first-classification.md#changing-input-variables-and-configurations). P63's sensor additions/removals, P66's heterogeneous configuration subsets and ordinary lost measurements are different input conditions; none alone supplies a new fault class. Connect the actual input interface to its downstream prediction without making all heterogeneous-data models incremental learners.
+
 Write initial target-side fitting separately from evaluation-time adaptation.
 Specify the data used by each component's input, loss and changing statistics;
 control-only forward inputs do not establish sensor-free fitting. Known-healthy

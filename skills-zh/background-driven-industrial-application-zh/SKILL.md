@@ -7,7 +7,7 @@ description: 真实工业背景驱动论文 Skill 中文执行版。用于从具
 
 [English](../../skills/background-driven-industrial-application/SKILL.md)
 
-套件版本：`4.2.26`
+套件版本：`4.2.27`
 
 ## 一、任务目标
 

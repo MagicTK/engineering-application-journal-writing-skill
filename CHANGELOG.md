@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.27 (2026-10-26)
+
+- Added a scoped input-identity field and bilingual problem-writing example within the existing observation guide, distinguishing configuration changes from lost measurements and column reordering.
+- Connected existing TSMC and published team-paper contexts to their different sequential and known-configuration interfaces without admitting a new mechanism name or assuming arbitrary unseen-variable support.
+- Kept detailed configuration and evaluation-scope checks in settings or author notes when they are not the central Introduction problem; no new Skill, template, research experiment or manuscript edit was introduced.
+
 ## 4.2.26 (2026-10-26)
 
 - Fixed copy installation to omit known local runtime/cache trees while leaving the source unchanged.
