@@ -25,6 +25,7 @@ evidence that every topic has been reviewed.
 | Compound faults | Coexisting-fault setting | Whether several faults coexist, how combinations are labeled and what the output represents |
 | Incipient faults, weak fault signatures, early detection | Fault severity/observability or a timing objective | Separate imposed severity, measured response, fault evolution and the time of an issued decision |
 | Plant-wide, multistage, multiblock | Object/scale and possible structure | Which coupling, propagation or heterogeneous relationships obstruct the decision |
+| Batch processes, multiphase operation | Production organization and temporal structure | Which within-batch changes, duration differences or quality-availability limits matter for the task |
 | Multisource, multimodal | Input provenance/heterogeneity | Domain differences, acquired-stream relations or incompatible representations |
 | Anomaly localization, root-cause analysis | Intended task/output | Required location or explanation and what evidence can establish it |
 | Attention, graph, diffusion, fuzzy modeling, MoE, LLM, slow feature analysis, transfer learning | Candidate technical families | Read the application problem; no one-to-one problem follows from a method name |
@@ -69,6 +70,50 @@ not required titles, established module names or evidence of novelty. Do not add
 an industrial cause, such as safety restrictions or assay cost, unless supplied
 or documented. Explain an important limitation where it motivates the study;
 minor dataset characteristics belong in dataset/analysis sections.
+
+### Batch Processes, Temporal Phases And Quality Targets
+
+Distinguish a production batch from a training minibatch, a temporal phase
+within a batch from a physical production unit, and either from a training
+stage. Published `stage`/`phase` usage varies; define the referent instead of
+imposing a universal translation. A learned temporal partition need not match
+an operating procedure's phase boundaries.
+
+For this problem profile, establish the following before choosing a method:
+
+- **Unit and count:** numbers of production batches, measured variables and
+  time points/windows. Unfolding trajectories creates modeling samples, not
+  additional independent production batches or quality assays.
+- **Temporal difficulty:** changing within-batch behavior, unequal total
+  durations and differing phase boundaries are distinct. Equal-length padding
+  alone does not align physical progress; a normalized index is not elapsed time.
+- **Target and availability:** distinguish a measured concentration trajectory,
+  a final quality value and a batch quality category. Reusing a final value as
+  the supervised target of earlier training windows does not create measured
+  instantaneous quality values, nor make that label an available prediction input.
+- **Decision point:** whole-batch assessment and prediction during an evolving
+  batch have different available histories. Actual completion time may support
+  retrospective alignment; an earlier issued prediction cannot silently use it.
+  A genuinely known schedule is a different input. Reuse the
+  [time-boundary guidance](experiment-evidence-design.md#3-split-integrity-checklist)
+  when checking the actual implementation.
+
+In the introduction, select the consequential difficulty, not all these fields.
+In Results/Discussion, connect phase or duration effects to the specified target
+and decision point; batch-end accuracy alone does not show earlier intervention
+or improved product quality. Keep problem-only work free of prescribed alignment
+algorithms, networks or new experiments.
+
+P118 pp.1-3 distinguishes units/phases, unfolding and unequal durations. P119
+pp.2-4 illustrates final-quality targets replicated across time and few training
+batches; its case assumes equal durations. P09 pp.3-4,6-7 instead distinguishes
+concentration regression from batch-category prediction and discusses variable
+lengths and phase-boundary mismatch. These are scoped examples, not common
+implementations or validation of every source claim. Chinese **多时段** and
+**多阶段** both occur for temporal phases: see the bilingual titles/abstracts in
+[AAS](https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2010.00366)
+and [CIESC Journal](https://hgxb.cip.com.cn/EN/10.11949/j.issn.0438-1157.20180570).
+Neither usage licenses translating all phases as physical 工序.
 
 ### Weak Fault Signatures And Early Detection
 

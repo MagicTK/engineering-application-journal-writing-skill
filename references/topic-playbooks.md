@@ -292,6 +292,8 @@ If the method does not manipulate variable-level relations, do not introduce cha
 
 Keep the hierarchy explicit: physical unit membership may be fixed, variable grouping may be learned, and pooled stage features may later return context to variable features. An overview should name those transitions without turning every level into a separate contribution. P01 links multiscale extraction and stage fusion; P04 distinguishes process knowledge from learned connections. Neither makes every plant-wide method require grouping or a residual branch. A batch's temporal phases (P09) should not silently become spatial production units.
 
+For temporal phases of a batch process, use the [batch problem profile](problem-first-classification.md#batch-processes-temporal-phases-and-quality-targets) to distinguish batch counts, phase boundaries, unequal durations and the quality target's availability. Do not import plant-wide spatial terminology merely because a source calls its temporal segments stages.
+
 ## 6. Graph, Knowledge-Guided, Causal, Or Fuzzy Modeling
 
 For hypergraphs, establish the node identity and hyperedge membership before

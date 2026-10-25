@@ -1,0 +1,12 @@
+# Batch-Phase Writing Evaluation
+
+One fresh-context agent used the candidate Skill for a fictional single-reactor request, first classifying the problem and then writing from an explicitly supplied implementation. The maintainer read the completed response and one same-context wording revision. No second independent grader, source-PDF audit by the agent, scientific experiment or controlled general writing-gain study was performed.
+
+- The initial response distinguishes production batches, operating phases, measurement windows, final assays and the issued prediction time. It does not manufacture extra independent batches or an instantaneous concentration trajectory from repeated final targets.
+- It preserves the actual representation path: currently available events define observed portions, a shared encoder supplies temporal features, within-portion means retain stage membership, ordered concatenation and a mask feed final-quality regression. It does not substitute spatial production units or future measurements.
+- Historical final assays are legitimate supervision for the earlier-input task. Realized completion time is not an available minute-30 feature merely because it lacks labels. A retrospective full-trajectory explanatory plot remains permissible in its declared role; the unimplemented input suggestion does not invalidate confirmed results.
+- The abstract, overview and contribution have 174, 61 and 29 whitespace-separated words. Initial Results has 59 by direct count, rather than the agent's stated 58; both meet the requested limit. MAE decreases by 0.30 g/L, or 27.2727...% relative to 1.10 g/L.
+- Scientific first-answer judgments pass. One wording feedback replaces the Results paragraph's defensive closing contrast with a positive, scoped interpretation. The revised paragraph retains the observed batches, early-estimation task, comparator and numerical result without claiming improved manufactured quality, deployment or significance.
+- The agent discloses selected reads, including a truncated problem-guide output. It does not claim full reading of the cited corpus. Source reading and translation verification are separate maintainer activities.
+
+The conditional profile was added for a documented routing/content gap, not because an earlier Skill answer failed this request. No instruction changed after the frozen candidate was tested. Earlier behavioral reports remain archived; their full test sets were not rerun here. This result supports the tested usage, not universal writing quality, novelty or acceptance.
