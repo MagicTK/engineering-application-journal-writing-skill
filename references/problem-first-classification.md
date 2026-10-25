@@ -22,6 +22,7 @@ evidence that every topic has been reviewed.
 | Few-shot, weak supervision, limited labels | Support or annotation limitation | Quantity, granularity, reliability, class coverage and stage-specific access |
 | Multimode, nonstationary, unseen conditions | Operating/distribution setting | Discrete regimes, continuous change, or a specified development-to-use shift |
 | Compound faults | Coexisting-fault setting | Whether several faults coexist, how combinations are labeled and what the output represents |
+| Incipient faults, weak fault signatures, early detection | Fault severity/observability or a timing objective | Separate imposed severity, measured response, fault evolution and the time of an issued decision |
 | Plant-wide, multistage, multiblock | Object/scale and possible structure | Which coupling, propagation or heterogeneous relationships obstruct the decision |
 | Multisource, multimodal | Input provenance/heterogeneity | Domain differences, acquired-stream relations or incompatible representations |
 | Anomaly localization, root-cause analysis | Intended task/output | Required location or explanation and what evidence can establish it |
@@ -55,6 +56,7 @@ in the [published index](published-evidence.md) and
 | Coupled process behavior | process coupling; interacting production stages; cross-stage dependencies | Identify physical/known versus learned relations; plant-wide scope alone is not a demonstrated coupling problem |
 | Different information sources | heterogeneous process data; heterogeneous sensing; cross-domain distribution differences | Establish source/domain/stream/modality/view roles before naming the difficulty |
 | Simultaneous faults | compound faults; simultaneous faults | State constituent faults, combination coverage and output definition, without presupposing a particular loss |
+| Subtle fault-related changes | weak fault signatures; small-amplitude fault perturbations; incipient faults in a defined/source-attributed setting | Separate perturbation size, measured response and physical development; a small learned activation is not fault severity |
 | Restricted execution resources | limited computational resources; memory constraints; inference-time requirements | Name the actual hardware/resource/deadline; parameter count is not measured operational efficiency |
 
 For a title or introductory problem sentence, prefer the particular limitation
@@ -65,6 +67,35 @@ not required titles, established module names or evidence of novelty. Do not add
 an industrial cause, such as safety restrictions or assay cost, unless supplied
 or documented. Explain an important limitation where it motivates the study;
 minor dataset characteristics belong in dataset/analysis sections.
+
+### Weak Fault Signatures And Early Detection
+
+Separate four questions when subtle faults motivate the study: what physical or
+simulated perturbation was imposed; how it appears in the measured response;
+whether a development trajectory is known; and when the diagnostic decision is
+issued. State the amplitude's quantity, reference and units where needed. A
+small imposed change can produce a different-sized closed-loop response;
+small feature activations are another quantity. Low signal-to-noise ratio needs
+a stated signal/noise definition, not just two percentages.
+
+P109 pp.7-8 uses an incipient-fault subset containing step, random-variation
+and valve-sticking scenarios. P110 pp.9-10 discusses weak measured signatures
+and closed-loop masking in selected step/random-disturbance cases. These are
+different teams using the TE benchmark, not independent field observations or
+proof that all incipient faults must grow slowly. Preserve a source's defined
+incipient-fault setting while describing how the current test realizes it;
+a fixed small perturbation alone does not establish physical degradation.
+Intermittence additionally concerns appearance/disappearance over time, not
+merely small severity or a changing measurement.
+
+For an introduction, select the actual difficulty, such as distinguishing weak
+fault signatures from normal process fluctuations, then explain the verified
+response. Keep implementation details and unresolved checks in their appropriate
+sections or author notes. Early-after-onset intervals, low severity, shorter
+post-onset detection delay and prediction before a future event are different
+claims. Reuse the [existing timing rule](research-planning-and-contribution.md#representation-and-task-boundaries)
+and [alarm-evidence guidance](experiment-evidence-design.md#continuous-monitoring-what-is-scored-and-when);
+do not demand new timing experiments for correctly scoped classification.
 
 ### Observation Availability And Counting
 
@@ -301,6 +332,18 @@ Later, when requested, add candidate responses and their matched evidence
 without turning co-occurrence in a folder into causation or a unique solution.
 
 ## Wording Evidence / Reading Limits
+
+P109/P110 support the problem usage above through selected introductions and
+benchmark definitions, not full mechanism admission or reproduced results.
+The original bilingual [AAS review title/abstract](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.2016.c160105)
+and [CIESC Journal chemical-process title/keywords](https://hgxb.cip.com.cn/CN/abstract/abstract22988.shtml)
+pair incipient fault with 微小故障. The original
+[bearing-review title/abstract](https://www.jxcd.net.cn/zh/article/doi/10.16578/j.issn.1004.2539.2023.03.022/)
+also uses 早期故障 in its adjacent machinery context. These wording checks
+do not impose one Chinese translation, certify a physical early-life stage or
+admit the sources' complete proposed modules. Publisher search records confirmed
+the two English identities; direct publisher-page retrieval failed, so the
+selected body reading uses the supplied published PDFs.
 
 English learning-setting passages above reuse indexed P17/P19/P20/P21/P22/P26;
 they add no new engineering-study IDs or full module-name admissions. The

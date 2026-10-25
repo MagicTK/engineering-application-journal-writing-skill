@@ -50,6 +50,8 @@ For zero-shot statements, specify zero target labels, zero target observations, 
 - Distinct numerical sources can remain multivariate/multi-source numerical data. Describe the actual sources rather than inventing text or image inputs to justify a multimodal label. An image derived from the same numerical series is a same-source view, not an independent sensing modality. Rendering cannot create unobserved values or reverse sampling aliasing. Preserve actual timestamps, variable identity, missingness masks, and scales calibrated on training data; exclude target labels, label-coded colors, and leaking filenames or annotations from the image. Use the relevant controls in [the multisource playbook](topic-playbooks.md#4-multisource-multimodal-or-cross-modal-industrial-evidence).
 - Early-after-onset and low-severity/incipient are different properties. Compute time from the specific sampling interval: for n consecutive sample timestamps, endpoint span is (n-1)Δt; interval coverage depends on the window convention. Never import a cadence from a different dataset version.
 
+For a subtle-fault problem, the [severity/observability profile](problem-first-classification.md#weak-fault-signatures-and-early-detection) connects this timing rule to the imposed perturbation, measured response and source-attributed incipient-fault usage before choosing methods.
+
 ## Source Identity And Reading State
 
 Keep the author's folders as navigation, then assign scientific roles independently. One source can be an engineering nearest neighbor and a mechanism reference. Preserve original archive/member identifiers and verified local file hashes when a portable archive is gone; matching PDFs does not prove the original ZIP hash.

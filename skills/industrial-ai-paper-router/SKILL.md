@@ -7,7 +7,7 @@ description: Classify and route a data-driven industrial engineering research id
 
 [中文执行版](../../skills-zh/industrial-ai-paper-router-zh/SKILL.md)
 
-Suite version: `4.2.4`
+Suite version: `4.2.5`
 
 ## Mission
 

@@ -162,6 +162,7 @@ replacement for exchanging neural features.
 | Recorded quantities | process variables, process measurements, measured variables, manipulated variables | channels before the model correspondence is defined |
 | Operating context | operating condition; operating mode for a defined regime | domain when the meaning is only an operating condition |
 | Perturbation to the process | process disturbance; load/setpoint change when that is the actual event | treating a disturbance as synonymous with the background condition |
+| Subtle fault-related response | weak fault signatures; incipient faults in a defined setting | equating small severity, early physical development and early detection; use the [problem/wording record](problem-first-classification.md#weak-fault-signatures-and-early-detection) |
 | Physical/operational structure | process topology, material flow, equipment connection, control interaction, stage relationship | process link, structural token |
 
 Use `channel` for the defined model-level correspondence rather than as the

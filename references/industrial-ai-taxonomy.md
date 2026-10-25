@@ -26,6 +26,7 @@ Five independent axes; boundary rules; routing procedure; manuscript archetype s
 | C5 | Interacting subsystem and process coupling | Do interactions, propagation paths, material/information flows, or long-range dependencies make local modeling insufficient? Which relationships are known and which must be learned? |
 | C6 | Deployment constraints | Are latency, memory, energy, bandwidth, edge hardware, online updating, or operator workload part of the research question? |
 | C7 | Trust, safety, and decision accountability | Are calibrated uncertainty, auditable evidence, risk control, human confirmation, or a safe abstention mechanism required? What evidence can validate that requirement? |
+| C8 | Weak or obscured diagnostic signatures | Which perturbation, measured response and interference make discrimination difficult? Separate severity, physical evolution and required warning time using the [problem profile](problem-first-classification.md#weak-fault-signatures-and-early-detection), without selecting a method. |
 
 Do not infer the challenge from the proposed model name. Remove the model mentally and ask what remains difficult in the industrial system.
 

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.5 (2026-10-25)
+
+- Connected weak/incipient fault problems to the existing timing and evidence rules, separating imposed severity, measured signatures, physical evolution and issued alarms.
+- Added two scoped process-journal reading records and original Chinese wording checks, retaining source-specific fault settings and unresolved source indexing rather than certifying full mechanisms or results.
+- Kept positive problem-purpose writing and valid classification claims; no additional Skill/topic files, prescribed algorithms or mandatory timing experiments were introduced.
+
 ## 4.2.4 (2026-10-25)
 
 - Made PDF terminology searches distinguish processing/text coverage from candidate matches, retaining usable candidates when some inputs fail.

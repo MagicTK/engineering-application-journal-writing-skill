@@ -7,7 +7,7 @@ description: 工程应用期刊审稿回复与修订 Skill 中文执行版。用
 
 [English](../../skills/engineering-review-response/SKILL.md)
 
-套件版本：`4.2.4`
+套件版本：`4.2.5`
 
 ## 一、任务目标
 

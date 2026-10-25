@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 108-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 108 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 110-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 110 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计108篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计110篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -120,12 +120,25 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P106 | [Industrial Data Imputation Based on Multiscale Spatiotemporal Information Embedding With Asymmetrical Transformer](https://doi.org/10.1109/TNNLS.2025.3527581) | TNNLS, read IEEE early-access article PDF: selected p.5 Section III-B/Eqs.(16)-(19), p.6 Algorithm 1. Observed=1 mask, initial filling, measurement estimates and downstream use have separate roles. Missing-position target implementation, full MSST-Former, current issue pagination and results are not certified. |
 | P107 | [Imputation of Missing Values in Time Series Using an Adaptive-Learned Median-Filled Deep Autoencoder](https://doi.org/10.1109/TCYB.2022.3167995) | TCYB 53(2), February 2023; published PDF pp.3-4, Sections II-B/III-A, Eqs.(4)-(8), selected p.5: missing=1 mask and iterative measurement completion. This base-operation record does not certify complete AM-DAE, parameter/target access at every phase or results. |
 | P108 | [Optimize TSK Fuzzy Systems for Classification Problems: Minibatch Gradient Descent With Uniform Regularization and Batch Normalization](https://doi.org/10.1109/TFUZZ.2020.2967282) | TFS 28(12), 2020, pp.3065-3075; published author-lab PDF identity p.1 and selected Section II-A p.2: affine class consequents and normalized rule combination. Full optimization variants, implementation and results are outside this check. |
+| P109 | [PSFCL: A Probabilistic Slow Feature Contrastive Learning approach for incipient fault diagnosis in industrial processes](https://doi.org/10.1016/j.compchemeng.2026.109584) | CCE 208 (2026), Art.109584; supplied published PDF p.1 and selected pp.2,7-8: incipient-fault framing and a TE subset with step, random-variation and valve-sticking scenarios. This is problem/wording calibration, not full PSFCL admission, a timing-effect audit or result reproduction. |
+| P110 | [Incipient fault detection and diagnosis in complex processes based on residual subspace learning and causal topology](https://doi.org/10.1016/j.psep.2026.109207) | PSEP 215 (2026), Art.109207; supplied published PDF p.1 and selected pp.2,9-12: weak measured signatures, closed-loop masking, selected benchmark scenarios and stated alarm discussion. Source onset/alarm indexing needs reconciliation; full DiOPLS-SRMBN, causal/uncertainty claims and results are not certified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
 ### Problem Profiles And Supervision Signals
+
+The weak-signature extension reads P109 pp.1-2,7-8 and P110 pp.1-2,9-12
+for the problem framing and benchmark realization; P109 p.8 Table 1 and P110
+p.10 Table 2 were rendered and visually inspected. Their selected perturbation
+types differ despite shared incipient-fault wording, and both use TE rather than
+independent plant observations. P110 p.9 states injection at sample 160, while
+its p.11 discusses alarms at 156/159; that source indexing is not reconciled or
+imported as a valid detection-delay example. No source-wide mechanism, SNR,
+root-cause, safety or numerical-result claim was reproduced. Original Chinese
+wording sources and direct publisher-access failures are recorded in the
+[problem guide](problem-first-classification.md#wording-evidence--reading-limits).
 
 The observation-profile extension rereads P24 p.1 identity/abstract and pp.2-3
 selected acquisition-interval/sequence passages, P73 p.1 identity/abstract and

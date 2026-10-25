@@ -65,6 +65,7 @@
 | 采集量 | process variables, process measurements, measured/manipulated variables | 未定义模型对应关系前使用 channels |
 | 工况 | operating condition；有定义的离散工况可用 operating mode | 用 domain 指代普通工况 |
 | 过程扰动 | process disturbance；实际事件为负载或设定值变化时具体命名 | 将扰动与背景工况视为同义 |
+| 微弱故障响应 | weak fault signatures；有定义的incipient faults | 微小故障/早期故障的译法依语境；不把严重度、实体发展阶段与早检测等同，见[问题与用词依据](problem-first-classification_CN.md#微弱故障特征与早检测) |
 | 物理或工艺结构 | process topology, material flow, equipment connection, control interaction, stage relationship | process link |
 
 ## 四、划分、分组与聚类

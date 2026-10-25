@@ -597,6 +597,8 @@ Select metrics for the claim, not a compulsory list. When complete combination i
 
 ### Continuous Monitoring: What Is Scored And When
 
+When the problem is incipient or weak faults, establish the [severity/observability setting](problem-first-classification.md#weak-fault-signatures-and-early-detection) separately from this timing evaluation. An amplitude/noise comparison and an alarm-delay comparison support different claims.
+
 Use this branch only for a claim about a time sequence, fault interval or alarm. Identify the target timestamp and prediction unit before interpreting a metric. A window labeled positive when it contains any anomalous observation is a window-level target; its classification score does not establish pointwise localization or onset accuracy. State any verified rule mapping overlapping window outputs to point scores and evaluate that output at its actual granularity.
 
 Pointwise, point-adjusted and event-level scores answer different questions. In one common point-adjustment rule, a single hit inside a labeled anomaly interval makes all its points count as detected. This changes the scoring outcome, not the alarms actually emitted. Such F1 can hide late or sparse detection and weights long intervals differently from an event-level recall. P07 uses that adjustment, whereas P22 explicitly omits it for point-level evaluation; see the [passage notes](published-evidence.md). Describe the chosen rule and compare methods under that same rule rather than imposing one published convention or relabeling an adjusted score as timely warning. If raw and adjusted rankings differ, report the trade-off relevant to the stated objective.
