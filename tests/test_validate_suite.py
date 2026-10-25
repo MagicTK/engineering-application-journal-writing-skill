@@ -296,7 +296,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.1", suite["version"])
+        self.assertEqual("4.2.2", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -459,24 +459,43 @@ class SuiteValidatorTests(unittest.TestCase):
     def test_operating_profiles_separate_time_access_and_label_space(self) -> None:
         en = (ROOT / "references/problem-first-classification.md").read_text()
         zh = (ROOT / "references/problem-first-classification_CN.md").read_text()
-        for marker in ("Operating Variation And Class Novelty", "temporal ordering",
+        for marker in ("Operating Conditions And Cross-Condition Problems", "temporal ordering",
                        "fault-class space", "target-data access", "not a drift detector"):
             self.assertIn(marker, en)
-        for marker in ("运行变化与故障类别", "时间顺序", "故障类别空间", "目标数据访问"):
+        for marker in ("工况变化与跨工况问题", "时间顺序", "故障类别空间", "目标数据访问"):
             self.assertIn(marker, zh)
         taxonomy = (ROOT / "references/industrial-ai-taxonomy.md").read_text()
         self.assertNotIn("continuous drift and discrete operating regimes are different phenomena", taxonomy)
-        self.assertIn("operating-variation-and-class-novelty", taxonomy)
+        self.assertIn("operating-conditions-and-cross-condition-problems", taxonomy)
 
     def test_distribution_profiles_preserve_conditional_directions(self) -> None:
         for filename in ("problem-first-classification.md", "problem-first-classification_CN.md"):
             content = (ROOT / "references" / filename).read_text()
             for marker in ("P30", "P50", "P51", "P(X|Y)", "P(Y|X)", "P(Y)"):
                 self.assertIn(marker, content)
-        for filename, fragment in (("terminology-decisions.md", "operating-variation-and-class-novelty"),
-                                   ("terminology-decisions_CN.md", "运行变化与故障类别")):
+        for filename, fragment in (("terminology-decisions.md", "operating-conditions-and-cross-condition-problems"),
+                                   ("terminology-decisions_CN.md", "工况变化与跨工况问题")):
             content = (ROOT / "references" / filename).read_text()
             self.assertIn(fragment, content)
+
+    def test_condition_wording_preserves_published_choices_and_old_anchors(self) -> None:
+        en = (ROOT / "references/problem-first-classification.md").read_text()
+        zh = (ROOT / "references/problem-first-classification_CN.md").read_text()
+        for marker in ("under variable operating conditions", "under varying operating conditions",
+                       "under time-varying operating conditions", "P10", "P81",
+                       'id="operating-variation-and-class-novelty"'):
+            self.assertIn(marker, en)
+        self.assertIn('id="运行变化与故障类别"', zh)
+        self.assertIn("operating conditions", zh)
+
+    def test_resource_problem_profile_does_not_invent_deployment_requirements(self) -> None:
+        en = " ".join((ROOT / "references/problem-first-classification.md").read_text().split())
+        zh = (ROOT / "references/problem-first-classification_CN.md").read_text()
+        for marker in ("capacity limit", "comparison objective", "decision deadline", "sampling period",
+                       "simulated cost", "concurrent", "P31", "P45", "P85"):
+            self.assertIn(marker.casefold(), en.casefold())
+        for marker in ("时限来源", "容量约束", "比较目标", "同时常驻"):
+            self.assertIn(marker, zh)
 
     def test_generic_core_keeps_method_axis_separate(self) -> None:
         root_skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")

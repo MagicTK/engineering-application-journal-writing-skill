@@ -127,6 +127,19 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ### Problem Profiles And Supervision Signals
 
+The resource/wording extension rereads P31 p.10 Table VIII/Fig.10 and its
+Computation Complexity Analysis discussion, and P45 pp.7-8 device discussion/
+Table II, with both table pages rendered and visually read. The first reports training-time/parameter
+context; the second reports edge-device inference/resource comparisons. Neither
+reported result is independently reproduced or promoted into a universal
+hardware/deadline guarantee. P85's author-hosted published PDF p.1 and p.7
+Eq.(16) provide a distinct modeled-service delay role, not measured
+current-device timing; complete optimization guarantees remain outside scope.
+P10/P81 p.1 identities and relevant wording were reread for variable/varying/
+time-varying operating conditions. Original Chinese scholarly title/abstract
+checks, including the AAS coal-power Fig.6 caption, are linked in the problem
+guide and do not add engineering-study IDs or full-module admissions.
+
 The operating-profile extension rereads P30 p.2 Section II Eq.(2), which fixes
 the class prior and changes the input distribution within a class; an adjacent
 prose notation mismatch is not copied as a verified formula. P27 p.2 relates

@@ -617,7 +617,7 @@ For a uniformly sampled stream, frequency `f` (observations per unit time) and p
 | cross-modal alignment / synchronization | Learned representation compatibility versus paired acquisition timing | P38 separates acquisition synchronization, token construction and cross-modal attention; equal feature dimensions do not prove temporal pairing. |
 | local outside-class / unknown fault | Outside one sub-classifier's label set versus unknown to the whole system | P37's pairwise OOD class does not by itself establish system-level novel-fault detection. |
 
-For operating-change terms, use the [problem-level profile](problem-first-classification.md#operating-variation-and-class-novelty) before editing a title or gap. New conditions, temporal changes and unseen fault classes are different statements. Read both conditional directions and the stated stable quantities; a change in class frequencies alone does not prove a fixed-class-conditional label-shift setting.
+For operating-condition terms, use the [problem-level profile](problem-first-classification.md#operating-conditions-and-cross-condition-problems) before editing a title or gap. New conditions, temporal changes and unseen fault classes are different statements. Read both conditional directions and the stated stable quantities; a change in class frequencies alone does not prove a fixed-class-conditional label-shift setting.
 
 ### Alignment: State The Object And Criterion
 

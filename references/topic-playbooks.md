@@ -174,7 +174,7 @@ Writing priorities:
 
 For static domain adaptation, describe source/target data access and the representation or objective being aligned. A training alignment objective is not necessarily part of the deployed prediction path (P10). For continual updates, additionally describe update triggers, retained information, adaptation delay and forgetting. A static cross-condition comparison does not establish continual learning. Reserve unknown-class rejection for an actual open-set task; an unseen operating condition need not contain an unseen fault class.
 
-For problem-only work, use the [operating profile](problem-first-classification.md#operating-variation-and-class-novelty) first. Separate changed input/target distributions, fault-class/combination space and stage-specific access; a lower score does not identify a drift type or a physical cause. The method and evidence choices below are conditional on a later request, not mandatory consequences of those problem labels.
+For problem-only work, use the [operating profile](problem-first-classification.md#operating-conditions-and-cross-condition-problems) first. Separate changed input/target distributions, fault-class/combination space and stage-specific access; a lower score does not identify a drift type or a physical cause. The method and evidence choices below are conditional on a later request, not mandatory consequences of those problem labels.
 
 For **domain generalization**, make the unobserved-condition requirement lead to
 the actual source-side learning operation, then to the predictor retained for
@@ -457,6 +457,12 @@ If an LLM supplies category semantics rather than predictions, trace `source tex
 A different route textualizes numerical measurements before embedding them (P29). Specify the measurements, time context, units and prompt information available to the textualizer, and distinguish its output from independently supplied class descriptions. Check that true fault labels or later outcomes were not inserted into sample text. External textualization cost belongs to the inference boundary when it is required for each prediction; a training-only semantic lookup has a different boundary. P29 formulates its compression-derived prior on embedded samples, not directly on the raw measurements or prose. Identify the compressed object and its encoding before interpreting a compression score; such a proxy is not automatically a physical measure of system complexity.
 
 ## 9. Lightweight, Efficient, Online, Or Edge-Oriented Methods
+
+When the request is only to identify industrial difficulties, start with the
+[resource/decision-time profile](problem-first-classification.md#resource-and-decision-time-requirements).
+Keep an actual capacity or response-time requirement separate from a comparison
+objective; do not infer an edge device or prescribe a compression/offloading
+method from the lightweight label alone.
 
 Writing priorities:
 

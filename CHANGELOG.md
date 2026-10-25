@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.2 (2026-10-25)
+
+- Applied source-checked operating-condition wording and clearer bilingual headings, retaining the previous anchors for existing links.
+- Added a conditional resource/deadline problem profile that separates operational constraints from comparative compactness objectives, and training/model/device/service timing roles.
+- Preserved positive parameter/performance comparisons without inventing edge deployment, fixed deadlines or mandatory compression methods; distinguished deadline misses, simultaneous memory demand and later-information access.
+- Revisited existing published reporting contexts and original Chinese wording sources; added no new general module names, source IDs, topic templates or scientific experiments.
+
 ## 4.2.1 (2026-10-25)
 
 - Extended the problem-first guide with operating variation, fault-class/combination space and stage-specific target-data access, without selecting new methods or experiments.

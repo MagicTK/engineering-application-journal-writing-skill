@@ -66,7 +66,28 @@ an industrial cause, such as safety restrictions or assay cost, unless supplied
 or documented. Explain an important limitation where it motivates the study;
 minor dataset characteristics belong in dataset/analysis sections.
 
-### Operating Variation And Class Novelty
+<a id="operating-variation-and-class-novelty"></a>
+
+### Operating Conditions And Cross-Condition Problems
+
+Use `operating conditions` for the industrial circumstances being compared.
+Select the modifier from the stated facts, not as a stylistic rotation:
+
+| Wording | Appropriate meaning |
+|---|---|
+| under variable operating conditions; under varying operating conditions | Conditions vary; no single temporal speed or trajectory is implied |
+| under different operating conditions | A comparison across specified conditions |
+| under time-varying operating conditions | The study explicitly concerns variation over time |
+| under unseen operating conditions | The stated development boundary excludes those conditions; specify access separately |
+
+P10 p.1 uses `under variable operating conditions`; P81 p.1 uses both
+`under time-varying operating conditions` and `under varying operating conditions`.
+These are actual wording contexts, not a field-wide frequency ranking or a
+requirement to import their methods. Prefer this established operating-conditions
+wording here, without globally banning `operational conditions` or rewriting a
+correct `operational state`. `operating varying` is not the intended modifier
+order. A broad `varying conditions` can be made explicit when operating context
+would otherwise be unclear. Keep meaningful state/mode/condition differences.
 
 Treat operating variation, fault-class space and target-data access as separate
 coordinates. They may coexist; none selects an algorithm by itself.
@@ -130,6 +151,44 @@ P30's process setting, P27 p.2's environmental quality setting, P50 p.2's
 source-only unseen-condition setting and P51 p.1/Section II-B's unknown-fault
 purpose illustrate different problem roles. Their full mechanisms, performance
 and P51's previously unresolved threshold convention are not certified here.
+
+### Resource And Decision-Time Requirements
+
+Separate an actual capacity limit or decision deadline from a comparison
+objective. Lightweight describes a design aim, edge identifies an execution
+location, online concerns access/execution over time, and real-time concerns a
+specified timing requirement. None establishes all the others. A method study
+can legitimately compare parameter counts without inventing an edge device,
+requiring a hardware trial for that narrow claim, or claiming deployment.
+
+| Question | Facts needed for the problem description |
+|---|---|
+| What is limited? | The actual compute, resident memory, working memory, energy, communication or response-time requirement; distinguish a fixed capacity from a preference to reduce cost |
+| Where does the requirement come from? | Device specification, operational decision interval, service requirement, measured bottleneck or author-stated study objective; unknown values stay unknown |
+| Which path is constrained? | Training, updating, data generation or prediction; which modules/calls remain active and where they execute |
+| What must coexist? | Concurrent requests and simultaneously resident models, activations, buffers and workspaces; separate unique live allocations from overlapping accounting |
+| What is the timing boundary? | Start event, required output/consumer and deadline, including the relevant acquisition availability, preprocessing, queueing, transfer and postprocessing |
+| What is established? | Analytical cost, simulated cost, measured device behavior or integrated operation; keep the actual workload/software/hardware and summary type attached |
+
+A sampling period is not automatically the decision deadline. Network forward
+time is not end-to-end response time, and throughput is not per-request latency.
+Do not sum overlapping pipeline intervals or memory allocations; when they are
+explicitly nonoverlapping, include all relevant components. One observed request
+can show that its deadline was missed, but cannot establish a worst-case bound
+over all workloads. A delayed output using inputs already available at its
+declared cutoff is a timing issue, not automatically later-information leakage.
+
+The problem may be retaining diagnostic or predictive performance within a
+specified operational budget, or obtaining a better accuracy-size trade-off in
+a comparative study. State the actual one. Do not force compression, offloading,
+sparse routing, a fixed millisecond limit or a new experiment plan in problem-only
+mode. Preserve positive measured results at their supported level.
+
+P31 p.10 reports complexity/training-cost context; P45 pp.7-8 reports device
+inference/resource comparisons; P85 p.7 Eq.(16) models several end-to-end delay
+components. These are different evidence roles, not interchangeable timing
+measurements or a new general mechanism admission. Source formulas and reported
+gains are not reproduced as validated results here.
 
 ## 3. Supervision Information And Training Signals
 
@@ -223,3 +282,13 @@ corroborates 概念漂移 in an industrial soft-sensing context; it is not a ful
 distribution definition or admission of Chinese drift subtype/module names.
 A sought Journal of Software review timed out; its search snippet does not
 complete that reading or a subtype translation check.
+
+For the operating-condition wording, P10/P81 p.1 supply the stated English
+forms. The original [AAS coal-power review](https://www.aas.net.cn/article/doi/10.16383/j.aas.c200993),
+bilingual title/abstract and Fig.6 caption, corroborates 工况/运行条件 language;
+the original [satellite article's bilingual title/abstract](https://www.spacejournal.cn/cn/article/id/a49f9f4e-a980-489e-8eff-2f4d2685aa0b)
+pairs 变工况 with variable operating conditions in an adjacent application.
+The original [industrial-edge review title/abstract](https://xk.sia.cn/article/doi/10.13976/j.cnki.xk.2021.1030)
+pairs 工业边缘计算 with industrial edge computing. These are limited wording
+checks, not full-body method definitions, prevalence rankings or adoption of
+guarantees and numerical targets from the sources.

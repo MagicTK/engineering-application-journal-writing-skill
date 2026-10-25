@@ -37,7 +37,7 @@
 | 标签稀缺或实测目标稀少 | limited labeled data / label scarcity / sparsely labeled process data | 标注单位、目标、数量；有大量无标签测量时不能笼统说所有数据都少 |
 | 粗粒度或不确定标注 | coarse-grained labels / label ambiguity / noisy labels or targets | 标签粒度与可靠性分别描述；候选备选标签不等于多个真实故障共存 |
 | 类别支持不均 | class imbalance；确认长尾时用 long-tailed class distribution | 类别数量与受影响类别，不等于小样本，也不是默认卖点 |
-| 运行/分布变化 | multiple operating modes / nonstationary operation / distribution shift | 分清离散与连续变化、开发与使用边界；输入变化本身不证明输入到目标关系的concept drift |
+| 工况变化/分布变化 | operating conditions；按事实细化multiple operating modes / nonstationary operation / distribution shift | 分清离散与连续变化、开发与使用边界；输入变化本身不证明输入到目标关系的concept drift |
 | 过程耦合 | process coupling / interacting production stages / cross-stage dependencies | 已知物理关系与学习关系不同；全流程对象本身不证明耦合困难 |
 | 信息来源差异 | heterogeneous process data / heterogeneous sensing / cross-domain distribution differences | 先说明域、采集流、模态、变换视图的实际角色 |
 | 多故障共存 | compound faults / simultaneous faults | 故障成员、组合覆盖和输出，不预设具体算法 |
@@ -45,9 +45,15 @@
 
 题目或引言可按实际限制写quality prediction with limited labeled data，或fault detection from coarse-grained segment labels。这些是表达方式，不是强制题目、已有模块名或创新认证。标注成本、安全限制等原因必须有事实依据，不能代写。核心限制在动机处展开，普通数据属性放在数据/分析部分。
 
-### 运行变化与故障类别
+<a id="运行变化与故障类别"></a>
 
-分开运行变化、故障类别空间和目标数据访问；三者可以并存，本身不选定算法。
+### 工况变化与跨工况问题
+
+工业条件优先用`operating conditions`，按事实选择搭配：变工况可用`under variable operating conditions`或`under varying operating conditions`，不同工况比较可用`under different operating conditions`；明确涉及随时间变化时用`under time-varying operating conditions`；开发边界未覆盖的工况可用`under unseen operating conditions`，另交代访问条件。
+
+P10 p.1直接使用variable搭配，P81 p.1使用time-varying与varying搭配。这是实际用例，不是全领域词频排名，也不引入它们的方法。此处优先operating，不把operational conditions一概判错，也不改写正确的operational state；`operating varying`不是所需修饰顺序。只写varying conditions而指代不清时补足operating；state、mode、condition仍按真实对象区分。
+
+分开工况变化、故障类别空间和目标数据访问；三者可以并存，本身不选定算法。
 
 | 已知事实 | 可以支持的表述 | 仍需依据的主张 |
 |---|---|---|
@@ -68,6 +74,18 @@ P30 p.2第二节式(2)将conditional drift限定为`P(Y)`固定、`P(X|Y)`改变
 仅在本问题需要时补充：工况变量及其任务角色、比较边界与时间顺序、故障类别/组合空间、拟合/选择/适应/预测的目标数据访问、实际明确或支持的分布变化及保持条件，以及原因/时间/新类别的未知项。不据此强制新实验或选定适应、拒识、持续学习等方法。
 
 P30的过程问题、P27 p.2的环境水质问题、P50 p.2的源侧开发到未见工况设置、P51 p.1及第二节B的未知故障目的，分别支持不同问题角色；不是同一完整机制的双定义准入，不认证性能，也不解除P51既有阈值约定疑点。新中文复合机制名不由这些描述产生。
+
+### 资源与决策时限问题
+
+分开真实容量约束、决策时限和比较目标。轻量化是设计目标，edge说明执行位置，online说明访问/执行方式，real-time须对应明确时限，四者不相互证明。纯方法研究可以合理比较参数量，不替它虚构边缘设备，也不为正确的参数比较强制硬件试验。
+
+按本研究需要核对：受限的是算力、常驻/工作内存、能耗、通信还是响应时间；预算/时限来源是设备规格、决策流程、服务要求、已测瓶颈还是作者声明的比较目标；约束作用于训练、更新、生成还是预测；哪些组件、请求、模型、激活、缓冲和工作区同时常驻；计时起点、输出对象及相关预处理/排队/传输/后处理；证据是解析成本、模拟成本、设备测量还是接入运行。未知预算不补成具体数字。
+
+采样周期不自动等于决策时限，模型前向时间不等于端到端响应，吞吐量不等于单请求时延。重叠流水段或内存不能重复相加；已明确不重叠时应包含相关各项。单次记录可证明本次超时，不能证明所有负载下的最坏界；输入均已在声明截止时刻获得时，迟发是时间问题，不自动构成未来信息泄漏。
+
+问题可以是保留诊断/预测效果同时满足已有运行预算，也可以是比较研究中的准确率—模型规模权衡；按真实研究选用，保留有依据的积极结果。不由此强制压缩、卸载、稀疏路由、统一毫秒阈值或新实验计划。
+
+P31 p.10是复杂度/训练成本语境，P45 pp.7-8报告设备推理/资源比较，P85 p.7式(16)定义模拟服务中的多部分端到端时延；不是可互换的设备测量，也不新增通用机制准入。源公式和收益均未在此复现认证。
 
 ## 三、监督信息与训练信号分开描述
 
@@ -113,3 +131,5 @@ P30的过程问题、P27 p.2的环境水质问题、P50 p.2的源侧开发到未
 英文设置复用P17/P19/P20/P21/P22/P26，不增加工业论文ID，不认证完整模块名。NSR综述引言/不完整监督节只用于分类边界，不证明流程工业使用普及率。另读[自动化学报半监督原始双语摘要](https://www.aas.net.cn/cn/article/doi/10.3724/SP.J.1004.2013.01871)、[对比学习综述原始双语摘要/关键词](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c220421)，核定半监督学习、自监督学习及与对比学习的区别；[中国图象图形学报原始摘要](https://www.cjig.cn/zh/article/doi/10.11834/jig.220854/)核弱监督及粗粒度标注语境，不充作第二篇工业机制定义。另求的自动化学报无监督词条页未能加载，不记已核，也不因访问失败否定既有用语。此导航不新增复合中文模块名。
 
 运行概况另重读P27/P30/P50/P51上述定点语境，不是整篇方法认证。[自动化学报c200984原始双语题名/摘要](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c200984?viewType=HTML)核“概念漂移”的工业软测量用语，不是完整分布定义或漂移子类/机制中文名称准入；软件学报候选综述两原始页面访问超时，搜索片段不计正文已读或译名完成。
+
+工况搭配复核P10/P81 p.1英文原文；[自动化学报燃煤发电综述](https://www.aas.net.cn/article/doi/10.16383/j.aas.c200993)原始双语题名/摘要和图6题核“工况/运行条件”，[卫星论文原始双语题名/摘要](https://www.spacejournal.cn/cn/article/id/a49f9f4e-a980-489e-8eff-2f4d2685aa0b)提供邻近应用的“变工况—variable operating conditions”配对。[工业边缘计算综述](https://xk.sia.cn/article/doi/10.13976/j.cnki.xk.2021.1030)原始双语题名/摘要核工业边缘计算用语。这些不增加工业方法定义ID，不证明普及率，也不采纳来源的保证性或具体数值要求。
