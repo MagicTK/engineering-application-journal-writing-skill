@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 110-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 110 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 112-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 112 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计110篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计112篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -122,6 +122,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P108 | [Optimize TSK Fuzzy Systems for Classification Problems: Minibatch Gradient Descent With Uniform Regularization and Batch Normalization](https://doi.org/10.1109/TFUZZ.2020.2967282) | TFS 28(12), 2020, pp.3065-3075; published author-lab PDF identity p.1 and selected Section II-A p.2: affine class consequents and normalized rule combination. Full optimization variants, implementation and results are outside this check. |
 | P109 | [PSFCL: A Probabilistic Slow Feature Contrastive Learning approach for incipient fault diagnosis in industrial processes](https://doi.org/10.1016/j.compchemeng.2026.109584) | CCE 208 (2026), Art.109584; supplied published PDF p.1 and selected pp.2,7-8: incipient-fault framing and a TE subset with step, random-variation and valve-sticking scenarios. This is problem/wording calibration, not full PSFCL admission, a timing-effect audit or result reproduction. |
 | P110 | [Incipient fault detection and diagnosis in complex processes based on residual subspace learning and causal topology](https://doi.org/10.1016/j.psep.2026.109207) | PSEP 215 (2026), Art.109207; supplied published PDF p.1 and selected pp.2,9-12: weak measured signatures, closed-loop masking, selected benchmark scenarios and stated alarm discussion. Source onset/alarm indexing needs reconciliation; full DiOPLS-SRMBN, causal/uncertainty claims and results are not certified. |
+| P111 | [An innovative neural network architecture designed for industrial fault diagnosis with hierarchical adaptive attention mechanism](https://doi.org/10.1016/j.psep.2025.108162) | PSEP 205 (2026), Art.108162; supplied published PDF identity/abstract and p.5 Section 3.5/Eq.(16): summed categorical class-weighted log-loss. Weight construction, full architecture and experimental assertions are outside this check. |
+| P112 | [Aerial Visual Perception in Smart Farming: Field Study of Wheat Yellow Rust Monitoring](https://doi.org/10.1109/TII.2020.2979237) | TII 17(3) (2021), pp.2242-2249. Read the [institution-hosted accepted version](https://repository.essex.ac.uk/27051/8/ALL_TII-19-5199.pdf): p.4 Eq.(2), p.5 Fig.6, selected identity/abstract. Adjacent engineering-image evidence for the mean categorical weighted loss, not process-window terminology, complete U-Net validation or final-layout formula identity. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -217,8 +219,19 @@ margin-adjusted, weighted objective. P97's algorithm and later loss equations
 differ and were not reconciled without implementation evidence. This adds two
 scoped reading records, not two clean matching definitions or full-paper audits.
 At that stage no matched class-factor pair was completed. The later P96/P100
-record below now verifies placement only; an identical ordinary weighted-CE
-whole-loss record remains incomplete.
+record below verifies placement only; the separate P111/P112 record now checks
+the multiclass weighted-loss form without unifying reductions or weight rules.
+
+The P111 p.5 and P112 accepted-version p.4 loss equations were read and visually
+inspected, along with P112 p.5 Fig.6's SoftMax output. The former sums selected
+log-probability terms; the latter averages categorical terms over pixels and
+states inverse-frequency weights. Their shared operation supports the base
+loss name, not a common denominator, weight construction, full architecture or
+scientific result. P112's original institutional record identifies the copy as
+an accepted version. Original Chinese paired abstracts at the Coal Science and
+Technology link below were reopened for wording only, not a third equation.
+
+加权对象与归约均须明确；新基础记录不解除P97的内部冲突，也不升级P100的自适应目标。邻近工程图像定义不替代流程窗口或工业任务证据，不把重采样、特征乘权、logit调整及加权分类损失混为同一种操作。
 
 Existing P18 pp.1,4-6 were reread, with pp.4-5 visually inspected: Eq.(6) puts
 a prior-dependent offset inside the training loss, while Eq.(10) adjusts scores

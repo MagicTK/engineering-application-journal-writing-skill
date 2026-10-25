@@ -106,13 +106,13 @@ class SuiteValidatorTests(unittest.TestCase):
     def test_evidence_identifiers_resolve_to_unique_sources(self) -> None:
         index = (ROOT / "references/published-evidence.md").read_text()
         source_table = index.split("## Sources /", 1)[1].split("Some source titles", 1)[0]
-        identifiers = re.findall(r"^\| (P\d{2}) \|", source_table, re.M)
+        identifiers = re.findall(r"^\| (P\d{2,}) \|", source_table, re.M)
         self.assertTrue(identifiers)
         self.assertEqual(len(identifiers), len(set(identifiers)))
         known = set(identifiers)
         for folder in ("references", "skills", "skills-zh"):
             for path in (ROOT / folder).rglob("*.md"):
-                used = set(re.findall(r"\bP\d{2}\b", path.read_text()))
+                used = set(re.findall(r"\bP\d{2,}\b", path.read_text()))
                 self.assertFalse(used - known, f"{path.relative_to(ROOT)}: {used - known}")
 
     def test_symlink_rejected_before_reading_manifest(self) -> None:
@@ -296,7 +296,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.6", suite["version"])
+        self.assertEqual("4.2.7", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

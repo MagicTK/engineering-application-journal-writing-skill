@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.7 (2026-10-25)
+
+- Added a scoped two-source record for multiclass class-weighted cross-entropy, using exact published/accepted-version loss passages and separately rechecked Chinese wording.
+- Distinguished class-factor placement, sum/observation-mean/weight-normalized reductions, resampling and logit weighting without imposing one universal weight rule.
+- Kept earlier source conflicts and adaptive-loss limits intact; added no Skill/topic template, manuscript edit, prescribed algorithm or scientific experiment.
+
 ## 4.2.6 (2026-10-25)
 
 - Grouped the 62 existing checked records in each language by lookup purpose, separating task/observation questions, data-use phases, learning guidance, network operations, modeling and evidence quantities.

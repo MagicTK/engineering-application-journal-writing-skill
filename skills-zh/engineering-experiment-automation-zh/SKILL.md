@@ -7,7 +7,7 @@ description: 为工业智能实验实施和运行建立可复现的输入定义�
 
 [English](../../skills/engineering-experiment-automation/SKILL.md)
 
-套件版本：`4.2.6`
+套件版本：`4.2.7`
 
 <!-- invariant: execution-authorization -->
 <!-- invariant: no-fabrication -->

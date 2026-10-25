@@ -361,6 +361,23 @@ classification-objective coefficient. Keep this source conflict unresolved
 without implementation evidence; neither its title nor its algorithm alone
 certifies the whole reported loss or completes a clean matched-name pair.
 
+For the checked multiclass form, P111 p.5 Eq.(16) sums weighted negative
+log-softmax terms, whereas P112 accepted version p.4 Eq.(2) averages categorical
+terms over observations. P112 states inverse-frequency weights; the inspected
+P111 passage leaves their construction unspecified. The shared loss name does
+not supply a missing rule. P112's observation is a pixel, not a process window.
+
+When reproducing a weighted objective, specify its reduction: `sum(a_i * l_i)`,
+division by the observation count, and division by `sum(a_i)` are different
+definitions (the last requires a positive denominator). Doubling every fixed
+factor doubles the first two but leaves the third unchanged. Check relative
+coefficients before asserting equivalence in a combined objective. Multiplying
+logits before softmax is not the same operation as weighting the resulting
+negative log-probability. Resampling can reproduce a weighted expected risk
+under matched assumptions; it does not make finite sampled updates or reduction
+conventions identical. Keep this detail in the objective/settings, not an
+abstract that only needs the method's purpose.
+
 An offset applied to logits inside the logarithm is different from multiplying
 the final cross-entropy term. P18 p.4, Eq.(6), uses class-prior offsets in a
 training objective; p.5, Eq.(10), uses an adjustment for pseudo-label construction,
