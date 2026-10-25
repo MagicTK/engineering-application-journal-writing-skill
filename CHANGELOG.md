@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.9 (2026-10-25)
+
+- Added a scoped Granger-causality record from two distinct published process studies, with separately checked Chinese test wordings.
+- Distinguished prediction targets and conditioning sets, including distributional versus mean-prediction criteria and predictive versus physical-effect claims.
+- Preserved valid attributed names and conditional causal identification; added no new method recipe, topic template, manuscript edit or scientific experiment.
+
 ## 4.2.8 (2026-10-25)
 
 - Added bounded consistency checks that survive run averaging: fixed-support class aggregation and full single-label weighted-recall/accuracy identity.

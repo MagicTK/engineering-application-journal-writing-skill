@@ -313,6 +313,33 @@ declared constraints. A failed finite search alone does not prove nonexistence.
 Use [counterfactual-output evaluation](experiment-evidence-design.md#counterfactual-outputs)
 only for the retained generation, explanation, augmentation or action claim.
 
+## Granger Causality And The Declared Prediction Target
+
+Use the checked base name for the contribution of specified histories to a later
+prediction. P113 p.3 Eq.(2) concerns conditional future distributions; P114
+pp.2-3 Eqs.(1)-(7) uses linear autoregressive residual comparisons and
+conditioning. State which histories, lags, target and criterion are actually
+used. A distribution can change in variance while its conditional mean remains
+unchanged, so a mean-squared-error test and a distributional definition need not
+give the same answer. Do not transfer the linear source's stationarity or F-test
+recipe to every neural Granger construction.
+
+Pairwise and conditional relations answer different questions. An observed
+common driver can explain a pairwise predictive link; conditioning on a mediator
+can remove an additional predictive contribution even when an indirect physical
+path exists. Thus a positive or absent conditional link alone does not determine
+a physical intervention effect. Preserve justified causal identification under
+stated assumptions; neither require a plant trial for every claim nor equate a
+learned edge, neural weight or root-cause ranking with such identification.
+
+In author-facing prose, name the verified prediction relationship and its use
+positively. Put the information-set definition in the method, and unresolved
+causal interpretation in the review note where needed; do not append routine
+negative disclaimers to every abstract. The [checked core record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+does not admit every spectral, neural or topology-qualified module. This is
+conditional writing guidance, not a recommendation to add causal discovery to
+an ordinary classification study.
+
 ## Adversarial: Identify The Opponent And Changed Object
 
 Identify the actual game before using the shared adjective. In the checked

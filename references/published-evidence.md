@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 112-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 112 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 114-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 114 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计112篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计114篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -124,6 +124,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P110 | [Incipient fault detection and diagnosis in complex processes based on residual subspace learning and causal topology](https://doi.org/10.1016/j.psep.2026.109207) | PSEP 215 (2026), Art.109207; supplied published PDF p.1 and selected pp.2,9-12: weak measured signatures, closed-loop masking, selected benchmark scenarios and stated alarm discussion. Source onset/alarm indexing needs reconciliation; full DiOPLS-SRMBN, causal/uncertainty claims and results are not certified. |
 | P111 | [An innovative neural network architecture designed for industrial fault diagnosis with hierarchical adaptive attention mechanism](https://doi.org/10.1016/j.psep.2025.108162) | PSEP 205 (2026), Art.108162; supplied published PDF identity/abstract and p.5 Section 3.5/Eq.(16): summed categorical class-weighted log-loss. Weight construction, full architecture and experimental assertions are outside this check. |
 | P112 | [Aerial Visual Perception in Smart Farming: Field Study of Wheat Yellow Rust Monitoring](https://doi.org/10.1109/TII.2020.2979237) | TII 17(3) (2021), pp.2242-2249. Read the [institution-hosted accepted version](https://repository.essex.ac.uk/27051/8/ALL_TII-19-5199.pdf): p.4 Eq.(2), p.5 Fig.6, selected identity/abstract. Adjacent engineering-image evidence for the mean categorical weighted loss, not process-window terminology, complete U-Net validation or final-layout formula identity. |
+| P113 | [A unified model integrating Granger causality-based causal discovery and fault diagnosis in chemical processes](https://doi.org/10.1016/j.compchemeng.2025.109028) | CCE 196 (2025), Art.109028; supplied published PDF pp.1-4 selected identity, framing and history-based definition, especially p.3 Section 2.2/Eq.(2). Conditional predictive distributions and physical mechanisms are distinguished; complete CR-VAE, formula guarantees and results are not certified. |
+| P114 | [Root cause diagnosis of plant-wide oscillations using Granger causality](https://doi.org/10.1016/j.jprocont.2013.11.009) | JPC 24 (2014), pp.450-459; supplied published PDF pp.1-3 selected identity, introduction and Section 2.1/Eqs.(1)-(7). Linear residual comparison and conditioning support a scoped predictive-history record; full spectral, feature-selection and root-cause procedures are outside this check. Its same-title IFAC 2012 version is not a second work. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -1116,6 +1118,30 @@ input and a proved empty target set in that fixed context, not a plant
 intervention or a universal impossibility result. Follow the
 [quantity/use distinction](terminology-decisions.md#counterfactual-inputs-and-their-use)
 and [output-specific evidence](experiment-evidence-design.md#counterfactual-outputs).
+
+### Granger Relations, Histories And Causal Interpretation
+
+P113 published CCE 196 (2025), Art.109028, pp.1-4 selected passages, and
+P114 JPC 24 (2014), pp.1-3 selected passages, support a history-based predictive
+relation. P113 p.3 Section 2.2/Eq.(2) uses conditional distributions and explicitly
+distinguishes underlying physical mechanisms; P114 Section 2.1/Eqs.(1)-(7)
+uses linear residual comparisons and conditioning. P113 p.3 and P114 p.2 were
+rendered and visually read. A folder year does not replace article metadata,
+and P114's same-title IFAC 2012 version is not another source. The nonlinear
+source's event-set wording is not adopted as a universal inequality for every
+event, nor does a distributional difference require improved mean prediction.
+Full neural, ELBO, spectral, feature-selection, causal-identification and
+root-cause guarantees, implementations and empirical outcomes remain outside
+this scoped check.
+
+The original ECUST paired title/abstract and AAS c250108 Table 5/6 bilingual
+captions separately support the [Chinese test wordings](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
+They do not supply another inspected English definition pair or complete
+method-body validation. Source-independent analytic examples illustrate how a
+common driver, mediator and variance-only dependence change the predictive
+question; these are not industrial experiments. Use the
+[target-and-history distinction](terminology-decisions.md#granger-causality-and-the-declared-prediction-target)
+when that relation is part of the manuscript, not as a new default method.
 
 ## Reusable Lessons / 可迁移结论
 
