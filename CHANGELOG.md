@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.21 (2026-10-25)
+
+- Applied abstract information selection explicitly to revision as well as new drafting, after an actual first response accurately reproduced the implementation but read as a compact Methods inventory.
+- Clarified how auxiliary-head roles and the distinguishing training-to-prediction relationship can replace unnecessary internal symbols without deleting technical meaning or banning useful identifiers.
+- Reused the existing abstract/contribution entrypoints; added no mechanism name, manuscript template or scientific experiment.
+
 ## 4.2.20 (2026-10-25)
 
 - Removed a stale Chinese sentence that could defer all time-series mechanism suggestions even after an explicit author request. Both language versions now distinguish problem-only classification from requested candidate navigation at the same point.

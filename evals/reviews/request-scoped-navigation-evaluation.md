@@ -20,4 +20,4 @@ The respondent disclosed inherited instructions/history summary, selected public
 
 The case does not establish universal method suitability, completed terminology evidence, scientific validity of a real study, research novelty, improved performance or journal acceptance. Program/structure checks and publication integrity are separate.
 
-See the [actual request and first answer](../responses/request-scoped-navigation-independent.md) and [current evaluation report](../forward-test-report.json).
+See the [actual request and first answer](../responses/request-scoped-navigation-independent.md) and [versioned evaluation report](../history/v4.2.20/forward-test-report.json).

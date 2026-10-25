@@ -7,7 +7,7 @@ description: Revise an industrial or engineering paper's abstract and contributi
 
 [中文执行版](../../skills-zh/engineering-abstract-contributions-zh/SKILL.md)
 
-Suite version: `4.2.20`
+Suite version: `4.2.21`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->
@@ -31,7 +31,7 @@ Read the relevant common checks in [mechanism-linked abstracts](../../references
 
 Preserve an accepted opening and technically accurate clauses. Mark each proposed edit as factual correction, relationship clarification, redundancy removal, or optional style. Avoid rewriting settled sentences just to make the revision look substantial.
 
-For a new abstract, make the engineering task and the study's organizing purpose visible before detailed implementation. Select from the mechanism map; do not write it out as a miniature Methods section. Keep a dimension, constraint or split detail here when it distinguishes the method or changes the result's interpretation; otherwise leave it in Methods or Experiments. If the supplied facts establish a study aim but not a prior-work failure, state that aim directly rather than inventing a challenge or filling the opening with setup counts.
+For both a new abstract and a revision, make the engineering task and the study's organizing purpose visible before detailed implementation. Select from the mechanism map; do not write it out as a miniature Methods section. Prefer the roles of auxiliary heads and branches over internal symbols unless those identities are needed to explain the advance. Preserve the distinguishing operation and its next use, rather than reproducing every supporting training step. Keep a dimension, constraint or split detail here when it distinguishes the method or changes the result's interpretation; otherwise leave it in Methods or Experiments. If the supplied facts establish a study aim but not a prior-work failure, state that aim directly rather than inventing a challenge or filling the opening with setup counts.
 
 Make each method sentence inherit a meaningful object or requirement. Connect operations through real input/output dependence, not repeated `these features`, `then`, or a mandatory First/Finally pattern. A parallel path stays parallel. The closing method sentence states the resulting capability at its supported level, not a second inventory of modules.
 

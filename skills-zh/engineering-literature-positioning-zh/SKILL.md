@@ -7,7 +7,7 @@ description: 工程应用论文文献调研与研究定位 Skill 中文执行版
 
 [English](../../skills/engineering-literature-positioning/SKILL.md)
 
-套件版本：`4.2.20`
+套件版本：`4.2.21`
 
 ## 一、任务目标
 
