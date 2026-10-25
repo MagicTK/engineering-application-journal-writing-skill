@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.72 (2026-10-25)
+
+- Extended the existing imputation record with two industrial-data TNNLS/TCYB contexts, retaining the earlier P25/P33 scope and separately checked Chinese wording variants.
+- Distinguished reference availability, supplied-input masks, training targets and candidate/parameter updates without imposing one fitting or prediction architecture.
+- Connected estimated auxiliary measurements to their actual quality predictor in existing bilingual abstract/contribution guidance; kept primary imputation and downstream utility separate.
+
 ## 4.1.71 (2026-10-25)
 
 - Checked hypergraph membership and normalized node-edge-node propagation in two distinct ESWA/TIM works; verified basic Chinese wordings separately. Full source-specific networks and signed conventions remain attributed and unverified beyond the stated scope.

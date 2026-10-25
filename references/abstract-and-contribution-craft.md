@@ -151,6 +151,17 @@ from a production-unit hierarchy (P13). Preserve the actual axes, fixed versus
 learned connections and output level instead of borrowing a hierarchical or
 causal name to make the abstract sound stronger.
 
+**Imputation before a quality predictor:** connect the estimated object to its
+actual consumer. For a verified two-component design: "An imputer estimates
+unavailable auxiliary measurements. Combining these estimates with available
+measurements supplies a quality predictor trained on the available quality
+labels." Add the real distinctive dependency model or coupling where justified;
+routine filling and prediction alone do not establish novelty. If imputation is
+the primary output, retain that task and treat downstream prediction as utility
+evidence instead of inventing a mandatory regressor. Describe the actual fitting
+and prediction access in Methods; an observed-only imputer does not make its
+label-trained downstream predictor unsupervised.
+
 **Hypergraph grouping to a diagnostic output:** specify what the nodes and
 hyperedges represent before connecting group propagation to the prediction.
 For a verified variable-node design: "An encoder supplies variable features.

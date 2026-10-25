@@ -364,6 +364,19 @@ Choose removed/randomized/corrupted-prior controls when they isolate the knowled
 
 ## 7. Reconstruction-Based, Generative, Diffusion, Or Data-Augmentation Methods
 
+For missing-value imputation, identify the measurement entries being estimated
+and whether completion is the main output or an input to another predictor.
+P106/P107 add two industrial measurement contexts to the existing P25/P33
+record, not one universal architecture. Separate prefill, model estimates,
+candidate iteration and parameter learning; preserve declared frozen or
+transductive fitting rather than assigning all methods the same test interface.
+Follow the [mask/target distinction](terminology-decisions.md#imputation-masks-and-training-targets)
+for training and evaluation references, and the existing missing-value evidence
+check for recovery versus downstream utility. Do not import a source's complete
+median-filled or masked-completion name as a general module.
+
+中文：插补本身为任务还是给下游预测器供输入须分清；预填、候选迭代与参数拟合不是同一操作。真实未知位置没有实测参照，训练遮挡目标和评价留出参照也不互换。
+
 Writing priorities:
 
 - identify the role: reconstruction-based representation learning, probabilistic latent modeling, generated-data output or downstream augmentation;

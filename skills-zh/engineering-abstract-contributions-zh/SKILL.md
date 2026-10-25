@@ -7,7 +7,7 @@ description: 对照真实方法与证据修订工程应用论文摘要和贡献�
 
 [English](../../skills/engineering-abstract-contributions/SKILL.md)
 
-套件版本：`4.1.71`
+套件版本：`4.1.72`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->

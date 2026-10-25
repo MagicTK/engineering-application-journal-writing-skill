@@ -193,6 +193,19 @@ For missing-value recovery claims, separate accuracy at withheld entries from th
 
 When a method claims to leave observed measurements unchanged, inspect the final output equation or implementation rather than the mask's name. For finite placeholders, `x_complete = M*x_input + (1-M)*x_estimate`, with `M=1` at observed positions, preserves them by construction; masked selection must handle NaNs safely if they are present. A mask inside an encoder, or adding a learned output to the input, needs a separate check. Preservation is a useful property to report, not proof that the missing entries are accurate. This check does not require a method that estimates its output directly from available observations to introduce an imputation stage.
 
+For missing-data supervision and evaluation, distinguish the reference
+availability mask from the mask actually supplied to the model. Their difference
+can identify deliberately hidden, scoreable measurements, but not reference
+values for naturally unobserved entries. Artificially hidden training values
+can legitimately supervise imputation inside training; evaluation references
+must remain outside fitting/selection under the holdout design. State whether
+a missing-position objective uses a measured reference, initialization, previous
+candidate or generated target. Lower loss against the latter quantities is not
+itself true-value recovery evidence. Use the
+[mask/target account](terminology-decisions.md#imputation-masks-and-training-targets)
+without forcing observed-only losses or frozen amortized prediction on every
+valid imputation study.
+
 ### Input-Attack Evaluation
 
 Use this route when the claim concerns deliberately manipulated diagnostic

@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 105-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 105 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 107-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 107 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计105篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计107篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -117,6 +117,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P103 | [Fault detection and identification using Bayesian recurrent neural networks](https://doi.org/10.1016/j.compchemeng.2020.106991) | CCE 141 (2020), Art.106991. Published author-hosted PDF pp.4-6: predictive moments feed process-monitoring decisions. Output variation, numerical sampling error and marginal/joint decisions differ; full BRNN theory, implementation and results are not certified. |
 | P104 | [Prediction interval soft sensor for dissolved oxygen content estimation in an electric arc furnace](https://doi.org/10.1016/j.asoc.2024.112246) | Applied Soft Computing 167 (2024), Art.112246. Published institutional PDF pp.5-6: scalar-output bounds, stated approximation assumptions, coverage and width. This is a soft-sensing quantity/evaluation record, not generic admission of the full fuzzy interval variants. |
 | P105 | [Residual-Hypergraph Convolution Network: A Model-Based and Data-Driven Integrated Approach for Fault Diagnosis in Complex Equipment](https://doi.org/10.1109/TIM.2022.3227609) | TIM 72, Art.3501811; institutional record reports online publication 8 Dec 2022. Read author-uploaded manuscript HTML, selected Sections III and IV-B, Eqs.(5)-(8): equipment-node membership and normalized node-edge-node base propagation. Full Res-HGCN, signed matrix/degree implementation, physical relations and results are not certified. |
+| P106 | [Industrial Data Imputation Based on Multiscale Spatiotemporal Information Embedding With Asymmetrical Transformer](https://doi.org/10.1109/TNNLS.2025.3527581) | TNNLS, read IEEE early-access article PDF: selected p.5 Section III-B/Eqs.(16)-(19), p.6 Algorithm 1. Observed=1 mask, initial filling, measurement estimates and downstream use have separate roles. Missing-position target implementation, full MSST-Former, current issue pagination and results are not certified. |
+| P107 | [Imputation of Missing Values in Time Series Using an Adaptive-Learned Median-Filled Deep Autoencoder](https://doi.org/10.1109/TCYB.2022.3167995) | TCYB 53(2), February 2023; published PDF pp.3-4, Sections II-B/III-A, Eqs.(4)-(8), selected p.5: missing=1 mask and iterative measurement completion. This base-operation record does not certify complete AM-DAE, parameter/target access at every phase or results. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -537,6 +539,28 @@ These analyses inform [abstract craft](abstract-and-contribution-craft.md), [con
 | P55 p.1 and pp.3-4, Section II-A | SFA minimizes temporal derivative energy with scale/nontriviality constraints; the survey distinguishes learned temporal relations from direct low-pass filtering. | Supports the base method definition, not every variant or derivation. One survey and one application share foundational SFA lineage; they do not establish independent inventions or certify every listed mechanism. |
 
 这些定义核对补充的是名称适用范围，不以论文数量替代语义核查；不复制源文句子，也不为源文全部推导或实验背书。
+
+## Additional Industrial Imputation Contexts
+
+The existing P25/P33 definition pair and AAS translation record remain valid
+within their stated scopes; this is not a newly discovered base term. P106
+identity p.1 and selected pp.5-6, and P107 identity p.1/selected pp.3-5 were
+reread; P106 p.5 and P107 p.4 were visually inspected. Both estimate unavailable
+industrial measurement entries, but differ in mask convention, initialization,
+fitting and output composition. P107's named median step is a midpoint of the
+current input and reconstruction in Eq.(8), not a generic temporal median
+filter. P106's missing-position training target representation remains
+implementation-unverified; no true unknown values or leakage are inferred.
+
+P25 p.4 was also reread/rendered, confirming the previously recorded
+mask-before-linear-output preservation ambiguity, not a new reproduction
+failure. The original normal [AAS c230534 URL](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c230534)
+loaded after its query variant timed out; paired title/abstracts/keywords were
+reread. The original [Sichuan University bilingual article page](https://journal.scu.edu.cn/info/1104/29335.htm)
+separately supports the filling-wording variant. These wording checks do not
+certify full proposed methods, class-label access or distribution/performance
+claims, and do not add English industrial-definition IDs. No scientific
+experiment, implementation or full result reproduction was performed.
 
 ## Hypergraph Membership And Task Interfaces
 

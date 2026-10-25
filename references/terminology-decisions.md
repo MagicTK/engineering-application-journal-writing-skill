@@ -189,6 +189,39 @@ does not establish coverage in every operating condition. Use the
 [conditional interval-evaluation route](experiment-evidence-design.md#output-prediction-intervals)
 only when such outputs or reliability claims are actually part of the paper.
 
+## Imputation Masks And Training Targets
+
+For measurement imputation, identify the unavailable entries and the information
+used to estimate them. Keep initialization/prefill, model reconstruction and the
+delivered completed input distinct. P106 p.5 uses observed=1, while P107 p.3
+uses missing=1; neither convention follows from the mask's name. Missing
+measurements, deliberately hidden training targets and unavailable quality
+labels are different objects.
+
+With reference-observation mask R and supplied-input observation mask M,
+`H = R * (1-M)` selects artificially withheld entries with known references
+when M is a subset of R; multiplication is elementwise. Naturally unknown
+entries are not scoreable against a hidden truth merely because they receive
+estimates. A measured zero remains observed. Reinserting available measurements
+can improve an all-entry error without changing recovery at unavailable inputs;
+report the denominator and output being scored.
+
+An observed value withheld inside training can remain a legitimate reconstruction
+target. A naturally unavailable value has no measured target; a comparison to
+prefill, a previous candidate or a teacher output has that specific meaning.
+P106's selected description initializes unobserved inputs and includes a
+missing-position term; its target representation is not implementation-verified.
+Do not call it true-value supervision, impossible training or leakage by guess.
+Evaluation references remain scoring-only under the declared holdout design.
+
+Candidate-value iteration and parameter fitting are separate: P107 describes
+both during its imputation procedure. A declared transductive fitting design
+need not use frozen amortized prediction; a frozen imputer need not fit each
+test batch. Preserve the actual access profile. Imputation may itself be the
+task, or supply a separately trained soft sensor/classifier. Its output is not
+automatically a quality estimate, and observed-only imputer learning does not
+make a label-trained downstream pipeline unsupervised.
+
 ## Hypergraph Objects And Propagation
 
 Use this distinction only for a manuscript that actually uses hyperedges.
