@@ -296,7 +296,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.0", suite["version"])
+        self.assertEqual("4.2.1", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -455,6 +455,28 @@ class SuiteValidatorTests(unittest.TestCase):
         self.assertIn("| Supervision and training signals |", en)
         self.assertIn("| 对象/尺度 |", zh)
         self.assertIn("| 监督信息与训练信号 |", zh)
+
+    def test_operating_profiles_separate_time_access_and_label_space(self) -> None:
+        en = (ROOT / "references/problem-first-classification.md").read_text()
+        zh = (ROOT / "references/problem-first-classification_CN.md").read_text()
+        for marker in ("Operating Variation And Class Novelty", "temporal ordering",
+                       "fault-class space", "target-data access", "not a drift detector"):
+            self.assertIn(marker, en)
+        for marker in ("运行变化与故障类别", "时间顺序", "故障类别空间", "目标数据访问"):
+            self.assertIn(marker, zh)
+        taxonomy = (ROOT / "references/industrial-ai-taxonomy.md").read_text()
+        self.assertNotIn("continuous drift and discrete operating regimes are different phenomena", taxonomy)
+        self.assertIn("operating-variation-and-class-novelty", taxonomy)
+
+    def test_distribution_profiles_preserve_conditional_directions(self) -> None:
+        for filename in ("problem-first-classification.md", "problem-first-classification_CN.md"):
+            content = (ROOT / "references" / filename).read_text()
+            for marker in ("P30", "P50", "P51", "P(X|Y)", "P(Y|X)", "P(Y)"):
+                self.assertIn(marker, content)
+        for filename, fragment in (("terminology-decisions.md", "operating-variation-and-class-novelty"),
+                                   ("terminology-decisions_CN.md", "运行变化与故障类别")):
+            content = (ROOT / "references" / filename).read_text()
+            self.assertIn(fragment, content)
 
     def test_generic_core_keeps_method_axis_separate(self) -> None:
         root_skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")

@@ -127,6 +127,18 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ### Problem Profiles And Supervision Signals
 
+The operating-profile extension rereads P30 p.2 Section II Eq.(2), which fixes
+the class prior and changes the input distribution within a class; an adjacent
+prose notation mismatch is not copied as a verified formula. P27 p.2 relates
+environmental quality variation to prediction, not that same distribution
+definition. P50 p.2 concerns development without target-condition data, while
+P51 p.1 and p.3 Section II-B distinguish unknown-fault purposes. P30/P50 p.2
+were rendered and visually read; p.1 identities were checked. These are problem
+roles, not a new matched operation pair, full-module-name admission or result
+audit. The original AAS c200984 bilingual title/abstract supplies scoped Chinese
+concept-drift wording; a JOS review access timeout is not a completed definition
+or translation check. Existing P51 threshold doubts remain unresolved.
+
 The [problem-first reference](problem-first-classification.md) revisits selected
 existing contexts: P17 p.2 Section II (continuous assay labels); P21 p.3 Section
 III-A and P26 p.3 Section III (labeled tasks combined with self-generated targets);

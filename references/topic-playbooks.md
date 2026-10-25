@@ -167,12 +167,14 @@ For the abstract or contribution, connect the actual label limitation to the ope
 
 Writing priorities:
 
-- distinguish discrete operating modes from continuous drift;
+- distinguish operating-mode membership from the actual temporal distribution change, which need not be continuous;
 - define source/target or historical/current information access;
 - explain how process changes alter the data distribution or task boundary;
 - avoid treating random train/test splits as evidence for temporal adaptation.
 
 For static domain adaptation, describe source/target data access and the representation or objective being aligned. A training alignment objective is not necessarily part of the deployed prediction path (P10). For continual updates, additionally describe update triggers, retained information, adaptation delay and forgetting. A static cross-condition comparison does not establish continual learning. Reserve unknown-class rejection for an actual open-set task; an unseen operating condition need not contain an unseen fault class.
+
+For problem-only work, use the [operating profile](problem-first-classification.md#operating-variation-and-class-novelty) first. Separate changed input/target distributions, fault-class/combination space and stage-specific access; a lower score does not identify a drift type or a physical cause. The method and evidence choices below are conditional on a later request, not mandatory consequences of those problem labels.
 
 For **domain generalization**, make the unobserved-condition requirement lead to
 the actual source-side learning operation, then to the predictor retained for

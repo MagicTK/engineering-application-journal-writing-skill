@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.1 (2026-10-25)
+
+- Extended the problem-first guide with operating variation, fault-class/combination space and stage-specific target-data access, without selecting new methods or experiments.
+- Clarified temporal ordering, changing versus stable distributions and both conditional directions; multimode operation and nonstationarity are not treated as mutually exclusive or restricted to continuous drift.
+- Reread four existing source contexts and an original Chinese scholarly wording page; retained source-specific drift definitions and unresolved open-set threshold limits rather than certifying full mechanisms.
+
 ## 4.2.0 (2026-10-25)
 
 - Added a problem-only route and paired problem/annotation profiles, deferring architecture, experiments and manuscript archetypes when the request is only to organize industrial difficulties.

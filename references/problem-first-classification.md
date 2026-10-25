@@ -66,6 +66,71 @@ an industrial cause, such as safety restrictions or assay cost, unless supplied
 or documented. Explain an important limitation where it motivates the study;
 minor dataset characteristics belong in dataset/analysis sections.
 
+### Operating Variation And Class Novelty
+
+Treat operating variation, fault-class space and target-data access as separate
+coordinates. They may coexist; none selects an algorithm by itself.
+
+| Known fact | Wording it can support | What still needs evidence |
+|---|---|---|
+| Different loads, grades, recipes, sites or specified regimes | the actual operating-condition difference; unseen operating conditions if excluded from development as stated | A particular changed distribution, physical cause or temporal drift pattern |
+| Ordered observations with changing statistical properties | nonstationarity or a precisely defined temporal distribution change | Abrupt/gradual/recurring behavior and which quantity changes; a performance decrease is not a drift detector |
+| A fault category absent from the fitted classifier's class set appears | an unseen/unknown fault category relative to that set | A defined rejection decision, ability to identify its type, or automatic class learning |
+| New combinations of known constituent faults | unseen fault combinations under the specified combination split | A genuinely new constituent fault type or support for arbitrary combinations |
+| New-condition data are available during fitting, selection or adaptation | the actual information-access setting | Whether labels are used and which decisions occur before or after that access |
+
+A product grade can be an operating setting or the prediction target; record
+its role before treating it as a domain. An unseen condition can retain exactly
+the known fault labels. Conversely, an unseen fault can occur under a familiar
+condition. Encountering that fault is not proof that a model rejects it, names
+it or learns a new class. Preserve legitimate open-set terminology when an
+unknown-class task is defined, without claiming its capability before evidence.
+
+Check temporal ordering before writing about drift speed or continuous
+adaptation. Multiple operating modes and nonstationarity are not opposites:
+switching or changing mode frequencies can change a pooled distribution even
+when mode-conditional behavior is stable. A cross-condition split without a
+declared chronology does not establish a gradual temporal trajectory. Likewise,
+normal dynamic responses or individual outliers do not by themselves establish
+distribution change. Do not assign equipment aging, sensor deterioration or a
+changed physical mechanism merely because prediction error increased.
+
+When using a distribution name, identify its direction and stability assumptions:
+
+| Quantity | What it describes |
+|---|---|
+| `P(X)` | Distribution of the defined measured/encoded inputs |
+| `P(Y)` | Target distribution; in classification, frequencies of the specified labels |
+| `P(X|Y)` | Input distribution conditional on a target/class |
+| `P(Y|X)` | Target relation conditional on the input, including a classification posterior |
+
+These are related by the joint distribution, not independent checklist labels.
+An altered `P(X)` with fixed `P(Y|X)` can also change `P(Y)`; a changed class
+frequency does not establish a label-shift model with fixed `P(X|Y)`.
+`P(X|Y)` and `P(Y|X)` are not interchangeable meanings of conditional.
+For example, P30 p.2 Section II Eq.(2) uses **conditional drift** for fixed
+`P(Y)` and changing `P(X|Y)`. Preserve that source convention, not a universal
+definition or an assertion that every conditional distribution must change.
+Use descriptive wording if the current facts do not identify the quantity.
+
+For problem-only work, add only the fields needed here:
+
+```text
+Operating variable/regime and its role in the task:
+Comparison boundary and temporal ordering, if known:
+Fault-class space and any held-out combination space:
+Target-data access at fitting, selection, adaptation and prediction:
+Changed/stable distributions actually specified or supported:
+Unresolved cause, timing or novelty claims:
+```
+
+This profile describes the problem; it is not a mandatory test plan or an
+instruction to choose adaptation, rejection, continual learning or another model.
+P30's process setting, P27 p.2's environmental quality setting, P50 p.2's
+source-only unseen-condition setting and P51 p.1/Section II-B's unknown-fault
+purpose illustrate different problem roles. Their full mechanisms, performance
+and P51's previously unresolved threshold convention are not certified here.
+
 ## 3. Supervision Information And Training Signals
 
 Record both axes. First describe **what task information is available**; then
@@ -150,3 +215,11 @@ industrial mechanism definition. A sought AAS unsupervised-wording page failed
 to load; it is not completed translation evidence. Existing wording is not
 silently invalidated by that access failure. No new compound Chinese name is
 promoted by this routing guide.
+
+The operating profile additionally rereads P27/P30/P50/P51 in the stated
+passages, not their complete methods. The original bilingual
+[AAS c200984 title/abstract](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c200984?viewType=HTML)
+corroborates 概念漂移 in an industrial soft-sensing context; it is not a full-body
+distribution definition or admission of Chinese drift subtype/module names.
+A sought Journal of Software review timed out; its search snippet does not
+complete that reading or a subtype translation check.

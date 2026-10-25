@@ -7,7 +7,7 @@ description: 工程应用论文选题与架构 Skill 中文执行版。用于把
 
 [English](../../skills/engineering-paper-idea-architecture/SKILL.md)
 
-套件版本：`4.2.0`
+套件版本：`4.2.1`
 
 ## 一、任务目标
 
