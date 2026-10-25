@@ -151,6 +151,18 @@ from a production-unit hierarchy (P13). Preserve the actual axes, fixed versus
 learned connections and output level instead of borrowing a hierarchical or
 causal name to make the abstract sound stronger.
 
+**Hypergraph grouping to a diagnostic output:** specify what the nodes and
+hyperedges represent before connecting group propagation to the prediction.
+For a verified variable-node design: "An encoder supplies variable features.
+Node-to-hyperedge-to-node propagation combines them over expert-derived groups,
+and a graph-level summary supplies the fault classifier." Add the distinctive
+construction or learning principle where actually established; this routine
+chain alone is not a novelty claim. Fixed membership can coexist with learned
+weights and input-dependent features. Sample-node designs such as P96 need
+their own sample/batch interface, not a borrowed process-variable story. Leave
+normalization and access details in Methods unless central to the contribution;
+do not invent another final fusion stage or assert physical causality.
+
 **Gated contributions and their recipient:** describe what determines the gate,
 what it scales and where that contribution is used. For a verified two-path
 classifier: "Local and neighborhood features jointly determine a gate that

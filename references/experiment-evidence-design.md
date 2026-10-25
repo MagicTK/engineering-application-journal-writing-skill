@@ -280,6 +280,27 @@ These checks address the manuscript's retained claim; they do not require a
 counterfactual branch, physical trial or another experiment suite in ordinary
 diagnosis papers, and they do not authorize changing results or running studies.
 
+### Hypergraph Structure And Access
+
+When the contribution depends on hyperedge grouping, compare the claimed
+construction with a relevant alternative while keeping node identity, feature
+inputs, training/selection access and output task interpretable. Match capacity
+or cost where needed to isolate the claim; do not mandate a fixed ablation
+suite. Report normalization, edge weights and self-contributions for an
+operator-equivalence claim. Identical binary pairwise projections need not
+give identical propagation, while a weighted graph can reproduce a particular
+linear propagation matrix. Neither fact establishes diagnostic superiority.
+
+For sample-node models, define which samples can share a neighborhood, whether
+query/test batches influence construction, and what information is available at
+the claimed decision time. Declared unlabeled transductive access can be valid;
+it is not isolated-sample or necessarily causal streaming prediction. Rebuilding
+an incidence structure does not establish online parameter learning. Evaluate
+batch composition/order sensitivity only when needed for the claimed prediction
+interface. Keep source-specific signed/directed conventions and unknown
+implementation details in author checks instead of silently adopting an
+unsigned formula or alleging leakage from the batch name alone.
+
 ### Knowledge And Physical-Constraint Claims
 
 If the claimed benefit is physical consistency, define the tested equation or inequality, its variables/units, applicable conditions and tolerance. Evaluate its residual or violation at the claimed output and on the claimed evaluation domain; a smaller total training loss or better diagnostic score does not establish this property. A finite-weight penalty can trade off against other objectives. Even a zero residual at training points does not by itself prove satisfaction everywhere. For an exact construction or projection, check the relation it actually enforces and preserve a justified guarantee within that scope; empirical residual checks and mathematical guarantees are different evidence.

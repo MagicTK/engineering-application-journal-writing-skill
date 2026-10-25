@@ -189,6 +189,40 @@ does not establish coverage in every operating condition. Use the
 [conditional interval-evaluation route](experiment-evidence-design.md#output-prediction-intervals)
 only when such outputs or reliability claims are actually part of the paper.
 
+## Hypergraph Objects And Propagation
+
+Use this distinction only for a manuscript that actually uses hyperedges.
+Define the node first: a measured variable, equipment component and acquired
+sample are different objects. P96 constructs sample-neighborhood hyperedges;
+P105 represents equipment parts/components. Neither interpretation transfers
+automatically to another model.
+
+For an unsigned membership representation, an incidence matrix has nodes as
+rows and hyperedges as columns; a square adjacency has two node axes. Even a
+square incidence matrix need not be an adjacency. State whether membership,
+hyperedge weights and node features are fixed, fitted or input-dependent. A
+fixed rule can rebuild neighborhoods for each permitted batch without updating
+learned parameters. Declare batch access separately from online learning.
+
+The checked normalized base operation passes features from nodes to hyperedges
+and back. For binary membership H and positive degrees, one common form is
+`S = Dv^(-1/2) H W De^(-1) H^T Dv^(-1/2)`, followed by the specified feature
+projection/nonlinearity. Define node and hyperedge degrees, self-contributions
+and weight constraints before using that formula. Empty hyperedges, isolated
+nodes, signed membership or directed variants need their actual convention;
+do not silently insert this unsigned recipe. P105's signed construction and
+its degree interface are outside the completed base-operation check.
+
+A binary pairwise projection loses membership grouping, not necessarily every
+useful computation. With unit weights, one hyperedge containing three nodes
+and three two-node hyperedges both project to a triangle. For the stated
+normalization their updates on `(1,0,0)` are respectively `(1/3,1/3,1/3)` and
+`(1/2,1/4,1/4)`. An ordinary weighted matrix, or a suitably weighted graph with
+self-contributions, can reproduce each particular linear operator. This
+synthetic example proves neither universal expressive superiority nor better
+diagnosis. Link the actual grouping and propagation to the retained task output;
+do not add a fusion stage merely to end the abstract.
+
 ## Counterfactual Inputs And Their Use
 
 For classifier-directed counterfactual generation, identify the original input,

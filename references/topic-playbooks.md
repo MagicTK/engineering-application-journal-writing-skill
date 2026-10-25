@@ -271,6 +271,19 @@ Keep the hierarchy explicit: physical unit membership may be fixed, variable gro
 
 ## 6. Graph, Knowledge-Guided, Causal, Or Fuzzy Modeling
 
+For hypergraphs, establish the node identity and hyperedge membership before
+describing higher-order relations. Node-to-hyperedge-to-node propagation can
+use sample-neighborhood groups (P96) or equipment relations (P105); these do
+not imply the same physical object. Trace fixed membership, fitted weights and
+changing features separately. A per-batch construction rule may change the
+structure without online parameter learning. Connect propagation to the actual
+node-level or graph-level decision, and select
+[structure/access checks](experiment-evidence-design.md#hypergraph-structure-and-access)
+only when relevant to the claim. No universal hypergraph advantage follows
+from losing set information in an unweighted pairwise projection.
+
+中文：先定节点、超边及输出对象；固定归属、学习权重和依输入变化分别写，不把样本邻域说成物理变量关联，也不把批次重建自动写成在线学习。
+
 Writing priorities:
 
 - state the source of every graph, rule, membership function, or knowledge constraint;

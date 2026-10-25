@@ -113,6 +113,8 @@ within each unit 与 across units 表示不同尺度时，句首结构相似不�
 
 有意扰动的诊断输入若用于训练，应连接该构造与保留的预测器，而非补造生成器/判别器或预测时攻击分支。对接口已核实的虚构设计可写：Bounded perturbations of labeled measurements train a temporal diagnostic model. Its trained encoder and classifier assign fault categories to incoming measurements. 再补真正有区别的构造，常规训练策略本身不自动成为贡献。坐标/预算细节一般放设置，除非它定义了推进；结果落到已测输入变化范围，不直接改成物理安全或全局鲁棒保证。这是功能写法，不准入完整防御机制名称。
 
+**超边分组到诊断输出：** 先说明节点和超边的对象，再连接传播与真实预测。对已核实的变量节点设计，可写：An encoder supplies variable features. Node-to-hyperedge-to-node propagation combines them over expert-derived groups, and a graph-level summary supplies the fault classifier. 实际有区别的构造或学习设计才进入贡献，常规链条本身不是新颖性。固定归属、训练学习权重与依输入变化的特征可以同时存在；P96等样本节点设计须写自身的样本/批次接口，不能套工艺变量故事。归一化与访问细节按重要性放方法，不强造最终融合或物理因果意义。
+
 ## 4. 贡献写推进，不写工作日志
 
 内部逐项记录最近前作已达到的能力、剩余需求、本次实际变化、能区分变化的证据和范围。不能未经充分检索就写唯一或首次。

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.71 (2026-10-25)
+
+- Checked hypergraph membership and normalized node-edge-node propagation in two distinct ESWA/TIM works; verified basic Chinese wordings separately. Full source-specific networks and signed conventions remain attributed and unverified beyond the stated scope.
+- Connected hyperedge grouping to the actual diagnostic output in existing bilingual abstract/contribution guidance, distinguishing sample nodes, process-variable nodes and equipment nodes.
+- Added conditional structure/access checks and an exact synthetic projection example; did not turn hypergraphs, online learning or new experiments into default requirements.
+
 ## 4.1.70 (2026-10-25)
 
 - Recorded a two-work, classifier-targeted counterfactual-generation scope and separately verified Chinese explanation wording. Complete source-specific architectures, causal-effect and physical-feasibility claims remain outside the base-name record.

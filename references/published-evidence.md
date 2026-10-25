@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 104-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 104 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 105-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 105 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计104篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计105篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -116,6 +116,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P102 | [Evaluating practical adversarial robustness of fault diagnosis systems via spectrogram-aware ensemble method](https://doi.org/10.1016/j.engappai.2024.107980) | EAAI 130 (2024), Art.107980. Institutional author abstract describes spectral input manipulation for black-box evaluation. This is purpose-level corroboration, not a full SAEM or attack-training definition, method audit or performance verification. |
 | P103 | [Fault detection and identification using Bayesian recurrent neural networks](https://doi.org/10.1016/j.compchemeng.2020.106991) | CCE 141 (2020), Art.106991. Published author-hosted PDF pp.4-6: predictive moments feed process-monitoring decisions. Output variation, numerical sampling error and marginal/joint decisions differ; full BRNN theory, implementation and results are not certified. |
 | P104 | [Prediction interval soft sensor for dissolved oxygen content estimation in an electric arc furnace](https://doi.org/10.1016/j.asoc.2024.112246) | Applied Soft Computing 167 (2024), Art.112246. Published institutional PDF pp.5-6: scalar-output bounds, stated approximation assumptions, coverage and width. This is a soft-sensing quantity/evaluation record, not generic admission of the full fuzzy interval variants. |
+| P105 | [Residual-Hypergraph Convolution Network: A Model-Based and Data-Driven Integrated Approach for Fault Diagnosis in Complex Equipment](https://doi.org/10.1109/TIM.2022.3227609) | TIM 72, Art.3501811; institutional record reports online publication 8 Dec 2022. Read author-uploaded manuscript HTML, selected Sections III and IV-B, Eqs.(5)-(8): equipment-node membership and normalized node-edge-node base propagation. Full Res-HGCN, signed matrix/degree implementation, physical relations and results are not certified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -536,6 +537,27 @@ These analyses inform [abstract craft](abstract-and-contribution-craft.md), [con
 | P55 p.1 and pp.3-4, Section II-A | SFA minimizes temporal derivative energy with scale/nontriviality constraints; the survey distinguishes learned temporal relations from direct low-pass filtering. | Supports the base method definition, not every variant or derivation. One survey and one application share foundational SFA lineage; they do not establish independent inventions or certify every listed mechanism. |
 
 这些定义核对补充的是名称适用范围，不以论文数量替代语义核查；不复制源文句子，也不为源文全部推导或实验背书。
+
+## Hypergraph Membership And Task Interfaces
+
+P96 was reread at identity p.1, Section 2.2/p.3 and selected Sections 3.2-3.3,
+pp.4-5, with pp.3-5 visually inspected. It represents samples using per-batch
+neighborhood membership; p.5 specifies uniform hyperedge weights. P105 was
+read in the author's [uploaded manuscript HTML](https://www.researchgate.net/publication/365892590_Residual-Hypergraph_Convolution_Network_A_Model-Based_and_Data-Driven_Integrated_Approach_for_Fault_Diagnosis_in_Complex_Equipment),
+selected Sections III and IV-B, not a verified publisher-final file. Its
+[institutional publication record](https://research.polyu.edu.hk/en/publications/residual-hypergraph-convolution-network-a-model-based-and-data-dr/)
+confirms the DOI. Together they support hypergraph membership and the normalized
+node-edge-node base operation, not identical node semantics or the full proposed
+networks. P105's signed construction/degree interface remains unverified.
+
+Chinese base wording was read separately in [Engineering's bilingual article](https://www.engineering.org.cn/engi/CN/1159983337043452565),
+title/abstracts and selected Sections 3.2-3.3, and in the original
+[Complex Systems and Complexity Science bilingual abstract](https://fzkx.qdu.edu.cn/CN/abstract/abstract488.shtml).
+These support the recorded hypergraph/hyperedge/network and convolution wordings,
+not an independently checked Chinese incidence-matrix name or extra English
+industrial source IDs. A different MSSP candidate's author PDF returned 403;
+its accessible abstract was a lead, not a second definition. No scientific
+experiment or full algorithm/result reproduction was performed.
 
 ## Knowledge Entry And Constraint Scope
 
