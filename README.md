@@ -4,7 +4,7 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.2.25: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.2.26: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
 The 4.2 line adds [problem-first industrial classification](references/problem-first-classification.md): separate observation, annotation, operating and resource difficulties from tasks, system scales and candidate methods. It distinguishes data samples, annotation and learning objectives, permits problem-only work, and provides a conditional [problem-to-method navigation](references/problem-first-classification.md#6-when-requested-problem-to-method-navigation) when ideas are requested. See the [evaluation record](evals/README.md) for actual tests and audit limits; the terminology bank is not a completed whitelist.
 
@@ -67,6 +67,12 @@ python3 scripts/install_suite.py --copy
 
 Python 3.9+ is sufficient for the bundled checks and installer; no third-party package is needed. The default destination is `$CODEX_HOME/skills/engineering-application-journal-writing-skill`, falling back to `~/.codex/skills/engineering-application-journal-writing-skill`. Use `--target FINAL_DIRECTORY` to choose another destination. Existing targets are never overwritten. Omit `--copy` to create a symlink.
 
+Copy mode leaves the source untouched and omits local runtime/cache trees such as
+`.venv`, `node_modules` and `.pytest_cache`. The root maintenance `archive` is
+excluded, while referenced nested assets such as `assets/archive` remain part of
+the installed suite. This is copy selection, not permission to delete source
+directories or proof that every local source tree is ready for installation.
+
 Preserve the shared directory structure. Clients supporting nested skills may expose companions directly; otherwise invoke the root skill and let it read the requested companion. Client discovery varies and must be checked in that client. Other skill-capable assistants can read the Markdown without Codex UI metadata. Browser access, PDF tools, LaTeX compilers and experiment runners are optional capabilities supplied by your environment.
 
 ### Verify, Update And Remove
@@ -120,7 +126,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.2.25 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.2.26 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|

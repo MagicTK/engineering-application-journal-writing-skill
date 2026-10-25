@@ -4,7 +4,7 @@
 
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
-**4.2.25：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+**4.2.26：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
 
 4.2系列增加[工业问题优先分类](references/problem-first-classification_CN.md)：将观测、标注、运行和资源困难，与任务、对象尺度和候选方法分开；区分样本、标注信息和学习目标，支持仅整理问题，也可在作者要求后使用[问题—方法导航](references/problem-first-classification_CN.md#六作者要求后的问题方法导航)。实际测试范围与未完成核查见[评估记录](evals/README.md)；术语库不是已经全面验证的白名单。
 
@@ -67,6 +67,8 @@ python3 scripts/install_suite.py --copy
 
 检查工具和安装器使用 Python 3.9+ 标准库，无第三方依赖。默认安装到 `$CODEX_HOME/skills/engineering-application-journal-writing-skill`，未设置时使用 `~/.codex/skills/engineering-application-journal-writing-skill`。`--target FINAL_DIRECTORY` 指定最终目录；不会覆盖已有目标。省略 `--copy` 则建立符号链接。
 
+复制安装不改动源目录，副本不带入 `.venv`、`node_modules`、`.pytest_cache` 等本地运行/缓存目录。仅排除根目录的维护用 `archive`，被引用的 `assets/archive` 等嵌套素材仍随套件安装。这是复制范围，不是删除源目录的授权，也不表示任意本地源码树都已通过安装检查。
+
 保留完整目录，因为伴随 Skill 使用共享参考的相对路径。支持嵌套发现的客户端可直接展示各 Skill；仅识别根入口的客户端由总控读取伴随文件。具体客户端能否发现需实际验证。其他助手可读取 Markdown，无需 Codex 界面元数据。浏览器、PDF 工具、LaTeX 编译器和训练后端由使用环境提供。
 
 ### 确认安装成功
@@ -120,7 +122,7 @@ python3 scripts/install_suite.py --copy
 
 ## 文件怎样组织
 
-4.2.25 包含 **28 个 Skill 入口 Markdown、30 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
+4.2.26 包含 **28 个 Skill 入口 Markdown、30 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
 
 | 目录 | 内容 |
 |---|---|

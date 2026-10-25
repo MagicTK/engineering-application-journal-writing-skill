@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.26 (2026-10-26)
+
+- Fixed copy installation to omit known local runtime/cache trees while leaving the source unchanged.
+- Restricted the existing maintenance-archive exclusion to the source root so referenced nested archival assets remain available after installation.
+- Clarified bilingual terminology navigation as learning objectives and guidance, keeping training/test samples distinct from task labels and constructed targets; no new mechanism name was admitted.
+- Added real CLI regression checks for copied content and source preservation; no manuscript, experimental result or local user installation was changed.
+
 ## 4.2.25 (2026-10-26)
 
 - Added a scoped meta-learning base-name record using two distinct engineering-journal contexts and a separately checked original Chinese bilingual source.

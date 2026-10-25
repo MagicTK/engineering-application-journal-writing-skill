@@ -42,8 +42,10 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def copy_ignore(_: str, names: list[str]) -> set[str]:
-    ignored = {".git", "__pycache__", "archive", ".DS_Store"}
+def copy_ignore(directory: str, names: list[str]) -> set[str]:
+    ignored = {".git", "__pycache__", ".pytest_cache", ".venv", "node_modules", ".DS_Store"}
+    if Path(directory).resolve() == ROOT:
+        ignored.add("archive")
     return {name for name in names if name in ignored or name.endswith(".pyc")}
 
 

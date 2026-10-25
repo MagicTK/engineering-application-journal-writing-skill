@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -335,7 +336,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.25", suite["version"])
+        self.assertEqual("4.2.26", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -620,6 +621,52 @@ class SuiteValidatorTests(unittest.TestCase):
             )
             self.assertEqual(0, linked.returncode, linked.stderr)
             self.assertTrue(link_target.is_symlink())
+
+    def test_copy_install_omits_runtime_caches_without_deleting_source(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            source = Path(temp) / "source"
+            target = Path(temp) / "installed"
+            shutil.copytree(ROOT, source, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+            for name in (".venv", ".pytest_cache", "node_modules"):
+                marker = source / name / "synthetic-cache.bin"
+                marker.parent.mkdir()
+                marker.write_bytes(b"synthetic runtime cache\n")
+            result = subprocess.run(
+                [sys.executable, "-B", str(source / "scripts/install_suite.py"),
+                 "--copy", "--target", str(target)],
+                capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(0, result.returncode, result.stderr + result.stdout)
+            for name in (".venv", ".pytest_cache", "node_modules"):
+                with self.subTest(name=name):
+                    self.assertFalse((target / name).exists())
+                    self.assertEqual(b"synthetic runtime cache\n",
+                                     (source / name / "synthetic-cache.bin").read_bytes())
+            self.assertEqual((source / "SKILL.md").read_bytes(), (target / "SKILL.md").read_bytes())
+
+    def test_copy_install_preserves_referenced_nested_archive_assets(self) -> None:
+        with tempfile.TemporaryDirectory() as temp:
+            source = Path(temp) / "source"
+            target = Path(temp) / "installed"
+            shutil.copytree(ROOT, source, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+            asset = source / "assets/archive/reference.md"
+            asset.parent.mkdir()
+            asset.write_text("Synthetic shared reference.\n", encoding="utf-8")
+            readme = source / "README.md"
+            readme.write_text(readme.read_text(encoding="utf-8") +
+                              "\n[Synthetic reference](assets/archive/reference.md)\n", encoding="utf-8")
+            private_archive = source / "archive/local-note.txt"
+            private_archive.parent.mkdir()
+            private_archive.write_text("Synthetic local maintenance note.\n", encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, "-B", str(source / "scripts/install_suite.py"),
+                 "--copy", "--target", str(target)],
+                capture_output=True, text=True, check=False,
+            )
+            self.assertEqual(0, result.returncode, result.stderr + result.stdout)
+            self.assertEqual(asset.read_bytes(), (target / "assets/archive/reference.md").read_bytes())
+            self.assertFalse((target / "archive").exists())
+            self.assertEqual("Synthetic local maintenance note.\n", private_archive.read_text(encoding="utf-8"))
 
     def test_installer_rejects_invalid_source_before_creating_target(self) -> None:
         with tempfile.TemporaryDirectory() as temp:

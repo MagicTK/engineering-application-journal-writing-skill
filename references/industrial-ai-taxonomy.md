@@ -7,7 +7,7 @@ Use this reference before selecting a paper archetype, literature corpus, method
 The taxonomy is multi-label. An established manuscript can receive labels on
 every axis; an early problem inventory need not have a selected method, output
 or evidence plan. See [problem-first classification](problem-first-classification.md)
-for problem-only work and supervision-information versus training-signal profiles.
+for problem-only work and profiles separating samples, annotation and learning objectives.
 
 ## Contents
 
