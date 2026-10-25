@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.74 (2026-10-25)
+
+- Aligned English/Chinese experiment quality gates with the existing claim-specific evidence framework: analytical properties, empirical effects and resource validity need different support, not a mandatory deletion row each.
+- Separated contribution evidence from purposeful implementation/evaluation controls, and clarified how joint or coupled variants should be interpreted.
+- Reread existing P59/P38 evidence-role passages; introduced no general mechanism name, translation admission, source ID, topic or template file.
+
 ## 4.1.73 (2026-10-25)
 
 - Clarified source-role routing across operating-domain datasets, acquired streams and derived representations, preserving the earlier conditional alignment and provenance guidance.

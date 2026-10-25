@@ -128,12 +128,18 @@ The comparison set should include the strongest relevant methods, not only gener
 
 Check:
 
-- each variant removes or changes one interpretable design element;
+- each variant identifies the actual intervention in the model or evaluation setup; one-factor comparisons isolate a change where meaningful, while joint/coupled changes and collateral differences are identified rather than assigned a unique component effect;
 - names such as `w/o ...` match the actual implementation;
 - a reused complete-model result matches the main table under the same metric and aggregation definition; independent reruns instead identify their run population and may differ;
 - metrics are defined consistently;
 - the text reports the correct absolute or percentage-point change;
 - conclusions do not assign a unique causal effect when components interact strongly.
+
+Match the evidence to the claim: a valid derivation can support its stated
+structural property without another empirical deletion row. Numerical execution,
+predictive benefit and a new resource's provenance/annotation/access need their
+own relevant checks. Routine consistency or implementation controls need not
+become novelty items and cannot substitute for evidence of an empirical gain.
 
 Recommend omitting redundant variants only when experiment planning or substantive revision is in scope. A review or language pass does not authorize deletion of approved experiments, result rows or figures.
 

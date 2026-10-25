@@ -7,13 +7,13 @@ description: Design, audit, and organize experimental evidence for engineering-a
 
 [中文执行版](../../skills-zh/engineering-experiment-evidence-design-zh/SKILL.md)
 
-Suite version: `4.1.73`
+Suite version: `4.1.74`
 
 ## Mission
 
 Make every experiment answer a scientific or engineering question. Replace result accumulation with a traceable evidence chain:
 
-`claim -> required test -> data and controls -> metric -> result artifact -> allowed conclusion`
+`claim -> appropriate evidence -> data/assumptions and controls -> metric or derivation -> evidence artifact -> allowed conclusion`
 
 <!-- invariant: no-fabrication -->
 <!-- invariant: verified-data-version -->
@@ -25,6 +25,8 @@ Make every experiment answer a scientific or engineering question. Replace resul
 
 Classify each intended claim:
 
+- `structural`: a specified mathematical/architectural property under stated assumptions;
+- `resource`: a reusable data/annotation/benchmark capability with documented provenance and access conditions;
 - `comparative`: method improves a measured outcome;
 - `component`: a module contributes to the outcome;
 - `robustness`: performance remains acceptable under disturbances;
@@ -99,14 +101,14 @@ Separate the industrial challenge from the method family with [the taxonomy](../
 
 ## 6. Design Ablations Around Contributions
 
-Give each core design claim a discriminating test. When a component can be meaningfully intervened on, an ablation can compare:
+Give each core design claim evidence appropriate to its scope. When a component can be meaningfully intervened on, an ablation can compare:
 
 - full model;
 - one component removed or replaced at a time;
 - structurally meaningful alternative;
 - same training and evaluation setting.
 
-Avoid arbitrary combinations that cannot be interpreted. A coupled component may need a valid replacement or joint-interaction test rather than deletion; an analytical claim may require analysis as well as experiments. If a full-model result is reused, it must match the main comparison. Independently repeated runs under the same settings may differ; identify their run populations rather than forcing numerical equality.
+Avoid arbitrary combinations that cannot be interpreted. A coupled component may need a valid replacement or joint-interaction test rather than deletion. A correct derivation can establish a structural property within its assumptions; empirical benefit and numerical implementation claims need their own appropriate evidence. A validity-only control need not become another novelty item. If a full-model result is reused, it must match the main comparison. Independently repeated runs under the same settings may differ; identify their run populations rather than forcing numerical equality.
 
 ## 7. Use Sensitivity Selectively
 
@@ -225,7 +227,7 @@ Read the expanded [evidence design guide](../../references/experiment-evidence-d
 
 Evidence is ready only when:
 
-- each contribution has a test;
+- each retained contribution has claim-appropriate evidence, whether empirical, analytical or resource-validation evidence; a separate model-deletion row is not mandatory for every contribution;
 - comparisons have fair information access;
 - splits match the real operational unit;
 - aggregate and class-wise values are consistent;

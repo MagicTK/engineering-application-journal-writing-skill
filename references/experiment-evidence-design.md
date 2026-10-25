@@ -140,9 +140,13 @@ Input adaptation such as interpolation, aggregation, masking, or resampling is n
 
 ## 5. Ablation Design
 
-Map every ablation to a contribution:
+Map each variant to a specific claim or verification question. A control can
+resolve a mechanism, implementation or evaluation uncertainty without becoming
+a separate novelty contribution. Every retained contribution still needs
+appropriate evidence; a derivation may establish a structural property, whereas
+empirical benefit and resource validity require evidence for those roles.
 
-| Contribution | Full mechanism | Ablation | Expected observation | Actual result |
+| Claim or verification question | Operation/configuration | Variant/control | Discriminating evidence | Actual finding |
 |---|---|---|---|---|
 
 Use one-factor removal or a meaningful alternative. If modules interact strongly, add a limited interaction ablation and explain why.

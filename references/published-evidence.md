@@ -540,6 +540,25 @@ These analyses inform [abstract craft](abstract-and-contribution-craft.md), [con
 
 这些定义核对补充的是名称适用范围，不以论文数量替代语义核查；不复制源文句子，也不为源文全部推导或实验背书。
 
+## Evidence Roles And Ablation Wording
+
+P59's original [author v1 HTML](https://arxiv.org/html/2402.07251v1), selected
+Section 3.2/Theorem 1 and proof/Remarks 1-3, was reread: its exact linear-equality
+property has a full-row-rank assumption and a specified correction placement.
+This is not a fresh journal-final method reading or certification of numerical
+implementation, all physical relations or predictive gains. P38 identity p.1,
+selected resource-contribution continuation p.3 and annotation description p.7
+were reread, with p.7 visually inspected; current resource access and annotation
+validity were not independently verified or downloaded.
+
+These illustrate different evidence roles, not a new mechanism-definition pair
+or universal editorial rule. The existing library already recognizes analytical
+and resource claims; the wording update aligns narrower contribution/ablation
+gates with that scope. Validity controls need not be novelty items, a mathematical
+property need not have its own empirical deletion row, and a proof is not a
+substitute for a claimed predictive improvement. No source IDs, new generic
+names, Chinese admissions or research experiments were added.
+
 ## Source Roles: Domains, Streams And Views
 
 P44 identity p.1, selected pp.2,4-5 were reread, with pp.2,5 visually inspected.
