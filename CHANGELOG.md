@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.30 (2026-10-26)
+
+- Added a scoped multitask-learning record from distinct process-quality and bearing-attribute definitions, with separately checked Chinese wording.
+- Linked multiple engineering outputs to shared/task-specific learning in the existing problem-to-method navigation and explained their retained-output relationships without requiring expert routing.
+- Preserved the already validated abstract/contribution core and source-specific module boundaries; no new Skill, template, research experiment or manuscript edit was introduced.
+
 ## 4.2.29 (2026-10-26)
 
 - Added a scoped RAG base-name record from two original engineering-journal author post-prints and a separately checked Chinese journal definition.

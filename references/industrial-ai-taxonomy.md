@@ -39,7 +39,7 @@ Do not infer the challenge from the proposed model name. Remove the model mental
 | M3 | Relational and structured modeling | graph learning, topology constraints, causal discovery, knowledge-guided relations |
 | M4 | Multiscale, time-frequency, and fusion modeling | multiscale encoders, spectral analysis, cross-attention, multimodal or multisource fusion |
 | M5 | Reconstruction-based and generative modeling | autoencoders, VAE, GAN, diffusion, conditional synthesis; distinguish representation training from sample generation |
-| M6 | Learning and adaptation strategy | transfer, domain adaptation, domain generalization, continual/incremental learning, self-/semi-/weak supervision, test-time adaptation |
+| M6 | Learning and adaptation strategy | multitask learning, transfer, domain adaptation, domain generalization, continual/incremental learning, self-/semi-/weak supervision, test-time adaptation |
 | M7 | Routing, foundation-model, and uncertainty mechanisms | mixture of experts, LLM-assisted semantics, fuzzy systems, probabilistic calibration |
 | M8 | Efficient or intrinsically interpretable mechanisms | low rank, sparsity, distillation, pruning, compact operators, ante-hoc explanations |
 

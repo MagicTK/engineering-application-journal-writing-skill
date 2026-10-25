@@ -650,6 +650,13 @@ Evidence priorities:
 
 Start from what is mixed: features, predictions or parameters, and for which task. P36 uses task-specific gates to mix expert features for several quality targets; its balancing mechanism adjusts task gradients during training. This is not evidence of top-k sparse execution, load balancing across devices, or uniformly distributed expert use. Dense weighted mixtures and sparse routing have different computation boundaries. When reduced negative transfer is claimed, compare task-wise outcomes with relevant single-task and shared-model alternatives; an improved aggregate can conceal harm to one quality target. Keep gradient weighting, expert routing and class-frequency reweighting separate, and define any combined score across targets with different units.
 
+For a multitask overview or contribution, connect the shared learning to each
+retained task output. P36 estimates separate quality quantities; P130 instead
+predicts fault attributes from shared features and uses those predictions for
+fault identification. The latter does not require P36's expert-mixture design.
+Describe the actual task relationship before choosing a routing or balancing
+story, using the [checked MTL record](engineering-application-terminology-bank.md#data-use-and-learning-phases).
+
 An expert need not be a neural subnetwork: P41 combines linear expert predictions with input-dependent gates. Name the actual expert model and mixed object. Sparsity in fitted coefficients is different from activating only a subset of experts at inference; report the latter only when the execution actually skips experts. Learned mixture weights do not by themselves identify discrete physical operating modes. In knowledge-guided mixtures, keep possibility-based prior information, mixture probabilities and fitted responsibilities distinct rather than calling every weight a probability.
 
 “混合专家”是基础类别，专家可以是线性模型；是否为神经网络、是否稀疏执行、是否对应物理工况，都要分别核实。“系数稀疏”“专家路由”和“任务梯度平衡”不能互换。

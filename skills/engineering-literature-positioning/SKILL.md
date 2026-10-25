@@ -7,7 +7,7 @@ description: Research and position an engineering-application journal paper usin
 
 [中文执行版](../../skills-zh/engineering-literature-positioning-zh/SKILL.md)
 
-Suite version: `4.2.29`
+Suite version: `4.2.30`
 
 ## Mission
 

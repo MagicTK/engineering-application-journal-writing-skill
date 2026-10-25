@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 129-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 129 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 130-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 130 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计129篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83/P124/P128/P129注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计130篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83/P124/P128/P129注明所读作者版本，P130注明所供IEEE接受发表稿。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -141,10 +141,23 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P127 | [A deep reinforcement learning-based intelligent fault diagnosis framework for rolling bearings under imbalanced datasets](https://doi.org/10.1016/j.conengprac.2024.105845) | CEP 145 (2024), 105845; supplied published PDF pp.1-5, with p.5 visually checked. Adjacent bearing diagnosis: neural policy/value learning uses class feedback, and the testing prose retains the Actor's class-decision output. Environment-state label notation and complete implementation inputs remain unresolved; full A2C/attention design, gradient/reward formulas, calibration and performance are not certified. |
 | P128 | [LLM-based domain-specific knowledge graph construction and hybrid retrieval-augmented generation](https://doi.org/10.1016/j.jmsy.2026.04.023) | JMS 86 (2026), pp.1022-1038; [institutional author post-print](https://orca.cardiff.ac.uk/id/eprint/186397/). PDF pp.16-18, Section 4.2/Algorithm 1: query-conditioned graph and source-text retrieval supplies generation for equipment technical analysis. Full IC-HRAG, final-version formula identity and results are not certified. |
 | P129 | [Towards intelligent knowledge assistance in abrasive belt grinding via a retrieval-augmented generation chatbot with reliability support](https://doi.org/10.1016/j.compind.2026.104479) | Computers in Industry 178 (2026), 104479; [institutional author post-print](https://orca.cardiff.ac.uk/id/eprint/186490/). PDF pp.11-14, Section 3/Table 3: retrieved/reranked fragments supply knowledge-assistance responses. Full BelGrindGPT/conflict filter, scoring and deployment claims are not certified. |
+| P130 | [A Multitask Crisscross Network for One-Shot Bearing Multiattribute Fault Diagnosis](https://doi.org/10.1109/TCYB.2026.3700287) | TCYB, supplied 2026 IEEE accepted-for-publication PDF, final except pagination. Selected pp.1-5, with pp.3-4 visually checked: Section II-C defines shared parameters, task-specific attribute predictors and joint fitting; Section III connects attributes to fault identification. Full MTCCN/ACC, label mapping, equations and results are not certified. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
 ## Passage-Level Writing Analysis / 段落级写作分析
+
+### Related Tasks And Retained Outputs
+
+P36 pp.3-5 links shared features, task-specific mixtures and training-loss
+weights to separate quality estimates. P130 pp.3-4 instead connects shared
+features to attribute predictions and a fault-label decision. These are two
+MTL contexts, not one compulsory architecture or proof of uniformly beneficial
+transfer. Source task counts are not physical-stage or modality counts.
+The original [AAS c180093 Fig.2 paired captions](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c180093?viewType=HTML)
+separately support the base Chinese wording; the indexed Section 4.1 body was
+not exposed by the accessible page. Full balancing/classifier-chain names and
+source-specific equations remain attributed.
 
 ### Retrieved Knowledge And Generated Engineering Answers
 
