@@ -70,6 +70,39 @@ class SuiteValidatorTests(unittest.TestCase):
                     if separator and (source.parent / filename).resolve() == target:
                         self.assertIn(fragment, anchors, f'{source.relative_to(ROOT)}: {link}')
 
+    def test_abstract_core_routes_to_conditional_examples(self) -> None:
+        for suffix in ('', '_CN'):
+            core = ROOT / f'references/abstract-and-contribution-craft{suffix}.md'
+            examples = ROOT / f'references/abstract-mechanism-examples{suffix}.md'
+            self.assertTrue(examples.is_file(), str(examples))
+            links = VALIDATOR.LINK_RE.findall(core.read_text())
+            self.assertTrue(any(link.split('#', 1)[0] == examples.name for link in links))
+
+    def test_abstract_example_routes_resolve(self) -> None:
+        for suffix in ('', '_CN'):
+            core = ROOT / f'references/abstract-and-contribution-craft{suffix}.md'
+            examples = ROOT / f'references/abstract-mechanism-examples{suffix}.md'
+            self.assertTrue(examples.is_file(), str(examples))
+            anchors = set(re.findall(r'<a id="([a-z0-9-]+)"></a>', examples.read_text()))
+            self.assertIn('reconstruction-training', anchors)
+            for source in (core, examples):
+                for link in VALIDATOR.LINK_RE.findall(source.read_text()):
+                    filename, separator, fragment = link.partition('#')
+                    target = (source.parent / filename).resolve() if filename else source.resolve()
+                    if target == examples.resolve() and separator:
+                        self.assertIn(fragment, anchors, link)
+
+    def test_abstract_core_retains_claim_evidence_and_sync(self) -> None:
+        pairs = (
+            ('', ('## 4. Contributions', '## 5. Close On Evidence', '## 6. Synchronize Meaning')),
+            ('_CN', ('## 4. 贡献', '## 5. 实验收束', '## 6. 同步含义')),
+        )
+        for suffix, headings in pairs:
+            text = (ROOT / f'references/abstract-and-contribution-craft{suffix}.md').read_text()
+            for heading in headings:
+                self.assertIn(heading, text)
+            self.assertIn('abstract-body-sync.md', text)
+
     def test_evidence_identifiers_resolve_to_unique_sources(self) -> None:
         index = (ROOT / "references/published-evidence.md").read_text()
         source_table = index.split("## Sources /", 1)[1].split("Some source titles", 1)[0]
@@ -263,7 +296,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.75", suite["version"])
+        self.assertEqual("4.1.76", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

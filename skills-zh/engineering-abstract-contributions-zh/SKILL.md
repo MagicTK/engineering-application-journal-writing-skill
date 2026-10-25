@@ -7,7 +7,7 @@ description: 对照真实方法与证据修订工程应用论文摘要和贡献�
 
 [English](../../skills/engineering-abstract-contributions/SKILL.md)
 
-套件版本：`4.1.75`
+套件版本：`4.1.76`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->
@@ -25,7 +25,7 @@ description: 对照真实方法与证据修订工程应用论文摘要和贡献�
 
 分别标明仅训练使用的目标、预训练、预测计算与测试时适应。说明训练如何塑造最终预测器，不给仅通过目标关联的组件虚构前向连接。压缩文字时保留各中间对象的尺度。
 
-读取[摘要与贡献写法](../../references/abstract-and-contribution-craft_CN.md)，按需查[术语裁定](../../references/terminology-decisions_CN.md)。
+读取[摘要与贡献写法](../../references/abstract-and-contribution-craft_CN.md)中与请求相关的通用核查；接口例子单独按需选择，局部修改不必读取全部例子。再按需查[术语裁定](../../references/terminology-decisions_CN.md)。
 
 ## 尊重已有表达与修改边界
 

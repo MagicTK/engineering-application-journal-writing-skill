@@ -1,5 +1,11 @@
 # Changes
 
+## 4.1.76 (2026-10-25)
+
+- Separated the common abstract/contribution checks from the accumulated conditional interface illustrations in paired English/Chinese references.
+- Preserved every original paragraph and its source scope; examples remain alternatives, not a compulsory architecture or novelty evidence.
+- Added routing and link regression checks while keeping contribution, evidence and minimal body-synchronization guidance in the core references.
+
 ## 4.1.75 (2026-10-25)
 
 - Added a scoped first-order TSK rule/classifier definition record from two distinct TFS works, with a separate original Chinese scholarly wording check.

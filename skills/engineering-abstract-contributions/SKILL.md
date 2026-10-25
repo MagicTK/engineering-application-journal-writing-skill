@@ -7,7 +7,7 @@ description: Revise an industrial or engineering paper's abstract and contributi
 
 [中文执行版](../../skills-zh/engineering-abstract-contributions-zh/SKILL.md)
 
-Suite version: `4.1.75`
+Suite version: `4.1.76`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->
@@ -25,7 +25,7 @@ If equations, diagram labels and prose disagree, locate the conflict and check a
 
 Mark training-only objectives, pretraining, prediction-time computation and test-time adaptation separately. Explain how training shapes the final predictor without inventing a forward connection between components that only share an objective. Preserve the level of each intermediate object when compressing the account.
 
-Read [mechanism-linked abstracts](../../references/abstract-and-contribution-craft.md). Consult only the applicable entries in the [terminology decisions](../../references/terminology-decisions.md).
+Read the relevant common checks in [mechanism-linked abstracts](../../references/abstract-and-contribution-craft.md). Its optional interface examples are separate: select a matching passage only when it helps, not the entire example catalogue for a narrow revision. Consult only the applicable entries in the [terminology decisions](../../references/terminology-decisions.md).
 
 ## Revise Within The Author's Scope
 
