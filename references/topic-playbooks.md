@@ -48,6 +48,14 @@ Also distinguish acquisition from augmentation. P26 deliberately transforms time
 
 ## 2. Scarce Labels, Few-Shot, Zero-Shot, Weak, Or Self-Supervised Learning
 
+When the request is only to classify industrial problems, start with the
+[annotation profile and supervision/signal boundaries](problem-first-classification.md#3-supervision-information-and-training-signals),
+not a candidate training method or experiment plan. These are overlapping
+descriptions of information and learning, not one exclusive ladder. For example,
+self-supervised targets can be used within a semi-supervised quality predictor;
+weak supervision may include incomplete labels under a stated broad convention.
+Proceed to the writing/evaluation choices below only when that scope is requested.
+
 Writing priorities:
 
 - define exactly which classes, conditions, samples, or label levels are unavailable;

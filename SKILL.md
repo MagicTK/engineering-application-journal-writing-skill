@@ -7,7 +7,7 @@ description: Orchestrate end-to-end work on data-driven industrial and engineeri
 
 [中文执行版](skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md)
 
-Suite version: `4.1.76`
+Suite version: `4.2.0`
 
 ## Mission
 
@@ -75,6 +75,8 @@ Before choosing a narrative, record:
 - **evidence**: analytical, simulated, benchmark, pilot, retrospective industrial, prospective/shadow, online, external, or operational-value evidence.
 
 Use [`industrial-ai-paper-router`](skills/industrial-ai-paper-router/SKILL.md) and [the taxonomy](references/industrial-ai-taxonomy.md) when any axis is unclear. Load [topic playbooks](references/topic-playbooks.md) only for selected labels.
+
+For **problem-only** classification, use [problem-first classification](references/problem-first-classification.md): describe the industrial difficulties and annotation/observation conditions, keeping unselected methods, evidence plans and manuscript archetypes deferred. Folder names are search leads, not definitions or permission to generate ideas.
 
 Do not route from a familiar model component. Terms such as `channel`, `variable`, `dependency`, `frequency`, `graph`, or `foundation model` enter the paper only after an engineering fact and a modeling requirement justify them.
 

@@ -296,7 +296,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.1.76", suite["version"])
+        self.assertEqual("4.2.0", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -414,6 +414,47 @@ class SuiteValidatorTests(unittest.TestCase):
                     "case invalid-rubric has invalid required_behaviors",
                     VALIDATOR.validate_eval(path, "behavior"),
                 )
+
+    def test_problem_only_routing_does_not_force_a_method_or_archetype(self) -> None:
+        for relative in (
+            "SKILL.md",
+            "skills/industrial-ai-paper-router/SKILL.md",
+            "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md",
+            "skills-zh/industrial-ai-paper-router-zh/SKILL.md",
+        ):
+            content = (ROOT / relative).read_text(encoding="utf-8")
+            self.assertIn("problem-only", content, relative)
+            self.assertIn("problem-first-classification", content, relative)
+        taxonomy = (ROOT / "references/industrial-ai-taxonomy.md").read_text()
+        self.assertIn("Method: not selected", taxonomy)
+        self.assertIn("do not select an archetype", taxonomy)
+
+    def test_problem_profiles_keep_supervision_and_signal_axes_separate(self) -> None:
+        en = (ROOT / "references/problem-first-classification.md").read_text()
+        zh = (ROOT / "references/problem-first-classification_CN.md").read_text()
+        for marker in ("label scarcity", "label granularity", "label reliability",
+                       "self-supervised", "semi-supervised", "incomplete supervision",
+                       "reporting delay", "concept drift", "not mutually exclusive"):
+            self.assertIn(marker, en)
+        for marker in ("标签稀缺", "标签粒度", "标签可靠性", "自监督", "半监督", "不互斥"):
+            self.assertIn(marker, zh)
+        for content in (en, zh):
+            self.assertIn("P17", content)
+            self.assertIn("P21", content)
+            self.assertIn("P22", content)
+            self.assertIn("10.1093/nsr/nwx106", content)
+
+    def test_terminology_expansion_does_not_mix_task_or_scale_with_challenges(self) -> None:
+        en = (ROOT / "references/engineering-application-terminology-bank.md").read_text()
+        zh = (ROOT / "references/engineering-application-terminology-bank_CN.md").read_text()
+        for content, header in ((en, "| Engineering challenges |"), (zh, "| 工程问题 |")):
+            row = next(line for line in content.splitlines() if line.startswith(header))
+            for misplaced in ("plant-wide", "anomaly localization", "异常定位", "全流程"):
+                self.assertNotIn(misplaced, row)
+        self.assertIn("| Object/scale |", en)
+        self.assertIn("| Supervision and training signals |", en)
+        self.assertIn("| 对象/尺度 |", zh)
+        self.assertIn("| 监督信息与训练信号 |", zh)
 
     def test_generic_core_keeps_method_axis_separate(self) -> None:
         root_skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")

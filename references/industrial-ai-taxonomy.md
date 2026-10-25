@@ -4,7 +4,10 @@
 
 Use this reference before selecting a paper archetype, literature corpus, method family, or experiment plan. It prevents a common category error: treating an engineering challenge, a modeling technique, a prediction task, and an application scale as if they were interchangeable topics.
 
-The taxonomy is multi-label. A manuscript normally receives one or more labels on every axis.
+The taxonomy is multi-label. An established manuscript can receive labels on
+every axis; an early problem inventory need not have a selected method, output
+or evidence plan. See [problem-first classification](problem-first-classification.md)
+for problem-only work and supervision-information versus training-signal profiles.
 
 ## Contents
 
@@ -125,6 +128,12 @@ Record operating status in the internal evidence ledger as `retrospective/offlin
 - **Lightweight vs. efficient**: parameter count alone does not establish latency, memory, energy, or deployability.
 
 ## 3. Routing Procedure
+
+In **problem-only** mode, return known industrial difficulties, wording,
+observation/annotation conditions and unresolved facts; do not select an archetype,
+generate methods or impose an experiment plan. Use `Method: not selected` and
+`Evidence: not supplied` when appropriate. The full routing sequence below is
+for a selected study, not a requirement to fill unknown axes in a library audit.
 
 **Source-role routing:** use the distribution/access questions under C3/M6
 when source denotes operating domains, and C4/M4 when heterogeneous acquired or

@@ -7,7 +7,7 @@ description: 工程应用论文图表与 LaTeX 生产 Skill 中文执行版。�
 
 [English](../../skills/engineering-figure-latex-production/SKILL.md)
 
-套件版本：`4.1.76`
+套件版本：`4.2.0`
 
 ## 一、任务目标
 

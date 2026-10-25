@@ -7,7 +7,7 @@ description: Classify and route a data-driven industrial engineering research id
 
 [中文执行版](../../skills-zh/industrial-ai-paper-router-zh/SKILL.md)
 
-Suite version: `4.1.76`
+Suite version: `4.2.0`
 
 ## Mission
 
@@ -37,6 +37,13 @@ Extract or request only what is missing:
 
 Do not infer an industrial challenge solely from a folder name, model acronym, or proposed architecture.
 
+Choose the requested scope before filling the axes. In **problem-only** mode,
+read [problem-first classification](../../references/problem-first-classification.md).
+Return the industrial difficulties, conditional EN/CN terms, known task/scale,
+observation/annotation profile and unresolved facts. Methods may remain not
+selected; evidence may remain not supplied. Skip Sections 4-6's archetype,
+problem-to-method mapping and experiment-plan expansion until requested.
+
 ## 2. Assign Five Axes
 
 Read [the full taxonomy](../../references/industrial-ai-taxonomy.md). Produce:
@@ -49,7 +56,9 @@ Object/scale: O... + sample granularity
 Evidence: E... available / E... required
 ```
 
-Use multiple labels when necessary, but identify one primary challenge and one primary task. A paper with every label has no usable center.
+Use multiple labels when necessary. For a selected paper identify its primary
+challenge and task; for a library/problem inventory retain multiple candidates
+and unknown outputs rather than inventing a paper center.
 
 ## 3. Check Category Boundaries
 
@@ -93,6 +102,9 @@ If the user or source material introduces an unsupported topic label, record it 
 ## 6. Produce A Routing Brief
 
 Return:
+
+For a full paper-routing request, the following brief applies. For problem-only
+work, return the limited deliverable specified in Section 1 instead.
 
 1. one-sentence engineering research question;
 2. five-axis classification;

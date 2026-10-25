@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.0 (2026-10-25)
+
+- Added a problem-only route and paired problem/annotation profiles, deferring architecture, experiments and manuscript archetypes when the request is only to organize industrial difficulties.
+- Corrected mixed category rows in the bilingual terminology bank: system scale, task output, learning settings, evidence and manuscript archetypes remain distinct.
+- Distinguished label quantity, granularity, reliability and access from self-generated training targets; preserved overlap conventions rather than imposing an exclusive supervision ladder.
+- Revisited selected definitions in six already indexed works and separate original scholarly terminology pages. Folder inventories remain private search aids; no time-series method ideas, full module-name admissions, manuscript edits or scientific experiments were added.
+
 ## 4.1.76 (2026-10-25)
 
 - Separated the common abstract/contribution checks from the accumulated conditional interface illustrations in paired English/Chinese references.

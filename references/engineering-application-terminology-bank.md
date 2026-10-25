@@ -318,8 +318,9 @@ These are context restrictions, not an absolute blacklist.
 Extend this bank without mixing topic-specific terms into the generic core.
 
 1. **Generic engineering layer**: process, measurements, evidence, claims.
-2. **Problem layer**: multi-stage, multi-rate, multimode, missing data,
-   limited labels, nonstationarity, compound faults, or anomaly localization.
+2. **Problem layer**: incomplete or differently timed observations, limited or
+   imperfect labels, changing operation, coupling, heterogeneous information,
+   simultaneous faults, or actual execution/decision constraints.
 3. **Method layer**: graph modeling, feature fusion, adaptation, lightweight
    modeling, diffusion, fuzzy modeling, multimodal learning, or language models.
 4. **Manuscript-specific map**: exact terms for one paper, stored with that
@@ -334,10 +335,19 @@ Use separate sub-banks when enough external evidence has been collected:
 
 | Layer | Example categories |
 |---|---|
-| Engineering challenges | multi-stage/plant-wide, multi-rate, multimode, nonstationary, missing data, limited labels, compound faults, anomaly localization |
+| Engineering challenges | missing/differently timed measurements, limited/imperfect labels, changing operation, process coupling, simultaneous faults, heterogeneous information, resource/decision constraints |
+| Object/scale | variables, equipment, production stages, multiblock or plant-wide processes; state the actual structural difficulty separately |
 | Engineering tasks | fault detection, fault diagnosis, process monitoring, quality prediction, remaining-life estimation, control, optimization, decision support |
-| Method families | feature fusion, graph modeling, attention, transfer/adaptation, lightweight modeling, self/weak supervision, diffusion, fuzzy modeling, multimodal learning, language models |
-| Evidence profiles | benchmark-only, benchmark plus real-world case, background-driven application, online/shadow evaluation, deployed system |
+| Task-specific outputs | anomaly localization, fault isolation, supported root-cause explanation; distinguish location from cause |
+| Supervision and training signals | supervised, semi-supervised, weakly supervised and unsupervised settings; self-generated learning targets, with stage-specific label use and possible overlap |
+| Method families | feature fusion, graph modeling, attention, transfer/adaptation, lightweight modeling, diffusion, fuzzy modeling, multimodal learning, language models |
+| Evidence profiles | analytical, benchmark, production-data, prospective/shadow, deployed or external evaluation; combine actual available evidence |
+| Manuscript archetypes | method-with-application, background-driven application, or system/decision work; not an evidence level |
+
+Use the [problem-first vocabulary and annotation profile](problem-first-classification.md)
+before adding problem sub-banks. A folder labeled weak supervision indicates an
+annotation limitation to investigate; self-supervision describes target construction.
+Neither alone specifies the task or proves an exclusive supervision class.
 
 Keep the generic core stable. A topic-specific entry must state both the
 engineering problem it names and the method/evidence context in which it is

@@ -4,9 +4,9 @@
 
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
-**4.1.76：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+**4.2.0：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
 
-本版补充部分方法名称的定义和译名证据。实际测试范围与未完成核查见[评估记录](evals/README.md)；术语库不是已经全面验证的白名单。
+4.2系列增加[工业问题优先分类](references/problem-first-classification_CN.md)：将观测、标注、运行和资源困难，与任务、对象尺度和候选方法分开；区分监督信息与自构造训练信号，支持只整理问题、后续再选方法。实际测试范围与未完成核查见[评估记录](evals/README.md)；术语库不是已经全面验证的白名单。
 
 [当前评估记录](evals/README.md#current-version-status)列明实际测试版本、案例、修复过程和边界，独立写作响应与程序检查分别报告，不替所有论文或全部指令背书；具体修订见[版本记录](CHANGELOG.md)。
 
@@ -24,6 +24,7 @@
 
 | 当前需求 | 入口 |
 |---|---|
+| 先整理工业问题和标注限制，暂不选方法 | [问题优先分类](references/problem-first-classification_CN.md) / [分类路由](skills-zh/industrial-ai-paper-router-zh/SKILL.md) |
 | 摘要模块没有承接，贡献像罗列模块 | [摘要与贡献](skills-zh/engineering-abstract-contributions-zh/SKILL.md) |
 | 有模型想法，尚不清楚工程问题 | [选题与贡献校准](skills-zh/engineering-research-ideation-zh/SKILL.md) |
 | 规划章节及验证贡献的实验 | [论文架构](skills-zh/engineering-paper-idea-architecture-zh/SKILL.md) |
@@ -119,7 +120,7 @@ python3 scripts/install_suite.py --copy
 
 ## 文件怎样组织
 
-4.1.76 包含 **28 个 Skill 入口 Markdown、26 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
+4.2.0 包含 **28 个 Skill 入口 Markdown、26 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
 
 | 目录 | 内容 |
 |---|---|

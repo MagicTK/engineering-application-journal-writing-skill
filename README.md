@@ -4,9 +4,9 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.1.76: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.2.0: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
-This version adds scoped definition and translation evidence for selected method names. See the [evaluation record](evals/README.md) for the tested cases and remaining audit limits; the terminology bank is not a completed whitelist.
+The 4.2 line adds [problem-first industrial classification](references/problem-first-classification.md): separate observation, annotation, operating and resource difficulties from tasks, system scales and candidate methods. It distinguishes supervision information from self-generated training signals and permits problem-only work without inventing an architecture. See the [evaluation record](evals/README.md) for actual tests and audit limits; the terminology bank is not a completed whitelist.
 
 The [current evaluation record](evals/README.md#current-version-status) identifies the tested version, actual cases, repairs and limits. Independent writing responses and deterministic packaging checks are reported separately. They do not certify every manuscript or every instruction; [versioned changes](CHANGELOG.md) explain what has been updated.
 
@@ -24,6 +24,7 @@ The suite does not guarantee acceptance, generate missing evidence or certify a 
 
 | Your task | Entry point |
 |---|---|
+| Organize industrial problems and annotation constraints; leave methods for later | [Problem-first classification](references/problem-first-classification.md) / [router](skills/industrial-ai-paper-router/SKILL.md) |
 | My abstract lists components but their connection is unclear | [Abstract and contributions](skills/engineering-abstract-contributions/SKILL.md) |
 | Is this an industrial problem or only a model idea? | [Research ideation](skills/engineering-research-ideation/SKILL.md) |
 | Which sections and experiments support this contribution? | [Paper architecture](skills/engineering-paper-idea-architecture/SKILL.md) |
@@ -119,7 +120,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.1.76 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.2.0 contains **28 Skill-entry Markdown files, 26 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|

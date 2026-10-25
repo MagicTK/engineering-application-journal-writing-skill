@@ -7,7 +7,7 @@ description: 工程应用论文实验与证据设计 Skill 中文执行版。用
 
 [English](../../skills/engineering-experiment-evidence-design/SKILL.md)
 
-套件版本：`4.1.76`
+套件版本：`4.2.0`
 
 ## 一、任务目标
 

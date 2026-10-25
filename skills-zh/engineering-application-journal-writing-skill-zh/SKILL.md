@@ -7,7 +7,7 @@ description: 数据驱动工业智能与工程应用期刊论文写作总控 Ski
 
 [English](../../SKILL.md)
 
-套件版本：`4.1.76`
+套件版本：`4.2.0`
 
 ## 一、任务目标
 
@@ -71,6 +71,8 @@ description: 数据驱动工业智能与工程应用期刊论文写作总控 Ski
 5. **证据概况**：理论、仿真、benchmark、台架、真实历史、影子运行、在线运行、多现场或运营收益证据；这些类型不可互相替代。
 
 维度不清时调用 [`industrial-ai-paper-router`](../industrial-ai-paper-router-zh/SKILL.md)，并读取[多维分类](../../references/industrial-ai-taxonomy.md)。只有课题实际涉及某一主题时才加载 [topic playbooks](../../references/topic-playbooks.md)。
+
+仅整理工业问题（problem-only）时读取[问题优先分类](../../references/problem-first-classification_CN.md)：先说明现实困难、观测及标注条件，未选的方法、实验计划和论文范式暂缓。文件夹只是检索线索，不是科学定义或生成idea的授权。
 
 不能从熟悉的模型组件反推论文主线。只有工程事实和建模要求确实需要时，`channel`、`variable`、`dependency`、`frequency`、图结构或基础模型等术语才进入正文。
 

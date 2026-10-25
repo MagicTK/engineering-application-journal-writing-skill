@@ -125,6 +125,20 @@ Some source titles use publisher typography normalized here for readability. Ver
 
 ## Passage-Level Writing Analysis / 段落级写作分析
 
+### Problem Profiles And Supervision Signals
+
+The [problem-first reference](problem-first-classification.md) revisits selected
+existing contexts: P17 p.2 Section II (continuous assay labels); P21 p.3 Section
+III-A and P26 p.3 Section III (labeled tasks combined with self-generated targets);
+P22 p.3 Section III-A (segment annotations versus point outputs); P19 pp.3,6
+(clustering roles/objective); P20 pp.3-4,6 (manual dataset labels and
+self-supervised training roles). P17/P21/P22 definition pages were also rendered
+and visually read. Identities were checked on p.1. Other extracted pages were
+not counted as read. These are not whole-pipeline label-use or result audits,
+new study IDs, independent inventions or admissions of complete source modules.
+The linked foundational and Chinese wording checks have separate roles and
+access limits; folder names are not evidence of problem prevalence.
+
 ### Chinese Wording, Domain Use And Evidence Status
 
 On 2026-10-25, the official [CCF Multimedia Technical Committee commentary](https://tc.ccf.org.cn/tcmt/xsdt/lwdd/2025-02-12/837946.shtml),
