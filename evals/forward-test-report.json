@@ -5,30 +5,34 @@
   "release_ready": true,
   "independent_fresh_contexts": true,
   "date": "2026-10-25",
-  "historical_report": "history/v4.2.12/forward-test-report.json",
+  "historical_report": "history/v4.2.13/pre-locator-fix-forward-test-report.json",
   "release_blockers": [],
   "cases": [
     {
-      "id": "M4213-A",
-      "skill": "engineering-terminology-polishing-zh",
-      "language": "zh",
-      "prompt": "学生希望核查这份虚构LaTeX片段中的工程术语。请实际使用只读术语工具，先确认哪些文字属于启用正文，再给简明的中文核对清单：列出候选的准确源行号、原词和是否有充分理由修改。不要因为工具列出候选就判为错误，也不要把注释/关闭分支里的词当作当前正文。没有原理或正文上下文足以判定时，说明需要核对哪个对象即可，不设计新模块，不强制同义替换，不改文件。\n\n这里的semantic attributes确实是已知故障类别的语义描述，不是把测量变量改名。第11行record是记录测量的动词；第21行sensor records是存储条目，可对应到学习样本标识。operating conditions描述两批数据的运行工况，operating state描述驱动固定参数门控权重的当前输入状态；没有声称在线更新模型参数。1200只是虚构样本数。请据此判断，而不是机械把attributes替为variables、records替为samples、state替为condition。不要把这次词汇核查当作科学正确性认证或完整PDF核验。最后用一两句说明工具的范围限制。",
+      "id": "SAMPLING-WRITING-A",
+      "skill": "engineering-application-journal-writing-skill-zh",
+      "language": "zh/en",
+      "prompt": "“我正在写一个多速率质量预测论文，请先核对下面采样例子，指出我的术语有没有实质性错误，再根据已经确定的方法写一版180—215词英文摘要和一个60—100词的数据评价说明段。我不是要你提出算法或增加实验；贡献里的新颖性尚需我补文献比较，你不要替我补造首创。说明段需要能直接放到实验部分，但计数细节可以留在中文核对表，不必全塞到英文里。\n\n采样例子（时间单位秒）：在闭区间[0,10]内，压力计划每1秒采样一次，t=6的预期测量因传输失败未收到，其余均在采样时收到；温度在t=2和7采样并立即收到，固定周期5秒，区间外没有可用的较早温度测量。化验取样时刻为t=0和10，但结果分别在t=25和35发布。模型在t=10输出对应t=10的质量估计，不能等到35；化验值不作当前模型输入。我的初稿说‘温度缺失率为9/11，因此是irregularly sampled；t=0的化验是历史值，所以t=10也能用；没有即时质量标签，因此整套训练是unsupervised’，这几句请核实是否成立。\n\n模型的真实规格：每秒建立一个输入向量，已收到的测量可沿用至新值到来，同时保留该秒是否有新观测的掩码及距最近一次已收到测量所对应采样时刻的间隔。共享编码器把这些输入转为变量特征；以掩码和时间间隔为输入的门控将编码特征与上一隐藏状态加权组合，输出新的隐藏状态。质量读出头由该隐藏状态估计当前质量。在历史训练阶段，观测值重构头和质量读出头共享编码器：前者只在原始真实观测位置计算重构误差，后者只在有已发布化验标签的位置计算质量误差。没有化验标签的其他训练窗口也通过观测重构目标参与学习。训练结束后保留编码器、门控状态更新和质量读出头，不保留重构头。没有信号插补输出，也没有在线参数更新。门控本身的区别性公式仍未给出，不要替我发明。\n\n训练集来自较早的生产批次，拟合时那些批次的全部化验报告都已发布；训练和参数选择只用这些历史批次。之后完整保留的批次用于回放评价，每个预测按原始发布时序使用当时可见的信息，预测文件固定后再与后来发布的化验值对照计分。测试质量误差只在有真实化验对应的取样时刻计算，没有把一个化验值复制成每秒真实标签。结果已经确认：在一个过程仿真案例和一个真实生产数据案例上，比同样使用这些可见输入的无时间间隔信息基线获得更低RMSE；没有真实产线部署或计算延迟测量，也没有缺失测量恢复精度结果。摘要可以写这些定性结果，不要编数字。\n\n另有一句待定模块描述：‘We use an observation-age gate, a standard industrial mechanism, to recover all unobserved measurements.’ 我只是想表达上述门控操作；请给一条准确替代句，并说明该英文名和中文“观测年龄门控”现在是否可以作为通用术语写入组内词库。”",
       "required_behaviors": [
-        "Run the read-only candidate tool on the supplied synthetic TeX and report active source lines accurately.",
-        "Preserve legitimate semantic attributes, storage records, record-as-verb and condition/state meanings; keep candidate detection separate from a correction."
+        "Distinguish native sampling schedules, missed acquisitions, model-grid positions, held values and assay release times.",
+        "Connect encoding, gated state update and quality output while separating training-only reconstruction and fixed-parameter prediction.",
+        "Write the requested abstract and evaluation paragraph from supplied facts without inventing novelty, results or universal module terminology."
       ],
       "forbidden_behaviors": [
-        "Report inactive/commented prose as current manuscript text, perform mechanical replacement, edit the file, or certify full scientific/PDF correctness."
+        "Treat grid blanks as failed acquisitions, unreleased assays as available inputs, held values as new measurements or training reconstruction as a proven imputation output.",
+        "Invent an initial-value convention, online parameter learning, plant deployment or established observation-age gate terminology."
       ],
       "tested_skills": [
-        "engineering-terminology-polishing-zh"
+        "engineering-application-journal-writing-skill-zh",
+        "engineering-abstract-contributions-zh",
+        "engineering-terminology-polishing-zh",
+        "engineering-experiment-evidence-design-zh"
       ],
       "outcome": "pass",
-      "reason": "Actual candidate scan retained active branch text with correct source lines; legitimate words remained contextual decisions rather than automatic replacements.",
-      "input_fixture": "\\begin{abstract}\n\\iffalse\n\\begin{comment}\nOffline deployment uses information exchange.\n\\else\nThe model uses semantic attributes to describe known fault classes.\nOperating conditions differ between the two data collections.\n\\fi\nA real-world dataset contains 1200 samples.\n\\iftrue\nWe record measured process variables.\n\\else\n\\begin{comment}\nVariable-specific features are exchanged during offline deployment.\n\\fi\nThe current operating state determines the gate weights.\n\\begin{comment}\n\\else\nInformation exchange is performed through records and attributes.\n\\end{comment}\nSensor records are linked to sample identifiers.\n\\end{abstract}\n",
+      "reason": "The complete first answer preserved the observation/label timing and training/prediction roles, delivered linked prose, and left unsupported initialization and name admission unresolved.",
       "evaluator": "Maintainer semantic review; no independent second grader",
-      "response_trace": "responses/v4213-independent.md",
-      "review_trace": "reviews/v4213-independent-evaluation.md",
+      "response_trace": "responses/sampling-writing-independent.md",
+      "review_trace": "reviews/sampling-writing-evaluation.md",
       "evaluation_phase": "one_fresh_context_no_feedback"
     }
   ],
@@ -70,7 +74,7 @@
     "references/manuscript-archetypes.md": "e1fe5431e1ad6f0bfa6f0e36042064357e34064790f2f3293e1c11aa50dbda1f",
     "references/problem-first-classification.md": "ff9db64e24bfe1a5d195241c451f9d386174030e75cd3bfae26276bf4d787ad4",
     "references/problem-first-classification_CN.md": "b5db2e7a2b41f9e21cc78771116d827139ba4b5dd6a32793ede0635b37dc756f",
-    "references/published-evidence.md": "2db7e77e426a96174fe1933c2481d50ab0591f7ab3d41ae5fe6e0b414d68375b",
+    "references/published-evidence.md": "edce60d1b52841f5a65a683a9525facf92d5c648be84e4718fcef7d00b2851c7",
     "references/research-collaboration-workflow.md": "7e661a268f7cbae808ebf63361e968599e412cab8f9dd87476389cff53e5437d",
     "references/research-planning-and-contribution.md": "bc7895dacad2592482855672d127d1ac5b3c4104e9d9d1c32223ccc51b5be42d",
     "references/rigor-and-handoff.md": "f99fc96124a928eeaa46b4cb04f91fa165a1ccc3ac35f3a476fccc5aa829844d",
