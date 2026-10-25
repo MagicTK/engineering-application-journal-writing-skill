@@ -234,6 +234,47 @@ class TerminologyAuditTests(unittest.TestCase):
                     actual = {item["rule"]: item["count"] for item in MODULE.audit(wrapped)["candidates"]}
                     self.assertEqual(actual, flat)
 
+    def test_text_emphasis_preserves_phrase_candidates_and_frequency(self):
+        source = "\n\n".join([
+            r"We model operating \emph{conditions} and information \textbf{exchange}.",
+        ] * 3)
+        output = MODULE.audit(source, min_count=3, top=1000)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(by_rule.get("state-condition", {}).get("count", 0), 3)
+        self.assertEqual(by_rule.get("exchange", {}).get("count", 0), 3)
+        self.assertIn({"term": "operating conditions", "count": 3}, output["recurring_terms"])
+        self.assertIn({"term": "information exchange", "count": 3}, output["recurring_terms"])
+
+    def test_nested_text_emphasis_preserves_adjacency(self):
+        source = r"\textbf{operating \emph{conditions}}. variable-\textit{specific} features. information\emph{exchange}."
+        output = MODULE.audit(source, min_count=1, top=1000)
+        by_rule = {item["rule"]: item for item in output["candidates"]}
+        self.assertEqual(by_rule.get("state-condition", {}).get("count", 0), 1)
+        self.assertEqual(by_rule.get("variable-feature", {}).get("count", 0), 1)
+        self.assertNotIn("exchange", by_rule)
+        self.assertIn({"term": "informationexchange", "count": 1}, output["recurring_terms"])
+
+    def test_text_emphasis_keeps_comment_and_metadata_exclusions(self):
+        source = "\n".join([
+            r"% \emph{attributes} records",
+            r"\iffalse \textbf{offline} \fi",
+            r"information \emph{\cite{attributes}} exchange.",
+            r"\textbf{operating \textit{conditions}} remain relevant.",
+        ])
+        output = MODULE.audit(source, min_count=1, top=1000)
+        self.assertEqual([item["rule"] for item in output["candidates"]], ["state-condition"])
+        self.assertEqual(output["candidates"][0]["occurrences"][0]["line"], 4)
+        plain = MODULE.audit(r"information \emph{exchange}", tex=False)
+        self.assertFalse(any(item["rule"] == "exchange" for item in plain["candidates"]))
+
+    def test_multiline_text_emphasis_keeps_original_source_span(self):
+        source = "information " + "\\textbf{\nexchange}."
+        output = MODULE.audit(source, min_count=1, top=1000)
+        exchange = next((item for item in output["candidates"] if item["rule"] == "exchange"), {})
+        self.assertEqual(exchange.get("count", 0), 1)
+        occurrence = exchange["occurrences"][0]
+        self.assertEqual((occurrence["line"], occurrence["end_line"]), (1, 2))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -7,7 +7,7 @@ description: 工程应用顶刊严谨性审稿 Skill 中文执行版。用于投
 
 [English](../../skills/engineering-journal-rigor-review/SKILL.md)
 
-套件版本：`4.2.23`
+套件版本：`4.2.24`
 
 ## 一、任务目标
 

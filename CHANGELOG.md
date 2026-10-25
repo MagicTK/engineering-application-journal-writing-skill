@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.24 (2026-10-26)
+
+- Fixed the optional read-only terminology helper so common literal text-emphasis wrappers no longer hide phrase candidates or recurring collocations.
+- Retained word adjacency, source-line spans, comment/reference exclusions and plain-text behavior; custom macros and active-PDF verification remain outside this limited normalization.
+- Added four regression checks that failed before the fix and passed afterward; no mechanism name, scientific result, manuscript template or private-paper change was introduced.
+
 ## 4.2.23 (2026-10-25)
 
 - Added a scoped numerical-quantization record from two distinct published engineering works and a separately checked Chinese base translation, with author-version and task boundaries retained.

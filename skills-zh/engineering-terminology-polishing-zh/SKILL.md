@@ -7,7 +7,7 @@ description: 工程应用论文术语与语言润色 Skill 中文执行版。在
 
 [English](../../skills/engineering-terminology-polishing/SKILL.md)
 
-套件版本：`4.2.23`
+套件版本：`4.2.24`
 
 ## 一、任务目标
 
@@ -43,7 +43,7 @@ description: 工程应用论文术语与语言润色 Skill 中文执行版。在
 
 推荐通用机制、模块、方法或操作类别时，执行名称准入：至少两篇不同的相关已发表期刊论文在相同意义下使用，歧义较大时尽量三至五篇；完整名称不能仅凭基础词背书。中文另行上网查可靠来源，译法未核实时保留英文身份并解释操作。区分单篇专名、作者新提名称、普通功能描述和通用术语；通用证据未完成不意味着删除准确专名，更不能另造一个机制替代。
 
-state/condition、variable/attribute、sample/record 和变量特征的争议按[场景决策](../../references/terminology-decisions_CN.md)处理。根目录的只读 `scripts/audit_terminology.py` 可列候选与高频搭配，但不判断语法、不展开任意 TeX 宏，也不能替代活动 PDF 核查。语料未出现不等于禁用，作者偏好不升级为通用规则。
+state/condition、variable/attribute、sample/record 和变量特征的争议按[场景决策](../../references/terminology-decisions_CN.md)处理。根目录的只读 `scripts/audit_terminology.py` 可识别穿过常见字面斜体/字体标记的候选与高频搭配，并保留源行范围；但不判断语法、不展开任意 TeX 宏，也不能替代活动 PDF 核查。语料未出现不等于禁用，作者偏好不升级为通用规则。
 
 工具处理普通段落内换行，并以`line`/`end_line`给出源起止行；排除的元数据与字面指令行作为保守搭配边界。因此跨这类语法未命中不证明渲染后的搭配不存在；脚本分词范围与术语语义审查分别判断。
 

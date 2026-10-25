@@ -49,4 +49,4 @@ claim or journal outcome. Structural tests and publication identity are separate
 
 See the [original request and baseline answer](../responses/quantization-role-initial.md),
 [candidate answer](../responses/quantization-role-candidate.md), and
-[current report](../forward-test-report.json).
+[versioned report](../history/v4.2.23/forward-test-report.json).
