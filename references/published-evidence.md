@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 115-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 115 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 117-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 117 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计115篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计117篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83注明所读作者版本。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -127,6 +127,8 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P113 | [A unified model integrating Granger causality-based causal discovery and fault diagnosis in chemical processes](https://doi.org/10.1016/j.compchemeng.2025.109028) | CCE 196 (2025), Art.109028; supplied published PDF pp.1-4 selected identity, framing and history-based definition, especially p.3 Section 2.2/Eq.(2). Conditional predictive distributions and physical mechanisms are distinguished; complete CR-VAE, formula guarantees and results are not certified. |
 | P114 | [Root cause diagnosis of plant-wide oscillations using Granger causality](https://doi.org/10.1016/j.jprocont.2013.11.009) | JPC 24 (2014), pp.450-459; supplied published PDF pp.1-3 selected identity, introduction and Section 2.1/Eqs.(1)-(7). Linear residual comparison and conditioning support a scoped predictive-history record; full spectral, feature-selection and root-cause procedures are outside this check. Its same-title IFAC 2012 version is not a second work. |
 | P115 | [Integrating Outlier-Type Prior Knowledge Into Convolutional Neural Networks Based on an Attention Mechanism for Fault Diagnosis](https://doi.org/10.1109/TSMC.2024.3461668) | TSMC: Systems 54(12), 2024, pp.7834-7847; supplied published PDF p.1 and selected pp.4-5. Outlier indicators inform feature extraction, illustrating a diagnostic information role rather than automatic measurement-error removal. Full module names, statistical calibration and reported gains are not certified here. |
+| P116 | [An Order-Invariant and Interpretable Dilated Convolution Neural Network for Chemical Process Fault Detection and Diagnosis](https://doi.org/10.1109/TASE.2023.3290202) | TASE 21(3), 2024; supplied published PDF pp.1-6, especially p.4 Section II-D/Eqs.(4)-(7) and p.6 Section III-C. Feature reordering, classification and subsequent attribution have different roles. Full OIDLCNN-SHAP, root-cause claims and implementation are not certified. |
+| P117 | [Explainable Artificial Intelligence for Fault Diagnosis of Industrial Processes](https://doi.org/10.1109/TII.2023.3240601) | TII 21(1), 2025; supplied published PDF pp.1-4, especially p.3 Section III/Eqs.(5)-(10). SHAP explains a combined monitoring index, not a fault-class probability. The text's averaging operation differs from the displayed sum in Eq.(8); retain that uncertainty instead of copying a standard aggregation. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -1182,8 +1184,31 @@ supply technical conventions, not two new industrial studies, mechanism names
 or a required library. Independent exact affine-target arithmetic illustrates
 why target units, ratio denominators and R2 references must retain their
 definitions. These are synthetic checks, not source experiments or permission
-to overwrite a paper's results. The current corpus remains 114 indexed works,
-not 114 complete audits.
+to overwrite a paper's results. That metric rereading added no source IDs;
+the current index inventory is stated at the top of this file.
+
+### Attribution Outputs And Aggregation
+
+P116 pp.1-6 and P117 pp.1-4 were read for their problem, representation,
+prediction and subsequent explanation roles. P116 pp.4,6 and P117 p.3 were
+rendered and visually inspected. Their additive definitions support the scoped
+SHAP record, not identical Deep/Kernel estimators, a universal background choice
+or an independent validation of their root-cause claims. P116 Eq.(6)'s binary
+coalition vector is not constrained to one-hot by its displayed domain; its
+network-dependent backward calculation should not be generalized as black-box.
+P117's text says average absolute contributions while Eq.(8) displays a sum;
+that unresolved reduction is not treated as an implementation specification.
+Neither source was computationally reproduced.
+
+The [official AWS Chinese opening](https://docs.aws.amazon.com/zh_cn/prescriptive-guidance/latest/ml-model-interpretability/local.html)
+separately verifies Shapley 加性解释. It is technical translation evidence, not
+another industrial study. The AAS c200554 search excerpt was not recoverable in
+the accessed article body, so it is not counted as a read translation passage.
+Official SHAP documentation supports the output/reference checks linked in
+[interpretation design](experiment-evidence-design.md#attribution-target-reference-and-aggregation),
+not a required library, a physical intervention or proof that either paper's
+implementation handles process dependence correctly. Synthetic arithmetic
+checks are separate from the papers' empirical results.
 
 ## Reusable Lessons / 可迁移结论
 

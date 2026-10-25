@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.14 (2026-10-25)
+
+- Added a scoped SHAP attribution record from two distinct published process-diagnosis papers, with separately checked official Chinese wording.
+- Clarified explained outputs, reference/background data, signed versus magnitude aggregation and their consequences for engineering interpretation within the existing evidence guide.
+- Preserved model-level explanation claims without promoting them to physical root causes; retained source formula/text discrepancies instead of copying them as standard operations.
+- Added no manuscript template, industrial algorithm, experiment or changes to private papers and results.
+
 ## 4.2.13 (2026-10-25)
 
 - Fixed the read-only terminology scanner's interaction between literal conditionals and comment environments: an inactive comment opener no longer hides later active prose.

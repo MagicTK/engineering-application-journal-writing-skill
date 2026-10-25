@@ -534,7 +534,7 @@ Evidence priorities:
 - engineering consistency and expert review;
 - useful negative and boundary cases.
 
-For root-cause metrics and distribution shifts introduced by explanation perturbations, use [the interpretation evidence guidance](experiment-evidence-design.md#7-interpretation-design).
+For root-cause metrics and distribution shifts introduced by explanation perturbations, use [the interpretation evidence guidance](experiment-evidence-design.md#7-interpretation-design). For variable-contribution explanations, follow the [target, reference and aggregation](experiment-evidence-design.md#attribution-target-reference-and-aggregation) through the actual model output; a classifier explanation and a monitoring-index explanation need not use the same scientific claim.
 
 For counterfactual outputs, first identify their use. P62 pp.5,7 returns
 generated inputs and model responses for interpretation; P94 pp.4-5 uses

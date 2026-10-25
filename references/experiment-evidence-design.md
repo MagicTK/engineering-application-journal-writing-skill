@@ -273,6 +273,38 @@ A confusion matrix can be useful when class-pair errors are scientifically impor
 
 Sensitivity and interpretation plots are result-dependent artifacts. Their curves, point clouds, heat maps, and error bars must be generated from traceable experimental outputs; a design brief or placeholder may be prepared before the data, but the visible result cannot be fabricated.
 
+### Attribution Target, Reference And Aggregation
+
+For an attribution result, identify the explained model quantity before naming
+important variables: a selected class score, a probability and a combined
+monitoring index answer different questions. State its output scale/link, the
+background or reference data, and how absent coalition features are represented.
+Background replacement in an explainer is not evidence of recovering missing
+sensor measurements or of respecting process-variable dependence. The
+[DeepExplainer](https://shap.readthedocs.io/en/stable/generated/shap.DeepExplainer.html)
+and [KernelExplainer](https://shap.readthedocs.io/en/stable/generated/shap.KernelExplainer.html)
+definitions clarify these technical roles; neither is a mandatory implementation.
+
+Keep signed sample contributions separate from aggregate importance. A negative
+contribution lowers the explained quantity relative to its reference; it is not
+a negative fault probability or proof of a healthy variable. A signed mean can
+cancel opposing contributions, whereas a mean absolute value measures their
+magnitude over the stated population. A sum also depends on that population's
+size. Specify which samples, classes and time positions enter the reduction;
+do not compare unlike aggregations or backgrounds as one importance measure.
+Check additive consistency in the declared output units, with the approximation's
+tolerance. Applying a nonlinear probability conversion separately to each
+contribution does not preserve their additive decomposition.
+
+In an abstract or contribution, connect prediction to its explanation and the
+engineering use; leave these settings in Methods and figure captions as needed.
+P116 explains classifier outputs, while P117 explains a monitoring index. Neither
+the largest attribution nor additive consistency alone establishes a physical
+root cause. Retain valid model-level findings without requiring a new causal
+study when no causal claim is made.
+
+中文：先确定解释哪个模型输出、参考什么数据，再解释贡献的正负与汇总值。带符号均值、绝对值均值和求和不是同一量；样本级贡献也不直接证明变量异常或物理根因。摘要交代预测、解释及工程用途之间的联系，具体参考与汇总设置放在方法或图注，不机械增加限定语。
+
 ### Counterfactual Outputs
 
 Select checks by the returned object's use. For a model explanation, define the

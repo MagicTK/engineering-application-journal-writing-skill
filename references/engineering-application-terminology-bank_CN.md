@@ -242,6 +242,7 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 
 | 基础术语 | 不同论文及实际操作 | 边界 |
 |---|---|---|
+| SHAP / SHapley Additive exPlanations（加性特征归因） | P116 p.4第II-D节式(4)-(7)定义边际贡献、加性解释及Deep SHAP近似；P117 p.3第III节式(5)-(7)定义组合监测指标的加性解释，再使用Kernel SHAP估计 | 两篇不同流程诊断论文支持基础归因概念，不认证估计器互换或完整网络名称。明确解释输出、参考/背景与汇总方式；Deep SHAP依赖网络内部计算，不能一概写成黑箱。贡献值不是变量实测值或物理因果效应；P117平均与求和的冲突不作为标准公式迁移 |
 | Takagi-Sugeno-Kang (TSK) fuzzy rule model / classifier（已核一阶形式） | P77 p.5式(8)实质定义一阶规则；P108 p.2第II-A节式(1),(3)-(6)定义局部含常数项的线性类别分数及归一化规则组合 | 两篇不同团队TFS作品支持此范围的规则计算，不认证完整分类器相同。P77背景TSK规则不等于其完整CNFS；单有高斯隶属函数不足以命名完整TSK。规则数、类别softmax及特定优化器不是通用必要条件；局部后件线性不等于整个输入输出映射线性 |
 | Gaussian membership function | P27 p.3第III-A节式(4)定义高斯输入匹配乘积，p.4式(5)-(6)将其归一化后用于质量输出；P77 p.5第III-B节式(3)为模态描述量定义高斯匹配，再进行规则组合 | 两篇不同团队的TFS发表工作支持基础匹配函数；潜在特征与人工描述量、回归与分类及后续用途不同。高斯形状的隶属函数本身不等于高斯数据似然或已识别的实体工况，完整神经模糊系统名保持归属 |
 | Dempster's rule of combination（normalized conjunctive rule） | P49 p.3式(6)-(7)定义交集乘积组合及冲突归一化；P84 p.8式(8)-(11)在断路器背景中定义相应质量函数、合成与冲突 | 两篇不同工程期刊作品的实质理论定义支持该基础操作，不等于两个原规则的实际实现。P49 pp.5-6实际特征加权求和与此不同，P84完整IDS-ESN设计仍归属来源。不从分开的学习头推断证据独立、可靠性已校准或流程工业普遍使用；明确识别框架、质量构造、冲突处理及实际决策转换。K=1不在归一化公式的定义范围内 |
@@ -258,6 +259,7 @@ P96 p.3式(3)-(4)为明确的分类交叉熵外乘类别因子；P97表1与式(3
 
 | 中英对应 | 在线原始来源及已读位置 | 使用边界 |
 |---|---|---|
+| SHAP / Shapley 加性解释 | [AWS官方中文指导](https://docs.aws.amazon.com/zh_cn/prescriptive-guidance/latest/ml-model-interpretability/local.html)，局部可解释性开头段 | 属于官方技术用语证据，不计作第三篇工业期刊定义，也不声称规范性中文标准。保留易识别的SHAP名称，不因此认可所有中文变体或该页其他建议 |
 | Granger causality test / 格兰杰因果检验；格兰杰因果关系检验 | [华东理工大学学报20211118002](https://journal.ecust.edu.cn/article/doi/10.14135/j.cnki.1006-3080.20211118002?pageType=en)，原始双语题名/摘要；[自动化学报c250108](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250108?viewType=HTML)，原始表5/6中英表题 | 不同团队支持这两个基础检验用词。可读摘要/表题不认证完整算法、p值或全部限定发现模块译名，不增加英文定义ID；按实际Granger模型保留判据，不把所有检验统一为F检验 |
 | counterfactual explanation / 反事实解释 | [控制理论与应用CCTA240576](https://jcta.alljournals.cn/cta_cn/ch/reader/view_abstract.aspx?file_no=CCTA240576&html_url=cta_cn/article/html/CCTA240576&journal_id=cta_cn)，原始双语题名、摘要及关键词 | 只核解释用词，不充另一项工业生成定义，不认证完整FICE方法或所有生成/可执行动作的中文搭配。生成复合名称保持英文限定记录或用普通动作描述；访问失败的航天控制PDF不算已读 |
 | domain generalization / 领域泛化；域泛化 | [自动化学报c200238](https://www.aas.net.cn/article/doi/10.16383/j.aas.c200238)，表3及表11中英表题；[自动化学报c260215](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c260215)，优先出版原页双语题名、摘要及关键词 | 两个不同作品分别支持用词变体，第二篇尚无正式卷页。前者的综述分类不强制推广为统一DA/DG层级；后者不认证完整联邦/开集方法。仅核基础译法与语境，不增加英文工业定义ID，不推断未知故障拒识或性能保证 |

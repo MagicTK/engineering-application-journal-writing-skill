@@ -7,7 +7,7 @@ description: 为AI for Engineering比较多个研究选题、组织研究组合�
 
 [English](../../skills/engineering-research-ideation/SKILL.md)
 
-套件版本：`4.2.13`
+套件版本：`4.2.14`
 
 ## 适用范围
 
