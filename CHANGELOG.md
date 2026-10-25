@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.18 (2026-10-25)
+
+- Added conditional, many-to-many problem-to-method navigation within the existing bilingual problem guide, linking industrial conditions to candidate roles and transfer checks rather than prescribing a model per problem.
+- Kept four attributed time-series conference leads separate from engineering terminology admission; distinguished irregular-series classification, visual forecasting, conditional imputation and channel-relation forecasting interfaces.
+- Clarified training/test samples, annotation and learning objectives without banning the legitimate ML use of training signal or renaming physical measurements. Corrected a generated-training-sample description in the diffusion playbook.
+- Reused the existing router and research-ideation entrypoints; added no Skill, manuscript template, generic module name or scientific experiment.
+
 ## 4.2.17 (2026-10-25)
 
 - Promoted abstract information selection into the bilingual task entrypoints after setup-heavy first drafts in actual fictional-use checks.

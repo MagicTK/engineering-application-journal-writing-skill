@@ -7,7 +7,7 @@ description: Classify and route a data-driven industrial engineering research id
 
 [中文执行版](../../skills-zh/industrial-ai-paper-router-zh/SKILL.md)
 
-Suite version: `4.2.17`
+Suite version: `4.2.18`
 
 ## Mission
 
@@ -84,6 +84,10 @@ Read [manuscript archetypes](../../references/manuscript-archetypes.md).
 - Route to the core orchestrator for control, optimization, system integration, or human-AI decision papers until a dedicated system workflow is justified.
 
 ## 5. Load Topic Guidance Selectively
+
+If candidate methods are requested, use the conditional
+[problem-to-method navigation](../../references/problem-first-classification.md#6-when-requested-problem-to-method-navigation)
+before selecting detailed playbooks. Keep problem-only work unexpanded.
 
 Read only the relevant sections of [topic playbooks](../../references/topic-playbooks.md). A challenge playbook and a method playbook may be combined, for example:
 

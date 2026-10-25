@@ -153,6 +153,11 @@ before prescribing synchronization, modality-removal tests or a fusion narrative
 6. Inventory evidence already available and evidence still required.
 7. Select the manuscript archetype only after these axes are stable.
 
+When the author requests candidate mechanisms, use the conditional
+[problem-to-method navigation](problem-first-classification.md#6-when-requested-problem-to-method-navigation).
+It connects several possible responses to their actual data/access conditions;
+conference mechanisms remain attributed leads, not engineering-name authorities.
+
 Use the following compact record:
 
 ```text

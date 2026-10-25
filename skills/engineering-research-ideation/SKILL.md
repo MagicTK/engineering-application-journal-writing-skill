@@ -7,7 +7,7 @@ description: Build or revise an AI-for-engineering research portfolio, compare m
 
 [中文执行版](../../skills-zh/engineering-research-ideation-zh/SKILL.md)
 
-Suite version: `4.2.17`
+Suite version: `4.2.18`
 
 ## Scope
 
@@ -35,6 +35,11 @@ Established problems can support further research. Do not invent a new observati
 Consider new problem formulations, new mechanisms for familiar tasks, interacting constraints, substantive engineering adaptations, and focused comparative improvements. Record problem novelty separately from methodological and engineering novelty; familiar tasks and new tasks can both support strong studies. A coupled setting becomes a new problem only when its interaction creates a distinct, source-grounded requirement. Select the argument using [contribution routes](../../references/contribution-narratives.md); A/B/C is neither a task-novelty test nor a venue ranking.
 
 ## Compare Candidate Studies
+
+For problem-to-method or cross-domain mechanism leads, use the conditional
+[navigation](../../references/problem-first-classification.md#6-when-requested-problem-to-method-navigation).
+Choose from its many-to-many routes by task, sample/annotation access and the
+actual operation; it is not a fixed model prescription or novelty clearance.
 
 For each candidate, state:
 

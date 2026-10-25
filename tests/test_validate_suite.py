@@ -335,7 +335,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.17", suite["version"])
+        self.assertEqual("4.2.18", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 
@@ -468,13 +468,14 @@ class SuiteValidatorTests(unittest.TestCase):
         self.assertIn("Method: not selected", taxonomy)
         self.assertIn("do not select an archetype", taxonomy)
 
-    def test_problem_profiles_keep_supervision_and_signal_axes_separate(self) -> None:
+    def test_problem_profiles_keep_samples_annotation_and_objectives_separate(self) -> None:
         en = (ROOT / "references/problem-first-classification.md").read_text()
         zh = (ROOT / "references/problem-first-classification_CN.md").read_text()
+        en_words = " ".join(en.split())
         for marker in ("label scarcity", "label granularity", "label reliability",
                        "self-supervised", "semi-supervised", "incomplete supervision",
                        "reporting delay", "concept drift", "not mutually exclusive"):
-            self.assertIn(marker, en)
+            self.assertIn(marker, en_words)
         for marker in ("标签稀缺", "标签粒度", "标签可靠性", "自监督", "半监督", "不互斥"):
             self.assertIn(marker, zh)
         for content in (en, zh):
@@ -491,9 +492,9 @@ class SuiteValidatorTests(unittest.TestCase):
             for misplaced in ("plant-wide", "anomaly localization", "异常定位", "全流程"):
                 self.assertNotIn(misplaced, row)
         self.assertIn("| Object/scale |", en)
-        self.assertIn("| Supervision and training signals |", en)
+        self.assertIn("| Samples, annotation and learning objectives |", en)
         self.assertIn("| 对象/尺度 |", zh)
-        self.assertIn("| 监督信息与训练信号 |", zh)
+        self.assertIn("| 样本、标注信息与学习目标 |", zh)
 
     def test_operating_profiles_separate_time_access_and_label_space(self) -> None:
         en = (ROOT / "references/problem-first-classification.md").read_text()

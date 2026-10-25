@@ -53,7 +53,7 @@ Also distinguish acquisition from augmentation. P26 deliberately transforms time
 ## 2. Scarce Labels, Few-Shot, Zero-Shot, Weak, Or Self-Supervised Learning
 
 When the request is only to classify industrial problems, start with the
-[annotation profile and supervision/signal boundaries](problem-first-classification.md#3-supervision-information-and-training-signals),
+[sample, annotation and learning-objective distinctions](problem-first-classification.md#3-training-samples-annotation-and-learning-objectives),
 not a candidate training method or experiment plan. These are overlapping
 descriptions of information and learning, not one exclusive ladder. For example,
 self-supervised targets can be used within a semi-supervised quality predictor;
@@ -430,7 +430,7 @@ For generation as the task (P32), distinguish fidelity, diversity, condition con
 Check whether a diffusion-related design actually learns a reverse sampler or
 uses a noising construction to train a predictor. P120 perturbs training inputs
 and regression targets, then describes a prediction network and output denoising;
-P35 instead generates latent features and decodes additional training signals.
+P35 instead generates latent features and decodes additional training samples.
 Keep the target of each loss and the retained prediction path explicit. A
 noisy regression target remains derived from an observed target, and an output
 called denoised is not automatically a restored sensor measurement. Do not infer
@@ -440,7 +440,7 @@ do not force a separate synthetic-dataset-to-classifier story. Preserve P120's
 attributed name without importing its unverified preservation or generalization
 claims as a general diffusion mechanism.
 
-中文：先看加噪对象、学习目标和预测时保留的部件。对训练输入和回归目标加噪，与反向生成后解码新增训练信号，是不同的用法。扰动后的目标仍依赖原始标注；输出端写了去噪，也不等于恢复了现场传感器信号。摘要应连清扰动怎样服务预测，不强行写成先生成独立数据集再训练分类器。
+中文：先看加噪对象、学习目标和预测时保留的部件。对训练输入和回归目标加噪，与反向生成后解码得到合成训练样本，是不同的用法。扰动后的目标仍依赖原始标注；输出端写了去噪，也不等于恢复了现场传感器信号。摘要应连清扰动怎样服务预测，不强行写成先生成独立数据集再训练分类器。
 
 For methods with a generator and discriminator, inspect what is generated and what the discriminator predicts before writing the method-to-task link. P70 pp.3-4 maps acquired measurements to features and uses source/target discrimination to inform performance-grade learning; its full GAN-named method does not establish synthetic sample augmentation. P72 p.5 instead generates training examples for a separate fault classifier. P71 pp.4-5 retains generator inversion and discriminator scores for detection, then describes a discriminator-derived classification path. Thus neither `all generators run at diagnosis time` nor `all generators are discarded after training` is a safe generalization. In an abstract or contribution, connect the particular training signal or generated object to the retained predictor; a training adversary need not become another sequential inference module. Keep full source names attributed, and do not promise exact alignment, equilibrium or preserved fault information merely because the objective is adversarial.
 

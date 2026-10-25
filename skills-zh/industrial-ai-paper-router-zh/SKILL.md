@@ -7,7 +7,7 @@ description: 工业智能论文多维分类与路由 Skill 中文执行版。用
 
 [English](../../skills/industrial-ai-paper-router/SKILL.md)
 
-套件版本：`4.2.17`
+套件版本：`4.2.18`
 
 ## 一、任务目标
 
@@ -57,6 +57,8 @@ description: 工业智能论文多维分类与路由 Skill 中文执行版。用
 - 控制、优化、系统集成或人机决策论文暂由总控 Skill 继续组织。
 
 ## 六、选择性加载主题指南
+
+作者要求候选方法时，先用条件性的[问题—方法导航](../../references/problem-first-classification_CN.md#六作者要求后的问题方法导航)选择路线，再读专题细节；仅整理问题时不扩展。
 
 只读取 [topic playbooks](../../references/topic-playbooks.md) 中与当前标签相关的部分。组合形式应是“工程挑战 + 候选技术响应”，例如标签稀缺 + LLM 语义辅助、全流程耦合 + 图学习、非平稳 + 持续适应。除非目标期刊明确偏方法，不能在题目、Gap 和贡献中把两者倒置。
 

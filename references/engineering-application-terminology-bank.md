@@ -340,7 +340,7 @@ Use separate sub-banks when enough external evidence has been collected:
 | Object/scale | variables, equipment, production stages, multiblock or plant-wide processes; state the actual structural difficulty separately |
 | Engineering tasks | fault detection, fault diagnosis, process monitoring, quality prediction, remaining-life estimation, control, optimization, decision support |
 | Task-specific outputs | anomaly localization, fault isolation, supported root-cause explanation; distinguish location from cause |
-| Supervision and training signals | supervised, semi-supervised, weakly supervised and unsupervised settings; self-generated learning targets, with stage-specific label use and possible overlap |
+| Samples, annotation and learning objectives | training/test instances; supervised, semi-supervised, weakly supervised and unsupervised settings; measured or constructed learning targets, with stage-specific label use and possible overlap |
 | Method families | feature fusion, graph modeling, attention, transfer/adaptation, lightweight modeling, diffusion, fuzzy modeling, multimodal learning, language models |
 | Evidence profiles | analytical, benchmark, production-data, prospective/shadow, deployed or external evaluation; combine actual available evidence |
 | Manuscript archetypes | method-with-application, background-driven application, or system/decision work; not an evidence level |

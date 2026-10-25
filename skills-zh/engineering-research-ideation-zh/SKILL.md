@@ -7,7 +7,7 @@ description: 为AI for Engineering比较多个研究选题、组织研究组合�
 
 [English](../../skills/engineering-research-ideation/SKILL.md)
 
-套件版本：`4.2.17`
+套件版本：`4.2.18`
 
 ## 适用范围
 
@@ -35,6 +35,8 @@ description: 为AI for Engineering比较多个研究选题、组织研究组合�
 同时考虑新问题建模、既有任务的新机制、相互作用的约束、实质工程适配与聚焦比较改进。问题创新与方法/工程创新分开记录；熟悉任务和新任务都可能支撑高水平研究。复合条件只有确实产生了不同且有来源支持的建模要求，才支撑新问题主张。使用[贡献论证路径](../../references/contribution-narratives.md)选择叙述；A/B/C不判定任务新旧，也不代表期刊分区。
 
 ## 比较候选
+
+需要问题到方法或跨领域机制线索时，使用条件性的[问题—方法导航](../../references/problem-first-classification_CN.md#六作者要求后的问题方法导航)。按任务、样本/标注访问及真实操作从多对多路线中选择，不将其当作固定模型处方或新颖性已查清的证明。
 
 逐题说明：
 

@@ -340,11 +340,18 @@ components. These are different evidence roles, not interchangeable timing
 measurements or a new general mechanism admission. Source formulas and reported
 gains are not reproduced as validated results here.
 
-## 3. Supervision Information And Training Signals
+## 3. Training Samples, Annotation And Learning Objectives
 
-Record both axes. First describe **what task information is available**; then
-describe **how the training objective obtains its targets**. The labels below
-are not mutually exclusive categories of complete systems.
+Separate the data instances from the information used to learn. **Training and
+test samples** are data instances, counted in their actual units. Their task
+labels, measured targets, constructed targets and loss constraints have different
+roles. The ML expression `training signal` can describe learning guidance; it is
+not a synonym for a training sample or necessarily a physical sensor signal.
+Prefer the concrete object when explaining an industrial study.
+
+First describe **what task information is available**; then describe **how the
+learning objective obtains its targets**. The labels below are not mutually
+exclusive categories of complete systems.
 
 | Term | What must be stated | Do not infer |
 |---|---|---|
@@ -387,7 +394,7 @@ Label quantity and coverage (classes, conditions, time periods, sites):
 Label granularity (point/window/event/product/batch or other actual unit):
 Label reliability and how targets were obtained:
 Task-unlabeled measurements available and actually used:
-Constructed training signals and joint/separate schedule, if specified:
+Learning targets/constraints and joint/separate schedule, if specified:
 Label/data access at fitting, selection, adaptation and final evaluation:
 Unknowns that affect terminology:
 ```
@@ -407,6 +414,59 @@ select an archetype, propose networks, map a problem to a preferred algorithm,
 design new experiments or launch an idea-generation workflow in this mode.
 Later, when requested, add candidate responses and their matched evidence
 without turning co-occurrence in a folder into causation or a unique solution.
+
+## 6. When Requested: Problem-To-Method Navigation
+
+Use this section only when the author asks for candidate methods, literature
+directions or research ideas. Problem-only classification above still leaves
+methods unselected. The relationships are **many-to-many**: select a small set
+from the actual task, available samples/annotations and decision-time inputs,
+not one fashionable model per folder.
+
+| Established industrial condition | Candidate responses and their role | Transfer condition and useful evidence |
+|---|---|---|
+| Different variable clocks, uneven observation times or delayed measurements | Rate-aware state estimation; timestamp/mask-aware representation; documented resampling when appropriate. These can support prediction without necessarily imputing a complete grid. | Preserve native times, availability and the task output. P24/P34/P73 illustrate different interfaces; irregular-sequence methods are leads for a multi-rate process, not a reason to rename its acquisition mechanism. |
+| Missing measurements or unavailable sensors | Learn from available observations directly, reconstruct selected values, or condition a generative imputer on observed entries. | Decide whether the required output is completed data or diagnosis/prediction despite missing inputs. Match missingness and information access; separately test restoration and downstream use when both are claimed. P25/P33 and CSDI below illustrate different roles. |
+| Few task-labeled samples with useful task-unlabeled data | Joint supervised/auxiliary representation learning or semisupervised estimation; small-support comparison methods when their support/query arrangement fits. | Specify which samples and targets enter each objective. P17/P21/P47 are distinct routes, not interchangeable supervision labels. Coarse or unreliable labels need a response to that limitation, not just fewer examples. |
+| New or changing operating conditions | Transfer and domain adaptation when target data are available; source-side generalization when they are not; sequential adaptation when permitted feedback arrives over time. | Separate condition novelty, fault-class novelty and label access. P10/P50/P64 have different access/update assumptions. Few-shot adaptation requires stated labeled support; normalization or a feature router alone does not establish continual learning. |
+| Limited fault coverage or rare training classes | Representation transfer, conditional sample generation or semantic guidance can supply different kinds of support. | Generated samples are not new independent observations, and class descriptions do not identify an unknown class without a matching output mechanism. Preserve independent real evaluation. P05/P06/P35 concern different semantic/generation paths; an LLM is not automatically required. |
+| Heterogeneous variable relationships across units or blocks | Process-informed partitioning and learned within/across-group interactions; compare independent and joint variable modeling where relevant. | Establish variable identities, group knowledge and the output before borrowing a channel strategy. P01/P14 ground industrial structure; DUET below is a forecasting lead, not proof that learned groups are physical stages or causal units. |
+| Several sensing modalities, derived views or unequal prediction-time availability | Representation interaction/fusion, or teacher-to-student guidance when richer inputs exist only during training. | Identify actual streams and event correspondence. Equal channel/token widths do not align modalities; two views derived from the same measurements are not independent acquisitions. P38/P46 have different training/prediction interfaces. |
+| A plausible benefit from visual or foundation-model representations | Convert the specified observations into a suitable representation and adapt the source model to the actual output; compare an appropriate numerical route. | Image conversion, text/semantic guidance and numerical pretrained models are alternatives, not one method. The leads below have different tasks; preserve timestamps, masks, scaling, units and the information cutoff through conversion. |
+| A stated memory, latency or accuracy-size objective | Compact operators, low-rank designs, distillation or selective execution may change different costs. | Locate the actual constrained path; include conversion or external-model calls when present. P31/P45/P85 provide different cost contexts, not automatic deployment evidence. |
+
+### Time-Series Mechanism Leads, Not Engineering Naming Authorities
+
+These selected conference papers are **attributed mechanism references** for an
+adaptation discussion, separate from the shared engineering-terminology bank.
+They do not establish a general industrial module name, a preferred Chinese
+translation, process-industry prevalence or success on the current task. Reuse
+the industrial sources and the name-admission rule for those decisions.
+
+| Source and inspected passage | Actual source task/interface | What an industrial adaptation must resolve |
+|---|---|---|
+| [ViTST, NeurIPS 2023](https://papers.neurips.cc/paper_files/paper/2023/hash/9a17c1eb808cf012065e9db47b7ca80d-Abstract-Conference.html), PDF pp.3-4, Section 3 | Timestamped per-variable observations become line-plot images for a fine-tuned classifier. | Plot interpolation is not verified recovery of missing physical values. Check time/value resolution, missingness visibility, layout and the required classification/regression output. |
+| [VisionTS, ICML 2025](https://proceedings.mlr.press/v267/chen25be.html), PDF pp.3-5, Section 3 | Regular indexed histories are segmented and resized; reconstructed image regions map back to forecasts. The inspected version forecasts variables independently. | This is not ViTST's classification interface or evidence of native irregular/multi-rate handling. Define any timing adaptation, output conversion and required variable interactions; retain its actual pretraining/fitting access. |
+| [CSDI, NeurIPS 2021](https://proceedings.neurips.cc/paper_files/paper/2021/hash/cfe8504bda37b575c70ee1a8276f3486-Abstract.html), PDF pp.3-6, Sections 3.1/4/5 | Observations condition missing-value sampling; masked observed entries supply learning targets. | Distinguish imputation from class augmentation and label generation. Restrict conditioning to available observations for an issued prediction; all-window reconstruction is not automatically an online estimator. |
+| [DUET, KDD 2025](https://doi.org/10.1145/3690624.3709325), PDF pp.3-4, Sections 3/4.1 | Temporal-pattern features and a learned channel-relation mask feed a forecasting predictor. | Its complete module names remain attributed. Map channels to actual variables and known blocks; do not turn a channel mask into process topology, physical-mode labels or cross-modal alignment. |
+
+For a selected route, produce a compact rationale:
+
+```text
+Industrial difficulty and task:
+Available training/test samples, annotations and decision-time inputs:
+Candidate source mechanism and its original task:
+What is retained, changed, and why the engineering condition requires it:
+Closest industrial/team work and the substantive difference:
+Comparison that could support or reject the proposed benefit:
+```
+
+Keep proposed benefits separate from findings. Borrowing a mechanism is a research
+starting point, not novelty clearance or permission to repackage another paper.
+Connect the verified problem to the actual adaptation and its evidence in the
+Introduction, contribution and method; do not merely exchange computer-science
+words for engineering ones. For portfolio comparison and author-approved next
+steps, use [research ideation](../skills/engineering-research-ideation/SKILL.md).
 
 ## Wording Evidence / Reading Limits
 
