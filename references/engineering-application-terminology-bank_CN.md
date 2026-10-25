@@ -200,6 +200,7 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 
 | 基础术语 | 不同论文及实际操作 | 边界 |
 |---|---|---|
+| quantization（神经网络权重/激活值的数值表示） | P123正式PDF p.3第III节式(1)-(5)将权重/激活值映射到离散数值等级；P124作者v1 pp.4-5第III-B1节式(9)将训练后的参数转换为定点数 | 两篇不同已发表工程作品支持降低数值精度，不是一套统一训练/执行方案。P123用于交通标志，P124为轴承且所读为作者版本。位宽减少不必删除标量参数或执行整数运算；训练模拟、存储码、元数据及实际预测路径成本不同。输入标准化、剪枝、低秩增量是不同操作；完整限定量化器、最终版本公式一致性及硬件增益不由此认证 |
 | low-rank adaptation（LoRA，核查加性权重增量形式） | P121 p.7第3.3节式(21)及P122 p.5第III-C节式(3)，均固定预训练基座权重，用两个低秩矩阵的乘积及缩放学习加性增量 | 两篇不同工程期刊作品分别用于数值软测量和音频-语言诊断，继承同一基础方法，不代表独立发明。低秩对象是增量，不必是完整有效权重矩阵或输入。核实际插入位置、其他可训练部件及预测时是否合并；少数可训练参数不独立证明常驻内存、时延或避免遗忘。完整适配器/量化变体及来源特有模块名不由此准入 |
 | hypergraph / 超图；hyperedge / 超边 | P96 p.3第2.2节定义节点对超边的归属，P105作者稿第三节以设备部件为节点、以超边连接节点集合 | 两篇不同ESWA/TIM作品支持集合分组，不统一节点身份、物理意义或完整模块名。普通二元投影不保留全部成员归属。 |
 | hypergraph convolution / 超图卷积（核查归一化节点-超边-节点基础传播） | P96 p.3式(2)、p.5第3.3节式(6)；P105作者稿第IV-B节式(5)-(8) | 配对基础操作，不认证两套完整实现。样本邻域/单位权重与设备关系/训练权重不同；P105有符号构造及度数接口未完整核定，不据此保证物理因果、在线参数学习或普遍优于普通加权图。 |
@@ -260,6 +261,7 @@ P96 p.3式(3)-(4)为明确的分类交叉熵外乘类别因子；P97表1与式(3
 
 | 中英对应 | 在线原始来源及已读位置 | 使用边界 |
 |---|---|---|
+| quantization / 量化 | [高技术通讯202406004](https://journals.istic.ac.cn/gjstxcn/ch/reader/view_abstract.aspx?file_no=202406004&flag=1)，原始双语题名、关键词及摘要 | 独立支持基础译法，英文操作配对另见P123/P124；完整自适应PoT方法未精读或准入。[TensorFlow中文原指南](https://www.tensorflow.org/model_optimization/guide/quantization/training?hl=zh-cn)另佐证模拟后转换及自身的量化感知训练用词，但不是又一篇工程期刊定义，也不认证当前API或性能保证 |
 | low-rank adaptation / 低秩适应；低秩适配 | [数据采集与处理202403006](https://sjcj.nuaa.edu.cn/sjcjycl/article/abstract/202403006)，原始双语题名及摘要；[中国图象图形学报jig.240011](https://www.cjig.cn/rc-pub/front/front-article/download/61781372/lowqualitypdf/Advances%20in%20edge-cloud%20collaboration%20and%20evolution%20for%20large-small%20models.pdf)，PDF p.5第1.1节适配微调段 | 前者题名对应低秩适应，后者明确配对低秩适配/LoRA并解释加性低秩更新；保留两个已核译法，不排名唯一标准。前者摘要英文拼写adaption不作为规范名复制。译名来源不增加工业定义ID，不认证全部PEFT变体，也不移植其隐私/性能保证 |
 | SHAP / Shapley 加性解释 | [AWS官方中文指导](https://docs.aws.amazon.com/zh_cn/prescriptive-guidance/latest/ml-model-interpretability/local.html)，局部可解释性开头段 | 属于官方技术用语证据，不计作第三篇工业期刊定义，也不声称规范性中文标准。保留易识别的SHAP名称，不因此认可所有中文变体或该页其他建议 |
 | Granger causality test / 格兰杰因果检验；格兰杰因果关系检验 | [华东理工大学学报20211118002](https://journal.ecust.edu.cn/article/doi/10.14135/j.cnki.1006-3080.20211118002?pageType=en)，原始双语题名/摘要；[自动化学报c250108](https://www.aas.net.cn/cn/article/doi/10.16383/j.aas.c250108?viewType=HTML)，原始表5/6中英表题 | 不同团队支持这两个基础检验用词。可读摘要/表题不认证完整算法、p值或全部限定发现模块译名，不增加英文定义ID；按实际Granger模型保留判据，不把所有检验统一为F检验 |

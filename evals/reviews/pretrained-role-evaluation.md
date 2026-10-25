@@ -44,5 +44,5 @@ checks, program tests and publication identity have their own records.
 
 See the [original request and v4.2.21 answer](../responses/pretrained-role-initial.md),
 [v4.2.22 answer](../responses/pretrained-role-candidate.md), and
-[current report](../forward-test-report.json). No real experimental data,
+[v4.2.22 report](../history/v4.2.22/forward-test-report.json). No real experimental data,
 manuscript text or private maintenance material is distributed.

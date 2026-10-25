@@ -554,6 +554,10 @@ an estimate rather than guaranteeing each task's diagnostic correctness.
 
 中文也区分生成并重训模型变体、运行时选择模型以及真正更新参数。说明被选模型如何形成故障决策；内存对应单个变体还是常驻集合，成本来自模拟假设还是设备测量，准确率条件使用什么估计，都须与实际证据相符，不为所有轻量化研究强加同一部署故事。
 
+For quantization-based designs, follow numerical representation from training to export and execution. P123 discretizes weights/activations during learning; P124 converts trained parameters to fixed-point values for an FPGA path. A smaller bit width can reduce stored payload while preserving scalar weight count. Include necessary scales/offsets in the declared payload, and separate it from file headers, activations and runtime workspace. A floating-point simulation or dequantized evaluation can test affected predictions without establishing integer execution. Explain the retained predictor in the overview/contribution, then report the supported task-size or measured-time trade-off. Input standardization without discrete mapping is a different operation. A scoped payload calculation needs its representation assumptions, not a compulsory hardware trial; latency or energy claims need the corresponding implementation and measurements. The [base-name record](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope) does not certify every qualified quantizer or the sources' stronger claims.
+
+中文也区分训练时模拟、实际导出格式与预测执行。降低位宽可以减少存储而不减少权重个数；声明大小时计入所需缩放/偏移元数据，不把参数载荷当成整个文件或峰值内存。浮点反量化评价仍可报告分类表现和已核存储收益，但不证明整数执行或加速。写作时连接实际保留的预测路径及证据，不把全部核查项写进贡献，也不为限定的大小分析强制新增硬件实验。
+
 ## 10. Interpretability, Localization, Root Cause, And Trust
 
 Writing priorities:

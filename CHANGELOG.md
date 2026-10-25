@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.23 (2026-10-25)
+
+- Added a scoped numerical-quantization record from two distinct published engineering works and a separately checked Chinese base translation, with author-version and task boundaries retained.
+- Connected training simulation, exported representations and the executed predictor in the existing efficiency playbook; preserved useful payload calculations without turning bit-width changes into parameter-count or runtime guarantees.
+- Existing v4.2.22 already passed the fictional representation/payload cases. This update adds source-backed naming and navigation, not a claimed repair of a baseline scientific error or a controlled quality gain.
+- Added no Skill, manuscript template, research experiment or changes to private manuscripts/results.
+
 ## 4.2.22 (2026-10-25)
 
 - Replaced the generic foundation-model evidence list with conditional roles for numerical prediction, semantic guidance, measurement textualization and generated decisions within the existing playbook.
