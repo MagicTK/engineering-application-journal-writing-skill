@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.31 (2026-10-26)
+
+- Completed base incremental-learning Chinese wording from original journal pages, preserving the existing class-incremental translation variant.
+- Added a scoped new-class training record from an existing chemical-process source and a distinct wind-farm study; connected labeled class admission to the actual cumulative diagnostic output in the existing navigation.
+- Preserved source-specific protocols and already validated core prose; label registration is not promoted to unknown-fault discovery. No new Skill, template, research experiment or manuscript edit was introduced.
+
 ## 4.2.30 (2026-10-26)
 
 - Added a scoped multitask-learning record from distinct process-quality and bearing-attribute definitions, with separately checked Chinese wording.

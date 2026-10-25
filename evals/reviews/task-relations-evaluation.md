@@ -68,5 +68,5 @@ checks; none establishes general writing superiority or scientific acceptance.
 
 See the [earlier first answer](../responses/task-relations-baseline.md),
 [candidate first answer](../responses/task-relations-candidate.md), and
-[current report](../forward-test-report.json). The previous release report is
+[versioned report](../history/v4.2.30/forward-test-report.json). The previous release report is
 preserved in [its own archive](../history/v4.2.29/forward-test-report.json).
