@@ -1112,7 +1112,8 @@ bilingual title, abstracts and keywords, separately verifies `counterfactual
 explanation` / 反事实解释. It is wording evidence, not a full FICE audit or
 another industrial-generation definition. An inaccessible Aerospace Control PDF
 does not complete other Chinese compound-name checks. These rereadings add no
-paper IDs; the indexed corpus remains 104 selected works, not 104 full audits.
+paper IDs; at that reading stage, the index contained 104 selected works, not
+104 full audits. The current index inventory is stated at the top of this file.
 The exact balance/decision fixture illustrates a model-valid but inconsistent
 input and a proved empty target set in that fixed context, not a plant
 intervention or a universal impossibility result. Follow the
@@ -1142,6 +1143,28 @@ common driver, mediator and variance-only dependence change the predictive
 question; these are not industrial experiments. Use the
 [target-and-history distinction](terminology-decisions.md#granger-causality-and-the-declared-prediction-target)
 when that relation is part of the manuscript, not as a new default method.
+
+### Regression Targets, Scored Coordinates And Different Outcomes
+
+P17 p.1 identity/abstract, p.2 continuous concentration/sparse-assay framing and
+p.5 metric opening/Eq.(16) were selectively reread. P34 p.1 identity/abstract,
+p.2 Eqs.(5)-(8) target roles and p.6 preprocessing/metric opening/Eqs.(58)-(60)
+were selectively reread. Both metric pages were rendered and visually read;
+P34's overbar in the R2 denominator is visible despite its loss in text
+extraction. P17 separates concentration error, trend classification and a
+source-defined tolerance rate; those are different outcomes. P34's zero-mean
+normalization statement does not by itself establish every fitted constant or
+inverse transformation used for published scores. No source score, full
+optimization/filter guarantee or implementation is independently certified.
+
+The linked official metric definitions in the
+[target-coordinate check](terminology-decisions.md#regression-errors-and-target-coordinates)
+supply technical conventions, not two new industrial studies, mechanism names
+or a required library. Independent exact affine-target arithmetic illustrates
+why target units, ratio denominators and R2 references must retain their
+definitions. These are synthetic checks, not source experiments or permission
+to overwrite a paper's results. The current corpus remains 114 indexed works,
+not 114 complete audits.
 
 ## Reusable Lessons / 可迁移结论
 

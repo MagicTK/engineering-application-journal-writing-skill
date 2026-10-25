@@ -438,6 +438,11 @@ Lock the aggregation and comparison unit along with the metric. Mean run-wise sc
 
 For a claimed improvement in learned temporal slowness, audit feature scale and the time axis. If `z_new(t) = c z_old(t)`, its unnormalized squared first-difference energy scales by `c^2` even though the trajectory has only changed amplitude. Check normalization or noncollapse constraints, sampling intervals, feature dimensions and the aggregation before comparing scores; a first difference per sample is not a derivative per physical unit time when intervals differ. Classical SFA constrains the representation to exclude trivial constant solutions, whereas a deep model may encourage the corresponding properties with soft penalties. Report the actual objective and separately evaluate the retained prediction or monitoring claim. Do not prescribe a new SFA experiment for a model that only claims ordinary trend smoothing.
 
+For regression outputs, follow the [target-coordinate and metric check](terminology-decisions.md#regression-errors-and-target-coordinates)
+when interpreting scaled errors, R2 or a composite over several quality targets.
+It supplements the existing unit/aggregation checks; it neither prescribes a
+metric set nor authorizes changing results or the target transformation.
+
 ### Forecasting And Life Evaluation
 
 Record the forecast origin, latest available observations, target quantities,

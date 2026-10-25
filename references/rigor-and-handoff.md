@@ -97,6 +97,11 @@ Verify:
 
 Do not compare metrics computed on different scales or target subsets as if directly equivalent.
 
+Use the [target-coordinate check](terminology-decisions.md#regression-errors-and-target-coordinates)
+when normalized errors, R2 conventions or cross-target composites affect the
+claim. Preserve valid negative scores and declared software conventions; resolve
+the actual coordinates before recommending a label or numerical correction.
+
 ## 6. Data Split And Leakage Checks
 
 Confirm:

@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.10 (2026-10-25)
+
+- Clarified regression target coordinates, physical-unit error labels, ratio-error denominators and legitimate R2/software conventions within the existing checks.
+- Preserved per-target outcomes and declared composite weights, linking metric findings to the actual quality, trend or decision claim.
+- Rechecked two existing industrial soft-sensor contexts without adding corpus IDs, mechanism names, templates, experiments or permission to change results; time-scoped an older index-count note.
+
 ## 4.2.9 (2026-10-25)
 
 - Added a scoped Granger-causality record from two distinct published process studies, with separately checked Chinese test wordings.

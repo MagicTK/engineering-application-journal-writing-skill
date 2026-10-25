@@ -7,7 +7,7 @@ description: Perform a submission-level rigor review of an engineering-applicati
 
 [中文执行版](../../skills-zh/engineering-journal-rigor-review-zh/SKILL.md)
 
-Suite version: `4.2.9`
+Suite version: `4.2.10`
 
 ## Mission
 

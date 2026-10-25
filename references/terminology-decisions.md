@@ -160,6 +160,49 @@ different from later realized measurements. Name the actual information access
 and output using [forecast/life evaluation](experiment-evidence-design.md#forecasting-and-life-evaluation),
 not a universal ban on future-indexed quantities or historical target creation.
 
+## Regression Errors And Target Coordinates
+
+Keep the physical target, fitted target transform and scored coordinates
+distinct. For one target with a fixed nonzero affine scale `y = a*z + b`,
+consistently transforming both references and predictions gives
+`MAE_y = abs(a)*MAE_z` and `RMSE_y = abs(a)*RMSE_z` on the same scored items and
+weights. Report a normalized error as normalized, or return it to the declared
+physical units; a value does not acquire those units merely from its table
+heading. Nonlinear transforms need their actual inverse and scoring path.
+
+For `R2 = 1 - SSE/SST`, define the scored reference mean, weights and population.
+A consistent fixed affine transform leaves a nonconstant target's R2 unchanged.
+Negative R2 is possible; do not clip it to zero or substitute squared correlation
+without checking the declared definition. Using reference outcomes to calculate
+a score's mean is different from fitting the predictor or its preprocessing on
+them. Constant-reference SST is zero; a software option that replaces nonfinite
+scores with 1/0 is a reporting convention, not proof of a defined ordinary ratio
+or absence of prediction error. Inspect the actual implementation rather than
+calling an unfamiliar finite value fraudulent. The [official r2_score definition](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.r2_score.html)
+illustrates these conventions, not a mandatory package or journal rule.
+
+For MAPE, state the denominator, zero/near-zero treatment and whether a relative
+value is multiplied by 100 for display. A nonzero multiplicative rescaling preserves the
+ordinary relative ratio, but centering need not: it changes the denominator's
+meaning and can create zeros. Keep a justified ratio-scale MAPE; do not ban all
+normalized evaluation or silently choose an epsilon, drop zero targets or change
+the metric. The [official MAPE definition](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.mean_absolute_percentage_error.html)
+is one explicit relative-value/epsilon convention.
+
+For multiple targets, retain per-target results and the stated scales/weights.
+An equal-output mean before scaling and a mean of scaled errors can rank methods
+differently while answering different questions. Combining errors with unlike
+units does not give one target's physical unit or an application-cost objective.
+Keep the defined numerical composite when justified and name it accurately.
+
+P17 p.5 separates concentration error, trend decisions and tolerance passing;
+P34 p.6 states normalization and Eqs.(58)-(60) for quality-prediction metrics.
+These source roles do not certify their code, all inverse transforms or every
+threshold convention. In Results, interpret the measured error or trade-off on
+its declared target; improved RMSE alone does not establish better trend
+decisions, passing rate or operational control. Put calculation checks in
+settings or author notes instead of padding the abstract with them.
+
 ## Predictive Outputs And Intervals
 
 Name the random quantity before calling an output uncertain. A distribution

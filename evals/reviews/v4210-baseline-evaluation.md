@@ -1,0 +1,9 @@
+# Regression-Coordinate Baseline Review
+
+One actual fresh context used retained v4.2.9 on the same fictional A/B prompt later used for the candidate, differing only in the Skill root. The maintainer read its complete response and verified its calculations against saved exact arithmetic. Baseline scientific decisions already passed; no baseline failure or controlled general improvement is claimed.
+
+A computed physical MAE/RMSE 1, transformed errors 1/2, R2=5/8 and physical MAPE=107/1260, with the stated percent display. It preserved the valid comparator R2=-3/2, distinguished a matching rounded value from proof of the table's code path, and did not choose an epsilon for the centered zero reference. Its 57-word positive Results paragraph stayed on supplied predictions and concentration error.
+
+B distinguished undefined constant-target ratios from documented finite replacements, kept residual error visible, and did not label that convention fraud. It distinguished squared correlation from the stated residual-ratio R2. Numerical composites 5.5/2 before scaling and 1/2 after scaling were correctly interpreted with their per-target trade-off, differing units and declared scales. It did not invent application costs, a universal normalization, trend/threshold/control benefits or a new experiment.
+
+The existing regression checklist was therefore not absent or demonstrated unable to reason about these cases. The candidate supplies more directly retrievable target-coordinate and reporting boundaries, with source-scoped industrial context. The agent used local records rather than original PDFs, disclosed automatic workspace/Skill/memory-summary context and a read-only quota-safety check, and did not claim implementation reproduction. Public normalization redacts quota values and local metadata only; complete raw/dispatch remain private. This is not a second independent grader, all-suite review or scientific validation.
