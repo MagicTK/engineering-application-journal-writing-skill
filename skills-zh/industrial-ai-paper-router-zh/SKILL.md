@@ -7,7 +7,7 @@ description: 工业智能论文多维分类与路由 Skill 中文执行版。用
 
 [English](../../skills/industrial-ai-paper-router/SKILL.md)
 
-套件版本：`4.2.7`
+套件版本：`4.2.8`
 
 ## 一、任务目标
 

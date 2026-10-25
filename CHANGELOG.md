@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.8 (2026-10-25)
+
+- Added bounded consistency checks that survive run averaging: fixed-support class aggregation and full single-label weighted-recall/accuracy identity.
+- Preserved the existing distinction between mean run-wise F1, F1 from mean precision/recall and pooled counts; varying supports and different scoring populations require their own records.
+- Linked metric review to the existing bilingual repetition guidance and official technical definitions without adding terminology admissions, corpus papers, templates or permission to alter results.
+
 ## 4.2.7 (2026-10-25)
 
 - Added a scoped two-source record for multiclass class-weighted cross-entropy, using exact published/accepted-version loss passages and separately rechecked Chinese wording.

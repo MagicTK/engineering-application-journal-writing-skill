@@ -356,6 +356,12 @@ M_{\mathrm{weighted}}=\frac{\sum_k n_k M_k}{\sum_k n_k}.
 
 Do not assume class-wise F1 averages reproduce micro-F1 or accuracy.
 
+Distinguish nonlinear metric recomputation from checks that survive averaging:
+fixed class-support weights preserve the outer weighted sum, and full
+single-label support-weighted recall equals accuracy under matched scoring
+definitions. Use the [scoped run-aggregation checks](journal-migration-and-completeness.md#run-aggregation-identities)
+before accepting a mismatch or proposing a numerical correction.
+
 Separate metric support weights from fitting coefficients and sampling. For a
 declared fixed-denominator expected loss with class draw probabilities `q_k`,
 class loss weights `w_k` and class-conditional mean losses, contributions are

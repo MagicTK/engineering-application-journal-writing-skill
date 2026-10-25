@@ -26,6 +26,27 @@ P, R, F1, and Acc. can shorten labels only when defined. Abbreviations do not gu
 
 A deliberately pooled analysis is a different valid summary when defined: combine the declared predictions/counts, then calculate the metric. Nonlinear metrics such as F1 need not match the mean run-wise metric; accuracy can match when run sizes are equal. Do not silently change an approved aggregation merely to reconcile the numbers. Repeated predictions on the same test items are run-example records, not additional independently acquired samples. Preserve the declared class order, weighting, support and denominator for either summary.
 
+<a id="run-aggregation-identities"></a>
+
+Run averaging does not invalidate every consistency check. With fixed true-class
+support weights across runs and the same run aggregation, averaging a
+support-weighted class metric commutes with the class-weighted sum. Thus, a mean
+weighted F1 can be checked against the weighted mean of the reported class-wise
+F1 means; varying class supports require the run-level weights instead. This is
+linearity of the outer average, not recomputing F1 from mean precision/recall.
+
+For single-label classification covering all classes, support-weighted recall
+equals accuracy on the same scored items with consistent definitions. The
+run-wise values, and their means and SDs under the same summary convention,
+therefore agree. Do not impose this identity on multilabel subset accuracy,
+selected-class recall or different scoring populations. Check rounding,
+included classes, supports and raw records before declaring an error; a mismatch
+is a verification request, not authorization to replace results. The official
+[recall definition](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html)
+and [F1 averaging definitions](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
+specify the metric conventions; they are technical references, not additional
+industrial corpus papers or evidence for a new method name.
+
 Name the source of variation: training initializations on fixed data, cross-validation folds, or independent production units are different. P66 Fig.4 labels its bands as SD over five folds, not five independent seed runs. Descriptive fold SD can be reported, but overlapping training folds do not automatically provide independent replicates for an inferential interval. Choose an uncertainty analysis for the question actually claimed; do not force every study into one run count, resampling scheme or significance test.
 
 For a matched comparison, retain the pairing key and analyze the run/block differences when that is the design. The marginal means and SDs alone do not determine the spread of those differences; covariance matters. Do not sort the methods separately or create a pairing just from equal list lengths or matching seed labels. Overlap of SD bars is not a significance test. A confidence interval for a mean difference needs its construction and sampling assumptions, distinct from the SD of either method. Report a supported higher mean directly without upgrading it to significant superiority or cross-condition robustness.
