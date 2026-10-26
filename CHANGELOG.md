@@ -1,5 +1,14 @@
 # Changes
 
+## 4.2.38 (2026-10-26)
+
+- Clarify that class-support counts mean samples per class, not the number of
+  categories; repair the Chinese wording and make the English referent explicit.
+- Align both first-use READMEs with problem-only mode: describe the problem,
+  known constraints and open facts before offering methods when requested.
+- Retain the existing abstract, contribution and terminology guidance. Scoped
+  source and behavioral checks are recorded separately from prior evaluations.
+
 ## 4.2.37 (2026-10-26)
 
 - Keep diagram production in the shared research workflow tool-optional and

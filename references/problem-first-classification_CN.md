@@ -40,7 +40,7 @@
 | 时间不一致或晚到 | asynchronous measurements / reporting delay / delayed quality measurements | 分开采集时刻、报告可用时刻、对齐与物理过程滞后 |
 | 标签稀缺或实测目标稀少 | limited labeled data / label scarcity / sparsely labeled process data | 标注单位、目标、数量；有大量无标签测量时不能笼统说所有数据都少 |
 | 粗粒度或不确定标注 | coarse-grained labels / label ambiguity / noisy labels or targets | 标签粒度与可靠性分别描述；候选备选标签不等于多个真实故障共存 |
-| 类别支持不均 | class imbalance；确认长尾时用 long-tailed class distribution | 类别数量与受影响类别，不等于小样本，也不是默认卖点 |
+| 类别支持不均 | class imbalance；确认长尾时用 long-tailed class distribution | 各类别样本数与受影响类别，不等于小样本，也不是默认卖点 |
 | 工况变化/分布变化 | operating conditions；按事实细化multiple operating modes / nonstationary operation / distribution shift | 分清离散与连续变化、开发与使用边界；输入变化本身不证明输入到目标关系的concept drift |
 | 过程耦合 | process coupling / interacting production stages / cross-stage dependencies | 已知物理关系与学习关系不同；全流程对象本身不证明耦合困难 |
 | 信息来源差异 | heterogeneous process data / heterogeneous sensing / cross-domain distribution differences | 先说明域、采集流、模态、变换视图的实际角色 |

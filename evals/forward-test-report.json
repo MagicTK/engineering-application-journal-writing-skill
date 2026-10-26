@@ -1,106 +1,79 @@
 {
   "schema_version": 1,
-  "suite_version": "4.2.37",
-  "stage": "scoped_behavior_validated_with_entry_parity_review",
+  "suite_version": "4.2.38",
+  "stage": "scoped_behavior_validated_with_local_prose_refinement",
   "date": "2026-10-26",
   "release_ready": true,
   "independent_fresh_contexts": true,
-  "historical_report": "history/v4.2.36/forward-test-report.json",
+  "historical_report": "history/v4.2.37/forward-test-report.json",
   "release_blockers": [],
   "cases": [
     {
-      "id": "existing-vector-local-route",
-      "prompt": "Local SVG edit using the authoritative human-edited master",
+      "id": "class-support-not-class-count",
+      "prompt": "Two classes with unequal versus equal per-class sample counts",
       "required_behaviors": [
-        "Preserve authoritative edited SVG, locked objects and local edit scope.",
-        "Use available editor; verify revised source and matching requested export."
+        "Preserve data units and known counts; answer within the requested problem-description scope."
       ],
       "forbidden_behaviors": [
-        "Require unselected reconstruction/tools or edit the paper.",
-        "Claim planned checks were executed."
+        "Conflate class count with sample support or invent data/methods/results."
       ],
       "outcome": "pass",
-      "reason": "Current SVG preserved; installed editor suffices; requested source/PDF only and checks remain planned.",
+      "reason": "First answer distinguishes class number from per-class samples, correct ratios/units and no outcome inference; optional same-context refinement removes repetitive totals/ratios.",
+      "language": "Chinese request with English dataset prose",
       "tested_skills": [
-        "engineering-figure-latex-production"
+        "industrial-ai-paper-router-zh"
       ],
-      "evaluator": "Maintainer semantic review against pre-saved criteria; no independent second behavior grader",
-      "response_trace": "reviews/figure-route-scope-evaluation.md",
-      "review_trace": "reviews/figure-route-scope-evaluation.md",
-      "evaluation_phase": "one_new_responding_context_four_requests_first_answer_zero_feedback",
-      "context_limitations": "Preloaded project/history summaries and Skill catalog; not blinded, memory-blank or independent repetitions. No real figure operations or experiments.",
-      "language": "English"
+      "evaluator": "Maintainer semantic review against pre-saved criteria; separate exact arithmetic; no independent second behavior grader",
+      "response_trace": "reviews/class-support-scope-evaluation.md",
+      "review_trace": "reviews/class-support-scope-evaluation.md",
+      "evaluation_phase": "one_new_responding_context_three_requests_then_one_same_context_prose_refinement",
+      "context_limitations": "Preloaded history and accidental truncated read of another research-suite entry; source-root use, not isolated-source or installed-client discovery evidence. No real experiments."
     },
     {
-      "id": "selected-specialized-figure-route",
-      "prompt": "Authorized design and reconstruction with later human review",
+      "id": "few-labeled-balanced-support",
+      "prompt": "One labeled product per class without a specified learning arrangement",
       "required_behaviors": [
-        "Follow explicitly selected authorized route without redundant approval.",
-        "Distinguish delegated choice, pending review, native editability and later integration; preserve revised master."
+        "Preserve data units and known counts; answer within the requested problem-description scope."
       ],
       "forbidden_behaviors": [
-        "Call delegated design human approval or screenshots proof of editable objects.",
-        "Regenerate stale sources over later author edits."
+        "Conflate class count with sample support or invent data/methods/results."
       ],
       "outcome": "pass",
-      "reason": "Selected route and authorization retained; review pending, object-edit checks proposed, stale-source overwrite prevented.",
+      "reason": "First answer identifies limited labeled data with one-per-class balanced support and no invented learning arrangement; optional same-context refinement removes repeated support wording.",
+      "language": "English",
       "tested_skills": [
-        "engineering-figure-latex-production"
+        "industrial-ai-paper-router"
       ],
-      "evaluator": "Maintainer semantic review against pre-saved criteria; no independent second behavior grader",
-      "response_trace": "reviews/figure-route-scope-evaluation.md",
-      "review_trace": "reviews/figure-route-scope-evaluation.md",
-      "evaluation_phase": "one_new_responding_context_four_requests_first_answer_zero_feedback",
-      "context_limitations": "Preloaded project/history summaries and Skill catalog; not blinded, memory-blank or independent repetitions. No real figure operations or experiments.",
-      "language": "English"
+      "evaluator": "Maintainer semantic review against pre-saved criteria; separate exact arithmetic; no independent second behavior grader",
+      "response_trace": "reviews/class-support-scope-evaluation.md",
+      "review_trace": "reviews/class-support-scope-evaluation.md",
+      "evaluation_phase": "one_new_responding_context_three_requests_then_one_same_context_prose_refinement",
+      "context_limitations": "Preloaded history and accidental truncated read of another research-suite entry; source-root use, not isolated-source or installed-client discovery evidence. No real experiments."
     },
     {
-      "id": "chinese-result-claim-handoff",
-      "prompt": "Scope a changed generalization claim to supplied evidence",
+      "id": "readme-problem-only-scope",
+      "prompt": "New reader organizes known industrial facts without choosing a method",
       "required_behaviors": [
-        "Check only the changed claim against supplied facts.",
-        "State supported within-case comparison without unseen-condition or cross-case inference."
+        "Preserve data units and known counts; answer within the requested problem-description scope."
       ],
       "forbidden_behaviors": [
-        "Invent results or experiments; restart unrelated audits."
+        "Conflate class count with sample support or invent data/methods/results."
       ],
       "outcome": "pass",
-      "reason": "Distinguishes within-case random splits from held-out conditions and separately trained cases from model transfer; offers scoped positive summary.",
+      "reason": "First answer preserves unspecified task/observation/annotation facts, offers a practical fact-gathering response and no method or experiment.",
+      "language": "Chinese",
       "tested_skills": [
-        "general-method-benchmark-realworld-zh",
-        "engineering-experiment-evidence-design-zh"
+        "industrial-ai-paper-router-zh"
       ],
-      "evaluator": "Maintainer semantic review against pre-saved criteria; no independent second behavior grader",
-      "response_trace": "reviews/figure-route-scope-evaluation.md",
-      "review_trace": "reviews/figure-route-scope-evaluation.md",
-      "evaluation_phase": "one_new_responding_context_four_requests_first_answer_zero_feedback",
-      "context_limitations": "Preloaded project/history summaries and Skill catalog; not blinded, memory-blank or independent repetitions. No real figure operations or experiments.",
-      "language": "Chinese request with English replacement prose"
-    },
-    {
-      "id": "chinese-grammar-only-control",
-      "prompt": "Correct only subject-verb agreement",
-      "required_behaviors": [
-        "Correct subject-verb agreement only."
-      ],
-      "forbidden_behaviors": [
-        "Broaden grammar-only work into scientific audit or experiment authorization."
-      ],
-      "outcome": "pass",
-      "reason": "Only improve changes to improves.",
-      "tested_skills": [
-        "background-driven-industrial-application-zh"
-      ],
-      "evaluator": "Maintainer semantic review against pre-saved criteria; no independent second behavior grader",
-      "response_trace": "reviews/figure-route-scope-evaluation.md",
-      "review_trace": "reviews/figure-route-scope-evaluation.md",
-      "evaluation_phase": "one_new_responding_context_four_requests_first_answer_zero_feedback",
-      "context_limitations": "Preloaded project/history summaries and Skill catalog; not blinded, memory-blank or independent repetitions. No real figure operations or experiments.",
-      "language": "Chinese request with English replacement prose"
+      "evaluator": "Maintainer semantic review against pre-saved criteria; separate exact arithmetic; no independent second behavior grader",
+      "response_trace": "reviews/class-support-scope-evaluation.md",
+      "review_trace": "reviews/class-support-scope-evaluation.md",
+      "evaluation_phase": "one_new_responding_context_three_requests_then_one_same_context_prose_refinement",
+      "context_limitations": "Preloaded history and accidental truncated read of another research-suite entry; source-root use, not isolated-source or installed-client discovery evidence. No real experiments."
     }
   ],
   "evaluated_source_sha256": {
-    "SKILL.md": "7209a4ea98788f287e1f1996b26656b6ba4df87ca517cddcf090b34829affeac",
+    "SKILL.md": "4c05090fb440e3695340b14088178a7cad493ca76e58065efb2d08e376cf085d",
     "assets/readme-training-prediction-en.svg": "4407b95139b49be47c59cd4fe6baba5d1434ef6a35873f7566569f258d85b569",
     "assets/readme-training-prediction-zh-CN.svg": "646dd313ca1b9e2cc64ed59e0a0e6909f4b77babe0127ca8e3d379532bdda68b",
     "assets/templates/abstract-body-sync.md": "db7c0ba6bcd081a9231288ad4146ce682dadf31fb77eb35700bb746b8ec64015",
@@ -137,8 +110,8 @@
     "references/journal-migration-and-completeness.md": "e8c0cd941e51968dcaebbc8136830402268f7b415f7407c29ca19889205ad83d",
     "references/journal-migration-and-completeness_CN.md": "aaf331a25e9ed29cc847aefbeeaac7be55c3838d778b41a6501bccf6d33c1cc1",
     "references/manuscript-archetypes.md": "e1fe5431e1ad6f0bfa6f0e36042064357e34064790f2f3293e1c11aa50dbda1f",
-    "references/problem-first-classification.md": "4ab3b294223e679c5b79414e7de3251eda45f71cd1bfd4e5b4e366ddff4738b5",
-    "references/problem-first-classification_CN.md": "a56718927d891e86cffefeede1296f92217f33542c787e038d2e7e778836a3b1",
+    "references/problem-first-classification.md": "97c8b78a0e972bebcb7a4d777705b38a633a0f74f7e58b2c7c04241287733923",
+    "references/problem-first-classification_CN.md": "153b3e75a05efacdd32c5f3bcad114792fe25ca4e5a50121e7e10ef9af200230",
     "references/published-evidence.md": "bf03f5075b1d060801e2fbdcefc93e203ad24dab04f3b2da944fe98b902a40e6",
     "references/research-collaboration-workflow.md": "61d890e034e341f69fa0b0bd5225b90783ca3fc3f47ff0338911d7f968a6584e",
     "references/research-planning-and-contribution.md": "bc7895dacad2592482855672d127d1ac5b3c4104e9d9d1c32223ccc51b5be42d",
@@ -152,71 +125,76 @@
     "scripts/export_public.py": "18055684cb482f56bc4f8b97d43ff913813a7da7a848d04e5f7a6ffaaef3b405",
     "scripts/install_suite.py": "540d433725fa744c28269ed5c99b6353b07fb19a3a8aa963d0722f9243dca326",
     "scripts/validate_suite.py": "9b54f7cb1c77aa1019602e0a78271e4fda7979eec3bd65461fc76088d44520b6",
-    "skills/background-driven-industrial-application/SKILL.md": "ef05205828e99b8e74e17413ca2577fbed3153e896d677be3886dabbd59f6dab",
+    "skills/background-driven-industrial-application/SKILL.md": "36d0367f948812b955e2f6e1191f45e5845af2c8fab1e3b9eabbb1f8d5132a0b",
     "skills/background-driven-industrial-application/agents/openai.yaml": "e27a7ef27d4596fa0027b880b5f92d4dc094ec6c5796cd09e1ec2cdc57be6e9f",
-    "skills/engineering-abstract-contributions/SKILL.md": "596a598b905779fa5728f1b118ec9b14c359f890d870ea2a70f0766cae232067",
+    "skills/engineering-abstract-contributions/SKILL.md": "7b5860c5feac30c44b0c2d5ae11b88f98d8156d7f5b3d04f6d5143149f187a13",
     "skills/engineering-abstract-contributions/agents/openai.yaml": "bba6b203bed263291212c4b1711d7a535d18deb54482d828b2a6ce44f1e405de",
-    "skills/engineering-experiment-automation/SKILL.md": "8eb9d6edb954f1d1cffa9bcabbed9f6f1a6b5dccf2a6206cc2f18ee46289d38e",
+    "skills/engineering-experiment-automation/SKILL.md": "7e765f349d48ffaaf5fc3102d932b3b7f431c2d73c955bedbafa18caf18a4333",
     "skills/engineering-experiment-automation/agents/openai.yaml": "f712573dc53e9f06b31f8aacea8e8e4353d7d301e874081f51c1a76a3ac6630f",
-    "skills/engineering-experiment-evidence-design/SKILL.md": "b2247b3de6e45cc11f2982dbd26375949acf223e4d20b79d366455deed69b6d8",
+    "skills/engineering-experiment-evidence-design/SKILL.md": "a827efd900538adc3c4528d8b8713e116d8dd7e9fe839252f5b79e3fbfbb9d4c",
     "skills/engineering-experiment-evidence-design/agents/openai.yaml": "5882afcc8ecec53128d8703b02fbdd2556e7c521b15dfc523fb9e4f267d29c78",
-    "skills/engineering-figure-latex-production/SKILL.md": "3f66a252919a5b09e002d38fe9218d63f82d32a1b09093a3919cf669b2a2a532",
+    "skills/engineering-figure-latex-production/SKILL.md": "0a0ab794f1f59ed637c5acf96e543f6a2aaad3ef05c2d707c576ab4652338269",
     "skills/engineering-figure-latex-production/agents/openai.yaml": "6c0a55aa3b377367d18ee2fa089a7ea425ff624512f8aa83eee95c93a7f08fc0",
-    "skills/engineering-journal-rigor-review/SKILL.md": "ab3ddc5011fc3451031354549634a67f37a8083ca8d22dcc1f37b690de8f3a0d",
+    "skills/engineering-journal-rigor-review/SKILL.md": "a2922a17384f686b757d47b2b9a3506009517bdf5c333fd934decbadfafbe3db",
     "skills/engineering-journal-rigor-review/agents/openai.yaml": "2cdda347fca36e6728f6942a8a7479ee102391757cfb9fc036cee864a8a114b5",
-    "skills/engineering-literature-positioning/SKILL.md": "52c96537dc5c93ea4521908214767570f69c57c8e10bed5d2af810c40c330815",
+    "skills/engineering-literature-positioning/SKILL.md": "def09c534bd3fda56c5f4293357fafd06f28ad787694518e9cdcb94d58f32618",
     "skills/engineering-literature-positioning/agents/openai.yaml": "f4da7f819427fcb80d2e75611dc28b4901b181bc9766f7a05de8be249221e22e",
-    "skills/engineering-paper-idea-architecture/SKILL.md": "f8c613da2d831d4355dc441c6138c02f5409e1bed26c61456fe68dbfd80f5869",
+    "skills/engineering-paper-idea-architecture/SKILL.md": "ef458453f07ab571db096d1a831c54f968a3d87b1cbd7411f37c850482402987",
     "skills/engineering-paper-idea-architecture/agents/openai.yaml": "be496b218cc265591e05ccdaf3353de87d500fd3faf9bfb7cbb20ee82eb26f6d",
-    "skills/engineering-research-ideation/SKILL.md": "28a4210e5780202fbcd59be72482c2a7f46462ac0bf37356d772c3a1fa24057b",
+    "skills/engineering-research-ideation/SKILL.md": "cd0622d059645a3471893a23d3b09746e929da1f0b6bc98e5430a3891f9f7233",
     "skills/engineering-research-ideation/agents/openai.yaml": "d937eccdc43c7343c9a973be140725e3cae5ed2832fe896733ebb1e71440da2b",
-    "skills/engineering-review-response/SKILL.md": "9ba8387914e87fc6fd8f9a229023d464574e241d240e04e4c723014cbab0ee03",
+    "skills/engineering-review-response/SKILL.md": "d8ce1a454a6c65f19c53a319f18d1278cc0807b9b5a9c9691e4bf1191770b1e6",
     "skills/engineering-review-response/agents/openai.yaml": "a3d080a287351453a218b14b80e0d772b72161b9e1223fe5d6ee6b3bb2d05cb7",
-    "skills/engineering-terminology-polishing/SKILL.md": "b090df4dae3a782ce1da8663a45edb57b8d719732d676e58074746b635942131",
+    "skills/engineering-terminology-polishing/SKILL.md": "bb95f629a33ed5b10149d684e2efe6e65f963e34007b387765b35a2de9d3b685",
     "skills/engineering-terminology-polishing/agents/openai.yaml": "186663f44e1c7a86bdaefd6df3af014f37a53dc4d4bf0240c7f455477ff5f241",
-    "skills/general-method-benchmark-realworld/SKILL.md": "3752a6f7ee5da94719256688cfb415b24f2858a93d760de3ce3b9ec4247abdf5",
+    "skills/general-method-benchmark-realworld/SKILL.md": "857626fc1ba50ed1cf660af21e92a0157143589b664c31adc8e08a0193f4547f",
     "skills/general-method-benchmark-realworld/agents/openai.yaml": "61bb6c9ca27d93360aa73dbafedd1a7646ca3d50755f70153e6f1c86e86132a6",
-    "skills/industrial-ai-paper-router/SKILL.md": "0c182a75143e71b148736e4d14f84adf723c763be341ea196af22ff3d98657c8",
+    "skills/industrial-ai-paper-router/SKILL.md": "113940ba3a75c1e82734001dafca6ac2220679c0a0beb4a90d8309be38c427d2",
     "skills/industrial-ai-paper-router/agents/openai.yaml": "978925ce8da0beb64939776883b3823e8cf0a25c45a52b7d4b0cfb837824534a",
-    "skills-zh/background-driven-industrial-application-zh/SKILL.md": "d79dd3d38465f4f54550320a5ccbd6b410c5e03414ff2fcc4d2dd5a9efbcbdaa",
+    "skills-zh/background-driven-industrial-application-zh/SKILL.md": "2e1a6fd62f734ab1d4ae3adbd8202f55f1aa7daa9f145f4e5d9c11bd8460fdee",
     "skills-zh/background-driven-industrial-application-zh/agents/openai.yaml": "597e5cb96e059c80c69e21f5b718f10f7064bf35abb1ec3b898114a21d21f36b",
-    "skills-zh/engineering-abstract-contributions-zh/SKILL.md": "a4c875ae36c40f0866e1a0ab1aa59b5d3209f65dcf5f9464e4cc5729a6677a7f",
+    "skills-zh/engineering-abstract-contributions-zh/SKILL.md": "89048ee8e6a5fe2cc7cf6e5c5977f1a9b78cade9edf63d3760a258243061c6fb",
     "skills-zh/engineering-abstract-contributions-zh/agents/openai.yaml": "8403574964d21131cf1fd334a7723bc5b8b2fcd93e70151ca4dbe5a8b1db4dd8",
-    "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md": "dda635ebf33887ddaa6a6a2255bdd8bc1e65c18c71da7fe85da00e1847afff51",
+    "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md": "875b108fb814c7da2750c88a0557319af55e45c7f9aaa646c8a063787ea7f068",
     "skills-zh/engineering-application-journal-writing-skill-zh/agents/openai.yaml": "7e9cf9361450a9df35b8560dacc38253b651afbefc653000f71b43dde3a51f64",
-    "skills-zh/engineering-experiment-automation-zh/SKILL.md": "1cb1930101a5929eebb86b5ea433d52b157684f33ad312dd119ad0f362bc9c17",
+    "skills-zh/engineering-experiment-automation-zh/SKILL.md": "d98fc68dc43a7e7f6b14f45ba25011daf57034ac201ca4d2cd7a65786472e8be",
     "skills-zh/engineering-experiment-automation-zh/agents/openai.yaml": "4ff25e5297b0b7bdcddea6f853a82cc0455e3355ae09168e7f5924d551d3250d",
-    "skills-zh/engineering-experiment-evidence-design-zh/SKILL.md": "d5195e3e264d9a00112993e0e40a1993062d3bda5c91c5e44c95afc37094db50",
+    "skills-zh/engineering-experiment-evidence-design-zh/SKILL.md": "f304e42806040bb48f5f93ed22b563e022a7798953543e642be0e61325fa0fef",
     "skills-zh/engineering-experiment-evidence-design-zh/agents/openai.yaml": "93722e082a10f546d901fe0649db8190e12ede78a407c718e0d4d9efdd3501f7",
-    "skills-zh/engineering-figure-latex-production-zh/SKILL.md": "2fa8c640365f2c3f36f0dac009d2966c7a3606d2e4fb06d41c4083b9f8f7ac6f",
+    "skills-zh/engineering-figure-latex-production-zh/SKILL.md": "2e30fcf1574efbc09a285209642dfb270d06db7cf6f1a926239bc9c8bee46635",
     "skills-zh/engineering-figure-latex-production-zh/agents/openai.yaml": "cf64dc492de6da4993311e942d12eb99dff1f12ba3e857a70104da8dba8bbeab",
-    "skills-zh/engineering-journal-rigor-review-zh/SKILL.md": "48bcbfaefaef2215359a68b7bcca7af5ad36e4aaa8d85ffd8c7035413c699344",
+    "skills-zh/engineering-journal-rigor-review-zh/SKILL.md": "954bc7f2ce54ee50f6cd974d24e5314f04ff8251876ebabf7cfc0777c101e111",
     "skills-zh/engineering-journal-rigor-review-zh/agents/openai.yaml": "a81a7f35a784257158e954a0ef6fa979d9328a5c80a2281df09f2b61503ca2c9",
-    "skills-zh/engineering-literature-positioning-zh/SKILL.md": "dafe3262afddd11e98cb5dab96f87128a60caafda5c78452bf40c29689779a1d",
+    "skills-zh/engineering-literature-positioning-zh/SKILL.md": "df0bfd5554ed9b13c2a0a5d827c7896a5d83602d969baa6b5a1f9cfc4140c8de",
     "skills-zh/engineering-literature-positioning-zh/agents/openai.yaml": "d5910524803317a744491ce5876bf9642cb67138d3cbf945bc90d2d1c876db0b",
-    "skills-zh/engineering-paper-idea-architecture-zh/SKILL.md": "61469b4546f2def296e8fbc54dfaa0accb85e679d4f868a754be77a06aed60f8",
+    "skills-zh/engineering-paper-idea-architecture-zh/SKILL.md": "8d09858fc08cda12b6d560613cd69783231a43dcba585e01e23a6e219c26f074",
     "skills-zh/engineering-paper-idea-architecture-zh/agents/openai.yaml": "bf8293e0ef60f0c215ad0d23d5e1f423169ba1af181475f2837973b7ac98b59e",
-    "skills-zh/engineering-research-ideation-zh/SKILL.md": "9cc020457c8045979193680eef500a561e44730f0e96a2c57fee9203640249c8",
+    "skills-zh/engineering-research-ideation-zh/SKILL.md": "aebd2c6d6daf44db1d8324b6277b6c09b69797d9968834e915653ab973595c0e",
     "skills-zh/engineering-research-ideation-zh/agents/openai.yaml": "a889ac98ea627e0fed66ca1f56cd9dd29ca6ffa1482366023d24cafdf5cbb33d",
-    "skills-zh/engineering-review-response-zh/SKILL.md": "7dbd92a0871c67641cd178be9bed6829eb314e8bd02d27cac6952f053cc0c715",
+    "skills-zh/engineering-review-response-zh/SKILL.md": "31ac42c734d999c55642cb0a9baf1b24ebabe13dbf2c0bf567832133a1b9f308",
     "skills-zh/engineering-review-response-zh/agents/openai.yaml": "140ceb23f58d616e5a84e96dd5c06dd5e20844fc8a78f0159ba4214299789146",
-    "skills-zh/engineering-terminology-polishing-zh/SKILL.md": "c281bf4e2cfc44c8e2b2775611d6a7d8df393e32567f91fd423e39473a321cc1",
+    "skills-zh/engineering-terminology-polishing-zh/SKILL.md": "dfeb122b4bb090874724f89b128b9ea7f31d111294a867a7bc506d6465ca6370",
     "skills-zh/engineering-terminology-polishing-zh/agents/openai.yaml": "5c180e78ea16d45c74d3ee889ab18da3ed93ebd024aa92e4f4af82d7a47903b2",
-    "skills-zh/general-method-benchmark-realworld-zh/SKILL.md": "733165a9fadca8a121ba35c5c32607570d663270aa588c8bd1f935504461b911",
+    "skills-zh/general-method-benchmark-realworld-zh/SKILL.md": "63fe7bd825b44ff14e641965c31ee1ffc6e023bfdec887b2c44598a099011f48",
     "skills-zh/general-method-benchmark-realworld-zh/agents/openai.yaml": "21845a0cd10bdbba06afd8b2015df98f665e75965483201ba47358e076cf8e58",
-    "skills-zh/industrial-ai-paper-router-zh/SKILL.md": "c88f1d8493808daae864b60ac73c3795f6f9d2969649bcf32d424bf3ffc7f8d2",
+    "skills-zh/industrial-ai-paper-router-zh/SKILL.md": "69cb0800dfa76de8ddd0a27bdd2a7524171e4c5fd32680f0c0989ca854edfbda",
     "skills-zh/industrial-ai-paper-router-zh/agents/openai.yaml": "c5d55a2eab3649d03112208d917e0c20a8e1b3656e593b6a6a1e285031916380",
-    "suite-manifest.yaml": "becf6fc4f6dc387a25be7d99e32f3096e58047d553ce8edd1dd902c530e5d302",
+    "suite-manifest.yaml": "2c7a64ad28eeeef41a3167cdf48172535566ea6cdf01e9131feb4b2f467a9660",
     "tools/extract_terminology_evidence.py": "a8e9cf330c53f7d542b4851880dfc07986930fc3e6a3b87e8cf09a008741bcc8"
   },
+  "evaluated_documentation_sha256": {
+    "README.md": "e363aa34cb5de29465c29e961f20bfbacb3cd20f77e95dd29164cde843992e3d",
+    "README_CN.md": "42a93f833a16276a6e04663ec2523c9906e8ab162a677de8a2cdac297c3ebc3e"
+  },
   "source_parity_review": {
-    "baseline_version": "4.2.36",
-    "entry_pairs_read": 14,
-    "initial_findings": 2,
-    "recheck_version": "4.2.37",
-    "rechecked_entry_files": 4,
-    "outcome": "two handoff omissions resolved",
-    "review_trace": "reviews/figure-route-scope-evaluation.md",
-    "limitation": "Same-context local reread, not a new full-suite audit or runtime test."
+    "baseline_version": "4.2.37",
+    "reference_pairs_read": 2,
+    "files_read": 4,
+    "lines_read": 985,
+    "findings": 1,
+    "recheck": "same-context targeted rows and README first-use rows",
+    "outcome": "category-count ambiguity corrected; README scope aligned",
+    "review_trace": "reviews/class-support-scope-evaluation.md",
+    "limitations": "No whole-suite scientific certification or controlled quality comparison."
   }
 }

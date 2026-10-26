@@ -1,6 +1,6 @@
 # Figure route and scoped result-claim handoff
 
-Primary report: [current forward report](../forward-test-report.json).
+Primary report: [4.2.37 forward report](../history/v4.2.37/forward-test-report.json).
 
 ## Source findings and repair
 

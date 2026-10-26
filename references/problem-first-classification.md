@@ -56,7 +56,7 @@ in the [published index](published-evidence.md) and
 | Timing mismatch or late availability | asynchronous measurements; reporting delay; delayed quality measurements | Separate acquisition time, report-availability time, alignment and physical process lag |
 | Few measured targets/annotations | limited labeled data; label scarcity; sparsely labeled process data | Specify the labeled unit, target and count; abundant unlabeled measurements are not scarce data overall |
 | Coarse or uncertain annotation | coarse-grained labels; label ambiguity; noisy labels/targets | State label granularity and label reliability separately; candidate alternatives differ from simultaneous true labels |
-| Unequal class support | class imbalance; long-tailed class distribution when established | Counts and affected classes; not a synonym for few-shot learning or an automatic headline |
+| Unequal class support | class imbalance; long-tailed class distribution when established | Per-class sample counts and affected classes; not a synonym for few-shot learning or an automatic headline |
 | Changing operation/distribution | multiple operating modes; nonstationary operation; distribution shift | Determine discrete versus continuous variation and the development/use boundary; changing inputs alone do not prove concept drift in the input-to-target relation |
 | Coupled process behavior | process coupling; interacting production stages; cross-stage dependencies | Identify physical/known versus learned relations; plant-wide scope alone is not a demonstrated coupling problem |
 | Different information sources | heterogeneous process data; heterogeneous sensing; cross-domain distribution differences | Establish source/domain/stream/modality/view roles before naming the difficulty |

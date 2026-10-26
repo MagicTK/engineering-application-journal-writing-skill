@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.38 [class-support and scope check](reviews/class-support-scope-evaluation.md)
+distinguishes class count, per-class sample counts and limited labels in three
+fictional requests. First answers were factually and scope-correct; one local
+prose refinement removed repetition. The separate four-reference source review
+and its local recheck are recorded with context and reading limits.
+
 The 4.2.37 [route and handoff check](reviews/figure-route-scope-evaluation.md)
 covers two fictional figure workflows and two narrow Chinese writing requests
 in one new responding context. A separate source review checked all 14 entry
