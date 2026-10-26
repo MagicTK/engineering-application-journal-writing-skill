@@ -5,7 +5,7 @@
   "date": "2026-10-26",
   "release_ready": true,
   "independent_fresh_contexts": true,
-  "historical_report": "history/v4.2.40/forward-test-report.json",
+  "historical_report": "history/v4.2.41/pre-installed-writing-chain-report.json",
   "release_blockers": [],
   "cases": [
     {
@@ -49,6 +49,33 @@
       "review_trace": "reviews/bilingual-execution-parity-evaluation.md",
       "evaluation_phase": "one_new_responding_context_two_requests_first_answers_without_feedback",
       "context_limitations": "Preloaded context without memory search; truncated keyword lookup recovered in relevant bounded reads. Source-root use, not client discovery, blind trial or full-suite certification."
+    },
+    {
+      "id": "installed-linked-seven-section-writing",
+      "prompt": "Seven linked English excerpts from one fictional controller-memory adaptation contract",
+      "required_behaviors": [
+        "Preserve input objects, preparation and prediction dependencies, one-case scope and measured memory/classification/p95-latency trade-off.",
+        "Give distinct section functions and reserve missing scientific evidence for author checks."
+      ],
+      "forbidden_behaviors": [
+        "Invent novelty, results, speedup, hard-deadline compliance, additional cases or authorization to modify real research."
+      ],
+      "outcome": "pass",
+      "reason": "First answer preserved facts and scope. A same-context revision reduced abstract setup detail and replaced an admonitory conclusion with direct measured implications while retaining explicit p95 scope; five other excerpts unchanged.",
+      "language": "English excerpts with Chinese author notes",
+      "tested_skills": [
+        "engineering-application-journal-writing-skill-zh",
+        "engineering-abstract-contributions-zh",
+        "background-driven-industrial-application-zh",
+        "engineering-experiment-evidence-design-zh",
+        "engineering-terminology-polishing-zh",
+        "engineering-journal-rigor-review-zh"
+      ],
+      "evaluator": "Maintainer semantic judgment against pre-saved criteria; no independent second grader",
+      "response_trace": "responses/installed-writing-chain.md",
+      "review_trace": "reviews/suite-coverage-evaluation.md",
+      "evaluation_phase": "one_new_responding_context_then_same_context_two_paragraph_refinement_no_instruction_change",
+      "context_limitations": "Official GitHub helper download pinned to afe03b7; 651 payloads and 108 dependencies verified. Preloaded workspace/history context, no memory search; truncated reads with bounded recovery. Not client-selector discovery, a memory-blank trial, full literature verification or whole-suite certification."
     }
   ],
   "evaluated_source_sha256": {

@@ -1,5 +1,62 @@
 # Installed Suite Coverage Review
 
+## 4.2.41 Download And Linked-Writing Follow-Up
+
+On 2026-10-26, the documented GitHub-link route was exercised with the available
+official installer, repository path `.`, an explicit suite name, and a disposable
+destination. The download was pinned to commit
+`afe03b7fa386a02569cc148dc81032ee0a58745a`. All 651 downloaded payloads matched the
+published source, the downloaded validator passed, and its 108 instruction and
+dependency hashes matched the previously evaluated 4.2.41 snapshot. No persistent
+client installation or account configuration changed. This establishes the
+tested download route, not automatic skill discovery in every client.
+
+One new responding context used that installation for seven linked excerpts
+from an original fictional contract: Introduction, Abstract, contribution,
+problem definition, method overview, experiment opening and conclusion. It
+had the contract and installed instructions but not the maintainer's pre-saved
+criteria or previous responses. It disclosed preloaded workspace/history
+context, no memory search, and two truncated reads followed by bounded recovery.
+It did not inspect real manuscripts or source papers. This is not a memory-blank
+trial, a comparison against an unassisted baseline, or independent grading.
+
+The first answer preserved the complete process-variable input, physically
+removed hidden channels, a fixed training-only teacher, and student-only
+prediction. It consistently retained one production-data case and the actual
+memory, classification and latency trade-off. Its contribution described one
+engineering adaptation without treating standard components or routine tests
+as separate established novelties. Author notes reserved closest-work comparison
+and missing reproducibility details for verification.
+
+Two prose refinements were requested in the same context: reduce experimental
+detail in the abstract, and replace an admonitory conclusion with direct
+measured implications. The first abstract listed all three mean-and-SD scores
+and defined SD; the conclusion warned against interpreting compression as
+acceleration. Those statements were not fabricated, but their section-specific
+emphasis could improve. The revision retained the meaningful trade-off and made
+the p95 qualifier explicit at the deadline comparison. The other five excerpts
+were unchanged. No Skill instruction changed, and this revision is not a second
+independent test or evidence of a new release's superiority.
+
+| Check | Observed outcome |
+|---|---|
+| Mechanism continuity | Inputs, hidden-channel pruning, training objectives and prediction graph remain consistent across excerpts. |
+| Engineering meaning | Peak inference memory is 15 MiB against an 18 MiB allowance; mean macro-F1 is 0.8 percentage points below the full model and 2.1 points above the no-distillation compact control. |
+| Timing scope | p95 latency increases from 6.2 to 6.6 ms. The stated 8 ms threshold is a requirement, not a proven worst-case or closed-loop guarantee. |
+| Section roles | The need motivates the design; the contribution stays integrated; the experiment opening carries repetition/setup information; the conclusion explains the measured trade-off. |
+| Requested lengths | First/revised Abstract: 193/184 words; first/revised conclusion: 90/95. Introduction 102, contribution 73, overview 84 and experiment opening 61 remain within the request's ranges. Problem definition has two sentences. These are not journal-wide limits. |
+
+Maintainer review accepts the final excerpts within the supplied fictional
+facts and requested writing scope. The arithmetic is checked, not raw model
+measurements, novelty, statistical significance or scientific acceptance.
+The no-distillation control does not establish that the channel-ranking rule
+outperforms other pruning rules. The [complete request, first answer, feedback
+and revised excerpts](../responses/installed-writing-chain.md) retain the prose
+history and actual reading limits. The prior
+[4.2.41 report](../history/v4.2.41/pre-installed-writing-chain-report.json) is
+preserved; the current report adds this scoped result without changing the suite
+version or replacing the earlier execution/terminology evidence.
+
 ## Scope And Actual Repairs
 
 This review checks both coordinated manuscript work and deliberately narrow

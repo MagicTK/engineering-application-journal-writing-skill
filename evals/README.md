@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+A further 4.2.41 [installed-writing check](reviews/suite-coverage-evaluation.md)
+exercises the documented GitHub download route and seven connected excerpts
+from one fictional contract. The first answer and a same-context refinement of
+two paragraphs are retained. Instructions are unchanged; this adds scoped
+installation and writing evidence, not a new release or full-suite certificate.
+
 The 4.2.41 [execution and evidence-object check](reviews/bilingual-execution-parity-evaluation.md)
 restores immutable-run and continuous-monitoring requirements in Chinese and
 clarifies belief mass in one abstract example. Two fictional first answers pass
