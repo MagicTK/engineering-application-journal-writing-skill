@@ -65,7 +65,7 @@
 
 **语义迁移，参见P05/P06/P80：**写清类别描述实际使什么成为可能，不将文本模型与传感模型并列罗列。语义匹配应由预测属性承接预给候选描述及故障名；特征生成应将描述条件生成器及训练约束接到生成特征、分类器拟合和保留的预测路径。合成承接为：Class descriptions condition feature generation. The synthesized unseen-class features train a classifier that diagnoses real process measurements. 再补本研究有区别性的约束或匹配规则，已有零样本设置及常规验证不单独成为推进。P80等设计保留训练组件的某些表征时应照实说明，不能默认全部丢弃。摘要保留真实候选集合和已见/未见表现权衡，不照搬完整资源账目或每类数量。
 
-**证据合成：**将编码输出、真实组合对象及最终诊断决策连起来。特征加权结果送入分类器；明确的质量合成规则输出质量，还需按自己的决策规则使用。接口相符时可简写：Each stream supplies class-support masses. Their combination yields the support used for the final fault decision. 再补实际有区别性的权重或冲突处理，不笼统声称组合保证可靠性。后备处理不必每次进入摘要，但若它定义了所评价的输出，就应保留。按需查[合成与决策核查](terminology-decisions_CN.md#信念质量的合成与决策)。
+**证据合成：**将编码输出、真实组合对象及最终诊断决策连起来。特征加权结果送入分类器；按已定义的规则合成信念质量后，仍需说明如何作出诊断决策。接口相符时可简写：Each stream supplies class-support masses. Their combination yields the support used for the final fault decision. 再补实际有区别性的权重或冲突处理，不笼统声称组合保证可靠性。后备处理不必每次进入摘要，但若它定义了所评价的输出，就应保留。按需查[合成与决策核查](terminology-decisions_CN.md#信念质量的合成与决策)。
 
 **观测时间，参见P08/P24/P73：**将已采对象接到它实际提供输入的表征或估计器。摘要可由不同原生采样计划，引出利用现有测量或真实间隔的操作，再接质量量、图或报警。对已核实的间隔加权预测器，可写：Each stream is encoded at its native observation times. Measured intervals weight these representations before fusion for quality estimation. 再加入实际有区别的设计，不新造时间模块名。贡献可落在预测器怎样利用这些观测；用了中间观测不等于恢复全部未观测值。结果保留有据收益及仍存在的速率/间隔敏感性。
 

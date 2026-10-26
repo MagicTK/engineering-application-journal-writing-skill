@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.41 [execution and evidence-object check](reviews/bilingual-execution-parity-evaluation.md)
+restores immutable-run and continuous-monitoring requirements in Chinese and
+clarifies belief mass in one abstract example. Two fictional first answers pass
+within their stated scope. Complete source-pair reading, local recheck and
+behavioral evidence are reported separately, without full-suite certification.
+
 The 4.2.40 [Chinese terminology check](reviews/bilingual-term-parity-evaluation.md)
 repairs two meaning shifts found in a complete four-file bilingual source review.
 One new responding context then answered two fictional requests on additive

@@ -1,6 +1,6 @@
 # Chinese Terminology Meaning Preservation
 
-Primary report: [current forward report](../forward-test-report.json).
+Primary report: [v4.2.40 forward report](../history/v4.2.40/forward-test-report.json).
 
 ## Scope And Repairs
 

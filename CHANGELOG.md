@@ -1,5 +1,15 @@
 # Changes
 
+## 4.2.41 (2026-10-26)
+
+- Restore the Chinese execution guide's immutable-run requirement and its
+  continuous-monitoring evidence boundary: scoring adjustments do not change
+  emitted alarms, and computation time does not replace onset-to-alarm delay.
+- Clarify belief mass in the Chinese abstract example without treating it as
+  product quality, inventing a combination rule or adding a generic module name.
+- Preserve the concise migration guidance and existing source admissions;
+  scoped bilingual review and fictional-use evidence are reported separately.
+
 ## 4.2.40 (2026-10-26)
 
 - Restore the conditional meaning of additive attention bias in Chinese: an
