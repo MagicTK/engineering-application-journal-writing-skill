@@ -1314,6 +1314,24 @@ Separate Chinese checks appear in the
 Inaccessible TCES article pages were not counted as read definitions or translation
 passages. No implementation or empirical results were reproduced.
 
+## Rate Conversion Wording / 速率转换用词
+
+P23 p.2 and P34 p.7 were reread for temporal subsampling to match rates, in an
+adjacent hydraulic discussion and process soft-sensor comparators respectively.
+P73 p.7's resampled benchmark paragraph was inspected for constructed versus
+native rates. These support the bounded downsampling account in
+[terminology decisions](terminology-decisions.md#rate-conversion-and-interpolation),
+not all source criticisms of rate conversion, their complete models or reported
+performance. P24's searched text did not provide an interpolation definition;
+the selected comparison-model label in the supplied hierarchical-mask paper
+does not establish a second definition either. Neither is counted as one.
+
+Official numerical-tool English/Chinese pages provide the separately linked
+operator and translation checks. A function definition is not another industrial
+paper or a requirement to use that software. No general industrial interpolation,
+anti-aliasing or complete named-module family is newly admitted by this reading.
+No source experiments, numerical-library implementation or figures were reproduced.
+
 ## Reusable Lessons / 可迁移结论
 
 1. **Name the object before the operation.** A stage, sampling stream, fault attribute and bag are different objects even when all become tensors.

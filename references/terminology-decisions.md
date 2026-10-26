@@ -747,6 +747,43 @@ pairwise elapsed times. Preserve these differences when adapting a source's
 wording. The [Chinese wording checks](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
 verify the base period/interval/frequency words, not every compound label above.
 
+### Rate Conversion And Interpolation
+
+Describe the actual operation on the stated axis. These distinctions help write
+preprocessing and comparator settings; they do not prescribe preprocessing or
+admit a new industrial module name.
+
+| Wording | Operation to verify | Keep distinct |
+|---|---|---|
+| downsampling; temporal subsampling | Retaining selected time positions. For every `M`th observation of a uniform stream, the output rate is `f_in / M`; the starting offset also matters. | Selecting observations is not averaging a time bin, filtering, or changing which variables are measured. Do not add an unreported filter. |
+| time-series resampling | Forming a sequence on specified output times, possibly by selection, interpolation or filtered rate conversion. | A changed model-input grid does not change the original sensor clock. Resampling training examples to alter class balance is a different use of the word. |
+| interpolation | Estimating values at specified positions between known observations with the stated rule and coordinate, such as elapsed time rather than array index. | Estimation outside the supported interval is extrapolation. A completed value is not a newly acquired measurement; using observations unavailable at the prediction time needs a different evaluation claim. Retrospective interpolation is not inherently invalid. |
+| upsampling | Increasing sequence resolution using the operation actually defined by the source or implementation. | Zero insertion, holding, interpolation and learned prediction are different computations. Neither a longer array nor a higher output-grid rate establishes new measured information. |
+
+P23 p.2 defines temporal subsampling for rate matching; P34 p.7 describes it in
+soft-sensor comparators. This is paired industrial usage of downsampling, not
+proof that every model must discard fast observations or that every reduction
+harms diagnosis. P73 p.7 separately describes deliberately resampled benchmark
+streams; retain that construction rather than presenting their rates as native
+acquisition. P23's use of upsampling for predicted low-rate values is a
+source-specific usage, not a definition of every numerical upsampling operator.
+
+For implementation semantics, the official [rate-conversion guide](https://www.mathworks.com/help/dsp/ug/design-of-decimatorsinterpolators.html)
+separates selection, zero insertion and filtered conversion; the
+[resample documentation](https://www.mathworks.com/help/signal/ref/resample.html)
+distinguishes its different calling forms. Where spectral preservation matters,
+check the actual filtering and output bandwidth before claiming alias-free
+conversion. Do not assume every resampling call filters, or infer physical
+information recovery from smoothing. Filter support, delay compensation and
+observation availability matter for a time-specific prediction.
+
+The official Chinese [downsample](https://ww2.mathworks.cn/help/signal/ref/downsample.html),
+[upsample](https://ww2.mathworks.cn/help/signal/ref/upsample.html) and
+[resampling guide](https://ww2.mathworks.cn/help/signal/ug/signal-resampling.html)
+support 下采样, 上采样, 重采样, 插值 and the documented 抽取 convention. These
+are numerical terminology checks, not additional industrial-paper evidence or
+a universal equivalence between `decimation` and unfiltered point selection.
+
 ### Alignment: State The Object And Criterion
 
 Use `alignment` with the object it actually constrains, not as a synonym for fusion or recovered information.

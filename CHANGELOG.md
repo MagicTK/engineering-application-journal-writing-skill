@@ -1,5 +1,16 @@
 # Changes
 
+## 4.2.43 (2026-10-26)
+
+- Extend the existing sampling vocabulary with temporal selection, resampling,
+  interpolation and source-defined upsampling. Preserve actual axes, timestamps,
+  measurement provenance and prediction-time availability.
+- Separate paired industrial downsampling usage from official numerical-tool
+  semantics and Chinese wording. Do not infer averaging, filtering, physical
+  information recovery or a new general industrial module from a name alone.
+- Keep the existing Skill/template structure. Focused fictional-use checks remain
+  separate from source reading, scalar arithmetic and packaging validation.
+
 ## 4.2.42 (2026-10-26)
 
 - Admit structural reparameterization for compatible convolution-branch conversion

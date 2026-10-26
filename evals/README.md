@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.43 [rate-conversion check](reviews/rate-conversion-evaluation.md) covers
+three fictional requests on temporal selection, interpolation coordinates and
+information access, and source-defined versus numerical upsampling. First
+answers pass within this scope, without feedback. Industrial reading, official
+tool definitions, scalar arithmetic and packaging checks remain separate.
+
 The 4.2.42 [branch-conversion check](reviews/branch-conversion-evaluation.md)
 tests three fictional requests in one new responding context: compatible
 conversion, a nonlinear-head counterexample, and distinct latent-sampling,
