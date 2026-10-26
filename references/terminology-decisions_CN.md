@@ -225,7 +225,7 @@ P39-P40 是相邻机械领域的用例，不代表流程工业监督形式统一
 - partition 可来自固定工艺划分；grouping 可预设或学习；clustering 需要实际聚类机制；软分组不一定输出硬簇。
 - aggregation 对集合汇总；fusion 结合信息来源；interaction 建模相互作用。需对照操作选择，不靠“高级词”替换。
 - relationship 范围较宽；dependency 不自动表示因果；correlation 需要相应统计量或合理定义。
-- topology、prior、constraint 分别核查工程来源和数学作用；加性注意力偏置不是硬约束，也不自动是因果图。
+- topology、prior、constraint 分别核查工程来源和数学作用；加性注意力偏置不一定是硬约束，也不自动是因果图。
 - causal convolution 表示特定输出不读取未来输入；预测依赖表示信息对预测有用。二者本身均不识别物理干预效应或根因，不能只因出现 causal 就混同。
 - spatial / spatiotemporal 应定义所指轴或关系：物理位置、工艺拓扑、图邻域或明确建模的变量间结构；时空表述还需说明时间轴。模型网格相邻不自动等于物理接近或工艺耦合。
 - gate 调节贡献，attention 计算关系或加权聚合，fusion module 结合路径。核查形状与操作，不混淆分支和融合模块。

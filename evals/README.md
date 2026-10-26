@@ -12,6 +12,13 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.40 [Chinese terminology check](reviews/bilingual-term-parity-evaluation.md)
+repairs two meaning shifts found in a complete four-file bilingual source review.
+One new responding context then answered two fictional requests on additive
+attention restrictions and fixed-model prediction in unseen plants. First
+answers passed within that scope without feedback; this is not new verification
+of the cited literature or a full-suite certificate.
+
 The 4.2.39 [performance-gap check](reviews/performance-gap-evaluation.md) covers
 two fictional writing requests in one new responding context. It preserves a
 measured shortfall under matching assumptions and rejects an unsupported

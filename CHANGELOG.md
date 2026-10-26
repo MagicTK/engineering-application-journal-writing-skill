@@ -1,5 +1,15 @@
 # Changes
 
+## 4.2.40 (2026-10-26)
+
+- Restore the conditional meaning of additive attention bias in Chinese: an
+  additive term does not by itself determine whether a restriction is hard.
+- Remove an unintended healthy-condition restriction from the Chinese domain
+  generalization record; permitted prediction inputs are not limited to normal
+  operation. Keep inference distinct from fitting on target data.
+- Preserve English definitions, source admissions and manuscript guidance;
+  the scoped bilingual review and use checks are recorded separately.
+
 ## 4.2.39 (2026-10-26)
 
 - Align Related Work guidance with the existing contribution routes: a verified

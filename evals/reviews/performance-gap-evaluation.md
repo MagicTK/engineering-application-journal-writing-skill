@@ -1,6 +1,6 @@
 # Evidence-Based Performance Gaps
 
-Primary report: [current forward report](../forward-test-report.json).
+Primary report: [4.2.39 forward report](../history/v4.2.39/forward-test-report.json).
 
 ## Scope And Source Correction
 
