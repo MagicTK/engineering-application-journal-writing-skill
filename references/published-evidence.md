@@ -2,9 +2,9 @@
 
 ## Scope And Reading Depth / 范围与阅读深度
 
-This index contains a selected 131-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 131 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
+This index contains a selected 132-paper corpus, not a systematic review. Selected abstract, introductory, method and conclusion passages were read for framing, terminology and method-to-evidence progression; full-document term searches guided some passage checks. The table identifies specific verified passages and other reading targets. It does not claim full close reading or experimental reproduction of all 132 papers. Page locators are PDF page positions, not printed journal page numbers. Bibliography/title matches and verb homographs do not establish terminology use. Counts from earlier private corpus snapshots are not carried forward as public frequency evidence.
 
-本索引合计131篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83/P124/P128/P129注明所读作者版本，P130/P131注明所供IEEE接受发表稿。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
+本索引合计132篇，属于定向选择的文献而非系统综述。针对选定摘要、引言、方法与结论段落阅读定位、术语及论证关系，部分段落由全文词语检索定位。表中区分具体核验段落和其他参考阅读方向，不声称完成全部逐段精读或实验复现。页码为PDF文件页序；P48的机构版本含一页封面，P52/P75/P76/P112采用机构提供的接受稿，P59/P60/P79/P83/P124/P128/P129注明所读作者版本，P130/P131注明所供IEEE接受发表稿。文末题名命中、动词同形词不能当作术语证据；旧版私有统计次数不作为本版公开词频依据。
 
 Only bibliographic metadata and original analytical notes are distributed. Papers, extracted text and private manuscripts are not included. A paper's published status is not proof that every claim or design choice should be copied. Adjacent equipment/electrical studies are explicitly scoped; they do not replace process-industry evidence.
 
@@ -143,6 +143,7 @@ Only bibliographic metadata and original analytical notes are distributed. Paper
 | P129 | [Towards intelligent knowledge assistance in abrasive belt grinding via a retrieval-augmented generation chatbot with reliability support](https://doi.org/10.1016/j.compind.2026.104479) | Computers in Industry 178 (2026), 104479; [institutional author post-print](https://orca.cardiff.ac.uk/id/eprint/186490/). PDF pp.11-14, Section 3/Table 3: retrieved/reranked fragments supply knowledge-assistance responses. Full BelGrindGPT/conflict filter, scoring and deployment claims are not certified. |
 | P130 | [A Multitask Crisscross Network for One-Shot Bearing Multiattribute Fault Diagnosis](https://doi.org/10.1109/TCYB.2026.3700287) | TCYB, supplied 2026 IEEE accepted-for-publication PDF, final except pagination. Selected pp.1-5, with pp.3-4 visually checked: Section II-C defines shared parameters, task-specific attribute predictors and joint fitting; Section III connects attributes to fault identification. Full MTCCN/ACC, label mapping, equations and results are not certified. |
 | P131 | [Federated Incremental Collaborative Fault Diagnosis Method for Dynamic Data Streams in Multiple Wind Farms](https://doi.org/10.1109/TCYB.2025.3646266) | TCYB, supplied IEEE accepted-for-publication PDF, copyright2026, final except pagination. Read pp.1-6; pp.4,6 visually checked. Sections II-B/C define class additions and cumulative-label prediction; Section III-B2 compares already supplied training labels with remembered classes, not unlabeled unknown-fault detection. Full named variants, protocol/teacher-output details, privacy and results are not certified. |
+| P132 | [A structurally re-parameterized convolution neural network-based method for gearbox fault diagnosis in edge computing scenarios](https://doi.org/10.1016/j.engappai.2023.107091) | EAAI126 (2023),107091; author-hosted published PDF. Adjacent machinery context: Section 3.3.2/Fig.4 supports the scoped branch-conversion record, not general process-industry prevalence or certification of the complete method. |
 
 Some source titles use publisher typography normalized here for readability. Verify exact bibliographic metadata with the publisher when citing a source in a manuscript; this index is not an automatically generated bibliography.
 
@@ -1297,6 +1298,21 @@ Official SHAP documentation supports the output/reference checks linked in
 not a required library, a physical intervention or proof that either paper's
 implementation handles process dependence correctly. Synthetic arithmetic
 checks are separate from the papers' empirical results.
+
+## Compatible Branch Conversion / 兼容分支转换
+
+P45 pp.4-5 were reread for the shared activation in Eq.(4) and the affine
+convolution/normalization conversion in Eq.(21). Its per-head activation versus
+merged-head claim remains a separate unresolved issue. P132 was read in the
+[author-hosted published PDF](https://wsnow99.github.io/files/journal4.pdf): p.1,
+selected Sections 2.2/3.3/4.1/4.4; pp.5-6 were visually inspected. Eq.(13) omits
+the epsilon term shown in Eq.(12); exact formulas and claimed gains are not
+adopted. The paired base record is narrower than either complete network.
+
+Separate Chinese checks appear in the
+[terminology bank](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope).
+Inaccessible TCES article pages were not counted as read definitions or translation
+passages. No implementation or empirical results were reproduced.
 
 ## Reusable Lessons / 可迁移结论
 

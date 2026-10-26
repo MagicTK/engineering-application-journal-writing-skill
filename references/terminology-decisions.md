@@ -675,7 +675,11 @@ A modeled computation-cost relation can support a simulation result under that
 relation, not automatically device latency. Connect the selected model to the
 actual fault decision and preserve the evaluation level in the result sentence.
 
-An exact branch conversion also depends on operations, not a shared name. P45 p.5 describes merging compatible convolution/normalization branches before a shared activation. Fixed inference normalization can be affine; input-batch-dependent normalization is a different computation. Combining affine preactivations before one activation is not generally equivalent to averaging separately activated head outputs. Check padding, shapes, biases, statistics and activation placement before asserting equality; keep P45's full conversion claims attributed rather than certifying all source formulas or a generic module family.
+For **structural reparameterization**, describe the trained structure, parameter conversion and retained inference structure. P45 pp.4-5 and P132 pp.5-6 support compatible convolution-branch conversion as a scoped base operation; their full named methods remain attributed. This changes the representation of a computation, whereas pruning selects parameters or connections and distillation supplies a learning objective. These operations can coexist. The Gaussian reparameterization used in a VAE concerns latent sampling, not inference-branch merging.
+
+Exact conversion depends on the operations. With fixed inference statistics, convolution and batch normalization can be folded into an affine map; retain the actual variance/epsilon and bias terms. Check compatible shapes, kernel alignment, padding, stride, grouping and activation placement before claiming equivalent outputs. Adding affine branches before a shared activation is not generally equivalent to averaging separately activated heads. Input-batch-dependent normalization also changes the computation. Numerical agreement on checked inputs supports the tested implementation, not all-input equivalence by itself.
+
+Keep the writing proportional: explain the conversion once in Methods, connect the retained predictor to its engineering purpose, and report resource measurements where available. Fewer inference branches alone do not establish faster execution or lower measured peak memory. A complete conversion name or a published formula does not remove these checks.
 
 ## Topic-Specific Terms
 

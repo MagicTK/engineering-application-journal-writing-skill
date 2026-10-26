@@ -1,5 +1,16 @@
 # Changes
 
+## 4.2.42 (2026-10-26)
+
+- Admit structural reparameterization for compatible convolution-branch conversion
+  from two matched published engineering contexts, with a separate Chinese wording
+  check; retain complete source names and unresolved formula details as attributed.
+- Distinguish inference-structure conversion from pruning, distillation and latent
+  sampling. Connect equivalence and efficiency language to the actual computation
+  and evidence in both terminology guides.
+- Keep the existing Skill structure; focused fictional-use checks are recorded
+  separately from source reading and software validation.
+
 ## 4.2.41 (2026-10-26)
 
 - Restore the Chinese execution guide's immutable-run requirement and its

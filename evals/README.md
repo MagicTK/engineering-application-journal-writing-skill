@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.42 [branch-conversion check](reviews/branch-conversion-evaluation.md)
+tests three fictional requests in one new responding context: compatible
+conversion, a nonlinear-head counterexample, and distinct latent-sampling,
+distillation and pruning roles. The first answers pass within that scope;
+source reading, arithmetic and program checks are reported separately.
+
 A further 4.2.41 [installed-writing check](reviews/suite-coverage-evaluation.md)
 exercises the documented GitHub download route and seven connected excerpts
 from one fictional contract. The first answer and a same-context refinement of
