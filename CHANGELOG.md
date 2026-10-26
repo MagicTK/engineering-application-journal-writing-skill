@@ -1,5 +1,19 @@
 # Changes
 
+## 4.3.0 (2026-10-27)
+
+- Consolidate the 4.2-series problem-first routes, context-dependent terminology,
+  mechanism-linked writing and optional fictional examples as a reviewed milestone.
+  Earlier source, installation and behavioral checks retain their recorded scope;
+  this is not a new certification of every paper or terminology entry.
+- Correct two remaining cross-level descriptions: limited annotations affect
+  learning rather than physical fault propagation, and robustness evaluations
+  should identify their actual variation or constraint rather than calling every
+  setting an industrial disturbance.
+- Preserve the existing Skill and template structure, author control, source
+  attribution and private-data boundary. New scoped use checks and the milestone
+  evidence map are reported separately from program and package validation.
+
 ## 4.2.45 (2026-10-26)
 
 - Correct the bilingual fault-propagation row: ordinary disturbances are not

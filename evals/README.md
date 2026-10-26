@@ -12,6 +12,13 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.3.0 [milestone review](reviews/v430-milestone-evaluation.md) connects the
+requested workflow capabilities to their actual, versioned evidence. Two new
+fictional requests separate annotation availability from physical fault
+propagation, and input-configuration sensitivity from industrial disturbance
+or cross-condition evidence. The first response passes the scoped review;
+source compatibility, static repairs and behavior are reported separately.
+
 The 4.2.45 [fault/disturbance check](reviews/fault-disturbance-evaluation.md)
 covers a permitted setpoint response and a defined simulator fault alongside
 neural message passing. Both first answers preserve the different objects and

@@ -150,7 +150,7 @@ Recommend omitting redundant variants only when experiment planning or substanti
 
 ## 9. Robustness And Generalization Claims
 
-For `robustness`, identify the tested disturbance:
+For `robustness`, identify the tested source of variation or constraint:
 
 - measurement noise;
 - missing data;

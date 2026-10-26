@@ -4,9 +4,9 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.2.45: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.3.0: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
-The 4.2 line adds [problem-first industrial classification](references/problem-first-classification.md): separate observation, annotation, operating and resource difficulties from tasks, system scales and candidate methods. It distinguishes data samples, annotation and learning objectives, permits problem-only work, and provides a conditional [problem-to-method navigation](references/problem-first-classification.md#6-when-requested-problem-to-method-navigation) when ideas are requested. See the [evaluation record](evals/README.md) for actual tests and audit limits; the terminology bank is not a completed whitelist.
+**4.3 milestone:** [problem-first industrial classification](references/problem-first-classification.md), contextual terminology, linked manuscript sections and a runnable fictional result example now share one workflow. Distinguish observation, annotation, operating and resource difficulties before choosing methods; use the conditional [problem-to-method navigation](references/problem-first-classification.md#6-when-requested-problem-to-method-navigation) only when ideas are requested. The [milestone review](evals/reviews/v430-milestone-evaluation.md) maps these capabilities to actual evidence and its limits; the terminology bank remains an expanding, scoped resource rather than a completed whitelist.
 
 The [current evaluation record](evals/README.md#current-version-status) identifies the tested version, actual cases, repairs and limits. Independent writing responses and deterministic packaging checks are reported separately. They do not certify every manuscript or every instruction; [versioned changes](CHANGELOG.md) explain what has been updated.
 
@@ -159,7 +159,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.2.45 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.3.0 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|
