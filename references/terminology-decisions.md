@@ -683,7 +683,7 @@ For **soft sensing**, name the estimated quantity and the measurements available
 
 - **Multi-rate observation:** distinguish differences between streams from variation within one stream. Different fixed periods can coexist with noncoincident timestamps; timestamp mismatch does not require each stream to have irregular intervals. Irregular timing, multiple rates and missing entries may also coexist. Define `asynchronous` in the actual acquisition or control context rather than imposing one cross-field meaning. P08/P73 define rate groups and observed subsets; P24 explicitly models unequal sample intervals. These are related observation settings, not one interchangeable module family.
 
-For a uniformly sampled stream, frequency `f` (observations per unit time) and period `Delta t` satisfy `f = 1 / Delta t`. A longer period means a lower frequency. For irregular observations, a declared average-frequency statistic can be useful, but does not make intervals equal; the reciprocal of mean interval and mean reciprocal interval generally differ. Check units before translating a rate-group index or interval multiplier into physical frequency. Sequence position, elapsed observation time, time since the latest measurement, assay-release delay and physical process lag denote different quantities. Use the actual timing input and its recipient, not a new time-qualified mechanism name. Holding a value on a model grid reuses a measurement rather than creating another acquisition.
+For the related quantities, use the [sampling and timing lookup](#sampling-and-timing-lookup). It connects common words to their objects and units rather than treating each problem name as a complete terminology map.
 
 For problem-only wording, use the [observation availability/counting profile](problem-first-classification.md#observation-availability-and-counting)
 before selecting a method. A grid blank, a lost expected acquisition and a
@@ -709,6 +709,39 @@ late-released value can require different descriptions and denominators.
 | local outside-class / unknown fault | Outside one sub-classifier's label set versus unknown to the whole system | P37's pairwise OOD class does not by itself establish system-level novel-fault detection. |
 
 For operating-condition terms, use the [problem-level profile](problem-first-classification.md#operating-conditions-and-cross-condition-problems) before editing a title or gap. New conditions, temporal changes and unseen fault classes are different statements. Read both conditional directions and the stated stable quantities; a change in class frequencies alone does not prove a fixed-class-conditional label-shift setting.
+
+### Sampling And Timing Lookup
+
+Use only the rows relevant to the sentence. These are quantity distinctions,
+not new mechanism names or a requirement to list every clock in an abstract.
+Identify the acquisition object first, then its model representation.
+
+| Term or description | Object and units | Writing decision |
+|---|---|---|
+| sampling period; nominal sampling period | A fixed or scheduled separation between acquisitions, in seconds or another time unit | Distinguish the intended schedule from the intervals actually observed. A lost scheduled measurement can lengthen an observed gap without changing the nominal period. |
+| sampling interval; time interval between observations | A specified timestamp difference, in time units | Define the endpoints. Adjacent intervals `t_i - t_(i-1)` differ from the all-pairs separations `abs(t_i - t_j)` in P24 p.4, Eq.(10). An interval matrix is not necessarily a vector of gaps since the previous sample. |
+| sampling frequency / sampling rate | Acquisitions per unit time in the stated measurement stream | For uniform sampling, `f = 1 / Delta t`: a longer period means a lower frequency. Keep the acquisition rate distinct from oscillation frequencies in the measured process and from the rate of a resampled model input. |
+| rate-group index; interval multiplier | A group identifier or a defined dimensionless ratio | Neither is automatically a frequency in Hz. Read the definition before saying a larger index means faster acquisition; a larger period multiplier means slower acquisition when the reference period is fixed. |
+| reference time grid; grid spacing | The timestamps and spacing used to organize model inputs | State whether grid entries are acquired, held, interpolated or unobserved. A common grid need not be a clock shared by all sensors; a held value is not a new acquisition. |
+| window length; window stride; output interval | Respectively the input extent, displacement between windows and time between issued predictions | Specify whether length/stride counts native observations, grid positions or physical time. A sample count alone need not determine duration for irregular observations; output cadence need not equal sensor cadence. |
+
+For irregular observations, a declared average-rate statistic can be useful,
+but does not make the intervals equal. The reciprocal of the mean interval
+and the mean of reciprocal intervals generally differ. State which statistic
+and observation span were used when reporting a numerical rate.
+
+Sequence position, time since the latest measurement, assay-release delay
+and physical process lag have different endpoints or roles even when some are
+measured in seconds. Name the actual timing input and its recipient rather
+than inventing a time-qualified gate or module. For availability and missingness,
+follow the [observation profile](problem-first-classification.md#observation-availability-and-counting).
+
+P34 pp.4-5 and P73 p.3 define rate groups and available measurements; P23 p.2
+explicitly describes complete uniform streams whose shared-grid display has
+uncollected entries. P24 pp.3-4 instead defines irregular observations and
+pairwise elapsed times. Preserve these differences when adapting a source's
+wording. The [Chinese wording checks](engineering-application-terminology-bank.md#11-checked-core-names-and-remaining-scope)
+verify the base period/interval/frequency words, not every compound label above.
 
 ### Alignment: State The Object And Criterion
 

@@ -86,5 +86,5 @@ exhaustive literature review or certification of every terminology entry.
 See the [candidate first answer](../responses/suite-coverage-candidate.md),
 [baseline workflow and repair](../responses/suite-coverage-workflow-baseline.md),
 [baseline narrow requests and focused gap](../responses/suite-coverage-narrow-baseline.md),
-[current report](../forward-test-report.json) and
+[versioned report](../history/v4.2.35/forward-test-report.json) and
 [preceding report](../history/v4.2.34/forward-test-report.json).

@@ -1,5 +1,16 @@
 # Changes
 
+## 4.2.36 (2026-10-26)
+
+- Make sampling terminology directly navigable in the existing English/Chinese
+  decision guides: nominal period, observed interval, pairwise elapsed time,
+  acquisition frequency, rate-group indices, model grids and window/output timing.
+- Replace an overgeneral sampling-cycle example with the actual acquisition
+  times and intervals; irregular observations need not have a fixed cycle.
+- Record scoped published passages and separate Chinese base-word checks.
+  No new generic mechanism name, private manuscript detail or research result
+  is introduced. Behavioral status is recorded in the current evaluation report.
+
 ## 4.2.35 (2026-10-26)
 
 - Matched literature-gap evidence to the actual claim scope instead of requiring several methods to share a limitation for every focused comparison; retained separate novelty and generic-name checks.

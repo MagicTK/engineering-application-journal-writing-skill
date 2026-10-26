@@ -7,7 +7,7 @@ description: Polish English or Chinese engineering-application journal prose whi
 
 [中文执行版](../../skills-zh/engineering-terminology-polishing-zh/SKILL.md)
 
-Suite version: `4.2.35`
+Suite version: `4.2.36`
 
 ## Mission
 
@@ -92,12 +92,14 @@ Prefer engineering terms before model terms:
 
 - `process variables` before `channels`;
 - `production stages` before `branches`;
-- `sampling cycles` before `interval embeddings`;
+- actual sampling times and intervals before `interval embeddings`;
 - `process connections` before `graph edges`;
 - `operating conditions` before `domains`;
 - `inspection regions` before `spatial tokens`.
 
 When a process variable is represented as one input channel, define that correspondence once. Then use `channel` only for model operations.
+
+For multi-rate or irregular observations, use the [sampling and timing lookup](../../references/terminology-decisions.md#sampling-and-timing-lookup). Do not assume a fixed sampling cycle when only timestamps or unequal intervals are defined.
 
 ### Industrial Data Descriptions
 

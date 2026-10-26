@@ -7,7 +7,7 @@ description: 工程应用论文术语与语言润色 Skill 中文执行版。在
 
 [English](../../skills/engineering-terminology-polishing/SKILL.md)
 
-套件版本：`4.2.35`
+套件版本：`4.2.36`
 
 ## 一、任务目标
 
@@ -53,12 +53,14 @@ state/condition、variable/attribute、sample/record 和变量特征的争议按
 
 - process variables 先于 channels；
 - production stages 先于 branches；
-- sampling cycles 先于 interval embeddings；
+- 实际采样时刻和间隔先于 interval embeddings；
 - process connections 先于 graph edges；
 - operating conditions 先于 domains；
 - inspection regions 先于 spatial tokens。
 
 若变量对应输入 channel，只定义一次，之后 `channel` 仅描述模型操作。
+
+多速率或不规则观测的用词见[采样与时间概念速查](../../references/terminology-decisions_CN.md#采样与时间概念速查)。只有时间戳或不等间隔时，不默认存在固定采样周期。
 
 ### 工业数据描述
 

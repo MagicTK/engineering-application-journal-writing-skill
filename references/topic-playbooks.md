@@ -22,6 +22,9 @@ For problem-only work, start with the [observation availability/counting profile
 It separates acquisition schedules, release times and counting units without
 requiring the method or evidence plan below.
 
+For period, frequency, timestamp differences and model-grid wording, use the
+[sampling and timing lookup](terminology-decisions.md#sampling-and-timing-lookup).
+
 Identify the per-stream observation schedule, cross-stream timing, missing entries and measurement-release delay. These properties can coexist: streams with different fixed periods need not share timestamps, while a multirate study may also contain irregular observations. State the actual setting rather than forcing mutually exclusive categories.
 
 Writing priorities:
