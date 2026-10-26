@@ -52,5 +52,5 @@ source-algorithm correctness, whole-bank correctness or journal acceptance.
 
 See the [earlier first answer](../responses/bayesian-objects-baseline.md),
 [candidate first answer](../responses/bayesian-objects-candidate.md),
-[current report](../forward-test-report.json) and
+[report for this version](../history/v4.2.32/forward-test-report.json) and
 [preserved previous report](../history/v4.2.31/forward-test-report.json).

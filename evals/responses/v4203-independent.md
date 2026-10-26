@@ -1,8 +1,8 @@
 # Fictional Observation-Problem Final Response
 
-A fresh context answered the same A/B on frozen v4.2.3, changing only the reading root. Baseline science/prose already pass; this checks the explicit observation profile and retained boundaries, not general gains. Only wrapper/path/link/line metadata and whitespace are normalized; exact raw/dispatch remain private. Runtime orientation is not case evidence.
+A fresh context answered the same A/B on frozen v4.2.3, changing only the reading root. Baseline science/prose already pass; this checks the explicit observation profile and retained boundaries, not general gains. Wrapper/path/link/line metadata and whitespace are normalized, and nonresearch live account-quota values are redacted; exact raw/dispatch remain private. Runtime orientation is not case evidence. This current-copy redaction does not rewrite Git history.
 
-运行取向披露：采用当前仓库 **v4.2.3 中文入口的 problem-only 路由**；运行规则与旧记忆仅用于导航，不作为案例证据。已检查包含额度，剩余27%；未使用付费接口或重置额度。本轮只读，无编辑、浏览、原论文访问、实验或新代理。以下 A/B 数值均为虚构。
+运行取向披露：采用当前仓库 **v4.2.3 中文入口的 problem-only 路由**；运行规则与旧记忆仅用于导航，不作为案例证据。已检查包含额度（账户用量数值已隐去）；未使用付费接口或重置额度。本轮只读，无编辑、浏览、原论文访问、实验或新代理。以下 A/B 数值均为虚构。
 
 **A：规则多速率下的观测不可用**
 这是**规则多速率采样，叠加永久丢失与报告延迟**，导致9 s决策时观测不完整。

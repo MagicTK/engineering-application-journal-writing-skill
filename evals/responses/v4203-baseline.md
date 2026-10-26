@@ -1,8 +1,8 @@
 # Fictional Observation-Problem Baseline
 
-One context answered A/B on immutable v4.2.2. Main science and positive prose already pass. Only wrapper/path/link/line metadata and whitespace are normalized; exact raw/dispatch remain private. Runtime orientation is disclosed, not case evidence.
+One context answered A/B on immutable v4.2.2. Main science and positive prose already pass. Wrapper/path/link/line metadata and whitespace are normalized, and nonresearch live account-quota values are redacted; exact raw/dispatch remain private. Runtime orientation is disclosed, not case evidence. This current-copy redaction does not rewrite Git history.
 
-运行定位（非案例证据）：从指定发布包 v4.2.2 中文入口进入 problem-only 路由，读取相关采样、掩码与评价参考；另读取通用运行时 Skill 并核对额度，包含额度剩余 28%。以下 A、B 均按题设虚构条件计算，不是工业实测结果。
+运行定位（非案例证据）：从指定发布包 v4.2.2 中文入口进入 problem-only 路由，读取相关采样、掩码与评价参考；另读取通用运行时 Skill 并核对额度（账户用量数值已隐去）。以下 A、B 均按题设虚构条件计算，不是工业实测结果。
 
 **A：观测口径**
 这是**固定多速率观测，同时存在永久丢失和报告延迟**。共同网格中的空位不能统一解释为停机或采集故障。

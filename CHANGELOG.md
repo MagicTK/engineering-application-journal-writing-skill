@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.33 (2026-10-26)
+
+- Corrected an existing source description that could imply wholly acquired industrial measurements; the inspected evaluation includes model-generated and transformed data.
+- Clarified how that source's staged fitting trains its retained operating-performance classifier, separating dataset construction, feature extraction, domain discrimination and grade prediction.
+- Preserved the already passing abstract/contribution core and method navigation; no new source ID, general mechanism name, Skill, template, research experiment or manuscript edit was introduced.
+- Redacted unrelated live account-quota values from current public fictional-response copies while retaining scientific content, disclosures and private originals; historical Git commits were not rewritten.
+
 ## 4.2.32 (2026-10-26)
 
 - Added a scoped Bayesian-inference base record using two existing published process-engineering sources and separately checked Chinese wording; kept the corpus count unchanged.
