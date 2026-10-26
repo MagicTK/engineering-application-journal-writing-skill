@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.39 [performance-gap check](reviews/performance-gap-evaluation.md) covers
+two fictional writing requests in one new responding context. It preserves a
+measured shortfall under matching assumptions and rejects an unsupported
+accuracy complaint as proof of a new task. First answers were retained without
+feedback; this is scoped source and writing evidence, not novelty clearance.
+
 The 4.2.38 [class-support and scope check](reviews/class-support-scope-evaluation.md)
 distinguishes class count, per-class sample counts and limited labels in three
 fictional requests. First answers were factually and scope-correct; one local

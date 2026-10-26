@@ -142,7 +142,7 @@ For each subsection:
 3. Identify what they contribute.
 4. State the remaining requirement relevant to this manuscript when one follows from the evidence, or carry the established capability into the next theme.
 
-The limitation should not be `accuracy remains low`. It should identify a mismatch in assumptions, data organization, process structure, operating conditions, supervision, or evaluation.
+Avoid an unsupported verdict such as `accuracy remains low`. Identify the evidenced shortfall and the engineering requirement it affects. A documented performance or resource shortfall under matching assumptions can motivate a focused improvement; it need not imply an incompatibility in those assumptions. When the issue is a mismatch in information access, data organization, process structure, operating conditions, supervision or evaluation, state that specific mismatch. Neither route alone establishes novelty or field-wide failure.
 
 Make the progression cumulative: what one family enables becomes the starting point for the next condition or capability. For example, a justified sequence could move from complete observations to partial observations and then to partial observations with sparse labels. Use this sequence only when it matches the sources and the paper's scientific question. Each paragraph should develop one comparison or relation; it need not contain a ritual criticism followed by `To address this issue`.
 

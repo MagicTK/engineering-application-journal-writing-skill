@@ -1,5 +1,16 @@
 # Changes
 
+## 4.2.39 (2026-10-26)
+
+- Align Related Work guidance with the existing contribution routes: a verified
+  performance or resource shortfall under matching assumptions can motivate a
+  focused improvement without inventing incompatible assumptions.
+- Preserve the evidence needed for the measured shortfall, its engineering
+  consequence and its comparison scope; an unsupported accuracy complaint still
+  does not establish a gap, a new task or methodological novelty.
+- Keep source names, terminology admissions and manuscript content unchanged;
+  scoped writing checks are reported separately from the full suite.
+
 ## 4.2.38 (2026-10-26)
 
 - Clarify that class-support counts mean samples per class, not the number of
