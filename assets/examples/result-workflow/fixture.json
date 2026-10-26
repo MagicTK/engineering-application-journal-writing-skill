@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "fictional": true,
+  "purpose": "Original teaching fixture; no models were trained and no measurements were acquired.",
+  "test_set_id": "fictional-shared-set",
+  "unique_test_examples": 100,
+  "class_labels": ["normal", "fault"],
+  "class_support": [80, 20],
+  "matrix_rows": "reference classes",
+  "matrix_columns": "predicted classes",
+  "zero_division": 0,
+  "methods": ["Reference A", "Variant B"],
+  "expected_repetitions_per_method": 3,
+  "repetition_unit": "constructed outcome table; not an observed training seed",
+  "summary": "mean of table-wise metrics and sample standard deviation (ddof=1)",
+  "runs": [
+    {"run_id": "A-1", "method": "Reference A", "repetition": 1, "matrix": [[76, 4], [8, 12]]},
+    {"run_id": "A-2", "method": "Reference A", "repetition": 2, "matrix": [[72, 8], [5, 15]]},
+    {"run_id": "A-3", "method": "Reference A", "repetition": 3, "matrix": [[74, 6], [7, 13]]},
+    {"run_id": "B-1", "method": "Variant B", "repetition": 1, "matrix": [[75, 5], [5, 15]]},
+    {"run_id": "B-2", "method": "Variant B", "repetition": 2, "matrix": [[73, 7], [6, 14]]},
+    {"run_id": "B-3", "method": "Variant B", "repetition": 3, "matrix": [[76, 4], [6, 14]]}
+  ]
+}

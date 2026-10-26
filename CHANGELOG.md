@@ -1,5 +1,14 @@
 # Changes
 
+## 4.2.44 (2026-10-26)
+
+- Add an original fictional result-workflow example linking one input to a
+  generated table, SD plot, traceability record and bounded result passage.
+- Keep the example optional and fixture-specific: no training backend, manuscript
+  edits, real data or new universal experimental requirements.
+- Cover count validation, missing/duplicate tables, aggregation and output
+  preservation with focused tests. Behavioral evaluation is recorded separately.
+
 ## 4.2.43 (2026-10-26)
 
 - Extend the existing sampling vocabulary with temporal selection, resampling,

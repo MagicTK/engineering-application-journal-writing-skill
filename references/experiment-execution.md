@@ -32,6 +32,8 @@ For continuous monitoring, preserve the raw scores, emitted alarm times, thresho
 
 ## Graph And Figure Provenance
 
+For a small runnable illustration of these distinctions, see the [fictional result-to-table/figure example](../assets/examples/result-workflow/README.md). It demonstrates a shared source and explicit aggregation, not a training backend or a required experiment format.
+
 Use actual results for the actual revision. When curves summarize repeated runs, show uncertainty if it helps answer the sensitivity question and available data support it; not every plot needs bars. For independently fitted t-SNE/UMAP projections, preserve labels and comparable plotting conventions but do not interpret coordinate alignment across panels. A fixed random seed alone does not make separately fitted latent spaces directly aligned.
 
 Record preprocessing and projection settings, selected samples, seeds and source checkpoints. A plot can corroborate class separation; it does not prove causality or quantitative generalization. Keep an approved figure design unless changing it is authorized.

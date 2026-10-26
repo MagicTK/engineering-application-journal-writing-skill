@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.44 [result-workflow check](reviews/result-workflow-evaluation.md) covers
+one actual execution of the fictional example and one narrow result-writing
+request in a new responding context. The first response preserves aggregation,
+sample counts and edit scope without borrowing fictional variability. Numerical,
+local presentation and packaging checks are reported separately.
+
 The 4.2.43 [rate-conversion check](reviews/rate-conversion-evaluation.md) covers
 three fictional requests on temporal selection, interpolation coordinates and
 information access, and source-defined versus numerical upsampling. First
