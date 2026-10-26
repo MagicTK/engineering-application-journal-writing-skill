@@ -2,6 +2,10 @@
 
 ## 4.2.36 (2026-10-26)
 
+- Documentation follow-up: add a bilingual hypothetical before/after passage,
+  original static pathway diagrams and editable definitions to the READMEs.
+  Correct a Chinese antecedent and mobile diagram readability after scoped
+  checks; retain the original behavior-test scope separately from asset review.
 - Make sampling terminology directly navigable in the existing English/Chinese
   decision guides: nominal period, observed interval, pairwise elapsed time,
   acquisition frequency, rate-group indices, model grids and window/output timing.

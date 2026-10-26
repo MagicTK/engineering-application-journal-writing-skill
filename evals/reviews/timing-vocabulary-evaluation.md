@@ -64,6 +64,6 @@ the result does not establish a measured writing-quality gain or certify the
 entire terminology bank.
 
 See the [actual first answer](../responses/timing-vocabulary-candidate.md),
-[current report](../forward-test-report.json) and
+[sampling-review report](../history/v4.2.36-before-readme-assets/forward-test-report.json) and
 [preceding report](../history/v4.2.35/forward-test-report.json). Program tests,
 bilingual structure, export fingerprints and behavior are separate checks.

@@ -51,13 +51,20 @@
 
 > Prediction on labeled samples and reconstruction of unlabeled measurements train a shared encoder. The quality predictor uses the learned representation to estimate product quality; the reconstruction decoder is used only during training.
 
-```mermaid
+![虚构模型：共享编码器分别为质量预测器和仅训练时使用的重构解码器提供输入。](assets/readme-training-prediction-zh-CN.svg)
+
+<details>
+<summary>可编辑的图形源代码</summary>
+
+```text
 flowchart TD
     X["过程测量数据"] --> E["共享编码器"]
     E --> P["质量预测器"]
     P --> Y["质量估计值"]
     E -. "仅训练时使用" .-> D["重构解码器"]
 ```
+
+</details>
 
 图中箭头表示前向数据流，不表示参数优化过程。改写连接了学习目标与保留的预测器，没有凭空添加“先重构，再预测”的串联关系，也没有新增性能结果或创新性结论。
 

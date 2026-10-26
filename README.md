@@ -51,13 +51,20 @@ For Chinese interaction, use the corresponding `-zh` skill or the [Chinese orche
 
 > Prediction on labeled samples and reconstruction of unlabeled measurements train a shared encoder. The quality predictor uses the learned representation to estimate product quality; the reconstruction decoder is used only during training.
 
-```mermaid
+![Synthetic model: the shared encoder supplies the quality predictor and a training-only reconstruction decoder.](assets/readme-training-prediction-en.svg)
+
+<details>
+<summary>Editable diagram source</summary>
+
+```text
 flowchart TD
     X["Process measurements"] --> E["Shared encoder"]
     E --> P["Quality predictor"]
     P --> Y["Quality estimate"]
     E -. "Training only" .-> D["Reconstruction decoder"]
 ```
+
+</details>
 
 The diagram shows forward data paths, not optimization updates. The revision connects the learning objectives to the retained predictor instead of inventing a serial decoder-to-predictor pipeline. It adds neither a performance result nor a novelty claim.
 

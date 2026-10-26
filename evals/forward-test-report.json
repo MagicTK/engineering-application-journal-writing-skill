@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "suite_version": "4.2.36",
-  "stage": "independent_behavior_validated",
+  "stage": "independent_behavior_validated_with_documentation_asset_review",
   "date": "2026-10-26",
   "release_ready": true,
   "independent_fresh_contexts": true,
@@ -77,6 +77,8 @@
   ],
   "evaluated_source_sha256": {
     "SKILL.md": "7a0a0710704b307403cc25c9e01d6d2948300349d9fbe5c5795228c5de4681ca",
+    "assets/readme-training-prediction-en.svg": "4407b95139b49be47c59cd4fe6baba5d1434ef6a35873f7566569f258d85b569",
+    "assets/readme-training-prediction-zh-CN.svg": "646dd313ca1b9e2cc64ed59e0a0e6909f4b77babe0127ca8e3d379532bdda68b",
     "assets/templates/abstract-body-sync.md": "db7c0ba6bcd081a9231288ad4146ce682dadf31fb77eb35700bb746b8ec64015",
     "assets/templates/author-handoff.md": "0aa8d02af6f049b7a686e44cfd0c9c9ae28e2f51935c6da0da67d1fb08c0b1af",
     "assets/templates/claim-evidence-matrix.md": "b34d0c7c6e481da0014877f001625f75bc61b7188bb58ad1b4c1aeca4ecfa23d",
@@ -182,5 +184,15 @@
     "skills-zh/industrial-ai-paper-router-zh/agents/openai.yaml": "c5d55a2eab3649d03112208d917e0c20a8e1b3656e593b6a6a1e285031916380",
     "suite-manifest.yaml": "5d39694e1ad996cee38fac93524bea89c68eae0556ba19aacf3b79fcbd55131f",
     "tools/extract_terminology_evidence.py": "a8e9cf330c53f7d542b4851880dfc07986930fc3e6a3b87e8cf09a008741bcc8"
+  },
+  "pre_documentation_report": "history/v4.2.36-before-readme-assets/forward-test-report.json",
+  "documentation_asset_review": {
+    "scope": "README meaning and two synthetic SVGs only; original 106 dependencies unchanged",
+    "outcome": "pass",
+    "responding_contexts": 2,
+    "feedback": "One localized recheck in each same context; initial findings preserved",
+    "review_trace": "reviews/readme-documentation-evaluation.md",
+    "prior_behavior_cases": "Carried forward on unchanged dependencies, not rerun for documentation-only assets",
+    "limitations": "Not blind, full-suite certification, controlled quality improvement or independent second grading"
   }
 }

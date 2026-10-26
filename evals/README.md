@@ -12,6 +12,12 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.36 [README and diagram check](reviews/readme-documentation-evaluation.md)
+is a documentation-only follow-up. It adds two synthetic illustrations while
+preserving the preceding 106 instruction/dependency hashes. Its two responding
+contexts and local repairs do not replace or expand the earlier scientific
+behavior tests; the report distinguishes those scopes.
+
 ## Selected Historical Examples
 
 Version 4.1.20 used one fresh responding context for four fictional requests on local versus final label spaces, entrywise versus complete-set evidence, a legitimate composite-class formulation and full-name/translation admission. All four passed maintainer semantic review; the small metric counterexample was independently calculated. See the [review and actual response](reviews/v4120-independent-evaluation.md) and [archived report](history/v4.1.20/forward-test-report.json). There was no baseline or independent second grader; this is scoped behavioral evidence, not measured general improvement or whole-bank certification.
