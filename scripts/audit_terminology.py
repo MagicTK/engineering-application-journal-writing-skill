@@ -35,7 +35,8 @@ NONPROSE_ENVIRONMENT = re.compile(
 )
 NONPROSE_ARGUMENT = re.compile(
     r"\\(?:cite\w*|[Cc]ref|[Cc]pageref|autoref|pageref|eqref|ref|label|"
-    r"parencite|textcite|autocite|footcite|nocite|url|path|href|bibliography|bibliographystyle)"
+    r"parencite|textcite|autocite|footcite|nocite|url|path|href|bibliography|bibliographystyle|"
+    r"input|include|includegraphics|includepdf)"
     r"\*?(?:\s*\[[^\[\]]*\]){0,2}\s*\{[^{}]*\}"
 )
 TEXT_FORMAT = re.compile(
@@ -195,7 +196,7 @@ def audit(source: str, *, tex: bool = True, min_count: int = 3, top: int = 60) -
     abstract = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", joined, re.S) if tex else None
     return {
         "mode": "review_candidates_only",
-        "limitations": ["Not a TeX compiler: custom macros, input files, verbatim/catcode changes and arbitrary conditional branches require active-PDF verification.", "Known citation/reference keys, URL targets and literal thebibliography blocks are excluded and separate phrase spans in TeX mode; custom or nested forms need manual screening.", "Common literal text-emphasis/font wrappers are unwrapped, including nested known wrappers; other command forms and group contents still need active-PDF screening. Word adjacency and source lines are retained.", "Ordinary wraps are joined within paragraphs with source start/end lines retained; literal percent newline suppression is recognized. Conditional/comment-environment directive lines are conservative boundaries. Formulas, quoted titles and noun/verb ambiguity need manual screening.", "Frequency is not evidence that wording is right or wrong; no automatic replacements are proposed."],
+        "limitations": ["Not a TeX compiler: custom macros, input files, verbatim/catcode changes and arbitrary conditional branches require active-PDF verification.", "Known citation/reference keys, URL targets, literal braced input/include/includegraphics/includepdf targets and literal thebibliography blocks are excluded and separate phrase spans in TeX mode; custom, unbraced or nested forms need manual screening. Included files are not read.", "Common literal text-emphasis/font wrappers are unwrapped, including nested known wrappers; other command forms and group contents still need active-PDF screening. Word adjacency and source lines are retained.", "Ordinary wraps are joined within paragraphs with source start/end lines retained; literal percent newline suppression is recognized. Conditional/comment-environment directive lines are conservative boundaries. Formulas, quoted titles and noun/verb ambiguity need manual screening.", "Frequency is not evidence that wording is right or wrong; no automatic replacements are proposed."],
         "abstract_whitespace_word_count": len(abstract.group(1).replace(PROSE_BOUNDARY, "").split()) if abstract else None,
         "candidates": candidates,
         "recurring_terms": [{"term": term, "count": count} for term, count in counts.most_common() if count >= min_count][:top],

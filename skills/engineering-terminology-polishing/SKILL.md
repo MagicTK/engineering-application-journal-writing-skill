@@ -7,7 +7,7 @@ description: Polish English or Chinese engineering-application journal prose whi
 
 [中文执行版](../../skills-zh/engineering-terminology-polishing-zh/SKILL.md)
 
-Suite version: `4.2.33`
+Suite version: `4.2.34`
 
 ## Mission
 
@@ -73,7 +73,7 @@ invent a replacement just because general-admission evidence is incomplete.
 
 For disputed state/condition, variable/attribute, sample/record and feature wording, read [context-sensitive terminology decisions](../../references/terminology-decisions.md). The read-only `scripts/audit_terminology.py` at the suite root can list candidates and recurring collocations through common literal text-emphasis wrappers, retaining source line spans; it does not judge grammar, expand arbitrary TeX macros or replace active-PDF verification. Do not treat corpus absence as a ban or the author's local preference as a universal rule.
 
-Its ordinary within-paragraph line-wrap handling reports source `line`/`end_line` spans. Excluded metadata and literal directive lines are conservative phrase boundaries, so absence across such syntax is not proof that the rendered phrase is absent. Keep the script's tokenizer limits separate from the semantic terminology review.
+Its ordinary within-paragraph line-wrap handling reports source `line`/`end_line` spans. Literal braced `input`, `include`, `includegraphics` and `includepdf` targets are excluded as file metadata, without reading the referenced files. Unbraced/custom forms still need manual review. Excluded metadata and literal directive lines are conservative phrase boundaries, so absence across such syntax is not proof that the rendered phrase is absent. Keep the script's tokenizer limits separate from the semantic terminology review.
 
 For a full-manuscript terminology audit, extract recurring content words and
 two-to-four-word collocations, then review those carrying engineering meaning.

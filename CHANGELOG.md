@@ -1,5 +1,11 @@
 # Changes
 
+## 4.2.34 (2026-10-26)
+
+- Fixed file-target false positives in the optional terminology helper: common literal braced inclusion and image commands no longer contribute filenames as manuscript wording.
+- Preserved source lines, captions, conservative phrase boundaries and plain-text behavior; the helper remains single-file and read-only, without expanding or inspecting included content.
+- Added failing-before/passing-after regression cases and clarified the English/Chinese tool scope; no scientific terminology, manuscript rule, source ID or real paper was changed.
+
 ## 4.2.33 (2026-10-26)
 
 - Corrected an existing source description that could imply wholly acquired industrial measurements; the inspected evaluation includes model-generated and transformed data.

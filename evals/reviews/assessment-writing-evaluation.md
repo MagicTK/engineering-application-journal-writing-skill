@@ -67,5 +67,5 @@ source-algorithm reproduction or journal-acceptance evidence.
 
 See the [earlier first answer](../responses/assessment-writing-baseline.md),
 [candidate first answer](../responses/assessment-writing-candidate.md),
-[current report](../forward-test-report.json) and
+[its primary report](../history/v4.2.33/forward-test-report.json) and
 [preserved previous report](../history/v4.2.32/forward-test-report.json).

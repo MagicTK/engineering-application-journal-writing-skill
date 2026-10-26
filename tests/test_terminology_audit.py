@@ -96,6 +96,48 @@ class TerminologyAuditTests(unittest.TestCase):
         plain = MODULE.audit(r"\cite{attributes}", tex=False)
         self.assertEqual(plain["candidates"][0]["rule"], "attribute")
 
+    def test_literal_file_targets_are_not_prose(self):
+        source = "\n".join([
+            r"\input{sections/attributes}",
+            r"\include{sections/records}",
+            r"\includegraphics*[width=0.8\linewidth]{plots/information exchange.pdf}",
+            "\\includepdf[pages=-]{\nattachments/offline.pdf}",
+            r"\caption{Operating conditions guide prediction.}",
+        ])
+        output = MODULE.audit(source, min_count=1, top=1000)
+        self.assertEqual([c["rule"] for c in output["candidates"]], ["state-condition"])
+        self.assertEqual(output["candidates"][0]["occurrences"][0]["line"], 6)
+        words = {item["term"] for item in output["recurring_terms"]}
+        self.assertTrue(words.isdisjoint({"attributes", "records", "offline", "pdf"}))
+
+    def test_literal_file_commands_are_conservative_phrase_boundaries(self):
+        for command in ("input", "include", "includegraphics", "includepdf"):
+            with self.subTest(command=command):
+                source = "information\\" + command + "{records}exchange"
+                output = MODULE.audit(source, min_count=1, top=1000)
+                self.assertFalse(output["candidates"])
+                self.assertNotIn({"term": "information exchange", "count": 1}, output["recurring_terms"])
+                plain = MODULE.audit(source, tex=False)
+                self.assertEqual([c["rule"] for c in plain["candidates"]], ["record"])
+
+    def test_cli_masks_file_targets_without_reading_or_changing_includes(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            path = root / "synthetic.tex"
+            child = root / "records.tex"
+            path.write_text("\\input{records}\nOperating conditions guide prediction.")
+            child.write_text("Offline attributes are described in an included file.")
+            before = {p.name: p.read_bytes() for p in root.iterdir()}
+            result = subprocess.run(
+                [sys.executable, "-B", str(ROOT / "scripts/audit_terminology.py"), str(path), "--min-count", "1"],
+                capture_output=True, text=True,
+            )
+            self.assertEqual(result.returncode, 0, result.stderr)
+            output = json.loads(result.stdout)
+            self.assertEqual([c["rule"] for c in output["candidates"]], ["state-condition"])
+            self.assertEqual(output["candidates"][0]["occurrences"][0]["line"], 2)
+            self.assertEqual({p.name: p.read_bytes() for p in root.iterdir()}, before)
+
     def test_causal_convolution_is_a_context_question(self):
         output = MODULE.audit("A causal convolution uses past measurements.", tex=False)
         candidate = output["candidates"][0]
