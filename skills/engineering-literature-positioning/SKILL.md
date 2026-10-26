@@ -7,7 +7,7 @@ description: Research and position an engineering-application journal paper usin
 
 [中文执行版](../../skills-zh/engineering-literature-positioning-zh/SKILL.md)
 
-Suite version: `4.2.34`
+Suite version: `4.2.35`
 
 ## Mission
 
@@ -104,19 +104,27 @@ For the closest work, separate documented success, unevaluated scope, assumption
 A defensible gap should satisfy four tests:
 
 1. **Observed**: the issue follows from an engineering or data condition.
-2. **Literature-grounded**: representative existing methods share the relevant limitation.
+2. **Literature-grounded**: verified capabilities, assumptions or unevaluated conditions of the relevant work support the claim; family-wide statements need appropriate representative coverage.
 3. **Consequential**: the limitation affects diagnosis, prediction, monitoring, control, interpretation, or applicability.
-4. **Addressable**: the proposed study can test a response.
+4. **Addressable**: the proposed study can examine a response through suitable analysis or evaluation.
 
-Prefer:
+Match the argument to its scope. A focused comparison can center on one verified
+relevant reference without first claiming that a whole family fails. This does
+not establish novelty or waive the separate evidence requirements for general
+mechanism names.
 
-> Existing stage-wise models preserve production organization, but they aggregate variables before resolving heterogeneous relationships within each stage.
+For example, in a confirmed delayed-assay setting, connect a predictor's need
+for a recent quality measurement to when that measurement becomes available
+relative to the required decision. Explain the resulting estimation requirement;
+do not transplant a stage-grouping or other familiar gap into an unrelated task.
 
 Avoid:
 
 > Existing methods ignore important information.
 
-Do not claim that no work exists unless a systematic search supports that statement.
+Preserve the distinction between an explicit assumption, unevaluated scope and
+observed failure. Do not claim that no work exists unless a systematic search
+supports that statement.
 
 ## 7. Separate Engineering And Model Vocabulary
 

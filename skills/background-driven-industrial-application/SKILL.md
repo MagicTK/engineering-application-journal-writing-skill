@@ -7,7 +7,7 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 [中文执行版](../../skills-zh/background-driven-industrial-application-zh/SKILL.md)
 
-Suite version: `4.2.34`
+Suite version: `4.2.35`
 
 ## Mission
 
@@ -62,21 +62,29 @@ Do not force a large generic algorithm claim when the strongest contribution is 
 
 ## 4. Build A Background-to-Design Map
 
-| Background fact | Modeling implication | Design response | Evidence |
+| Background fact, when documented | Modeling question | Possible role, not a required method | Claim-matched evidence |
 |---|---|---|---|
-| operating cycle | temporal segmentation | cycle-aware representation | cycle-wise comparison |
-| process stages | structured inputs | stage-aware model | stage ablation |
-| physical relation | constrained interaction | knowledge-guided module | expert/process consistency |
-| delayed quality label | prediction timing | causal-time input boundary | leakage-safe split |
-| condition variation | distribution shift | condition-aware adaptation | cross-condition test |
+| operating cycle | Which history or within-cycle variation affects the output? | Temporal organization when needed | Relevant cycle-resolved outcomes |
+| process stages | Which known membership or relationships matter? | Input organization or relation modeling when used | Matched structural comparisons for the claimed role |
+| physical relation | Is it a law, connection or empirical guidance? | The implemented constraint or structural use | Physical residual or process correspondence appropriate to that use |
+| delayed quality target | When are targets and prediction inputs available? | The actual learning and decision-time boundary | Availability checks and the stated prediction outcome |
+| condition variation | What changes, and what information is available? | The study's chosen response, without defaulting to adaptation | Held-out or sequential evidence for the actual claim |
 
-Use manuscript-specific facts. Remove modules that have no row in this map.
+These are conditional illustrations, not one-to-one problem/method assignments.
+Use manuscript-specific facts and map central design decisions to the actual
+requirements. Supporting operations need a clear role, not a separate industrial
+difficulty. Flag an unresolved component for author discussion rather than
+deleting it during writing. A changed operating condition alone does not
+establish a particular distribution shift or require online adaptation.
 
-When multiple sensing sources are used, add an evidence-flow map:
+When multiple information sources matter, trace their actual roles:
 
-`physical event -> sensing response -> synchronized sample unit -> modality-specific evidence -> fusion/decision -> operator or control action`
+`source/provenance -> measurements or derived views -> required correspondence/aggregation -> representation -> stated task output`
 
-This prevents the method from treating industrial measurements as unrelated generic modalities.
+Identify acquired streams, operating-domain datasets and derived views before
+claiming modalities or synchronization. Cross-domain training datasets need not
+share event timestamps. Add an operator/control action only when it is studied;
+prediction alone need not include one.
 
 ## 5. Title And Abstract
 
@@ -86,7 +94,7 @@ The Abstract should:
 
 1. introduce the industrial task and importance;
 2. explain the operational or measurement difficulty;
-3. identify the limitation of current practice or methods;
+3. identify the verified remaining requirement or study purpose;
 4. introduce the background-informed solution;
 5. explain the principal process-informed mechanisms;
 6. summarize evaluation under relevant production conditions;
@@ -100,14 +108,17 @@ Recommended paragraph order:
 
 1. Industrial process/equipment and its operational importance.
 2. The practical failure, quality, control, or monitoring problem.
-3. Existing industrial practice and its limitations.
+3. Existing industrial capability and documented limitations.
 4. Measurement/data mechanism and realistic difficulty.
 5. Relevant analytical and data-driven approaches.
-6. Gap between their assumptions and the actual application.
+6. Verified requirement or scope difference relevant to the actual application.
 7. Proposed solution derived from the process background.
 8. Contributions and engineering significance.
 
-Keep the specific application present throughout. Do not turn the paper into a generic time-series paper after paragraph two.
+These are argument functions, not eight required paragraphs. Combine or reorder
+them to suit the actual evidence while preserving the application and logical
+progression; do not turn the paper into a generic time-series paper after the
+opening background.
 
 ## 7. Related Work
 
@@ -131,7 +142,7 @@ Explain:
 - label/target source and timing;
 - operating-condition distribution;
 - missing, noisy, censored, or imbalanced data;
-- train/validation/test split and its operational meaning.
+- actual training, selection and test arrangement and its operational meaning; describe a validation subset only if one exists.
 
 Use a process diagram, data-generation diagram, or failure/quality illustration when it reduces textual burden.
 
@@ -147,13 +158,16 @@ Translate the background into a precise task:
 - state site-specific assumptions;
 - prevent leakage from future inspection, downstream measurements, or repeated production units.
 
-The formulation should make clear why a generic model is insufficient.
+The formulation should establish the engineering task and information boundary
+that the method addresses.
 
 ## 10. Method Derivation
 
-Introduce components in the same order as the background-to-design map.
+Introduce operations by their actual learning or prediction dependencies,
+including parallel paths. The background-to-design map explains their roles;
+its row order is not a compulsory forward-computation sequence.
 
-For each component:
+For central or non-obvious design decisions:
 
 1. restate the background fact briefly;
 2. explain the modeling requirement;
@@ -190,7 +204,11 @@ Include methods credible to both engineering and data-driven reviewers:
 - recent process- or equipment-specific method;
 - proposed method.
 
-Explain differences in information access. A method using future or privileged variables is not a fair comparison for online or early prediction.
+Explain differences in information access. A comparator using inputs unavailable
+at the required prediction time does not establish a fair early/online comparison.
+Distinguish such prediction inputs from additional training resources; declare
+and compare those resources according to the claim rather than automatically
+calling privileged training information leakage.
 
 ## 13. Results Interpretation
 
@@ -204,6 +222,10 @@ Interpret results through:
 - operational costs or decision relevance when measured.
 
 Do not explain every improvement as “better feature extraction.” State what process information appears to be represented more effectively.
+
+Use [main-results writing](../../references/section-writing-guide.md#12-main-results)
+for the reusable result passage and [Discussion](../../references/section-writing-guide.md#15-discussion)
+for synthesis; keep internal verification requests separate from manuscript prose.
 
 ## 14. Engineering Applicability
 
@@ -236,7 +258,7 @@ Explain how each limitation affects the claimed scope. Avoid generic future-work
 Before handoff, verify:
 
 - the engineering background directly generates the research question;
-- each method component has a background-derived reason;
+- central choices follow engineering requirements and supporting operations have a clear role;
 - process and data provenance are reproducible;
 - the evaluation reflects real operational separation and timing;
 - application literature is represented adequately;

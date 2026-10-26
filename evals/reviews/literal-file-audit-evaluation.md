@@ -69,5 +69,5 @@ this fixture, not universal behavior. Structural, installation and program
 checks are distinct from scientific validation or journal readiness.
 
 See the [actual first answer](../responses/literal-file-audit-candidate.md),
-[current report](../forward-test-report.json) and
+[its primary report](../history/v4.2.34/forward-test-report.json) and
 [preserved prior report](../history/v4.2.33/forward-test-report.json).

@@ -1,5 +1,12 @@
 # Changes
 
+## 4.2.35 (2026-10-26)
+
+- Matched literature-gap evidence to the actual claim scope instead of requiring several methods to share a limitation for every focused comparison; retained separate novelty and generic-name checks.
+- Removed an unconditional stage-grouping gap example and clarified conditional background-to-design illustrations, supporting-layer roles, actual computation order and source/output identities.
+- Removed automatic module deletion and implied mandatory modality/control chains from the background-driven companion; linked its result writing to the existing prose guidance.
+- Preserved core source records and added current installed-use coverage, retaining an initial overqualified Results sentence and its targeted repair rather than claiming all first answers were perfect.
+
 ## 4.2.34 (2026-10-26)
 
 - Fixed file-target false positives in the optional terminology helper: common literal braced inclusion and image commands no longer contribute filenames as manuscript wording.
