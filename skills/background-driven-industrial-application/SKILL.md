@@ -7,7 +7,7 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 [中文执行版](../../skills-zh/background-driven-industrial-application-zh/SKILL.md)
 
-Suite version: `4.2.36`
+Suite version: `4.2.37`
 
 ## Mission
 
@@ -192,7 +192,7 @@ Select experiments that answer practical questions:
 
 Do not include unrelated benchmark-style experiments merely to make the paper look larger.
 
-Use the [`engineering-experiment-evidence-design`](../engineering-experiment-evidence-design/SKILL.md) skill to verify split integrity, information timing, evidence roles, and claim scope before reporting results.
+When drafting or substantively changing result claims, use the relevant [`engineering-experiment-evidence-design`](../engineering-experiment-evidence-design/SKILL.md) checks for split integrity, information timing, evidence roles and claim scope. Reuse verified checks for unchanged claims and record unresolved items in the author handoff; a local language edit does not require a new full audit or authorize experiments.
 
 ## 12. Comparison Methods
 

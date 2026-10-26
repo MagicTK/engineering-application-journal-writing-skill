@@ -7,7 +7,7 @@ description: 真实工业背景驱动论文 Skill 中文执行版。用于从具
 
 [English](../../skills/background-driven-industrial-application/SKILL.md)
 
-套件版本：`4.2.36`
+套件版本：`4.2.37`
 
 ## 一、任务目标
 
@@ -130,6 +130,8 @@ benchmark 可有可无，不能支配论文。
 - 输出是否足够及时？
 
 不要为“看起来完整”添加无关 benchmark 实验。
+
+新写或实质修改结果主张时，调用[实验证据设计](../engineering-experiment-evidence-design-zh/SKILL.md)中相关检查，核对划分完整性、信息可用时序、证据角色和主张范围。未变化的主张复用已核实检查，待确认项留在作者交接中；局部语言修改不要求重新全面审查，也不授权执行实验。
 
 ## 十一、对比与结果解释
 

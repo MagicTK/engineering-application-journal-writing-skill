@@ -212,6 +212,23 @@ class SuiteValidatorTests(unittest.TestCase):
         eval_dir = ROOT / "evals"
         for archive in sorted((eval_dir / "history").glob("*/forward-test-report.json")):
             report = json.loads(archive.read_text())
+            primary_report = archive.resolve()
+            if report.get("pre_documentation_report"):
+                # Unchanged scientific cases retain their original review snapshot.
+                primary_report = (eval_dir / report["pre_documentation_report"]).resolve()
+                previous = json.loads(primary_report.read_text())
+                self.assertEqual(report["suite_version"], previous["suite_version"])
+                self.assertEqual(report["cases"], previous["cases"])
+                old_hashes = previous["evaluated_source_sha256"]
+                new_hashes = report["evaluated_source_sha256"]
+                self.assertTrue(old_hashes)
+                self.assertTrue(all(new_hashes.get(k) == v for k, v in old_hashes.items()))
+                added = set(new_hashes) - set(old_hashes)
+                self.assertTrue(added)
+                self.assertTrue(all(k.startswith("assets/") and k.endswith(".svg") for k in added))
+                documentation = report["documentation_asset_review"]
+                self.assertEqual("pass", documentation["outcome"])
+                self.assertTrue((eval_dir / documentation["review_trace"]).is_file())
             review_paths = {
                 case["review_trace"]
                 for case in report.get("cases", [])
@@ -224,7 +241,7 @@ class SuiteValidatorTests(unittest.TestCase):
                     if path.name != "forward-test-report.json":
                         continue
                     with self.subTest(review=relative, version=report["suite_version"]):
-                        self.assertEqual(archive.resolve(), path)
+                        self.assertEqual(primary_report, path)
                         linked = json.loads(path.read_text())
                         self.assertEqual(report["suite_version"], linked["suite_version"])
                     # A later link can intentionally compare a previous version.
@@ -336,7 +353,7 @@ class SuiteValidatorTests(unittest.TestCase):
         suite, records = VALIDATOR.parse_manifest(
             (ROOT / "suite-manifest.yaml").read_text(encoding="utf-8")
         )
-        self.assertEqual("4.2.36", suite["version"])
+        self.assertEqual("4.2.37", suite["version"])
         self.assertEqual("whole-suite", suite["installation"])
         self.assertEqual(14, len(records))
 

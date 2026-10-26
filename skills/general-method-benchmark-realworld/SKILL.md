@@ -7,7 +7,7 @@ description: Plan, write, revise, and audit engineering-application journal pape
 
 [中文执行版](../../skills-zh/general-method-benchmark-realworld-zh/SKILL.md)
 
-Suite version: `4.2.36`
+Suite version: `4.2.37`
 
 ## Mission
 
@@ -62,7 +62,7 @@ Create an evidence table before writing:
 
 Do not repeat every benchmark experiment in the real-world case unless it answers an engineering question.
 
-Before results are written, pass all intended claims through the [`engineering-experiment-evidence-design`](../engineering-experiment-evidence-design/SKILL.md) skill. The two cases should share a method definition but may require different data preparation, comparison emphasis, and analysis depth.
+When drafting or substantively changing result claims, use [`engineering-experiment-evidence-design`](../engineering-experiment-evidence-design/SKILL.md) to check the intended claims against the available evidence. Reuse verified checks for unchanged claims and record unresolved items in the author handoff; a local language edit does not require a new full audit or authorize experiments. The two cases should share a method definition but may require different data preparation, comparison emphasis, and analysis depth.
 
 ## 4. Manuscript Story
 

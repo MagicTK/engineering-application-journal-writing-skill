@@ -7,7 +7,7 @@ description: 通用工程方法 + benchmark/real-world 双案例论文 Skill 中
 
 [English](../../skills/general-method-benchmark-realworld/SKILL.md)
 
-套件版本：`4.2.36`
+套件版本：`4.2.37`
 
 ## 一、任务目标
 
@@ -59,6 +59,8 @@ description: 通用工程方法 + benchmark/real-world 双案例论文 Skill 中
 | 不能自动支持 | 部署 | 普适泛化或在线运行 |
 
 除非回答工程问题，不机械重复所有 benchmark 实验。
+
+新写或实质修改结果主张时，调用[实验证据设计](../engineering-experiment-evidence-design-zh/SKILL.md)，按可用证据核对拟提出的主张。未变化的主张复用已核实检查，待确认项留在作者交接中；局部语言修改不要求重新全面审查，也不授权执行实验。两组案例应采用同一方法定义，但可有不同的数据准备、比较重点和分析深度。
 
 ## 五、论文主线
 

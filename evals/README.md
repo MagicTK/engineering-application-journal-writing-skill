@@ -12,6 +12,13 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.37 [route and handoff check](reviews/figure-route-scope-evaluation.md)
+covers two fictional figure workflows and two narrow Chinese writing requests
+in one new responding context. A separate source review checked all 14 entry
+pairs on 4.2.36, then reread the four repaired entries in the same context.
+These scoped checks preserve the distinction between planned figure checks,
+actual tool execution, source parity and scientific evidence.
+
 The 4.2.36 [README and diagram check](reviews/readme-documentation-evaluation.md)
 is a documentation-only follow-up. It adds two synthetic illustrations while
 preserving the preceding 106 instruction/dependency hashes. Its two responding

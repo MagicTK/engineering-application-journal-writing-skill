@@ -1,5 +1,17 @@
 # Changes
 
+## 4.2.37 (2026-10-26)
+
+- Keep diagram production in the shared research workflow tool-optional and
+  preserve existing editable masters; a selected AstraDraw/PPT route remains
+  available without imposing reconstruction on local vector edits.
+- Restore the evidence-design handoff in both Chinese manuscript-archetype
+  entries and align its scope in both languages: new or changed result claims
+  need relevant checks, while unchanged verified claims and local language edits
+  do not restart a full audit or authorize experiments.
+- Preserve terminology sources, scientific prose guidance, illustrations and
+  the original evaluation records; new scoped checks are reported separately.
+
 ## 4.2.36 (2026-10-26)
 
 - Documentation follow-up: add a bilingual hypothetical before/after passage,
