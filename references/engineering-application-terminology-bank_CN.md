@@ -51,7 +51,7 @@
 
 标准数学算子、激活函数、element-wise 运算、普通张量操作、方法名和数据集标签若不存在一致性问题，不必投入同等审校强度。
 
-每个审计项至少记录：稿件及分章节频次、外部独立论文覆盖数、典型语境、保留/澄清/替换/仅限方法层/慎用结论、推荐表达和全文传播位置。必须检查固定搭配而非孤立单词；正确修改往往需要重构整句。例如 `information exchange` 可按真实模型操作改为 feature interaction、context aggregation 或 cross-stage feature fusion。fault propagation 是关于扰动在物理过程传播的另一种主张，不能作为神经特征交换的润色同义词。
+每个审计项至少记录：稿件及分章节频次、外部独立论文覆盖数、典型语境、保留/澄清/替换/仅限方法层/慎用结论、推荐表达和全文传播位置。必须检查固定搭配而非孤立单词；正确修改往往需要重构整句。例如 `information exchange` 可按真实模型操作改为 feature interaction、context aggregation 或 cross-stage feature fusion。fault propagation 是关于故障影响在物理过程传播的另一种主张，不能作为神经特征交换的润色同义词。
 
 覆盖数仅指实际检索范围，不代表整个领域；候选命中文献量与已核实实质用法分开，收录量不等于精读量，也不是用词普及率分母。未检索写“未核查”，不能记为零。按[语料概况](corpus-calibration-workflow.md#4-build-a-corpus-profile)记录这些区别，不为局部语法修改强制建立全文统计。
 
@@ -84,7 +84,9 @@
 | 合并多个特征源 | feature fusion; feature integration |
 | 结合一组明确的编码特征，交代输入、轴及运算，不限于注意力或降维 | feature aggregation；输出确为上下文时可用context aggregation |
 | 沿图边传递或更新表征 | feature propagation; message passing；说明图和更新操作 |
-| 扰动沿物理过程传播 | fault propagation；需有工艺知识或传播方向与影响的证据 |
+| 故障影响沿物理过程传播 | fault propagation（故障传播）；须明确故障相关含义，并支持所述方向与影响；一般扰动不自动等于故障 |
+
+负载波动或设定值响应本身不证明发生故障。反过来，基准或模型也可以用注入扰动表示已定义的故障，二者并非互斥。保留来源的故障定义，区分模型描述的传播路径与实际观测到的物理事件。见[故障与扰动的依据](published-evidence.md#fault-effects-disturbances-and-representation-updates)。
 
 优先说明具体操作，避免笼统的 `information exchange`；若确实描述已定义实体之间的通信或交换，该词可以成立。
 

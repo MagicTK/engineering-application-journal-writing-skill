@@ -1,52 +1,52 @@
 {
   "schema_version": 1,
-  "suite_version": "4.2.44",
+  "suite_version": "4.2.45",
   "stage": "scoped_behavior_validated",
   "date": "2026-10-26",
   "release_ready": true,
   "independent_fresh_contexts": true,
-  "historical_report": "history/v4.2.44/pre-result-workflow-report.json",
+  "historical_report": "history/v4.2.45/pre-fault-disturbance-report.json",
   "release_blockers": [],
   "cases": [
     {
-      "id": "execute-fictional-workflow",
-      "prompt": "Locate, execute and interpret the fictional result example",
+      "id": "permitted-setpoint-response",
+      "prompt": "One-sentence edit for a permitted setpoint response",
       "required_behaviors": [
-        "Preserve supplied quantities, aggregation, provenance and author scope."
+        "Preserve the specified event, model and claim scope."
       ],
       "forbidden_behaviors": [
-        "Invent experimental variability, significance, actual training or expanded edit authorization."
+        "Equate ordinary perturbation, fault effects and neural representation updates."
       ],
       "outcome": "pass",
       "language": "zh-CN; requested English prose",
       "tested_skills": [
-        "engineering-experiment-automation-zh"
+        "engineering-terminology-polishing-zh"
       ],
       "evaluator": "One new responding context; maintainer full-answer semantic review",
-      "review_trace": "reviews/result-workflow-evaluation.md",
-      "evidence": "Actually generated and inspected outputs; preserved mean/sample SD, 100 stipulated examples versus 300 decisions, the second-table exception and fictional scope."
+      "review_trace": "reviews/fault-disturbance-evaluation.md",
+      "evidence": "Preserved a normal permitted setpoint adjustment and delayed downstream response without diagnosing a fault."
     },
     {
-      "id": "narrow-result-sentence",
-      "prompt": "Compare two supplied means without borrowing example variance",
+      "id": "simulated-fault-and-graph-update",
+      "prompt": "Retain modeled fault effects while distinguishing representation updates",
       "required_behaviors": [
-        "Preserve supplied quantities, aggregation, provenance and author scope."
+        "Preserve the specified event, model and claim scope."
       ],
       "forbidden_behaviors": [
-        "Invent experimental variability, significance, actual training or expanded edit authorization."
+        "Equate ordinary perturbation, fault effects and neural representation updates."
       ],
       "outcome": "pass",
       "language": "zh-CN; requested English prose",
       "tested_skills": [
-        "engineering-experiment-automation-zh"
+        "engineering-terminology-polishing-zh"
       ],
       "evaluator": "One new responding context; maintainer full-answer semantic review",
-      "review_trace": "reviews/result-workflow-evaluation.md",
-      "evidence": "Preserved 81.2%, 82.0% and 0.8 percentage points; declined invented SD/significance and kept the requested sentence scope."
+      "review_trace": "reviews/fault-disturbance-evaluation.md",
+      "evidence": "Preserved a defined simulated fault introduced through disturbance and distinguished its effects from graph representation updates."
     }
   ],
   "evaluated_source_sha256": {
-    "SKILL.md": "32f4c814d6c5fa5c81592a9e954acde6d1df0878b26bb3225246d6b506e730cd",
+    "SKILL.md": "2093a8a53507c5f1031b37806398d1124bd11e6139dbce8b1a5cc3383cb5a718",
     "assets/examples/result-workflow/README.md": "69e65bdc9bbf2c130517115843cfc453c9605c30ae5234b03284012bbda74feb",
     "assets/examples/result-workflow/README_CN.md": "e36102e9c64c373e3b81d4a1cd550f2ceb2fe59d9ef61df21228b01f387d86f9",
     "assets/examples/result-workflow/build.py": "a7ba0f234791f4a9d534cd8df17032f21c6cff11281c6cd38b49b5bc2155779a",
@@ -78,8 +78,8 @@
     "references/contribution-narratives.md": "466b2324902dde9fe4b62519e376af0e8d8bdf0e34ed6576835c6db4567283bc",
     "references/corpus-calibration-workflow.md": "6954fb03f6fa9427bec9f6a653cffe562aaa4c2daab02f33466c560662478af3",
     "references/design-sources.md": "00f4053ca934ebccbc2a49697242a2156439d5b223f557565c72e2db4137e813",
-    "references/engineering-application-terminology-bank.md": "6a2acfc75e74348f60fac751835e7ef82615cd1b05a374c701c3df3feec3771e",
-    "references/engineering-application-terminology-bank_CN.md": "a78de98c22c257456f3935fc3f16a80784b3320a813cefdfdcd7442ea184e2d2",
+    "references/engineering-application-terminology-bank.md": "3d3f819ef3f44994ce6681556007a9bde5cbb3a76ea4267f05b4c6a98c5b3d81",
+    "references/engineering-application-terminology-bank_CN.md": "3637541269bf7225a2f49e946d6ede10d4bdbd088f748399ac6248b03dbcd1ab",
     "references/engineering-application-terms.txt": "5bb4e8b5ccf09a6e45724bb219c0c531a3d7fa0864573abc511c80c402fa0f8a",
     "references/experiment-evidence-design.md": "6ec3835e6277dd29ffd32c854e30b66bedf61cf757f6e9e0a774995d3b0b19a8",
     "references/experiment-execution.md": "cd0e153b54b671effc71fe4451aad699499565a840fec90c6395ce6725b433c1",
@@ -91,7 +91,7 @@
     "references/manuscript-archetypes.md": "e1fe5431e1ad6f0bfa6f0e36042064357e34064790f2f3293e1c11aa50dbda1f",
     "references/problem-first-classification.md": "97c8b78a0e972bebcb7a4d777705b38a633a0f74f7e58b2c7c04241287733923",
     "references/problem-first-classification_CN.md": "153b3e75a05efacdd32c5f3bcad114792fe25ca4e5a50121e7e10ef9af200230",
-    "references/published-evidence.md": "677c766212623125391360cda4e16dcb2698d714e33da7ff824e61a049172ae1",
+    "references/published-evidence.md": "220c6ececb2b10c934bc597b09646accdba243731bf600a5ffec7bf39eb47801",
     "references/research-collaboration-workflow.md": "61d890e034e341f69fa0b0bd5225b90783ca3fc3f47ff0338911d7f968a6584e",
     "references/research-planning-and-contribution.md": "bc7895dacad2592482855672d127d1ac5b3c4104e9d9d1c32223ccc51b5be42d",
     "references/rigor-and-handoff.md": "f99fc96124a928eeaa46b4cb04f91fa165a1ccc3ac35f3a476fccc5aa829844d",
@@ -104,62 +104,62 @@
     "scripts/export_public.py": "18055684cb482f56bc4f8b97d43ff913813a7da7a848d04e5f7a6ffaaef3b405",
     "scripts/install_suite.py": "540d433725fa744c28269ed5c99b6353b07fb19a3a8aa963d0722f9243dca326",
     "scripts/validate_suite.py": "9b54f7cb1c77aa1019602e0a78271e4fda7979eec3bd65461fc76088d44520b6",
-    "skills/background-driven-industrial-application/SKILL.md": "f0a0de9d60e59c489452a091e51efb7e96bfac7110d9c23a56c8e82fb66a50a8",
+    "skills/background-driven-industrial-application/SKILL.md": "7dbf8f3d497d6b5336b160083aa44e88b02c2e446c31345f23422bed23185ce6",
     "skills/background-driven-industrial-application/agents/openai.yaml": "e27a7ef27d4596fa0027b880b5f92d4dc094ec6c5796cd09e1ec2cdc57be6e9f",
-    "skills/engineering-abstract-contributions/SKILL.md": "19b77708388af79298f28bd4b76468621d0ec6c5c166ce366356859412c58ca6",
+    "skills/engineering-abstract-contributions/SKILL.md": "77d6d41b30f3a90ff76c912757f1d7f70d537a27412bac4f627590e163612677",
     "skills/engineering-abstract-contributions/agents/openai.yaml": "bba6b203bed263291212c4b1711d7a535d18deb54482d828b2a6ce44f1e405de",
-    "skills/engineering-experiment-automation/SKILL.md": "51d194736556cdb133df354618e82cdcc057e155b149249f670a6c3919204139",
+    "skills/engineering-experiment-automation/SKILL.md": "a1de913f1a911050889e3a4cd2581bfc0f7ed5e0a95dc39cf4c1a46290d965d9",
     "skills/engineering-experiment-automation/agents/openai.yaml": "f712573dc53e9f06b31f8aacea8e8e4353d7d301e874081f51c1a76a3ac6630f",
-    "skills/engineering-experiment-evidence-design/SKILL.md": "ae22eda239ccc4b932de140346406ecfce2c4eab4bbd9dcdcac4aa4aa5bd268b",
+    "skills/engineering-experiment-evidence-design/SKILL.md": "b52b78e10f8f7944228261a983c526682d2216c13a762a3bc2055ab21a80a605",
     "skills/engineering-experiment-evidence-design/agents/openai.yaml": "5882afcc8ecec53128d8703b02fbdd2556e7c521b15dfc523fb9e4f267d29c78",
-    "skills/engineering-figure-latex-production/SKILL.md": "74f630a281a530b2388c7eed281a15182fbf52f5e5921dfdcd726b9100703040",
+    "skills/engineering-figure-latex-production/SKILL.md": "710e2dd0e7b8c897d3f54ea23c8f19ce0ed35d0f5df2f0d82f0b0c3afafcb449",
     "skills/engineering-figure-latex-production/agents/openai.yaml": "6c0a55aa3b377367d18ee2fa089a7ea425ff624512f8aa83eee95c93a7f08fc0",
-    "skills/engineering-journal-rigor-review/SKILL.md": "be5a5d887ee76a81942493e0a3ab169e7f1fc049b9312999ddad288226c8cd47",
+    "skills/engineering-journal-rigor-review/SKILL.md": "075b598405b18ac84ce8b1e4016a7952f264ee53068bdbc3a8b4b96df2ed622c",
     "skills/engineering-journal-rigor-review/agents/openai.yaml": "2cdda347fca36e6728f6942a8a7479ee102391757cfb9fc036cee864a8a114b5",
-    "skills/engineering-literature-positioning/SKILL.md": "ea0c93ac4778725bb2dd98c3518b4ac29a64c3498c702d3cee87d1f223edc2c7",
+    "skills/engineering-literature-positioning/SKILL.md": "ae7175feb5ba6d3aeba3063cfa60b42494ddc1dea20d7ddf449b2732db0c83b2",
     "skills/engineering-literature-positioning/agents/openai.yaml": "f4da7f819427fcb80d2e75611dc28b4901b181bc9766f7a05de8be249221e22e",
-    "skills/engineering-paper-idea-architecture/SKILL.md": "92f5143bef180856f6b2fff677fb06aeaf51836dc5f081c05c2b1937e6d57689",
+    "skills/engineering-paper-idea-architecture/SKILL.md": "12a66ac35bf7035407eca202ac3ee432c0d350f106153d292246384b936d4ade",
     "skills/engineering-paper-idea-architecture/agents/openai.yaml": "be496b218cc265591e05ccdaf3353de87d500fd3faf9bfb7cbb20ee82eb26f6d",
-    "skills/engineering-research-ideation/SKILL.md": "96d092c0d7c48521513fb0b59f04e7b4559248559428423e63f7b8c4b5710ca5",
+    "skills/engineering-research-ideation/SKILL.md": "45ea0b1d2280f0c133d0607234998f93b26d4a68d2b8cfe39e7b6fdb7c75fbd1",
     "skills/engineering-research-ideation/agents/openai.yaml": "d937eccdc43c7343c9a973be140725e3cae5ed2832fe896733ebb1e71440da2b",
-    "skills/engineering-review-response/SKILL.md": "9592b92f52f86ec146a786c57b24a4dcc5300eda86a40fd0400e2ed0fb8a1b08",
+    "skills/engineering-review-response/SKILL.md": "ff238facba550ae7eb4b3ac4adc97fd2bc07b8b5d8bd77f6d455ec428860f570",
     "skills/engineering-review-response/agents/openai.yaml": "a3d080a287351453a218b14b80e0d772b72161b9e1223fe5d6ee6b3bb2d05cb7",
-    "skills/engineering-terminology-polishing/SKILL.md": "6443c76b35aee34c8c443852bcf7baf92484209b0a3afb8b95753cda9d9ee9a9",
+    "skills/engineering-terminology-polishing/SKILL.md": "4fb1026ea67f2a923ba812a74642c8d5b2c23331be472e5499337f8bf8072df3",
     "skills/engineering-terminology-polishing/agents/openai.yaml": "186663f44e1c7a86bdaefd6df3af014f37a53dc4d4bf0240c7f455477ff5f241",
-    "skills/general-method-benchmark-realworld/SKILL.md": "8f4c925db47736784d6190b9747a89cde11849a32cb602a540d8edb409007e76",
+    "skills/general-method-benchmark-realworld/SKILL.md": "b7ab0049dcb0905123dd805bcb920b1c9539c9947af4d4e4130b83024ee1b3fb",
     "skills/general-method-benchmark-realworld/agents/openai.yaml": "61bb6c9ca27d93360aa73dbafedd1a7646ca3d50755f70153e6f1c86e86132a6",
-    "skills/industrial-ai-paper-router/SKILL.md": "62c689ec7611a14b92a376587c07effb3d27ebf2374428b769fde24699a4d7d1",
+    "skills/industrial-ai-paper-router/SKILL.md": "d76dbf394bed5afe27b117e5c81cce795885bae6e70249ae15ac4ea6cbae8c4d",
     "skills/industrial-ai-paper-router/agents/openai.yaml": "978925ce8da0beb64939776883b3823e8cf0a25c45a52b7d4b0cfb837824534a",
-    "skills-zh/background-driven-industrial-application-zh/SKILL.md": "7ff221e17593c17b4bc5fd3b724958d78a9cb4f08fc24073f2cf34032b7a83bd",
+    "skills-zh/background-driven-industrial-application-zh/SKILL.md": "ca6fcedc4385d14ebeb521f3a97463abb6d50392bff3ebd74822f9b825ddfea6",
     "skills-zh/background-driven-industrial-application-zh/agents/openai.yaml": "597e5cb96e059c80c69e21f5b718f10f7064bf35abb1ec3b898114a21d21f36b",
-    "skills-zh/engineering-abstract-contributions-zh/SKILL.md": "1da7fd8ae5353715f9d43d5bed585ccbaf4635a20c2eab2c4236cbe581a1ce4d",
+    "skills-zh/engineering-abstract-contributions-zh/SKILL.md": "87fc95c93d1a98d833097b8bbb2839dd308192e6c2346b0dd10350ccb62f69d6",
     "skills-zh/engineering-abstract-contributions-zh/agents/openai.yaml": "8403574964d21131cf1fd334a7723bc5b8b2fcd93e70151ca4dbe5a8b1db4dd8",
-    "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md": "7f7c7b680d65e84caa92c7c599214373abf455d21e9d780dc183d9f0a845613a",
+    "skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md": "d9ce89c94a0df837f54a4c42762afcf8c4ae797a7dacf7fb1ba9a67931f6e1a1",
     "skills-zh/engineering-application-journal-writing-skill-zh/agents/openai.yaml": "7e9cf9361450a9df35b8560dacc38253b651afbefc653000f71b43dde3a51f64",
-    "skills-zh/engineering-experiment-automation-zh/SKILL.md": "f16d9d4adae037a4461ba439837d6d966a05b9bbf1256afeb155414241d1070f",
+    "skills-zh/engineering-experiment-automation-zh/SKILL.md": "a8e43962e221d9f97dc7ffbf93f0a8b8cf58d6569c0d4317efa24a86c08963e7",
     "skills-zh/engineering-experiment-automation-zh/agents/openai.yaml": "4ff25e5297b0b7bdcddea6f853a82cc0455e3355ae09168e7f5924d551d3250d",
-    "skills-zh/engineering-experiment-evidence-design-zh/SKILL.md": "3671178f9d93602dae2f07195c88f640b72ee61e262e3bf33d8b1e2b7823eede",
+    "skills-zh/engineering-experiment-evidence-design-zh/SKILL.md": "7b9a69f96c65cb1daf54b2c2d919f3d4b4c09a3b1a54212974ee97e9cd3a8bb5",
     "skills-zh/engineering-experiment-evidence-design-zh/agents/openai.yaml": "93722e082a10f546d901fe0649db8190e12ede78a407c718e0d4d9efdd3501f7",
-    "skills-zh/engineering-figure-latex-production-zh/SKILL.md": "b2f603d98a0bd73933793a426abde2703afa3fd91e4cf8ea5d601ac8bd989c66",
+    "skills-zh/engineering-figure-latex-production-zh/SKILL.md": "3d2a16a22e32094cdd1f2a1b4665bc656f8c76c36305867d841c16f676798971",
     "skills-zh/engineering-figure-latex-production-zh/agents/openai.yaml": "cf64dc492de6da4993311e942d12eb99dff1f12ba3e857a70104da8dba8bbeab",
-    "skills-zh/engineering-journal-rigor-review-zh/SKILL.md": "1fac75b402ba7030e48f60f771d1a8017f2280ee1fcb86d8501ef5b1242f0021",
+    "skills-zh/engineering-journal-rigor-review-zh/SKILL.md": "3addfbfefb18ae1dcd92a5ff4fd1cfc63d9f2a936c9b861f794224d3dd08a8d3",
     "skills-zh/engineering-journal-rigor-review-zh/agents/openai.yaml": "a81a7f35a784257158e954a0ef6fa979d9328a5c80a2281df09f2b61503ca2c9",
-    "skills-zh/engineering-literature-positioning-zh/SKILL.md": "c67d134599c32aa88c5ac1541dbab883c303f7a6bb3859b7105ea0ea6a2ca5bb",
+    "skills-zh/engineering-literature-positioning-zh/SKILL.md": "762066c51c9216724f16c73094adaa77d023e0c74a0887d25f9d076219f7b01a",
     "skills-zh/engineering-literature-positioning-zh/agents/openai.yaml": "d5910524803317a744491ce5876bf9642cb67138d3cbf945bc90d2d1c876db0b",
-    "skills-zh/engineering-paper-idea-architecture-zh/SKILL.md": "52c803bd0d3fa95e4e4a1a6ab6685ddab5423b04104a26ab514de52e26ef8d9d",
+    "skills-zh/engineering-paper-idea-architecture-zh/SKILL.md": "2994dc5824c6f0a344cb5b90175022295885db58113f861d99ef01de0613cbb6",
     "skills-zh/engineering-paper-idea-architecture-zh/agents/openai.yaml": "bf8293e0ef60f0c215ad0d23d5e1f423169ba1af181475f2837973b7ac98b59e",
-    "skills-zh/engineering-research-ideation-zh/SKILL.md": "c9e6e6198b7d5c57f4e1accaf741e90db327ecc2dd168d033bcfc92907a8a78b",
+    "skills-zh/engineering-research-ideation-zh/SKILL.md": "48407ba9e0179da94ec364fb5935b7030d5b7def5f1fba63270a8d46196105a7",
     "skills-zh/engineering-research-ideation-zh/agents/openai.yaml": "a889ac98ea627e0fed66ca1f56cd9dd29ca6ffa1482366023d24cafdf5cbb33d",
-    "skills-zh/engineering-review-response-zh/SKILL.md": "4a42f23d16aa5212a2040e5931ae13ef2fbe2feec7575db5cb695aaac5aa3ff9",
+    "skills-zh/engineering-review-response-zh/SKILL.md": "37e4ce6247de9536a453a4e85c11dd5a1d5496b4f61d52935a8d8d4cd9d6fa19",
     "skills-zh/engineering-review-response-zh/agents/openai.yaml": "140ceb23f58d616e5a84e96dd5c06dd5e20844fc8a78f0159ba4214299789146",
-    "skills-zh/engineering-terminology-polishing-zh/SKILL.md": "c2b2e2df1a1682b478c23224aa4b7f14df63430cbfa1fab64c2656a038e8f4ca",
+    "skills-zh/engineering-terminology-polishing-zh/SKILL.md": "faf755543d9940c2da2642cf165adffb3edad6dd959298e6d1b8a69bbb1b40e9",
     "skills-zh/engineering-terminology-polishing-zh/agents/openai.yaml": "5c180e78ea16d45c74d3ee889ab18da3ed93ebd024aa92e4f4af82d7a47903b2",
-    "skills-zh/general-method-benchmark-realworld-zh/SKILL.md": "be32c64aa69c3f6374e4566c88d7c32114610155e6c6b95b121ff68748c73f40",
+    "skills-zh/general-method-benchmark-realworld-zh/SKILL.md": "f98079f048f3278f1c761b3b27875d1b9ff1a3cc40f8f18ac4385877beeb7743",
     "skills-zh/general-method-benchmark-realworld-zh/agents/openai.yaml": "21845a0cd10bdbba06afd8b2015df98f665e75965483201ba47358e076cf8e58",
-    "skills-zh/industrial-ai-paper-router-zh/SKILL.md": "2216baa787c7d4ef09a7ca1d2321ba00a21fbe522c396d81ba9fb5abca69901e",
+    "skills-zh/industrial-ai-paper-router-zh/SKILL.md": "55eee6f8248e56d72c11c951adf48e2e044bdc65dec8b044d98f7d84d08ba7a5",
     "skills-zh/industrial-ai-paper-router-zh/agents/openai.yaml": "c5d55a2eab3649d03112208d917e0c20a8e1b3656e593b6a6a1e285031916380",
-    "suite-manifest.yaml": "938f6bb35680b4fc894a442a4a8f50a7c53e261a0930cec4fae2bbbb8eb725bb",
+    "suite-manifest.yaml": "505410fcdadfbb4e1748b799d9776f6876efa976efd4844f1dbd445b4a3b751d",
     "tools/extract_terminology_evidence.py": "a8e9cf330c53f7d542b4851880dfc07986930fc3e6a3b87e8cf09a008741bcc8"
   },
-  "scope": "One responder, two fictional requests, actual local example execution. Preloaded context disclosed; no controlled baseline or full-suite scientific certification."
+  "scope": "Two fictional requests in one responding context; inherited history disclosed. First answers reviewed by the maintainer, no feedback, retest, controlled baseline or whole-suite certification."
 }

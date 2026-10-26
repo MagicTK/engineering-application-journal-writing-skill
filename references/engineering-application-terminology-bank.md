@@ -149,7 +149,7 @@ an unidiomatic phrase, and the correct replacement may change the whole clause.
 For example, vague `information exchange` may need to become `feature
 interaction`, `context aggregation`, or `cross-stage feature fusion`, depending
 on the actual model operation. `Fault propagation` describes a different
-claim about how a disturbance spreads in a process; it is not a stylistic
+claim about how fault effects spread in a process; it is not a stylistic
 replacement for exchanging neural features.
 
 ## 3. Core Engineering Objects
@@ -195,7 +195,13 @@ when those operations are what the method actually performs.
 | Combine two or more feature sources | feature fusion; feature integration | state the sources and level of fusion |
 | Combine a defined set of encoded features | feature aggregation; context aggregation when the output is context | specify operands, axis and combination; aggregation is not restricted to attention or dimensionality reduction |
 | Transmit or update representations along graph edges | feature propagation; message passing | identify the graph and update; this does not establish physical fault propagation |
-| A disturbance spreads through the physical process | fault propagation | requires process knowledge or evidence for the claimed direction and effect |
+| Fault effects spread through the physical process | fault propagation | establish the fault-related meaning and support the claimed direction and effect; ordinary disturbances are not automatically faults |
+
+A load fluctuation or setpoint response does not by itself establish a fault.
+Conversely, a defined fault can be represented by an injected disturbance in a
+benchmark or model; the terms are not mutually exclusive. Retain the source's
+fault definition and distinguish a modeled propagation path from an observed
+physical event. See the [fault/disturbance evidence note](published-evidence.md#fault-effects-disturbances-and-representation-updates).
 
 Name the actual operation instead of using vague `information exchange`
 wording. Information exchange remains legitimate when communication or transfer

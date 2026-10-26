@@ -1,5 +1,14 @@
 # Changes
 
+## 4.2.45 (2026-10-26)
+
+- Correct the bilingual fault-propagation row: ordinary disturbances are not
+  automatically faults, while a defined fault may be modeled as an injected
+  disturbance. Keep simulated effects, physical events and feature updates distinct.
+- Ground the boundary in scoped industrial passages and official terminology,
+  with a separate original Chinese wording check. No new module family or
+  universal experimental requirement is introduced.
+
 ## 4.2.44 (2026-10-26)
 
 - Add an original fictional result-workflow example linking one input to a

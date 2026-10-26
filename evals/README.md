@@ -12,6 +12,11 @@ their own versioned reports and do not validate changed instructions. The
 not the first historical example or the number of stored files, identifies the
 present evaluation status.
 
+The 4.2.45 [fault/disturbance check](reviews/fault-disturbance-evaluation.md)
+covers a permitted setpoint response and a defined simulator fault alongside
+neural message passing. Both first answers preserve the different objects and
+scopes; source reading and software checks are reported separately.
+
 The 4.2.44 [result-workflow check](reviews/result-workflow-evaluation.md) covers
 one actual execution of the fictional example and one narrow result-writing
 request in a new responding context. The first response preserves aggregation,

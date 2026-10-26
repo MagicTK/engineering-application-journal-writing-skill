@@ -1028,6 +1028,28 @@ The original bilingual title, abstracts and paired keywords at [AAS c200257](htt
 
 As methodological background, [Pearl's primary PMLR abstract](https://proceedings.mlr.press/r0/pearl95a.html) identifies observational identification as a valid route, and the author-hosted [Statistics Surveys overview](https://ftp.cs.ucla.edu/pub/stat_ser/r350-reprint.pdf) distinguishes causal queries and the assumptions needed to answer them. These sources qualify the evidence rule; they are not two more industrial-operation papers or an admission record for every causal-module name. Observational identification need not require a new physical trial, while a graph attack alone does not establish a plant intervention. That methodological-background check added no engineering-corpus entries; the current total is stated at the beginning of this index.
 
+### Fault Effects, Disturbances And Representation Updates
+
+P13 PDF p.2 describes fault effects within and between subsystems; p.7 explains
+the response to a specified benchmark fault, using disturbance language for the
+feedback response and a fault-propagation path for the diagnostic analysis.
+P14 p.5 includes pressure disturbances among its defined fault scenarios.
+These contexts support retaining the specified fault meaning, not treating all
+disturbances as faults or making the two words mutually exclusive. P04 pp.6,8
+was also screened for injected disturbances and production fluctuations; those
+passages alone are not another definition of physical fault propagation.
+
+The original [IFAC SAFEPROCESS terminology](https://tc.ifac-control.org/6/4/terminology/terminology-in-the-area-of-fault-management),
+attributed there to Isermann and Balle, Control Engineering Practice 5(5), 1997,
+distinguishes an unacceptable system deviation from an unknown uncontrolled
+input. This terminology reference supports the fault/disturbance boundary; it
+does not validate a particular graph or turn permitted setpoint changes into
+faults. The original [AAS c240151 bilingual abstract and keywords](https://www.aas.net.cn/article/doi/10.16383/j.aas.c240151)
+separately support fault propagation path / 故障传播路径. That page's abstract
+and captions, not its full method body, were read. Its complete FPPAN name stays
+attributed. These are scoped wording checks, not new common-module admissions,
+certification of causal paths, or reproduction of the sources' experiments.
+
 ### Repetition, Aggregation And Uncertainty Graphics
 
 P66 pp.8-9 was reread, with p.9 rendered. The comparison tables are labeled mean-only, while Fig.4 explicitly describes SD bands over five cross-validation folds. Its nominal x-axis lists different metrics. These are scoped examples of summary and graphic choices, not a requirement for five seed runs, an inferential confidence interval or a continuous response curve. Full formulas, experimental independence, source performance and the aggregate subset results were not independently verified or reproduced. Searches in other indexed papers did not establish another repetition definition: P21 p.7 uses SD for input standardization, and P11 p.3 repeats attention heads rather than experiments. Keyword hits alone do not settle the reporting unit.
