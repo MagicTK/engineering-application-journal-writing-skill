@@ -1,6 +1,6 @@
 # Engineering Application Journal Writing Skill
 
-[中文](README_CN.md) | [Start here](SKILL.md) | [Skills](#choose-a-skill) | [Terminology](references/terminology-decisions.md) | [Evaluation](evals/README.md)
+[中文](README_CN.md) | [Install](#install) | [Writing example](#a-small-writing-example) | [Start here](SKILL.md) | [Skills](#choose-a-skill) | [Terminology](references/terminology-decisions.md) | [Evaluation](evals/README.md)
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
@@ -38,6 +38,30 @@ Example request:
 > Use $engineering-abstract-contributions. Read my current source, PDF, method equations and framework figure. Preserve the accepted opening. Clarify the module connections without inventing capabilities. Return a proposed abstract and only necessary body-sync edits with exact locations. Do not update LaTeX or Overleaf yet.
 
 For Chinese interaction, use the corresponding `-zh` skill or the [Chinese orchestrator](skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md). The manuscript can remain in English.
+
+## A Small Writing Example
+
+**Hypothetical method, not a real manuscript:** labeled samples train a quality predictor, while reconstruction of unlabeled measurements also trains its shared encoder. Only the encoder and quality predictor are retained for prediction.
+
+**A module list leaves that relationship unclear:**
+
+> An encoder extracts process features. A decoder reconstructs measurements. A predictor estimates product quality.
+
+**A connected description preserves the supplied method:**
+
+> Prediction on labeled samples and reconstruction of unlabeled measurements train a shared encoder. The quality predictor uses the learned representation to estimate product quality; the reconstruction decoder is used only during training.
+
+```mermaid
+flowchart TD
+    X["Process measurements"] --> E["Shared encoder"]
+    E --> P["Quality predictor"]
+    P --> Y["Quality estimate"]
+    E -. "Training only" .-> D["Reconstruction decoder"]
+```
+
+The diagram shows forward data paths, not optimization updates. The revision connects the learning objectives to the retained predictor instead of inventing a serial decoder-to-predictor pipeline. It adds neither a performance result nor a novelty claim.
+
+This is a short method passage, not an abstract template. For different verified designs, see [parallel feature paths, training-only operations and decision outputs](references/abstract-mechanism-examples.md). For a real paper, read its equations and figure before choosing the connection.
 
 ## Install
 

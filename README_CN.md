@@ -1,6 +1,6 @@
 # Engineering Application Journal Writing Skill
 
-[English](README.md) | [中文总控](skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md) | [摘要与贡献](skills-zh/engineering-abstract-contributions-zh/SKILL.md) | [术语决策](references/terminology-decisions_CN.md) | [评估说明](evals/README.md)
+[English](README.md) | [安装](#安装) | [写作示例](#一个简短的写作示例) | [中文总控](skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md) | [摘要与贡献](skills-zh/engineering-abstract-contributions-zh/SKILL.md) | [术语决策](references/terminology-decisions_CN.md) | [评估说明](evals/README.md)
 
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
@@ -38,6 +38,30 @@
 > 使用 $engineering-abstract-contributions-zh。先读当前源码、PDF、方法公式和框架图，保留已确认开头，澄清模块承接，不新增能力。给出摘要建议，以及确实需要同步的正文原句、位置、改句和理由。本轮不要更新 LaTeX 或 Overleaf。
 
 中文交流不要求论文改成中文。需要英文交互时使用对应不带 `-zh` 的 Skill。
+
+## 一个简短的写作示例
+
+**虚构方法，不来自真实稿件**：带标签样本用于训练质量预测器，无标签测量数据的重构也参与训练预测与重构共用的编码器；预测时仅保留编码器与质量预测器。
+
+**仅罗列模块，未交代它们的关系：**
+
+> An encoder extracts process features. A decoder reconstructs measurements. A predictor estimates product quality.
+
+**保持给定方法，补清学习与预测的联系：**
+
+> Prediction on labeled samples and reconstruction of unlabeled measurements train a shared encoder. The quality predictor uses the learned representation to estimate product quality; the reconstruction decoder is used only during training.
+
+```mermaid
+flowchart TD
+    X["过程测量数据"] --> E["共享编码器"]
+    E --> P["质量预测器"]
+    P --> Y["质量估计值"]
+    E -. "仅训练时使用" .-> D["重构解码器"]
+```
+
+图中箭头表示前向数据流，不表示参数优化过程。改写连接了学习目标与保留的预测器，没有凭空添加“先重构，再预测”的串联关系，也没有新增性能结果或创新性结论。
+
+这是一小段方法描述，不是摘要模板。其他已核实的结构可参考[并行特征路径、仅训练时使用的操作及决策输出](references/abstract-mechanism-examples_CN.md)；具体论文应先读公式和框架图，再选择合适的承接方式。
 
 ## 安装
 
