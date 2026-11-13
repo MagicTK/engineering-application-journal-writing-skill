@@ -26,6 +26,19 @@ For the selected draft, trace a single claim across sections: **abstract** (boun
 
 中文分工：学生标出原稿位置、所引论文页码以及已有/缺失的实验；作者先确认任务边界，再决定改一处措辞、重构一段还是补证。不要因十篇稿子用了同一个骨干就给十篇相同的“挑战—贡献”。
 
+### Second constraint or just background? / 第二个条件需不需要另写一段？
+
+Run this quick test on each private draft before editing. First ask, “If the primary problem were solved perfectly, what could the authors *still* not conclude?” Then change just the secondary constraint. If label granularity, inputs, independent unit, permissible model updates or testable target changes, record the consequence. Otherwise keep it as background. Complete the last column with an actual location or an unanswered author question; a proposed study is not a completed experiment.
+
+| Primary decision | Second fact | Resulting distinction | Manuscript action |
+|---|---|---|---|
+| Accept/reject a batch across two units | Only a batch verdict exists | Batch classification can be tested; unit localization needs its own reference | Check label scope in Formulation and remove unsupported localization claims |
+| Classify runs from few acquisitions | Synthetic windows can be sampled cheaply | Real independent runs do not increase | Split by acquisition before generation; return run IDs privately for review |
+| Estimate quality as conditions change | Assays arrive after issue | Scoring an earlier prediction differs from updating that prediction | Mark issue, release and model-update times on one private timeline |
+| Estimate a quantity from multirate streams | Numerical encoder pretrained elsewhere | Input-treatment gains and pretrained-weight gains need different controls | Identify matched comparisons or narrow attribution to the whole pipeline |
+
+组内负责人可以先看四列，不用通读整套指南。需要逐句展开时，转到[四种双约束稿件的写法与实验](../../references/topic-playbooks.md#when-two-constraints-change-the-same-decision)。真实稿名、运行记录与未发表结果只保存在私有副本。
+
 ## Authoritative Files
 
 | Artifact | Path | Status |

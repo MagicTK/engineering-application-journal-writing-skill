@@ -4,7 +4,9 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
-Version 4.4.2 tests diagnostic tool selection, deadline-limited delivery and a contrasting numerical predictor: [current report](forward-test-report.json), [response review](reviews/v442-tool-and-edge.md).
+Version 4.5.0 tests four combinations of constraints from the writing brief through an interpretable comparison. See the [current report](forward-test-report.json) and [response review](reviews/v450-intersecting-constraints.md).
+
+Version 4.4.2 tested diagnostic tool selection, deadline-limited delivery and a contrasting numerical predictor: [archived report](history/v4.4.2/forward-test-report.json), [response review](reviews/v442-tool-and-edge.md).
 
 Version 4.4.1 tested partial references in four engineering decisions: [archived report](history/v4.4.1/forward-test-report.json), [response review](reviews/v441-partial-references.md).
 

@@ -8,7 +8,7 @@
 
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
-**4.4.2：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+**4.5.0：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
 
 只改一处时，可以对照[引言段落重组](references/section-writing-guide.md#3-introduction)与[单句建议取舍](references/argument-and-prose-craft.md#7-small-engineering-revision-examples)：前者调整论证次序，后者说明何时保留原句更准确。
 
@@ -21,6 +21,8 @@
 **组内多稿复核：** 用[逐稿初筛表](assets/templates/manuscript-passport.md)先记决策对象、时限和已知证据，再按[问题找方法、按方法反查挑战](references/problem-first-classification_CN.md#六作者要求后的问题方法导航)。对照[多速率四篇原文及实验设计示例](references/experiment-evidence-design.md#worked-contrast-one-acquisition-problem-four-different-studies)，决定该比较输入处理、预测器，还是完整系统。
 
 组内逐稿修改可从[逐段示范与六类任务对照](references/topic-playbooks.md#from-a-plant-decision-to-a-testable-paper)开始：先确定预测对象、可用信息和参照方法，再决定重写哪一段。不要把范例的挑战当成自己的结论。
+
+遇到工序与标签、稀少批次与生成数据、工况变化与延迟反馈、多速率与预训练交叉的稿件，可读[四种双约束写法与实验](references/topic-playbooks.md#when-two-constraints-change-the-same-decision)，再填[组内逐稿表](assets/templates/manuscript-passport.md)。
 
 - **摘要连通方法。** 先读输入输出、公式和图，再说明模块为何相接；贡献不重复模块清单。
 - **术语按场景选择。** 区分变量、特征、样本、工况和状态，不把另一领域的合法用词全部列为禁词。
@@ -165,7 +167,7 @@ python3 scripts/install_suite.py --copy
 
 ## 文件怎样组织
 
-4.4.2 包含 **28 个 Skill 入口 Markdown、32 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
+4.5.0 包含 **28 个 Skill 入口 Markdown、32 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
 
 | 目录 | 内容 |
 |---|---|

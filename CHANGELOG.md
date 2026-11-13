@@ -1,5 +1,9 @@
 # Changes
 
+## 4.5.0 (2026-11-13)
+
+- Connect four intersecting problem settings to an introduction, a formal decision, an identifiable comparison and a bounded discussion. A bilingual group triage tool separates a second constraint that changes the study from background that need not become another contribution.
+
 ## 4.4.2 (2026-11-13)
 
 - Contrast tool selection, verified diagnostic outcomes and timely delivery on the same requests. Trace published simulation, device and FPGA evidence to separate decisions rather than assuming that tool use, successful execution or a small model proves plant performance. Includes an offline, synthetic example with tested denominators.

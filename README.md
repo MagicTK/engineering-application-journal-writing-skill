@@ -8,7 +8,7 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.4.2: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.5.0: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
 Revising just one passage? Compare the [paragraph repair](references/section-writing-guide.md#3-introduction) with the [single-edit decision](references/argument-and-prose-craft.md#7-small-engineering-revision-examples). The first changes the order of the argument; the second shows when leaving a sentence alone is more accurate.
 
@@ -21,6 +21,8 @@ The [current evaluation record](evals/README.md#current-version-status) identifi
 **Revising a portfolio?** Start one private [manuscript passport](assets/templates/manuscript-passport.md) per decision and use the [problem-to-method and method-to-problem routes](references/problem-first-classification.md#6-when-requested-problem-to-method-navigation). The [worked comparisons](references/experiment-evidence-design.md#worked-contrast-one-acquisition-problem-four-different-studies) distinguish studies that share an acquisition condition but not an output, metric or experiment.
 
 For group manuscript revision, start with the [annotated plant introduction and six contrasting task routes](references/topic-playbooks.md#from-a-plant-decision-to-a-testable-paper). Identify the prediction unit, information access and closest comparator before choosing a paragraph to revise.
+
+If two constraints act together, use the [four combined writing and evaluation examples](references/topic-playbooks.md#when-two-constraints-change-the-same-decision) and record the decision in the [group manuscript passport](assets/templates/manuscript-passport.md).
 
 - **Connects mechanisms to prose.** Abstracts explain how operations depend on each other; contributions identify the supported advance instead of repeating a module list.
 - **Uses terminology in context.** Variables, features, samples, states and conditions retain their meanings. No blanket ban on words borrowed from another field.
@@ -169,7 +171,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.4.2 contains **28 Skill-entry Markdown files, 32 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.5.0 contains **28 Skill-entry Markdown files, 32 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|
