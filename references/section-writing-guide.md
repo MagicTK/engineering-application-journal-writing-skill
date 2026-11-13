@@ -106,6 +106,18 @@ Connect the motivation figure to the paragraph's scientific distinction, rather 
 
 Before adding another challenge paragraph, check whether it introduces a different information requirement or merely restates the previous gap. Structural organization and temporal representation can be complementary dimensions; they are not opposing methods merely because one paragraph follows the other. Choose a contrast marker only for an actual contrast. For guidance on preserving the logic of Related Work during integration, see [paragraph connections](argument-and-prose-craft.md#5-give-each-paragraph-one-main-job).
 
+### Connect prior work to the engineering decision / 从工程决策串起综述
+
+Start with the decision the reader must make, then name the physical or data object on which that decision depends. At a change of scale, carry one object across the paragraph break: a measurement from a unit, a sample from a new operating mode, or an inspection label attached to a batch. A generic sentence about the importance of a mechanism does not establish that connection.
+
+For a pivotal citation, record **who did what, to which object, for which evaluated task**. An author-led sentence is useful when distinguishing two studies; a method-led sentence works when following one operation across studies. Do not impose a quota for either voice. A source-domain alignment method does not, by name alone, partition process variables. A detector can motivate a decomposition strategy without becoming a multiclass classifier in the retelling. End with the requirement that still matters in the present setting, not a field-wide accusation that no one combined the ingredients.
+
+When two difficulties coexist, introduce the one that defines the decision first. Add the second at the point where it changes what the model can observe or learn. For example, in a fictional cooling network with scarce inspections after a product change, the physical circuit defines which readings belong together; scarce inspection labels restrict what can be learned about quality. They do not alter the circuit. In another paper, label acquisition itself may be the primary problem: reverse the order if the decision warrants it.
+
+Carry that distinction through the paper: **Motivation** uses one bounded example to compare alternatives; **Problem Formulation** names the fixed inputs, learned quantities and prediction target; **Method** states what one operation passes to the next; **Experiments** identify which comparison tests the claimed distinction. A slower trend is not necessarily periodic. A score between pooled units is not a variable-to-variable causal edge. Choose a title only after identifying the levels and operations the equations support; a modifier such as *hierarchical* should add meaning, not length.
+
+中文操作：换段时先接住上一段的工程对象，再缩小到这一段要解决的判断。引关键文献时写清作者、操作、对象和实际验证的任务；可以借用监测文献的变量划分思想，但不要把检测率写成分类性能，也不要把源域当成变量块。两种困难并存时，先交代决定任务的那一种，再在第二种困难开始改变可用数据或监督条件之处引入它。动机举例，问题定义落实输入与目标，方法交代特征的去向，实验说明哪项比较能检验该主张。段数、作者主语和贡献数都不设定额。
+
 ### Background-Driven Introduction
 
 Suggested paragraph sequence:

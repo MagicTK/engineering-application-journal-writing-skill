@@ -4,6 +4,10 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
+Version 4.3.1 checks attribution, physical units versus source domains, and the scope of a prediction claim in [two fictional writing tasks](reviews/v431-decision-and-attribution.md); see the [4.3.1 report](forward-test-report.json).
+
+The [4.3.0 report](history/v4.3.0/forward-test-report.json) remains a historical record.
+
 Read the [current report](forward-test-report.json) for the evaluated suite version,
 actual cases, source snapshot, response/review traces and pending or passed state.
 Its tested scope is not a full-suite certificate. Historical examples below retain

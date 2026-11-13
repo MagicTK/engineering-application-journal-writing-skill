@@ -1,5 +1,10 @@
 # Changes
 
+## 4.3.1 (2026-11-13)
+
+- Connect an introduction's cited operations to the engineering decision and the evaluated task. Distinguish source domains from variable blocks, and physical propagation from learned feature relationships.
+- Add a bilingual two-constraint example and a handoff from motivation to formulation, method and evaluation. Paragraph counts, title patterns and author-led sentences remain optional.
+
 ## 4.3.0 (2026-10-27)
 
 - Consolidate the 4.2-series problem-first routes, context-dependent terminology,
