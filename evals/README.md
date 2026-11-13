@@ -4,7 +4,9 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
-Version 4.3.2 tests a multistage introduction, weak supervision under a new operating condition with an LLM, a sparse-reference abstract and the class/condition distinction for scarce support. See the [current report](forward-test-report.json) for scope and [writing responses and an earlier failed attempt](reviews/v432-paragraph-and-edit.md) for the actual decisions.
+Version 4.4.0 separates input processing, model choice, decision-time access and evidence across several experiment designs. The [current report](forward-test-report.json) gives the tested scope; the [release review](reviews/v440-problem-method-evidence.md) records a failed initial answer and its retest.
+
+Version 4.3.2 tested a multistage introduction, weak supervision under a new operating condition with an LLM, a sparse-reference abstract and the class/condition distinction for scarce support. See the [archived report](history/v4.3.2/forward-test-report.json) and [writing responses and an earlier failed attempt](reviews/v432-paragraph-and-edit.md).
 
 Version 4.3.1 checked attribution, physical units versus source domains, and the scope of a prediction claim in [two fictional writing tasks](reviews/v431-decision-and-attribution.md); see the [4.3.1 report](history/v4.3.1/forward-test-report.json).
 

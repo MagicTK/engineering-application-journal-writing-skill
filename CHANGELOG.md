@@ -1,5 +1,11 @@
 # Changes
 
+## 4.4.0 (2026-11-13)
+
+- Add method-first and problem-first paths set by the industrial decision and prediction-time access. Distinguish a numeric pretrained model, a language model supplying descriptors and an agent selecting tools.
+- Link journal comparison passages to original experimental designs: multirate acquisition, delayed assays, supervision and shift, new classes, diffusion, root-cause evidence and resource-limited prediction. Separate observed paper practice from proposed controls, and measured latency from computation proxies.
+- Add a group triage row, condition-specific terminology red lines, contrasting introduction openings and figure choices. Use actual outcomes and preserve unpublished manuscripts.
+
 ## 4.3.2 (2026-11-13)
 
 - Add a five-paragraph plant example and source-located alternatives for semisupervised, weakly labeled, few-shot, zero-shot, new-condition and language-model studies, including what each experimental design can actually establish.

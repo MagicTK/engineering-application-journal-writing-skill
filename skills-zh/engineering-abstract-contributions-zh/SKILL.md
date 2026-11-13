@@ -7,7 +7,7 @@ description: 对照真实方法与证据修订工程应用论文摘要和贡献�
 
 [English](../../skills/engineering-abstract-contributions/SKILL.md)
 
-套件版本：`4.3.2`
+套件版本：`4.4.0`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->
@@ -16,6 +16,8 @@ description: 对照真实方法与证据修订工程应用论文摘要和贡献�
 <!-- invariant: claim-evidence-alignment -->
 
 ## 先读真实研究，再写摘要
+
+若只给了问题，可供论文采用的文字可止于研究要求。例如：“部分测量在作出判断后才可取得。评价时应还原各预测时点可用的信息。”这不代表作者采用任何补值、编码或路由机制；先确认真实方法，再补摘要的方法句。
 
 读取有效摘要、贡献、方法总览、相关公式与框架图、案例定义及结论。注释属于修改历史，不当作现行正文。核对源文件与 PDF 的版本；若仅有摘要，只做语言审阅，将技术一致性标为未核实。
 

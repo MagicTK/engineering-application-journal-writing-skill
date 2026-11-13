@@ -7,7 +7,7 @@ description: Revise an industrial or engineering paper's abstract and contributi
 
 [中文执行版](../../skills-zh/engineering-abstract-contributions-zh/SKILL.md)
 
-Suite version: `4.3.2`
+Suite version: `4.4.0`
 
 <!-- invariant: authoritative-source-lock -->
 <!-- invariant: no-fabrication -->
@@ -16,6 +16,8 @@ Suite version: `4.3.2`
 <!-- invariant: claim-evidence-alignment -->
 
 ## Start From The Actual Study
+
+If only the problem is specified, the publishable sentences may stop at what the study must determine. Suggestions belong outside that text. Example: “Some measurements become available only after the decision. The evaluation must therefore reproduce what was available at each prediction time.” No choice of imputer or encoding is implied. Request the actual choice before completing a method sentence.
 
 Read the active abstract, contribution list, method overview, relevant equations, method diagrams, case definitions and conclusion. Comments are revision history, not published prose. Check whether source and PDF describe the same version. If only an abstract is supplied, offer a language review and explicitly leave technical correspondence unverified.
 

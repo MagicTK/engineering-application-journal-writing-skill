@@ -180,6 +180,22 @@ Compare propositions before counting words. Identify the actor, the object, the 
 
 In Results, name the comparison before compressing it. Delete a closing sentence that only announces that the preceding numbers “demonstrate an effect.” Keep a closure that identifies a real exception, operating condition or decision; never delete a qualifier just because it lengthens the sentence. 中文：若段末只是再说一次“结果说明参数有影响”，可以删；若限定了哪种工况下没有改善、比较基线或计量口径，则应保留。给作者标明是纠错、可选改写还是待核事实，不把语气偏好列为语法错误。
 
+### Two ways to write about a new production condition / 新工况的两种段落
+
+**A. Predict before target data exist.** P50 (TCYB), abstract, introductory comparisons on pp.1–2 and experiments from p.6, starts from the access restriction on adaptation. An original example: “The inspection model must be set before production starts on a new tool. Historical tools provide labeled traces, but measurements from the new tool are unavailable when the model is selected.” The first sentence fixes the deadline; the second makes *which* adaptation evidence is absent explicit. A paragraph on existing target-data methods can now end with their access assumption. Do not claim that those methods have low accuracy under their intended protocol. The formulation must withhold target data from fitting **and selection**; the experiment withholds complete tool conditions.
+
+**B. Adapt after target production begins.** P78 (TII), abstract, pp.2–3 and case studies from p.5, instead retains a source model and adapts with unlabeled target measurements. “After a tool change, new traces become available before the first inspection report. A diagnosis model can use these traces for adaptation, but their fault labels cannot guide that update.” The second sentence changes the methodological question. Contributions should explain what changes during adaptation; Methods must distinguish the retained source model, available measurements and parameters updated. The experiment measures performance after a declared amount of target access, separately from any pre-adaptation prediction.
+
+中文：A 的难点是“在看到目标工况之前就定好模型”，B 的难点是“现在能看到目标测量，却还没有目标标签”。这不是同一个 however 换两个同义词。把模型名删掉，这两个困难仍然成立。若参考工作只报告过 B，不能写成它在 A 上实验失败；应指出它需要 A 不允许使用的信息。若此次还能用少量目标标签，改写为第三种协议，注明有标签的独立样本数及其使用阶段。
+
+### When the method chooses tools / 当方法负责选工具
+
+In [He et al.](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cim2.70080), read the end of Sec. 1, Sec. 2.1 and the execution checks in Sec. 2 against the experimental questions in Sec. 3. The important transition is from choosing a suitable specialist to making the specialist's decision; not every answer produced by the entire system is an LLM prediction. This IET paper is an industrial routing example, not an IEEE precedent for every agent claim.
+
+An original passage for a **fictional** valve-test bench: “A vibration test and a pressure-decay test call for different diagnostic routines. A maintenance request may identify the valve without specifying which test produced the file. We check the request against its acquisition metadata before selecting a routine. When the metadata do not identify the test, the system refers the request for inspection.” Sentence 1 gives the engineering reason for routing; 2 locates the ambiguity; 3 introduces evidence that can resolve it; 4 bounds execution. In Results give the fraction referred to review as well as accuracy among automatically processed requests. Neither measure alone gives correct decisions per incoming request. This narrative does not require an LLM: a rule-based selector is a serious comparison, not evidence that the challenge is solved or novel.
+
+中文：若输入请求只写了设备，没写检测类型，真正的难点不是“缺少智能体”，而是“在证据不全时能否匹配可用工具，何时必须转人工”。引言写这一判断，公式定义可选工具、允许读取的资料和拒绝执行条件；方法写谁核验、谁选、谁输出故障判断；结果区分选对、判对和转人工。若研究只用大模型从手册离线生成固定描述，则应删掉这套选工具叙事。
+
 ## 8. Delivery And Final Pass
 
 Separate the output into manuscript text and concise author notes when unresolved support exists. Author notes identify the source, experiment, or scientific decision needed; the manuscript contains the supported argument. Use visibly marked placeholders only in an internal draft. Do not silently resolve scientific uncertainty through language edits.

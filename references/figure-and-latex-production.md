@@ -33,6 +33,10 @@ diagrams, continue from the current master instead of redoing the full pipeline.
 
 ## 2. Figure Contract
 
+**Draw the contested comparison, not an ornamental architecture.** For different sensor rates, show acquisition events, a common prediction deadline and assay release, using distinct marks for observed and filled values. For weak supervision, draw the bag label above the whole annotated interval; plot window scores beneath it without coloring them as ground truth. For condition transfer, facet by source, adaptation and held-out query; distinguish “labels used for scoring” from “labels used to fit.” For continual learning, a test-condition × update-step matrix needs row/column labels, before/after-update definitions and visibly unavailable cells. For root-cause inference, mark physical connections, inferred edges and reference sources differently and name the basis of each. For compact deployment, plot error versus measured latency at matched precision and hardware; if latency was not measured, use an honestly named size axis instead.
+
+中文：图要能回答“什么被比较”。实测和补值不能同图例，整段标签不能涂成瞬时真值，留作评分的目标标签不能画进训练支路，未评测的旧工况格子不能填零。推断边用推断边的图例；没有干预证据就不把箭头说成已验证的传播。端侧时延图必须交代设备和输入条件；服务器测量与现场测量分栏，不拿参数数量替代时间。
+
 Before generation or redrawing, record:
 
 ```text

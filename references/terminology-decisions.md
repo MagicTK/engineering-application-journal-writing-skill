@@ -883,6 +883,15 @@ retained claim. A correct base formula is not itself a new contribution.
 
 ## Reporting And Scope
 
+**Red lines are conditional, not banned strings.** For each term record the precise assertion that must be removed, what evidence would permit it and a narrower replacement. Four field examples:
+
+| Do not write under this condition | Say instead, if true | What would change the decision? |
+|---|---|---|
+| “concept drift was detected” from only a change in input histograms | “the distribution of the monitored inputs shifted” | Define the conditional relationship meant by drift and examine suitable outcome or other identifying evidence; P30 p.2 uses an explicit distributional definition. |
+| “the agent diagnosed the fault” when it only picked a tool | “the router selected the diagnostic routine; the routine predicted the fault class” | An end-to-end *system* claim may be valid when evaluated, but name the actual predictor when attributing a decision. |
+| “sampling frequency decreased” because an event-driven sensor had one longer gap | “the interval between these observations increased” | Establish a changed acquisition schedule to describe a new nominal sampling frequency; irregular intervals and several fixed rates are not synonyms (P24/P73). |
+| “real-time on the edge” from fewer weights alone | “the model has fewer trainable parameters than [matched baseline]” | End-to-end timing on the intended system under stated deadlines and workload. Even measured throughput differs from single-request latency (P45/P74). |
+
 `Real-world data` describes provenance, not online operation. Do not routinely prefix it with `offline`; retain the distinction if retrospective versus prospective evaluation matters. Class imbalance belongs in dataset/metric analysis when relevant. Mention it in an abstract or contribution only when it is part of the research problem or supported advance, not merely a property of one case.
 
 `Offline assay` may accurately identify a laboratory measurement procedure or delayed quality label; it is not the same as calling every industrial dataset offline. `Online` may identify sequential computation or actual live evaluation; define which. Deployment requires operational integration, and shadow-mode evaluation does not demonstrate closed-loop benefit.

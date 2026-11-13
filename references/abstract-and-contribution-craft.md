@@ -11,6 +11,8 @@ require reading every unrelated case or adopting any example's architecture.
 
 ## 1. Recover The Mechanism Before Improving The Sentence
 
+When the brief supplies only a task or a deadline, write an abstract **fragment at that evidence level**. A plausible design is not yet the authors' proposed or implemented method. For example, a late laboratory report establishes which inputs are unavailable, not that the authors encoded observation age, added a mask or trained a particular model. Keep optional design choices in a separately marked proposal until confirmed; do not put “We propose [invented mechanism]” in manuscript-ready prose simply because the next requested deliverable is an experimental design.
+
 Write an internal row for every operation that matters to the claim:
 
 | Input and physical/model level | Operation | Output | Next consumer | Evidence | Uncertainty |
