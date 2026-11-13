@@ -1,5 +1,9 @@
 # Changes
 
+## 4.4.2 (2026-11-13)
+
+- Contrast tool selection, verified diagnostic outcomes and timely delivery on the same requests. Trace published simulation, device and FPGA evidence to separate decisions rather than assuming that tool use, successful execution or a small model proves plant performance. Includes an offline, synthetic example with tested denominators.
+
 ## 4.4.1 (2026-11-13)
 
 - Work through four cases where the evaluation reference is only partly available. Connect a real industrial decision to its introduction, definition, fair comparison, figure and defensible conclusion in English and Chinese. Keep unmeasured outages, unreviewed hours, unnamed fault classes and unverified initiating faults out of claimed ground truth.

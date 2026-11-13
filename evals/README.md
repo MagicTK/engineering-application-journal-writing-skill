@@ -4,7 +4,9 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
-Version 4.4.1 tests partial references in four engineering decisions: see the [current report](forward-test-report.json) and [response review](reviews/v441-partial-references.md).
+Version 4.4.2 tests diagnostic tool selection, deadline-limited delivery and a contrasting numerical predictor: [current report](forward-test-report.json), [response review](reviews/v442-tool-and-edge.md).
+
+Version 4.4.1 tested partial references in four engineering decisions: [archived report](history/v4.4.1/forward-test-report.json), [response review](reviews/v441-partial-references.md).
 
 Version 4.4.0 separates input processing, model choice, decision-time access and evidence across several experiment designs. The [archived report](history/v4.4.0/forward-test-report.json) gives the tested scope; the [release review](reviews/v440-problem-method-evidence.md) records a failed initial answer and its retest.
 

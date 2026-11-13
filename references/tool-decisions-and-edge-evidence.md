@@ -1,0 +1,47 @@
+# Did the system choose the right test, return the right result, or finish on time?
+
+**中文入口：** 工具选对、结果正确、按时返回是三个不同的判断。只研究其中一个，不必硬补另两个；声称整套系统可用时，则不能只评价其中最顺利的一步。本页示例均为虚构的写作或试验设计，不是新的实测结果。
+
+## 1. Choose the claim before writing the opening
+
+| If the engineering decision is... | Carry this object from the introduction into the test | Not established by that test |
+| --- | --- | --- |
+| Route an operator request to a registered diagnostic procedure | Request, instrument identity, permitted procedures and expert-acceptable options → selected procedure and arguments → independently judged final result | A plausible text answer does not establish a valid call; matching an expert choice does not establish a correct diagnosis. Some requests have several valid choices or no permitted one. |
+| Use a numerical foundation model to predict quality at discharge | Sensor history available by discharge → numerical prediction → later independent assay; declare pretraining overlap and target-data access | A frozen backbone does not mean no target fitting if a readout, normalizer or calibration uses target runs. No invented language interface, agent or need for a human-authored prompt. |
+| Issue an advisory by a deadline on a specified board | Input-ready event → preprocessing, inference, output-ready event at the named consumer → decision deadline and quality criterion | Parameter count, FLOPs, server training time or board-only kernel timing cannot establish that the delivered advisory meets its deadline. |
+
+**Why these comparisons exist.** [He et al., IET Collaborative Intelligent Manufacturing](https://doi.org/10.1049/cim2.70080), Secs.2–3, separate routing of registered specialist models from end-to-end spindle diagnosis. [Jia et al., IEEE Transactions on Smart Grid](https://doi.org/10.1109/TSG.2025.3589114), [author manuscript](https://arxiv.org/pdf/2411.16707), pp.9–11, especially Figs.7–9, separate simulation success on the first attempt from success after permitted corrections. The second study is an **engineering simulation** example, not evidence that retries improve plant fault diagnosis. [A locally runnable bearing-classification study](https://doi.org/10.3390/computation14090220), abstract and Sec.1, supplies a useful counterexample: predictions from given vibration features and abstention on ensemble disagreement need not involve choosing or executing a diagnostic tool. Do not reclassify every LLM system as a tool-using agent.
+
+**端侧的两种不同依据。** [TII 知识蒸馏研究](https://doi.org/10.1109/TII.2022.3224969) PDF p.7、表 II–III，区分 PC 与 Raspberry Pi 3B 上的运行表现，进一步削减 FLOPs 并未带来相应推理提速。[TIM 二值网络研究](https://doi.org/10.1109/TIM.2024.3428643) PDF p.9 “Hardware Deployment Result”、表 IX，以指定 FPGA 的实现和资源占用为依据。后者不是对前者平台上时延的重复测量。For a cloud/edge division of labor, [the rotary machine group study](https://doi.org/10.1109/TCSII.2023.3260834), author PDF pp.3–4, Algorithm 1, locates different learning operations in the cloud and at the edge; transfer that **allocation of work**, not an unmeasured network delay or a requirement that all predictions contact a server.
+
+## 2. A paragraph sequence for tool-assisted work / 工具型论文怎样逐段展开
+
+**Fictional facts:** a technician can ask for one of two authorized analyses of a mixing vessel. Specialist software, not the language model, computes each result. Experts have annotated appropriate analyses and an independent inspection provides the final reference for some requests.
+
+| Passage | Original sentences you can adapt | Why the next passage follows |
+| --- | --- | --- |
+| Abstract / introduction opening | “Mixing-vessel inspections use different tests for composition and drive faults. A request that names a symptom but not a test leaves the choice of analysis to the operator.” | Start with an actual choice, not a history of language models. If no such ambiguity exists, remove it. |
+| Prior work → challenge | “A diagnostic routine can process a specified signal once the test is known. When the request describes the symptom instead, a correct computation can still answer the wrong question.” | Identify the missing decision between the request and the specialist, then cite work that actually handles that step. Do not assert that no prior system routes tools. |
+| Motivation → formulation | “The study separates selecting a permitted test from interpreting its output. The reference for the first decision is an acceptable expert choice; the reference for the second is the inspection finding.” | Define the eligible population for each reference; missing inspections are not negative inspections. |
+| Contribution → method | “The language model maps the technician's request to a registered analysis. The selected routine computes the diagnostic result, allowing routing errors to be distinguished from errors that persist under an expert choice.” | Name the intermediate object consumed downstream. The final clause is evaluable only if the expert-route comparison is performed. Otherwise retain just the factual method or present the comparison as a plan. |
+| Experiment → discussion | Compare manual rules, model routing, and an expert-route reference on the same requests, tool registry, arguments and specialist versions. Give counts for unauthorized requests, unavailable inputs, execution failures, abstentions and human completions when they exist. Report conditional quality **and** coverage; do not call an expert route a mathematical upper bound. | A correct result despite a different valid route is possible. Expert choice, valid execution, correct result, safe deferral and authorized physical action are separate outcomes. |
+
+**中文串读。** “两项检测可以处理不同故障征兆，但现场请求往往只描述征兆，并未指定检测程序。即便计算无误，选错程序仍可能回答另一个问题。” 接下来才引出语言模型；问题定义交代工具选择由谁核验、检修结论覆盖哪些请求。贡献可写：“模型将请求匹配到获准的检测程序，所选程序再根据仪表数据计算结果。” 若论文只输出建议，停在建议层，不写成已执行检测。若权限或设备编号不明，澄清、转人工或拒绝执行是**待选择的策略**；除非实现和记录均有依据，不写成既成贡献。
+
+**Contrast: the same vessel, a numerical task.** “A quality estimate is needed when the vessel discharges, before the laboratory assay is available. The relevant transfer question is whether pretraining helps estimate this quantity on later production runs.” Compare a task-specific model, the same architecture fitted without pretraining, a frozen encoder with its fitted head, and adaptation **only if those variants apply**, at matched label budget and observation cutoff. The assay verifies the estimate, not tool choice. 中文：若研究的是排料时的质量估计，第二段应转向可用测量、化验延迟与可迁移的数值规律，而不是沿用上一例的“请求理解—工具调用”。
+
+## 3. A paragraph sequence for a constrained deployment / 端侧论文怎样落到测量
+
+**Opening.** “The controller must receive a valve advisory before its next update. The prediction step occupies only part of that interval.” 中文：“阀门调整前，控制器需要收到可用的判断结果。模型推理只是这段可用时间的一部分。” This opening needs an actual deadline. If only a storage ceiling is known, open with that ceiling instead.
+
+**Challenge, definition and method.** Put the origin and endpoint of the clock in the problem definition. If the contractual clock starts at acquisition, include sensor buffering; if it starts when a complete window becomes available, give any acquisition lag separately. State which model runs on the board, where the specialist runs, and what goes across the link. A local fast path with remote fallback cannot be described as fully offline. Confirm the deployed model's output against the intended task, not just successful export.
+
+**Fair test.** Record device identity, runtime, precision, batch size, concurrency/arrival schedule, power setting, repeats and warm-up; use the same request trace. Pair a quality-matched baseline with component timings and whole-request times. Measure energy only if needed and supported: specify instrument, power boundary, idle subtraction if any, time integration and unit (e.g. J/request). File bytes, resident memory, activation peaks, FPGA fabric usage, throughput and elapsed time are not synonyms. A p95 among successful responses excludes timeouts; show their count separately, the precise deadline, and the declared quantile method. Cold starts, queueing and retries belong in the deployment claim if deployment includes them. A fallback failure is not a missing row. A correct late answer can count toward eventual accuracy but not timely correct delivery. Do not infer a worst-case guarantee from a sampled p99.
+
+**讨论与图。** 若只测了推理内核，结论写“在这块板上缩短内核耗时”，不要写“满足现场响应期限”。图中标出计时起止、模型在哪运行、远程往返和转人工的位置。对同一批请求同时给出按时正确数、迟到数、超时未答数和人工处置数，并说明这些项是否互斥。若同一请求先重试后成功，按请求计一次，重试次数另报。罕见类别不能因为走慢路径或转人工就从评价中消失。
+
+## 4. Work a denominator by hand / 六个请求的分母练习
+
+This [runnable synthetic fixture](../assets/examples/request-accounting.py) uses a 100 ms inclusive deadline from request receipt to return of an automatic diagnostic answer. All six requests are eligible for an automatic diagnosis and have reference labels; a handoff can be appropriate but is not an automatic diagnosis. There are four returned answers: two timely correct (one after a retry), one late correct and one timely wrong. The others are a timeout and a handoff. Thus returned-answer accuracy is **3/4**, automatic answer coverage is **4/6**, and timely correct delivery is **2/6**. They are not three estimates of the same performance. The last ratio measures delivery of a correct automatic result, not accuracy with partial labels; do not treat an unknown reference as an incorrect diagnosis. Reporting only 3/4 hides both nonanswers; claiming 2/6 as general diagnostic accuracy hides what was actually measured.
+
+如任务另有“必须转人工”的请求，先按预先定义的策略标出它们；另报转办是否正确，不把它们偷偷并入或移出自动诊断分母。若人工随后给出结论，可以把结果列入另一项**人机协作**评价，前提是人工结果和时间已记录。不要把模拟请求计数宣传为实时实测。

@@ -528,6 +528,8 @@ Do not call diffusion-step denoising the removal of actual sensor noise unless t
 
 ## 8. LLM, Foundation-Model, Or Semantic-Reasoning Assistance
 
+When tool selection, execution or abstention is part of the decision, follow the [worked tool and deployment passages](tool-decisions-and-edge-evidence.md). The numerical-pretraining counterexample uses the same engineering object without inventing a language interface.
+
 Writing priorities:
 
 - specify whether the model supplies semantics, code, retrieval, reasoning, labels, or decisions;
@@ -579,6 +581,8 @@ model or equating readable labels with validated maintenance explanations.
 中文要点：按数值预测、语义指导、测量文本化及诊断文本生成的实际角色选证据，不给所有预训练方法统一追加提示词或幻觉实验。生成类别文本须连清映射规则与计分分母；冻结基座后学习权重增量仍是任务适应。LoRA基础名称及两个已核译法见[术语记录](engineering-application-terminology-bank_CN.md#九已核验核心名称与未完成范围)，完整来源模块名仍保留归属。
 
 ## 9. Lightweight, Efficient, Online, Or Edge-Oriented Methods
+
+For board, FPGA or cloud-fallback evidence see [the deployment example and six-request denominator check](tool-decisions-and-edge-evidence.md). A late or missing answer changes the operational denominator.
 
 When the request is only to identify industrial difficulties, start with the
 [resource/decision-time profile](problem-first-classification.md#resource-and-decision-time-requirements).
