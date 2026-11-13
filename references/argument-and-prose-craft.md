@@ -172,6 +172,14 @@ The connection is between a fixed structural assignment and a changing modeled c
 
 The acquisition fact motivates the operation, and the resulting state supplies the target estimate. This is not an assertion that unobserved values have been recovered or that all multi-rate methods need a latent state. A completion-based or interval-encoding method needs its own verified connection instead. If comparing prior work, add the checked assumption and source that make this requirement relevant; these three sentences alone do not establish novelty or a literature gap.
 
+### H. Decide Whether to Accept a Language-Tool Suggestion / 语言建议取舍
+
+Compare propositions before counting words. Identify the actor, the object, the observation interval or denominator, and the strength of the verb on both sides. **Correct** an error with a determinate reading; **keep** a clear original when the change is merely stylistic; **query** a change that needs an unknown fact. When the user wants revision and a suggestion fails this test, a smaller third wording may work. Passive voice suits a known procedure when its operator is unknown or immaterial; a possessive or a shorter noun stack is not automatically clearer.
+
+**Fictional one-sentence edit:** “The shift lead's inspection was logged after shutdown.” A tool proposes “The shift lead logged the inspection after shutdown.” The original attributes the inspection, not the log entry. **Keep the original** when that distinction matters. If only the log update and its timing are confirmed, write “The inspection log was updated after shutdown.” Neither version establishes when the inspection took place. 中文：检查者不一定是记录人。原句若要保留检查者，就不要为改主动语态而指定记录人；若只确认了日志更新时间，也不要把它改成检查时间。
+
+In Results, name the comparison before compressing it. Delete a closing sentence that only announces that the preceding numbers “demonstrate an effect.” Keep a closure that identifies a real exception, operating condition or decision; never delete a qualifier just because it lengthens the sentence. 中文：若段末只是再说一次“结果说明参数有影响”，可以删；若限定了哪种工况下没有改善、比较基线或计量口径，则应保留。给作者标明是纠错、可选改写还是待核事实，不把语气偏好列为语法错误。
+
 ## 8. Delivery And Final Pass
 
 Separate the output into manuscript text and concise author notes when unresolved support exists. Author notes identify the source, experiment, or scientific decision needed; the manuscript contains the supported argument. Use visibly marked placeholders only in an internal draft. Do not silently resolve scientific uncertainty through language edits.

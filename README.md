@@ -4,13 +4,17 @@
 
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.3.1: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.3.2: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+
+Revising just one passage? Compare the [paragraph repair](references/section-writing-guide.md#3-introduction) with the [single-edit decision](references/argument-and-prose-craft.md#7-small-engineering-revision-examples). The first changes the order of the argument; the second shows when leaving a sentence alone is more accurate.
 
 **4.3 milestone:** [problem-first industrial classification](references/problem-first-classification.md), contextual terminology, linked manuscript sections and a runnable fictional result example now share one workflow. Distinguish observation, annotation, operating and resource difficulties before choosing methods; use the conditional [problem-to-method navigation](references/problem-first-classification.md#6-when-requested-problem-to-method-navigation) only when ideas are requested. The [milestone review](evals/reviews/v430-milestone-evaluation.md) maps these capabilities to actual evidence and its limits; the terminology bank remains an expanding, scoped resource rather than a completed whitelist.
 
 The [current evaluation record](evals/README.md#current-version-status) identifies the tested version, actual cases, repairs and limits. Independent writing responses and deterministic packaging checks are reported separately. They do not certify every manuscript or every instruction; [versioned changes](CHANGELOG.md) explain what has been updated.
 
 ## What It Does
+
+For group manuscript revision, start with the [annotated plant introduction and six contrasting task routes](references/topic-playbooks.md#from-a-plant-decision-to-a-testable-paper). Identify the prediction unit, information access and closest comparator before choosing a paragraph to revise.
 
 - **Connects mechanisms to prose.** Abstracts explain how operations depend on each other; contributions identify the supported advance instead of repeating a module list.
 - **Uses terminology in context.** Variables, features, samples, states and conditions retain their meanings. No blanket ban on words borrowed from another field.
@@ -159,7 +163,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.3.1 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.3.2 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|

@@ -10,6 +10,8 @@ The sequences below describe section functions. Merge or omit functions that do 
 
 ## Contents
 
+For a five-paragraph fictional plant example and contrasting supervision, shift and language-model routes, see [the worked paper routes](topic-playbooks.md#from-a-plant-decision-to-a-testable-paper). 只改一段时不必读全表；按任务和可用信息选择相应一行。
+
 Title; Abstract; Introduction; Related Work; problem statement/formulation; framework and method; experiment settings and case studies; results, ablation, sensitivity, robustness and interpretation; Discussion; Conclusion; captions.
 
 ## 1. Title
@@ -118,7 +120,23 @@ Carry that distinction through the paper: **Motivation** uses one bounded exampl
 
 中文操作：换段时先接住上一段的工程对象，再缩小到这一段要解决的判断。引关键文献时写清作者、操作、对象和实际验证的任务；可以借用监测文献的变量划分思想，但不要把检测率写成分类性能，也不要把源域当成变量块。两种困难并存时，先交代决定任务的那一种，再在第二种困难开始改变可用数据或监督条件之处引入它。动机举例，问题定义落实输入与目标，方法交代特征的去向，实验说明哪项比较能检验该主张。段数、作者主语和贡献数都不设定额。
 
+### Revise a passage at the requested scale / 按委托范围改段落
+
+Read the last sentence of a paragraph next to the first of its successor, without their transition words. Can the reader name the open decision and see what the next sentence supplies? If not, repair the pair before polishing individual sentences. Read the whole paragraph again: an opening about the cost of an engineering decision should not close with the generic observation that research is important. State what that decision requires. A concrete limitation does not need a stronger adjective.
+
+For a substantial rewrite, make a **private margin note** for each sentence: what does it assert, on whose evidence, and why here? Distinguish a finding in a cited study, a condition supplied by the author, and an inference connecting them. A paper in a neighboring field can illustrate how to move from a physical constraint to a modeling requirement; it is not evidence for that constraint in the present plant. For each subsequent paragraph, choose the comparison that answers its opening. Keep the source's evaluated task attached to its claim. Introduce the proposed operation only after the reader knows which choice remains. For a one-sentence request, do this check silently and return only the authorized edit.
+
+**Fictional paragraph repair (sparse reference measurements).** Given only: a mixer logs motor current for every batch; a laboratory measures viscosity for some batches; the target is discharge viscosity. A draft opens “Machine learning is widely used,” lists estimators, and closes “Both situations pose challenges.” Replace the paragraph, not just the connector:
+
+> Discharge viscosity is measured in the laboratory for only a subset of batches. Motor current is recorded for every batch, but it is not a viscosity measurement. A model for estimating discharge viscosity can therefore use current as an input, whereas only batches with a laboratory result provide a reference value for supervised fitting.
+
+The next paragraph can compare methods by **which batches they use for fitting**, not by model age. No sampling rate, reason for lab selection, or advantage from unlabeled batches follows from these facts. For a prediction at a specified time, check separately what has been measured by that time and what can become a training target later. A reference value available during retrospective fitting is not necessarily a predictor available online. If the author supplied only the class of estimator, ask for its actual inputs before making that comparison.
+
+中文：删去连接词，连读上段末句与下段首句，看读者能否指出“尚待判断什么、下一句补上什么”。逐句区分文献事实、作者给定条件、由此推出的要求。上例可写：“仅部分批次有实验室测得的出料黏度。每批均记录电机电流，但电流不是黏度测量值。因此，电流可作为黏度估计的输入，而只有具备化验结果的批次才能提供监督拟合所需的参考值。”下一段比较的是各方法**用哪些批次拟合**，不是算法的新旧。若任务规定了预测时刻，分开核对当时已有的输入和事后才会得到的训练目标。局部委托不扩写全文。
+
 ### Background-Driven Introduction
+
+A motivating example is not a label dictionary. Two faults that can explain a measurement illustrate ambiguity; they do not make the classifier binary. Unless the class set is specified, say that the classifier predicts fault type rather than enumerating its possible outputs. Likewise, a need for diagnosis does not by itself establish fault localization. 中文：能引起同一观测的两种故障可以举例，不能据此断定模型只预测这两类；任务只给出故障分类时，不扩写成故障定位。
 
 Suggested paragraph sequence:
 
@@ -137,6 +155,10 @@ The specific application should remain visible throughout. Do not replace it wit
 Group the actual contributions into the smallest clear set. A formulation, mechanism, engineering adaptation, and empirical finding are possible contribution types; none is mandatory. Do not pad the list to a preset count or treat every module as an independent advance.
 
 Each item should identify the object, the substantive advance, and the evidence that can test it. An evaluation becomes a contribution when it establishes a new engineering finding or capability; `extensive experiments` alone describes work performed. Match each claim to the relevant method, analysis, figure, or result. Preserve the author's contribution-list formatting unless revision is requested or a verified venue rule requires a change; bold lead-ins are a style choice, not a measure of scientific quality.
+
+For linked contributions, underline the output of one and the input of the next. A handoff may be a score, a set of admissible samples or a fitted quantity, not necessarily a feature vector. Say what the receiving operation does with it and what it makes possible. If the items are independent, do not invent a handoff: distinguish their questions and evidence instead. Reserve the overview for the organizing idea. A useful test is to delete a clause shared by the overview and the last item: keep it where it explains a distinction the reader could not otherwise recover.
+
+中文：相承的贡献要能对上**上一点的产物、下一点的输入、它在那里起什么作用**；两项本来独立，就分别写清所回答的问题与验证，不用“随后”硬连。总述讲为什么这样组织，分点讲读者在总述中看不到的具体差别。章末总结也不必重复列一遍模块。
 
 ## 4. Related Work
 

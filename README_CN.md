@@ -4,13 +4,17 @@
 
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
-**4.3.1：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+**4.3.2：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+
+只改一处时，可以对照[引言段落重组](references/section-writing-guide.md#3-introduction)与[单句建议取舍](references/argument-and-prose-craft.md#7-small-engineering-revision-examples)：前者调整论证次序，后者说明何时保留原句更准确。
 
 **4.3 阶段版：**[工业问题优先分类](references/problem-first-classification_CN.md)、按语境选择术语、全文衔接和可运行的虚构结果示例，整合为同一工作流。先分清观测、标注、运行及资源困难，再在作者需要时使用[问题—方法导航](references/problem-first-classification_CN.md#六作者要求后的问题方法导航)，不从方法名倒推工业问题。[阶段复核](evals/reviews/v430-milestone-evaluation.md)将各项能力对应到实际证据及其边界；术语库持续扩充，不是已经全面验证的白名单。
 
 [当前评估记录](evals/README.md#current-version-status)列明实际测试版本、案例、修复过程和边界，独立写作响应与程序检查分别报告，不替所有论文或全部指令背书；具体修订见[版本记录](CHANGELOG.md)。
 
 ## 核心能力
+
+组内逐稿修改可从[逐段示范与六类任务对照](references/topic-playbooks.md#from-a-plant-decision-to-a-testable-paper)开始：先确定预测对象、可用信息和参照方法，再决定重写哪一段。不要把范例的挑战当成自己的结论。
 
 - **摘要连通方法。** 先读输入输出、公式和图，再说明模块为何相接；贡献不重复模块清单。
 - **术语按场景选择。** 区分变量、特征、样本、工况和状态，不把另一领域的合法用词全部列为禁词。
@@ -155,7 +159,7 @@ python3 scripts/install_suite.py --copy
 
 ## 文件怎样组织
 
-4.3.1 包含 **28 个 Skill 入口 Markdown、30 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
+4.3.2 包含 **28 个 Skill 入口 Markdown、30 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
 
 | 目录 | 内容 |
 |---|---|

@@ -61,6 +61,14 @@ Make the final method sentence advance from operation to task meaning. It may ex
 
 ## 3. Illustrative Repair, Not Manuscript Text
 
+**Read a whole abstract before polishing its individual sentences.** Consider this fictional filter study. Its reference tests were performed at a specified flow; its evaluation compares estimates with those tests on held-out filters. No error values or maintenance outcomes are given.
+
+> Pressure loss across a filter depends on flow, so readings taken at different flow rates are not directly comparable. We estimate the pressure loss that each filter would exhibit at a common reference flow. The model fits a pressure–flow curve to paired measurements from each filter and evaluates that curve at the reference flow. We compare these estimates with reference-test measurements on held-out filters.
+
+The first sentence ends on the comparability problem; the second defines a target that would permit comparison. The third says what receives the measurements and where the estimate comes from. The fourth supplies an independent reference and identifies what was held out. Changing the last sentence to “The model detects fouling” changes the task; changing it to “accurately estimates” adds a result. Neither is a stylistic improvement. A paper with quantified results could replace the last sentence with the actual finding. A paper that opens directly on a familiar target need not manufacture an importance sentence first.
+
+**Carry the same decision into the introduction, contributions and Methods without copying the abstract.** In this example, the introduction has to establish *why readings at different flows cannot answer the comparison question*. A contribution could identify *what the reference-flow estimate makes comparable*, but only if the prior-work comparison supports that advance; routine curve fitting alone is not a new contribution. Methods must then specify *which paired measurements enter the fit, how the reference flow is chosen, and whether it lies in the observed range*. Evaluation must compare the same quantity on the same basis. This test is more useful than making every section repeat “feature learning” or “to address these challenges.”
+
 The existing illustrations are retained in [conditional mechanism-to-prose
 examples](abstract-mechanism-examples.md). Choose by the actual relationship in
 Section 2, then inspect only the relevant passage when an illustration helps.
@@ -68,6 +76,8 @@ Examples do not supply missing manuscript facts, novelty or outcomes. If no
 case fits, use the verified study interface instead of adding a familiar module.
 
 ## 4. Contributions Are Advances, Not An Execution Log
+
+Read the overview and the list consecutively. Let the overview name the organizing choice; locate the *distinct consequence* in the item that explains it. For two dependent items, finish the first with the object actually produced and start the next with the decision made from it. Independent advances need separate evidence, not a fictitious sequence. A compact worked paragraph and its bilingual transition check are in the [section guide](section-writing-guide.md).
 
 For each candidate contribution, privately record: closest prior capability; remaining requirement; actual change; evidence that discriminates the change; scope. Do not state "the first" without a defensible literature search.
 

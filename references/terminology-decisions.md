@@ -20,6 +20,8 @@ familiar head word does not validate every compounded qualifier.
 
 ## Objects And Data Units
 
+**What warrants changing a word?** Use three different editorial actions. *Keep* `records` in “sensor and inspection records were linked by batch identifier”: the objects are log entries. *Replace* it in “the model was tested on 80 records” with `80 batches` only when the test unit and count are verified. *Query* “80 independent samples” when the author has counted windows cut from an unknown number of batches: ask what was split and counted. The same distinction applies to the verb: a classifier that predicts a labeled fault type does not thereby *locate* its source. Preserve an author's preferred phrasing when both alternatives identify the same object; reserve “incorrect” for a mismatch in meaning.
+
 | Choice | Use when | Do not imply |
 |---|---|---|
 | process variable / measured variable | temperature, pressure, flow or another measured/controlled quantity | that a latent embedding is a physical variable |

@@ -1,5 +1,14 @@
 # Changes
 
+## 4.3.2 (2026-11-13)
+
+- Add a five-paragraph plant example and source-located alternatives for semisupervised, weakly labeled, few-shot, zero-shot, new-condition and language-model studies, including what each experimental design can actually establish.
+
+- Trace a fictional abstract from an engineering comparison through the predicted quantity to an independent reference. Carry that decision into the contribution, method and evaluation without inventing a result. Show when the same technical term should be kept, replaced or queried.
+
+- Distinguish the observation, its interpretation and the engineering decision when revising an introduction. Carry the open decision across paragraph boundaries and the actual intermediate object across dependent contributions.
+- Add bilingual fictional examples for restructuring a paragraph and judging a single suggested edit. Keep an existing sentence when naming an actor, shortening a noun phrase or dropping a qualifier would change its meaning.
+
 ## 4.3.1 (2026-11-13)
 
 - Connect an introduction's cited operations to the engineering decision and the evaluated task. Distinguish source domains from variable blocks, and physical propagation from learned feature relationships.
