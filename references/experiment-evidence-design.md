@@ -743,6 +743,8 @@ Link each confirmed result to a `split_id`, `run_id`, metric implementation, and
 
 ## 10. Claim Wording By Evidence Status
 
+When a reference exists only for some times, events, classes or components, use [the four worked reference-availability decisions](when-the-reference-is-missing.md). A recorded input, a hidden-but-retained measurement, a fault label and a physical initiating cause are not interchangeable test targets.
+
 - `verified`: direct conclusion within tested scope;
 - `available but unchecked`: descriptive wording, no strong comparison;
 - `inconsistent`: no conclusion until corrected;

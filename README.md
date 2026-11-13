@@ -2,9 +2,11 @@
 
 [中文](README_CN.md) | [Install](#install) | [Writing example](#a-small-writing-example) | [Start here](SKILL.md) | [Skills](#choose-a-skill) | [Terminology](references/terminology-decisions.md) | [Evaluation](evals/README.md)
 
+[What can a partially verified study actually score?](references/when-the-reference-is-missing.md) Four worked cases connect the Introduction to the experimental claim.
+
 **An evidence-led research and writing toolkit for industrial AI.** Turn an engineering problem, a model and its actual results into a coherent journal paper. Revise a single paragraph or work through research positioning, experiments, figures, manuscript review and handoff.
 
-**Version 4.4.0: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
+**Version 4.4.1: 14 English/Chinese skill pairs.** Primary focus: intelligent models for process-industry applications. Other engineering settings are supported through explicit task and evidence definitions, not a universal paper template.
 
 Revising just one passage? Compare the [paragraph repair](references/section-writing-guide.md#3-introduction) with the [single-edit decision](references/argument-and-prose-craft.md#7-small-engineering-revision-examples). The first changes the order of the argument; the second shows when leaving a sentence alone is more accurate.
 
@@ -165,7 +167,7 @@ Keep proposed, approved, implemented and verified changes distinct. A polished p
 
 ### Repository Map
 
-Version 4.4.0 contains **28 Skill-entry Markdown files, 30 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
+Version 4.4.1 contains **28 Skill-entry Markdown files, 31 reference Markdown files and 13 working-template Markdown files**. The entries form 14 English/Chinese pairs, not 28 different methods. Load references by task rather than reading the whole library on every request.
 
 | Location | Contents |
 |---|---|

@@ -4,7 +4,9 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
-Version 4.4.0 separates input processing, model choice, decision-time access and evidence across several experiment designs. The [current report](forward-test-report.json) gives the tested scope; the [release review](reviews/v440-problem-method-evidence.md) records a failed initial answer and its retest.
+Version 4.4.1 tests partial references in four engineering decisions: see the [current report](forward-test-report.json) and [response review](reviews/v441-partial-references.md).
+
+Version 4.4.0 separates input processing, model choice, decision-time access and evidence across several experiment designs. The [archived report](history/v4.4.0/forward-test-report.json) gives the tested scope; the [release review](reviews/v440-problem-method-evidence.md) records a failed initial answer and its retest.
 
 Version 4.3.2 tested a multistage introduction, weak supervision under a new operating condition with an LLM, a sparse-reference abstract and the class/condition distinction for scarce support. See the [archived report](history/v4.3.2/forward-test-report.json) and [writing responses and an earlier failed attempt](reviews/v432-paragraph-and-edit.md).
 

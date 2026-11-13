@@ -2,9 +2,11 @@
 
 [English](README.md) | [安装](#安装) | [写作示例](#一个简短的写作示例) | [中文总控](skills-zh/engineering-application-journal-writing-skill-zh/SKILL.md) | [摘要与贡献](skills-zh/engineering-abstract-contributions-zh/SKILL.md) | [术语决策](references/terminology-decisions_CN.md) | [评估说明](evals/README.md)
 
+[只有部分真值时，论文还能验证什么？](references/when-the-reference-is-missing.md) 从引言段末到实验结论，对照缺测、告警、未知故障和根因四类问题。
+
 **面向工业智能的证据驱动科研与写作工具集。** 将工程问题、实际方法和已有结果组织成逻辑连贯的期刊论文。支持单段润色，也支持选题、实验、图表、全文审查及交接。
 
-**4.4.0：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
+**4.4.1：14 对中英文 Skill。** 重点面向流程工业中的智能模型研究；其他工程应用按任务和证据边界使用，不套统一论文模板。
 
 只改一处时，可以对照[引言段落重组](references/section-writing-guide.md#3-introduction)与[单句建议取舍](references/argument-and-prose-craft.md#7-small-engineering-revision-examples)：前者调整论证次序，后者说明何时保留原句更准确。
 
@@ -161,7 +163,7 @@ python3 scripts/install_suite.py --copy
 
 ## 文件怎样组织
 
-4.4.0 包含 **28 个 Skill 入口 Markdown、30 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
+4.4.1 包含 **28 个 Skill 入口 Markdown、31 份专题参考 Markdown、13 份工作模板 Markdown**；英文和中文入口合计为 14 对，不是 28 套不同方法。参考资料按任务加载，不会要求每次把整个库读完。
 
 | 目录 | 内容 |
 |---|---|

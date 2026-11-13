@@ -8,6 +8,8 @@ the [five-axis taxonomy](industrial-ai-taxonomy.md), not a new model catalogue.
 In **problem-only** mode, methods, experiments and manuscript archetypes stay
 unselected unless the user requests them. Unknown tasks remain unknown.
 
+When the user also wants writing or experiments, see [four worked reference-availability decisions](when-the-reference-is-missing.md): a missing reading, an unlabeled alarm, an unfamiliar class and an unverified root require different comparisons.
+
 ## 1. Start With The Industrial Difficulty
 
 Folder labels are search leads, not scientific definitions. Read the identified

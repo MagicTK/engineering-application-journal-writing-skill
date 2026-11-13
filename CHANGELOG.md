@@ -1,5 +1,9 @@
 # Changes
 
+## 4.4.1 (2026-11-13)
+
+- Work through four cases where the evaluation reference is only partly available. Connect a real industrial decision to its introduction, definition, fair comparison, figure and defensible conclusion in English and Chinese. Keep unmeasured outages, unreviewed hours, unnamed fault classes and unverified initiating faults out of claimed ground truth.
+
 ## 4.4.0 (2026-11-13)
 
 - Add method-first and problem-first paths set by the industrial decision and prediction-time access. Distinguish a numeric pretrained model, a language model supplying descriptors and an agent selecting tools.

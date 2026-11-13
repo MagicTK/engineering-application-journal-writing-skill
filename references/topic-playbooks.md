@@ -57,6 +57,8 @@ Each row offers an introduction turn, a defensible proposition, a method obligat
 
 ## 1. Incomplete, Asynchronous, Or Multi-Rate Observation
 
+For a paper whose target cannot always be verified, choose the [worked observation, alarm, open-set or root-cause route](when-the-reference-is-missing.md) before drafting the claim.
+
 
 For problem-only work, start with the [observation availability/counting profile](problem-first-classification.md#observation-availability-and-counting).
 It separates acquisition schedules, release times and counting units without
