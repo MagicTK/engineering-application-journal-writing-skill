@@ -921,6 +921,14 @@ principle and the final decision without reciting the full algebra. Put unresolv
 source-dependence and calibration checks in author notes unless they qualify a
 retained claim. A correct base formula is not itself a new contribution.
 
+## Fault detection rates and fault-class recall
+
+In process monitoring, a detector may assign each observation a normal or faulty status. Define the evaluation unit with the rate. A *false alarm rate* computed over normal samples divides the count that signal a fault by the number of normal samples. A sample-level *fault detection rate* counts faulty samples that signal any fault, using all faulty samples as its denominator. Chen et al. distinguish false alarms, fault detection and detection delay in plant-wide monitoring (PDF pp. 7–9, Tables III–IV). Lou et al. give the separate pre-fault and post-fault sample denominators in their Tennessee Eastman case (Table 4). In other studies the denominator may be a number of runs or a duration. State how consecutive decisions become alarm events before reporting an event count or a delay. [Chen et al., IEEE Transactions on Industrial Informatics](https://doi.org/10.1109/TII.2019.2893125) · [Lou et al., Scientific Reports](https://doi.org/10.1038/s41598-021-02676-3)
+
+For a multiclass diagnostic classifier, *recall for a fault class* counts predictions of that particular class among its true samples. Assigning a faulty sample to another fault class detects an abnormality under a binary collapse and misses the correct diagnosis. If the manuscript uses *false-positive rate* (FPR), identify the positive outcome. “FPR on normal samples” is appropriate when any fault prediction on a normal input counts as a false positive. For a classifier that can refer an input for inspection, report its referral handling and denominator as well. Li et al. define class-specific recall before computing weighted F1 (PDF pp. 6–7, Eqs. 12–13). [Li et al., IEEE Transactions on Industrial Informatics](https://doi.org/10.1109/TII.2024.3523590)
+
+**Worked example.** Of 20 welds with defect A, a classifier calls 12 A, five B and three normal. Recall for A is 12/20. If any defect prediction counts as detection, 17/20 of these A welds are detected. The false-positive rate on sound welds requires a separate count of sound welds and their predictions.
+
 ## Reporting And Scope
 
 **Red lines are conditional, not banned strings.** For each term record the precise assertion that must be removed, what evidence would permit it and a narrower replacement. Four field examples:
