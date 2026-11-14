@@ -38,6 +38,14 @@ For process-model training counts, prefer `training samples` and `test samples`.
 
 P05-P06 and P29 use semantic attributes for zero-shot fault categories; P20 uses graph-node attributes. P29 explicitly separates structured fault descriptors from sensor measurements and their textualized representations. These uses are compatible with preferring `process variables` for physical measurements. The word `attribute` as a verb in an explanation is unrelated to that decision.
 
+### What was repeated?
+
+A process simulation run generates one trajectory, which can supply many windows. A training run repeats model fitting. For plant measurements, name the unit actually recorded, such as a start-up or a production batch. When reporting variation across runs, state what the seed controlled (such as simulated disturbances, the data split, or model initialization) and whether the same test trajectories were used each time.
+
+*Fictional example.* “We fitted the dryer fault classifier six times on the same training data, varying only its initial weights. We tested each fitted model on the same three held-out start-ups and report the standard deviation across the six test accuracies.” If the test start-ups were also resampled, the spread would reflect that sampling decision as well.
+
+Published examples distinguish these uses. Li and Xiao count observations within each simulated process run. Li et al. average classification accuracy over seeded repetitions. Koçak et al. identify several sources of variation within one set of repetitions, including the choice of test runs. [Li and Xiao, §4.1, Eqs. (23)–(25)](https://doi.org/10.1186/1687-6180-2011-83) · [Li et al., p. 3591, Table II](https://doi.org/10.1109/TII.2024.3523590) · [Koçak et al., §2.6.1](https://doi.org/10.3390/pr14162569)
+
 ## State, Condition And Mode
 
 | Term | Appropriate meaning | Verification question |
