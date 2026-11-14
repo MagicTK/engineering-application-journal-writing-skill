@@ -32,11 +32,17 @@ familiar head word does not validate every compounded qualifier.
 | instance / bag (in multi-instance learning) | a defined member representation and the collection supplied to a bag-level learner; instances may be points, subsequences or learned features | an internal instance necessarily equals an independently acquired or individually labeled production sample; bag supervision necessarily supports fine localization |
 | observation / measurement | an acquired value, vector or observation event | one observation always has the same unit as one sample |
 | record | an actual log/database record when describing storage, linkage or acquisition | a preferred synonym for a training sample |
-| attribute | an actual semantic descriptor, graph-node attribute or metadata field | a default replacement for measured process variables |
+| attribute | a registered product statistic, semantic descriptor, graph-node attribute, or metadata field, as defined in the study | a default replacement for measured process variables |
 
 For process-model training counts, prefer `training samples` and `test samples`. Use `development set` only if it really denotes a training/selection pool, and explain its partition. Do not rename a training set to imply an unperformed validation step. Do not replace `records` before determining whether rows and samples differ.
 
 P05-P06 and P29 use semantic attributes for zero-shot fault categories; P20 uses graph-node attributes. P29 explicitly separates structured fault descriptors from sensor measurements and their textualized representations. These uses are compatible with preferring `process variables` for physical measurements. The word `attribute` as a verb in an explanation is unrelated to that decision.
+
+### Instruments, process variables, and recorded attributes
+
+An instrument tag identifies a device in the cited plant documentation. To identify a measured variable, give the physical quantity and its unit where available. Ruiz-Cárcel et al. list mass flow, density, and temperature at the riser outlet under the same tag. Counts of tags and counts of measured variables therefore answer different questions. [Control Engineering Practice, §2.1 and Table 1](https://doi.org/10.1016/j.conengprac.2015.04.012)
+
+In a specification-dependent production table, an *attribute* can be a statistic calculated from a process variable for one product. Ren et al. describe each plate sample through time-aggregated sensor statistics. In a new dataset, record which statistic and aggregation interval define the field. For example, the mean and maximum pressure over a cycle would be two attributes of the same process variable. Check the product specification before counting missing values. An expected statistic can lack a value, and a different specification can omit that statistic altogether. [IEEE Transactions on Industrial Informatics, §IV-A, Fig. 3](https://doi.org/10.1109/TII.2025.3611706)
 
 ### What was repeated?
 
