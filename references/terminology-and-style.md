@@ -22,7 +22,7 @@ Describe each concept at the correct level.
 | Level | Preferred focus | Typical terms |
 |---|---|---|
 | Industrial object | physical process or system | production line, process unit, furnace, mill, reactor, equipment, plant |
-| Measurement | observed or controlled quantities | process variable, measured variable, manipulated variable, sensor signal, quality variable |
+| Process data | physical measurements, quality observations, and adjustments made by controllers | process variable; [measured variable or manipulated variable](terminology-decisions.md#measured-and-manipulated-variables), according to the recorded field |
 | Engineering structure | physical or operational organization | stage, unit, route, topology, operating condition, control loop, material flow |
 | Modeling object | mathematical representation | input channel, sample, window, feature, graph node, latent representation |
 | Model operation | algorithmic mechanism | encoding, grouping, fusion, attention, filtering, alignment, adaptation |
