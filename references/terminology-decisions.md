@@ -44,6 +44,12 @@ An instrument tag identifies a device in the cited plant documentation. To ident
 
 In a specification-dependent production table, an *attribute* can be a statistic calculated from a process variable for one product. Ren et al. describe each plate sample through time-aggregated sensor statistics. In a new dataset, record which statistic and aggregation interval define the field. For example, the mean and maximum pressure over a cycle would be two attributes of the same process variable. Check the product specification before counting missing values. An expected statistic can lack a value, and a different specification can omit that statistic altogether. [IEEE Transactions on Industrial Informatics, §IV-A, Fig. 3](https://doi.org/10.1109/TII.2025.3611706)
 
+### Product targets, measured values, and model inputs
+
+A product target gives the specified value of a quantity. A measurement records a value obtained from an instrument. Huang et al. distinguish the specified final strip thickness from the exit thickness measured by an X-ray gauge. Chen et al. distinguish the target coiling temperature from strip temperatures measured along the cooling line. Use *setpoint* when the process documentation identifies a reference supplied to a controller. A product specification alone establishes a target value. [Huang et al., §1, Eq. 10 and §4](https://doi.org/10.3390/act13100415) · [Chen et al., §2.1 and Fig. 1](https://doi.org/10.2355/isijinternational.ISIJINT-2019-104)
+
+When a classifier receives several kinds of production information, describe the collection as *input variables* and name the fields that matter for the decision. For example, a furnace record may supply a temperature setpoint and an average measured temperature as inputs, while a separate inspection supplies the class label. An average stored in one row can summarize many readings. A claim about the sampling interval or within-product changes requires the corresponding acquisition times or ordered readings.
+
 ### What was repeated?
 
 A process simulation run generates one trajectory, which can supply many windows. A training run repeats model fitting. For plant measurements, name the unit actually recorded, such as a start-up or a production batch. When reporting variation across runs, state what the seed controlled (such as simulated disturbances, the data split, or model initialization) and whether the same test trajectories were used each time.
