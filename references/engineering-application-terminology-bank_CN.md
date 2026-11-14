@@ -61,6 +61,7 @@
 |---|---|---|
 | 全厂或全流程对象 | plant-wide process, plant-wide industrial process | global system |
 | 实际制造流程 | production process, production line, production route | pipeline, workflow |
+| 混合生产输入 | 输入变量可含产品目标值、仪表测量值和记录的统计量。说明具体字段时写清物理量和用途。 | 将每个输入都称为实测变量，或将所有目标值都称为控制器设定值。[轧制与冷却实例](terminology-decisions_CN.md#产品目标值实测值与模型输入) |
 | 设备身份 | *instrument tag*（仪表位号）。一台仪表提供多个变量时，分别注明物理量及单位。 | 将仪表数当作测量变量数。[装置实例](terminology-decisions_CN.md#仪表过程变量与统计属性) |
 | 针对单件产品记录的统计量 | 规格字典按过程变量和统计定义登记时，可使用 *attribute*（统计属性）。 | 把同一个物理量的最小值和最大值计为两个物理变量。[制造实例](terminology-decisions_CN.md#仪表过程变量与统计属性) |
 | 输入中缺少的测量 | *missing rate*，说明应有测量的分母及缺口如何形成 | 多种采样周期共用网格时，应说明哪些位置本来就应取得测量。[文献用法与计数](terminology-decisions_CN.md#缺失率与训练遮挡比例) |
