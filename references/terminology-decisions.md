@@ -302,6 +302,14 @@ task, or supply a separately trained soft sensor/classifier. Its output is not
 automatically a quality estimate, and observed-only imputer learning does not
 make a label-trained downstream pipeline unsupervised.
 
+### Missing rate and masking ratio
+
+Use *missing rate* for the fraction of expected measurements unavailable in a specified input. State whether the gaps were recorded during production or imposed for an experiment. For variables sampled on different schedules, specify which variable–time pairs were expected. Wang et al. varied the proportion of missing inputs in a soft-sensing experiment. Xiong et al. distinguished the missing rates imposed in a sintering case study from the monthly rate observed at the plant. [Wang et al., IEEE TII, PDF pp. 6–7](https://doi.org/10.1109/TII.2024.3476522) · [Xiong et al., Control Engineering Practice, PDF p. 8](https://doi.org/10.1016/j.conengprac.2026.107274)
+
+Use *masking ratio* or *mask rate* for deliberate withholding during training and identify the eligible units. Ren et al. sampled a feature mask using a Bernoulli probability. Liu et al. applied an additional mask to observed entries for self-supervision. A sampling probability specifies a rule. To report the fraction actually hidden, divide the realized count by the eligible count in the same units. [Ren et al., IEEE TII, PDF pp. 5 and 7](https://doi.org/10.1109/TII.2021.3131471) · [Liu et al., Chemometrics and Intelligent Laboratory Systems, PDF p. 7](https://doi.org/10.1016/j.chemolab.2026.105631)
+
+For example, suppose a variable has four equal-length, disjoint patches with 3, 1, 4, and 2 acquired readings. Hiding the first two patches masks 2 of 4 patches and 4 of 10 acquired readings. A mean squared error per hidden reading then has a denominator of 4. An average that first gives each masked patch equal weight measures a different quantity.
+
 ## Hypergraph Objects And Propagation
 
 Use this distinction only for a manuscript that actually uses hyperedges.

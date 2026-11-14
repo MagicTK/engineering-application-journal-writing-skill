@@ -61,6 +61,8 @@
 |---|---|---|
 | 全厂或全流程对象 | plant-wide process, plant-wide industrial process | global system |
 | 实际制造流程 | production process, production line, production route | pipeline, workflow |
+| 输入中缺少的测量 | *missing rate*，说明应有测量的分母及缺口如何形成 | 多种采样周期共用网格时，应说明哪些位置本来就应取得测量。[文献用法与计数](terminology-decisions_CN.md#缺失率与训练遮挡比例) |
+| 训练时主动遮挡 | *masking ratio* 或 *mask rate*，交代从哪些已观测读数、特征或片段中抽取 | 给定遮挡概率后，单窗中实际隐藏的读数仍取决于抽样单位与取整规则。[文献用法与计数](terminology-decisions_CN.md#缺失率与训练遮挡比例) |
 | 工艺划分 | process unit, production stage, sub-process, process block | module 指代实体设备 |
 | 采集量 | process variables, process measurements, measured/manipulated variables | 未定义模型对应关系前使用 channels |
 | 工况 | operating condition；有定义的离散工况可用 operating mode | 用 domain 指代普通工况 |
