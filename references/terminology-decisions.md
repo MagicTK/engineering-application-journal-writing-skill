@@ -322,6 +322,12 @@ Use *masking ratio* or *mask rate* for deliberate withholding during training an
 
 For example, suppose a variable has four equal-length, disjoint patches with 3, 1, 4, and 2 acquired readings. Hiding the first two patches masks 2 of 4 patches and 4 of 10 acquired readings. A mean squared error per hidden reading then has a denominator of 4. An average that first gives each masked patch equal weight measures a different quantity.
 
+### Prediction targets in industrial pretraining
+
+Xiaohan Chen et al. use a prediction head to map frequency-domain features toward time-domain features from an augmented signal. Their loss uses cross-correlation between the prediction and the encoded time-domain target. In a review of this method, *predict time-domain features from frequency-domain features* identifies both operands. [Control Engineering Practice, PDF p. 5, prediction head and loss](https://doi.org/10.1016/j.conengprac.2024.105900)
+
+Youqiang Chen et al. mask one process variable in a chemical-process sample and predict its recorded value from the remaining variables. The reconstruction objective compares the output with the original value using squared error. *Reconstruct a masked process-variable value* identifies the measurement that supplies the reference. For either study, report subsequent fault classification separately, using the diagnostic labels and metric actually evaluated. [Process Safety and Environmental Protection, PDF p. 3, Section 2.1](https://doi.org/10.1016/j.psep.2025.107939)
+
 ## Hypergraph Objects And Propagation
 
 Use this distinction only for a manuscript that actually uses hyperedges.
