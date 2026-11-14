@@ -81,6 +81,8 @@
 
 ## 五、特征操作
 
+描述预训练任务时，写明预测对象。*Predict time-domain features* 用于预测编码后的时域特征。*Reconstruct a masked sensor reading* 用于恢复有实测值可供比对的传感器读数。[两篇工业故障诊断论文的用词依据](terminology-decisions_CN.md#工业预训练的预测对象)
+
 | 操作 | 按含义选择的候选表达，非全部已完成名称准入 |
 |---|---|
 | 从测量中获得特征 | feature extraction |

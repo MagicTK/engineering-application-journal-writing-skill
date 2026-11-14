@@ -208,6 +208,8 @@ benchmark or model; the terms are not mutually exclusive. Retain the source's
 fault definition and distinguish a modeled propagation path from an observed
 physical event. See the [fault/disturbance evidence note](published-evidence.md#fault-effects-disturbances-and-representation-updates).
 
+For a pretraining objective, name what the model predicts. *Predict time-domain features* describes an encoded target. *Reconstruct a masked sensor reading* describes a target whose recorded value is available for comparison. [Worked examples from two industrial diagnosis studies](terminology-decisions.md#prediction-targets-in-industrial-pretraining)
+
 Name the actual operation instead of using vague `information exchange`
 wording. Information exchange remains legitimate when communication or transfer
 between defined entities is itself the operation.
