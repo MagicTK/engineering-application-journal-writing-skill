@@ -312,6 +312,8 @@ indicator relative to its following prose; that unresolved conflict is not
 copied as a formula. This is wording evidence, not a second audited English
 interval mechanism or validation of every metric/translation in that article.
 
+For a detector or classifier, name the decision counted and its denominator. Use *fault detection rate* for a defined fault/no-fault decision and *class-wise recall* when a particular fault must be identified correctly. Specify the observation unit for a *false alarm rate*. [Definitions, industrial examples and an arithmetic check](terminology-decisions.md#fault-detection-rates-and-fault-class-recall)
+
 ## 9. Caution List
 
 These are context restrictions, not an absolute blacklist.

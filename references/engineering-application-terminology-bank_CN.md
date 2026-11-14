@@ -119,6 +119,8 @@ stage-level 表示尺度，例如每工序一个池化向量；stage-structured 
 
 中文词形另查[电力负荷原始论文](https://html.rhhz.net/dlgcjs/HTML/201123940.html)第3节及图8-9：prediction interval对应预测区间，prediction interval coverage probability对应预测区间覆盖率。其HTML式(8)的区间内外指示值与后文解释相反，未解歧义，不能照抄该式。该记录仅核词形/语境，不充第二套英文区间方法的完整审计或该文所有指标译法的认可。
 
+评价故障监测或分类时写清判定对象与分母。*Fault detection rate* 对应有无故障的判定；*class-wise recall* 要求判对具体故障类别；*false alarm rate* 需交代是按正常样本、运行还是监测时长统计。[定义、期刊用法与算例](terminology-decisions_CN.md#故障检测率误报率与故障类别召回率)
+
 ## 七、慎用词
 
 | 词语 | 风险 | 推荐替代 |
