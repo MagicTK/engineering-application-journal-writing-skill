@@ -160,6 +160,8 @@ replacement for exchanging neural features.
 | Actual manufacturing route | production process, production line, production route | pipeline, workflow when the object is physical production |
 | Functional division | process unit, production stage, sub-process, process block | module when referring to physical equipment |
 | Recorded quantities | process variables, process measurements, measured variables, manipulated variables | channels before the model correspondence is defined |
+| Unavailable measurements in a defined input | *missing rate* with the expected measurement count and the origin of the gaps | Ambiguous percentages on a grid that combines different sampling schedules. [Sources and denominators](terminology-decisions.md#missing-rate-and-masking-ratio) |
+| Deliberate hiding during training | *masking ratio* or *mask rate*, specifying the observed entries, features, or patches eligible for masking | A configured probability alone does not give the number of measurements hidden in a particular window. [Sources and denominators](terminology-decisions.md#missing-rate-and-masking-ratio) |
 | Operating context | operating condition; operating mode for a defined regime | domain when the meaning is only an operating condition |
 | Perturbation to the process | process disturbance; load/setpoint change when that is the actual event | treating a disturbance as synonymous with the background condition |
 | Subtle fault-related response | weak fault signatures; incipient faults in a defined setting | equating small severity, early physical development and early detection; use the [problem/wording record](problem-first-classification.md#weak-fault-signatures-and-early-detection) |
