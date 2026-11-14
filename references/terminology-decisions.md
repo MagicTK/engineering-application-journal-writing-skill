@@ -58,7 +58,9 @@ When a classifier receives several kinds of production information, describe the
 
 ### What was repeated?
 
-A process simulation run generates one trajectory, which can supply many windows. A training run repeats model fitting. For plant measurements, name the unit actually recorded, such as a start-up or a production batch. When reporting variation across runs, state what the seed controlled (such as simulated disturbances, the data split, or model initialization) and whether the same test trajectories were used each time.
+A trajectory contains successive observations from one process realization and can supply many windows. Check the data dictionary before counting trajectories by a column called *run*. In the Tennessee Eastman release of Rieth et al., `faultNumber` identifies the simulated state, and `simulationRun` identifies a simulator random-number state within a split. The training and test releases use disjoint seeds. Within a release, the same numerical run identifier occurs under different fault settings. Name the keys that distinguish complete trajectories and the unit kept together for splitting or uncertainty estimates. [Rieth et al., release description, columns 1–3](https://doi.org/10.7910/DVN/6C3JR1)
+
+A training run repeats model fitting. For plant measurements, name the unit actually recorded, such as a start-up or a production batch. When reporting variation across runs, state what the seed controlled (such as simulated disturbances, the data split, or model initialization) and whether the same test trajectories were used each time.
 
 *Fictional example.* “We fitted the dryer fault classifier six times on the same training data, varying only its initial weights. We tested each fitted model on the same three held-out start-ups and report the standard deviation across the six test accuracies.” If the test start-ups were also resampled, the spread would reflect that sampling decision as well.
 
