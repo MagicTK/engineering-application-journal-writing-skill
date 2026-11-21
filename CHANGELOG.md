@@ -1,5 +1,11 @@
 # Changes
 
+## 4.5.1 (2026-11-22)
+
+- Clarify how to revise passages with missing exhibit captions or unspecified sensitivity settings. Keep verified panel details and parameter values when supplied.
+- Distinguish a planned component comparison from a threshold sweep and state shared inputs, fitting conditions and evaluation units.
+- Preserve the 4.5.0 evaluation record and add a scoped forward comparison of the revised guide.
+
 ## 4.5.0 (2026-11-13)
 
 - Connect four intersecting problem settings to an introduction, a formal decision, an identifiable comparison and a bounded discussion. A bilingual group triage tool separates a second constraint that changes the study from background that need not become another contribution.

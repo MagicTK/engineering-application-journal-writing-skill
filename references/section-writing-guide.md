@@ -132,7 +132,7 @@ For a group of citations, identify the quantity or decision the studies share, e
 
 Read the last sentence of a paragraph next to the first of its successor, without their transition words. Can the reader name the open decision and see what the next sentence supplies? If not, repair the pair before polishing individual sentences. Read the whole paragraph again: an opening about the cost of an engineering decision should not close with the generic observation that research is important. State what that decision requires. A concrete limitation does not need a stronger adjective.
 
-For a substantial rewrite, make a **private margin note** for each sentence: what does it assert, on whose evidence, and why here? Distinguish a finding in a cited study, a condition supplied by the author, and an inference connecting them. A paper in a neighboring field can illustrate how to move from a physical constraint to a modeling requirement; it is not evidence for that constraint in the present plant. For each subsequent paragraph, choose the comparison that answers its opening. Keep the source's evaluated task attached to its claim. Introduce the proposed operation only after the reader knows which choice remains. For a one-sentence request, do this check silently and return only the authorized edit.
+For a substantial rewrite, make a **private margin note** for each sentence: what does it assert, on whose evidence, and why here? Distinguish a finding in a cited study, a condition supplied by the author, and an inference connecting them. When repairing a cross-task comparison, keep each study's sensors, counts and operating conditions attached to that study. Similar timing constraints do not establish identical instrumentation. A paper in a neighboring field can illustrate how to move from a physical constraint to a modeling requirement; it is not evidence for that constraint in the present plant. For each subsequent paragraph, choose the comparison that answers its opening. Keep the source's evaluated task attached to its claim. Introduce the proposed operation only after the reader knows which choice remains. For a one-sentence request, do this check silently and return only the authorized edit.
 
 **Fictional paragraph repair (sparse reference measurements).** Given only: a mixer logs motor current for every batch; a laboratory measures viscosity for some batches; the target is discharge viscosity. A draft opens “Machine learning is widely used,” lists estimators, and closes “Both situations pose challenges.” Replace the paragraph, not just the connector:
 
@@ -263,6 +263,10 @@ At first mention, introduce the observation or mechanism in prose and locate it 
 
 用上一式的输出或下一步要解决的问题引出新公式。公式若延续同一句，按语法标点并用 where 紧接定义；denotes 适合定义符号，maps 描述实际映射。首次引图表先陈述工程量、机制或待比较对象，再指向相应图表及子图。图号只负责定位，段间递进由技术内容承担。
 
+Figure numbers in a draft establish where an author intended a reference. Verify what the exhibit depicts from the figure itself, its supplied caption, or an explicit description. When that evidence is missing, describe the supported mechanism and flag the panel assignment for the author. When the caption is available, retain its useful detail. For this content-first house style, make the observed quantity, design operation or comparison the grammatical subject of the first mention, rather than “Figure 2 places ...” or “As shown in ...”. For example, if a caption explicitly identifies inlet pressure and outflow, “Inlet pressure and outflow are plotted in Fig. 3(a) and (b), respectively.” serves this purpose. Apply the same distinction to tables of planned and observed comparisons.
+
+图号不能证明子图画出了什么。先看图、图注或作者提供的明确说明；三者均缺时，先写有依据的机制，在作者备注中单列待核图号。有可靠图注时，应把已知信息用于正文。
+
 ## 8. Experiments Overview
 
 Open the Experiments section with a short paragraph stating what evidence is presented and how the case studies or evaluation blocks are organized. A concise `Experimental Settings` subsection may combine shared data preparation, comparison methods, implementation details, and metrics when this reduces repetition.
@@ -374,6 +378,10 @@ Write:
 - how performance changed;
 - what design claim this supports;
 - whether interactions between components limit one-at-a-time interpretation.
+
+A reported number of settings gives a count, not their values, range, spacing, preferred setting or number of runs per setting. Distinguish the number of parameter levels from the number of seeds, replicates and test units. A request for a table authorizes organizing the known information; it does not fix these design choices. Retain supplied levels exactly. If only a count is available, state the count, leave the values open and request them separately when needed. When asked for a control table, describe the proposed experimental arms and their shared inputs, fitting or calibration conditions and test units; a catalogue of prior methods answers a different question. Label observations, design choices and results by their actual status.
+
+已知“六个阈值设置”只能写设置数量。具体取值、间隔、范围和最优点均需来源。设置数也不决定每个设置的运行次数、种子数或测试单位数。计划比较应写清各组实际改变什么、哪些输入及拟合或校准条件相同、在哪些共同测试单位上比较；结果按已有证据表述。
 
 Sensitivity analysis should cover only hyperparameters that influence the method's central behavior. Explain the practical range rather than praising one optimal point.
 
