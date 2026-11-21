@@ -4,7 +4,9 @@ The repository uses two different checks and does not present one as the other.
 
 ## Current Version Status
 
-Version 4.5.0 tests four combinations of constraints from the writing brief through an interpretable comparison. See the [current report](forward-test-report.json) and [response review](reviews/v450-intersecting-constraints.md).
+Version 4.5.1 compares fresh responses to the same editing brief, a public-dataset research brief, and a positive control with verified caption and author details. The [current report](forward-test-report.json) links the [response review](reviews/v451-passage-review.md).
+
+Version 4.5.0 tested four combinations of constraints from the writing brief through an interpretable comparison. See the [archived report](history/v4.5.0/forward-test-report.json) and [response review](reviews/v450-intersecting-constraints.md).
 
 Version 4.4.2 tested diagnostic tool selection, deadline-limited delivery and a contrasting numerical predictor: [archived report](history/v4.4.2/forward-test-report.json), [response review](reviews/v442-tool-and-edge.md).
 
