@@ -108,7 +108,7 @@ description: 数据驱动工业智能与工程应用期刊论文写作总控 Ski
 
 1. **文献定位**：区分工程背景、挑战、任务、方法、数据来源和写作校准文献；调用 [`engineering-literature-positioning`](../engineering-literature-positioning-zh/SKILL.md)。
 2. **论文架构**：从挑战推导方法和证据；调用 [`engineering-paper-idea-architecture`](../engineering-paper-idea-architecture-zh/SKILL.md)。
-3. **章节写作**：让工业对象贯穿题目、摘要、引言、问题定义、方法动机、实验和结论；参考[章节指南](../../references/section-writing-guide.md)。
+3. **章节写作**：让工业对象贯穿题目、摘要、引言、问题定义、方法动机、实验和结论；参考[章节指南](../../references/section-writing-guide.md)。其中引言与方法小节说明叙述式引用、图表首次引介和公式后续定义的处理。
 4. **公式叙述**：按“必要性 -> 输入输出 -> 公式 -> 符号/维度/边界 -> 工程含义 -> 下一模块”组织，避免公式链过短或说明书式膨胀。
 5. **实验设计**：每个报告的实验应回答研究问题或检验主张，区分探索性发现与确认性评价；不隐藏意外结果，也不将其改写成预定的成功。核查信息访问、划分单位、时间边界、公平性、重复运行、指标和结果来源；调用 [`engineering-experiment-evidence-design`](../engineering-experiment-evidence-design-zh/SKILL.md)。
 6. **图表与 LaTeX**：依据当前方法设计迭代框图，优先承接已有可编辑主件及合适的可用工具；[AstraDraw → 可编辑 PPT → 人工修订 → 论文闭环](../../references/astra-editable-figure-pipeline.md) 是工具及交付需求适配时的可选路线。保留人工修订并声明实际可编辑范围；实验图从已核验数据及可复现脚本生成。将当前主件导出至论文，独立编译并逐页目检；调用 [`engineering-figure-latex-production`](../engineering-figure-latex-production-zh/SKILL.md)。

@@ -139,7 +139,7 @@ Derive modules and evidence from the engineering problem. A contribution should 
 
 ### Write
 
-Keep the industrial object visible throughout title, Abstract, Introduction, problem statement, method motivation, experiments, and Conclusion. Use the section architecture appropriate to the selected archetype; see [section writing](references/section-writing-guide.md).
+Keep the industrial object visible throughout title, Abstract, Introduction, problem statement, method motivation, experiments, and Conclusion. Use the section architecture appropriate to the selected archetype; see [section writing](references/section-writing-guide.md). For narrative citations, the first figure callout and definitions after a displayed equation, use that guide’s Introduction and Method subsections.
 
 ### Explain Mathematics
 

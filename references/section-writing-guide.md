@@ -120,6 +120,14 @@ Carry that distinction through the paper: **Motivation** uses one bounded exampl
 
 中文操作：换段时先接住上一段的工程对象，再缩小到这一段要解决的判断。引关键文献时写清作者、操作、对象和实际验证的任务；可以借用监测文献的变量划分思想，但不要把检测率写成分类性能，也不要把源域当成变量块。两种困难并存时，先交代决定任务的那一种，再在第二种困难开始改变可用数据或监督条件之处引入它。动机举例，问题定义落实输入与目标，方法交代特征的去向，实验说明哪项比较能检验该主张。段数、作者主语和贡献数都不设定额。
 
+### Narrative citations and paragraph continuity / 叙述式引用与段落递进
+
+In a numbered-citation manuscript, place the reference next to the author phrase when the sentence attributes a particular contribution to that author. Check the family name and number of authors against the bibliographic entry, including compound family names. Follow the selected journal's rule for two authors and for *et al.*. If two papers have the same family name, the distinct citation numbers usually suffice. A method-led sentence also works when the paragraph compares operations. Choose a verb the source supports: *proposed* introduces a method, *derived* a relation, *evaluated* a comparison. A study of regression can support a statement about the way it aligned asynchronous readings. Its reported regression performance provides no diagnostic validation.
+
+For a group of citations, identify the quantity or decision the studies share, explain one meaningful difference, and end with the condition under which that difference matters. A temporal order requires historical evidence. A conceptual progression may instead go from aligning observations to retaining the information lost during alignment. At the next paragraph, pick up that specific unresolved requirement.
+
+在数字引文体例下，叙述某项工作的贡献时，把引文紧跟在作者姓氏或作者组之后。依据原文和书目记录选择“提出方法”“推导关系”“评估性能”等动词。两位作者的写法依期刊体例；复姓须完整。同段研究若服务于不同任务，仅比较可迁移的操作。段末点明该类方法已解决的问题和仍需具备的条件，下一段承接其中一个具体条件。
+
 ### Revise a passage at the requested scale / 按委托范围改段落
 
 Read the last sentence of a paragraph next to the first of its successor, without their transition words. Can the reader name the open decision and see what the next sentence supplies? If not, repair the pair before polishing individual sentences. Read the whole paragraph again: an opening about the cost of an engineering decision should not close with the generic observation that research is important. State what that decision requires. A concrete limitation does not need a stronger adjective.
@@ -247,6 +255,14 @@ Validate that the formula actually entails the stated effect. Define whether a m
 
 At the same time, do not repeat the same motivation before and after every equation. The appropriate density defines symbols and dimensions, explains the operation's effect, and connects it to the next step without turning the method into an implementation report.
 
+### Introduce an equation or panel through its purpose / 由求解目的引出公式和图表
+
+Explain what the next operation must produce and what observation or previous quantity it uses. If a display continues the sentence, punctuate the display accordingly and follow it without a paragraph break with *where* and a definition, such as “where the index denotes the sampling instant.” An independent sentence can explain the consequence. Define indices, operator domains and units when they affect interpretation. Retain a mapping symbol only when it identifies an input, output or later operation the reader needs.
+
+At first mention, introduce the observation or mechanism in prose and locate it in the figure or table within that sentence. In a multipart diagram, establish the whole diagram or name the first relevant panel in context before using bare panel references in subsequent comparisons. The experiment paragraph can then open with the tested contrast and close with what its outcome leaves unresolved. In a house style that favors evidence references later in the sentence, move “Table X shows ...” without reversing the direction of the comparison.
+
+用上一式的输出或下一步要解决的问题引出新公式。公式若延续同一句，按语法标点并用 where 紧接定义；denotes 适合定义符号，maps 描述实际映射。首次引图表先陈述工程量、机制或待比较对象，再指向相应图表及子图。图号只负责定位，段间递进由技术内容承担。
+
 ## 8. Experiments Overview
 
 Open the Experiments section with a short paragraph stating what evidence is presented and how the case studies or evaluation blocks are organized. A concise `Experimental Settings` subsection may combine shared data preparation, comparison methods, implementation details, and metrics when this reduces repetition.
@@ -362,6 +378,10 @@ Write:
 Sensitivity analysis should cover only hyperparameters that influence the method's central behavior. Explain the practical range rather than praising one optimal point.
 
 If a control outperforms the full model, retain it and distinguish what the comparison establishes from the intended mechanism. It may narrow the component's claimed benefit, expose a trade-off or motivate further study; it is not permission to relabel the control as the original full model. Likewise, a sensitivity point above the chosen setting does not make the reported experiment invalid, but the chosen setting should not be described as best across that sweep. Record how it was selected and whether the sweep is exploratory. Reusing the same default runs in several plots does not create additional independent repetitions.
+
+Organize the main ablation around the smallest set of identifiable mechanism claims. Two to four contrasts often cover a three-contribution paper. For each contrast, name the removed or replaced operation, the inputs and training conditions held fixed, and the question it answers. A loss removal and a feature removal answer different questions. A factorial pair can test whether two training signals interact. Keep measurements for other settings available and label sensitivity sweeps separately. If an operation is structurally inactive for a dataset, explain why that contrast is uninformative there.
+
+主消融表围绕可区分的机制组织。逐项说明移除或替代的操作、相同条件和能够检验的主张。两个损失可用四种开关组合检验交互，超参数扫描另行呈现。某机制在特定输入上未激活时，应说明该数据集能够支持哪些比较。
 
 ## 14. Robustness, Visualization, And Interpretability
 
